@@ -6,6 +6,9 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
+var babel = require('gulp-babel');
+
+
 
 
 gulp.task('watch',['pug','sass','js','assets'], function(){

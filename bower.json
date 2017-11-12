@@ -1,0 +1,21 @@
+{
+  "name": "business-card-website-fabasoad",
+  "description": "Business card website for Yevhen Fabizhevskyi.",
+  "main": "main.js",
+  "authors": [
+    "Natalia Fabizhevska <vanillacaramel88@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/animewka/animewka.github.io",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "^2.2.1"
+  }
+}

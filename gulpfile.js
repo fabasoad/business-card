@@ -35,7 +35,7 @@ gulp.task('js',function(){
 })
 
 gulp.task('sass',function(){
-    return gulp.src('src/scss/*.scss')
+    return gulp.src('src/scss/**/*.scss')
         .pipe(plumber())
         .pipe(sass())
         .on('error', gutil.log)
@@ -48,7 +48,7 @@ gulp.task('assets',function(){
 })
 
 gulp.task('clean', function() {
-    return del.sync('dist');
+    return del.sync(['dist/**', '!dist', '!dist/bower_components', '!dist/bower_components/**']);
 })
 
 gulp.task('cssvendor',function() {

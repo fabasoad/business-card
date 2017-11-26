@@ -1,17 +1,23 @@
 .section-title.center {
 	padding: 30px 0;
+	h2 {
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
+	hr {
+		height: 4px;
+		width: 70px;
+		text-align: center;
+		position: relative;
+		background: #E87E04;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		border: 0;
+	}
 }
-.section-title h2, .section-title.center h2 {
-	font-weight: 700;
-	margin-bottom: 30px;
-}
-.section-title.center hr {
-	height: 4px;
-	width: 70px;
-	text-align: center;
-	position: relative;
-	background: #E87E04;
-	margin: 0 auto;
-	margin-bottom: 30px;
-	border: 0;
+.section-title {
+	h2 {
+		font-weight: 700;
+		margin-bottom: 30px;
+	}
 }

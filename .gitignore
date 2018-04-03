@@ -1,4 +1,21 @@
 .idea
 node_modules
-docs
 package-lock.json
+
+docs/*
+!docs/bower_components
+docs/bower_components/*
+
+# [jQuery] Ignore all except min version
+!docs/bower_components/jquery
+docs/bower_components/jquery/*
+!docs/bower_components/jquery/dist
+docs/bower_components/jquery/dist/*
+!docs/bower_components/jquery/dist/jquery.min.js
+
+# [Owl Carousel] Ignore all except min version
+!docs/bower_components/owl.carousel
+docs/bower_components/owl.carousel/*
+!docs/bower_components/owl.carousel/dist
+docs/bower_components/owl.carousel/dist/*
+!docs/bower_components/owl.carousel/dist/owl.carousel.min.js

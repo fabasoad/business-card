@@ -1,5 +1,5 @@
 {
-  "name": "business-card-website-fabasoad",
+  "name": "business-card",
   "description": "Business card website for Yevhen Fabizhevskyi.",
   "main": "main.js",
   "authors": [
@@ -7,7 +7,7 @@
     "Yevhen Fabizhevskyi <fabasoad@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/animewka/animewka.github.io",
+  "homepage": "https://fabasoad.github.io/business-card/",
   "private": true,
   "ignore": [
     "**/.*",

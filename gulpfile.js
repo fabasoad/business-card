@@ -20,7 +20,7 @@ gulp.task('pug',function(){
         .pipe(plumber())
         .pipe(pug())
         .on('error', gutil.log)
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('docs'))
 })
 
 gulp.task('js',function(){
@@ -28,7 +28,7 @@ gulp.task('js',function(){
         .pipe(plumber())
         .pipe(babel({presets: ['env']}))
         .on('error', gutil.log)
-        .pipe(gulp.dest('dist/assets/js'))
+        .pipe(gulp.dest('docs/assets/js'))
 })
 
 gulp.task('sass',function(){
@@ -36,21 +36,21 @@ gulp.task('sass',function(){
         .pipe(plumber())
         .pipe(sass())
         .on('error', gutil.log)
-        .pipe(gulp.dest('dist/assets/css'));
+        .pipe(gulp.dest('docs/assets/css'));
 })
 
 gulp.task('assets',function(){
     return gulp.src('src/assets/**/*')
-        .pipe(gulp.dest('dist/assets'));
+        .pipe(gulp.dest('docs/assets'));
 })
 
 gulp.task('clean', function() {
-    return del.sync(['dist/**', '!dist', '!dist/bower_components', '!dist/bower_components/**']);
+    return del.sync(['docs/**', '!docs', '!docs/bower_components', '!docs/bower_components/**']);
 })
 
 gulp.task('cssvendor',function() {
     return gulp.src('src/scss/vendor/**/*')
-        .pipe(gulp.dest('dist/assets/css/vendor'));
+        .pipe(gulp.dest('docs/assets/css/vendor'));
 })
 
 gulp.task('default', function(){

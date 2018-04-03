@@ -8,9 +8,6 @@ var plumber = require('gulp-plumber');
 var gutil = require('gulp-util');
 var babel = require('gulp-babel');
 
-
-
-
 gulp.task('watch',['pug','sass','js','assets'], function(){
     gulp.watch(['src/scss/*.scss','src/scss/**/*.scss'],['sass']);
     gulp.watch(['src/pug/*.pug','src/pug/components/*.pug'],['pug']);
@@ -57,5 +54,5 @@ gulp.task('cssvendor',function() {
 })
 
 gulp.task('default', function(){
-    runSequence('clean', 'assets', 'cssvendor' ,['pug','sass','js'],'watch')
+    runSequence('clean', 'assets', 'cssvendor', ['pug', 'sass', 'js'])
 })

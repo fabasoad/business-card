@@ -20,3 +20,6 @@ docs/bower_components/owl.carousel/*
 docs/bower_components/owl.carousel/dist/*
 !docs/bower_components/owl.carousel/dist/owl.carousel.min.js
 !docs/bower_components/owl.carousel/dist/assets
+
+# Assets
+!docs/assets

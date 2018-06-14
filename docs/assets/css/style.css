@@ -170,6 +170,9 @@
 .about-text a {
   margin: 0 auto; }
 
+#resume:hover {
+  color: #9eadbc; }
+
 #resume {
   background: #ffffff;
   background: -moz-linear-gradient(top, #ffffff 0%, #f4f5f6 50%, #ffffff 100%);

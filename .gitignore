@@ -3,23 +3,7 @@ node_modules
 package-lock.json
 
 docs/*
-!docs/bower_components
-docs/bower_components/*
-
-# [jQuery] Ignore all except required file(s)
-!docs/bower_components/jquery
-docs/bower_components/jquery/*
-!docs/bower_components/jquery/dist
-docs/bower_components/jquery/dist/*
-!docs/bower_components/jquery/dist/jquery.min.js
-
-# [Owl Carousel] Ignore all except required file(s)
-!docs/bower_components/owl.carousel
-docs/bower_components/owl.carousel/*
-!docs/bower_components/owl.carousel/dist
-docs/bower_components/owl.carousel/dist/*
-!docs/bower_components/owl.carousel/dist/owl.carousel.min.js
-!docs/bower_components/owl.carousel/dist/assets
 
 # Assets
 !docs/assets
+!docs/index.html

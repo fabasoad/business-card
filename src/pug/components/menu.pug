@@ -1,23 +1,19 @@
 #nav.affix-top
-	.navbar.navbar-custom
-		.container
-			.navbar-header
-				button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-main-collapse')
-					i.fa.fa-bars
-				a.navbar-brand.page-scroll(href='#custom-page-top') Yevhen Fabizhevskyi
-			.collapse.navbar-collapse.navbar-right.navbar-main-collapse
-				ul.nav.navbar-nav
-					li.hidden
-						a(href='#custom-page-top')
-					li
-						a.page-scroll(href='#about') About Me
-					li
-						a.page-scroll(href='#experience') Experience
-					li
-						a.page-scroll(href='#education') Education
-					li
-						a.page-scroll(href='#portfolio') Portfolio
-					li
-						a.page-scroll(href='#resume') Resume
-					li
-						a.page-scroll(href='#contact') Contact
+	nav.navbar.navbar-expand-md.navbar-custom
+		a.navbar-brand(href='#custom-page-top') Yevhen Fabizhevskyi
+		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+			i.fa.fa-bars
+		#navbarNav.collapse.navbar-collapse
+			ul.navbar-nav
+				li.nav-item
+					a.nav-link(href='#about') About Me
+				li.nav-item
+					a.nav-link(href='#experience') Experience
+				li.nav-item
+					a.nav-link(href='#education') Education
+				li.nav-item
+					a.nav-link(href='#portfolio') Portfolio
+				li.nav-item
+					a.nav-link(href='#resume') Resume
+				li.nav-item
+					a.nav-link(href='#contact') Contact

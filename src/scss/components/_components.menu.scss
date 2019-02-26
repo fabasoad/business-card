@@ -1,7 +1,7 @@
 #nav {
 	z-index: 9999;
 }
-#nav.affix {
+#nav.affix-top {
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -9,29 +9,52 @@
 .navbar-custom {
 	margin-bottom: 0;
 	background-color: #2c3e50;
-	border-radius: 0px;
-	padding: 6px 0;
+	border-radius: 0;
 	.navbar-brand {
 		font-weight: 600;
 		&:focus {
 			outline: 0;
 		}
-		.navbar-toggle {
-			padding: 4px 6px;
-			font-size: 16px;
-			color: #fff;
-			&:focus {
-				outline: 0;
-			}
-			&:active {
-				outline: 0;
-			}
+	}
+	.navbar-toggler {
+		padding: 4px 6px;
+		font-size: 16px;
+		color: #fff;
+		&:focus {
+			outline: 0;
+		}
+		&:active {
+			outline: 0;
 		}
 	}
 	a {
 		color: #f4f5f6;
 	}
-	.nav {
+}
+.btn-primary {
+	color: #76818d;
+	background-color: transparent;
+	border-color: #76818d;
+	margin: 0 10px;
+	font-size: 16px;
+	&:hover {
+		color: #eee;
+		background-color: #2c3e50;
+		border-color: #2c3e50;
+	}
+	&:focus {
+		color: #eee;
+		background-color: #2c3e50;
+		border-color: #2c3e50;
+	}
+	&:active {
+		color: #eee;
+		background-color: #2c3e50;
+		border-color: #2c3e50;
+	}
+}
+#navbarNav {
+	.navbar-nav {
 		li {
 			a {
 				text-transform: uppercase;
@@ -67,34 +90,12 @@
 		}
 	}
 }
-.btn-default {
-	color: #76818d;
-	background-color: transparent;
-	border-color: #76818d;
-	margin: 0 10px;
-	font-size: 16px;
-	&:hover {
-		color: #eee;
-		background-color: #2c3e50;
-		border-color: #2c3e50;
-	}
-	&:focus {
-		color: #eee;
-		background-color: #2c3e50;
-		border-color: #2c3e50;
-	}
-	&:active {
-		color: #eee;
-		background-color: #2c3e50;
-		border-color: #2c3e50;
-	}
-}
-.btn-default.focus {
+.btn-primary.focus {
 	color: #eee;
 	background-color: #2c3e50;
 	border-color: #2c3e50;
 }
-.btn-default.active {
+.btn-primary.active {
 	color: #eee;
 	background-color: #2c3e50;
 	border-color: #2c3e50;

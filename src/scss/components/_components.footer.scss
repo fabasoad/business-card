@@ -63,17 +63,15 @@
 	}
 	.btn {
 		background-color: transparent;
-		border: 1px solid #f4f5f6;
+		border: none;
 		border-radius: 4px;
 		padding: 10px 20px;
 		color: #f4f5f6;
 		margin-top: 15px;
 		&:hover {
-			border: 1px solid #E87E04;
 			color: #E87E04;
 		}
 		&:focus {
-			border: 1px solid #E87E04;
 			color: #E87E04;
 		}
 	}

@@ -3,20 +3,22 @@
 		.section-title.text-center.center
 			h2 About Me
 			hr
-		.row
+		.row.d-flex.justify-content-center
 			.col-md-12.text-center
-				img.img-responsive(src="assets/images/about_me.jpg")
-			.col-md-8.col-md-offset-2
+				img.img-thumbnail(src="assets/images/about_me.jpg")
+			.col-md-8.col-md-offset-2.text-center
 				.about-text
 					p General: 9+ years of commercial software development experience. Research, design and support. Interested in studying of new technologies and new program languages.
 					p Specialization:
-						|Primary: Java, C#/.NET
-						|Secondary: JavaScript, Python
+						ul.list-unstyled
+							li Primary: Java, C#/.NET
+							li Secondary: JavaScript, Python
 					p Experience:
-						|Java - 4.5 years
-						|C#/.NET - 3.5 years
-						|PHP - 0.5 years
-						|JavaScript - 4 months
-						|C++ - 2 months
+						ul.list-unstyled
+							li Java - 4.5 years
+							li C#/.NET - 3.5 years
+							li PHP - 0.5 years
+							li JavaScript - 4 months
+							li C++ - 2 months
 					p.text-center
-						a#resume.btn.btn-default.btn-lg.page-scroll(href="assets/files/yf-cv.pdf" target="_blank") Download Resume
+						a#resume.btn.btn-primary.btn-lg.page-scroll(href="assets/files/yf-cv.pdf" target="_blank") Download Resume

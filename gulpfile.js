@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const runSequence = require('run-sequence').use(gulp);
 const pug = require('gulp-pug');
 const del = require('del');
 const sass = require('gulp-sass');
@@ -40,4 +39,4 @@ gulp.task('clean', gulp.parallel(() => del.sync(['docs/**', '!docs', '!docs/bowe
 gulp.task('cssvendor', gulp.parallel(() => gulp.src('src/scss/vendor/**/*')
         .pipe(gulp.dest('docs/assets/css/vendor'))));
 
-gulp.task('default', gulp.parallel(() => runSequence('clean', 'assets', 'cssvendor', ['pug', 'sass', 'js'])));
+gulp.task('default', gulp.parallel('clean', 'assets', 'cssvendor', ['pug', 'sass', 'js']));

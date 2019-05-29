@@ -2,6 +2,6 @@ language: node_js
 node_js:
   - "12.3.1"
 before_script:
-  - npm install --save-dev babel-core babel-preset-env
+  - npm install --save-dev @babel/core @babel/preset-env
   - npm install -g gulp-cli
 script: gulp

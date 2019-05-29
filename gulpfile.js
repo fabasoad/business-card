@@ -14,29 +14,29 @@ gulp.task('watch', gulp.parallel('pug','sass','js','assets', () => {
     gulp.watch(['src/js/*'], ['js']);
 }));
 
-gulp.task('pug', gulp.parallel(() => gulp.src('src/pug/*.pug')
+gulp.task('pug', () => gulp.src('src/pug/*.pug')
     .pipe(plumber())
     .pipe(pug())
     .on('error', gutil.log)
-    .pipe(gulp.dest('docs'))));
+    .pipe(gulp.dest('docs')));
 
-gulp.task('js', gulp.parallel(() => gulp.src('src/js/*.js')
+gulp.task('js', () => gulp.src('src/js/*.js')
     .pipe(plumber())
     .pipe(babel({presets: ['env']}))
     .on('error', gutil.log)
-    .pipe(gulp.dest('docs/assets/js'))));
+    .pipe(gulp.dest('docs/assets/js')));
 
-gulp.task('sass', gulp.parallel(() => gulp.src('src/scss/**/*.scss')
+gulp.task('sass', () => gulp.src('src/scss/**/*.scss')
     .pipe(plumber())
     .pipe(sass())
     .on('error', gutil.log)
-    .pipe(gulp.dest('docs/assets/css'))));
+    .pipe(gulp.dest('docs/assets/css')));
 
-gulp.task('assets', gulp.parallel(() => gulp.src('src/assets/**/*').pipe(gulp.dest('docs/assets'))));
+gulp.task('assets', () => gulp.src('src/assets/**/*').pipe(gulp.dest('docs/assets')));
 
-gulp.task('clean', gulp.parallel(() => del.sync(['docs/**', '!docs', '!docs/bower_components', '!docs/bower_components/**'])));
+gulp.task('clean', () => del.sync(['docs/**', '!docs', '!docs/bower_components', '!docs/bower_components/**']));
 
-gulp.task('cssvendor', gulp.parallel(() => gulp.src('src/scss/vendor/**/*')
-        .pipe(gulp.dest('docs/assets/css/vendor'))));
+gulp.task('cssvendor', () => gulp.src('src/scss/vendor/**/*')
+        .pipe(gulp.dest('docs/assets/css/vendor')));
 
-gulp.task('default', gulp.parallel('clean', 'assets', 'cssvendor', ['pug', 'sass', 'js']));
+gulp.task('default', gulp.parallel('clean', 'assets', 'cssvendor', 'pug', 'sass', 'js'));

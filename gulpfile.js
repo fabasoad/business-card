@@ -39,4 +39,4 @@ gulp.task('clean', () => del.sync(['docs/**', '!docs', '!docs/bower_components',
 gulp.task('cssvendor', () => gulp.src('src/scss/vendor/**/*')
         .pipe(gulp.dest('docs/assets/css/vendor')));
 
-gulp.task('default', gulp.parallel('clean', 'assets', 'cssvendor', 'pug', 'sass', 'js'));
+gulp.task('default', gulp.series('clean', 'assets', 'cssvendor', gulp.parallel('pug', 'sass', 'js')));

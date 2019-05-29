@@ -7,7 +7,7 @@ const plumber = require('gulp-plumber');
 const gutil = require('gulp-util');
 const babel = require('gulp-babel');
 
-gulp.task('watch', gulp.parallel('pug','sass','js','assets', () => {
+gulp.task('watch', gulp.series(gulp.parallel('pug','sass','js','assets'), () => {
     gulp.watch(['src/scss/*.scss','src/scss/**/*.scss'], ['sass']);
     gulp.watch(['src/pug/*.pug','src/pug/components/*.pug'], ['pug']);
     gulp.watch(['src/assets/**/*'], ['assets']);

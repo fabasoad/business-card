@@ -28,7 +28,6 @@ gulp.task('assets', async () => gulp.src('src/assets/**/*').pipe(gulp.dest('docs
 
 gulp.task('clean', async () => del.sync(['docs/**', '!docs', '!docs/bower_components', '!docs/bower_components/**']));
 
-gulp.task('cssvendor', async () => gulp.src('src/scss/vendor/**/*')
-        .pipe(gulp.dest('docs/assets/css/vendor')));
+gulp.task('ci', gulp.parallel('pug', 'sass', 'js'));
 
-gulp.task('default', gulp.series('clean', 'assets', 'cssvendor', gulp.parallel('pug', 'sass', 'js')));
+gulp.task('default', gulp.series('clean', 'assets', 'ci'));

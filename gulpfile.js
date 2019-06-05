@@ -28,6 +28,4 @@ gulp.task('assets', async () => gulp.src('src/assets/**/*').pipe(gulp.dest('docs
 
 gulp.task('clean', async () => del.sync(['docs/**', '!docs', '!docs/bower_components', '!docs/bower_components/**']));
 
-gulp.task('ci', gulp.parallel('pug', 'sass', 'js'));
-
-gulp.task('default', gulp.series('clean', 'assets', 'ci'));
+gulp.task('default', gulp.series('clean', 'assets', gulp.parallel('pug', 'sass', 'js')));

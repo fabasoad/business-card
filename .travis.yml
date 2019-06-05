@@ -3,7 +3,7 @@ node_js:
   - 12.3.1
 cache: npm
 before_script: npm install -g gulp-cli
-script: gulp ci
+script: gulp default
 deploy:
   provider: pages
   skip-cleanup: true

@@ -14,7 +14,7 @@ gulp.task('pug', async () => gulp.src('src/pug/*.pug')
 
 gulp.task('js', async () => gulp.src('src/js/*.js')
     .pipe(plumber())
-    .pipe(babel({presets: ['env']}))
+    .pipe(babel({presets: ['@babel/env']}))
     .on('error', gutil.log)
     .pipe(gulp.dest('docs/assets/js')));
 

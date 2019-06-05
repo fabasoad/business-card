@@ -6,7 +6,7 @@ const plumber = require('gulp-plumber');
 const gutil = require('gulp-util');
 const babel = require('gulp-babel');
 
-const DEPLOYMENT_FOLDER = 'public';
+const DEPLOYMENT_FOLDER = '.';
 
 gulp.task('pug', async () => gulp.src('src/pug/*.pug')
     .pipe(plumber())

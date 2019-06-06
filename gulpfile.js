@@ -15,10 +15,11 @@ const cleanTask = {};
 cleanTask[CI_DEPLOYMENT_FOLDER] = 'ci-clean';
 cleanTask[DEV_DEPLOYMENT_FOLDER] = 'dev-clean';
 
-const getCleanTask = dir => {
-    CURRENT_DEPLOYMENT_FOLDER = dir;
-    console.log(`Deployment folder: ${CURRENT_DEPLOYMENT_FOLDER}`);
-    return cleanTask[dir];
+const defineDeploymentFolder = f => {
+    return () => {
+        console.log(`Deployment folder: ${f}`);
+        CURRENT_DEPLOYMENT_FOLDER = f;
+    };
 };
 
 gulp.task('pug', async () => gulp.src('src/pug/*.pug')
@@ -47,6 +48,6 @@ gulp.task('ci-clean', async () => del.sync(['**']));
 
 gulp.task('build', gulp.series('assets', gulp.parallel('pug', 'sass', 'js')));
 
-gulp.task('dev', gulp.series(getCleanTask(CI_DEPLOYMENT_FOLDER), 'build'));
+gulp.task('dev', gulp.series(defineDeploymentFolder(DEV_DEPLOYMENT_FOLDER), 'dev-clean', 'build'));
 
-gulp.task('ci', gulp.series(getCleanTask(DEV_DEPLOYMENT_FOLDER), 'build'));
+gulp.task('ci', gulp.series(defineDeploymentFolder(CI_DEPLOYMENT_FOLDER), 'ci-clean', 'build'));

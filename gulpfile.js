@@ -17,6 +17,7 @@ cleanTask[DEV_DEPLOYMENT_FOLDER] = 'dev-clean';
 
 const getCleanTask = dir => {
     CURRENT_DEPLOYMENT_FOLDER = dir;
+    console.log(`Deployment folder: ${CURRENT_DEPLOYMENT_FOLDER}`);
     return cleanTask[dir];
 };
 

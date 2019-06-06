@@ -15,10 +15,10 @@ const cleanTask = {};
 cleanTask[CI_DEPLOYMENT_FOLDER] = 'ci-clean';
 cleanTask[DEV_DEPLOYMENT_FOLDER] = 'dev-clean';
 
-const defineDeploymentFolder = f => {
-    return () => {
-        console.log(`Deployment folder: ${f}`);
+const defineDeploymentFolder = function (f) {
+    return function () {
         CURRENT_DEPLOYMENT_FOLDER = f;
+        console.log(`Deployment folder: ${CURRENT_DEPLOYMENT_FOLDER}`);
     };
 };
 

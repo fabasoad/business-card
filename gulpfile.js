@@ -15,7 +15,6 @@ let CURRENT_DEPLOYMENT_FOLDER;
 const defineDeploymentFolder = f => () => {
     CURRENT_DEPLOYMENT_FOLDER = f;
     log(`Deployment folder: ${CURRENT_DEPLOYMENT_FOLDER}`);
-    cb();
 };
 
 gulp.task('pug', () => gulp.src('src/pug/*.pug')
@@ -40,7 +39,7 @@ gulp.task('assets', () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${CURRENT_
 
 gulp.task('clean', () => {
     const rules = [`${CURRENT_DEPLOYMENT_FOLDER}/assets`, `${CURRENT_DEPLOYMENT_FOLDER}/index.html`]
-    log(`[clean] Rules for del.sync: ${rules}`);
+    log(`[clean] del(${rules})`);
     return del(rules);
 });
 
@@ -51,7 +50,7 @@ gulp.task('ci-after-build', () => {
         `!${CURRENT_DEPLOYMENT_FOLDER}/assets`,
         `!${CURRENT_DEPLOYMENT_FOLDER}/index.html`
     ];
-    log(`[ci-after-build] Rules for del.sync: ${rules}`);
+    log(`[ci-after-build] del(${rules})`);
     return del(rules, cb);
 });
 

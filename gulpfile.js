@@ -40,14 +40,12 @@ gulp.task('assets', async () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${CU
 
 gulp.task('clean', async cb => del.sync([`${CURRENT_DEPLOYMENT_FOLDER}/assets`, `${CURRENT_DEPLOYMENT_FOLDER}/index.html`], cb));
 
-gulp.task('ci-after-build', function () {
-    return del([
-        `${CURRENT_DEPLOYMENT_FOLDER}/**`,
-        `!${CURRENT_DEPLOYMENT_FOLDER}`,
-        `!${CURRENT_DEPLOYMENT_FOLDER}/assets`,
-        `!${CURRENT_DEPLOYMENT_FOLDER}/index.html`
-    ], { force: true });
-});
+gulp.task('ci-after-build', async cb => del.sync([
+    `${CURRENT_DEPLOYMENT_FOLDER}/**`,
+    `!${CURRENT_DEPLOYMENT_FOLDER}`,
+    `!${CURRENT_DEPLOYMENT_FOLDER}/assets`,
+    `!${CURRENT_DEPLOYMENT_FOLDER}/index.html`
+], cb));
 
 gulp.task('build', gulp.series('clean', 'assets', gulp.parallel('pug', 'sass', 'js')));
 

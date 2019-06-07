@@ -5,8 +5,9 @@ const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const gutil = require('gulp-util');
 const babel = require('gulp-babel');
+require('dotenv').config()
 
-const CI_DEPLOYMENT_FOLDER = gutil.env.TRAVIS_BUILD_DIR;
+const CI_DEPLOYMENT_FOLDER = process.env.TRAVIS_BUILD_DIR;
 const DEV_DEPLOYMENT_FOLDER = 'docs';
 
 let CURRENT_DEPLOYMENT_FOLDER;

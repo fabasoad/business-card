@@ -52,7 +52,7 @@ gulp.task('ci-after-build', () => {
         `!${CURRENT_DEPLOYMENT_FOLDER}/index.html`
     ];
     log(`[ci-after-build] del(${rules})`);
-    return del(rules, cb);
+    return del(rules);
 });
 
 gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass', 'js')));

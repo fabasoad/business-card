@@ -12,9 +12,10 @@ const DEV_DEPLOYMENT_FOLDER = 'docs';
 
 let CURRENT_DEPLOYMENT_FOLDER;
 
-const defineDeploymentFolder = f => () => {
+const defineDeploymentFolder = f => cb => {
     CURRENT_DEPLOYMENT_FOLDER = f;
     log(`Deployment folder: ${CURRENT_DEPLOYMENT_FOLDER}`);
+    cb();
 };
 
 gulp.task('pug', () => gulp.src('src/pug/*.pug')

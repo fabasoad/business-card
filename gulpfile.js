@@ -5,7 +5,7 @@ const del = require('del');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
-require('dotenv').config()
+require('dotenv').config();
 
 const CI_BUILD_DIR = process.env.TRAVIS_BUILD_DIR;
 const DEV_BUILD_DIR = 'docs';

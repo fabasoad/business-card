@@ -6,7 +6,7 @@ const plumber = require('gulp-plumber');
 const gutil = require('gulp-util');
 const babel = require('gulp-babel');
 
-const CI_DEPLOYMENT_FOLDER = '.';
+const CI_DEPLOYMENT_FOLDER = gutil.env.TRAVIS_BUILD_DIR;
 const DEV_DEPLOYMENT_FOLDER = 'docs';
 
 let CURRENT_DEPLOYMENT_FOLDER;
@@ -39,11 +39,14 @@ gulp.task('assets', async () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${CU
 
 gulp.task('clean', async cb => del.sync([`${CURRENT_DEPLOYMENT_FOLDER}/assets`, `${CURRENT_DEPLOYMENT_FOLDER}/index.html`], cb));
 
-gulp.task('ci-after-build', async () => del.sync([
-    `${CURRENT_DEPLOYMENT_FOLDER}/**`,
-    `!${CURRENT_DEPLOYMENT_FOLDER}/assets`,
-    `!${CURRENT_DEPLOYMENT_FOLDER}/index.html`
-], { force: true }));
+gulp.task('ci-after-build', function () {
+    return del([
+        `${CURRENT_DEPLOYMENT_FOLDER}/**`,
+        `!${CURRENT_DEPLOYMENT_FOLDER}`,
+        `!${CURRENT_DEPLOYMENT_FOLDER}/assets`,
+        `!${CURRENT_DEPLOYMENT_FOLDER}/index.html`
+    ], { force: true });
+});
 
 gulp.task('build', gulp.series('clean', 'assets', gulp.parallel('pug', 'sass', 'js')));
 

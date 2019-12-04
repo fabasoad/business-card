@@ -21,11 +21,12 @@
               .timeline-body
                 p In addition to the previous duties:
                 h5 Description:
-                p Configuring and connecting CI for current projects from the scratch. Bitrise for Android app and Travis CI for casinos and Administration tool.
+                p Configuring and connecting CI for current projects from scratch. Bitrise for Android app and Travis CI for casinos and Administration tool.
                 p Implementation and support the following features:
-                p - In the beginning casino has 8 own games. One of the valuable feature was connecting a big amount of games using API of 3rd party organization that provides such service. Role of this organization is games aggregator that collects many games from different companies and provides all the games using unified API for casinos.
+                p - In the beginning casino has 8 own games. One of the valuable features was connecting a big amount of games using API of 3rd party organization that provides such service. Role of this organization is games aggregator that collects many games from different companies and provides all the games using unified API for casinos.
+                p - Splitting monolith application into microservices architecture.
                 h5 Achievements:
-                p Learning and configuring CI tool from the scratch - Travis CI.
+                p Learning and configuring CI tools for the projects from scratch - Travis CI.
                 h5 Technologies:
                 p CI: Travis CI and Bitrise
           li.timeline-inverted
@@ -50,7 +51,7 @@
                 p Admin permissions managing allows giving a permissions for specific features for some admins only.
                 p Leader board allows to see players that won the biggest amount of money either by 1 game or in total.
                 p Campaigns managing allows to create and support campaigns for marketing department.
-                p A lot of other features - Restoring player, referrer players, E-mail subscriptions, etc.
+                p A lot of other features - Restoring players, referrer players, E-mail subscriptions, etc.
                 p Also, restore Android app application with legacy code. Upgrade it to the latest version, redesign it based on the latest company design rules and add an additional features.
                 h5 Achievements:
                 p Learning Android development processes and tools.
@@ -73,7 +74,7 @@
                 h4.subheading Senior Software Development Engineer
               .timeline-body
                 h5 Description:
-                p Continue working on HPE ALM product until Mar, 2017. I was involved in different parts of a product - ALM frontend and backend, its Administration tool that is written in Delphi, ALM SaaS Add-on that was developed for those customers who don't want to buy On Premise application but just to use ALM as a service for certain period of time. ALM has 3 major releases (from 11.00 and till 14.00 versions included) during these 5.5 years in HPE. On Mar, 2017 HPE becomes a part of Microfocus company and it closes a lot of its departments in different parts of the world including Ukraine. So, at this point I become a part of another product - Prysm iPhone App (please find it in "Portfolio" for more details).
+                p Continue working on HPE ALM product until Mar, 2017. I was involved in different parts of a product - ALM frontend and backend, its Administration tool that is written in Delphi, ALM SaaS Add-on that was developed for those customers who don't want to buy On Premise application but just to use ALM as a service for a certain period of time. ALM has 3 major releases (from 11.00 and till 14.00 versions included) during these 5.5 years in HPE. On Mar, 2017 HPE becomes a part of Microfocus company and it closes a lot of its departments in different parts of the world including Ukraine. So, at this point I become a part of another product - Prysm iPhone App (please find it in "Portfolio" for more details).
                 p For 1 year I was an off-shore contractor for Prysm Inc. on Prysm iPhone App product using C#/.NET + Xamarin. As in previous product I work here in fully Agile environment, collaborating with QA teams, Project Manager, DevOps team, Design team, etc. One of the most interesting tasks for me was to make a change in Google Chrome project - make Cookies saving not locally (in SQLite) but to shared storage (Redis in my case). To have a possibility to share cookies between different Chrome instances.
                 h5 Achievements (2017-2018):
                 p Getting knowledge of mobile development processes.
@@ -85,10 +86,10 @@
                 p CI: TeamCity
                 p &nbsp;
                 p After Prysm Inc. decided to close some QA and engineering departments in Ukraine including team where I was working I became an off-shore contractor for Earnin company in Microservices team (May, 2018 - Sep, 2018). Here I worked 50/50 as a DevOps engineer and Software Engineer.
-                p I was responsible for Logs feature. The aim was to collect all the logs from all the services and send them to multiple targets. From infrastructure perspective we was using Kubernetes as orchestration of all services. Going through all the services I configured logs to send them to console in a unified format. Almost all the services was written in C#/.NET (.NET Core). From infrastructure perspective I configured logs path as following - fluent-bit -> fluentd -> (Logentries, AWS S3, Bugsnag, Elasticsearch). So, I started from fluent-bit (adding it to existing pods) to collect all the logs from services' console output and send them to fluentd. fluentd responsibility is to send logs to different kinds of targets based on filtering, like - all logs should be archived and stored in AWS S3, errors and upper - to Bugsnag, etc. While working with fluentd I had to write own filters using Ruby programming language that was really new for me. During this period I was working with DevOps Engineer closely learning from him a lot of stuff related to Kubernetes (starting from deploying Kubernetes to AWS using kops from the scratch, configuring it and finishing with monitoring tools such as Prometheus, Grafana).
+                p I was responsible for Logs feature. The aim was to collect all the logs from all the services and send them to multiple targets. From infrastructure perspective we was using Kubernetes as orchestration of all services. Going through all the services I configured logs to send them to console in a unified format. Almost all the services was written in C#/.NET (.NET Core). From infrastructure perspective I configured logs path as following - fluent-bit -> fluentd -> (Logentries, AWS S3, Bugsnag, Elasticsearch). So, I started from fluent-bit (adding it to existing pods) to collect all the logs from services' console output and send them to fluentd. fluentd responsibility is to send logs to different kinds of targets based on filtering, like - all logs should be archived and stored in AWS S3, errors and upper - to Bugsnag, etc. While working with fluentd I had to write own filters using Ruby programming language that was really new for me. During this period I was working with DevOps Engineer closely learning from him a lot of stuff related to Kubernetes (starting from deploying Kubernetes to AWS using kops from scratch, configuring it and finishing with monitoring tools such as Prometheus, Grafana).
                 h5 Achievements (last half of a year):
                 p Getting knowledge of DevOps development processes.
-                p Getting knowledge of how to configure microservices environment from the scratch.
+                p Getting knowledge of how to configure microservices environment from scratch.
                 p Getting knowledge of how to work with monitoring tools like Kibana, Prometheus and Grafana.
                 p Learning the most popular container orchestration tool - Kubernetes.
                 p Learning C#/.NET development tool - .NET Core.
@@ -119,7 +120,7 @@
                 h4.subheading Software Development Engineer
               .timeline-body
                 h5 Description:
-                p Still continue working for Hewlett Packard Enterprise but switching to "Application Lifecycle Management" product. Also, starting from this point I start learning Java (Spring) as it was the main language on Backend side. Here almost 90% I worked as a Backend Developer and sometimes had some Frontend tasks as well. In addition to previous scope of work I have to implement new features and writing technical and functional specifications prior to implementing them. In 2015 almost half of a year I was leading a side product called "ALM Robot". This product is a "helper" for ALM (please find it in "Portfolio" for more details). Backend is still in Java and frontend is written using AngularJS. So, at this time web frontend layer becomes more closer to me.
+                p Still continue working for Hewlett Packard Enterprise but switching to "Application Lifecycle Management" product. Also, starting from this point I started learning Java (Spring) as it was the main language on Backend side. Here almost 90% I worked as a Backend Developer and sometimes had some Frontend tasks as well. In addition to previous scope of work I have to implement new features and writing technical and functional specifications prior to implementing them. In 2015 almost half a year I was leading a side product called "ALM Robot". This product is a "helper" for ALM (please find it in "Portfolio" for more details). Backend is still in Java and frontend is written using AngularJS. So, at this time web frontend layer becomes closer to me.
                 h5 Achievements:
                 p Learning programming language - Java.
                 p Learning web frontend environment.
@@ -167,11 +168,11 @@
                 | Mar 2010
             .timeline-panel
               .timeline-heading
-                h4 ARKA
+                h4 ARKA - Finance, Software, Services
                 h4.subheading Full Stack Developer
               .timeline-body
                 h5 Description:
-                p I have started my journey as a C#/.NET Developer using Silverlight development tool. First half of a year I was fully involved into Silverlight Development for customer from Germany. After project was finished I was switched to Full Stack Development of short-term projects using PHP on backend and JavaScript on frontend layers. Last year I have been switched between Silverlight Development of internal product and short-term external projects based on company's priorities.
+                p I have started my journey as a C#/.NET Developer using Silverlight development tools. First half of a year I was fully involved into Silverlight Development for customer from Germany. After the project was finished I was switched to Full Stack Development of short-term projects using PHP on backend and JavaScript on frontend layers. Last year I have been switched between Silverlight Development of internal product and short-term external projects based on company's priorities.
                 h5 Achievements:
                 p Getting knowledge of how to work for commercial projects.
                 p Learning C#/.NET development tool - Silverlight.

@@ -3,7 +3,6 @@
 ## Description
 My personal web site.
 ## Technologies
-1. Babel 7.4.5
-2. Gulp 4.0.2
-3. Pug 4.0.1
-4. SASS 4.0.2
+1. Gulp 4.0.2
+2. Pug 4.0.1
+3. SASS 4.0.2

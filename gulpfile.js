@@ -32,7 +32,7 @@ gulp.task('sass', () => gulp.src('src/scss/**/*.scss')
 gulp.task('assets', () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${BUILD_DIR}/assets`)));
 
 gulp.task('clean', () => {
-    const rules = [`${BUILD_DIR}`];
+    const rules = [`${BUILD_DIR}/assets`, `${BUILD_DIR}/index.html`];
     log(`Processing 'clean'. Deleting ${rules}...`);
     return del(rules);
 });

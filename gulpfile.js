@@ -4,6 +4,7 @@ const pug = require('gulp-pug');
 const del = require('del');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
+const babel = require('gulp-babel');
 require('dotenv').config();
 
 const CI_BUILD_DIR = process.env.TRAVIS_BUILD_DIR;
@@ -22,6 +23,12 @@ gulp.task('pug', () => gulp.src('src/pug/*.pug')
     .pipe(pug())
     .on('error', log)
     .pipe(gulp.dest(BUILD_DIR)));
+
+gulp.task('js', () => gulp.src('src/js/*.js')	
+    .pipe(plumber())	
+    .pipe(babel({presets: ['@babel/env']}))	
+    .on('error', log)	
+    .pipe(gulp.dest(`${BUILD_DIR}/assets/js`)));
 
 gulp.task('sass', () => gulp.src('src/scss/**/*.scss')
     .pipe(plumber())
@@ -48,7 +55,7 @@ gulp.task('ci-after-build', () => {
     return del(rules);
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass')));
+gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass', 'js')));
 
 gulp.task('define-dev-folder', defineDeploymentFolder(DEV_BUILD_DIR));
 gulp.task('clean-dev', gulp.series('define-dev-folder', 'clean'));

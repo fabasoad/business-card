@@ -8,7 +8,7 @@ const babel = require('gulp-babel');
 require('dotenv').config();
 
 const CI_BUILD_DIR = process.env.TRAVIS_BUILD_DIR;
-const DEV_BUILD_DIR = 'docs';
+const DEV_BUILD_DIR = 'public';
 
 let BUILD_DIR;
 

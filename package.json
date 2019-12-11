@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
+  "dependencies": {
+    "express": "4.17.1",
+    "express-rate-limit": "5.0.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/preset-env": "^7.7.6",
@@ -18,7 +22,8 @@
   "scripts": {
     "clean:dev": "gulp clean-dev",
     "build:ci": "gulp ci",
-    "build:dev": "gulp dev"
+    "build:dev": "gulp dev",
+    "start": "node server/server.js"
   },
   "bugs": {
     "url": "https://github.com/fabasoad/business-card/issues",

@@ -27,7 +27,7 @@ gulp.task('sass', () => gulp.src('src/scss/**/*.scss')
     .on('error', log)
     .pipe(gulp.dest(`${BUILD_DIR}/assets/css`)));
 
-gulp.task('i18n', () => gulp.src('i18n/**/*').pipe(gulp.dest(`${BUILD_DIR}/i18n`)));
+gulp.task('i18n', () => gulp.src('src/i18n/**/*').pipe(gulp.dest(`${BUILD_DIR}/i18n`)));
 
 gulp.task('assets', () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${BUILD_DIR}/assets`)));
 
@@ -42,6 +42,7 @@ gulp.task('clean:ci', () => {
         `${BUILD_DIR}/**`,
         `!${BUILD_DIR}`,
         `!${BUILD_DIR}/assets/**`,
+        `!${BUILD_DIR}/i18n/**`,
         `!${BUILD_DIR}/index.html`
     ];
     log(`Deleting ${rules}...`);

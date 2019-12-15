@@ -7,16 +7,7 @@ const plumber = require('gulp-plumber');
 const babel = require('gulp-babel');
 require('dotenv').config();
 
-const CI_BUILD_DIR = process.env.TRAVIS_BUILD_DIR;
-const DEV_BUILD_DIR = 'public';
-
-let BUILD_DIR;
-
-const defineDeploymentFolder = f => cb => {
-    BUILD_DIR = f;
-    log(`BUILD_DIR=${BUILD_DIR}`);
-    cb();
-};
+const BUILD_DIR = process.env.TRAVIS_BUILD_DIR || 'public';
 
 gulp.task('pug', () => gulp.src('src/pug/*.pug')
     .pipe(plumber())
@@ -40,13 +31,13 @@ gulp.task('i18n', () => gulp.src('i18n/**/*').pipe(gulp.dest(`${BUILD_DIR}/i18n`
 
 gulp.task('assets', () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${BUILD_DIR}/assets`)));
 
-gulp.task('clean', () => {
+gulp.task('clean:all', () => {
     const rules = [`${BUILD_DIR}/assets`, `${BUILD_DIR}/i18n`, `${BUILD_DIR}/index.html`];
     log(`Processing 'clean'. Deleting ${rules}...`);
     return del(rules);
 });
 
-gulp.task('ci-after-build', () => {
+gulp.task('clean:ci', () => {
     const rules = [
         `${BUILD_DIR}/**`,
         `!${BUILD_DIR}`,
@@ -58,11 +49,4 @@ gulp.task('ci-after-build', () => {
     return del(rules);
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass', 'js', 'i18n')));
-
-gulp.task('define-dev-folder', defineDeploymentFolder(DEV_BUILD_DIR));
-gulp.task('clean-dev', gulp.series('define-dev-folder', 'clean'));
-gulp.task('dev', gulp.series('define-dev-folder', 'build'));
-
-gulp.task('define-ci-folder', defineDeploymentFolder(CI_BUILD_DIR));
-gulp.task('ci', gulp.series('define-ci-folder', 'build', 'ci-after-build'));
+gulp.task('build', gulp.series('clean:all', gulp.parallel('assets', 'pug', 'sass', 'js', 'i18n')));

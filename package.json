@@ -20,9 +20,8 @@
     "gulp-sass": "^4.0.2"
   },
   "scripts": {
-    "clean:dev": "gulp clean-dev",
-    "build:ci": "gulp ci",
-    "build:dev": "gulp dev",
+    "clean:ci": "gulp clean:ci",
+    "build": "gulp build",
     "start": "node server/server.js"
   },
   "bugs": {

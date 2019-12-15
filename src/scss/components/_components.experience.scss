@@ -105,6 +105,9 @@
       margin-bottom: 0;
     }
   }
+  h5::after, .colon-title::after  {
+    content: ':'
+  }
 }
 
 @media (min-width: 768px) {

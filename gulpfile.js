@@ -36,10 +36,12 @@ gulp.task('sass', () => gulp.src('src/scss/**/*.scss')
     .on('error', log)
     .pipe(gulp.dest(`${BUILD_DIR}/assets/css`)));
 
+gulp.task('i18n', () => gulp.src('i18n/**/*').pipe(gulp.dest(`${BUILD_DIR}/i18n`)));
+
 gulp.task('assets', () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${BUILD_DIR}/assets`)));
 
 gulp.task('clean', () => {
-    const rules = [`${BUILD_DIR}/assets`, `${BUILD_DIR}/index.html`];
+    const rules = [`${BUILD_DIR}/assets`, `${BUILD_DIR}/i18n`, `${BUILD_DIR}/index.html`];
     log(`Processing 'clean'. Deleting ${rules}...`);
     return del(rules);
 });
@@ -55,7 +57,7 @@ gulp.task('ci-after-build', () => {
     return del(rules);
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass', 'js')));
+gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass', 'js', 'i18n')));
 
 gulp.task('define-dev-folder', defineDeploymentFolder(DEV_BUILD_DIR));
 gulp.task('clean-dev', gulp.series('define-dev-folder', 'clean'));

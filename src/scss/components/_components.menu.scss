@@ -11,6 +11,7 @@
 	background-color: $blue;
 	border-radius: 0;
 	.navbar-brand {
+		color: $white;
 		font-weight: 600;
 		&:focus {
 			outline: 0;
@@ -27,8 +28,8 @@
 			outline: 0;
 		}
 	}
-	a {
-		color: #f4f5f6;
+	.nav-link {
+		color: $white;
 	}
 }
 .btn-primary {
@@ -56,7 +57,7 @@
 #navbarNav {
 	.navbar-nav {
 		li {
-			a {
+			.dropdown-menu .dropdown-item, .nav-link {
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				-webkit-transition: background .3s ease-in-out;
@@ -82,10 +83,17 @@
 					color: #E87E04;
 				}
 			}
+			.dropdown-menu {
+				background: $blue;
+				border-width: 0;
+				.dropdown-item {
+					color: $white;
+				}
+			}
 		}
 		li.active {
 			outline: 0;
-			a {
+			.nav-link {
 				background-color: rgba(255,255,255,.3);
 				&:hover {
 					color: #fff;

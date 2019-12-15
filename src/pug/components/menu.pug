@@ -1,19 +1,28 @@
 #nav.affix-top
 	nav.navbar.navbar-expand-md.navbar-custom
-		a.navbar-brand(href='#custom-page-top') Yevhen Fabizhevskyi
+		a.navbar-brand(href='#custom-page-top' data-i18n="business-card-author-name")
 		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
 			i.fa.fa-bars
-		#navbarNav.collapse.navbar-collapse
+		#navbarNav.collapse.navbar-collapse.justify-content-between
 			ul.navbar-nav
 				li.nav-item
-					a.nav-link(href='#about') About Me
+					a.nav-link(href='#about' data-i18n="business-card-menu-about-me")
 				li.nav-item
-					a.nav-link(href='#experience') Experience
+					a.nav-link(href='#experience' data-i18n="business-card-menu-experience")
 				li.nav-item
-					a.nav-link(href='#education') Education
+					a.nav-link(href='#education' data-i18n="business-card-menu-education")
 				li.nav-item
-					a.nav-link(href='#portfolio') Portfolio
+					a.nav-link(href='#portfolio' data-i18n="business-card-menu-portfolio")
 				li.nav-item
-					a.nav-link(href='#resume') Resume
+					a.nav-link(href='#resume' data-i18n="business-card-menu-resume")
 				li.nav-item
-					a.nav-link(href='#contact') Contact
+					a.nav-link(href='#contact' data-i18n="business-card-menu-contact")
+			ul.navbar-nav
+				li.nav-item.dropdown
+					button#t32xqgfvok.btn.nav-link.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+						span.flag-icon.flag-icon-gb(data-locale="en")
+						|  en
+					.dropdown-menu(aria-labelledby='t32xqgfvok')
+						button.dropdown-item
+							span.flag-icon.flag-icon-ru(data-locale="ru")
+							|  ru

@@ -43,6 +43,7 @@ gulp.task('clean:ci', () => {
         `!${BUILD_DIR}`,
         `!${BUILD_DIR}/assets/**`,
         `!${BUILD_DIR}/i18n`,
+        `!${BUILD_DIR}/i18n/**`,
         `!${BUILD_DIR}/index.html`
     ];
     log(`Deleting ${rules}...`);

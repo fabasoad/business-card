@@ -5,7 +5,8 @@ script: npm run build
 after_script: npm run clean:ci
 deploy:
   provider: pages
-  skip-cleanup: true
+  skip_cleanup: true
+  keep_history: true
   github-token: $GITHUB_TOKEN
   on:
     branch: master

@@ -27,7 +27,7 @@ gulp.task('sass', () => gulp.src('src/scss/**/*.scss')
     .on('error', log)
     .pipe(gulp.dest(`${BUILD_DIR}/assets/css`)));
 
-gulp.task('i18n', () => gulp.src('i18n/**/*').pipe(gulp.dest(`${BUILD_DIR}/assets/i18n`)));
+gulp.task('i18n', () => gulp.src('i18n/**/*').pipe(gulp.dest(`${BUILD_DIR}/i18n`)));
 
 gulp.task('assets', () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${BUILD_DIR}/assets`)));
 

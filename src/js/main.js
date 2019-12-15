@@ -19,6 +19,6 @@ $('.dropdown-menu').on('click', 'button', (e) => {
 });
 
 $.i18n().load({
-    en: 'i18n/en.json',
-    ru: 'i18n/ru.json'
+    en: 'assets/i18n/en.json',
+    ru: 'assets/i18n/ru.json'
 }).done(() => updateLocale('en'));

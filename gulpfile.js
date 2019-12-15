@@ -51,6 +51,7 @@ gulp.task('ci-after-build', () => {
         `${BUILD_DIR}/**`,
         `!${BUILD_DIR}`,
         `!${BUILD_DIR}/assets/**`,
+        `!${BUILD_DIR}/i18n/**`,
         `!${BUILD_DIR}/index.html`
     ];
     log(`Processing 'ci-after-build'. Deleting ${rules}...`);

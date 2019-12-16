@@ -69,18 +69,18 @@
 				}
 				&:hover {
 					outline: 0;
-					color: #E87E04;
+					color: $orange;
 					background-color: transparent;
 				}
 				&:focus {
 					outline: 0;
 					background-color: transparent;
-					color: #E87E04;
+					color: $orange;
 				}
 				&:active {
 					outline: 0;
 					background-color: transparent;
-					color: #E87E04;
+					color: $orange;
 				}
 			}
 			.dropdown-menu {

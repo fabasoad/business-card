@@ -2,6 +2,21 @@ $('.navbar-nav > li > a, .navbar-nav > li .dropdown-item').on('click', () => {
     $('.navbar-collapse').collapse('hide');
 });
 
+const btn = $('#back-to-top');
+
+$(window).scroll(() => {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', (e) => {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: 0 }, '300');
+});
+
 const updateLocale = (locale) => {
     $.i18n().locale = locale;
     document.title = $.i18n('business-card-title');

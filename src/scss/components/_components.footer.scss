@@ -17,7 +17,7 @@
 		margin-bottom: 10px;
 	}
 	.text-danger {
-		color: #E87E04;
+		color: $orange;
 		text-align: left;
 	}
 	.form-control {
@@ -70,10 +70,10 @@
 		color: $white;
 		margin-top: 15px;
 		&:hover {
-			color: #E87E04;
+			color: $orange;
 		}
 		&:focus {
-			color: #E87E04;
+			color: $orange;
 		}
 	}
 }

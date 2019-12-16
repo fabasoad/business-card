@@ -4,7 +4,7 @@
 
 #back-to-top {
   display: inline-block;
-  background-color: $blue;
+  background-color: $dark-blue;
   width: 50px;
   height: 50px;
   text-align: center;
@@ -29,7 +29,6 @@
 }
 #back-to-top:hover {
   cursor: pointer;
-  background-color: $orange;
 }
 #back-to-top:active {
   background-color: #555;

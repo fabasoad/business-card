@@ -21,4 +21,8 @@ $('.dropdown-menu').on('click', 'button', (e) => {
 $.i18n().load({
     en: 'i18n/en.json',
     ru: 'i18n/ru.json'
-}).done(() => updateLocale('en'));
+}).done(() => {
+    updateLocale('en');
+    $('.loader').hide();
+    $('.component').removeClass('component');
+});

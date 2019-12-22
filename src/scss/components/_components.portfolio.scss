@@ -53,12 +53,14 @@
 		transform: scale(1.2);
 	}
 	.hover-bg {
-		height: 260px;
 		overflow: hidden;
 		position: relative;
 	}
 }
 .hover-bg {
+	img {
+		max-height: 100% !important;
+	}
 	.hover-text {
 		position: absolute;
 		text-align: center;

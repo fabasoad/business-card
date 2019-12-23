@@ -6,7 +6,6 @@
 		"last-updated": "2019-12-15",
 		"locale": "en"
 	},
-	"business-card-about-me-download-resume": "Download resume:",
 	"business-card-about-me-experience-list-item-1": "Java - 4.5 years",
 	"business-card-about-me-experience-list-item-2": "C#/.NET - 3.5 years",
 	"business-card-about-me-experience-list-item-3": "JavaScript - 9 months",
@@ -137,5 +136,6 @@
 	"business-card-portfolio-work-plus-title": "Work+",
 	"business-card-portfolio-zakupki-subtitle": "Full Stack Development Engineer - JavaScript, PHP",
 	"business-card-portfolio-zakupki-title": "Zakupki Website",
+	"business-card-resume-title": "Resume",
 	"business-card-title": "Yevhen Fabizhevskyi :: Senior Software Development Engineer"
 }

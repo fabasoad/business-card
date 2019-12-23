@@ -6,7 +6,6 @@
 		"last-updated": "2019-12-15",
 		"locale": "ru"
 	},
-	"business-card-about-me-download-resume": "Скачать резюме:",
 	"business-card-about-me-experience-list-item-1": "Java - 4.5 года",
 	"business-card-about-me-experience-list-item-2": "C#/.NET - 3.5 года",
 	"business-card-about-me-experience-list-item-3": "JavaScript - 9 месяцев",
@@ -137,5 +136,6 @@
 	"business-card-portfolio-work-plus-title": "Work+",
 	"business-card-portfolio-zakupki-subtitle": "Инженер-программист - JavaScript, PHP",
 	"business-card-portfolio-zakupki-title": "Zakupki (вебсайт)",
+	"business-card-resume-title": "Резюме",
 	"business-card-title": "Евгений Фабижевский :: Разработчик программного обеспечения"
 }

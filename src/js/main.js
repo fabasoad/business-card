@@ -1,25 +1,29 @@
 // Close responsive menu when click on somewhere on a screen
 $('*').on('click', (e) => {
   const $self = $(e.currentTarget);
-  if (!$self.is('#nav')
-    && !$('#nav').parents().filter((_, el) => $(el).is($self)).length
-    && !$self.parents().filter('#nav').length) {
+  
+  const isNotNav = !$self.is('#nav');
+  const isNotParentOfNav = !$('#nav').parents().filter((_, el) => $(el).is($self)).length;
+  const isNavIsNotParent = !$self.parents().filter('#nav').length;
+  const isFlagClicked = !!$self.parents().filter('[aria-labelledby="btnLocale"]').length;
+
+  if (isNotNav && isNotParentOfNav && (isNavIsNotParent || isFlagClicked)) {
     $('.navbar-collapse').collapse('hide');
   }
 });
 
 // Configure "Top" button
-const btn = $('#back-to-top');
+const $btn = $('#back-to-top');
 
 $(window).scroll(() => {
   if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
+    $btn.addClass('show');
   } else {
-    btn.removeClass('show');
+    $btn.removeClass('show');
   }
 });
 
-btn.on('click', (e) => {
+$btn.on('click', (e) => {
   e.preventDefault();
   $('html, body').animate({ scrollTop: 0 }, '300');
 });

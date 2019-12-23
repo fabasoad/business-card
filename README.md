@@ -7,5 +7,5 @@ My personal web site.
 1. Gulp 4.0.2
 2. Pug 4.0.1
 3. SASS 4.0.2
-4. Babel 7.7.5
+4. Babel 7.7.7
 5. Volo 0.3.8

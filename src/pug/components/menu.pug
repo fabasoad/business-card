@@ -1,28 +1,28 @@
 #nav.affix-top.component
 	nav.navbar.navbar-expand-md.navbar-custom
 		a.navbar-brand(href='#header' data-i18n="business-card-author-name")
-		button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+		button#dfnlas1u0.navbar-toggler(type='button', data-toggle='collapse', data-target='.navbar-container', aria-expanded='false')
 			i.fa.fa-bars
-		#navbarNav.collapse.navbar-collapse.justify-content-between
+		.navbar-container.collapse.navbar-collapse.justify-content-between(aria-labelledby="dfnlas1u0")
 			ul.navbar-nav
-				li.nav-item
+				li.nav-item(data-toggle='collapse', data-target='.navbar-container.show')
 					a.nav-link(href='#about' data-i18n="business-card-menu-about-me")
-				li.nav-item
+				li.nav-item(data-toggle='collapse', data-target='.navbar-container.show')
 					a.nav-link(href='#experience' data-i18n="business-card-menu-experience")
-				li.nav-item
+				li.nav-item(data-toggle='collapse', data-target='.navbar-container.show')
 					a.nav-link(href='#education' data-i18n="business-card-menu-education")
-				li.nav-item
+				li.nav-item(data-toggle='collapse', data-target='.navbar-container.show')
 					a.nav-link(href='#portfolio' data-i18n="business-card-menu-portfolio")
-				li.nav-item
+				li.nav-item(data-toggle='collapse', data-target='.navbar-container.show')
 					a.nav-link(href='#resume' data-i18n="business-card-menu-resume")
-				li.nav-item
+				li.nav-item(data-toggle='collapse', data-target='.navbar-container.show')
 					a.nav-link(href='#contact' data-i18n="business-card-menu-contact")
 			ul.navbar-nav
 				li.nav-item.dropdown
-					button#t32xqgfvok.btn.nav-link.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+					button#btnLocale.btn.nav-link.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
 						span.flag-icon.flag-icon-gb(data-locale="en")
 						|  en
-					.dropdown-menu(aria-labelledby='t32xqgfvok')
-						button.dropdown-item
+					.dropdown-menu(aria-labelledby='btnLocale')
+						button.dropdown-item(type='button', data-toggle='collapse', data-target='.navbar-container.show')
 							span.flag-icon.flag-icon-ru(data-locale="ru")
 							|  ru

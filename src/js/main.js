@@ -1,7 +1,14 @@
-$('.navbar-nav > li > a, .navbar-nav > li .dropdown-item').on('click', () => {
+// Close responsive menu when click on somewhere on a screen
+$('*').on('click', (e) => {
+  const $self = $(e.currentTarget);
+  if (!$self.is('#nav')
+    && !$('#nav').parents().filter((_, el) => $(el).is($self)).length
+    && !$self.parents().filter('#nav').length) {
     $('.navbar-collapse').collapse('hide');
+  }
 });
 
+// Configure "Top" button
 const btn = $('#back-to-top');
 
 $(window).scroll(() => {
@@ -17,6 +24,7 @@ btn.on('click', (e) => {
   $('html, body').animate({ scrollTop: 0 }, '300');
 });
 
+// Configure locale logic
 const updateLocale = (locale) => {
     $.i18n().locale = locale;
     document.title = $.i18n('business-card-title');

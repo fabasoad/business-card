@@ -12,9 +12,6 @@ require('dotenv').config();
 
 const BUILD_DIR = process.env.TRAVIS_BUILD_DIR || 'public';
 
-gulp.task('dist', () => gulp.src('volo_components/**/*')
-    .pipe(gulp.dest(`${BUILD_DIR}/dist`)));
-
 gulp.task('pug', () => gulp.src('src/pug/*.pug')
     .pipe(plumber())
     .pipe(pug())
@@ -41,7 +38,7 @@ gulp.task('i18n', () => gulp.src('src/i18n/**/*').pipe(gulp.dest(`${BUILD_DIR}/i
 
 gulp.task('assets', () => gulp.src('src/assets/**/*').pipe(gulp.dest(`${BUILD_DIR}/assets`)));
 
-gulp.task('clean:all', () => {
+gulp.task('clean', () => {
     const rules = [
         `${BUILD_DIR}/assets`,
         `${BUILD_DIR}/i18n`,
@@ -52,17 +49,4 @@ gulp.task('clean:all', () => {
     return del(rules);
 });
 
-gulp.task('clean:ci', () => {
-    const rules = [
-        `${BUILD_DIR}/**`,
-        `!${BUILD_DIR}`,
-        `!${BUILD_DIR}/assets/**`,
-        `!${BUILD_DIR}/i18n/**`,
-        `!${BUILD_DIR}/index.html`,
-        `!${BUILD_DIR}/dist`
-    ];
-    log(`Deleting ${rules}...`);
-    return del(rules);
-});
-
-gulp.task('build', gulp.series('clean:all', gulp.parallel('assets', 'dist', 'pug', 'sass', 'js', 'i18n')));
+gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass', 'js', 'i18n')));

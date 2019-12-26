@@ -12,9 +12,7 @@ jobs:
       - name: Install npm
         uses: bahmutov/npm-install@v1
       - name: Build
-        run: |
-          npm run pre-build
-          npm run build
+        run: npm run build
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v1

@@ -28,11 +28,27 @@ $btn.on('click', (e) => {
   $('html, body').animate({ scrollTop: 0 }, '300');
 });
 
+// Calculate experience
+const now = moment();
+
+const startWorkDate = moment('2010-03-01', 'YYYY-MM-DD');
+const duration1 = moment.duration(now.diff(startWorkDate));
+
+const agileWorkDate = moment('2011-10-01', 'YYYY-MM-DD');
+const duration2 = moment.duration(now.diff(agileWorkDate));
+
+const i18nGeneralInfoKey = 'business-card-about-me-general-list-item-1';
+
 // Configure locale logic
 const updateLocale = (locale) => {
     $.i18n().locale = locale;
     document.title = $.i18n('business-card-title');
-    $('body').i18n();
+    $('body').i18n();    
+    $(`[name="${i18nGeneralInfoKey}"]`).text($.i18n(
+      i18nGeneralInfoKey,
+      duration1.locale(locale).humanize(),
+      duration2.locale(locale).humanize()
+    ));
 };
 
 $('.dropdown-menu').on('click', 'button', (e) => {
@@ -50,6 +66,8 @@ $.i18n().load({
     ru: 'i18n/ru.json'
 }).done(() => {
     updateLocale('en');
+
+    // Hide loader
     $('.loader').hide();
     $('.component').removeClass('component');
 });

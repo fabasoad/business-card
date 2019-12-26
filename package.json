@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "devDependencies": {
@@ -52,7 +52,6 @@
   "volo": {
     "baseDir": "volo_components",
     "dependencies": {
-      "jquery/jquery.min.js": "github:jquery/jquery/3.4.1#dist/jquery.min.js",
       "bootstrap/bootstrap.min.css": "github:twbs/bootstrap/v4.4.1#dist/css/bootstrap.min.css",
       "bootstrap/bootstrap.min.css.map": "github:twbs/bootstrap/v4.4.1#dist/css/bootstrap.min.css.map",
       "bootstrap/bootstrap.min.js": "github:twbs/bootstrap/v4.4.1#dist/js/bootstrap.min.js",
@@ -62,13 +61,15 @@
       "flag-icon-css/flags/1x1/ru.svg": "github:lipis/flag-icon-css/3.4.5#flags/1x1/ru.svg",
       "flag-icon-css/flags/4x3/gb.svg": "github:lipis/flag-icon-css/3.4.5#flags/4x3/gb.svg",
       "flag-icon-css/flags/4x3/ru.svg": "github:lipis/flag-icon-css/3.4.5#flags/4x3/ru.svg",
+      "jquery": "github:jquery/jquery/3.4.1#dist/jquery.min.js",
       "jquery.i18n/jquery.i18n.js": "github:wikimedia/jquery.i18n/v1.0.5#src/jquery.i18n.js",
       "jquery.i18n/jquery.i18n.emitter.bidi.js": "github:wikimedia/jquery.i18n/v1.0.5#src/jquery.i18n.emitter.bidi.js",
       "jquery.i18n/jquery.i18n.emitter.js": "github:wikimedia/jquery.i18n/v1.0.5#src/jquery.i18n.emitter.js",
       "jquery.i18n/jquery.i18n.fallbacks.js": "github:wikimedia/jquery.i18n/v1.0.5#src/jquery.i18n.fallbacks.js",
       "jquery.i18n/jquery.i18n.language.js": "github:wikimedia/jquery.i18n/v1.0.5#src/jquery.i18n.language.js",
       "jquery.i18n/jquery.i18n.messagestore.js": "github:wikimedia/jquery.i18n/v1.0.5#src/jquery.i18n.messagestore.js",
-      "jquery.i18n/jquery.i18n.parser.js": "github:wikimedia/jquery.i18n/v1.0.5#src/jquery.i18n.parser.js"
+      "jquery.i18n/jquery.i18n.parser.js": "github:wikimedia/jquery.i18n/v1.0.5#src/jquery.i18n.parser.js",
+      "moment": "github:moment/moment/2.24.0#min/moment-with-locales.min.js"
     }
   }
 }

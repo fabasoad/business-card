@@ -13,7 +13,7 @@
 	"business-card-about-me-experience-list-item-5": "Python - 4 месяца",
 	"business-card-about-me-experience-list-item-6": "C++ - 2 месяца",
 	"business-card-about-me-experience-title": "Опыт:",
-	"business-card-about-me-general-list-item-1": "Больше 9 лет опыта в коммерческой разработке программного обеспечения (8.5 лет по Agile-подходу).",
+	"business-card-about-me-general-list-item-1": "$1 опыта в коммерческой разработке программного обеспечения ($2 по Agile-подходу).",
 	"business-card-about-me-general-list-item-2": "Хорошее понимание всех компонентов жизненного цикла разработки программного обеспечения.",
 	"business-card-about-me-general-list-item-3": "Опыт работы с Kubernetes. Повседневная работа с Docker (управление контейнерами, написание Dockerfiles).",
 	"business-card-about-me-general-list-item-4": "Хорошие навыки общения и взаимодействия.",

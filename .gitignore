@@ -2,5 +2,4 @@
 .vscode/
 node_modules
 volo_components
-package-lock.json
 public/

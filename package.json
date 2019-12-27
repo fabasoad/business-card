@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "devDependencies": {

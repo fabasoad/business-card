@@ -6,6 +6,7 @@ const del = require('del');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const coffee = require('gulp-coffee');
+const babel = require('gulp-babel');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
 require('dotenv').config();
@@ -21,6 +22,7 @@ gulp.task('pug', () => gulp.src('src/pug/*.pug')
 gulp.task('scripts', () => gulp.src('src/scripts/*.coffee')	
     .pipe(plumber())	
     .pipe(coffee({ bare: true }))
+    .pipe(babel({ presets: [ "@babel/env" ] }))
     .pipe(uglify())
     .pipe(concat('all.min.js'))
     .on('error', log)

@@ -5,7 +5,7 @@ const pug = require('gulp-pug');
 const del = require('del');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
-const babel = require('gulp-babel');
+const coffee = require('gulp-coffee');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
 require('dotenv').config();
@@ -18,9 +18,9 @@ gulp.task('pug', () => gulp.src('src/pug/*.pug')
     .on('error', log)
     .pipe(gulp.dest(BUILD_DIR)));
 
-gulp.task('js', () => gulp.src('src/js/*.js')	
+gulp.task('scripts', () => gulp.src('src/scripts/*.coffee')	
     .pipe(plumber())	
-    .pipe(babel({presets: ['@babel/env']}))
+    .pipe(coffee({ bare: true }))
     .pipe(uglify())
     .pipe(concat('all.min.js'))
     .on('error', log)
@@ -49,4 +49,4 @@ gulp.task('clean', () => {
     return del(rules);
 });
 
-gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass', 'js', 'i18n')));
+gulp.task('build', gulp.series('clean', gulp.parallel('assets', 'pug', 'sass', 'scripts', 'i18n')));

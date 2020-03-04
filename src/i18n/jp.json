@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yevhen Fabizhevskyi"
+			"イェブヘン　ファビジェブスキー"
 		],
 		"last-updated": "2020-03-04",
-		"locale": "en"
+		"locale": "jp"
 	},
 	"business-card-about-me-general-list-item-1": "$1 of commercial software development experience. $2 in an Agile environment.",
 	"business-card-about-me-general-list-item-2": "Good understanding of all components of the software development lifecycle.",
@@ -15,8 +15,8 @@
 	"business-card-about-me-general-title": "General:",
 	"business-card-about-me-title": "About me",
 	"business-card-author-name": "Yevhen Fabizhevskyi",
-	"business-card-contact-city": "Tokyo, Japan",
-	"business-card-contact-title": "Contact me",
+	"business-card-contact-city": "日本、東京都",
+	"business-card-contact-title": "お問い合わせ",
 	"business-card-education-title": "Education",
 	"business-card-education-university-bachelor": "Bachelor",
 	"business-card-education-university-master": "Master",
@@ -82,7 +82,7 @@
 	"business-card-header-portfolio": "My portfolio",
 	"business-card-header-title": "<p>Hello,</p><p>I'm Yevhen Fabizhevskyi</p>",
 	"business-card-menu-about-me": "About me",
-	"business-card-menu-contact": "Contact",
+	"business-card-menu-contact": "お問い合わせ",
 	"business-card-menu-education": "Education",
 	"business-card-menu-experience": "Experience",
 	"business-card-menu-portfolio": "Portfolio",
@@ -132,5 +132,5 @@
 	"business-card-portfolio-zakupki-subtitle": "Full Stack Development Engineer - JavaScript, PHP",
 	"business-card-portfolio-zakupki-title": "Zakupki Website",
 	"business-card-resume-title": "Resume",
-	"business-card-title": "Yevhen Fabizhevskyi :: Senior Software Engineer"
+	"business-card-title": "イェブヘン　ファビジェブスキー :: Senior Software Engineer"
 }

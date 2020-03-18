@@ -1,11 +1,11 @@
 {
   "name": "business-card",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "devDependencies": {
-    "@babel/core": "^7.8.6",
-    "@babel/preset-env": "^7.8.6",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
     "coffeescript": "^2.5.1",
     "del": "^5.1.0",
     "dotenv": "^8.2.0",

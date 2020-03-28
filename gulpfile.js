@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const log = require('fancy-log');
 const gulp = require('gulp');
 const concat = require('gulp-concat');
@@ -9,7 +11,6 @@ const coffee = require('gulp-coffee');
 const babel = require('gulp-babel');
 const csso = require('gulp-csso');
 const uglify = require('gulp-uglify');
-require('dotenv').config();
 
 const BUILD_DIR = process.env.TRAVIS_BUILD_DIR || 'public';
 

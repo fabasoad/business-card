@@ -5,7 +5,7 @@
   "homepage": "https://fabasoad.github.io/business-card/",
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "coffeescript": "^2.5.1",
     "del": "^5.1.0",
     "dotenv": "^8.2.0",

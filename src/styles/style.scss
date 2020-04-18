@@ -1,0 +1,13 @@
+@import "./base/settings";
+@import "./base/base";
+
+@import "~bootstrap/scss/bootstrap";
+
+@import "./components/components.general";
+@import "./components/components.header";
+@import "./components/components.loader";
+@import "./components/components.menu";
+@import "./components/components.about_me";
+@import "./components/components.experience";
+@import "./components/components.portfolio";
+@import "./components/components.footer";

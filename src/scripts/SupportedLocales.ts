@@ -12,8 +12,8 @@ export default class SupportedLocales {
 
   static _items : Locale[] = [
     new Locale('gb', 'en'),
-    new Locale('ru'),
-    new Locale('jp', 'jp (beta)')
+    new Locale('ru')/*,
+    new Locale('jp', 'jp (beta)')*/
   ];
 
   static default() : Locale {

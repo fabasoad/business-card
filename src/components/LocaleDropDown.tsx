@@ -13,7 +13,7 @@ export default function LocaleDropDown(props) {
   
   return (
     <Dropdown>
-      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="dropDownLocales">
+      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
         <FlagIcon code={props.getLocale().code} />
         {props.getLocale().title}
       </Dropdown.Toggle>

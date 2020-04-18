@@ -1,5 +1,7 @@
+.vscode
 node_modules/
 public/*
 !public/locales
 !public/favicon.png
+!public/meta.png
 !public/index.html

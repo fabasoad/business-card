@@ -13,14 +13,20 @@ import Resume from './Resume';
 import Skills from './Skills';
 
 export default function App(props) {
+  const updateTitle = () => {
+    document.title = t("business-card-title");
+  };
+
   const { t, i18n } = useTranslation();
 
   const [locale, setLocaleInternal] = React.useState(props.locale);
   const getLocale = () => locale;
   const setLocale = (locale) => {
     setLocaleInternal(locale);
-    i18n.changeLanguage(locale.code);
+    i18n.changeLanguage(locale.code, updateTitle);
   };
+
+  React.useEffect(updateTitle, []);
 
   return (
     <div>

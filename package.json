@@ -42,7 +42,7 @@
     "css-loader": "3.5.2",
     "file-loader": "^6.0.0",
     "i18next": "^19.4.2",
-    "i18next-browser-languagedetector": "^4.1.0",
+    "i18next-browser-languagedetector": "^4.1.1",
     "i18next-http-backend": "^1.0.3",
     "moment": "^2.24.0",
     "node-sass": "4.13.1",

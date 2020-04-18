@@ -4,8 +4,9 @@
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server"
+    "build:dev": "webpack --config webpack.dev.js",
+    "build:prod": "webpack --config webpack.prod.js",
+    "start:dev": "webpack-dev-server --config webpack.dev.js"
   },
   "bugs": {
     "url": "https://github.com/fabasoad/business-card/issues",
@@ -58,6 +59,7 @@
     "typescript": "^3.8.3",
     "webpack": "4.42.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "3.10.3"
+    "webpack-dev-server": "3.10.3",
+    "webpack-merge": "^4.2.2"
   }
 }

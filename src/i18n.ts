@@ -18,12 +18,12 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    backend: {
+      loadPath: (process.env.NODE_ENV === 'development' ? '' : '/business-card') + '/locales/{{lng}}.json'
+    },
     lng: currentLocale.code,
     fallbackLng: SupportedLocales.default().code,
-    debug: true,
-    interpolation: {
-      escapeValue: false, // not needed for react as it escapes by default
-    }
+    debug: process.env.NODE_ENV === 'development'
   });
 
 export default currentLocale;

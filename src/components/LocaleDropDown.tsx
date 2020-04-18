@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Dropdown, DropdownButton } from 'react-bootstrap';
+import { Dropdown } from 'react-bootstrap';
 import FlagIconFactory from 'react-flag-icon-css';
 
-import SupportedLocales, { Locale } from '../scripts/SupportedLocales';
+import SupportedLocales from '../scripts/SupportedLocales';
 
 export default function LocaleDropDown(props) {
   const FlagIcon = FlagIconFactory(React, { 'useCssModules': false });

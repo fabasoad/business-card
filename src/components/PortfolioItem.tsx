@@ -5,7 +5,7 @@ export default function PortfolioItem(props) {
     <div className="col-sm-6 col-md-3 col-lg-3 web">
       <div className="portfolio-item">
         <div className="hover-bg text-center">
-          <a href={props.url} title={props.name} target="_blank">
+          <a href={props.url} title={props.name} rel="noopener noreferrer" target="_blank">
             <div className="hover-text">
               <h4>{props.title}</h4>
               <small>{props.subtitle}</small>

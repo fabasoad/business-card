@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 
 import AboutMe from './AboutMe';
 import BackToTopButton from './BackToTopButton';
-import Education from './Education';
-import Experience from './Experience';
-import Footer from './Footer';
+import EducationMain from './Education/EducationMain';
+import ExperienceMain from './Experience/ExperienceMain';
+import FooterMain from './Footer/FooterMain';
 import Header from './Header';
 import Menu from './Menu';
 import Portfolio from './Portfolio';
@@ -13,11 +13,11 @@ import Resume from './Resume';
 import Skills from './Skills';
 
 export default function App(props) {
+  const { t, i18n } = useTranslation();
+
   const updateTitle = () => {
     document.title = t("business-card-title");
   };
-
-  const { t, i18n } = useTranslation();
 
   const [locale, setLocaleInternal] = React.useState(props.locale);
   const getLocale = () => locale;
@@ -36,10 +36,10 @@ export default function App(props) {
       <AboutMe getLocale={getLocale} />
       <Resume />
       <Skills />
-      <Experience />
-      <Education />
+      <ExperienceMain />
+      <EducationMain />
       <Portfolio />
-      <Footer />
+      <FooterMain />
     </div>
   );
 }

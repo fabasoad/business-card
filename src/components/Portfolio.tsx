@@ -23,7 +23,7 @@ import imgLohikaPrysm from "../assets/images/portfolio/prysm_iphone_app.png";
 import imgSMA from "../assets/images/portfolio/sma.png";
 
 export default function Portfolio() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div id="portfolio">
       <div className="container">

@@ -6,7 +6,7 @@ import * as moment from 'moment';
 import imgAboutMe from "../assets/images/about_me.jpg";
 
 export default function AboutMe(props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const now : moment.Moment = moment();
 

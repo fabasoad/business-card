@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import pdfResume from '../assets/files/yf-cv.pdf';
 
 export default function Resume() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div id="resume">
       <div className="section-title text-center center">
@@ -13,7 +13,7 @@ export default function Resume() {
         <hr />
       </div>
       <div className="d-flex justify-content-center">
-        <a className="btn btn-primary btn-lg mr-1" href={pdfResume} target="_blank">
+        <a className="btn btn-primary btn-lg mr-1" href={pdfResume} rel="noopener noreferrer" target="_blank">
           <i className="fas fa-file-pdf"></i>
         </a>
         <a className="btn btn-primary btn-lg" href="https://drive.google.com/open?id=1RPKIdkOwcD_A4P0ZWQGrlFt5-abcN6-3CBJ7WvM8mc8" target="_blank">

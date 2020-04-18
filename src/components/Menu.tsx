@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import LocaleDropDown from './LocaleDropDown';
 
 export default function Menu(props) {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const [expanded, setExpanded] = React.useState(false);
   const [activeNavLink, setActiveNavLink] = React.useState(document.location.hash);
@@ -36,7 +36,7 @@ export default function Menu(props) {
     <div className="affix-top" id="nav">
       <Navbar expanded={expanded} onToggle={setExpanded} collapseOnSelect={true} expand="md" className="navbar-custom">
         <Navbar.Brand href="#header">{t('business-card-author-name')}</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle className="navbar-dark" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav activeKey={activeNavLink} className="mr-auto">
             <Nav.Link onClick={() => setActiveNavLink("#about")} eventKey={"#about"} href="#about">{t('business-card-menu-about-me')}</Nav.Link>

@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 
 import FooterEmail from './FooterEmail';
 import FooterExtra from './FooterExtra';
+import FooterInfo from './FooterInfo';
 import FooterLocation from './FooterLocation';
 import FooterSocial from './FooterSocial';
 
@@ -24,6 +25,9 @@ export default function FooterMain() {
           </div>
           <div className="d-flex justify-content-center">
             <FooterSocial />
+          </div>
+          <div className="d-flex justify-content-center">
+            <FooterInfo />
           </div>
           <div className="d-flex justify-content-center">
             <FooterExtra />

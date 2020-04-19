@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export default function ExperienceTimeline(props) {
+export default function JobPeriod(props) {
   return (
     <div className="timeline-image">
       <h4>

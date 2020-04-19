@@ -1,12 +1,15 @@
 import * as React from 'react';
+import Iframe from 'react-iframe';
 
 export default function FooterExtra() {
   return (
-    <div className="social">
-      <ul>
-        <li><img src="https://img.shields.io/static/v1?label=made%20by&amp;message=fabasoad&amp;color=2c3e50&amp;style=for-the-badge&amp;logo=github" alt="Made by fabasoad" /></li>
-        <li><a href="https://en.cryptobadges.io/donate/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH" target="_blank"><img src="https://en.cryptobadges.io/badge/micro/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH" alt="Donate with Bitcoin" /></a></li>
-      </ul>
-    </div>
+    <Iframe
+      url={"https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=fabasoad&mnOn=true&stat=3&imageNum=1&rankOn=false&projectsOn=false&special=false&link=1&memberId=1103124"}
+      frameBorder={0}
+      name="di"
+      scrolling="no"
+      width="405px"
+      height="145px"
+    />
   );
 }

@@ -7,7 +7,7 @@ import EducationMain from './Education/EducationMain';
 import ExperienceMain from './Experience/ExperienceMain';
 import FooterMain from './Footer/FooterMain';
 import Header from './Header';
-import Menu from './Menu';
+import MenuMain from './Menu/MenuMain';
 import Portfolio from './Portfolio';
 import Resume from './Resume';
 import Skills from './Skills';
@@ -32,7 +32,7 @@ export default function App(props) {
     <div>
       <BackToTopButton />
       <Header />
-      <Menu getLocale={getLocale} setLocale={setLocale} />
+      <MenuMain getLocale={getLocale} setLocale={setLocale} />
       <AboutMe getLocale={getLocale} />
       <Resume />
       <Skills />

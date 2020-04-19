@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 import LocaleDropDown from './LocaleDropDown';
 
-export default function Menu(props) {
+export default function MenuMain(props) {
   const { t } = useTranslation();
 
   const [expanded, setExpanded] = React.useState(false);

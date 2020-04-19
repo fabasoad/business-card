@@ -10,25 +10,26 @@ export class Locale {
 
 export default class SupportedLocales {
 
-  static _items : Locale[] = [
-    new Locale('gb', 'en'),
-    new Locale('ru')/*,
-    new Locale('jp', 'jp (beta)')*/
-  ];
-
   static default() : Locale {
-    return SupportedLocales._items[0];
+    return SupportedLocales._items()[0];
   }
 
-  static items() : Locale[] {
-    return SupportedLocales._items;
+  static _items() : Locale[] {
+    const result = [
+      new Locale('gb', 'en'),
+      new Locale('ru')
+    ];
+    if (process.env.NODE_ENV === 'development') {
+      return [...result, new Locale('jp')];
+    }
+    return result;
   }
 
   static getOrDefault(code : string) : Locale {
-    return SupportedLocales._items.find(l => l.code === code) || SupportedLocales.default();
+    return SupportedLocales._items().find(l => l.code === code) || SupportedLocales.default();
   }
 
-  static getExceptOf(code) : Locale[] {
-    return SupportedLocales._items.filter(l => l.code !== code);
+  static getExceptOf(code : string) : Locale[] {
+    return SupportedLocales._items().filter(l => l.code !== code);
   }
 }

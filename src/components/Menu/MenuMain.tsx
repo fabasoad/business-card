@@ -3,6 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 import LocaleDropDown from './LocaleDropDown';
+import MenuItem from './MenuItem';
 
 export default function MenuMain(props) {
   const { t } = useTranslation();
@@ -39,12 +40,13 @@ export default function MenuMain(props) {
         <Navbar.Toggle className="navbar-dark" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav activeKey={activeNavLink} className="mr-auto">
-            <Nav.Link onClick={() => setActiveNavLink("#about")} eventKey={"#about"} href="#about">{t('business-card-menu-about-me')}</Nav.Link>
-            <Nav.Link onClick={() => setActiveNavLink("#experience")} eventKey={"#experience"} href="#experience">{t('business-card-menu-experience')}</Nav.Link>
-            <Nav.Link onClick={() => setActiveNavLink("#education")} eventKey={"#education"} href="#education">{t('business-card-menu-education')}</Nav.Link>
-            <Nav.Link onClick={() => setActiveNavLink("#portfolio")} eventKey={"#portfolio"} href="#portfolio">{t('business-card-menu-portfolio')}</Nav.Link>
-            <Nav.Link onClick={() => setActiveNavLink("#resume")} eventKey={"#resume"} href="#resume">{t('business-card-menu-resume')}</Nav.Link>
-            <Nav.Link onClick={() => setActiveNavLink("#contact")} eventKey={"#contact"} href="#contact">{t('business-card-menu-contact')}</Nav.Link>
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'about'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'skills'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'experience'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'education'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'portfolio'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'resume'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'contact'} />
           </Nav>
           <Nav>
             <LocaleDropDown setLocale={props.setLocale} getLocale={props.getLocale} />

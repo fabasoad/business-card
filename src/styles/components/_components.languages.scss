@@ -1,0 +1,19 @@
+.language-list {
+  div {
+    display: inline-grid;
+    .h4 {
+			text-transform: uppercase;
+    }
+    a {
+      text-decoration: none;
+			&:hover {
+				outline: 0;
+				color: $orange;
+				background-color: transparent;
+			}
+    }
+    .flag-icon {
+      border-radius: 30px;
+    }
+  }
+}

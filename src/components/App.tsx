@@ -7,6 +7,7 @@ import EducationMain from './Education/EducationMain';
 import ExperienceMain from './Experience/ExperienceMain';
 import FooterMain from './Footer/FooterMain';
 import Header from './Header';
+import Languages from './Languages';
 import MenuMain from './Menu/MenuMain';
 import Portfolio from './Portfolio';
 import Resume from './Resume';
@@ -38,6 +39,7 @@ export default function App(props) {
       <Skills />
       <ExperienceMain />
       <EducationMain />
+      <Languages />
       <Portfolio />
       <FooterMain />
     </div>

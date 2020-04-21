@@ -30,7 +30,6 @@ export default function Portfolio() {
         <div className="section-title text-center center">
           <h2>{t("business-card-portfolio-title")}</h2>
           <hr />
-          <div className="clearfix"></div>
         </div>
         <div className="row">
           <PortfolioItem

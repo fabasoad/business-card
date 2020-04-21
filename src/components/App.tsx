@@ -16,18 +16,24 @@ import Skills from './Skills';
 export default function App(props) {
   const { t, i18n } = useTranslation();
 
-  const updateTitle = () => {
+  const onLanguageChange = () => {
     document.title = t("business-card-title");
+    const [classFrom, classTo] = i18n.language === 'jp'
+      ? ['font-non-jp', 'font-jp'] : ['font-jp', 'font-non-jp'];
+    for (const el of document.getElementsByClassName(classFrom)) {
+      el.classList.remove(classFrom);
+      el.classList.add(classTo);
+    }
   };
 
   const [locale, setLocaleInternal] = React.useState(props.locale);
   const getLocale = () => locale;
   const setLocale = (locale) => {
     setLocaleInternal(locale);
-    i18n.changeLanguage(locale.code, updateTitle);
+    i18n.changeLanguage(locale.code, onLanguageChange);
   };
 
-  React.useEffect(updateTitle, []);
+  React.useEffect(onLanguageChange, []);
 
   return (
     <div>

@@ -1,25 +1,11 @@
 .timeline {
-  position: relative;
-  padding: 0;
   list-style: none;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 40px;
-    width: 2px;
-    margin-left: -1.5px;
-    background-color: #eee;
-  }
+  margin: 0;
+  padding: 0;
   >li {
     position: relative;
     margin-bottom: 50px;
     min-height: 50px;
-    &:before {
-      content: " ";
-      display: table;
-    }
     &:after {
       content: " ";
       display: table;
@@ -31,18 +17,6 @@
       width: 100%;
       padding: 0 20px 0 100px;
       text-align: left;
-      &:before {
-        right: auto;
-        left: -15px;
-        border-right-width: 15px;
-        border-left-width: 0;
-      }
-      &:after {
-        right: auto;
-        left: -14px;
-        border-right-width: 14px;
-        border-left-width: 0;
-      }
     }
     .timeline-image {
       z-index: 100;
@@ -62,7 +36,7 @@
       }
     }
     &:last-child {
-      margin-bottom: 40px;
+      margin-bottom: 0;
     }
   }
   >li.timeline-inverted {
@@ -105,8 +79,8 @@
       margin-bottom: 0;
     }
   }
-  h5::after, .colon-title::after  {
-    content: ':'
+  h5 {
+    font-weight: 600;
   }
 }
 
@@ -116,7 +90,6 @@
       left: 50%;
     }
     >li {
-      margin-bottom: 100px;
       min-height: 100px;
       .timeline-panel {
         float: left;

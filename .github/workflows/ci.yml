@@ -14,11 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.1.0
-      - uses: bahmutov/npm-install@v1.4.0
+      - uses: Adzz/jest_test_action@v1.0.0
+        with:
+          package-manager: npm
+          command: test
       - name: Build
+        if: success() && ${{ github.event_name == 'push' }}
         run: npm run build:prod
       - name: Deploy
-        if: success()
+        if: success() && ${{ github.event_name == 'push' }}
         uses: crazy-max/ghaction-github-pages@v1.4.0
         with:
           target_branch: gh-pages

@@ -1,0 +1,27 @@
+@import './components.footer_contacts';
+
+#contact {
+	color: $white;
+}
+.footer {
+	padding-bottom: 1.5rem;
+	.icon-list {
+		padding-left: 0;
+		li {
+			display: inline-block;
+			margin: 0 20px;
+			.btn {
+				padding: 10px 20px;
+				color: $white;
+				&:hover {
+					color: $orange;
+				}
+				&:focus {
+					color: $orange;
+					outline: none;
+					outline-offset: none;
+				}
+			}
+		}
+	}
+}

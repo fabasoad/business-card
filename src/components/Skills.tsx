@@ -24,7 +24,7 @@ import imgXamarin from '../assets/images/skills/xamarin.png';
 export default function Skills() {
   const { t } = useTranslation();
   return (
-    <div id="skills">
+    <div id="skills" className="light-component">
       <div className="section-title text-center center">
         <h2>{t("business-card-skills-title")}</h2>
         <hr />

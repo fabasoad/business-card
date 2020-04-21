@@ -1,10 +1,11 @@
 .language-list {
   div {
     display: inline-grid;
-    .h4 {
+    .h5 {
 			text-transform: uppercase;
     }
     a {
+      color: $blue;
       text-decoration: none;
 			&:hover {
 				outline: 0;

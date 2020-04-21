@@ -4,7 +4,6 @@ import * as ReactDOM from 'react-dom';
 import App from './components/App';
 import LoadingSpinner from './components/LoadingSpinner';
 
-import 'normalize.css/normalize.css';
 import './styles/style.scss';
 
 import './libs/fontawesome';

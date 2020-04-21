@@ -1,112 +1,102 @@
 #portfolio {
-	background: #ffffff; /* Old browsers */
-	background: -moz-linear-gradient(top, #ffffff 0%, $white 49%, #ffffff 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(49%, $white), color-stop(100%, #ffffff)); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, #ffffff 0%, $white 49%, #ffffff 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, #ffffff 0%, $white 49%, #ffffff 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, #ffffff 0%, $white 49%, #ffffff 100%); /* IE10+ */
-	background: linear-gradient(to bottom, #ffffff 0%, $white 49%, #ffffff 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 ); /* IE6-9 */
-}
-.isotope-item {
-	z-index: 2;
-	margin-right: -1px;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-.isotope-hidden.isotope-item {
-	z-index: 1;
-}
-.isotope {
-	-webkit-transition-duration: 0.8s;
-	-moz-transition-duration: 0.8s;
-	transition-duration: 0.8s;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	-webkit-transition-property: height, width;
-	-moz-transition-property: height, width;
-	transition-property: height, width;
+	i.fa {
+		font-size: 20px;
+		padding: 5px;
+		color: $orange;
+	}
 	.isotope-item {
+		z-index: 2;
+		margin-right: -1px;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+	.isotope-hidden.isotope-item {
+		z-index: 1;
+	}
+	.isotope {
 		-webkit-transition-duration: 0.8s;
 		-moz-transition-duration: 0.8s;
 		transition-duration: 0.8s;
 		-webkit-backface-visibility: hidden;
 		backface-visibility: hidden;
-		-webkit-transition-property: -webkit-transform, opacity;
-		-moz-transition-property: -moz-transform, opacity;
-		transition-property: transform, opacity;
+		-webkit-transition-property: height, width;
+		-moz-transition-property: height, width;
+		transition-property: height, width;
+		.isotope-item {
+			-webkit-transition-duration: 0.8s;
+			-moz-transition-duration: 0.8s;
+			transition-duration: 0.8s;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			-webkit-transition-property: -webkit-transform, opacity;
+			-moz-transition-property: -moz-transform, opacity;
+			transition-property: transform, opacity;
+		}
 	}
-}
-.portfolio-item {
-	margin-bottom: 30px;
-	-webkit-transition: all 0.5s ease-out;
-	-moz-transition: all 0.5s ease-out;
-	-ms-transition: all 0.5s ease-out;
-	-o-transition: all 0.5s ease-out;
-	transition: all 0.5s ease-out;
-	&:hover {
+	.portfolio-item {
 		margin-bottom: 30px;
-		-webkit-transform: scale(1.2);
-		-moz-transform: scale(1.2);
-		-ms-transform: scale(1.2);
-		-o-transform: scale(1.2);
-		transform: scale(1.2);
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+		transition: all 0.5s ease-out;
+		&:hover {
+			margin-bottom: 30px;
+			-webkit-transform: scale(1.2);
+			-moz-transform: scale(1.2);
+			-ms-transform: scale(1.2);
+			-o-transform: scale(1.2);
+			transform: scale(1.2);
+		}
+		.hover-bg {
+			overflow: hidden;
+			position: relative;
+		}
 	}
 	.hover-bg {
-		overflow: hidden;
-		position: relative;
-	}
-}
-.hover-bg {
-	img {
-		max-height: 100% !important;
-	}
-	.hover-text {
-		position: absolute;
-		text-align: center;
-		margin: 0 auto;
-		color: #ffffff;
-		background: rgba(0, 0, 0, 0.66);
-		padding: 25% 0;
-		height: 100%;
-		width: 100%;
-		opacity: 0;
-		transition: all 0.5s;
-		>h4 {
-			opacity: 0;
-			-webkit-transform: translateY(100%);
-			transform: translateY(100%);
-			transition: all 0.3s;
+		img {
+			max-height: 100% !important;
 		}
-		>i {
-			opacity: 0;
-			-webkit-transform: translateY(0);
-			transform: translateY(0);
-			transition: all 0.3s;
-		}
-	}
-	&:hover {
 		.hover-text {
-			>h4 {
-				opacity: 1;
-				-webkit-backface-visibility: hidden;
-				-webkit-transform: translateY(0);
-				transform: translateY(0);
-			}
-			>i {
-				opacity: 1;
-				-webkit-backface-visibility: hidden;
+			position: absolute;
+			text-align: center;
+			margin: 0 auto;
+			color: #ffffff;
+			background: rgba(0, 0, 0, 0.66);
+			padding: 25% 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+			transition: all 0.5s;
+			> h4 {
+				opacity: 0;
 				-webkit-transform: translateY(100%);
 				transform: translateY(100%);
+				transition: all 0.3s;
 			}
-			opacity: 1;
+			> i {
+				opacity: 0;
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+				transition: all 0.3s;
+			}
 		}
-	}
-}
-#portfolio {
-	i.fa {
-		font-size: 20px;
-		padding: 5px;
-		color: $orange;
+		&:hover {
+			.hover-text {
+				> h4 {
+					opacity: 1;
+					-webkit-backface-visibility: hidden;
+					-webkit-transform: translateY(0);
+					transform: translateY(0);
+				}
+				> i {
+					opacity: 1;
+					-webkit-backface-visibility: hidden;
+					-webkit-transform: translateY(100%);
+					transform: translateY(100%);
+				}
+				opacity: 1;
+			}
+		}
 	}
 }

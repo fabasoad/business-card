@@ -12,8 +12,12 @@
 		top: 20%;
 		background-color: rgba(255, 255, 255, 0.4);
 		color: $dark-grey;
-		p {
+		.header__text-subtitle {
 			font-weight: 500;
+			font-size: 1.2rem;
+		}
+		p {
+			font-size: smaller;
 		}
 		@media (min-height: 568px) {
 			top: 50%;
@@ -27,9 +31,9 @@
 			margin-left: 5rem;
 		}
 	}
-    a {
-        background: rgba(255, 255, 255, 0);
-    }
+	a {
+		background: rgba(255, 255, 255, 0);
+	}
 	.btn-primary {
 		color: $dark-grey;
 		border-color: $dark-grey;

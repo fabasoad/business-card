@@ -1,35 +1,32 @@
-#back-to-top {
-  display: inline-block;
-  background-color: $dark-blue;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 4px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
+@font-face {
+  font-family: 'HackGen-Bold';
+  src: url(fonts/HackGen/HackGen-Bold.ttf);
 }
-#back-to-top::after {
-  content: "\f077";
-  font-family: FontAwesome;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: $white;
+@font-face {
+  font-family: 'HackGen-ExtraBold';
+  src: url(fonts/HackGen/HackGen35-Bold.ttf);
 }
-#back-to-top:hover {
-  cursor: pointer;
+@font-face {
+  font-family: 'HackGen-Medium';
+  src: url(fonts/HackGen/HackGen35-Regular.ttf);
 }
-#back-to-top:active {
-  background-color: #555;
+@font-face {
+  font-family: 'HackGen-Regular';
+  src: url(fonts/HackGen/HackGen-Regular.ttf);
 }
-#back-to-top.show {
-  opacity: 0.3;
-  visibility: visible;
+@font-face {
+  font-family: 'JetBrainsMono-Bold';
+  src: url(fonts/JetBrains/JetBrainsMono-Bold.woff);
+}
+@font-face {
+  font-family: 'JetBrainsMono-ExtraBold';
+  src: url(fonts/JetBrains/JetBrainsMono-ExtraBold.woff);
+}
+@font-face {
+  font-family: 'JetBrainsMono-Medium';
+  src: url(fonts/JetBrains/JetBrainsMono-Medium.woff);
+}
+@font-face {
+  font-family: 'JetBrainsMono-Regular';
+  src: url(fonts/JetBrains/JetBrainsMono-Regular.woff);
 }

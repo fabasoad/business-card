@@ -6,9 +6,9 @@ import EducationItem from './EducationItem';
 export default function EducationMain() {
   const { t } = useTranslation();
   return (
-    <div className="text-center" id="education">
+    <div className="light-component" id="education">
       <div className="container">
-        <div className="section-title center">
+        <div className="section-title text-center">
           <h2>{t("business-card-education-title")}</h2>
           <hr />
         </div>

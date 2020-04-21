@@ -10,7 +10,7 @@ export default function JobTechnologies(props) {
       {Object.keys(props)
         .map(key => (
           <p key={uuidv4()}>
-            <span className="mr-1 colon-title">{t(`business-card-experience-technologies-${key}`)}</span>
+            <span className="mr-1">{t(`business-card-experience-technologies-${key}`)}</span>
             <span>{props[key]}</span>
           </p>
         ))}

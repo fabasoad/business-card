@@ -1,15 +1,16 @@
+@import "~bootstrap/scss/bootstrap";
+
 @import "./base/settings";
 @import "./base/base";
 
-@import "~bootstrap/scss/bootstrap";
-
 @import "./components/components.general";
+@import "./components/components.about";
+@import "./components/components.back_to_top";
+@import "./components/components.experience";
+@import "./components/footer/components.footer";
 @import "./components/components.header";
 @import "./components/components.languages";
 @import "./components/components.loader";
 @import "./components/components.menu";
-@import "./components/components.about_me";
-@import "./components/components.experience";
 @import "./components/components.portfolio";
 @import "./components/components.skills";
-@import "./components/components.footer";

@@ -1,23 +1,65 @@
-.section-title.center {
+.light-component {
+  background: $white;
+	.section-title {
+		h2 {
+			color: $grey;
+		}
+	}
+}
+.dark-component {
+	background: $blue;
+	.section-title {
+		h2 {
+			color: $white;
+		}
+	}
+}
+.section-title {
 	padding: 4rem 0 0 0;
 	h2 {
 		font-weight: 700;
 		margin-bottom: 30px;
 	}
 	hr {
-		height: 4px;
-		width: 70px;
-		text-align: center;
-		position: relative;
 		background: $orange;
+		border: 0;
+		height: 4px;
 		margin: 0 auto;
 		margin-bottom: 30px;
-		border: 0;
+		position: relative;
+		text-align: center;
+		width: 70px;
 	}
 }
-.section-title {
-	h2 {
-		font-weight: 700;
-		margin-bottom: 30px;
+.font-bold {
+	&.font-jp {
+		font-family: 'HackGen-Bold', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+	&.font-non-jp {
+		font-family: 'JetBrainsMono-Bold', Helvetica, Arial, sans-serif;
+	}
+}
+.font-extra-bold {
+	&.font-jp {
+		font-family: 'HackGen-ExtraBold', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+	&.font-non-jp {
+		font-family: 'JetBrainsMono-ExtraBold', Helvetica, Arial, sans-serif;
+	}
+}
+.font-medium {
+	&.font-jp {
+		font-family: 'HackGen-Medium', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+	&.font-non-jp {
+		font-family: 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+}
+.font-regular {
+	&.font-jp {
+		font-family: 'HackGen-Regular', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+	&.font-non-jp {
+		font-family: 'JetBrainsMono-Regular', Helvetica, Arial, sans-serif;
 	}
 }

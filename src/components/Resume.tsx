@@ -7,7 +7,7 @@ import pdfResume from '../assets/files/yf-cv.pdf';
 export default function Resume() {
   const { t } = useTranslation();
   return (
-    <div id="resume">
+    <div id="resume" className="light-component">
       <div className="section-title text-center center">
         <h2>{t("business-card-resume-title")}</h2>
         <hr />

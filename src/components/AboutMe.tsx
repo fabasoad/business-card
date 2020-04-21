@@ -34,8 +34,7 @@ export default function AboutMe(props) {
           </div>
           <div className="col-md-8 col-md-offset-2 text-center">
             <div className="about-text">
-              <p>{t("business-card-about-me-general-title")}</p>
-              <ul className="list-unstyled">
+              <ul className="list-unstyled mt-3">
                 <li>{t("business-card-about-me-general-list-item-1", generalListItem1Keys)}</li>
                 <li>{t("business-card-about-me-general-list-item-2")}</li>
                 <li>{t("business-card-about-me-general-list-item-3")}</li>

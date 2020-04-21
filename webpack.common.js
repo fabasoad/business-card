@@ -15,6 +15,15 @@ module.exports = {
       test: /\.(png|jpe?g|gif|pdf|svg)$/i,
       loader: 'file-loader'
     }, {
+      test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [{
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+          outputPath: 'fonts/'
+        }
+      }]
+    }, {
       test: /\.s?css$/,
       use: [
         'style-loader',

@@ -5,6 +5,8 @@ on:
   push:
     branches:
       - master
+      - 'bugfix/**'
+      - 'feature/**'
   pull_request:
     branches:
       - master
@@ -18,14 +20,18 @@ jobs:
         with:
           node-version: '13'
       - run: yarn install
-      - run: yarn test:coverage
-        if: github.event_name != 'push' || github.ref != 'master'
+      - name: Debug
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo $GITHUB_CONTEXT
+      - run: yarn test
+        if: startsWith(github.ref, 'refs/heads/bugfix/') || startsWith(github.ref, 'refs/heads/feature/')
       - uses: paambaati/codeclimate-action@v2.6.0
         if: github.event_name == 'push' && github.ref == 'master'
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: yarn test:coverage
+          coverageCommand: yarn test
           debug: true
       - name: Build
         if: github.event_name == 'push' && github.ref == 'master'

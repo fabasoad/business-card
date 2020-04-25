@@ -27,17 +27,17 @@ jobs:
       - run: yarn test
         if: startsWith(github.ref, 'refs/heads/bugfix/') || startsWith(github.ref, 'refs/heads/feature/')
       - uses: paambaati/codeclimate-action@v2.6.0
-        if: github.event_name == 'push' && github.ref == 'master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: yarn test
           debug: true
       - name: Build
-        if: github.event_name == 'push' && github.ref == 'master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: yarn run build:prod
       - name: Deploy
-        if: github.event_name == 'push' && github.ref == 'master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: crazy-max/ghaction-github-pages@v1.4.0
         with:
           target_branch: gh-pages

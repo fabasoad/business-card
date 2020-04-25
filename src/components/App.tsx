@@ -13,6 +13,8 @@ import Portfolio from './Portfolio';
 import Resume from './Resume';
 import Skills from './Skills';
 
+import { Locale } from '../scripts/SupportedLocales';
+
 export default function App(props) {
   const { t, i18n } = useTranslation();
 
@@ -26,9 +28,9 @@ export default function App(props) {
     }
   };
 
-  const [locale, setLocaleInternal] = React.useState(props.locale);
-  const getLocale = () => locale;
-  const setLocale = (locale) => {
+  const [locale, setLocaleInternal] = React.useState<Locale>(props.locale);
+  const getLocale : () => Locale = () => locale;
+  const setLocale = (locale : Locale) => {
     setLocaleInternal(locale);
     i18n.changeLanguage(locale.code, onLanguageChange);
   };

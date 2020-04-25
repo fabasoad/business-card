@@ -5,7 +5,7 @@ import * as moment from 'moment';
 
 import imgAboutMe from "../assets/images/about_me.jpg";
 
-export default function AboutMe(props) {
+export default function AboutMe({ getLocale }) {
   const { t } = useTranslation();
 
   const now : moment.Moment = moment();
@@ -17,8 +17,8 @@ export default function AboutMe(props) {
   const duration2 : moment.Duration = moment.duration(now.diff(agileWorkDate));
 
   const generalListItem1Keys = {
-    "totalExperience": duration1.locale(props.getLocale().code).humanize(),
-    "agileExperience": duration2.locale(props.getLocale().code).humanize()
+    "totalExperience": duration1.locale(getLocale().code).humanize(),
+    "agileExperience": duration2.locale(getLocale().code).humanize()
   };
 
   return (

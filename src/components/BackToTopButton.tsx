@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export default function BackToTopButton() {
-  const [isVisible, setIsVisible] = React.useState(false);
+  const [isVisible, setIsVisible] = React.useState<boolean>(false);
 
   window.addEventListener(
     "scroll",

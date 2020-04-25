@@ -1,0 +1,37 @@
+{
+  "clearMocks": true,
+  "collectCoverageFrom": [
+    "**/*.{ts,tsx}",
+    "!**/*.d.ts",
+    "!**/node_modules/**"
+  ],
+  "coverageReporters": [
+    "lcov", "text", "text-summary"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "branches": 22.22,
+      "functions": 17.65,
+      "lines": 10.58,
+      "statements": 11.19
+    }
+  },
+  "moduleFileExtensions": ["ts", "tsx", "js"],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__tests__/__mocks__/fileMock.ts",
+    "\\.(css|scss)$": "<rootDir>/src/__tests__/__mocks__/styleMock.ts"
+  },
+  "setupFiles": [
+    "raf/polyfill"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/src/__tests__/setupTests.ts"
+  ],
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "testRegex": "/src/__tests__/.*\\.(spec|test)\\.(ts|tsx|js)$",
+  "transform": {
+    "\\.(ts|tsx)$": "ts-jest"
+  }
+}

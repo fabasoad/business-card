@@ -8,8 +8,8 @@ import MenuItem from './MenuItem';
 export default function MenuMain(props) {
   const { t } = useTranslation();
 
-  const [expanded, setExpanded] = React.useState(false);
-  const [activeNavLink, setActiveNavLink] = React.useState(document.location.hash);
+  const [expanded, setExpanded] = React.useState<boolean>(false);
+  const [activeNavLink, setActiveNavLink] = React.useState<string>(document.location.hash);
 
   document.querySelectorAll('*').forEach(el => {
     el.addEventListener('click', e => {

@@ -54,8 +54,6 @@ export default function ExperienceMain() {
                 title={t("business-card-experience-job-bitcoin-com-1-title")}
               />
               <div className="timeline-body">
-                <h5>{t("business-card-experience-area-title")}</h5>
-                <p>{t("business-card-experience-job-bitcoin-com-area")}</p>
                 <JobDescription
                   count={1}
                   i18nKeyPrefix={"business-card-experience-job-bitcoin-com-1-description"}

@@ -1212,9 +1212,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*":
-  version "13.13.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.2.tgz#160d82623610db590a64e8ca81784e11117e5a54"
-  integrity sha512-LB2R1Oyhpg8gu4SON/mfforE525+Hi/M1ineICEDftqNVTyFg1aRIeGuTvXAoWHc4nbrFncWtJgMmoyRvuGh7A==
+  version "13.13.4"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.4.tgz#1581d6c16e3d4803eb079c87d4ac893ee7501c2c"
+  integrity sha512-x26ur3dSXgv5AwKS0lNfbjpCakGIduWU1DU91Zz58ONRWrIKGunmZBNv4P7N+e27sJkiGDsw/3fT4AtsqQBrBA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -2271,9 +2271,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001043:
-  version "1.0.30001046"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001046.tgz#7a06d3e8fd8aa7f4d21c9a2e313f35f2d06b013e"
-  integrity sha512-CsGjBRYWG6FvgbyGy+hBbaezpwiqIOLkxQPY4A4Ea49g1eNsnQuESB+n4QM0BKii1j80MyJ26Ir5ywTQkbRE4g==
+  version "1.0.30001048"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001048.tgz#4bb4f1bc2eb304e5e1154da80b93dee3f1cf447e"
+  integrity sha512-g1iSHKVxornw0K8LG9LLdf+Fxnv7T1Z+mMsf0/YYLclQX4Cd522Ap0Lrw6NFqHgezit78dtyWxzlV2Xfc7vgRg==
 
 capture-exit@^2.0.0:
   version "2.0.0"
@@ -8148,10 +8148,10 @@ ts-loader@^7.0.1:
     micromatch "^4.0.0"
     semver "^6.0.0"
 
-ts-node@^8.9.0:
-  version "8.9.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.9.0.tgz#d7bf7272dcbecd3a2aa18bd0b96c7d2f270c15d4"
-  integrity sha512-rwkXfOs9zmoHrV8xE++dmNd6ZIS+nmHHCxcV53ekGJrxFLMbp+pizpPS07ARvhwneCIECPppOwbZHvw9sQtU4w==
+ts-node@^8.9.1:
+  version "8.9.1"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.9.1.tgz#2f857f46c47e91dcd28a14e052482eb14cfd65a5"
+  integrity sha512-yrq6ODsxEFTLz0R3BX2myf0WBCSQh9A+py8PBo1dCzWIOcvisbyH6akNKqDHMgXePF2kir5mm5JXJTH3OUJYOQ==
   dependencies:
     arg "^4.1.0"
     diff "^4.0.1"
@@ -8723,9 +8723,9 @@ ws@^6.2.1:
     async-limiter "~1.0.0"
 
 ws@^7.0.0:
-  version "7.2.3"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-7.2.3.tgz#a5411e1fb04d5ed0efee76d26d5c46d830c39b46"
-  integrity sha512-HTDl9G9hbkNDk98naoR/cHDws7+EyYMOdL1BmjsZXRUjf7d+MficC4B7HLUPlSiho0vg+CWKrGIt/VJBd1xunQ==
+  version "7.2.5"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-7.2.5.tgz#abb1370d4626a5a9cd79d8de404aa18b3465d10d"
+  integrity sha512-C34cIU4+DB2vMyAbmEKossWq2ZQDr6QEyuuCzWrM9zfw1sGc0mYiJ0UnG9zzNykt49C2Fi34hvr2vssFQRS6EA==
 
 xml-name-validator@^3.0.0:
   version "3.0.0"

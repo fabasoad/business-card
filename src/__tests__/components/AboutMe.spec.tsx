@@ -5,19 +5,23 @@ import AboutMe from '../../components/AboutMe';
 import SupportedLocales from '../../scripts/SupportedLocales';
 import { useTranslation } from '../__mocks__/react-i18next';
 
-test('should render AboutMe correctly', () => {
-  const { t } = useTranslation();
+let tMock;
 
+beforeEach(() => {
+  tMock = useTranslation().t;
+});
+
+test('should render AboutMe correctly', () => {
   const getLocaleMock = jest.fn(SupportedLocales.default);
   const wrapper = shallow(<AboutMe getLocale={getLocaleMock} />);
   expect(wrapper).toMatchSnapshot();
   expect(getLocaleMock).toBeCalledTimes(2);
-  expect(t).toBeCalledTimes(7);
+  expect(tMock).toBeCalledTimes(7);
 
-  expect(t).toHaveBeenCalledWith(
+  expect(tMock).toHaveBeenCalledWith(
     expect.stringMatching(/^business-card-about-me-title$/)
   );
-  expect(t).toHaveBeenCalledWith(
+  expect(tMock).toHaveBeenCalledWith(
     expect.stringMatching(/^business-card-about-me-general-list-item-1$/),
     expect.objectContaining({
       totalExperience: '10 years',
@@ -25,7 +29,7 @@ test('should render AboutMe correctly', () => {
     })
   );
   for (let i = 2; i <= 6; i++) {
-    expect(t).toHaveBeenCalledWith(
+    expect(tMock).toHaveBeenCalledWith(
       expect.stringMatching(new RegExp(`^business-card-about-me-general-list-item-${i}$`))
     );
   }

@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render JobPeriod correctly 1`] = `
+<div
+  className="timeline-image"
+>
+  <h4>
+    <span
+      className="mr-1"
+    >
+      business-card-month-4
+    </span>
+    <span>
+      2020
+    </span>
+    <br />
+    - 
+    <br />
+    <span
+      className="mr-1"
+    >
+      business-card-month-1
+    </span>
+    <span>
+      2019
+    </span>
+  </h4>
+</div>
+`;

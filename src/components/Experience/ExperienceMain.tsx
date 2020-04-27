@@ -19,9 +19,9 @@ export default function ExperienceMain() {
         <ul className="timeline">
           <li>
             <JobPeriod
-              fromMonth={t("business-card-month-7")}
+              fromMonth={7}
               fromYear={2019}
-              toMonth={t("business-card-month-4")}
+              toMonth={4}
               toYear={2020}
             />
             <div className="timeline-panel">
@@ -36,17 +36,16 @@ export default function ExperienceMain() {
                 />
                 <JobAchievements count={2} i18nKeyPrefix={'business-card-experience-job-bitcoin-com-2-achievements'} />
                 <JobTechnologies
-                  ci={'Travis CI, GitHub Actions, Bitrise'}
-                  backend={'Java 12, Kafka Streams, Spring Boot'}
+                  keys={['travis','gitHubActions','bitrise','java','kafka','spring']}
                 />
               </div>
             </div>
           </li>
           <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={t("business-card-month-9")}
+              fromMonth={9}
               fromYear={2018}
-              toMonth={t("business-card-month-6")}
+              toMonth={6}
               toYear={2019}
             />
             <div className="timeline-panel">
@@ -63,21 +62,20 @@ export default function ExperienceMain() {
                 />
                 <JobAchievements count={1} i18nKeyPrefix={'business-card-experience-job-bitcoin-com-1-achievements'} />
                 <JobTechnologies
-                  backend={'Maven, Java 8 (Tomcat, Facelets, lombok, JUnit), Python'}
-                  frontend={'JavaScript, jQuery, Bootstrap'}
-                  database={'MariaDB, Redis'}
-                  scm={'Git'}
-                  ide={'Intellij IDEA, VS Code'}
-                  bugtracker={'Jira'}
+                  keys={[
+                    'maven','java','tomcat','lombok','junit','python',
+                    'javaScript','jQuery','bootstrap','mariaDb','redis',
+                    'git','intellijIdea','vsCode','jira'
+                  ]}
                 />
               </div>
             </div>
           </li>
           <li>
             <JobPeriod
-              fromMonth={t("business-card-month-2")}
+              fromMonth={2}
               fromYear={2016}
-              toMonth={t("business-card-month-9")}
+              toMonth={9}
               toYear={2018}
             />
             <div className="timeline-panel">
@@ -92,10 +90,7 @@ export default function ExperienceMain() {
                 />
                 <JobAchievements count={2} i18nKeyPrefix={'business-card-experience-job-lohika-3-prysm-achievements'} />
                 <JobTechnologies
-                  software-development={'C#/.NET (Xamarin Forms, Prism)'}
-                  scm={'Git'}
-                  bugtracker={'Jira'}
-                  ci={'TeamCity'}
+                  keys={['csharp','xamarin','prism','git','jira','teamCity']}
                 />
                 <p>&nbsp;</p>
                 <JobDescription
@@ -105,12 +100,11 @@ export default function ExperienceMain() {
                 />
                 <JobAchievements count={6} i18nKeyPrefix={'business-card-experience-job-lohika-3-earnin-achievements'} />
                 <JobTechnologies
-                  software-development={'C#/.NET (.NET Core, Microsoft DI)'}
-                  infrastructure-development={'Kubernetes, helm, Docker, fluent-bit, fluentd, Elasticsearch, Kibana, Prometheus, Grafana'}
-                  scm={'Git'}
-                  ide={'Visual Studio, VS Code'}
-                  bugtracker={'GitHub Issues'}
-                  ci={'Jenkins'}
+                  keys={[
+                    'csharp','dotNetCore','kubernetes','helm','docker',
+                    'elasticsearch','jenkins','kibana','fluentBit','fluentD',
+                    'git','gitHub','prometheus','visualStudio','grafana'
+                  ]}
                 />
                 <p>&nbsp;</p>
                 <JobDescription
@@ -124,9 +118,9 @@ export default function ExperienceMain() {
           </li>
           <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={t("business-card-month-5")}
+              fromMonth={5}
               fromYear={2013}
-              toMonth={t("business-card-month-1")}
+              toMonth={1}
               toYear={2016}
             />
             <div className="timeline-panel">
@@ -141,22 +135,19 @@ export default function ExperienceMain() {
                 />
                 <JobAchievements count={4} i18nKeyPrefix={'business-card-experience-job-lohika-2-achievements'} />
                 <JobTechnologies
-                  backend={'Java (Spring), Maven'}
-                  frontend={'JavaScript, Angular'}
-                  database={'MSSQL, Oracle'}
-                  scm={'SVN, Git'}
-                  ide={'Intellij IDEA'}
-                  bugtracker={'HPE ALM'}
-                  ci={'Jenkins'}
+                  keys={[
+                    'java','spring','maven','javaScript','angular','mssql',
+                    'oracle','svn','git','intellijIdea','hpeAlm','jenkins'
+                  ]}
                 />
               </div>
             </div>
           </li>
           <li>
             <JobPeriod
-              fromMonth={t("business-card-month-10")}
+              fromMonth={10}
               fromYear={2011}
-              toMonth={t("business-card-month-4")}
+              toMonth={4}
               toYear={2013}
             />
             <div className="timeline-panel">
@@ -171,20 +162,16 @@ export default function ExperienceMain() {
                 />
                 <JobAchievements count={3} i18nKeyPrefix={'business-card-experience-job-lohika-1-achievements'} />
                 <JobTechnologies
-                  software-development={'C#/.NET (Windows Forms)'}
-                  scm={'SVN'}
-                  ide={'Visual Studio'}
-                  bugtracker={'HPE ALM'}
-                  ci={'Jenkins'}
+                  keys={['csharp','windowsForms','svn','visualStudio','hpeAlm','jenkins']}
                 />
               </div>
             </div>
           </li>
           <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={t("business-card-month-3")}
+              fromMonth={3}
               fromYear={2010}
-              toMonth={t("business-card-month-9")}
+              toMonth={9}
               toYear={2011}
             />
             <div className="timeline-panel">
@@ -199,13 +186,10 @@ export default function ExperienceMain() {
                 />
                 <JobAchievements count={3} i18nKeyPrefix={'business-card-experience-job-arka-achievements'} />
                 <JobTechnologies
-                  backend={'PHP, Codeigniter, vBulletin, OXID eShop, Smarty'}
-                  frontend={'JavaScript, jQuery'}
-                  software-development={'C#/.NET (Silverlight)'}
-                  database={'MySQL'}
-                  scm={'SVN'}
-                  ide={'Visual Studio, NetBeans'}
-                  bugtracker={'Redmine'}
+                  keys={[
+                    'php','codeigniter','vBulletin','oxidEShop','smarty','javaScript','jQuery',
+                    'csharp','silverlight','mysql','svn','visualStudio','netBeans','redmine'
+                  ]}
                 />
               </div>
             </div>

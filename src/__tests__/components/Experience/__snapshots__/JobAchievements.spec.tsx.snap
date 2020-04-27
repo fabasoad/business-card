@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render JobAchievements correctly 1`] = `
+<Fragment>
+  <h5>
+    business-card-experience-achievements-title
+  </h5>
+  <p
+    key="some-prefix-1"
+  >
+    some-prefix-1
+  </p>
+  <p
+    key="some-prefix-2"
+  >
+    some-prefix-2
+  </p>
+</Fragment>
+`;

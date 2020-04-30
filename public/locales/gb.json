@@ -3,7 +3,7 @@
 	"business-card-about-me-general-list-item-2": "Good understanding of all components of the software development lifecycle.",
 	"business-card-about-me-general-list-item-3": "Past experience on Kubernetes. Current working knowledge of CI/CD, Docker.",
 	"business-card-about-me-general-list-item-4": "Good communication skills to articulate the message and vision clearly.",
-	"business-card-about-me-general-list-item-5": "Strong experience with the following programming languages: Java, C#/.NET, Python, JavaScript. Also, have superficial experience with PHP, Ruby, C++, Kotlin, Shell, etc.",
+	"business-card-about-me-general-list-item-5": "Strong experience with the following programming languages: Java, C#/.NET, Python, JavaScript. Also, have superficial experience with Ruby, TypeScript, Kotlin, PowerShell, and PHP.",
 	"business-card-about-me-general-list-item-6": "Fluent English, written and spoken.",
 	"business-card-about-me-title": "About me",
 	"business-card-author-name": "Yevhen Fabizhevskyi",
@@ -118,5 +118,6 @@
 	"business-card-portfolio-zakupki-title": "Zakupki Website",
 	"business-card-resume-title": "Resume",
   "business-card-skills-title": "Skills",
-	"business-card-title": "Yevhen Fabizhevskyi :: Senior Software Engineer"
+	"business-card-title": "Yevhen Fabizhevskyi :: Senior Software Engineer",
+	"business-card-version": "Version {{version}}"
 }

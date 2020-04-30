@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render JobTitle correctly 1`] = `
+<div
+  className="timeline-heading"
+>
+  <h4>
+    test-company
+  </h4>
+  <h4
+    className="subheading"
+  >
+    test-title
+  </h4>
+</div>
+`;

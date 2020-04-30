@@ -3,10 +3,10 @@ import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { v4 as uuidv4 } from 'uuid';
 
-import Technologies from '../scripts/Technologies';
+import TechnologyStorage from '../scripts/technologies/TechnologyStorage';
 
 export default function Skills() {
-  const technologies = new Technologies();
+  const technologyStorage = new TechnologyStorage();
   const { t } = useTranslation();
   return (
     <div id="skills" className="light-component">
@@ -17,7 +17,7 @@ export default function Skills() {
       <div className="container">
         <div className="row">
           <div className="skills-list col text-center">
-            {technologies.skills().map(t => <img key={uuidv4()} className="m-4" src={t.img} alt={t.name} />)}
+            {technologyStorage.getBySkill(true).map(t => <img key={uuidv4()} className="m-4" src={t.img} alt={t.name} />)}
           </div>
         </div>
       </div>

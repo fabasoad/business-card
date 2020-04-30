@@ -3,7 +3,7 @@
   "business-card-about-me-general-list-item-2": "Хорошее понимание всех компонентов жизненного цикла разработки программного обеспечения.",
   "business-card-about-me-general-list-item-3": "Опыт работы с Kubernetes. Повседневная работа с CI/CD, Docker.",
   "business-card-about-me-general-list-item-4": "Хорошие навыки общения и взаимодействия.",
-  "business-card-about-me-general-list-item-5": "Большой опыт разработки с использованием Java, C#/.NET, Python, JavaScript. Так же был опыт использования PHP, Ruby, C++, Kotlin, Shell и пр.",
+  "business-card-about-me-general-list-item-5": "Большой опыт разработки с использованием Java, C#/.NET, Python, JavaScript. Так же был опыт использования Ruby, TypeScript, Kotlin, PowerShell и PHP.",
   "business-card-about-me-general-list-item-6": "Хороший уровень знания английского языка, как письменного, так и разговорного.",
   "business-card-about-me-title": "Обо мне",
   "business-card-author-name": "Евгений Фабижевский",
@@ -118,5 +118,6 @@
   "business-card-portfolio-zakupki-title": "Zakupki (вебсайт)",
   "business-card-resume-title": "Резюме",
   "business-card-skills-title": "Навыки",
-  "business-card-title": "Евгений Фабижевский :: Разработчик программного обеспечения"
+  "business-card-title": "Евгений Фабижевский :: Разработчик программного обеспечения",
+	"business-card-version": "Версия {{version}}"
 }

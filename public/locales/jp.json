@@ -1,10 +1,10 @@
 {
 	"business-card-about-me-general-list-item-1": "{{totalExperience}} of commercial software development experience. {{agileExperience}} in an Agile environment.",
-	"business-card-about-me-general-list-item-2": "Good understanding of all components of the software development lifecycle.",
+	"business-card-about-me-general-list-item-2": "私はソフトウェアの構造及び開発に関する仕組みを良く理解しています。",
 	"business-card-about-me-general-list-item-3": "Past experience on Kubernetes. Current working knowledge of CI/CD, Docker.",
 	"business-card-about-me-general-list-item-4": "Good communication skills to articulate the message and vision clearly.",
-	"business-card-about-me-general-list-item-5": "Strong experience with the following programming languages: Java, C#/.NET, Python, JavaScript. Also, have superficial experience with PHP, Ruby, C++, Kotlin, Shell, etc.",
-	"business-card-about-me-general-list-item-6": "Fluent English, written and spoken.",
+	"business-card-about-me-general-list-item-5": "私は以下のプログラミング言語の使用経験があります：Ruby、TypeScript、Kotlin、PowerShell、PHP。特にJava、C#/.NET、Python, JavaScriptにおいては経験が豊富にあります。",
+	"business-card-about-me-general-list-item-6": "私は英語の読み書き及び会話において流暢に行うことが出来ます。",
 	"business-card-about-me-title": "About me",
 	"business-card-author-name": "ファビジェブスキーイェブヘン",
 	"business-card-contact-city": "日本、東京都",
@@ -118,5 +118,6 @@
 	"business-card-portfolio-zakupki-title": "Zakupki Website",
 	"business-card-resume-title": "履歴書",
   "business-card-skills-title": "スキル",
-	"business-card-title": "ファビジェブスキーイェブヘン :: シニアソフトウェアエンジニア"
+	"business-card-title": "ファビジェブスキーイェブヘン :: シニアソフトウェアエンジニア",
+	"business-card-version": "バージョン{{version}}"
 }

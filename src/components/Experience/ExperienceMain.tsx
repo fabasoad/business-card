@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Trans, useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 import JobAchievements from './JobAchievements';
 import JobDescription from './JobDescription';

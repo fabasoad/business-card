@@ -12,8 +12,8 @@
     "global": {
       "branches": 60.98,
       "functions": 53.23,
-      "lines": 54.11,
-      "statements": 54.2
+      "lines": 53.72,
+      "statements": 53.81
     }
   },
   "moduleFileExtensions": ["ts", "tsx", "js"],

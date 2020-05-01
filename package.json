@@ -7,7 +7,9 @@
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
     "start:dev": "webpack-dev-server --config webpack.dev.js",
-    "test": "jest --config=jest.config.json --coverage"
+    "test": "jest --config=jest.config.json --coverage",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "bugs": {
     "url": "https://github.com/fabasoad/business-card/issues",
@@ -22,11 +24,13 @@
     "email": "fabasoad@gmail.com",
     "url": "https://github.com/fabasoad"
   },
-  "contributors": [{
-    "name": "Natalia Fabizhevska",
-    "email": "vanillacaramel88@gmail.com",
-    "url": "https://github.com/animewka"
-  }],
+  "contributors": [
+    {
+      "name": "Natalia Fabizhevska",
+      "email": "vanillacaramel88@gmail.com",
+      "url": "https://github.com/animewka"
+    }
+  ],
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "7.8.4",
@@ -75,5 +79,9 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "3.10.3",
     "webpack-merge": "^4.2.2"
+  },
+  "snyk": true,
+  "dependencies": {
+    "snyk": "^1.316.1"
   }
 }

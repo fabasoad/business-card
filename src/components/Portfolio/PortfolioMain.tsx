@@ -4,23 +4,23 @@ import { useTranslation } from 'react-i18next';
 
 import PortfolioItem from './PortfolioItem';
 
-import imgArkaDeutscheLieferadresse from "../assets/images/portfolio/deutsche_lieferadresse_website.jpg";
-import imgArkaInvebstor from "../assets/images/portfolio/invebstor.jpg";
-import imgArkaMedisport from "../assets/images/portfolio/medisport_website.jpg";
-import imgArkaPrintAndPost from "../assets/images/portfolio/print_and_post_website.jpg";
-import imgArkaWebsite from "../assets/images/portfolio/arka_website.png";
-import imgArkaWorkPlus from "../assets/images/portfolio/work_plus.png";
-import imgArkaZakupki from "../assets/images/portfolio/zakupki_website.png";
-import imgBitcoinComGames from "../assets/images/portfolio/bitcoin.com_games.png";
-import imgBitcoinComGamesAdmin from "../assets/images/portfolio/bitcoin.com_games_admin.png";
-import imgBitcoinComGamesAndroid from "../assets/images/portfolio/bitcoin.com_android.png";
-import imgBitcoinComMarkets from "../assets/images/portfolio/bitcoin.com_markets.png";
-import imgLohikaHpeAlm from "../assets/images/portfolio/alm.jpg";
-import imgLohikaHpeAlmRobot from "../assets/images/portfolio/alm_robot.png";
-import imgLohikaHpeLabManagement from "../assets/images/portfolio/lab_management.jpg";
-import imgLohikaEarnin from "../assets/images/portfolio/earnin.png";
-import imgLohikaPrysm from "../assets/images/portfolio/prysm_iphone_app.png";
-import imgSMA from "../assets/images/portfolio/sma.png";
+import imgArkaDeutscheLieferadresse from "../../assets/images/portfolio/deutsche_lieferadresse_website.jpg";
+import imgArkaInvebstor from "../../assets/images/portfolio/invebstor.jpg";
+import imgArkaMedisport from "../../assets/images/portfolio/medisport_website.jpg";
+import imgArkaPrintAndPost from "../../assets/images/portfolio/print_and_post_website.jpg";
+import imgArkaWebsite from "../../assets/images/portfolio/arka_website.png";
+import imgArkaWorkPlus from "../../assets/images/portfolio/work_plus.png";
+import imgArkaZakupki from "../../assets/images/portfolio/zakupki_website.png";
+import imgBitcoinComGames from "../../assets/images/portfolio/bitcoin.com_games.png";
+import imgBitcoinComGamesAdmin from "../../assets/images/portfolio/bitcoin.com_games_admin.png";
+import imgBitcoinComGamesAndroid from "../../assets/images/portfolio/bitcoin.com_android.png";
+import imgBitcoinComMarkets from "../../assets/images/portfolio/bitcoin.com_markets.png";
+import imgLohikaHpeAlm from "../../assets/images/portfolio/alm.jpg";
+import imgLohikaHpeAlmRobot from "../../assets/images/portfolio/alm_robot.png";
+import imgLohikaHpeLabManagement from "../../assets/images/portfolio/lab_management.jpg";
+import imgLohikaEarnin from "../../assets/images/portfolio/earnin.png";
+import imgLohikaPrysm from "../../assets/images/portfolio/prysm_iphone_app.png";
+import imgSMA from "../../assets/images/portfolio/sma.png";
 
 export default function PortfolioMain() {
   const { t } = useTranslation();

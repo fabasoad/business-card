@@ -1,4 +1,4 @@
-/// <reference path='./Portfolio.d.ts' />
+/// <reference path='./PortfolioMain.d.ts' />
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -22,7 +22,7 @@ import imgLohikaEarnin from "../assets/images/portfolio/earnin.png";
 import imgLohikaPrysm from "../assets/images/portfolio/prysm_iphone_app.png";
 import imgSMA from "../assets/images/portfolio/sma.png";
 
-export default function Portfolio() {
+export default function PortfolioMain() {
   const { t } = useTranslation();
   return (
     <div id="portfolio">

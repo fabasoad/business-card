@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PortfolioItem correctly 1`] = `
+<div
+  className="col-sm-6 col-md-3 col-lg-3 web"
+>
+  <div
+    className="portfolio-item"
+  >
+    <div
+      className="hover-bg text-center"
+    >
+      <a
+        href="test-url"
+        rel="noopener noreferrer"
+        target="_blank"
+        title="test-name"
+      >
+        <div
+          className="hover-text"
+        >
+          <h4>
+            test-title
+          </h4>
+          <small>
+            test-subtitle
+          </small>
+          <i
+            className="fa fa-search"
+          />
+        </div>
+        <img
+          alt="test-name"
+          className="img-thumbnail"
+          src="test-img"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;

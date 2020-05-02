@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render PortfolioMain correctly 1`] = `
+<div
+  id="portfolio"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="section-title text-center center"
+    >
+      <h2>
+        business-card-portfolio-title
+      </h2>
+      <hr />
+    </div>
+    <div
+      className="row"
+    >
+      <PortfolioItem
+        img="test-file-stub"
+        name="Markets"
+        subtitle="business-card-portfolio-markets-subtitle"
+        title="business-card-portfolio-markets-title"
+        url="https://markets.bitcoin.com/"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Games"
+        subtitle="business-card-portfolio-casino-web-app-subtitle"
+        title="business-card-portfolio-casino-web-app-title"
+        url="https://games.bitcoin.com/"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Games Admin"
+        subtitle="business-card-portfolio-casino-admin-web-app-subtitle"
+        title="business-card-portfolio-casino-admin-web-app-title"
+        url="https://games.bitcoin.com/"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Games Android"
+        subtitle="business-card-portfolio-casino-android-app-subtitle"
+        title="business-card-portfolio-casino-android-app-title"
+        url="https://games.bitcoin.com/android"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Earnin"
+        subtitle="business-card-portfolio-earnin-subtitle"
+        title="business-card-portfolio-earnin-title"
+        url="https://www.earnin.com/"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Prysm iPhone App"
+        subtitle="business-card-portfolio-prysm-subtitle"
+        title="business-card-portfolio-prysm-title"
+        url="https://www.prysm.com/software/iphone-app/"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Southern Marine Agency Website"
+        subtitle="business-card-portfolio-sma-subtitle"
+        title="business-card-portfolio-sma-title"
+        url="https://drive.google.com/drive/folders/163jhUuVrBCEYQ503sa1Y1M7KG--1gwaj?usp=sharing"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="ALM Robot"
+        subtitle="business-card-portfolio-alm-robot-subtitle"
+        title="business-card-portfolio-alm-robot-title"
+        url="https://admhelp.microfocus.com/alm/en/12.60/online_help/Content/Admin/sa_robot_toc.htm"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="ALM"
+        subtitle="business-card-portfolio-alm-subtitle"
+        title="business-card-portfolio-alm-title"
+        url="https://www.microfocus.com/en-us/products/application-lifecycle-management/overview"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Lab Management"
+        subtitle="business-card-portfolio-alm-lab-management-subtitle"
+        title="business-card-portfolio-alm-lab-management-title"
+        url="https://admhelp.microfocus.com/alm/en/12.60/online_help/Content/lm_ag.htm"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Invebstor"
+        subtitle="business-card-portfolio-invebstor-subtitle"
+        title="business-card-portfolio-invebstor-title"
+        url="https://youtu.be/8wTcyZEtQx8"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Work+"
+        subtitle="business-card-portfolio-work-plus-subtitle"
+        title="business-card-portfolio-work-plus-title"
+        url="https://youtu.be/eRxTKZ0knsg"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="ARKA Website"
+        subtitle="business-card-portfolio-arka-subtitle"
+        title="business-card-portfolio-arka-title"
+        url="https://www.arka-media.de/"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Deutsche Lieferadresse Website"
+        subtitle="business-card-portfolio-deutsche-lieferadresse-subtitle"
+        title="business-card-portfolio-deutsche-lieferadresse-title"
+        url="https://www.deutsche-lieferadresse.com/"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Medisport Website"
+        subtitle="business-card-portfolio-medisport-subtitle"
+        title="business-card-portfolio-medisport-title"
+        url="http://medisport-garmisch.de/"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Print & Post Website"
+        subtitle="business-card-portfolio-print-and-post-subtitle"
+        title="business-card-portfolio-print-and-post-title"
+        url="#portfolio"
+      />
+      <PortfolioItem
+        img="test-file-stub"
+        name="Zakupki Website"
+        subtitle="business-card-portfolio-zakupki-subtitle"
+        title="business-card-portfolio-zakupki-title"
+        url="https://zakupki-de.com.ua/"
+      />
+    </div>
+  </div>
+</div>
+`;

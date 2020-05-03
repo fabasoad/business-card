@@ -1,13 +1,13 @@
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 
-import FooterContacts from './FooterContacts';
-import FooterExtra from './FooterExtra';
-import FooterInfo from './FooterInfo';
-import FooterSocial from './FooterSocial';
+import FooterContacts from './FooterContacts'
+import FooterExtra from './FooterExtra'
+import FooterInfo from './FooterInfo'
+import FooterSocial from './FooterSocial'
 
 export default function FooterMain() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div className="footer dark-component">
       <div id="contact" className="container text-center">
@@ -21,5 +21,5 @@ export default function FooterMain() {
           <FooterExtra />
         </div>
     </div>
-  );
+  )
 }

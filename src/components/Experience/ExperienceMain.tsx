@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 
-import JobAchievements from './JobAchievements';
-import JobDescription from './JobDescription';
-import JobPeriod from './JobPeriod';
-import JobTechnologies from './JobTechnologies';
-import JobTitle from './JobTitle';
+import JobAchievements from './JobAchievements'
+import JobDescription from './JobDescription'
+import JobPeriod from './JobPeriod'
+import JobTechnologies from './JobTechnologies'
+import JobTitle from './JobTitle'
 
 export default function ExperienceMain() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div id="experience" className="light-component">
       <div className="container">
@@ -26,15 +26,18 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
-                company={"Bitcoin.com"}
+                company="Bitcoin.com"
                 title={t("business-card-experience-job-bitcoin-com-2-title")}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix={"business-card-experience-job-bitcoin-com-2-description"}
+                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-description"
                 />
-                <JobAchievements count={2} i18nKeyPrefix={'business-card-experience-job-bitcoin-com-2-achievements'} />
+                <JobAchievements
+                  count={2}
+                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-achievements"
+                />
                 <JobTechnologies
                   keys={['travis','gitHubActions','bitrise','java','kafka','spring']}
                 />
@@ -50,15 +53,18 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
-                company={"Bitcoin.com"}
+                company="Bitcoin.com"
                 title={t("business-card-experience-job-bitcoin-com-1-title")}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix={"business-card-experience-job-bitcoin-com-1-description"}
+                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-description"
                 />
-                <JobAchievements count={1} i18nKeyPrefix={'business-card-experience-job-bitcoin-com-1-achievements'} />
+                <JobAchievements
+                  count={1}
+                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-achievements"
+                />
                 <JobTechnologies
                   keys={[
                     'maven','java','tomcat','lombok','junit','python',
@@ -78,25 +84,31 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
-                company={"Lohika"}
+                company="Lohika"
                 title={t("business-card-experience-job-lohika-3-title")}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={2}
-                  i18nKeyPrefix={"business-card-experience-job-lohika-3-prysm-description"}
+                  i18nKeyPrefix="business-card-experience-job-lohika-3-prysm-description"
                 />
-                <JobAchievements count={2} i18nKeyPrefix={'business-card-experience-job-lohika-3-prysm-achievements'} />
+                <JobAchievements
+                  count={2}
+                  i18nKeyPrefix="business-card-experience-job-lohika-3-prysm-achievements"
+                />
                 <JobTechnologies
                   keys={['csharp','xamarin','prism','git','jira','teamCity']}
                 />
                 <p>&nbsp;</p>
                 <JobDescription
                   count={2}
-                  i18nKeyPrefix={"business-card-experience-job-lohika-3-earnin-description"}
+                  i18nKeyPrefix="business-card-experience-job-lohika-3-earnin-description"
                   withTitle={false}
                 />
-                <JobAchievements count={6} i18nKeyPrefix={'business-card-experience-job-lohika-3-earnin-achievements'} />
+                <JobAchievements
+                  count={6}
+                  i18nKeyPrefix="business-card-experience-job-lohika-3-earnin-achievements"
+                />
                 <JobTechnologies
                   keys={[
                     'csharp','dotNetCore','kubernetes','helm','docker',
@@ -107,10 +119,13 @@ export default function ExperienceMain() {
                 <p>&nbsp;</p>
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix={"business-card-experience-job-lohika-3-general-description"}
+                  i18nKeyPrefix="business-card-experience-job-lohika-3-general-description"
                   withTitle={false}
                 />
-                <JobAchievements count={3} i18nKeyPrefix={'business-card-experience-job-lohika-3-general-achievements'} />
+                <JobAchievements
+                  count={3}
+                  i18nKeyPrefix="business-card-experience-job-lohika-3-general-achievements"
+                />
               </div>
             </div>
           </li>
@@ -123,15 +138,18 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
-                company={"Lohika"}
+                company="Lohika"
                 title={t("business-card-experience-job-lohika-2-title")}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix={"business-card-experience-job-lohika-2-description"}
+                  i18nKeyPrefix="business-card-experience-job-lohika-2-description"
                 />
-                <JobAchievements count={4} i18nKeyPrefix={'business-card-experience-job-lohika-2-achievements'} />
+                <JobAchievements
+                  count={4}
+                  i18nKeyPrefix="business-card-experience-job-lohika-2-achievements"
+                />
                 <JobTechnologies
                   keys={[
                     'java','spring','maven','javaScript','angular','mssql',
@@ -150,15 +168,18 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
-                company={"Lohika"}
+                company="Lohika"
                 title={t("business-card-experience-job-lohika-1-title")}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix={"business-card-experience-job-lohika-1-description"}
+                  i18nKeyPrefix="business-card-experience-job-lohika-1-description"
                 />
-                <JobAchievements count={3} i18nKeyPrefix={'business-card-experience-job-lohika-1-achievements'} />
+                <JobAchievements
+                  count={3}
+                  i18nKeyPrefix="business-card-experience-job-lohika-1-achievements"
+                />
                 <JobTechnologies
                   keys={['csharp','windowsForms','svn','visualStudio','hpeAlm','jenkins']}
                 />
@@ -174,15 +195,18 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
-                company={"ARKA - Finance, Software, Services"}
+                company="ARKA - Finance, Software, Services"
                 title={t("business-card-experience-job-arka-title")}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix={"business-card-experience-job-arka-description"}
+                  i18nKeyPrefix="business-card-experience-job-arka-description"
                 />
-                <JobAchievements count={3} i18nKeyPrefix={'business-card-experience-job-arka-achievements'} />
+                <JobAchievements
+                  count={3}
+                  i18nKeyPrefix="business-card-experience-job-arka-achievements"
+                />
                 <JobTechnologies
                   keys={[
                     'php','codeigniter','vBulletin','oxidEShop','smarty','javaScript','jQuery',
@@ -195,5 +219,5 @@ export default function ExperienceMain() {
         </ul>
       </div>
     </div>
-  );
+  )
 }

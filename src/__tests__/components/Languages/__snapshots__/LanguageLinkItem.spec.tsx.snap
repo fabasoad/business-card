@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LanguageLinkItem successfully 1`] = `
+<LanguageItem
+  code="test-code"
+>
+  <a
+    className="h5 mt-2"
+    href="test-url"
+    target="_blank"
+  >
+    test-text
+  </a>
+</LanguageItem>
+`;

@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function EducationItem(props) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <>
       <div className="timeline-image">
@@ -18,5 +18,5 @@ export default function EducationItem(props) {
         </div>
       </div>
     </>
-  );
+  )
 }

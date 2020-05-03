@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LanguageItem successfully 1`] = `
+<div
+  className="m-4"
+>
+  <FlagIcon
+    className="mx-auto"
+    code="test-code"
+    size="4x"
+  />
+  test-content
+</div>
+`;

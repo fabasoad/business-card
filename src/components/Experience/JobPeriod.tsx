@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function JobPeriod({ fromMonth, fromYear, toMonth, toYear }) {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div className="timeline-image">
       <h4>
@@ -13,5 +13,5 @@ export default function JobPeriod({ fromMonth, fromYear, toMonth, toYear }) {
         <span>{fromYear}</span>
       </h4>
     </div>
-  );
+  )
 }

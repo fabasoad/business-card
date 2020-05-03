@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export default function LoadingSpinner() {
   return (
@@ -18,5 +18,5 @@ export default function LoadingSpinner() {
         <div></div>
       </div>
     </div>
-  );
+  )
 }

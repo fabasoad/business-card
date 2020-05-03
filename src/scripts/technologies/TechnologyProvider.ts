@@ -1,5 +1,5 @@
-import Technology from "./Technology";
+import Technology from "./Technology"
 
 export default interface TechnologyProvider {
-  items : Map<string, Technology>;
+  items: Map<string, Technology>
 }

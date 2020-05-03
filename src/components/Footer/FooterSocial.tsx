@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export default function FooterSocial() {
   return (
@@ -11,5 +11,5 @@ export default function FooterSocial() {
         <li><a className="btn" target="_blank" href="https://dev.to/fabasoad"><i className="fab fa-dev fa-2x"></i></a></li>
       </ul>
     </div>
-  );
+  )
 }

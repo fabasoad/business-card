@@ -1,8 +1,8 @@
-import * as React from 'react';
-import { Trans, useTranslation } from 'react-i18next';
+import * as React from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 
 export default function Header() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <header className="header" id="header">
       <div className="header__text">
@@ -12,5 +12,5 @@ export default function Header() {
         <a className="btn btn-primary btn-lg" href="#portfolio">{t("business-card-header-portfolio")}</a>
       </div>
     </header>
-  );
+  )
 }

@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render LanguageItem successfully 1`] = `
+<div
+  className="light-component"
+  id="languages"
+>
+  <div
+    className="section-title text-center center"
+  >
+    <h2>
+      business-card-languages-title
+    </h2>
+    <hr />
+  </div>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="language-list col text-center"
+      >
+        <LaguageLinkItem
+          code="jp"
+          text="JLPT N5"
+          url="https://drive.google.com/file/d/1wDeulFdf9-8DBa_k0F8tiRUtdlG7mh3L/view?usp=sharing"
+        />
+        <LaguageLinkItem
+          code="gb"
+          text="TOEIC 825"
+          url="https://drive.google.com/file/d/1nzM9WQqR7PQpHKDiWvkRYtcNbnRW8-OB/view?usp=sharing"
+        />
+        <LaguageTextItem
+          code="ru"
+          text="business-card-languages-native"
+        />
+        <LaguageTextItem
+          code="ua"
+          text="business-card-languages-native"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

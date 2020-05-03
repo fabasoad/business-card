@@ -1,3 +1,3 @@
-export function v4() {
-  return 'test-uuid';
+export function v4() : string {
+  return 'test-uuid'
 }

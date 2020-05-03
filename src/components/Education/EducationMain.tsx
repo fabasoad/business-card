@@ -1,10 +1,10 @@
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 
-import EducationItem from './EducationItem';
+import EducationItem from './EducationItem'
 
 export default function EducationMain() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div className="light-component" id="education">
       <div className="container">
@@ -26,5 +26,5 @@ export default function EducationMain() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,7 +1,7 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import FooterEmail from './FooterEmail';
-import FooterLocation from './FooterLocation';
+import FooterEmail from './FooterEmail'
+import FooterLocation from './FooterLocation'
 
 export default function FooterContacts() {
   return (
@@ -9,5 +9,5 @@ export default function FooterContacts() {
       <FooterLocation />
       <FooterEmail />
     </div>
-  );
+  )
 }

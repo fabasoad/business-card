@@ -1,37 +1,37 @@
-import * as React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
-import { useTranslation } from 'react-i18next';
+import * as React from 'react'
+import { Navbar, Nav } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 
-import LocaleDropDown from './LocaleDropDown';
-import MenuItem from './MenuItem';
+import LocaleDropDown from './LocaleDropDown'
+import MenuItem from './MenuItem'
 
-export default function MenuMain(props) {
-  const { t } = useTranslation();
+export default function MenuMain() {
+  const { t } = useTranslation()
 
-  const [expanded, setExpanded] = React.useState<boolean>(false);
-  const [activeNavLink, setActiveNavLink] = React.useState<string>(document.location.hash);
+  const [expanded, setExpanded] = React.useState<boolean>(false)
+  const [activeNavLink, setActiveNavLink] = React.useState<string>(document.location.hash)
 
   document.querySelectorAll('*').forEach(el => {
     el.addEventListener('click', e => {
-      const findParent = (element : HTMLElement, elementToCompare : HTMLElement) : HTMLElement => {
+      const findParent = (element: HTMLElement, elementToCompare: HTMLElement): HTMLElement => {
         if (element === elementToCompare) {
-          return element;
+          return element
         }
         if (element.parentElement == null) {
-          return null;
+          return null
         }
-        return findParent(element.parentElement, elementToCompare);
-      };
-      const element = e.target as HTMLElement;
-      const isNotNav = element.getAttribute('id') != 'nav';
-      const isNotParentOfNav = findParent(document.getElementById('nav'), element) == null;
-      const isNavIsNotParent = findParent(element, document.getElementById('nav')) == null;
-      
-      if (isNotNav && isNotParentOfNav && isNavIsNotParent) {
-        setExpanded(false);
+        return findParent(element.parentElement, elementToCompare)
       }
-    });
-  });
+      const element = e.target as HTMLElement
+      const isNotNav = element.getAttribute('id') != 'nav'
+      const isNotParentOfNav = findParent(document.getElementById('nav'), element) == null
+      const isNavIsNotParent = findParent(element, document.getElementById('nav')) == null
+
+      if (isNotNav && isNotParentOfNav && isNavIsNotParent) {
+        setExpanded(false)
+      }
+    })
+  })
 
   return (
     <div className="affix-top" id="nav">
@@ -49,10 +49,10 @@ export default function MenuMain(props) {
             <MenuItem setActiveNavLink={setActiveNavLink} name={'contact'} />
           </Nav>
           <Nav>
-            <LocaleDropDown setLocale={props.setLocale} getLocale={props.getLocale} />
+            <LocaleDropDown />
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     </div>
-  );
+  )
 }

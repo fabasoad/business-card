@@ -1,11 +1,11 @@
 /// <reference path='./Resume.d.ts' />
-import * as React from 'react';
-import { useTranslation } from 'react-i18next';
+import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 
-import pdfResume from '../assets/files/yf-cv.pdf';
+import pdfResume from '../assets/files/yf-cv.pdf'
 
 export default function Resume() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
   return (
     <div id="resume" className="light-component">
       <div className="section-title text-center center">
@@ -21,5 +21,5 @@ export default function Resume() {
         </a>
       </div>
     </div>
-  );
+  )
 }

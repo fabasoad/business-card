@@ -1,8 +1,6 @@
-import { Locale } from '../../scripts/SupportedLocales';
+import { Locale } from "../../store/locale/types"
 
-const fixture = [
+export default new Array<Locale>(
   new Locale('gb', 'en'),
   new Locale('ru')
-];
-
-export default fixture;
+)

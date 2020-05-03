@@ -1,5 +1,5 @@
-import * as React from 'react';
-import Iframe from 'react-iframe';
+import * as React from 'react'
+import Iframe from 'react-iframe'
 
 export default function FooterExtra() {
   return (
@@ -13,5 +13,5 @@ export default function FooterExtra() {
         height="145px"
       />
     </div>
-  );
+  )
 }

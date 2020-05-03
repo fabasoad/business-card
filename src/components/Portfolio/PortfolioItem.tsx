@@ -1,4 +1,4 @@
-import * as React from 'react';
+import * as React from 'react'
 
 export default function PortfolioItem({ img, name, title, subtitle, url }) {
   return (
@@ -16,5 +16,5 @@ export default function PortfolioItem({ img, name, title, subtitle, url }) {
         </div>
       </div>
     </div>
-  );
+  )
 }

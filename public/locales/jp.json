@@ -7,6 +7,7 @@
 	"business-card-about-me-general-list-item-6": "私は英語の読み書き及び会話において流暢に行うことが出来ます。",
 	"business-card-about-me-title": "About me",
 	"business-card-author-name": "ファビジェブスキーイェブヘン",
+	"business-card-certificates-title": "Certificates",
 	"business-card-contact-city": "日本、東京都",
 	"business-card-contact-title": "連絡先",
 	"business-card-education-title": "学歴",
@@ -119,5 +120,7 @@
 	"business-card-resume-title": "履歴書",
   "business-card-skills-title": "スキル",
 	"business-card-title": "ファビジェブスキーイェブヘン :: シニアソフトウェアエンジニア",
-	"business-card-version": "バージョン{{version}}"
+	"business-card-version": "バージョン{{version}}",
+	"business-card-year-singular": "年",
+	"business-card-year-plural": "年"
 }

@@ -1,12 +1,19 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
+import DateLocale from '../controls/DateLocale'
 
-export default function EducationItem(props) {
+interface EducationItemProps {
+  from: number
+  to: number
+  title: string
+}
+
+export default function EducationItem(props: EducationItemProps) {
   const { t } = useTranslation()
   return (
     <>
       <div className="timeline-image">
-        <h4>{props.to}<br />-<br />{props.from}</h4>
+        <h4><DateLocale year={props.to} />-<br /><DateLocale year={props.from} /></h4>
       </div>
       <div className="timeline-panel">
         <div className="timeline-heading">

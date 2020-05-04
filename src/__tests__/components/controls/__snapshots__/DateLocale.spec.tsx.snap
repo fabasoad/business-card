@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render DateLocale with month in JP locale correctly 1`] = `
+<div>
+  2019jp-business-card-year-singularjp-business-card-month-1
+</div>
+`;
+
+exports[`should render DateLocale with month in non-JP locale correctly 1`] = `
+<div>
+  gb-business-card-month-1 2019
+</div>
+`;
+
+exports[`should render DateLocale without month in JP locale correctly 1`] = `
+<div>
+  2019jp-business-card-year-singular
+</div>
+`;
+
+exports[`should render DateLocale without month in non-JP locale correctly 1`] = `
+<div>
+  2019
+</div>
+`;

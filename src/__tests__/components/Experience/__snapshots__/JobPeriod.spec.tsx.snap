@@ -5,25 +5,16 @@ exports[`should render JobPeriod correctly 1`] = `
   className="timeline-image"
 >
   <h4>
-    <span
-      className="mr-1"
-    >
-      business-card-month-4
-    </span>
-    <span>
-      2020
-    </span>
-    <br />
+    <Connect(DateLocale)
+      month={4}
+      year={2020}
+    />
     - 
     <br />
-    <span
-      className="mr-1"
-    >
-      business-card-month-1
-    </span>
-    <span>
-      2019
-    </span>
+    <Connect(DateLocale)
+      month={1}
+      year={2019}
+    />
   </h4>
 </div>
 `;

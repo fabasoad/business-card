@@ -4,6 +4,7 @@ import { ThunkDispatch } from 'redux-thunk'
 
 import AboutMe from './AboutMe'
 import BackToTopButton from './BackToTopButton'
+import CertificatesMain from './Certificates/CertificatesMain'
 import EducationMain from './Education/EducationMain'
 import ExperienceMain from './Experience/ExperienceMain'
 import FooterMain from './Footer/FooterMain'
@@ -32,6 +33,7 @@ export function App(props: Props) {
       <Skills />
       <ExperienceMain />
       <EducationMain />
+      <CertificatesMain />
       <LanguagesMain />
       <PortfolioMain />
       <FooterMain />

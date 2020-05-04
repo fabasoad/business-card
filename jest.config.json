@@ -10,15 +10,15 @@
   ],
   "coverageThreshold": {
     "global": {
-      "branches": 53.19,
-      "functions": 48.19,
-      "lines": 59.4,
-      "statements": 59.2
+      "branches": 59.18,
+      "functions": 56.04,
+      "lines": 79.04,
+      "statements": 78.7
     }
   },
   "moduleFileExtensions": ["ts", "tsx", "js"],
   "moduleNameMapper": {
-    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/src/__tests__/__mocks__/fileMock.ts",
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|pdf)$": "<rootDir>/src/__tests__/__mocks__/fileMock.ts",
     "\\.(css|scss)$": "<rootDir>/src/__tests__/__mocks__/styleMock.ts"
   },
   "setupFiles": [

@@ -1,12 +1,11 @@
-import Technology from './Technology'
-import TechnologyProvider from './TechnologyProvider'
+import { Technology, TechnologyProvider } from './types'
 import TechnologyProviderDefault from './TechnologyProviderDefault'
 
 export default class TechnologyStorage {
 
   technologyProvider: TechnologyProvider
 
-  constructor(technologyProvider: TechnologyProvider = new TechnologyProviderDefault()) {
+  constructor(technologyProvider: TechnologyProvider = TechnologyProviderDefault) {
     this.technologyProvider = technologyProvider
   }
 
@@ -23,6 +22,6 @@ export default class TechnologyStorage {
   findByName(name: string): Technology {
     return this.technologyProvider.items.has(name)
       ? this.technologyProvider.items.get(name)
-      : new Technology(name)
+      : { name }
   }
 }

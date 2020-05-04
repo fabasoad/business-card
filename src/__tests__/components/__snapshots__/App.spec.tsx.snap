@@ -1,0 +1,543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render App with gb locale correctly 1`] = `
+<div
+  className="font-regular font-non-jp"
+>
+  <BackToTopButton />
+  <Header />
+  <MenuMain />
+  <Connect(AboutMe) />
+  <Resume />
+  <Skills
+    technologyStorage={
+      TechnologyStorage {
+        "technologyProvider": Object {
+          "items": Map {
+            "angular" => Object {
+              "img": "test-file-stub",
+              "name": "angular",
+            },
+            "bitrise" => Object {
+              "img": "test-file-stub",
+              "name": "bitrise",
+            },
+            "bootstrap" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "bootstrap",
+            },
+            "codeigniter" => Object {
+              "img": "test-file-stub",
+              "name": "codeigniter",
+            },
+            "csharp" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "csharp",
+            },
+            "docker" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "docker",
+            },
+            "dotNetCore" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "dotNetCore",
+            },
+            "elasticsearch" => Object {
+              "img": "test-file-stub",
+              "name": "elasticsearch",
+            },
+            "fluentBit" => Object {
+              "img": "test-file-stub",
+              "name": "fluentBit",
+            },
+            "fluentD" => Object {
+              "img": "test-file-stub",
+              "name": "fluentD",
+            },
+            "git" => Object {
+              "img": "test-file-stub",
+              "name": "git",
+            },
+            "grafana" => Object {
+              "img": "test-file-stub",
+              "name": "grafana",
+            },
+            "helm" => Object {
+              "img": "test-file-stub",
+              "name": "helm",
+            },
+            "hpeAlm" => Object {
+              "img": "test-file-stub",
+              "name": "hpeAlm",
+            },
+            "jenkins" => Object {
+              "img": "test-file-stub",
+              "name": "jenkins",
+            },
+            "jira" => Object {
+              "img": "test-file-stub",
+              "name": "jira",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+            },
+            "junit" => Object {
+              "img": "test-file-stub",
+              "name": "junit",
+            },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+            },
+            "kibana" => Object {
+              "img": "test-file-stub",
+              "name": "kibana",
+            },
+            "lombok" => Object {
+              "img": "test-file-stub",
+              "name": "lombok",
+            },
+            "mariaDb" => Object {
+              "img": "test-file-stub",
+              "name": "mariaDb",
+            },
+            "mssql" => Object {
+              "img": "test-file-stub",
+              "name": "mssql",
+            },
+            "mysql" => Object {
+              "img": "test-file-stub",
+              "name": "mysql",
+            },
+            "netBeans" => Object {
+              "img": "test-file-stub",
+              "name": "netBeans",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
+            },
+            "oxidEShop" => Object {
+              "img": "test-file-stub",
+              "name": "oxidEShop",
+            },
+            "php" => Object {
+              "img": "test-file-stub",
+              "name": "php",
+            },
+            "prism" => Object {
+              "img": "test-file-stub",
+              "name": "prism",
+            },
+            "prometheus" => Object {
+              "img": "test-file-stub",
+              "name": "prometheus",
+            },
+            "redmine" => Object {
+              "img": "test-file-stub",
+              "name": "redmine",
+            },
+            "silverlight" => Object {
+              "img": "test-file-stub",
+              "name": "silverlight",
+            },
+            "smarty" => Object {
+              "img": "test-file-stub",
+              "name": "smarty",
+            },
+            "spring" => Object {
+              "img": "test-file-stub",
+              "name": "spring",
+            },
+            "svn" => Object {
+              "img": "test-file-stub",
+              "name": "svn",
+            },
+            "teamCity" => Object {
+              "img": "test-file-stub",
+              "name": "teamCity",
+            },
+            "tomcat" => Object {
+              "img": "test-file-stub",
+              "name": "tomcat",
+            },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+            },
+            "kafka" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kafka",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "npm",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "redis",
+            },
+            "travis" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "travis",
+            },
+            "typeScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "typeScript",
+            },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "webpack",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+            },
+            "vBulletin" => Object {
+              "img": "test-file-stub",
+              "name": "vBulletin",
+            },
+            "visualStudio" => Object {
+              "img": "test-file-stub",
+              "name": "visualStudio",
+            },
+            "vsCode" => Object {
+              "img": "test-file-stub",
+              "name": "vsCode",
+            },
+            "windowsForms" => Object {
+              "img": "test-file-stub",
+              "name": "windowsForms",
+            },
+          },
+        },
+      }
+    }
+  />
+  <ExperienceMain />
+  <EducationMain />
+  <CertificatesMain />
+  <LanguagesMain />
+  <PortfolioMain />
+  <FooterMain />
+</div>
+`;
+
+exports[`should render App with jp locale correctly 1`] = `
+<div
+  className="font-regular font-jp"
+>
+  <BackToTopButton />
+  <Header />
+  <MenuMain />
+  <Connect(AboutMe) />
+  <Resume />
+  <Skills
+    technologyStorage={
+      TechnologyStorage {
+        "technologyProvider": Object {
+          "items": Map {
+            "angular" => Object {
+              "img": "test-file-stub",
+              "name": "angular",
+            },
+            "bitrise" => Object {
+              "img": "test-file-stub",
+              "name": "bitrise",
+            },
+            "bootstrap" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "bootstrap",
+            },
+            "codeigniter" => Object {
+              "img": "test-file-stub",
+              "name": "codeigniter",
+            },
+            "csharp" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "csharp",
+            },
+            "docker" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "docker",
+            },
+            "dotNetCore" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "dotNetCore",
+            },
+            "elasticsearch" => Object {
+              "img": "test-file-stub",
+              "name": "elasticsearch",
+            },
+            "fluentBit" => Object {
+              "img": "test-file-stub",
+              "name": "fluentBit",
+            },
+            "fluentD" => Object {
+              "img": "test-file-stub",
+              "name": "fluentD",
+            },
+            "git" => Object {
+              "img": "test-file-stub",
+              "name": "git",
+            },
+            "grafana" => Object {
+              "img": "test-file-stub",
+              "name": "grafana",
+            },
+            "helm" => Object {
+              "img": "test-file-stub",
+              "name": "helm",
+            },
+            "hpeAlm" => Object {
+              "img": "test-file-stub",
+              "name": "hpeAlm",
+            },
+            "jenkins" => Object {
+              "img": "test-file-stub",
+              "name": "jenkins",
+            },
+            "jira" => Object {
+              "img": "test-file-stub",
+              "name": "jira",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+            },
+            "junit" => Object {
+              "img": "test-file-stub",
+              "name": "junit",
+            },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+            },
+            "kibana" => Object {
+              "img": "test-file-stub",
+              "name": "kibana",
+            },
+            "lombok" => Object {
+              "img": "test-file-stub",
+              "name": "lombok",
+            },
+            "mariaDb" => Object {
+              "img": "test-file-stub",
+              "name": "mariaDb",
+            },
+            "mssql" => Object {
+              "img": "test-file-stub",
+              "name": "mssql",
+            },
+            "mysql" => Object {
+              "img": "test-file-stub",
+              "name": "mysql",
+            },
+            "netBeans" => Object {
+              "img": "test-file-stub",
+              "name": "netBeans",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
+            },
+            "oxidEShop" => Object {
+              "img": "test-file-stub",
+              "name": "oxidEShop",
+            },
+            "php" => Object {
+              "img": "test-file-stub",
+              "name": "php",
+            },
+            "prism" => Object {
+              "img": "test-file-stub",
+              "name": "prism",
+            },
+            "prometheus" => Object {
+              "img": "test-file-stub",
+              "name": "prometheus",
+            },
+            "redmine" => Object {
+              "img": "test-file-stub",
+              "name": "redmine",
+            },
+            "silverlight" => Object {
+              "img": "test-file-stub",
+              "name": "silverlight",
+            },
+            "smarty" => Object {
+              "img": "test-file-stub",
+              "name": "smarty",
+            },
+            "spring" => Object {
+              "img": "test-file-stub",
+              "name": "spring",
+            },
+            "svn" => Object {
+              "img": "test-file-stub",
+              "name": "svn",
+            },
+            "teamCity" => Object {
+              "img": "test-file-stub",
+              "name": "teamCity",
+            },
+            "tomcat" => Object {
+              "img": "test-file-stub",
+              "name": "tomcat",
+            },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+            },
+            "kafka" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kafka",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "npm",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "redis",
+            },
+            "travis" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "travis",
+            },
+            "typeScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "typeScript",
+            },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "webpack",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+            },
+            "vBulletin" => Object {
+              "img": "test-file-stub",
+              "name": "vBulletin",
+            },
+            "visualStudio" => Object {
+              "img": "test-file-stub",
+              "name": "visualStudio",
+            },
+            "vsCode" => Object {
+              "img": "test-file-stub",
+              "name": "vsCode",
+            },
+            "windowsForms" => Object {
+              "img": "test-file-stub",
+              "name": "windowsForms",
+            },
+          },
+        },
+      }
+    }
+  />
+  <ExperienceMain />
+  <EducationMain />
+  <CertificatesMain />
+  <LanguagesMain />
+  <PortfolioMain />
+  <FooterMain />
+</div>
+`;

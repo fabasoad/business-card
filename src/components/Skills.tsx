@@ -5,8 +5,11 @@ import { v4 as uuidv4 } from 'uuid'
 
 import TechnologyStorage from '../scripts/technologies/TechnologyStorage'
 
-export default function Skills() {
-  const technologyStorage = new TechnologyStorage()
+interface SkillsProps {
+  technologyStorage?: TechnologyStorage
+}
+
+export default function Skills(props: SkillsProps) {
   const { t } = useTranslation()
   return (
     <div id="skills" className="light-component">
@@ -17,10 +20,14 @@ export default function Skills() {
       <div className="container">
         <div className="row">
           <div className="skills-list col text-center">
-            {technologyStorage.findBySkill(true).map(t => <img key={uuidv4()} className="m-4" src={t.img} alt={t.name} />)}
+            {props.technologyStorage.findBySkill(true).map(t => <img key={uuidv4()} className="m-4" src={t.img} alt={t.name} />)}
           </div>
         </div>
       </div>
     </div>
   )
+}
+
+Skills.defaultProps = {
+  technologyStorage: new TechnologyStorage()
 }

@@ -55,73 +55,70 @@ import imgWebpack from '../../assets/images/technologies/webpack.png'
 import imgWindowsForms from '../../assets/images/technologies/windowsForms.png'
 import imgXamarin from '../../assets/images/technologies/xamarin.png'
 
-import Technology from "./Technology"
-import TechnologyProvider from "./TechnologyProvider"
+import { Technology, TechnologyProvider } from "./types"
 
-export default class TechnologyProviderDefault implements TechnologyProvider {
-
-  _items: Map<string, Technology>
-
-  get items(): Map<string, Technology> {
-    if (this._items == null) {
-      this._items = new Map<string, Technology>()
-      this._items.set('angular', new Technology('angular', imgAngular))
-      this._items.set('bitrise', new Technology('bitrise', imgBitrise))
-      this._items.set('bootstrap', new Technology('bootstrap', imgBootstrap, true))
-      this._items.set('codeigniter', new Technology('codeigniter', imgCodeIgniter))
-      this._items.set('csharp', new Technology('csharp', imgCSharp, true))
-      this._items.set('docker', new Technology('docker', imgDocker, true))
-      this._items.set('dotNetCore', new Technology('dotNetCore', imgDotNetCore, true))
-      this._items.set('elasticsearch', new Technology('elasticsearch', imgElasticsearch))
-      this._items.set('fluentBit', new Technology('fluentBit', imgFluentBit))
-      this._items.set('fluentD', new Technology('fluentD', imgFluentD))
-      this._items.set('git', new Technology('git', imgGit))
-      this._items.set('gitHub', new Technology('gitHub', imgGitHub, true))
-      this._items.set('gitHubActions', new Technology('gitHubActions', imgGitHubActions, true))
-      this._items.set('grafana', new Technology('grafana', imgGrafana))
-      this._items.set('helm', new Technology('helm', imgHelm))
-      this._items.set('hpeAlm', new Technology('hpeAlm', imgHpeAlm))
-      this._items.set('java', new Technology('java', imgJava, true))
-      this._items.set('javaScript', new Technology('javaScript', imgJavaScript, true))
-      this._items.set('jenkins', new Technology('jenkins', imgJenkins))
-      this._items.set('jira', new Technology('jira', imgJira))
-      this._items.set('jQuery', new Technology('jQuery', imgJquery))
-      this._items.set('junit', new Technology('junit', imgJunit))
-      this._items.set('intellijIdea', new Technology('intellijIdea', imgIntellijIdea))
-      this._items.set('kafka', new Technology('kafka', imgKafka, true))
-      this._items.set('kibana', new Technology('kibana', imgKibana))
-      this._items.set('kubernetes', new Technology('kubernetes', imgKubernetes, true))
-      this._items.set('lombok', new Technology('lombok', imgLombok))
-      this._items.set('mariaDb', new Technology('mariaDb', imgMariaDb))
-      this._items.set('maven', new Technology('maven', imgMaven, true))
-      this._items.set('mssql', new Technology('mssql', imgMsSql))
-      this._items.set('mysql', new Technology('mysql', imgMySql))
-      this._items.set('netBeans', new Technology('netBeans', imgNetBeans))
-      this._items.set('npm', new Technology('npm', imgNpm, true))
-      this._items.set('oracle', new Technology('oracle', imgOracle))
-      this._items.set('oxidEShop', new Technology('oxidEShop', imgOxidEShop))
-      this._items.set('php', new Technology('php', imgPhp))
-      this._items.set('prism', new Technology('prism', imgPrism))
-      this._items.set('prometheus', new Technology('prometheus', imgPrometheus))
-      this._items.set('python', new Technology('python', imgPython, true))
-      this._items.set('react', new Technology('react', imgReact, true))
-      this._items.set('redis', new Technology('redis', imgRedis, true))
-      this._items.set('redmine', new Technology('redmine', imgRedmine))
-      this._items.set('silverlight', new Technology('silverlight', imgSilverlight))
-      this._items.set('smarty', new Technology('smarty', imgSmarty))
-      this._items.set('spring', new Technology('spring', imgSpring))
-      this._items.set('svn', new Technology('svn', imgSvn))
-      this._items.set('teamCity', new Technology('teamCity', imgTeamCity))
-      this._items.set('tomcat', new Technology('tomcat', imgTomcat))
-      this._items.set('travis', new Technology('travis', imgTravis, true))
-      this._items.set('typeScript', new Technology('typeScript', imgTypeScript, true))
-      this._items.set('vBulletin', new Technology('vBulletin', imgVBulletin))
-      this._items.set('visualStudio', new Technology('visualStudio', imgVisualStudio))
-      this._items.set('vsCode', new Technology('vsCode', imgVsCode))
-      this._items.set('webpack', new Technology('webpack', imgWebpack, true))
-      this._items.set('windowsForms', new Technology('windowsForms', imgWindowsForms))
-      this._items.set('xamarin', new Technology('xamarin', imgXamarin, true))
-    }
-    return this._items
-  }
+const TechnologyProviderDefault: TechnologyProvider = {
+  items: new Array<Technology>(
+    { name: 'angular', img: imgAngular },
+    { name: 'bitrise', img: imgBitrise },
+    { name: 'bootstrap', img: imgBootstrap, isSkill: true },
+    { name: 'codeigniter', img: imgCodeIgniter },
+    { name: 'csharp', img: imgCSharp, isSkill: true },
+    { name: 'docker', img: imgDocker, isSkill: true },
+    { name: 'dotNetCore', img: imgDotNetCore, isSkill: true },
+    { name: 'elasticsearch', img: imgElasticsearch },
+    { name: 'fluentBit', img: imgFluentBit },
+    { name: 'fluentD', img: imgFluentD },
+    { name: 'git', img: imgGit },
+    { name: 'grafana', img: imgGrafana },
+    { name: 'helm', img: imgHelm },
+    { name: 'hpeAlm', img: imgHpeAlm },
+    { name: 'jenkins', img: imgJenkins },
+    { name: 'jira', img: imgJira },
+    { name: 'jQuery', img: imgJquery },
+    { name: 'junit', img: imgJunit },
+    { name: 'intellijIdea', img: imgIntellijIdea },
+    { name: 'kibana', img: imgKibana },
+    { name: 'lombok', img: imgLombok },
+    { name: 'mariaDb', img: imgMariaDb },
+    { name: 'mssql', img: imgMsSql },
+    { name: 'mysql', img: imgMySql },
+    { name: 'netBeans', img: imgNetBeans },
+    { name: 'oracle', img: imgOracle },
+    { name: 'oxidEShop', img: imgOxidEShop },
+    { name: 'php', img: imgPhp },
+    { name: 'prism', img: imgPrism },
+    { name: 'prometheus', img: imgPrometheus },
+    { name: 'redmine', img: imgRedmine },
+    { name: 'silverlight', img: imgSilverlight },
+    { name: 'smarty', img: imgSmarty },
+    { name: 'spring', img: imgSpring },
+    { name: 'svn', img: imgSvn },
+    { name: 'teamCity', img: imgTeamCity },
+    { name: 'tomcat', img: imgTomcat },
+    { name: 'gitHub', img: imgGitHub, isSkill: true },
+    { name: 'gitHubActions', img: imgGitHubActions, isSkill: true },
+    { name: 'java', img: imgJava, isSkill: true },
+    { name: 'javaScript', img: imgJavaScript, isSkill: true },
+    { name: 'kafka', img: imgKafka, isSkill: true },
+    { name: 'kubernetes', img: imgKubernetes, isSkill: true },
+    { name: 'maven', img: imgMaven, isSkill: true },
+    { name: 'npm', img: imgNpm, isSkill: true },
+    { name: 'python', img: imgPython, isSkill: true },
+    { name: 'react', img: imgReact, isSkill: true },
+    { name: 'redis', img: imgRedis, isSkill: true },
+    { name: 'travis', img: imgTravis, isSkill: true },
+    { name: 'typeScript', img: imgTypeScript, isSkill: true },
+    { name: 'webpack', img: imgWebpack, isSkill: true },
+    { name: 'xamarin', img: imgXamarin, isSkill: true },
+    { name: 'vBulletin', img: imgVBulletin },
+    { name: 'visualStudio', img: imgVisualStudio },
+    { name: 'vsCode', img: imgVsCode },
+    { name: 'windowsForms', img: imgWindowsForms }
+  ).reduce((map, tech) => {
+    map.set(tech.name, tech)
+    return map
+  }, new Map<string, Technology>())
 }
+
+export default TechnologyProviderDefault

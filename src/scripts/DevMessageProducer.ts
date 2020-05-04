@@ -5,7 +5,8 @@ export default class DevMessageProducer {
   _timer: NodeJS.Timeout
 
   constructor(
-    messagesFactory: () => string[] = DevMessageProducer._defaultMessagesFactory) {
+    messagesFactory: () => string[] = DevMessageProducer._defaultMessagesFactory
+  ) {
     this._messages = messagesFactory()
   }
 

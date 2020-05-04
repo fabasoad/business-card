@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -57,7 +57,7 @@
     "i18next-browser-languagedetector": "^4.1.1",
     "i18next-http-backend": "^1.0.7",
     "jest": "^25.5.2",
-    "moment": "^2.24.0",
+    "moment": "2.24.0",
     "node-sass": "4.14.0",
     "normalize.css": "8.0.1",
     "raf": "^3.4.1",

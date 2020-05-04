@@ -2,7 +2,7 @@
 
 exports[`should render LanguageItem successfully 1`] = `
 <div
-  className="m-4"
+  className="mb-4 mx-4"
 >
   <FlagIcon
     className="mx-auto"

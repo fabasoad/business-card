@@ -7,6 +7,7 @@
 	"business-card-about-me-general-list-item-6": "Fluent English, written and spoken.",
 	"business-card-about-me-title": "About me",
 	"business-card-author-name": "Yevhen Fabizhevskyi",
+	"business-card-certificates-title": "Certificates",
 	"business-card-contact-city": "Tokyo, Japan",
 	"business-card-contact-title": "Contact me",
 	"business-card-education-title": "Education",
@@ -119,5 +120,7 @@
 	"business-card-resume-title": "Resume",
   "business-card-skills-title": "Skills",
 	"business-card-title": "Yevhen Fabizhevskyi :: Senior Software Engineer",
-	"business-card-version": "Version {{version}}"
+	"business-card-version": "Version {{version}}",
+	"business-card-year-singular": "year",
+	"business-card-year-plural": "years"
 }

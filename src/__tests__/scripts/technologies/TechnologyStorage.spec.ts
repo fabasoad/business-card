@@ -1,27 +1,23 @@
-import TechnologyProvider from '../../../scripts/technologies/TechnologyProvider'
 import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
-import Technology from '../../../scripts/technologies/Technology'
+import { Technology, TechnologyProvider } from '../../../scripts/technologies/types'
 
 let technologyStorage: TechnologyStorage
-let techs: Array<Tech>
-
-type Tech = {
-  name: string
-  isSkill: boolean
-}
+let techs: Array<Technology>
 
 class TechnologyProviderStub implements TechnologyProvider {
 
   items: Map<string, Technology>
 
-  constructor(techArr: Array<Tech>) {
-    this.items = new Map<string, Technology>()
-    techArr.forEach(t => this.items.set(t.name, new Technology(t.name, null, t.isSkill)))
+  constructor(techArr: Array<Technology>) {
+    this.items = techArr.reduce((map: Map<string, Technology>, t: Technology) => {
+      map.set(t.name, t)
+      return map
+    }, new Map<string, Technology>())
   }
 }
 
 beforeAll(() => {
-  techs = new Array<Tech>(
+  techs = new Array<Technology>(
     { name: 'tech-1', isSkill: true },
     { name: 'tech-2', isSkill: false }
   )

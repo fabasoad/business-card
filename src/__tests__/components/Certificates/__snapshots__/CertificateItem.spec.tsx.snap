@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CertificateItem correctly 1`] = `
+<Toast
+  animation={true}
+  autohide={false}
+  className="mb-4 mx-2 w-100"
+  delay={3000}
+  show={true}
+  transition={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "defaultProps": Object {
+        "appear": false,
+        "in": false,
+        "mountOnEnter": false,
+        "timeout": 300,
+        "unmountOnExit": false,
+      },
+      "displayName": "Fade",
+      "render": [Function],
+    }
+  }
+>
+  <ToastHeader
+    closeButton={false}
+    closeLabel="Close"
+  >
+    <Image
+      className="mr-2"
+      fluid={false}
+      rounded={true}
+      roundedCircle={false}
+      src="test-issuer-img"
+      thumbnail={false}
+    />
+    <strong
+      className="mr-auto"
+    >
+      test-issuer-name
+    </strong>
+    <small>
+      test-id
+    </small>
+    <Image
+      className="ml-2"
+      fluid={false}
+      rounded={false}
+      roundedCircle={false}
+      src="test-technology-img"
+      thumbnail={false}
+    />
+  </ToastHeader>
+  <ToastBody
+    className="text-center"
+  >
+    <a
+      href="test-url"
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      test-title
+    </a>
+  </ToastBody>
+  <ToastHeader
+    className="float-right"
+    closeButton={false}
+    closeLabel="Close"
+  >
+    <Connect(DateLocale)
+      month={1}
+      year={2020}
+    />
+  </ToastHeader>
+</Toast>
+`;

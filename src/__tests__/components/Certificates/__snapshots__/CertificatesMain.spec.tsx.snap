@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CertificatesMain correctly 1`] = `
+<div
+  className="light-component"
+  id="certificates"
+>
+  <div
+    className="section-title text-center center"
+  >
+    <h2>
+      business-card-certificates-title
+    </h2>
+    <hr />
+  </div>
+  <div
+    className="row justify-content-center"
+  >
+    <CertificateItem
+      id="MWE43H8YDS"
+      issueDate={
+        Object {
+          "month": 5,
+          "year": 2015,
+        }
+      }
+      issuer={
+        Object {
+          "img": "test-file-stub",
+          "name": "Coursera",
+        }
+      }
+      technology={
+        Object {
+          "img": "test-img-1",
+          "name": "test-name-1",
+        }
+      }
+      title={
+        <div>
+          Programming for everybody (Python)
+          <div>
+             
+          </div>
+        </div>
+      }
+      url="https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
+    />
+    <CertificateItem
+      id="W5AB2PBZQNPY"
+      issueDate={
+        Object {
+          "month": 3,
+          "year": 2018,
+        }
+      }
+      issuer={
+        Object {
+          "img": "test-file-stub",
+          "name": "Coursera",
+        }
+      }
+      technology={
+        Object {
+          "img": "test-img-1",
+          "name": "test-name-1",
+        }
+      }
+      title="Parallel, Concurrent, and Distributed Programming in Java Specialization"
+      url="https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
+    />
+    <CertificateItem
+      id="UC-JGDVYKAQ"
+      issueDate={
+        Object {
+          "month": 10,
+          "year": 2019,
+        }
+      }
+      issuer={
+        Object {
+          "img": "test-file-stub",
+          "name": "Udemy",
+        }
+      }
+      technology={
+        Object {
+          "img": "test-img-1",
+          "name": "test-name-1",
+        }
+      }
+      title="The Complete React Developer Course (w/ Hooks and Redux)"
+      url="http://ude.my/UC-JGDVYKAQ"
+    />
+  </div>
+</div>
+`;

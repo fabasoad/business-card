@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render LanguageItem successfully 1`] = `
+exports[`should render LanguageItem correctly 1`] = `
 <div
   className="light-component"
   id="languages"

@@ -10,7 +10,7 @@ beforeAll(() => {
   tMock = useTranslation().t
 })
 
-test('should render LanguageItem successfully', () => {
+test('should render LanguageItem correctly', () => {
   const wrapper: ShallowWrapper = shallow(<LanguagesMain />)
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(3)

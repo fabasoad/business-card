@@ -1736,3 +1736,9 @@ patch:
         patched: '2020-05-01T08:46:17.664Z'
     - jest > jest-cli > @jest/core > jest-config > @jest/test-sequencer > jest-runner > jest-jasmine2 > jest-runtime > @jest/transform > babel-plugin-istanbul > istanbul-lib-instrument > @babel/core > @babel/helper-module-transforms > @babel/helper-replace-supers > @babel/traverse > @babel/helper-function-name > @babel/template > @babel/types > lodash:
         patched: '2020-05-01T08:46:17.664Z'
+    - eslint > lodash:
+        patched: '2020-05-06T03:18:00.306Z'
+    - eslint > inquirer > lodash:
+        patched: '2020-05-06T03:18:00.306Z'
+    - eslint > table > lodash:
+        patched: '2020-05-06T03:18:00.306Z'

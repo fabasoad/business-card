@@ -1,13 +1,21 @@
 import DigitConverter from '../../scripts/DigitConverter'
 
-test('should convert from double byte to single byte correctly', () => {
-  const converter = new DigitConverter()
-  const actual: string = converter.toSingleByte("２０１９")
-  expect(actual).toBe('2019')
-})
+interface DigitConverterFixture {
+  convert: (c: DigitConverter) => string
+  expected: string
+  title: string
+}
 
-test('should convert from single byte to double byte correctly', () => {
-  const converter = new DigitConverter()
-  const actual: string = converter.toDoubleByte("2019")
-  expect(actual).toBe("２０１９")
-})
+new Array<DigitConverterFixture>({
+  convert: c => c.toSingleByte("２０１９"),
+  expected: '2019',
+  title: 'single'
+}, {
+  convert: c => c.toDoubleByte("2019"),
+  expected: '２０１９',
+  title: 'double'
+}).forEach(f =>
+  test(`should convert to ${f.title} byte correctly`, () =>
+    expect(f.convert(new DigitConverter())).toBe(f.expected)
+  )
+)

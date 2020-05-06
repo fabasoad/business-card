@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FooterContacts correctly 1`] = `
+<div
+  className="row contacts"
+>
+  <FooterLocation />
+  <FooterEmail />
+</div>
+`;

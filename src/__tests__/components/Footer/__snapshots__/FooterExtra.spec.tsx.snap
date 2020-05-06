@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FooterExtra correctly 1`] = `
+<div
+  className="d-flex justify-content-center"
+>
+  <Iframe
+    frameBorder={0}
+    height="145px"
+    name="di"
+    scrolling="no"
+    url="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=fabasoad&mnOn=true&stat=3&imageNum=1&rankOn=false&projectsOn=false&special=false&link=1&memberId=1103124"
+    width="405px"
+  />
+</div>
+`;

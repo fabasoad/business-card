@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FooterMain correctly 1`] = `
+<div
+  className="footer dark-component"
+>
+  <div
+    className="container text-center"
+    id="contact"
+  >
+    <div
+      className="section-title center"
+    >
+      <h2>
+        business-card-contact-title
+      </h2>
+      <hr />
+    </div>
+    <FooterContacts />
+    <FooterSocial />
+    <FooterInfo />
+    <FooterExtra />
+  </div>
+</div>
+`;

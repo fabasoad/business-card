@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FooterSocial correctly 1`] = `
+<div
+  className="social d-flex justify-content-center"
+>
+  <ul
+    className="icon-list"
+  >
+    <li>
+      <a
+        className="btn"
+        href="https://twitter.com/fabasoad"
+        target="_blank"
+      >
+        <i
+          className="fab fa-twitter fa-2x"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        className="btn"
+        href="https://github.com/fabasoad"
+        target="_blank"
+      >
+        <i
+          className="fab fa-github fa-2x"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        className="btn"
+        href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
+        target="_blank"
+      >
+        <i
+          className="fab fa-linkedin fa-2x"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        className="btn"
+        href="https://stackoverflow.com/users/470214/fabasoad"
+        target="_blank"
+      >
+        <i
+          className="fab fa-stack-overflow fa-2x"
+        />
+      </a>
+    </li>
+    <li>
+      <a
+        className="btn"
+        href="https://dev.to/fabasoad"
+        target="_blank"
+      >
+        <i
+          className="fab fa-dev fa-2x"
+        />
+      </a>
+    </li>
+  </ul>
+</div>
+`;

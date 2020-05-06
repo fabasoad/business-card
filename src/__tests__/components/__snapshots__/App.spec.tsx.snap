@@ -12,7 +12,7 @@ exports[`should render App with gb locale correctly 1`] = `
   <Skills
     technologyStorage={
       TechnologyStorage {
-        "technologyProvider": Object {
+        "provider": Object {
           "items": Map {
             "angular" => Object {
               "img": "test-file-stub",
@@ -265,9 +265,25 @@ exports[`should render App with gb locale correctly 1`] = `
   <ExperienceMain />
   <EducationMain />
   <CertificatesMain
+    certificateIssuerStorage={
+      CertificateIssuerStorage {
+        "provider": Object {
+          "items": Map {
+            "coursera" => Object {
+              "img": "test-file-stub",
+              "name": "coursera",
+            },
+            "udemy" => Object {
+              "img": "test-file-stub",
+              "name": "udemy",
+            },
+          },
+        },
+      }
+    }
     technologyStorage={
       TechnologyStorage {
-        "technologyProvider": Object {
+        "provider": Object {
           "items": Map {
             "angular" => Object {
               "img": "test-file-stub",
@@ -535,7 +551,7 @@ exports[`should render App with jp locale correctly 1`] = `
   <Skills
     technologyStorage={
       TechnologyStorage {
-        "technologyProvider": Object {
+        "provider": Object {
           "items": Map {
             "angular" => Object {
               "img": "test-file-stub",
@@ -788,9 +804,25 @@ exports[`should render App with jp locale correctly 1`] = `
   <ExperienceMain />
   <EducationMain />
   <CertificatesMain
+    certificateIssuerStorage={
+      CertificateIssuerStorage {
+        "provider": Object {
+          "items": Map {
+            "coursera" => Object {
+              "img": "test-file-stub",
+              "name": "coursera",
+            },
+            "udemy" => Object {
+              "img": "test-file-stub",
+              "name": "udemy",
+            },
+          },
+        },
+      }
+    }
     technologyStorage={
       TechnologyStorage {
-        "technologyProvider": Object {
+        "provider": Object {
           "items": Map {
             "angular" => Object {
               "img": "test-file-stub",

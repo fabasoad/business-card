@@ -1,42 +1,35 @@
 import * as React from 'react'
 import { Image, Toast } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 import DateLocale from '../controls/DateLocale'
 import { Technology } from '../../scripts/technologies/types'
-
-interface CertificateIssuer {
-  name: string
-  img: any
-}
-
-interface CertificateIssueDate {
-  month: number
-  year: number
-}
+import { CertificateIssuer } from '../../scripts/certificates/types'
 
 interface CertificateItemProps {
   id: string
-  issueDate: CertificateIssueDate
+  issueDate: Date
   issuer: CertificateIssuer
   technology: Technology
-  title: any
+  i18nTitleKey: string
   url: string
 }
 
 export default function CertificateItem(props: CertificateItemProps) {
+  const { t } = useTranslation()
   return (
     <Toast className="mb-4 mx-2 w-100">
       <Toast.Header closeButton={false}>
-        <Image src={props.issuer.img} className="mr-2" rounded />
-        <strong className="mr-auto">{props.issuer.name}</strong>
+        {props.issuer.img && <Image src={props.issuer.img} className="mr-2" rounded />}
+        <strong className="mr-2">{props.issuer.name}</strong>
+        <DateLocale className="mr-auto" month={props.issueDate.getMonth() + 1} year={props.issueDate.getFullYear()} />
         <small>{props.id}</small>
         <Image className="ml-2" src={props.technology.img} />
       </Toast.Header>
       <Toast.Body className="text-center">
-        <a target="_blank" rel="noopener noreferrer" href={props.url}>{props.title}</a>
+        <a target="_blank" rel="noopener noreferrer" href={props.url}>
+          {t(props.i18nTitleKey)}
+        </a>        
       </Toast.Body>
-      <Toast.Header className="float-right" closeButton={false}>
-        <DateLocale month={props.issueDate.month} year={props.issueDate.year} />
-      </Toast.Header>
     </Toast>
   )
 }

@@ -20,10 +20,6 @@ jobs:
         with:
           node-version: '13'
       - run: yarn install
-      - name: Debug
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: echo $GITHUB_CONTEXT
       - run: yarn test
         if: startsWith(github.ref, 'refs/heads/bugfix/') || startsWith(github.ref, 'refs/heads/feature/')
       - uses: paambaati/codeclimate-action@v2.6.0
@@ -38,7 +34,7 @@ jobs:
         run: yarn run build:prod
       - name: Deploy
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        uses: crazy-max/ghaction-github-pages@v1.5.0
+        uses: crazy-max/ghaction-github-pages@v1.5.1
         with:
           target_branch: gh-pages
           build_dir: public

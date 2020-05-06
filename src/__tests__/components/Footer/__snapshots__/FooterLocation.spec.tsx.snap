@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FooterLocation correctly 1`] = `
+<div
+  className="col"
+>
+  <i
+    className="fa fa-map-marker-alt fa-2x"
+  />
+  <p>
+    business-card-contact-city
+  </p>
+</div>
+`;

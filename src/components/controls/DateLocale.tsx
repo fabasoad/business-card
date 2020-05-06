@@ -7,6 +7,7 @@ import { AppState } from '../../store/configureStore'
 import DigitConverter from '../../scripts/DigitConverter'
 
 interface DateProps {
+  className?: string
   converter?: DigitConverter
   month?: number
   year: number
@@ -22,7 +23,7 @@ export function DateLocale(props: Props) {
     : (props.month ? t(`business-card-month-${props.month}`) + ' ' : '') + props.year
 
   return (
-    <div>{date}</div>
+    <div className={props.className || ''}>{date}</div>
   )
 }
 

@@ -42,8 +42,9 @@ new Array<DateLocaleFixture>({
     const wrapper: ShallowWrapper = shallow(
       <DateLocale
         converter={{
+          _convert: null,
           toDoubleByte: toDoubleByteSpy,
-          toSingleByte: jest.fn()
+          toSingleByte: null
         }}
         locale={{
           code: f.locale,
@@ -82,8 +83,9 @@ new Array<DateLocaleFixture>({
     const wrapper: ShallowWrapper = shallow(
       <DateLocale
         converter={{
+          _convert: null,
           toDoubleByte: toDoubleByteSpy,
-          toSingleByte: jest.fn()
+          toSingleByte: null
         }}
         locale={{
           code: f.locale,

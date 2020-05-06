@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FooterInfo correctly 1`] = `
+<div
+  className="social d-flex justify-content-center"
+>
+  <ul
+    className="icon-list"
+  >
+    <li>
+      <img
+        alt="Made by fabasoad"
+        src="https://img.shields.io/static/v1?label=made%20by&message=fabasoad&color=2c3e50&style=for-the-badge&logo=github"
+      />
+    </li>
+    <li>
+      <a
+        href="https://en.cryptobadges.io/donate/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH"
+        target="_blank"
+      >
+        <img
+          alt="Donate with Bitcoin"
+          src="https://en.cryptobadges.io/badge/micro/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH"
+        />
+      </a>
+    </li>
+    <li>
+      <Badge
+        pill={true}
+        variant="light"
+      >
+        business-card-version
+      </Badge>
+    </li>
+  </ul>
+</div>
+`;

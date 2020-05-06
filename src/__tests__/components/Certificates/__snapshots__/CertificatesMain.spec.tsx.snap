@@ -17,79 +17,60 @@ exports[`should render CertificatesMain correctly 1`] = `
     className="row justify-content-center"
   >
     <CertificateItem
+      i18nTitleKey="business-card-certificate-1"
       id="MWE43H8YDS"
-      issueDate={
-        Object {
-          "month": 5,
-          "year": 2015,
-        }
-      }
+      issueDate={2015-05-01T00:00:00.000Z}
       issuer={
         Object {
-          "img": "test-file-stub",
-          "name": "Coursera",
+          "img": "test-img-coursera",
+          "name": "test-name-coursera",
         }
       }
+      key="MWE43H8YDS"
       technology={
         Object {
-          "img": "test-img-1",
-          "name": "test-name-1",
+          "img": "test-img-python",
+          "name": "test-name-python",
         }
-      }
-      title={
-        <div>
-          Programming for everybody (Python)
-          <div>
-             
-          </div>
-        </div>
       }
       url="https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
     />
     <CertificateItem
+      i18nTitleKey="business-card-certificate-2"
       id="W5AB2PBZQNPY"
-      issueDate={
-        Object {
-          "month": 3,
-          "year": 2018,
-        }
-      }
+      issueDate={2018-03-01T00:00:00.000Z}
       issuer={
         Object {
-          "img": "test-file-stub",
-          "name": "Coursera",
+          "img": "test-img-coursera",
+          "name": "test-name-coursera",
         }
       }
+      key="W5AB2PBZQNPY"
       technology={
         Object {
-          "img": "test-img-1",
-          "name": "test-name-1",
+          "img": "test-img-java",
+          "name": "test-name-java",
         }
       }
-      title="Parallel, Concurrent, and Distributed Programming in Java Specialization"
       url="https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
     />
     <CertificateItem
+      i18nTitleKey="business-card-certificate-3"
       id="UC-JGDVYKAQ"
-      issueDate={
-        Object {
-          "month": 10,
-          "year": 2019,
-        }
-      }
+      issueDate={2019-10-01T00:00:00.000Z}
       issuer={
         Object {
-          "img": "test-file-stub",
-          "name": "Udemy",
+          "img": "test-img-udemy",
+          "name": "test-name-udemy",
         }
       }
+      key="UC-JGDVYKAQ"
       technology={
         Object {
-          "img": "test-img-1",
-          "name": "test-name-1",
+          "img": "test-img-react",
+          "name": "test-name-react",
         }
       }
-      title="The Complete React Developer Course (w/ Hooks and Redux)"
       url="http://ude.my/UC-JGDVYKAQ"
     />
   </div>

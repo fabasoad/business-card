@@ -3,15 +3,15 @@ import TechnologyProviderDefault from './TechnologyProviderDefault'
 
 export default class TechnologyStorage {
 
-  technologyProvider: TechnologyProvider
+  provider: TechnologyProvider
 
-  constructor(technologyProvider: TechnologyProvider = TechnologyProviderDefault) {
-    this.technologyProvider = technologyProvider
+  constructor(provider: TechnologyProvider = TechnologyProviderDefault) {
+    this.provider = provider
   }
 
   findBySkill(isSkill: boolean): Array<Technology> {
     const result: Array<Technology> = new Array<Technology>()
-    for (const technology of this.technologyProvider.items.values()) {
+    for (const technology of this.provider.items.values()) {
       if (technology.isSkill === isSkill) {
         result.push(technology)
       }
@@ -20,8 +20,8 @@ export default class TechnologyStorage {
   }
 
   findByName(name: string): Technology {
-    return this.technologyProvider.items.has(name)
-      ? this.technologyProvider.items.get(name)
+    return this.provider.items.has(name)
+      ? this.provider.items.get(name)
       : { name }
   }
 }

@@ -35,10 +35,15 @@ exports[`should render CertificateItem correctly 1`] = `
       thumbnail={false}
     />
     <strong
-      className="mr-auto"
+      className="mr-2"
     >
       test-issuer-name
     </strong>
+    <Connect(DateLocale)
+      className="mr-auto"
+      month={1}
+      year={2020}
+    />
     <small>
       test-id
     </small>
@@ -59,18 +64,8 @@ exports[`should render CertificateItem correctly 1`] = `
       rel="noopener noreferrer"
       target="_blank"
     >
-      test-title
+      test-title-key
     </a>
   </ToastBody>
-  <ToastHeader
-    className="float-right"
-    closeButton={false}
-    closeLabel="Close"
-  >
-    <Connect(DateLocale)
-      month={1}
-      year={2020}
-    />
-  </ToastHeader>
 </Toast>
 `;

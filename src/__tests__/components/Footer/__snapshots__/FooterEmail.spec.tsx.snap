@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render FooterEmail correctly 1`] = `
+<div
+  className="col"
+>
+  <i
+    className="fa fa-envelope fa-2x"
+  />
+  <p>
+    fabasoad@gmail.com
+  </p>
+</div>
+`;

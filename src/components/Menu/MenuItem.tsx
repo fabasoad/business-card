@@ -2,7 +2,12 @@ import * as React from 'react'
 import { Nav } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
-export default function MenuItem(props) {
+interface MenuItemProps {
+  name: string
+  setActiveNavLink: React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function MenuItem(props: MenuItemProps) {
   const { t } = useTranslation()
   return (
     <Nav.Link

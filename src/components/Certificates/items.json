@@ -1,0 +1,22 @@
+[{
+  "id": "MWE43H8YDS",
+  "date": "2015-05",
+  "issuer": "coursera",
+  "technology": "python",
+  "i18nTitleKey": "business-card-certificate-1",
+  "url": "https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
+}, {
+  "id": "W5AB2PBZQNPY",
+  "date": "2018-03",
+  "issuer": "coursera",
+  "technology": "java",
+  "i18nTitleKey": "business-card-certificate-2",
+  "url": "https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
+}, {
+  "id": "UC-JGDVYKAQ",
+  "date": "2019-10",
+  "issuer": "udemy",
+  "technology": "react",
+  "i18nTitleKey": "business-card-certificate-3",
+  "url": "http://ude.my/UC-JGDVYKAQ"
+}]

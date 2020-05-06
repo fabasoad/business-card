@@ -24,7 +24,8 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "semi": "off",
-    "linebreak-style": "off"
+    "comma-dangle": "off",
+    "linebreak-style": "off",
+    "semi": "off"
   }
 }

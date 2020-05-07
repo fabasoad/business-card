@@ -10,6 +10,6 @@ const rootReducer = combineReducers({
 export type AppState = ReturnType<typeof rootReducer>
 
 export const store = createStore(
-  rootReducer, 
+  rootReducer,
   applyMiddleware(thunk as ThunkMiddleware<AppState, AppActions>)
 )

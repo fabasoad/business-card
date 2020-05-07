@@ -1,32 +1,35 @@
-import i18n from "i18next"
+import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import Backend from 'i18next-http-backend'
-import LanguageDetector from "i18next-browser-languagedetector"
+import LanguageDetector from 'i18next-browser-languagedetector'
 import { Action } from 'redux'
 import { AppState } from '../configureStore'
 import { ThunkAction } from 'redux-thunk'
 import { Dispatch } from 'react'
 import { AppActions, Locale } from './types'
 import SupportedLocales from '../../scripts/SupportedLocales'
-import i18next from "i18next"
+
+type ThunkLocaleAction = ThunkAction<void, AppState, unknown, Action<string>>
 
 const onLanguageChange = (t) => {
-  document.title = t("business-card-title")
+  document.title = t('business-card-title')
 }
 
 export const loadLocale = (payload: Locale): AppActions => ({
-  type: "LOAD_LOCALE",
+  type: 'LOAD_LOCALE',
   payload
 })
 
-export const startLoadLocale = (): ThunkAction<void, AppState, unknown, Action<string>> =>
+export const startLoadLocale = (): ThunkLocaleAction =>
   async (dispatch: Dispatch<AppActions>) => {
     const params = new URLSearchParams(document.location.search)
     const code: string = params.get('locale') || localStorage.getItem('i18nextLng')
     const currentLocale = SupportedLocales.getOrDefault(code)
     if (document.location.search) {
       window.history.replaceState(
-        {}, document.title, document.location.origin + document.location.pathname + document.location.hash
+        {},
+        document.title,
+        document.location.origin + document.location.pathname + document.location.hash
       )
     }
     await i18n
@@ -51,13 +54,13 @@ export const startLoadLocale = (): ThunkAction<void, AppState, unknown, Action<s
   }
 
 export const setLocale = (payload: Locale): AppActions => ({
-  type: "SET_LOCALE",
+  type: 'SET_LOCALE',
   payload
 })
 
-export const startSetLocale = (locale: Locale): ThunkAction<void, AppState, unknown, Action<string>> =>
+export const startSetLocale = (locale: Locale): ThunkLocaleAction =>
   (dispatch: Dispatch<AppActions>) => {
-    i18next.changeLanguage(locale.code, (err, t) => {
+    i18n.changeLanguage(locale.code, (err, t) => {
       onLanguageChange(t)
       dispatch(
         setLocale({

@@ -19,7 +19,7 @@ test('should render JobDescription without title correctly', () => {
     withTitle={false}
   />)
   expect(wrapper).toMatchSnapshot()
-  expect(tMock).not.toBeCalledWith("business-card-experience-description-title")
+  expect(tMock).not.toBeCalledWith('business-card-experience-description-title')
   for (let i = 0; i < count; i++) {
     expect(wrapper.childAt(i).childAt(0).text()).toBe(`${prefix}-${i + 1}`)
   }
@@ -33,7 +33,7 @@ test('should render JobDescription with title correctly', () => {
     i18nKeyPrefix={prefix}
   />)
   expect(wrapper).toMatchSnapshot()
-  expect(tMock).toBeCalledWith("business-card-experience-description-title")
+  expect(tMock).toBeCalledWith('business-card-experience-description-title')
   for (let i = 1; i < count; i++) {
     expect(wrapper.childAt(i).childAt(0).text()).toBe(`${prefix}-${i}`)
   }

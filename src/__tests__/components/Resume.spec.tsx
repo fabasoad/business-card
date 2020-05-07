@@ -14,7 +14,7 @@ test('should render Resume correctly', () => {
   const wrapper: ShallowWrapper = shallow(<Resume />)
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
-  expect(tMock).toHaveBeenCalledWith("business-card-resume-title")
+  expect(tMock).toHaveBeenCalledWith('business-card-resume-title')
 })
 
 afterEach(() => {

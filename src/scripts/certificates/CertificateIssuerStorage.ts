@@ -1,6 +1,7 @@
 /// <reference path='./CertificateIssuerStorage.d.ts' />
-import imgCoursera from '../../assets/images/certificates/coursera.png'
-import imgUdemy from '../../assets/images/certificates/udemy.png'
+import imgCoursera from '../../assets/images/certificate-issuers/coursera.png'
+import imgOracle from '../../assets/images/certificate-issuers/oracle.png'
+import imgUdemy from '../../assets/images/certificate-issuers/udemy.png'
 import { CertificateIssuerProvider, CertificateIssuer } from './types'
 
 export default class CertificateIssuerStorage {
@@ -10,6 +11,7 @@ export default class CertificateIssuerStorage {
   constructor(provider: CertificateIssuerProvider = {
     items: new Map<string, CertificateIssuer>([
       ['coursera', { name: 'coursera', img: imgCoursera }],
+      ['oracle', { name: 'oracle', img: imgOracle }],
       ['udemy', { name: 'udemy', img: imgUdemy }]
     ])
   }) {

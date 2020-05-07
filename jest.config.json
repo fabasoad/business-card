@@ -11,9 +11,9 @@
   "coverageThreshold": {
     "global": {
       "branches": 64.91,
-      "functions": 71.28,
-      "lines": 83.93,
-      "statements": 83.48
+      "functions": 71.58,
+      "lines": 84,
+      "statements": 83.55
     }
   },
   "moduleFileExtensions": ["ts", "tsx", "js"],

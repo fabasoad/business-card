@@ -15,28 +15,28 @@ beforeAll(() => {
 })
 
 test('should render CertificatesMain correctly', () => {
-  const certificateIssuerStorageFindByNameSpy = jest.fn(k => ({ name: `test-name-${k}`, img: `test-img-${k}` }))
-  const certificateIssuerStorage = new CertificateIssuerStorage({ items: new Map<string, CertificateIssuer>() })
-  certificateIssuerStorage.findByName = certificateIssuerStorageFindByNameSpy
+  const cisFindByNameSpy = jest.fn((k) => ({ name: `test-name-${k}`, img: `test-img-${k}` }))
+  const cis = new CertificateIssuerStorage({ items: new Map<string, CertificateIssuer>() })
+  cis.findByName = cisFindByNameSpy
 
-  const technologyStorageFindByNameSpy = jest.fn(k => ({ name: `test-name-${k}`, img: `test-img-${k}` }))
-  const technologyStorage = new TechnologyStorage({ items: new Map<string, Technology>() })
-  technologyStorage.findByName = technologyStorageFindByNameSpy
+  const tsFindByNameSpy = jest.fn((k) => ({ name: `test-name-${k}`, img: `test-img-${k}` }))
+  const ts = new TechnologyStorage({ items: new Map<string, Technology>() })
+  ts.findByName = tsFindByNameSpy
 
   const wrapper: ShallowWrapper = shallow(<CertificatesMain
-    certificateIssuerStorage={certificateIssuerStorage}
-    technologyStorage={technologyStorage}
+    certificateIssuerStorage={cis}
+    technologyStorage={ts}
   />)
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith('business-card-certificates-title')
-  expect(certificateIssuerStorageFindByNameSpy).toHaveBeenCalledTimes(3)
-  new Array<string>('coursera', 'udemy').forEach(t =>
-    expect(certificateIssuerStorageFindByNameSpy).toHaveBeenCalledWith(t)
+  expect(cisFindByNameSpy).toHaveBeenCalledTimes(4)
+  new Array<string>('coursera', 'oracle', 'udemy').forEach((t) =>
+    expect(cisFindByNameSpy).toHaveBeenCalledWith(t)
   )
-  expect(technologyStorageFindByNameSpy).toHaveBeenCalledTimes(3)
-  new Array<string>('python', 'java', 'react').forEach(t =>
-    expect(technologyStorageFindByNameSpy).toHaveBeenCalledWith(t)
+  expect(tsFindByNameSpy).toHaveBeenCalledTimes(4)
+  new Array<string>('python', 'java', 'react').forEach((t) =>
+    expect(tsFindByNameSpy).toHaveBeenCalledWith(t)
   )
 })
 

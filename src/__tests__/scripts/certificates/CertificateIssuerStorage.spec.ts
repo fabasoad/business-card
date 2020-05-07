@@ -1,6 +1,7 @@
-import CertificateIssuerStorage from '../../../scripts/certificates/CertificateIssuerStorage'
+import CertificateIssuerStorage
+  from '../../../scripts/certificates/CertificateIssuerStorage'
 
-new Array<string>('coursera', 'udemy').forEach(i =>
+new Array<string>('coursera', 'udemy').forEach((i) =>
   test(`should find ${i} successfully`, () => {
     const storage = new CertificateIssuerStorage()
     const item = storage.findByName(i)

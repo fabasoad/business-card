@@ -14,7 +14,9 @@ beforeAll(() => {
 
 test('should render Skills correctly', () => {
   const findBySkillSpy: () => Array<Technology> = jest.fn(
-    () => new Array<number>(1, 2).map(n => ({ name: `name-${n}`, img: `img-${n}`, isSkill: true }))
+    () => new Array<number>(1, 2).map(
+      (n) => ({ name: `name-${n}`, img: `img-${n}`, isSkill: true })
+    )
   )
   const technologyStorage = new TechnologyStorage(null)
   technologyStorage.findBySkill = findBySkillSpy
@@ -23,7 +25,7 @@ test('should render Skills correctly', () => {
   )
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
-  expect(tMock).toHaveBeenCalledWith("business-card-skills-title")
+  expect(tMock).toHaveBeenCalledWith('business-card-skills-title')
   expect(findBySkillSpy).toHaveBeenCalledTimes(1)
   expect(findBySkillSpy).toHaveBeenCalledWith(true)
 })

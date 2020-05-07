@@ -7,14 +7,14 @@ interface DigitConverterFixture {
 }
 
 new Array<DigitConverterFixture>({
-  convert: c => c.toSingleByte("２０１９"),
+  convert: (c) => c.toSingleByte('２０１９'),
   expected: '2019',
   title: 'single'
 }, {
-  convert: c => c.toDoubleByte("2019"),
+  convert: (c) => c.toDoubleByte('2019'),
   expected: '２０１９',
   title: 'double'
-}).forEach(f =>
+}).forEach((f) =>
   test(`should convert to ${f.title} byte correctly`, () =>
     expect(f.convert(new DigitConverter())).toBe(f.expected)
   )

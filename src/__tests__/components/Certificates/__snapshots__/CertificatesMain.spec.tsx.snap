@@ -14,65 +14,88 @@ exports[`should render CertificatesMain correctly 1`] = `
     <hr />
   </div>
   <div
-    className="row justify-content-center"
+    className="container"
   >
-    <CertificateItem
-      i18nTitleKey="business-card-certificate-1"
-      id="MWE43H8YDS"
-      issueDate={2015-05-01T00:00:00.000Z}
-      issuer={
-        Object {
-          "img": "test-img-coursera",
-          "name": "test-name-coursera",
+    <div
+      className="row justify-content-center"
+    >
+      <CertificateItem
+        i18nTitleKey="business-card-certificate-4"
+        id=""
+        issueDate={2020-05-01T00:00:00.000Z}
+        issuer={
+          Object {
+            "img": "test-img-oracle",
+            "name": "test-name-oracle",
+          }
         }
-      }
-      key="MWE43H8YDS"
-      technology={
-        Object {
-          "img": "test-img-python",
-          "name": "test-name-python",
+        key=""
+        technology={
+          Object {
+            "img": "test-img-java",
+            "name": "test-name-java",
+          }
         }
-      }
-      url="https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
-    />
-    <CertificateItem
-      i18nTitleKey="business-card-certificate-2"
-      id="W5AB2PBZQNPY"
-      issueDate={2018-03-01T00:00:00.000Z}
-      issuer={
-        Object {
-          "img": "test-img-coursera",
-          "name": "test-name-coursera",
+        url="https://www.youracclaim.com/badges/689b9d7e-cae5-4e36-8a1f-c8c34f104249/public_url"
+      />
+      <CertificateItem
+        i18nTitleKey="business-card-certificate-3"
+        id="UC-JGDVYKAQ"
+        issueDate={2019-10-01T00:00:00.000Z}
+        issuer={
+          Object {
+            "img": "test-img-udemy",
+            "name": "test-name-udemy",
+          }
         }
-      }
-      key="W5AB2PBZQNPY"
-      technology={
-        Object {
-          "img": "test-img-java",
-          "name": "test-name-java",
+        key="UC-JGDVYKAQ"
+        technology={
+          Object {
+            "img": "test-img-react",
+            "name": "test-name-react",
+          }
         }
-      }
-      url="https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
-    />
-    <CertificateItem
-      i18nTitleKey="business-card-certificate-3"
-      id="UC-JGDVYKAQ"
-      issueDate={2019-10-01T00:00:00.000Z}
-      issuer={
-        Object {
-          "img": "test-img-udemy",
-          "name": "test-name-udemy",
+        url="http://ude.my/UC-JGDVYKAQ"
+      />
+      <CertificateItem
+        i18nTitleKey="business-card-certificate-2"
+        id="W5AB2PBZQNPY"
+        issueDate={2018-03-01T00:00:00.000Z}
+        issuer={
+          Object {
+            "img": "test-img-coursera",
+            "name": "test-name-coursera",
+          }
         }
-      }
-      key="UC-JGDVYKAQ"
-      technology={
-        Object {
-          "img": "test-img-react",
-          "name": "test-name-react",
+        key="W5AB2PBZQNPY"
+        technology={
+          Object {
+            "img": "test-img-java",
+            "name": "test-name-java",
+          }
         }
-      }
-      url="http://ude.my/UC-JGDVYKAQ"
-    />
+        url="https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
+      />
+      <CertificateItem
+        i18nTitleKey="business-card-certificate-1"
+        id="MWE43H8YDS"
+        issueDate={2015-05-01T00:00:00.000Z}
+        issuer={
+          Object {
+            "img": "test-img-coursera",
+            "name": "test-name-coursera",
+          }
+        }
+        key="MWE43H8YDS"
+        technology={
+          Object {
+            "img": "test-img-python",
+            "name": "test-name-python",
+          }
+        }
+        url="https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
+      />
+    </div>
   </div>
 </div>
 `;

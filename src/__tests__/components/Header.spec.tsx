@@ -19,7 +19,9 @@ test('should render Header correctly', () => {
     'business-card-header-about-me',
     'business-card-header-portfolio'
   ).forEach((n, i) => expect(tMock).toHaveBeenNthCalledWith(i + 1, n))
-  expect(wrapper.find('Trans').childAt(0).text()).toBe('business-card-header-title')
+  expect(
+    wrapper.find('Trans').childAt(0).text()
+  ).toBe('business-card-header-title')
 })
 
 afterEach(() => {

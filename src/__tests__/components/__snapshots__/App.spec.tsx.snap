@@ -7,7 +7,7 @@ exports[`should render App with gb locale correctly 1`] = `
   <BackToTopButton />
   <Header />
   <MenuMain />
-  <Connect(AboutMe) />
+  <Connect(AboutMain) />
   <Resume />
   <Skills
     technologyStorage={
@@ -272,6 +272,10 @@ exports[`should render App with gb locale correctly 1`] = `
             "coursera" => Object {
               "img": "test-file-stub",
               "name": "coursera",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
             },
             "udemy" => Object {
               "img": "test-file-stub",
@@ -546,7 +550,7 @@ exports[`should render App with jp locale correctly 1`] = `
   <BackToTopButton />
   <Header />
   <MenuMain />
-  <Connect(AboutMe) />
+  <Connect(AboutMain) />
   <Resume />
   <Skills
     technologyStorage={
@@ -811,6 +815,10 @@ exports[`should render App with jp locale correctly 1`] = `
             "coursera" => Object {
               "img": "test-file-stub",
               "name": "coursera",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
             },
             "udemy" => Object {
               "img": "test-file-stub",

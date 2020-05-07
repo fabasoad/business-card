@@ -1,12 +1,12 @@
 import * as React from 'react'
 
 const mock = {
-  t: jest.fn((key, options) => key)
+  t: jest.fn((key) => key)
 }
 
 export const useTranslation = () => mock
 
-export function Trans(props) {
+export function Trans() {
   return (
     <div></div>
   )

@@ -19,7 +19,8 @@ export default function CertificateItem(props: CertificateItemProps) {
   return (
     <Toast className="mb-4 mx-2 w-100">
       <Toast.Header closeButton={false}>
-        {props.issuer.img && <Image src={props.issuer.img} className="mr-2" rounded />}
+        {props.issuer.img &&
+          <Image src={props.issuer.img} className="mr-2" rounded />}
         <strong className="mr-2">{props.issuer.name}</strong>
         <DateLocale className="mr-auto" month={props.issueDate.getMonth() + 1} year={props.issueDate.getFullYear()} />
         <small>{props.id}</small>
@@ -28,7 +29,7 @@ export default function CertificateItem(props: CertificateItemProps) {
       <Toast.Body className="text-center">
         <a target="_blank" rel="noopener noreferrer" href={props.url}>
           {t(props.i18nTitleKey)}
-        </a>        
+        </a>
       </Toast.Body>
     </Toast>
   )

@@ -33,12 +33,12 @@ new Array<DateLocaleFixture>({
     expect(tMock).toHaveBeenCalledWith(`business-card-month-${month}`)
     expect(toDoubleByteSpy).not.toHaveBeenCalled()
   }
-}).forEach(f =>
+}).forEach((f) =>
   test(`should render DateLocale with month in ${f.title} locale correctly`, () => {
     const month = 1
     const year = 2019
-    tMock.mockImplementation(k => `${f.locale}-${k}`)
-    const toDoubleByteSpy: jest.Mock<string, string[]> = jest.fn(k => k)
+    tMock.mockImplementation((k) => `${f.locale}-${k}`)
+    const toDoubleByteSpy: jest.Mock<string, string[]> = jest.fn((k) => k)
     const wrapper: ShallowWrapper = shallow(
       <DateLocale
         converter={{
@@ -75,11 +75,11 @@ new Array<DateLocaleFixture>({
     expect(tMock).not.toHaveBeenCalled()
     expect(toDoubleByteSpy).not.toHaveBeenCalled()
   }
-}).forEach(f =>
+}).forEach((f) =>
   test(`should render DateLocale without month in ${f.title} locale correctly`, () => {
     const year = 2019
-    tMock.mockImplementation(k => `${f.locale}-${k}`)
-    const toDoubleByteSpy = jest.fn(k => k)
+    tMock.mockImplementation((k) => `${f.locale}-${k}`)
+    const toDoubleByteSpy = jest.fn((k) => k)
     const wrapper: ShallowWrapper = shallow(
       <DateLocale
         converter={{

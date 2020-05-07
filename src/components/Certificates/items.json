@@ -19,4 +19,11 @@
   "technology": "react",
   "i18nTitleKey": "business-card-certificate-3",
   "url": "http://ude.my/UC-JGDVYKAQ"
+}, {
+  "id": "",
+  "date": "2020-05",
+  "issuer": "oracle",
+  "technology": "java",
+  "i18nTitleKey": "business-card-certificate-4",
+  "url": "https://www.youracclaim.com/badges/689b9d7e-cae5-4e36-8a1f-c8c34f104249/public_url"
 }]

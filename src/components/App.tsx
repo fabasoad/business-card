@@ -2,7 +2,7 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
 
-import AboutMe from './AboutMe'
+import AboutMain from './About/AboutMain'
 import BackToTopButton from './BackToTopButton'
 import CertificatesMain from './Certificates/CertificatesMain'
 import EducationMain from './Education/EducationMain'
@@ -28,7 +28,7 @@ export function App(props: Props) {
       <BackToTopButton />
       <Header />
       <MenuMain />
-      <AboutMe />
+      <AboutMain />
       <Resume />
       <Skills />
       <ExperienceMain />

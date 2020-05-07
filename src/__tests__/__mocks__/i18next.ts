@@ -1,5 +1,5 @@
 const mock = {
-  t: jest.fn((key, options) => key)
+  t: jest.fn((key) => key)
 }
 
 export default mock

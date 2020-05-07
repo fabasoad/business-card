@@ -14,7 +14,7 @@ test('should render FooterLocation correctly', () => {
   const wrapper: ShallowWrapper = shallow(<FooterLocation />)
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
-  expect(tMock).toHaveBeenCalledWith("business-card-contact-city")
+  expect(tMock).toHaveBeenCalledWith('business-card-contact-city')
 })
 
 afterEach(() => {

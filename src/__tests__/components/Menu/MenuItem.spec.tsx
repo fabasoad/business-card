@@ -11,7 +11,7 @@ beforeAll(() => {
 })
 
 test('should render MenuItem correctly', () => {
-  const name = "test-menu-item"
+  const name = 'test-menu-item'
   const wrapper: ShallowWrapper = shallow(<MenuItem
     name={name}
     setActiveNavLink={null}
@@ -22,11 +22,11 @@ test('should render MenuItem correctly', () => {
 })
 
 test('should set active MenuItem correctly', () => {
-  const name = "test-menu-item"
+  const name = 'test-menu-item'
   const setActiveNavLinkSpy = jest.fn()
   const wrapper: ShallowWrapper = shallow(<MenuItem
     name={name}
-    setActiveNavLink={setActiveNavLinkSpy} 
+    setActiveNavLink={setActiveNavLinkSpy}
   />)
   wrapper.find('NavLink').simulate('click')
   expect(setActiveNavLinkSpy).toHaveBeenCalledWith(`#${name}`)

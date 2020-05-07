@@ -11,7 +11,7 @@ beforeEach(() => {
 })
 
 test('should render JobTechnologies correctly', () => {
-  const wrapper = shallow(<JobTechnologies keys={['maven','java']} />)
+  const wrapper = shallow(<JobTechnologies keys={['maven', 'java']} />)
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toBeCalledWith('business-card-experience-technologies-title')
 })

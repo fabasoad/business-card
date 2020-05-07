@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render AboutMe correctly 1`] = `
+exports[`should render AboutMain correctly 1`] = `
 <div
   id="about"
 >
@@ -19,11 +19,16 @@ exports[`should render AboutMe correctly 1`] = `
       className="row d-flex justify-content-center"
     >
       <div
-        className="col-md-12 text-center"
+        className="about-photo col-md-12 d-flex justify-content-center"
       >
         <img
           alt="About me"
-          className="img-thumbnail"
+          className="about-photo--portrait img-thumbnail"
+          src="test-file-stub"
+        />
+        <img
+          alt="Oracle 1Z0-808"
+          className="about-photo--badge"
           src="test-file-stub"
         />
       </div>

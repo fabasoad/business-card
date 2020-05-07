@@ -18,7 +18,7 @@ test('should render JobAchievements correctly', () => {
     i18nKeyPrefix={prefix}
   />)
   expect(wrapper).toMatchSnapshot()
-  expect(tMock).toBeCalledWith("business-card-experience-achievements-title")
+  expect(tMock).toBeCalledWith('business-card-experience-achievements-title')
   for (let i = 1; i < count; i++) {
     expect(tMock).toHaveBeenNthCalledWith(i + 1, `${prefix}-${i}`)
   }

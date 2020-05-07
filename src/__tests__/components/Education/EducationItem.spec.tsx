@@ -18,8 +18,8 @@ test('should render EducationItem correctly', () => {
   />)
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(2)
-  expect(tMock).toHaveBeenCalledWith("business-card-education-university-title")
-  expect(tMock).toHaveBeenCalledWith("business-card-education-university-speciality")
+  expect(tMock).toHaveBeenCalledWith('business-card-education-university-title')
+  expect(tMock).toHaveBeenCalledWith('business-card-education-university-speciality')
 })
 
 afterEach(() => {

@@ -18,7 +18,9 @@ test('should produce all messages on run', () => {
   expect(setInterval).toHaveBeenCalledWith<number[]>(expect.any(Function), 1500)
   expect(clearInterval).toHaveBeenCalledTimes(1)
   expect(consoleLogSpy).toHaveBeenCalledTimes(2)
-  messages.forEach((m, i) => expect(consoleLogSpy).toHaveBeenNthCalledWith<string[]>(i + 1, m))
+  messages.forEach((m, i) =>
+    expect(consoleLogSpy).toHaveBeenNthCalledWith<string[]>(i + 1, m)
+  )
 })
 
 test('should build default messages correctly', () => {
@@ -30,7 +32,7 @@ test('should build default messages correctly', () => {
     'Liberapay',
     'IssueHunt',
     'BTC'
-  ).forEach(m => expect(messages[messages.length - 1]).toContain<string>(m))
+  ).forEach((m) => expect(messages[messages.length - 1]).toContain<string>(m))
 })
 
 afterEach(() => {

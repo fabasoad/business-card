@@ -16,6 +16,8 @@ test('should render LanguageItem correctly', () => {
   expect(tMock).toHaveBeenCalledTimes(3)
   expect(tMock).toHaveBeenNthCalledWith(1, 'business-card-languages-title')
   new Array<number>(2, 3).forEach(
-    n => expect(tMock).toHaveBeenNthCalledWith(n, 'business-card-languages-native')
+    (n) => expect(tMock).toHaveBeenNthCalledWith(
+      n, 'business-card-languages-native'
+    )
   )
 })

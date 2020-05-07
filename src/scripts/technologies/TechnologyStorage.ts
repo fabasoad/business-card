@@ -2,7 +2,6 @@ import { Technology, TechnologyProvider } from './types'
 import TechnologyProviderDefault from './TechnologyProviderDefault'
 
 export default class TechnologyStorage {
-
   provider: TechnologyProvider
 
   constructor(provider: TechnologyProvider = TechnologyProviderDefault) {

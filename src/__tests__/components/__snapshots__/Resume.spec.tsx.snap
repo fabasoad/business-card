@@ -29,6 +29,7 @@ exports[`should render Resume correctly 1`] = `
     <a
       className="btn btn-primary btn-lg"
       href="https://drive.google.com/open?id=1RPKIdkOwcD_A4P0ZWQGrlFt5-abcN6-3CBJ7WvM8mc8"
+      rel="noopener noreferrer"
       target="_blank"
     >
       <i

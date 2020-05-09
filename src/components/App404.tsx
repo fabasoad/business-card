@@ -1,15 +1,20 @@
 import * as React from 'react'
+import { useTranslation } from 'react-i18next'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
 import { Locale, AppActions } from '../store/locale/types'
 import { AppState } from '../store/configureStore'
+import BaseConstants from '../scripts/BaseConstants'
 
-interface AppProps {
+interface App404Props {
+  redirectUrl: string
 }
 
-type Props = AppProps & LinkDispatchProps & LinkStateProps
+type Props = App404Props & LinkDispatchProps & LinkStateProps
 
 export function App404(props: Props) {
+  const { t } = useTranslation()
+
   let timer: NodeJS.Timeout
   let counterValue: number = 3
 
@@ -22,7 +27,7 @@ export function App404(props: Props) {
     timer = setInterval(() => {
       if (counterValue == 1) {
         clearInterval(timer)
-        window.location.replace('/')
+        window.location.replace(props.redirectUrl)
       } else {
         counterValue--
         setCounter(counterValue)
@@ -34,11 +39,19 @@ export function App404(props: Props) {
 
   return (
     <div className={`font-regular font-${props.locale.code === 'jp' ? '' : 'non-'}jp`}>
-      <p>This page does not exist.</p>
-      <p><span className="blinker-prefix"></span> on a screen to continue<span style={isRedirectingStyle(false)} className="blinker">_</span></p>
-      <p style={isRedirectingStyle(true)}>Redirecting...<span>{counter}</span><span className="blinker">_</span></p>
+      <p>{t('business-card-404-text-1')}</p>
+      <p>
+        <span className="blinker-prefix"></span>
+        &nbsp;{t('business-card-404-text-2')}<span style={isRedirectingStyle(true)}>.</span>
+        <span style={isRedirectingStyle(false)} className="blinker">_</span>
+      </p>
+      <p style={isRedirectingStyle(true)}>{t('business-card-404-text-3')}<span>{counter}</span><span className="blinker">_</span></p>
     </div>
   )
+}
+
+App404.defaultProps = {
+  redirectUrl: BaseConstants.BASE_URL
 }
 
 interface LinkStateProps {
@@ -50,14 +63,14 @@ interface LinkDispatchProps {
 
 const mapStateToProps = (
   state: AppState,
-  ownProps: AppProps
+  ownProps: App404Props
 ): LinkStateProps => ({
   locale: state.locale
 })
 
 const mapDispatchToProps = (
   dispatch: ThunkDispatch<any, any, AppActions>,
-  ownProps: AppProps
+  ownProps: App404Props
 ): LinkDispatchProps => ({
 })
 

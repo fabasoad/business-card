@@ -5,7 +5,7 @@ export default function FooterExtra() {
   return (
     <div className="d-flex justify-content-center">
       <Iframe
-        url={"https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=fabasoad&mnOn=true&stat=3&imageNum=1&rankOn=false&projectsOn=false&special=false&link=1&memberId=1103124"}
+        url={'https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=fabasoad&mnOn=true&stat=3&imageNum=1&rankOn=false&projectsOn=false&special=false&link=1&memberId=1103124'}
         frameBorder={0}
         name="di"
         scrolling="no"

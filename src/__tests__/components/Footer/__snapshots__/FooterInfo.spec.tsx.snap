@@ -16,6 +16,7 @@ exports[`should render FooterInfo correctly 1`] = `
     <li>
       <a
         href="https://en.cryptobadges.io/donate/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <img

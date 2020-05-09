@@ -13,7 +13,7 @@ export default function ExperienceMain() {
     <div id="experience" className="light-component">
       <div className="container">
         <div className="section-title text-center">
-          <h2>{t("business-card-experience-title")}</h2>
+          <h2>{t('business-card-experience-title')}</h2>
           <hr />
         </div>
         <ul className="timeline">
@@ -27,7 +27,7 @@ export default function ExperienceMain() {
             <div className="timeline-panel">
               <JobTitle
                 company="Bitcoin.com"
-                title={t("business-card-experience-job-bitcoin-com-2-title")}
+                title={t('business-card-experience-job-bitcoin-com-2-title')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -39,7 +39,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-achievements"
                 />
                 <JobTechnologies
-                  keys={['travis','gitHubActions','bitrise','java','kafka','spring']}
+                  keys={['travis', 'gitHubActions', 'bitrise', 'java', 'kafka', 'spring', 'intellijIdea']}
                 />
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function ExperienceMain() {
             <div className="timeline-panel">
               <JobTitle
                 company="Bitcoin.com"
-                title={t("business-card-experience-job-bitcoin-com-1-title")}
+                title={t('business-card-experience-job-bitcoin-com-1-title')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -67,9 +67,9 @@ export default function ExperienceMain() {
                 />
                 <JobTechnologies
                   keys={[
-                    'maven','java','tomcat','lombok','junit','python',
-                    'javaScript','jQuery','bootstrap','mariaDb','redis',
-                    'git','intellijIdea','vsCode','jira'
+                    'maven', 'java', 'tomcat', 'lombok', 'junit', 'python',
+                    'javaScript', 'jQuery', 'bootstrap', 'mariaDb', 'redis',
+                    'git', 'intellijIdea', 'vsCode', 'jira'
                   ]}
                 />
               </div>
@@ -85,7 +85,7 @@ export default function ExperienceMain() {
             <div className="timeline-panel">
               <JobTitle
                 company="Lohika"
-                title={t("business-card-experience-job-lohika-3-title")}
+                title={t('business-card-experience-job-lohika-3-title')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -97,7 +97,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-lohika-3-prysm-achievements"
                 />
                 <JobTechnologies
-                  keys={['csharp','xamarin','prism','git','jira','teamCity']}
+                  keys={['csharp', 'xamarin', 'prism', 'git', 'jira', 'teamCity', 'visualStudio']}
                 />
                 <p>&nbsp;</p>
                 <JobDescription
@@ -111,9 +111,9 @@ export default function ExperienceMain() {
                 />
                 <JobTechnologies
                   keys={[
-                    'csharp','dotNetCore','kubernetes','helm','docker',
-                    'elasticsearch','jenkins','kibana','fluentBit','fluentD',
-                    'git','gitHub','prometheus','visualStudio','grafana'
+                    'csharp', 'dotNetCore', 'kubernetes', 'helm', 'docker',
+                    'elasticsearch', 'jenkins', 'kibana', 'fluentBit', 'fluentD',
+                    'git', 'gitHub', 'prometheus', 'visualStudio', 'grafana'
                   ]}
                 />
                 <p>&nbsp;</p>
@@ -139,7 +139,7 @@ export default function ExperienceMain() {
             <div className="timeline-panel">
               <JobTitle
                 company="Lohika"
-                title={t("business-card-experience-job-lohika-2-title")}
+                title={t('business-card-experience-job-lohika-2-title')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -152,8 +152,8 @@ export default function ExperienceMain() {
                 />
                 <JobTechnologies
                   keys={[
-                    'java','spring','maven','javaScript','angular','mssql',
-                    'oracle','svn','git','intellijIdea','hpeAlm','jenkins'
+                    'java', 'spring', 'maven', 'javaScript', 'angular', 'mssql',
+                    'oracle', 'svn', 'git', 'intellijIdea', 'hpeAlm', 'jenkins'
                   ]}
                 />
               </div>
@@ -169,7 +169,7 @@ export default function ExperienceMain() {
             <div className="timeline-panel">
               <JobTitle
                 company="Lohika"
-                title={t("business-card-experience-job-lohika-1-title")}
+                title={t('business-card-experience-job-lohika-1-title')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -181,7 +181,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-lohika-1-achievements"
                 />
                 <JobTechnologies
-                  keys={['csharp','windowsForms','svn','visualStudio','hpeAlm','jenkins']}
+                  keys={['csharp', 'windowsForms', 'svn', 'visualStudio', 'hpeAlm', 'jenkins']}
                 />
               </div>
             </div>
@@ -196,7 +196,7 @@ export default function ExperienceMain() {
             <div className="timeline-panel">
               <JobTitle
                 company="ARKA - Finance, Software, Services"
-                title={t("business-card-experience-job-arka-title")}
+                title={t('business-card-experience-job-arka-title')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -209,8 +209,8 @@ export default function ExperienceMain() {
                 />
                 <JobTechnologies
                   keys={[
-                    'php','codeigniter','vBulletin','oxidEShop','smarty','javaScript','jQuery',
-                    'csharp','silverlight','mysql','svn','visualStudio','netBeans','redmine'
+                    'php', 'codeigniter', 'vBulletin', 'oxidEShop', 'smarty', 'javaScript', 'jQuery',
+                    'csharp', 'silverlight', 'mysql', 'svn', 'visualStudio', 'netBeans', 'redmine'
                   ]}
                 />
               </div>

@@ -55,7 +55,7 @@ import imgWebpack from '../../assets/images/technologies/webpack.png'
 import imgWindowsForms from '../../assets/images/technologies/windowsForms.png'
 import imgXamarin from '../../assets/images/technologies/xamarin.png'
 
-import { Technology, TechnologyProvider } from "./types"
+import { Technology, TechnologyProvider } from './types'
 
 const TechnologyProviderDefault: TechnologyProvider = {
   items: new Array<Technology>(

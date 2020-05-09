@@ -1,5 +1,4 @@
 export default class DigitConverter {
-
   toDoubleByte(num: string): string {
     return this._convert(num, /[0-9]/g)
   }

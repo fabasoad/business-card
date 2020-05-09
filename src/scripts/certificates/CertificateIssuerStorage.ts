@@ -5,7 +5,6 @@ import imgUdemy from '../../assets/images/certificate-issuers/udemy.png'
 import { CertificateIssuerProvider, CertificateIssuer } from './types'
 
 export default class CertificateIssuerStorage {
-
   provider: CertificateIssuerProvider
 
   constructor(provider: CertificateIssuerProvider = {

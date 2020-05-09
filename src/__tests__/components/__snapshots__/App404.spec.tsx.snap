@@ -5,13 +5,23 @@ exports[`redirecting should work correctly 1`] = `
   className="font-regular font-non-jp"
 >
   <p>
-    This page does not exist.
+    business-card-404-text-1
   </p>
   <p>
     <span
       className="blinker-prefix"
     />
-     on a screen to continue
+     
+    business-card-404-text-2
+    <span
+      style={
+        Object {
+          "display": "inline",
+        }
+      }
+    >
+      .
+    </span>
     <span
       className="blinker"
       style={
@@ -30,7 +40,7 @@ exports[`redirecting should work correctly 1`] = `
       }
     }
   >
-    Redirecting...
+    business-card-404-text-3
     <span>
       3
     </span>
@@ -48,13 +58,23 @@ exports[`should render App404 with gb locale correctly 1`] = `
   className="font-regular font-non-jp"
 >
   <p>
-    This page does not exist.
+    business-card-404-text-1
   </p>
   <p>
     <span
       className="blinker-prefix"
     />
-     on a screen to continue
+     
+    business-card-404-text-2
+    <span
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      .
+    </span>
     <span
       className="blinker"
       style={
@@ -73,7 +93,7 @@ exports[`should render App404 with gb locale correctly 1`] = `
       }
     }
   >
-    Redirecting...
+    business-card-404-text-3
     <span>
       3
     </span>
@@ -91,13 +111,23 @@ exports[`should render App404 with jp locale correctly 1`] = `
   className="font-regular font-jp"
 >
   <p>
-    This page does not exist.
+    business-card-404-text-1
   </p>
   <p>
     <span
       className="blinker-prefix"
     />
-     on a screen to continue
+     
+    business-card-404-text-2
+    <span
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      .
+    </span>
     <span
       className="blinker"
       style={
@@ -116,7 +146,7 @@ exports[`should render App404 with jp locale correctly 1`] = `
       }
     }
   >
-    Redirecting...
+    business-card-404-text-3
     <span>
       3
     </span>

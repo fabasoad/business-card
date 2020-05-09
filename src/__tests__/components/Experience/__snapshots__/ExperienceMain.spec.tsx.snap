@@ -39,6 +39,7 @@ exports[`should render ExperienceMain correctly 1`] = `
             <JobDescription
               count={1}
               i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-description"
+              withTitle={true}
             />
             <JobAchievements
               count={2}
@@ -53,6 +54,7 @@ exports[`should render ExperienceMain correctly 1`] = `
                   "java",
                   "kafka",
                   "spring",
+                  "intellijIdea",
                 ]
               }
             />
@@ -81,6 +83,7 @@ exports[`should render ExperienceMain correctly 1`] = `
             <JobDescription
               count={1}
               i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-description"
+              withTitle={true}
             />
             <JobAchievements
               count={1}
@@ -130,6 +133,7 @@ exports[`should render ExperienceMain correctly 1`] = `
             <JobDescription
               count={2}
               i18nKeyPrefix="business-card-experience-job-lohika-3-prysm-description"
+              withTitle={true}
             />
             <JobAchievements
               count={2}
@@ -144,6 +148,7 @@ exports[`should render ExperienceMain correctly 1`] = `
                   "git",
                   "jira",
                   "teamCity",
+                  "visualStudio",
                 ]
               }
             />
@@ -217,6 +222,7 @@ exports[`should render ExperienceMain correctly 1`] = `
             <JobDescription
               count={1}
               i18nKeyPrefix="business-card-experience-job-lohika-2-description"
+              withTitle={true}
             />
             <JobAchievements
               count={4}
@@ -263,6 +269,7 @@ exports[`should render ExperienceMain correctly 1`] = `
             <JobDescription
               count={1}
               i18nKeyPrefix="business-card-experience-job-lohika-1-description"
+              withTitle={true}
             />
             <JobAchievements
               count={3}
@@ -305,6 +312,7 @@ exports[`should render ExperienceMain correctly 1`] = `
             <JobDescription
               count={1}
               i18nKeyPrefix="business-card-experience-job-arka-description"
+              withTitle={true}
             />
             <JobAchievements
               count={3}

@@ -1,7 +1,6 @@
-import { Locale } from "../store/locale/types"
+import { Locale } from '../store/locale/types'
 
 export default class SupportedLocales {
-
   static default(): Locale {
     return SupportedLocales._items()[0]
   }
@@ -18,10 +17,10 @@ export default class SupportedLocales {
   }
 
   static getOrDefault(code: string): Locale {
-    return SupportedLocales._items().find(l => l.code === code) || SupportedLocales.default()
+    return SupportedLocales._items().find((l) => l.code === code) || SupportedLocales.default()
   }
 
   static getExceptOf(code: string): Locale[] {
-    return SupportedLocales._items().filter(l => l.code !== code)
+    return SupportedLocales._items().filter((l) => l.code !== code)
   }
 }

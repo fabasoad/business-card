@@ -1,10 +1,14 @@
 import * as React from 'react'
-import LanguageItem from './LanguageItem'
+import LanguageItem, { LanguageItemProps } from './LanguageItem'
 
-export default function LaguageTextItem({ code, text }) {
+export type LanguageTextItemProps = LanguageItemProps & {
+  text: string
+}
+
+export default function LanguageTextItem(props: LanguageTextItemProps) {
   return (
-    <LanguageItem code={code}>
-      <span className="h5 mt-2">{text}</span>
+    <LanguageItem code={props.code}>
+      <span className="h5 mt-2">{props.text}</span>
     </LanguageItem>
   )
 }

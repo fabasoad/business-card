@@ -1,16 +1,28 @@
 {
   "env": {
     "browser": true,
-    "es6": true
+    "es6": true,
+    "node": true
   },
   "extends": [
+    "eslint:recommended",
     "plugin:react/recommended",
     "google"
   ],
   "globals": {
     "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
+    "SharedArrayBuffer": "readonly",
+    "jest": true
   },
+  "overrides": [{
+    "files": [
+      "**/*.spec.ts",
+      "**/*.spec.tsx"
+    ],
+    "env": {
+      "jest": true
+    }
+  }],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -25,12 +37,18 @@
   ],
   "rules": {
     "comma-dangle": "off",
-    "indent": ["error", 2],
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
     "linebreak-style": "off",
     "max-len": ["error", {
       "code": 95,
       "ignoreStrings": true,
+      "ignoreTemplateLiterals": true,
       "ignoreUrls": true
+    }],
+    "new-cap": ["error", {
+      "capIsNew": false
     }],
     "no-array-constructor": "off",
     "no-unused-vars": "off",
@@ -53,5 +71,10 @@
         "markers": ["/"]
       }
     }]
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
   }
 }

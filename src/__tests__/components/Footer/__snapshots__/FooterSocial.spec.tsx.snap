@@ -11,6 +11,7 @@ exports[`should render FooterSocial correctly 1`] = `
       <a
         className="btn"
         href="https://twitter.com/fabasoad"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <i
@@ -22,6 +23,7 @@ exports[`should render FooterSocial correctly 1`] = `
       <a
         className="btn"
         href="https://github.com/fabasoad"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <i
@@ -33,6 +35,7 @@ exports[`should render FooterSocial correctly 1`] = `
       <a
         className="btn"
         href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <i
@@ -44,6 +47,7 @@ exports[`should render FooterSocial correctly 1`] = `
       <a
         className="btn"
         href="https://stackoverflow.com/users/470214/fabasoad"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <i
@@ -55,6 +59,7 @@ exports[`should render FooterSocial correctly 1`] = `
       <a
         className="btn"
         href="https://dev.to/fabasoad"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <i

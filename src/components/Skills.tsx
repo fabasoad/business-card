@@ -14,13 +14,13 @@ export default function Skills(props: SkillsProps) {
   return (
     <div id="skills" className="light-component">
       <div className="section-title text-center center">
-        <h2>{t("business-card-skills-title")}</h2>
+        <h2>{t('business-card-skills-title')}</h2>
         <hr />
       </div>
       <div className="container">
         <div className="row">
           <div className="skills-list col text-center">
-            {props.technologyStorage.findBySkill(true).map(t => <img key={uuidv4()} className="m-4" src={t.img} alt={t.name} />)}
+            {props.technologyStorage.findBySkill(true).map((t) => <img key={uuidv4()} className="m-4" src={t.img} alt={t.name} />)}
           </div>
         </div>
       </div>

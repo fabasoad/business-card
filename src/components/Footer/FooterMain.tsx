@@ -11,15 +11,15 @@ export default function FooterMain() {
   return (
     <div className="footer dark-component">
       <div id="contact" className="container text-center">
-          <div className="section-title center">
-            <h2>{t("business-card-contact-title")}</h2>
-            <hr />
-          </div>
-          <FooterContacts />
-          <FooterSocial />
-          <FooterInfo />
-          <FooterExtra />
+        <div className="section-title center">
+          <h2>{t('business-card-contact-title')}</h2>
+          <hr />
         </div>
+        <FooterContacts />
+        <FooterSocial />
+        <FooterInfo />
+        <FooterExtra />
+      </div>
     </div>
   )
 }

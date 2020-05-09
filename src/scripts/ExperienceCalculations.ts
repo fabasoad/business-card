@@ -6,7 +6,6 @@ export interface IExperienceCalculations {
 }
 
 export default class ExperienceCalculations implements IExperienceCalculations {
-
   totalHumanize(code: string): string {
     return this._calculate('2010-03-01', code)
   }

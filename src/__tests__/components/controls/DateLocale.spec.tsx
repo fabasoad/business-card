@@ -98,7 +98,3 @@ new Array<DateLocaleFixture>({
     f.expect(toDoubleByteSpy, year)
   })
 )
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

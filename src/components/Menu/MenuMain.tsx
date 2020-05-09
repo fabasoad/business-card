@@ -11,16 +11,16 @@ export default function MenuMain() {
   const [expanded, setExpanded] = React.useState<boolean>(false)
   const [activeNavLink, setActiveNavLink] = React.useState<string>(document.location.hash)
 
-  document.querySelectorAll('*').forEach(el => {
-    el.addEventListener('click', e => {
-      const findParent = (element: HTMLElement, elementToCompare: HTMLElement): HTMLElement => {
-        if (element === elementToCompare) {
-          return element
+  document.querySelectorAll('*').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      const findParent = (el1: HTMLElement, el2: HTMLElement): HTMLElement => {
+        if (el1 === el2) {
+          return el1
         }
-        if (element.parentElement == null) {
+        if (el1.parentElement == null) {
           return null
         }
-        return findParent(element.parentElement, elementToCompare)
+        return findParent(el1.parentElement, el2)
       }
       const element = e.target as HTMLElement
       const isNotNav = element.getAttribute('id') != 'nav'

@@ -20,7 +20,3 @@ test('should render FooterInfo correctly', () => {
     { version }
   )
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

@@ -1,10 +1,13 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/app.tsx',
+  entry: {
+    app: './src/app.tsx',
+    app404: './src/app404.tsx'
+  },
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [{

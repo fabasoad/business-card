@@ -31,7 +31,3 @@ new Array<number>(300, 301).forEach((v) => {
     expect(wrapper).toMatchSnapshot()
   })
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

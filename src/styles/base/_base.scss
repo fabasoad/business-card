@@ -30,3 +30,35 @@
   font-family: 'JetBrainsMono-Regular';
   src: url(fonts/JetBrains/JetBrainsMono-Regular.woff);
 }
+.font-bold {
+	&.font-jp {
+		font-family: 'HackGen-Bold', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+	&.font-non-jp {
+		font-family: 'JetBrainsMono-Bold', Helvetica, Arial, sans-serif;
+	}
+}
+.font-extra-bold {
+	&.font-jp {
+		font-family: 'HackGen-ExtraBold', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+	&.font-non-jp {
+		font-family: 'JetBrainsMono-ExtraBold', Helvetica, Arial, sans-serif;
+	}
+}
+.font-medium {
+	&.font-jp {
+		font-family: 'HackGen-Medium', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+	&.font-non-jp {
+		font-family: 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+}
+.font-regular {
+	&.font-jp {
+		font-family: 'HackGen-Regular', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+	}
+	&.font-non-jp {
+		font-family: 'JetBrainsMono-Regular', Helvetica, Arial, sans-serif;
+	}
+}

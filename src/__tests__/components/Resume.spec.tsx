@@ -16,7 +16,3 @@ test('should render Resume correctly', () => {
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith('business-card-resume-title')
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

@@ -16,7 +16,3 @@ test('should render FooterMain correctly', () => {
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith('business-card-contact-title')
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

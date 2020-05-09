@@ -31,7 +31,3 @@ test('should set active MenuItem correctly', () => {
   wrapper.find('NavLink').simulate('click')
   expect(setActiveNavLinkSpy).toHaveBeenCalledWith(`#${name}`)
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

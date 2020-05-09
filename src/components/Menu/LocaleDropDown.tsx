@@ -11,40 +11,38 @@ import { AppState } from '../../store/configureStore'
 import { startSetLocale } from '../../store/locale/actions'
 
 interface LocaleDropDownProps {
-}
-
-interface LocaleDropDownState {  
+  getLocalesExceptOf: (code: string) => Locale[]
 }
 
 type Props = LocaleDropDownProps & LinkDispatchProps & LinkStateProps
 
-export class LocaleDropDown extends React.Component<Props, LocaleDropDownState> {
+export function LocaleDropDown(props: Props) {
+  const handleClick = (locale: Locale): void => {
+    props.startSetLocale(locale)
+  }
+  const FlagIcon = FlagIconFactory(React, { 'useCssModules': false })
+  return (
+    <Dropdown>
+      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
+        <FlagIcon code={props.locale.code} />
+        {props.locale.title}
+      </Dropdown.Toggle>
+      <Dropdown.Menu>
+        {props.getLocalesExceptOf(props.locale.code).map((l) => {
+          return (
+            <Dropdown.Item onSelect={() => handleClick(l)} bsPrefix="nav-link" eventKey={l.code} key={l.code}>
+              <FlagIcon code={l.code} />
+              {l.title}
+            </Dropdown.Item>
+          )
+        })}
+      </Dropdown.Menu>
+    </Dropdown>
+  )
+}
 
-  handleClick(locale: Locale) {
-    this.props.startSetLocale(locale)
-  }
-  
-  render() {
-    const FlagIcon = FlagIconFactory(React, { 'useCssModules': false })
-    return (
-      <Dropdown>
-        <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
-          <FlagIcon code={this.props.locale.code} />
-          {this.props.locale.title}
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-          {SupportedLocales.getExceptOf(this.props.locale.code).map(l => {
-            return (
-              <Dropdown.Item onSelect={() => this.handleClick(l)} bsPrefix="nav-link" eventKey={l.code} key={l.code}>
-                <FlagIcon code={l.code} />
-                {l.title}
-              </Dropdown.Item>
-            )
-          })}
-        </Dropdown.Menu>
-      </Dropdown>
-    )
-  }
+LocaleDropDown.defaultProps = {
+  getLocalesExceptOf: SupportedLocales.getExceptOf
 }
 
 interface LinkStateProps {

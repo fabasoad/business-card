@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`redirecting should work correctly 1`] = `
+<div
+  className="font-regular font-non-jp"
+>
+  <p>
+    This page does not exist.
+  </p>
+  <p>
+    <span
+      className="blinker-prefix"
+    />
+     on a screen to continue
+    <span
+      className="blinker"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      _
+    </span>
+  </p>
+  <p
+    style={
+      Object {
+        "display": "inline",
+      }
+    }
+  >
+    Redirecting...
+    <span>
+      3
+    </span>
+    <span
+      className="blinker"
+    >
+      _
+    </span>
+  </p>
+</div>
+`;
+
+exports[`should render App404 with gb locale correctly 1`] = `
+<div
+  className="font-regular font-non-jp"
+>
+  <p>
+    This page does not exist.
+  </p>
+  <p>
+    <span
+      className="blinker-prefix"
+    />
+     on a screen to continue
+    <span
+      className="blinker"
+      style={
+        Object {
+          "display": "inline",
+        }
+      }
+    >
+      _
+    </span>
+  </p>
+  <p
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    Redirecting...
+    <span>
+      3
+    </span>
+    <span
+      className="blinker"
+    >
+      _
+    </span>
+  </p>
+</div>
+`;
+
+exports[`should render App404 with jp locale correctly 1`] = `
+<div
+  className="font-regular font-jp"
+>
+  <p>
+    This page does not exist.
+  </p>
+  <p>
+    <span
+      className="blinker-prefix"
+    />
+     on a screen to continue
+    <span
+      className="blinker"
+      style={
+        Object {
+          "display": "inline",
+        }
+      }
+    >
+      _
+    </span>
+  </p>
+  <p
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    Redirecting...
+    <span>
+      3
+    </span>
+    <span
+      className="blinker"
+    >
+      _
+    </span>
+  </p>
+</div>
+`;

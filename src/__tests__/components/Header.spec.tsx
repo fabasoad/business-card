@@ -23,7 +23,3 @@ test('should render Header correctly', () => {
     wrapper.find('Trans').childAt(0).text()
   ).toBe('business-card-header-title')
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

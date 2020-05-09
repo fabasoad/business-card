@@ -24,7 +24,3 @@ test('should render PortfolioMain correctly', () => {
     )
   }
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

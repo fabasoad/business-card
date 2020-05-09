@@ -39,7 +39,3 @@ test('should render CertificatesMain correctly', () => {
     expect(tsFindByNameSpy).toHaveBeenCalledWith(t)
   )
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

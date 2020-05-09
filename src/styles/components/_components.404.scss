@@ -1,0 +1,33 @@
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+html, body {
+  height: 96%;
+}
+
+body {
+  background-color: $dark-grey;
+}
+
+.container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  >div {
+    color: $white;
+    text-align: center;
+    .blinker {
+      animation: blinker 0.7s linear infinite;
+    }
+    .blinker-prefix::before {
+      content: 'Tap';
+      @media only screen and (min-width : 992px) {
+        content: 'Click';
+      }
+    }
+  }
+}

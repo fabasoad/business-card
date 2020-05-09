@@ -29,7 +29,3 @@ test('should render Skills correctly', () => {
   expect(findBySkillSpy).toHaveBeenCalledTimes(1)
   expect(findBySkillSpy).toHaveBeenCalledWith(true)
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

@@ -13,7 +13,7 @@ beforeAll(() => {
 })
 
 test('findByName should works correctly if items are present', () => {
-  const actual = technologyStorage.findByName('tech-1')
+  const actual: Technology = technologyStorage.findByName('tech-1')
   expect(actual.name).toBe('tech-1')
   expect(actual.isSkill).toBe(true)
 })

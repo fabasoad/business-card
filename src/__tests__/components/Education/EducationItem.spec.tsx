@@ -21,7 +21,3 @@ test('should render EducationItem correctly', () => {
   expect(tMock).toHaveBeenCalledWith('business-card-education-university-title')
   expect(tMock).toHaveBeenCalledWith('business-card-education-university-speciality')
 })
-
-afterEach(() => {
-  jest.clearAllMocks()
-})

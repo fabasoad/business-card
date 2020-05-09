@@ -4,7 +4,7 @@ export default function BackToTopButton() {
   const [isVisible, setIsVisible] = React.useState<boolean>(false)
 
   window.addEventListener(
-    "scroll",
+    'scroll',
     () => setIsVisible(window.scrollY > 300),
     { passive: true }
   )

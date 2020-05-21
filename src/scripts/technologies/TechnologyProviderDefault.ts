@@ -11,6 +11,8 @@ import imgFluentD from '../../assets/images/technologies/fluentD.png'
 import imgGit from '../../assets/images/technologies/git.png'
 import imgGitHub from '../../assets/images/technologies/github.png'
 import imgGitHubActions from '../../assets/images/technologies/github-actions.png'
+import imgGitlab from '../../assets/images/technologies/gitlab.png'
+import imgGitlabCi from '../../assets/images/technologies/gitlabCi.png'
 import imgGrafana from '../../assets/images/technologies/grafana.png'
 import imgHelm from '../../assets/images/technologies/helm.png'
 import imgHpeAlm from '../../assets/images/technologies/hpeAlm.png'
@@ -37,6 +39,7 @@ import imgPhp from '../../assets/images/technologies/php.png'
 import imgPrism from '../../assets/images/technologies/prism.png'
 import imgPrometheus from '../../assets/images/technologies/prometheus.png'
 import imgPython from '../../assets/images/technologies/python.png'
+import imgQuarkus from '../../assets/images/technologies/quarkus.png'
 import imgReact from '../../assets/images/technologies/react.png'
 import imgRedis from '../../assets/images/technologies/redis.png'
 import imgRedmine from '../../assets/images/technologies/redmine.png'
@@ -70,6 +73,8 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'fluentBit', img: imgFluentBit },
     { name: 'fluentD', img: imgFluentD },
     { name: 'git', img: imgGit },
+    { name: 'gitlab', img: imgGitlab },
+    { name: 'gitlabCi', img: imgGitlabCi },
     { name: 'grafana', img: imgGrafana },
     { name: 'helm', img: imgHelm },
     { name: 'hpeAlm', img: imgHpeAlm },
@@ -105,6 +110,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'maven', img: imgMaven, isSkill: true },
     { name: 'npm', img: imgNpm, isSkill: true },
     { name: 'python', img: imgPython, isSkill: true },
+    { name: 'quarkus', img: imgQuarkus },
     { name: 'react', img: imgReact, isSkill: true },
     { name: 'redis', img: imgRedis, isSkill: true },
     { name: 'travis', img: imgTravis, isSkill: true },

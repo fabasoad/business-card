@@ -21,6 +21,47 @@ exports[`should render ExperienceMain correctly 1`] = `
     >
       <li>
         <JobPeriod
+          fromMonth={5}
+          fromYear={2020}
+        />
+        <div
+          className="timeline-panel"
+        >
+          <JobTitle
+            company="TRI-AD"
+            title="business-card-experience-job-tri-ad-title"
+          />
+          <div
+            className="timeline-body"
+          >
+            <JobDescription
+              count={1}
+              i18nKeyPrefix="business-card-experience-job-tri-ad-description"
+              withTitle={true}
+            />
+            <JobTechnologies
+              keys={
+                Array [
+                  "docker",
+                  "gitlab",
+                  "gitlabCi",
+                  "typeScript",
+                  "react",
+                  "maven",
+                  "java",
+                  "quarkus",
+                  "vsCode",
+                  "intellijIdea",
+                ]
+              }
+            />
+          </div>
+        </div>
+      </li>
+      <li
+        className="timeline-inverted"
+      >
+        <JobPeriod
           fromMonth={7}
           fromYear={2019}
           toMonth={4}
@@ -48,6 +89,7 @@ exports[`should render ExperienceMain correctly 1`] = `
             <JobTechnologies
               keys={
                 Array [
+                  "docker",
                   "travis",
                   "gitHubActions",
                   "bitrise",
@@ -61,9 +103,7 @@ exports[`should render ExperienceMain correctly 1`] = `
           </div>
         </div>
       </li>
-      <li
-        className="timeline-inverted"
-      >
+      <li>
         <JobPeriod
           fromMonth={9}
           fromYear={2018}
@@ -113,7 +153,9 @@ exports[`should render ExperienceMain correctly 1`] = `
           </div>
         </div>
       </li>
-      <li>
+      <li
+        className="timeline-inverted"
+      >
         <JobPeriod
           fromMonth={2}
           fromYear={2016}
@@ -200,9 +242,7 @@ exports[`should render ExperienceMain correctly 1`] = `
           </div>
         </div>
       </li>
-      <li
-        className="timeline-inverted"
-      >
+      <li>
         <JobPeriod
           fromMonth={5}
           fromYear={2013}
@@ -249,7 +289,9 @@ exports[`should render ExperienceMain correctly 1`] = `
           </div>
         </div>
       </li>
-      <li>
+      <li
+        className="timeline-inverted"
+      >
         <JobPeriod
           fromMonth={10}
           fromYear={2011}
@@ -290,9 +332,7 @@ exports[`should render ExperienceMain correctly 1`] = `
           </div>
         </div>
       </li>
-      <li
-        className="timeline-inverted"
-      >
+      <li>
         <JobPeriod
           fromMonth={3}
           fromYear={2010}

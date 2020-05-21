@@ -19,6 +19,27 @@ export default function ExperienceMain() {
         <ul className="timeline">
           <li>
             <JobPeriod
+              fromMonth={5}
+              fromYear={2020}
+            />
+            <div className="timeline-panel">
+              <JobTitle
+                company="TRI-AD"
+                title={t('business-card-experience-job-tri-ad-title')}
+              />
+              <div className="timeline-body">
+                <JobDescription
+                  count={1}
+                  i18nKeyPrefix="business-card-experience-job-tri-ad-description"
+                />
+                <JobTechnologies
+                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'vsCode', 'intellijIdea']}
+                />
+              </div>
+            </div>
+          </li>
+          <li className="timeline-inverted">
+            <JobPeriod
               fromMonth={7}
               fromYear={2019}
               toMonth={4}
@@ -39,12 +60,12 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-achievements"
                 />
                 <JobTechnologies
-                  keys={['travis', 'gitHubActions', 'bitrise', 'java', 'kafka', 'spring', 'intellijIdea']}
+                  keys={['docker', 'travis', 'gitHubActions', 'bitrise', 'java', 'kafka', 'spring', 'intellijIdea']}
                 />
               </div>
             </div>
           </li>
-          <li className="timeline-inverted">
+          <li>
             <JobPeriod
               fromMonth={9}
               fromYear={2018}
@@ -75,7 +96,7 @@ export default function ExperienceMain() {
               </div>
             </div>
           </li>
-          <li>
+          <li className="timeline-inverted">
             <JobPeriod
               fromMonth={2}
               fromYear={2016}
@@ -129,7 +150,7 @@ export default function ExperienceMain() {
               </div>
             </div>
           </li>
-          <li className="timeline-inverted">
+          <li>
             <JobPeriod
               fromMonth={5}
               fromYear={2013}
@@ -159,7 +180,7 @@ export default function ExperienceMain() {
               </div>
             </div>
           </li>
-          <li>
+          <li className="timeline-inverted">
             <JobPeriod
               fromMonth={10}
               fromYear={2011}
@@ -186,7 +207,7 @@ export default function ExperienceMain() {
               </div>
             </div>
           </li>
-          <li className="timeline-inverted">
+          <li>
             <JobPeriod
               fromMonth={3}
               fromYear={2010}

@@ -4,7 +4,7 @@ import { Trans, useTranslation } from 'react-i18next'
 interface JobDescriptionProps {
   count: number
   i18nKeyPrefix: string
-  withTitle: boolean
+  withTitle?: boolean
 }
 
 export default function JobDescription(props: JobDescriptionProps) {

@@ -62,6 +62,14 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "git",
             },
+            "gitlab" => Object {
+              "img": "test-file-stub",
+              "name": "gitlab",
+            },
+            "gitlabCi" => Object {
+              "img": "test-file-stub",
+              "name": "gitlabCi",
+            },
             "grafana" => Object {
               "img": "test-file-stub",
               "name": "grafana",
@@ -210,6 +218,10 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "isSkill": true,
               "name": "python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
             },
             "react" => Object {
               "img": "test-file-stub",
@@ -337,6 +349,14 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "git",
             },
+            "gitlab" => Object {
+              "img": "test-file-stub",
+              "name": "gitlab",
+            },
+            "gitlabCi" => Object {
+              "img": "test-file-stub",
+              "name": "gitlabCi",
+            },
             "grafana" => Object {
               "img": "test-file-stub",
               "name": "grafana",
@@ -485,6 +505,10 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "isSkill": true,
               "name": "python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
             },
             "react" => Object {
               "img": "test-file-stub",
@@ -605,6 +629,14 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "git",
             },
+            "gitlab" => Object {
+              "img": "test-file-stub",
+              "name": "gitlab",
+            },
+            "gitlabCi" => Object {
+              "img": "test-file-stub",
+              "name": "gitlabCi",
+            },
             "grafana" => Object {
               "img": "test-file-stub",
               "name": "grafana",
@@ -753,6 +785,10 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "isSkill": true,
               "name": "python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
             },
             "react" => Object {
               "img": "test-file-stub",
@@ -880,6 +916,14 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "git",
             },
+            "gitlab" => Object {
+              "img": "test-file-stub",
+              "name": "gitlab",
+            },
+            "gitlabCi" => Object {
+              "img": "test-file-stub",
+              "name": "gitlabCi",
+            },
             "grafana" => Object {
               "img": "test-file-stub",
               "name": "grafana",
@@ -1028,6 +1072,10 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "isSkill": true,
               "name": "python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
             },
             "react" => Object {
               "img": "test-file-stub",

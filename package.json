@@ -59,7 +59,7 @@
     "eslint-config-google": "^0.14.0",
     "eslint-plugin-react": "^7.20.0",
     "file-loader": "^6.0.0",
-    "i18next": "^19.5.0",
+    "i18next": "^19.5.5",
     "i18next-browser-languagedetector": "^5.0.0",
     "i18next-http-backend": "^1.0.15",
     "jest": "^26.0.1",

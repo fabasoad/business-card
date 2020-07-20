@@ -5167,10 +5167,10 @@ i18next-http-backend@^1.0.15:
   dependencies:
     node-fetch "2.6.0"
 
-i18next@^19.5.0:
-  version "19.5.0"
-  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.5.0.tgz#b58d2359a402a29e589838b99b7af170e19a7824"
-  integrity sha512-IOJREFitdCfuRtFVFRomU30TG++mk6dIWHuk7wDJNAoXwJzQbWkxWClnA975loh1jLBnXYPUO6oFjiNwg5TV4g==
+i18next@^19.5.5:
+  version "19.6.2"
+  resolved "https://registry.yarnpkg.com/i18next/-/i18next-19.6.2.tgz#859aeba46db0c7cdfa8ae3de7c3a5cad3b0cec83"
+  integrity sha512-Zyd/Z32FY+sD+Eg6sLj5DeDSlrIN3WZ4onuOBRGcjDx/rvodsyUZ9TJ2Y+3aD9Vu8MPbiMU2WesIER/rs1ioyw==
   dependencies:
     "@babel/runtime" "^7.10.1"
 
@@ -6496,9 +6496,9 @@ lodash.uniq@^4.5.0:
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
 lodash@^4.0.0, lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@~4.17.10:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 loglevel@^1.6.8:
   version "1.6.8"

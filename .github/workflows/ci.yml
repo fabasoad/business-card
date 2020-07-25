@@ -4,20 +4,20 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
       - 'bugfix/**'
       - 'feature/**'
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2.1.0
-      - uses: actions/setup-node@v1.4.2
+      - uses: actions/checkout@v2.3.1
+      - uses: actions/setup-node@v2.1.1
         with:
           node-version: '13'
       - run: yarn install
@@ -25,18 +25,18 @@ jobs:
       - run: yarn test
         if: startsWith(github.ref, 'refs/heads/bugfix/') || startsWith(github.ref, 'refs/heads/feature/')
       - uses: paambaati/codeclimate-action@v2.6.0
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
           coverageCommand: yarn test
           debug: true
       - name: Build
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: yarn run build:prod
       - name: Deploy
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        uses: crazy-max/ghaction-github-pages@v1.5.1
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: crazy-max/ghaction-github-pages@v2.1.1
         with:
           target_branch: gh-pages
           build_dir: public

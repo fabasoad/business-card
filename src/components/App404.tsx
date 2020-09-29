@@ -43,6 +43,7 @@ export function App404(props: Props) {
       <p>{t('business-card-404-text-1')}</p>
       <p>
         <span className="blinker-prefix"></span>
+        {/* JP: 画面をクリックして続ける */}
         &nbsp;{t('business-card-404-text-2')}<span style={isRedirectingStyle(true)}>.</span>
         <span style={isRedirectingStyle(false)} className="blinker">_</span>
       </p>

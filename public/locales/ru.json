@@ -1,7 +1,7 @@
 {
-	"business-card-404-text-1": "This page does not exist.",
+	"business-card-404-text-1": "Эта страница не существует.",
 	"business-card-404-text-2": "on a screen to continue",
-	"business-card-404-text-3": "Redirecting...",
+	"business-card-404-text-3": "Перенаправление...",
   "business-card-about-me-general-list-item-1": "{{totalExperience}} опыта в коммерческой разработке программного обеспечения ({{agileExperience}} по Agile-подходу).",
   "business-card-about-me-general-list-item-2": "Хорошее понимание всех компонентов жизненного цикла разработки программного обеспечения.",
   "business-card-about-me-general-list-item-3": "Опыт работы с Kubernetes. Повседневная работа с CI/CD, Docker.",

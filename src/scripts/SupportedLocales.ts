@@ -10,10 +10,11 @@ export default class SupportedLocales {
       new Locale('gb', 'en'),
       new Locale('ru')
     ]
-    if (process.env.NODE_ENV === 'development') {
+    // eslint-disable-next-line no-constant-condition
+    if (true /* process.env.NODE_ENV === 'development' */) {
       return [...result, new Locale('jp')]
     }
-    return result
+    // return result
   }
 
   static getOrDefault(code: string): Locale {

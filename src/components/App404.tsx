@@ -15,6 +15,7 @@ type Props = App404Props & LinkDispatchProps & LinkStateProps
 export function App404(props: Props) {
   const { t } = useTranslation()
 
+  // eslint-disable-next-line no-undef
   let timer: NodeJS.Timeout
   let counterValue: number = 3
 

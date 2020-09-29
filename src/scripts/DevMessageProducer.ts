@@ -1,6 +1,7 @@
 export default class DevMessageProducer {
   _messages: string[]
   _counter: number = 0
+  // eslint-disable-next-line no-undef
   _timer: NodeJS.Timeout
 
   constructor(

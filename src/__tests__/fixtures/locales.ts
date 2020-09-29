@@ -2,5 +2,6 @@ import { Locale } from '../../store/locale/types'
 
 export default new Array<Locale>(
   new Locale('gb', 'en'),
-  new Locale('ru')
+  new Locale('ru'),
+  new Locale('jp')
 )

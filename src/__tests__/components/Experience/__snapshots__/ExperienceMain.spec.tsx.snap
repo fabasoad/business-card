@@ -19,9 +19,11 @@ exports[`should render ExperienceMain correctly 1`] = `
     <ul
       className="timeline"
     >
-      <li>
+      <li
+        className="timeline-inverted"
+      >
         <JobPeriod
-          fromMonth={5}
+          fromMonth={9}
           fromYear={2020}
         />
         <div
@@ -29,14 +31,39 @@ exports[`should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="TRI-AD"
-            title="business-card-experience-job-tri-ad-title"
+            title="business-card-experience-job-tri-ad-2-title"
           />
           <div
             className="timeline-body"
           >
             <JobDescription
               count={1}
-              i18nKeyPrefix="business-card-experience-job-tri-ad-description"
+              i18nKeyPrefix="business-card-experience-job-tri-ad-2-description"
+              withTitle={true}
+            />
+          </div>
+        </div>
+      </li>
+      <li>
+        <JobPeriod
+          fromMonth={5}
+          fromYear={2020}
+          toMonth={8}
+          toYear={2020}
+        />
+        <div
+          className="timeline-panel"
+        >
+          <JobTitle
+            company="TRI-AD"
+            title="business-card-experience-job-tri-ad-1-title"
+          />
+          <div
+            className="timeline-body"
+          >
+            <JobDescription
+              count={1}
+              i18nKeyPrefix="business-card-experience-job-tri-ad-1-description"
               withTitle={true}
             />
             <JobTechnologies

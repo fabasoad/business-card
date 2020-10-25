@@ -17,20 +17,40 @@ export default function ExperienceMain() {
           <hr />
         </div>
         <ul className="timeline">
-          <li>
+          <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={5}
+              fromMonth={9}
               fromYear={2020}
             />
             <div className="timeline-panel">
               <JobTitle
                 company="TRI-AD"
-                title={t('business-card-experience-job-tri-ad-title')}
+                title={t('business-card-experience-job-tri-ad-2-title')}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix="business-card-experience-job-tri-ad-description"
+                  i18nKeyPrefix="business-card-experience-job-tri-ad-2-description"
+                />
+              </div>
+            </div>
+          </li>
+          <li>
+            <JobPeriod
+              fromMonth={5}
+              fromYear={2020}
+              toMonth={8}
+              toYear={2020}
+            />
+            <div className="timeline-panel">
+              <JobTitle
+                company="TRI-AD"
+                title={t('business-card-experience-job-tri-ad-1-title')}
+              />
+              <div className="timeline-body">
+                <JobDescription
+                  count={1}
+                  i18nKeyPrefix="business-card-experience-job-tri-ad-1-description"
                 />
                 <JobTechnologies
                   keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'vsCode', 'intellijIdea']}

@@ -15,7 +15,8 @@ test('should render ExperienceMain correctly', () => {
   expect(wrapper).toMatchSnapshot()
   new Array<string>(
     'business-card-experience-title',
-    'business-card-experience-job-tri-ad-title',
+    'business-card-experience-job-tri-ad-2-title',
+    'business-card-experience-job-tri-ad-1-title',
     'business-card-experience-job-bitcoin-com-2-title',
     'business-card-experience-job-bitcoin-com-1-title',
     'business-card-experience-job-lohika-3-title',

@@ -1,6 +1,5 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import * as Backend from 'i18next-http-backend'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { Action } from 'redux'
 import { AppState } from '../configureStore'
@@ -8,6 +7,9 @@ import { ThunkAction } from 'redux-thunk'
 import { Dispatch } from 'react'
 import { AppActions, Locale } from './types'
 import SupportedLocales from '../../scripts/SupportedLocales'
+import * as gb from './resources/gb.json'
+import * as jp from './resources/jp.json'
+import * as ru from './resources/ru.json'
 
 type ThunkLocaleAction = ThunkAction<void, AppState, unknown, Action<string>>
 
@@ -33,16 +35,19 @@ export const startLoadLocale = (): ThunkLocaleAction =>
       )
     }
     await i18n
-      .use(Backend)
       .use(LanguageDetector)
       .use(initReactI18next)
       .init({
-        backend: {
-          loadPath: (process.env.NODE_ENV === 'development' ? '' : '/business-card') + '/locales/{{lng}}.json'
-        },
+        debug: process.env.NODE_ENV === 'development',
+        defaultNS: 'common',
+        fallbackLng: SupportedLocales.default.code,
         lng: currentLocale.code,
-        fallbackLng: SupportedLocales.default().code,
-        debug: process.env.NODE_ENV === 'development'
+        ns: ['common'],
+        resources: {
+          gb: { common: gb },
+          jp: { common: jp },
+          ru: { common: ru }
+        }
       }).then((t) => {
         onLanguageChange(t)
         dispatch(

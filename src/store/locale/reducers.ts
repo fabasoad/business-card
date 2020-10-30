@@ -2,7 +2,7 @@ import { LocaleActionTypes, SET_LOCALE, LOAD_LOCALE, Locale } from './types'
 import SupportedLocales from '../../scripts/SupportedLocales'
 
 export const localeReducer = (
-  state = SupportedLocales.default(),
+  state = SupportedLocales.default,
   action: LocaleActionTypes
 ): Locale => {
   switch (action.type) {

@@ -23,7 +23,6 @@ exports[`should render LocaleDropDown correctly 1`] = `
       as={
         Object {
           "$$typeof": Symbol(react.forward_ref),
-          "displayName": "SafeAnchor",
           "render": [Function],
         }
       }

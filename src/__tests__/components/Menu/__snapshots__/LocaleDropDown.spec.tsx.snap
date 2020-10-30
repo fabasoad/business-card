@@ -15,6 +15,7 @@ exports[`should render LocaleDropDown correctly 1`] = `
     RU
   </DropdownToggle>
   <DropdownMenu
+    align="left"
     alignRight={false}
     flip={true}
   >

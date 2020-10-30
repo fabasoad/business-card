@@ -5,6 +5,7 @@
     "!**/*.d.ts",
     "!**/node_modules/**"
   ],
+  "coverageProvider": "v8",
   "coverageReporters": [
     "lcov", "text", "text-summary"
   ],

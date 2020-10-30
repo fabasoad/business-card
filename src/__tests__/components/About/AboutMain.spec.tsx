@@ -12,7 +12,7 @@ test('should render AboutMain correctly', () => {
   const totalHumanizeSpy = jest.fn(totalHumanize)
   const agileHumanizeSpy = jest.fn(agileHumanize)
 
-  const locale: Locale = SupportedLocales.default()
+  const locale: Locale = SupportedLocales.default
   const wrapper = shallow(<AboutMain locale={locale} calc={{
     agileHumanize: agileHumanizeSpy,
     totalHumanize: totalHumanizeSpy

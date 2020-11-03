@@ -8,7 +8,7 @@ test('should render CertificateItem correctly', () => {
     id="test-id"
     issueDate={new Date('2020-01')}
     issuer={{ img: 'test-issuer-img', name: 'test-issuer-name' }}
-    technology={{ name: 'test-technology-name', img: 'test-technology-img' }}
+    technology={{ name: 'test-technology-name', title: 'test-technology-title', img: 'test-technology-img' }}
     i18nTitleKey='test-title-key'
     url='test-url'
   />)

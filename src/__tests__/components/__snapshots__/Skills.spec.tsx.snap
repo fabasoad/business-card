@@ -27,12 +27,14 @@ exports[`should render Skills correctly 1`] = `
           className="m-4"
           key="test-uuid"
           src="img-1"
+          title="title-1"
         />
         <img
           alt="name-2"
           className="m-4"
           key="test-uuid"
           src="img-2"
+          title="title-2"
         />
       </div>
     </div>

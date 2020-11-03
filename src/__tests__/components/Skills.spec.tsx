@@ -15,7 +15,7 @@ beforeAll(() => {
 test('should render Skills correctly', () => {
   const findBySkillSpy: () => Array<Technology> = jest.fn(
     () => new Array<number>(1, 2).map(
-      (n) => ({ name: `name-${n}`, img: `img-${n}`, isSkill: true })
+      (n) => ({ name: `name-${n}`, title: `title-${n}`, img: `img-${n}`, isSkill: true })
     )
   )
   const technologyStorage = new TechnologyStorage(null)

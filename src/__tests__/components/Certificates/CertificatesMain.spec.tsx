@@ -19,7 +19,7 @@ test('should render CertificatesMain correctly', () => {
   const cis = new CertificateIssuerStorage({ items: new Map<string, CertificateIssuer>() })
   cis.findByName = cisFindByNameSpy
 
-  const tsFindByNameSpy = jest.fn((k) => ({ name: `test-name-${k}`, img: `test-img-${k}` }))
+  const tsFindByNameSpy = jest.fn((k) => ({ name: `test-name-${k}`, title: `test-title-${k}`, img: `test-img-${k}` }))
   const ts = new TechnologyStorage({ items: new Map<string, Technology>() })
   ts.findByName = tsFindByNameSpy
 

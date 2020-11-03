@@ -34,6 +34,7 @@ exports[`should render CertificatesMain correctly 1`] = `
           Object {
             "img": "test-img-java",
             "name": "test-name-java",
+            "title": "test-title-java",
           }
         }
         url="https://www.youracclaim.com/badges/689b9d7e-cae5-4e36-8a1f-c8c34f104249/public_url"
@@ -53,6 +54,7 @@ exports[`should render CertificatesMain correctly 1`] = `
           Object {
             "img": "test-img-react",
             "name": "test-name-react",
+            "title": "test-title-react",
           }
         }
         url="http://ude.my/UC-JGDVYKAQ"
@@ -72,6 +74,7 @@ exports[`should render CertificatesMain correctly 1`] = `
           Object {
             "img": "test-img-java",
             "name": "test-name-java",
+            "title": "test-title-java",
           }
         }
         url="https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
@@ -91,6 +94,7 @@ exports[`should render CertificatesMain correctly 1`] = `
           Object {
             "img": "test-img-python",
             "name": "test-name-python",
+            "title": "test-title-python",
           }
         }
         url="https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"

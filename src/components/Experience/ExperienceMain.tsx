@@ -32,6 +32,9 @@ export default function ExperienceMain() {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-tri-ad-2-description"
                 />
+                <JobTechnologies
+                  keys={['concourseCI', 'kubernetes', 'prometheus', 'grafana']}
+                />
               </div>
             </div>
           </li>

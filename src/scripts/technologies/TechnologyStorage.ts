@@ -21,6 +21,6 @@ export default class TechnologyStorage {
   findByName(name: string): Technology {
     return this.provider.items.has(name)
       ? this.provider.items.get(name)
-      : { name }
+      : { name, title: name }
   }
 }

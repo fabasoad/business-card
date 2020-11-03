@@ -11,11 +11,13 @@ exports[`should render JobTechnologies correctly 1`] = `
     alt="maven"
     key="test-uuid"
     src="test-file-stub"
+    title="Maven"
   />
   <img
     alt="java"
     key="test-uuid"
     src="test-file-stub"
+    title="Java"
   />
 </div>
 `;

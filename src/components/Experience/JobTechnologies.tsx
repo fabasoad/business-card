@@ -15,7 +15,7 @@ export default function JobTechnologies(props: JobTechnologiesProps) {
       <h5>{t('business-card-experience-technologies-title')}</h5>
       {props.keys
         .map((key) => technologyStorage.findByName(key))
-        .map((t) => <img key={uuidv4()} src={t.img} alt={t.name} />)}
+        .map((t) => <img key={uuidv4()} src={t.img} alt={t.name} title={t.title} />)}
     </div>
   )
 }

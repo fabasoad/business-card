@@ -41,6 +41,16 @@ exports[`should render ExperienceMain correctly 1`] = `
               i18nKeyPrefix="business-card-experience-job-tri-ad-2-description"
               withTitle={true}
             />
+            <JobTechnologies
+              keys={
+                Array [
+                  "concourseCI",
+                  "kubernetes",
+                  "prometheus",
+                  "grafana",
+                ]
+              }
+            />
           </div>
         </div>
       </li>

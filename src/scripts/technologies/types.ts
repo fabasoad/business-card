@@ -1,5 +1,6 @@
 export interface Technology {
   name: string
+  title: string
   img?: any
   isSkill?: boolean
 }

@@ -1,6 +1,20 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "fixAll.eslint": true,
+    "source.organizeImports": true,
+    "typescript.suggestionActions.enabled": true
+  },
   "cSpell.words": [
     "UNSECURE",
-    "lcov"
+    "autobuild",
+    "codeql",
+    "ibiqlik",
+    "languagedetector",
+    "lcov",
+    "markdownlint",
+    "semver",
+    "simbo",
+    "yamllint"
   ]
 }

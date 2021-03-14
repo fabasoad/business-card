@@ -1,0 +1,26 @@
+#badges {
+  img {
+    width: 200px;
+    @media (min-width: $desktop-breakpoint) {
+      width: 250px;
+    }
+  }
+  iframe {
+    width: 240px;
+    @media (min-width: $mobile-breakpoint) {
+      width: 280px;
+    }
+    @media (min-width: $tablet-breakpoint) {
+      width: 405px;
+    }
+    @media (min-width: $small-desktop-breakpoint) {
+      width: 405px;
+    }
+    @media (min-width: $desktop-breakpoint) {
+      width: 405px;
+    }
+    @media (min-width: $tv-breakpoint) {
+      width: 405px;
+    }
+  }
+}

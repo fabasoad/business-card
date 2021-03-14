@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
-
+import { AppState } from '../store/configureStore'
+import { AppActions, Locale } from '../store/locale/types'
 import AboutMain from './About/AboutMain'
 import BackToTopButton from './BackToTopButton'
+import Badges from './Badges'
 import CertificatesMain from './Certificates/CertificatesMain'
 import EducationMain from './Education/EducationMain'
 import ExperienceMain from './Experience/ExperienceMain'
@@ -14,8 +16,6 @@ import MenuMain from './Menu/MenuMain'
 import PortfolioMain from './Portfolio/PortfolioMain'
 import Resume from './Resume'
 import Skills from './Skills'
-import { Locale, AppActions } from '../store/locale/types'
-import { AppState } from '../store/configureStore'
 
 interface AppProps {
 }
@@ -36,6 +36,7 @@ export function App(props: Props) {
       <CertificatesMain />
       <LanguagesMain />
       <PortfolioMain />
+      <Badges />
       <FooterMain />
     </div>
   )

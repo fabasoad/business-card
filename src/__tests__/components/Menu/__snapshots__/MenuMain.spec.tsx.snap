@@ -57,6 +57,10 @@ exports[`should render MenuMain correctly 1`] = `
           setActiveNavLink={[Function]}
         />
         <MenuItem
+          name="badges"
+          setActiveNavLink={[Function]}
+        />
+        <MenuItem
           name="contact"
           setActiveNavLink={[Function]}
         />

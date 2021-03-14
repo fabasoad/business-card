@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { Navbar, Nav } from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-
 import LocaleDropDown from './LocaleDropDown'
 import MenuItem from './MenuItem'
+
 
 export default function MenuMain() {
   const { t } = useTranslation()
@@ -46,6 +46,7 @@ export default function MenuMain() {
             <MenuItem setActiveNavLink={setActiveNavLink} name={'education'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'portfolio'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'resume'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'badges'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'contact'} />
           </Nav>
           <Nav>

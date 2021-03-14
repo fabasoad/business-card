@@ -19,7 +19,6 @@ exports[`should render FooterMain correctly 1`] = `
     <FooterContacts />
     <FooterSocial />
     <FooterInfo />
-    <FooterExtra />
   </div>
 </div>
 `;

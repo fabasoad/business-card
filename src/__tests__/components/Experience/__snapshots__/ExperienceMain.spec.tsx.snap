@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render ExperienceMain correctly 1`] = `
+exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
 <div
   className="light-component"
   id="experience"
@@ -30,15 +30,16 @@ exports[`should render ExperienceMain correctly 1`] = `
           className="timeline-panel"
         >
           <JobTitle
-            company="TRI-AD"
-            title="business-card-experience-job-tri-ad-2-title"
+            company="Woven Planet"
+            location="business-card-location-tokyo"
+            title="business-card-experience-job-woven-planet-2-title"
           />
           <div
             className="timeline-body"
           >
             <JobDescription
               count={1}
-              i18nKeyPrefix="business-card-experience-job-tri-ad-2-description"
+              i18nKeyPrefix="business-card-experience-job-woven-planet-2-description"
               withTitle={true}
             />
             <JobTechnologies
@@ -65,15 +66,16 @@ exports[`should render ExperienceMain correctly 1`] = `
           className="timeline-panel"
         >
           <JobTitle
-            company="TRI-AD"
-            title="business-card-experience-job-tri-ad-1-title"
+            company="Woven Planet"
+            location="business-card-location-tokyo"
+            title="business-card-experience-job-woven-planet-1-title"
           />
           <div
             className="timeline-body"
           >
             <JobDescription
               count={1}
-              i18nKeyPrefix="business-card-experience-job-tri-ad-1-description"
+              i18nKeyPrefix="business-card-experience-job-woven-planet-1-description"
               withTitle={true}
             />
             <JobTechnologies
@@ -109,6 +111,7 @@ exports[`should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="Bitcoin.com"
+            location="business-card-location-tokyo"
             title="business-card-experience-job-bitcoin-com-2-title"
           />
           <div
@@ -152,6 +155,7 @@ exports[`should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="Bitcoin.com"
+            location="business-card-location-tokyo"
             title="business-card-experience-job-bitcoin-com-1-title"
           />
           <div
@@ -204,6 +208,7 @@ exports[`should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="Lohika"
+            location="business-card-location-odessa"
             title="business-card-experience-job-lohika-3-title"
           />
           <div
@@ -291,6 +296,7 @@ exports[`should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="Lohika"
+            location="business-card-location-odessa"
             title="business-card-experience-job-lohika-2-title"
           />
           <div
@@ -340,6 +346,7 @@ exports[`should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="Lohika"
+            location="business-card-location-odessa"
             title="business-card-experience-job-lohika-1-title"
           />
           <div
@@ -381,6 +388,7 @@ exports[`should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="ARKA - Finance, Software, Services"
+            location="business-card-location-odessa"
             title="business-card-experience-job-arka-title"
           />
           <div

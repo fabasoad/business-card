@@ -24,13 +24,14 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
-                company="TRI-AD"
-                title={t('business-card-experience-job-tri-ad-2-title')}
+                company="Woven Planet"
+                title={t('business-card-experience-job-woven-planet-2-title')}
+                location={t('business-card-location-tokyo')}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix="business-card-experience-job-tri-ad-2-description"
+                  i18nKeyPrefix="business-card-experience-job-woven-planet-2-description"
                 />
                 <JobTechnologies
                   keys={['concourseCI', 'kubernetes', 'prometheus', 'grafana']}
@@ -47,13 +48,14 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
-                company="TRI-AD"
-                title={t('business-card-experience-job-tri-ad-1-title')}
+                company="Woven Planet"
+                title={t('business-card-experience-job-woven-planet-1-title')}
+                location={t('business-card-location-tokyo')}
               />
               <div className="timeline-body">
                 <JobDescription
                   count={1}
-                  i18nKeyPrefix="business-card-experience-job-tri-ad-1-description"
+                  i18nKeyPrefix="business-card-experience-job-woven-planet-1-description"
                 />
                 <JobTechnologies
                   keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'vsCode', 'intellijIdea']}
@@ -72,6 +74,7 @@ export default function ExperienceMain() {
               <JobTitle
                 company="Bitcoin.com"
                 title={t('business-card-experience-job-bitcoin-com-2-title')}
+                location={t('business-card-location-tokyo')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -99,6 +102,7 @@ export default function ExperienceMain() {
               <JobTitle
                 company="Bitcoin.com"
                 title={t('business-card-experience-job-bitcoin-com-1-title')}
+                location={t('business-card-location-tokyo')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -130,6 +134,7 @@ export default function ExperienceMain() {
               <JobTitle
                 company="Lohika"
                 title={t('business-card-experience-job-lohika-3-title')}
+                location={t('business-card-location-odessa')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -184,6 +189,7 @@ export default function ExperienceMain() {
               <JobTitle
                 company="Lohika"
                 title={t('business-card-experience-job-lohika-2-title')}
+                location={t('business-card-location-odessa')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -214,6 +220,7 @@ export default function ExperienceMain() {
               <JobTitle
                 company="Lohika"
                 title={t('business-card-experience-job-lohika-1-title')}
+                location={t('business-card-location-odessa')}
               />
               <div className="timeline-body">
                 <JobDescription
@@ -241,6 +248,7 @@ export default function ExperienceMain() {
               <JobTitle
                 company="ARKA - Finance, Software, Services"
                 title={t('business-card-experience-job-arka-title')}
+                location={t('business-card-location-odessa')}
               />
               <div className="timeline-body">
                 <JobDescription

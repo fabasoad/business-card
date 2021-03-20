@@ -12,5 +12,8 @@ exports[`should render JobTitle correctly 1`] = `
   >
     test-title
   </h4>
+  <h6>
+    test-location
+  </h6>
 </div>
 `;

@@ -4,9 +4,9 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - 'main'
       - 'bugfix/**'
-      - 'bump/patch-**'
+      - 'bump/patch-*'
       - 'feature/**'
 
 env:
@@ -49,7 +49,7 @@ jobs:
         run: yarn run build:prod
       - name: Deploy
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: crazy-max/ghaction-github-pages@v2.2.0
+        uses: crazy-max/ghaction-github-pages@v2.3.0
         with:
           target_branch: gh-pages
           build_dir: public

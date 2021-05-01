@@ -6,7 +6,7 @@ on:
     branches:
       - 'main'
       - 'bugfix/**'
-      - 'bump/patch-*'
+      - 'dependabot/*'
       - 'feature/**'
 
 env:
@@ -22,7 +22,7 @@ jobs:
           ref: ${{ github.ref }}
       - name: Cache node_modules
         id: yarn-cache
-        uses: actions/cache@v2.1.4
+        uses: actions/cache@v2.1.5
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
@@ -44,14 +44,3 @@ jobs:
         with:
           coverageCommand: yarn test
           debug: true
-      - name: Build
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        run: yarn run build:prod
-      - name: Deploy
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: crazy-max/ghaction-github-pages@v2.3.0
-        with:
-          target_branch: gh-pages
-          build_dir: public
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}

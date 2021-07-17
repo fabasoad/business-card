@@ -20,6 +20,26 @@ exports[`should render CertificatesMain correctly 1`] = `
       className="row justify-content-center"
     >
       <CertificateItem
+        i18nTitleKey="business-card-certificate-5"
+        id="F75CDD8ED9F0"
+        issueDate={2020-09-01T00:00:00.000Z}
+        issuer={
+          Object {
+            "img": "test-img-hacker-rank",
+            "name": "test-name-hacker-rank",
+          }
+        }
+        key="F75CDD8ED9F0"
+        technology={
+          Object {
+            "img": "test-img-algorithms",
+            "name": "test-name-algorithms",
+            "title": "test-title-algorithms",
+          }
+        }
+        url="https://www.hackerrank.com/certificates/f75cdd8ed9f0"
+      />
+      <CertificateItem
         i18nTitleKey="business-card-certificate-4"
         id=""
         issueDate={2020-05-01T00:00:00.000Z}

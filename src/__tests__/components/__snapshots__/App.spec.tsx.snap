@@ -14,10 +14,21 @@ exports[`should render App with gb locale correctly 1`] = `
       TechnologyStorage {
         "provider": Object {
           "items": Map {
+            "algorithms" => Object {
+              "img": "test-file-stub",
+              "name": "algorithms",
+              "title": "Algorithms",
+            },
             "angular" => Object {
               "img": "test-file-stub",
               "name": "angular",
               "title": "Angular",
+            },
+            "aws" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "aws",
+              "title": "AWS",
             },
             "bitrise" => Object {
               "img": "test-file-stub",
@@ -37,6 +48,7 @@ exports[`should render App with gb locale correctly 1`] = `
             },
             "concourseCI" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "concourseCI",
               "title": "Concourse CI",
             },
@@ -75,16 +87,31 @@ exports[`should render App with gb locale correctly 1`] = `
             },
             "git" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "git",
               "title": "Git",
             },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+              "title": "GitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+              "title": "GitHub Actions",
+            },
             "gitlab" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "gitlab",
               "title": "GitLab",
             },
             "gitlabCi" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "gitlabCi",
               "title": "GitLab CI",
             },
@@ -103,6 +130,28 @@ exports[`should render App with gb locale correctly 1`] = `
               "name": "hpeAlm",
               "title": "HPE ALM",
             },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+              "title": "Intellij IDEA",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+              "title": "jQuery",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+              "title": "Java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+              "title": "JavaScript",
+            },
             "jenkins" => Object {
               "img": "test-file-stub",
               "name": "jenkins",
@@ -113,25 +162,26 @@ exports[`should render App with gb locale correctly 1`] = `
               "name": "jira",
               "title": "Jira",
             },
-            "jQuery" => Object {
-              "img": "test-file-stub",
-              "name": "jQuery",
-              "title": "jQuery",
-            },
             "junit" => Object {
               "img": "test-file-stub",
               "name": "junit",
               "title": "jUnit",
             },
-            "intellijIdea" => Object {
+            "kafka" => Object {
               "img": "test-file-stub",
-              "name": "intellijIdea",
-              "title": "Intellij IDEA",
+              "name": "kafka",
+              "title": "",
             },
             "kibana" => Object {
               "img": "test-file-stub",
               "name": "kibana",
               "title": "Kibana",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+              "title": "Kubernetes",
             },
             "lombok" => Object {
               "img": "test-file-stub",
@@ -142,6 +192,18 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "mariaDb",
               "title": "Maria DB",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+              "title": "Maven",
+            },
+            "mongodb" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "mongodb",
+              "title": "MongoDB",
             },
             "mssql" => Object {
               "img": "test-file-stub",
@@ -157,6 +219,11 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "netBeans",
               "title": "NetBeans",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "name": "npm",
+              "title": "npm",
             },
             "oracle" => Object {
               "img": "test-file-stub",
@@ -182,6 +249,28 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "prometheus",
               "title": "Prometheus",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+              "title": "Python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
+              "title": "Quarkus",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+              "title": "React",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "name": "redis",
+              "title": "Redis",
             },
             "redmine" => Object {
               "img": "test-file-stub",
@@ -213,81 +302,16 @@ exports[`should render App with gb locale correctly 1`] = `
               "name": "teamCity",
               "title": "Team City",
             },
+            "terraform" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "terraform",
+              "title": "Terraform",
+            },
             "tomcat" => Object {
               "img": "test-file-stub",
               "name": "tomcat",
               "title": "Tomcat",
-            },
-            "gitHub" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "gitHub",
-              "title": "GitHub",
-            },
-            "gitHubActions" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "gitHubActions",
-              "title": "GitHub Actions",
-            },
-            "java" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "java",
-              "title": "Java",
-            },
-            "javaScript" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "javaScript",
-              "title": "JavaScript",
-            },
-            "kafka" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "kafka",
-              "title": "",
-            },
-            "kubernetes" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "kubernetes",
-              "title": "Kubernetes",
-            },
-            "maven" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "maven",
-              "title": "Maven",
-            },
-            "npm" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "npm",
-              "title": "npm",
-            },
-            "python" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "python",
-              "title": "Python",
-            },
-            "quarkus" => Object {
-              "img": "test-file-stub",
-              "name": "quarkus",
-              "title": "Quarkus",
-            },
-            "react" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "react",
-              "title": "React",
-            },
-            "redis" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "redis",
-              "title": "Redis",
             },
             "travis" => Object {
               "img": "test-file-stub",
@@ -300,18 +324,6 @@ exports[`should render App with gb locale correctly 1`] = `
               "isSkill": true,
               "name": "typeScript",
               "title": "TypeScript",
-            },
-            "webpack" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "webpack",
-              "title": "Webpack",
-            },
-            "xamarin" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "xamarin",
-              "title": "Xamarin",
             },
             "vBulletin" => Object {
               "img": "test-file-stub",
@@ -328,10 +340,21 @@ exports[`should render App with gb locale correctly 1`] = `
               "name": "vsCode",
               "title": "VS Code",
             },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "name": "webpack",
+              "title": "Webpack",
+            },
             "windowsForms" => Object {
               "img": "test-file-stub",
               "name": "windowsForms",
               "title": "Windows Forms",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+              "title": "Xamarin",
             },
           },
         },
@@ -349,6 +372,10 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "coursera",
             },
+            "hacker-rank" => Object {
+              "img": "test-file-stub",
+              "name": "hackerRank",
+            },
             "oracle" => Object {
               "img": "test-file-stub",
               "name": "oracle",
@@ -365,10 +392,21 @@ exports[`should render App with gb locale correctly 1`] = `
       TechnologyStorage {
         "provider": Object {
           "items": Map {
+            "algorithms" => Object {
+              "img": "test-file-stub",
+              "name": "algorithms",
+              "title": "Algorithms",
+            },
             "angular" => Object {
               "img": "test-file-stub",
               "name": "angular",
               "title": "Angular",
+            },
+            "aws" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "aws",
+              "title": "AWS",
             },
             "bitrise" => Object {
               "img": "test-file-stub",
@@ -388,6 +426,7 @@ exports[`should render App with gb locale correctly 1`] = `
             },
             "concourseCI" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "concourseCI",
               "title": "Concourse CI",
             },
@@ -426,16 +465,31 @@ exports[`should render App with gb locale correctly 1`] = `
             },
             "git" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "git",
               "title": "Git",
             },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+              "title": "GitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+              "title": "GitHub Actions",
+            },
             "gitlab" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "gitlab",
               "title": "GitLab",
             },
             "gitlabCi" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "gitlabCi",
               "title": "GitLab CI",
             },
@@ -454,6 +508,28 @@ exports[`should render App with gb locale correctly 1`] = `
               "name": "hpeAlm",
               "title": "HPE ALM",
             },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+              "title": "Intellij IDEA",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+              "title": "jQuery",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+              "title": "Java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+              "title": "JavaScript",
+            },
             "jenkins" => Object {
               "img": "test-file-stub",
               "name": "jenkins",
@@ -464,25 +540,26 @@ exports[`should render App with gb locale correctly 1`] = `
               "name": "jira",
               "title": "Jira",
             },
-            "jQuery" => Object {
-              "img": "test-file-stub",
-              "name": "jQuery",
-              "title": "jQuery",
-            },
             "junit" => Object {
               "img": "test-file-stub",
               "name": "junit",
               "title": "jUnit",
             },
-            "intellijIdea" => Object {
+            "kafka" => Object {
               "img": "test-file-stub",
-              "name": "intellijIdea",
-              "title": "Intellij IDEA",
+              "name": "kafka",
+              "title": "",
             },
             "kibana" => Object {
               "img": "test-file-stub",
               "name": "kibana",
               "title": "Kibana",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+              "title": "Kubernetes",
             },
             "lombok" => Object {
               "img": "test-file-stub",
@@ -493,6 +570,18 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "mariaDb",
               "title": "Maria DB",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+              "title": "Maven",
+            },
+            "mongodb" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "mongodb",
+              "title": "MongoDB",
             },
             "mssql" => Object {
               "img": "test-file-stub",
@@ -508,6 +597,11 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "netBeans",
               "title": "NetBeans",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "name": "npm",
+              "title": "npm",
             },
             "oracle" => Object {
               "img": "test-file-stub",
@@ -533,6 +627,28 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "prometheus",
               "title": "Prometheus",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+              "title": "Python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
+              "title": "Quarkus",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+              "title": "React",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "name": "redis",
+              "title": "Redis",
             },
             "redmine" => Object {
               "img": "test-file-stub",
@@ -564,81 +680,16 @@ exports[`should render App with gb locale correctly 1`] = `
               "name": "teamCity",
               "title": "Team City",
             },
+            "terraform" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "terraform",
+              "title": "Terraform",
+            },
             "tomcat" => Object {
               "img": "test-file-stub",
               "name": "tomcat",
               "title": "Tomcat",
-            },
-            "gitHub" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "gitHub",
-              "title": "GitHub",
-            },
-            "gitHubActions" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "gitHubActions",
-              "title": "GitHub Actions",
-            },
-            "java" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "java",
-              "title": "Java",
-            },
-            "javaScript" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "javaScript",
-              "title": "JavaScript",
-            },
-            "kafka" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "kafka",
-              "title": "",
-            },
-            "kubernetes" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "kubernetes",
-              "title": "Kubernetes",
-            },
-            "maven" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "maven",
-              "title": "Maven",
-            },
-            "npm" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "npm",
-              "title": "npm",
-            },
-            "python" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "python",
-              "title": "Python",
-            },
-            "quarkus" => Object {
-              "img": "test-file-stub",
-              "name": "quarkus",
-              "title": "Quarkus",
-            },
-            "react" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "react",
-              "title": "React",
-            },
-            "redis" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "redis",
-              "title": "Redis",
             },
             "travis" => Object {
               "img": "test-file-stub",
@@ -651,18 +702,6 @@ exports[`should render App with gb locale correctly 1`] = `
               "isSkill": true,
               "name": "typeScript",
               "title": "TypeScript",
-            },
-            "webpack" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "webpack",
-              "title": "Webpack",
-            },
-            "xamarin" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "xamarin",
-              "title": "Xamarin",
             },
             "vBulletin" => Object {
               "img": "test-file-stub",
@@ -679,10 +718,21 @@ exports[`should render App with gb locale correctly 1`] = `
               "name": "vsCode",
               "title": "VS Code",
             },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "name": "webpack",
+              "title": "Webpack",
+            },
             "windowsForms" => Object {
               "img": "test-file-stub",
               "name": "windowsForms",
               "title": "Windows Forms",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+              "title": "Xamarin",
             },
           },
         },
@@ -710,10 +760,21 @@ exports[`should render App with jp locale correctly 1`] = `
       TechnologyStorage {
         "provider": Object {
           "items": Map {
+            "algorithms" => Object {
+              "img": "test-file-stub",
+              "name": "algorithms",
+              "title": "Algorithms",
+            },
             "angular" => Object {
               "img": "test-file-stub",
               "name": "angular",
               "title": "Angular",
+            },
+            "aws" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "aws",
+              "title": "AWS",
             },
             "bitrise" => Object {
               "img": "test-file-stub",
@@ -733,6 +794,7 @@ exports[`should render App with jp locale correctly 1`] = `
             },
             "concourseCI" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "concourseCI",
               "title": "Concourse CI",
             },
@@ -771,16 +833,31 @@ exports[`should render App with jp locale correctly 1`] = `
             },
             "git" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "git",
               "title": "Git",
             },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+              "title": "GitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+              "title": "GitHub Actions",
+            },
             "gitlab" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "gitlab",
               "title": "GitLab",
             },
             "gitlabCi" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "gitlabCi",
               "title": "GitLab CI",
             },
@@ -799,6 +876,28 @@ exports[`should render App with jp locale correctly 1`] = `
               "name": "hpeAlm",
               "title": "HPE ALM",
             },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+              "title": "Intellij IDEA",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+              "title": "jQuery",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+              "title": "Java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+              "title": "JavaScript",
+            },
             "jenkins" => Object {
               "img": "test-file-stub",
               "name": "jenkins",
@@ -809,25 +908,26 @@ exports[`should render App with jp locale correctly 1`] = `
               "name": "jira",
               "title": "Jira",
             },
-            "jQuery" => Object {
-              "img": "test-file-stub",
-              "name": "jQuery",
-              "title": "jQuery",
-            },
             "junit" => Object {
               "img": "test-file-stub",
               "name": "junit",
               "title": "jUnit",
             },
-            "intellijIdea" => Object {
+            "kafka" => Object {
               "img": "test-file-stub",
-              "name": "intellijIdea",
-              "title": "Intellij IDEA",
+              "name": "kafka",
+              "title": "",
             },
             "kibana" => Object {
               "img": "test-file-stub",
               "name": "kibana",
               "title": "Kibana",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+              "title": "Kubernetes",
             },
             "lombok" => Object {
               "img": "test-file-stub",
@@ -838,6 +938,18 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "mariaDb",
               "title": "Maria DB",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+              "title": "Maven",
+            },
+            "mongodb" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "mongodb",
+              "title": "MongoDB",
             },
             "mssql" => Object {
               "img": "test-file-stub",
@@ -853,6 +965,11 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "netBeans",
               "title": "NetBeans",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "name": "npm",
+              "title": "npm",
             },
             "oracle" => Object {
               "img": "test-file-stub",
@@ -878,6 +995,28 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "prometheus",
               "title": "Prometheus",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+              "title": "Python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
+              "title": "Quarkus",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+              "title": "React",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "name": "redis",
+              "title": "Redis",
             },
             "redmine" => Object {
               "img": "test-file-stub",
@@ -909,81 +1048,16 @@ exports[`should render App with jp locale correctly 1`] = `
               "name": "teamCity",
               "title": "Team City",
             },
+            "terraform" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "terraform",
+              "title": "Terraform",
+            },
             "tomcat" => Object {
               "img": "test-file-stub",
               "name": "tomcat",
               "title": "Tomcat",
-            },
-            "gitHub" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "gitHub",
-              "title": "GitHub",
-            },
-            "gitHubActions" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "gitHubActions",
-              "title": "GitHub Actions",
-            },
-            "java" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "java",
-              "title": "Java",
-            },
-            "javaScript" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "javaScript",
-              "title": "JavaScript",
-            },
-            "kafka" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "kafka",
-              "title": "",
-            },
-            "kubernetes" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "kubernetes",
-              "title": "Kubernetes",
-            },
-            "maven" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "maven",
-              "title": "Maven",
-            },
-            "npm" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "npm",
-              "title": "npm",
-            },
-            "python" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "python",
-              "title": "Python",
-            },
-            "quarkus" => Object {
-              "img": "test-file-stub",
-              "name": "quarkus",
-              "title": "Quarkus",
-            },
-            "react" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "react",
-              "title": "React",
-            },
-            "redis" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "redis",
-              "title": "Redis",
             },
             "travis" => Object {
               "img": "test-file-stub",
@@ -996,18 +1070,6 @@ exports[`should render App with jp locale correctly 1`] = `
               "isSkill": true,
               "name": "typeScript",
               "title": "TypeScript",
-            },
-            "webpack" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "webpack",
-              "title": "Webpack",
-            },
-            "xamarin" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "xamarin",
-              "title": "Xamarin",
             },
             "vBulletin" => Object {
               "img": "test-file-stub",
@@ -1024,10 +1086,21 @@ exports[`should render App with jp locale correctly 1`] = `
               "name": "vsCode",
               "title": "VS Code",
             },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "name": "webpack",
+              "title": "Webpack",
+            },
             "windowsForms" => Object {
               "img": "test-file-stub",
               "name": "windowsForms",
               "title": "Windows Forms",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+              "title": "Xamarin",
             },
           },
         },
@@ -1045,6 +1118,10 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "coursera",
             },
+            "hacker-rank" => Object {
+              "img": "test-file-stub",
+              "name": "hackerRank",
+            },
             "oracle" => Object {
               "img": "test-file-stub",
               "name": "oracle",
@@ -1061,10 +1138,21 @@ exports[`should render App with jp locale correctly 1`] = `
       TechnologyStorage {
         "provider": Object {
           "items": Map {
+            "algorithms" => Object {
+              "img": "test-file-stub",
+              "name": "algorithms",
+              "title": "Algorithms",
+            },
             "angular" => Object {
               "img": "test-file-stub",
               "name": "angular",
               "title": "Angular",
+            },
+            "aws" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "aws",
+              "title": "AWS",
             },
             "bitrise" => Object {
               "img": "test-file-stub",
@@ -1084,6 +1172,7 @@ exports[`should render App with jp locale correctly 1`] = `
             },
             "concourseCI" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "concourseCI",
               "title": "Concourse CI",
             },
@@ -1122,16 +1211,31 @@ exports[`should render App with jp locale correctly 1`] = `
             },
             "git" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "git",
               "title": "Git",
             },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+              "title": "GitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+              "title": "GitHub Actions",
+            },
             "gitlab" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "gitlab",
               "title": "GitLab",
             },
             "gitlabCi" => Object {
               "img": "test-file-stub",
+              "isSkill": true,
               "name": "gitlabCi",
               "title": "GitLab CI",
             },
@@ -1150,6 +1254,28 @@ exports[`should render App with jp locale correctly 1`] = `
               "name": "hpeAlm",
               "title": "HPE ALM",
             },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+              "title": "Intellij IDEA",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+              "title": "jQuery",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+              "title": "Java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+              "title": "JavaScript",
+            },
             "jenkins" => Object {
               "img": "test-file-stub",
               "name": "jenkins",
@@ -1160,25 +1286,26 @@ exports[`should render App with jp locale correctly 1`] = `
               "name": "jira",
               "title": "Jira",
             },
-            "jQuery" => Object {
-              "img": "test-file-stub",
-              "name": "jQuery",
-              "title": "jQuery",
-            },
             "junit" => Object {
               "img": "test-file-stub",
               "name": "junit",
               "title": "jUnit",
             },
-            "intellijIdea" => Object {
+            "kafka" => Object {
               "img": "test-file-stub",
-              "name": "intellijIdea",
-              "title": "Intellij IDEA",
+              "name": "kafka",
+              "title": "",
             },
             "kibana" => Object {
               "img": "test-file-stub",
               "name": "kibana",
               "title": "Kibana",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+              "title": "Kubernetes",
             },
             "lombok" => Object {
               "img": "test-file-stub",
@@ -1189,6 +1316,18 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "mariaDb",
               "title": "Maria DB",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+              "title": "Maven",
+            },
+            "mongodb" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "mongodb",
+              "title": "MongoDB",
             },
             "mssql" => Object {
               "img": "test-file-stub",
@@ -1204,6 +1343,11 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "netBeans",
               "title": "NetBeans",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "name": "npm",
+              "title": "npm",
             },
             "oracle" => Object {
               "img": "test-file-stub",
@@ -1229,6 +1373,28 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "prometheus",
               "title": "Prometheus",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+              "title": "Python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
+              "title": "Quarkus",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+              "title": "React",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "name": "redis",
+              "title": "Redis",
             },
             "redmine" => Object {
               "img": "test-file-stub",
@@ -1260,81 +1426,16 @@ exports[`should render App with jp locale correctly 1`] = `
               "name": "teamCity",
               "title": "Team City",
             },
+            "terraform" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "terraform",
+              "title": "Terraform",
+            },
             "tomcat" => Object {
               "img": "test-file-stub",
               "name": "tomcat",
               "title": "Tomcat",
-            },
-            "gitHub" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "gitHub",
-              "title": "GitHub",
-            },
-            "gitHubActions" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "gitHubActions",
-              "title": "GitHub Actions",
-            },
-            "java" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "java",
-              "title": "Java",
-            },
-            "javaScript" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "javaScript",
-              "title": "JavaScript",
-            },
-            "kafka" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "kafka",
-              "title": "",
-            },
-            "kubernetes" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "kubernetes",
-              "title": "Kubernetes",
-            },
-            "maven" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "maven",
-              "title": "Maven",
-            },
-            "npm" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "npm",
-              "title": "npm",
-            },
-            "python" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "python",
-              "title": "Python",
-            },
-            "quarkus" => Object {
-              "img": "test-file-stub",
-              "name": "quarkus",
-              "title": "Quarkus",
-            },
-            "react" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "react",
-              "title": "React",
-            },
-            "redis" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "redis",
-              "title": "Redis",
             },
             "travis" => Object {
               "img": "test-file-stub",
@@ -1347,18 +1448,6 @@ exports[`should render App with jp locale correctly 1`] = `
               "isSkill": true,
               "name": "typeScript",
               "title": "TypeScript",
-            },
-            "webpack" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "webpack",
-              "title": "Webpack",
-            },
-            "xamarin" => Object {
-              "img": "test-file-stub",
-              "isSkill": true,
-              "name": "xamarin",
-              "title": "Xamarin",
             },
             "vBulletin" => Object {
               "img": "test-file-stub",
@@ -1375,10 +1464,21 @@ exports[`should render App with jp locale correctly 1`] = `
               "name": "vsCode",
               "title": "VS Code",
             },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "name": "webpack",
+              "title": "Webpack",
+            },
             "windowsForms" => Object {
               "img": "test-file-stub",
               "name": "windowsForms",
               "title": "Windows Forms",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+              "title": "Xamarin",
             },
           },
         },

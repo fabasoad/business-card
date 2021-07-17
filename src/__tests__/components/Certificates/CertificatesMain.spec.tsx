@@ -30,12 +30,12 @@ test('should render CertificatesMain correctly', () => {
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith('business-card-certificates-title')
-  expect(cisFindByNameSpy).toHaveBeenCalledTimes(4)
-  new Array<string>('coursera', 'oracle', 'udemy').forEach((t) =>
+  expect(cisFindByNameSpy).toHaveBeenCalledTimes(5)
+  new Array<string>('coursera', 'oracle', 'udemy', 'hacker-rank').forEach((t) =>
     expect(cisFindByNameSpy).toHaveBeenCalledWith(t)
   )
-  expect(tsFindByNameSpy).toHaveBeenCalledTimes(4)
-  new Array<string>('python', 'java', 'react').forEach((t) =>
+  expect(tsFindByNameSpy).toHaveBeenCalledTimes(5)
+  new Array<string>('python', 'java', 'react', 'algorithms').forEach((t) =>
     expect(tsFindByNameSpy).toHaveBeenCalledWith(t)
   )
 })

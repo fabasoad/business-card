@@ -2,6 +2,7 @@
 import imgCoursera from '../../assets/images/certificate-issuers/coursera.png'
 import imgOracle from '../../assets/images/certificate-issuers/oracle.png'
 import imgUdemy from '../../assets/images/certificate-issuers/udemy.png'
+import imgHackerRank from '../../assets/images/certificate-issuers/hacker-rank.png'
 import { CertificateIssuerProvider, CertificateIssuer } from './types'
 
 export default class CertificateIssuerStorage {
@@ -10,6 +11,7 @@ export default class CertificateIssuerStorage {
   constructor(provider: CertificateIssuerProvider = {
     items: new Map<string, CertificateIssuer>([
       ['coursera', { name: 'coursera', img: imgCoursera }],
+      ['hacker-rank', { name: 'hackerRank', img: imgHackerRank }],
       ['oracle', { name: 'oracle', img: imgOracle }],
       ['udemy', { name: 'udemy', img: imgUdemy }]
     ])

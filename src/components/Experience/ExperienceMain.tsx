@@ -17,10 +17,34 @@ export default function ExperienceMain() {
           <hr />
         </div>
         <ul className="timeline">
+          <li>
+            <JobPeriod
+              fromMonth={6}
+              fromYear={2021}
+            />
+            <div className="timeline-panel">
+              <JobTitle
+                company="Woven Planet"
+                title={t('business-card-experience-job-woven-planet-3-title')}
+                location={t('business-card-location-tokyo')}
+              />
+              <div className="timeline-body">
+                <JobDescription
+                  count={1}
+                  i18nKeyPrefix="business-card-experience-job-woven-planet-3-description"
+                />
+                <JobTechnologies
+                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'prometheus', 'grafana', 'terraform', 'aws']}
+                />
+              </div>
+            </div>
+          </li>
           <li className="timeline-inverted">
             <JobPeriod
               fromMonth={9}
               fromYear={2020}
+              toMonth={5}
+              toYear={2021}
             />
             <div className="timeline-panel">
               <JobTitle
@@ -34,7 +58,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-2-description"
                 />
                 <JobTechnologies
-                  keys={['concourseCI', 'kubernetes', 'prometheus', 'grafana']}
+                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'prometheus', 'grafana']}
                 />
               </div>
             </div>

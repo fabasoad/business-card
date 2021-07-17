@@ -26,4 +26,11 @@
   "technology": "java",
   "i18nTitleKey": "business-card-certificate-4",
   "url": "https://www.youracclaim.com/badges/689b9d7e-cae5-4e36-8a1f-c8c34f104249/public_url"
+}, {
+  "id": "F75CDD8ED9F0",
+  "date": "2020-09",
+  "issuer": "hacker-rank",
+  "technology": "algorithms",
+  "i18nTitleKey": "business-card-certificate-5",
+  "url": "https://www.hackerrank.com/certificates/f75cdd8ed9f0"
 }]

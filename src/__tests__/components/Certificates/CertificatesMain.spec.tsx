@@ -34,7 +34,7 @@ test('should render CertificatesMain correctly', () => {
   new Array<string>('coursera', 'oracle', 'udemy', 'hacker-rank').forEach((t) =>
     expect(cisFindByNameSpy).toHaveBeenCalledWith(t)
   )
-  expect(tsFindByNameSpy).toHaveBeenCalledTimes(4)
+  expect(tsFindByNameSpy).toHaveBeenCalledTimes(5)
   new Array<string>('python', 'java', 'react', 'algorithms').forEach((t) =>
     expect(tsFindByNameSpy).toHaveBeenCalledWith(t)
   )

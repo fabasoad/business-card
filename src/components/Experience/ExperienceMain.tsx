@@ -34,7 +34,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-3-description"
                 />
                 <JobTechnologies
-                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'prometheus', 'grafana', 'terraform', 'aws']}
+                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'helm', 'prometheus', 'grafana', 'terraform', 'aws']}
                 />
               </div>
             </div>
@@ -58,7 +58,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-2-description"
                 />
                 <JobTechnologies
-                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'prometheus', 'grafana']}
+                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'helm', 'prometheus', 'grafana']}
                 />
               </div>
             </div>
@@ -82,7 +82,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-1-description"
                 />
                 <JobTechnologies
-                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'vsCode', 'intellijIdea']}
+                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea']}
                 />
               </div>
             </div>

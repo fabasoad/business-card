@@ -30,7 +30,7 @@ test('should render CertificatesMain correctly', () => {
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith('business-card-certificates-title')
-  expect(cisFindByNameSpy).toHaveBeenCalledTimes(4)
+  expect(cisFindByNameSpy).toHaveBeenCalledTimes(5)
   new Array<string>('coursera', 'oracle', 'udemy').forEach((t) =>
     expect(cisFindByNameSpy).toHaveBeenCalledWith(t)
   )

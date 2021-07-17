@@ -15,10 +15,8 @@ jobs:
         with:
           fetch-depth: 0
       - name: Build
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: yarn run build:prod
       - name: Deploy
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           target_branch: gh-pages

@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "2.4.2",
+  "version": "2.4.1",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -60,7 +60,7 @@
     "enzyme": "3.11.0",
     "enzyme-adapter-react-16": "1.15.6",
     "enzyme-to-json": "3.6.2",
-    "eslint": "7.25.0",
+    "eslint": "7.30.0",
     "eslint-config-google": "0.14.0",
     "eslint-plugin-react": "7.23.2",
     "file-loader": "6.2.0",

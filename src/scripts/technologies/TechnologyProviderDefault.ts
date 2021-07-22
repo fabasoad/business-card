@@ -50,6 +50,7 @@ import imgRedmine from '../../assets/images/technologies/redmine.png'
 import imgSilverlight from '../../assets/images/technologies/silverlight.png'
 import imgSmarty from '../../assets/images/technologies/smarty.png'
 import imgSpring from '../../assets/images/technologies/spring.png'
+import imgStackOverflow from '../../assets/images/technologies/stackoverflow.png'
 import imgSvn from '../../assets/images/technologies/svn.png'
 import imgTeamCity from '../../assets/images/technologies/teamCity.png'
 import imgTerraform from '../../assets/images/technologies/terraform.png'
@@ -119,6 +120,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'silverlight', img: imgSilverlight, title: 'Silverlight' },
     { name: 'smarty', img: imgSmarty, title: 'Smarty' },
     { name: 'spring', img: imgSpring, title: 'Spring' },
+    { name: 'stackoverflow', img: imgStackOverflow, title: 'StackOverflow' },
     { name: 'svn', img: imgSvn, title: 'SVN' },
     { name: 'teamCity', img: imgTeamCity, title: 'Team City' },
     { name: 'terraform', img: imgTerraform, isSkill: true, title: 'Terraform' },

@@ -16,6 +16,7 @@ import MenuMain from './Menu/MenuMain'
 import PortfolioMain from './Portfolio/PortfolioMain'
 import Resume from './Resume'
 import Skills from './Skills'
+import StatsMain from './Stats/StatsMain';
 
 interface AppProps {
 }
@@ -29,6 +30,7 @@ export function App(props: Props) {
       <Header />
       <MenuMain />
       <AboutMain />
+      <StatsMain />
       <Resume />
       <Skills />
       <ExperienceMain />

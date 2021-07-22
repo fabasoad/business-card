@@ -8,6 +8,7 @@ exports[`should render App with gb locale correctly 1`] = `
   <Header />
   <MenuMain />
   <Connect(AboutMain) />
+  <StatsMain />
   <Resume />
   <Skills
     technologyStorage={
@@ -291,6 +292,11 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "spring",
               "title": "Spring",
+            },
+            "stackoverflow" => Object {
+              "img": "test-file-stub",
+              "name": "stackoverflow",
+              "title": "StackOverflow",
             },
             "svn" => Object {
               "img": "test-file-stub",
@@ -669,6 +675,11 @@ exports[`should render App with gb locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "spring",
               "title": "Spring",
+            },
+            "stackoverflow" => Object {
+              "img": "test-file-stub",
+              "name": "stackoverflow",
+              "title": "StackOverflow",
             },
             "svn" => Object {
               "img": "test-file-stub",
@@ -754,6 +765,7 @@ exports[`should render App with jp locale correctly 1`] = `
   <Header />
   <MenuMain />
   <Connect(AboutMain) />
+  <StatsMain />
   <Resume />
   <Skills
     technologyStorage={
@@ -1037,6 +1049,11 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "spring",
               "title": "Spring",
+            },
+            "stackoverflow" => Object {
+              "img": "test-file-stub",
+              "name": "stackoverflow",
+              "title": "StackOverflow",
             },
             "svn" => Object {
               "img": "test-file-stub",
@@ -1415,6 +1432,11 @@ exports[`should render App with jp locale correctly 1`] = `
               "img": "test-file-stub",
               "name": "spring",
               "title": "Spring",
+            },
+            "stackoverflow" => Object {
+              "img": "test-file-stub",
+              "name": "stackoverflow",
+              "title": "StackOverflow",
             },
             "svn" => Object {
               "img": "test-file-stub",

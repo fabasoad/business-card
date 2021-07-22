@@ -21,11 +21,11 @@ export default class DevMessageProducer {
       'Hey! So, you are opening a Developer Tools..',
       'Okay.',
       'What are you looking for here?',
-      'It\'s one page serverless application.',
+      'It\'s one page application.',
       'Hosted on GitHub Pages. Written in TypeScript + React.',
-      'So, I don\'t think you can find anything interesting here )',
+      'So, I don\'t think you can find anything interesting here ;)',
       'But if you want to take a look on the code closer, here is the repo:\n* https://github.com/fabasoad/business-card',
-      'If you wanna hire me, contact me in LinkedIn and we can have a chat:\n* https://www.linkedin.com/in/yevhenfabizhevskyi/',
+      'Also, feel free to add me in LinkedIn:\n* https://www.linkedin.com/in/yevhenfabizhevskyi/',
       `Or if you want to buy me a cup of coffee (I love coffee very much), here are the resources where you can do it:\n${donates}`
     ]
   }

@@ -12,7 +12,7 @@
   "coverageThreshold": {
     "global": {
       "branches": 67.65,
-      "functions": 73.42,
+      "functions": 70.73,
       "lines": 85.45,
       "statements": 85.06
     }

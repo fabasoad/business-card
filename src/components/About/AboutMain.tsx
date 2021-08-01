@@ -13,7 +13,7 @@ import ExperienceCalculations, {
 } from '../../scripts/ExperienceCalculations'
 
 interface AboutMeProps {
-  calc: IExperienceCalculations
+  calc?: IExperienceCalculations
 }
 
 type Props = AboutMeProps & LinkDispatchProps & LinkStateProps

@@ -6,6 +6,8 @@ export default class GitHubService {
   private state: State = State.NOT_STARTED
   private starsAmount: number = 0
 
+  private static GITHUB_USERNAME: string = 'fabasoad'
+
   private constructor() {
   }
 
@@ -21,7 +23,7 @@ export default class GitHubService {
       this.state = State.STARTED
       const octokit: Octokit = new Octokit();
       return octokit.rest.repos.listForUser({
-        username: 'fabasoad'
+        username: GitHubService.GITHUB_USERNAME
       }).then(({data}) => {
         let res: number = 0
         for (let i = 0; i < data.length; i++) {

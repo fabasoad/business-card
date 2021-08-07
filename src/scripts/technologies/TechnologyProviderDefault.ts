@@ -29,6 +29,7 @@ import imgJunit from '../../assets/images/technologies/junit.png'
 import imgKafka from '../../assets/images/technologies/kafka.png'
 import imgKibana from '../../assets/images/technologies/kibana.png'
 import imgKubernetes from '../../assets/images/technologies/kubernetes.png'
+import imgLeetcode from '../../assets/images/technologies/leetcode.png'
 import imgLombok from '../../assets/images/technologies/lombok.png'
 import imgMariaDb from '../../assets/images/technologies/mariadb.png'
 import imgMaven from '../../assets/images/technologies/maven.png'
@@ -99,6 +100,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'kafka', img: imgKafka, title: ''},
     { name: 'kibana', img: imgKibana, title: 'Kibana' },
     { name: 'kubernetes', img: imgKubernetes, isSkill: true, title: 'Kubernetes' },
+    { name: 'leetcode', img: imgLeetcode, title: 'Leetcode' },
     { name: 'lombok', img: imgLombok, title: 'Lombok' },
     { name: 'mariaDb', img: imgMariaDb, title: 'Maria DB' },
     { name: 'maven', img: imgMaven, isSkill: true, title: 'Maven' },

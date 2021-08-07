@@ -11,7 +11,7 @@ import { AppState } from '../../store/configureStore'
 import { startSetLocale } from '../../store/locale/actions'
 
 interface LocaleDropDownProps {
-  getLocalesExceptOf: (code: string) => Locale[]
+  getLocalesExceptOf?: (code: string) => Locale[]
 }
 
 type Props = LocaleDropDownProps & LinkDispatchProps & LinkStateProps

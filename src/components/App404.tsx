@@ -7,7 +7,7 @@ import { AppState } from '../store/configureStore'
 import BaseConstants from '../scripts/BaseConstants'
 
 interface App404Props {
-  redirectUrl: string
+  redirectUrl?: string
 }
 
 type Props = App404Props & LinkDispatchProps & LinkStateProps

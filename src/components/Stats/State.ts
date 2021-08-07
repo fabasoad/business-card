@@ -1,7 +1,8 @@
 enum State {
   NOT_STARTED,
   STARTED,
-  FINISHED
+  FINISHED,
+  FAILED
 }
 
 export default State

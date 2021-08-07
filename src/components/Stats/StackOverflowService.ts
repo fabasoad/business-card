@@ -16,7 +16,7 @@ export default class StackOverflowService {
   }
 
   public async getReputation(): Promise<number> {
-    if (this.state == State.NOT_STARTED) {
+    if (this.state === State.NOT_STARTED || this.state === State.FAILED) {
       this.state = State.STARTED
       const userId: number = 215523;
       return fetch(`https://api.stackexchange.com/2.3/users/${userId}/associated`)
@@ -29,6 +29,10 @@ export default class StackOverflowService {
               return this.reputation
             }
           }
+        })
+        .catch(() => {
+          this.state = State.FAILED
+          return this.reputation
         })
     }
     return new Promise(() => this.reputation)

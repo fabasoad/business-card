@@ -1,7 +1,18 @@
+# MacOS
 .DS_Store
+
+# IDE
 .idea
 .vscode/*
-.idea
+
+# Env vars
+.envrc
+
+# Terraform
+.terraform
+.terraform.lock.hcl
+
+# Project
 coverage
 node_modules/
 public/*

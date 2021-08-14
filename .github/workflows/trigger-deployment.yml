@@ -13,6 +13,6 @@ jobs:
     name: Send request
     runs-on: ubuntu-latest
     steps:
-      - name: Send request to fabasoad/business-card-deployment
+      - name: Send deployment trigger
         run: |
-          curl -XPOST -u "${{ secrets.PAT_USERNAME }}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches --data '{"ref": "${{ github.ref }}"}'
+          curl -XPOST -u "${{ secrets.PAT_USERNAME }}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches --data '{"ref": "refs/heads/main"}'

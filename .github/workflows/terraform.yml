@@ -1,10 +1,11 @@
 ---
-name: Deploy
+name: Terraform
 
 on:
   push:
+    tags:
+      - 'v*'
     branches:
-      - 'main'
       - 'test-*'
 
 jobs:
@@ -33,5 +34,5 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
       - name: Terraform Apply
-#        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: cd terraform && terraform apply -auto-approve -var 'payload_path=./server/business-card-payload.zip'
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: cd terraform && terraform apply -auto-approve

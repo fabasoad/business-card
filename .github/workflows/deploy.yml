@@ -22,6 +22,7 @@ jobs:
           retention-days: 5
   terraform:
     name: Terraform
+    needs: prepare_bundle
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository

@@ -3,6 +3,8 @@ name: Trigger deployment
 
 on:
   push:
+    branches:
+      - 'test-*'
     tags:
       - 'v*'
 

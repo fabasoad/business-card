@@ -27,13 +27,13 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn run build:prod
-      - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2.5.0
-        with:
-          target_branch: gh-pages
-          build_dir: public
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+#      - name: Deploy
+#        uses: crazy-max/ghaction-github-pages@v2.5.0
+#        with:
+#          target_branch: gh-pages
+#          build_dir: public
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
       - name: Get latest release tag
         id: latest_release
         run: |

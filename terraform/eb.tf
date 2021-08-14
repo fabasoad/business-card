@@ -1,8 +1,4 @@
-locals {
-  payload_path = "${path.module}/${var.app}-payload.zip"
-}
-
-resource "aws_elastic_beanstalk_application" "business-card-app" {
+resource "aws_elastic_beanstalk_application" "business_card_app" {
   name        = "business-card-app"
   description = "Personal website"
   appversion_lifecycle {
@@ -12,17 +8,17 @@ resource "aws_elastic_beanstalk_application" "business-card-app" {
   }
 }
 
-resource "aws_elastic_beanstalk_application_version" "default" {
+resource "aws_elastic_beanstalk_application_version" "business_card_app_version" {
   name        = "business-card-${var.app_version}"
-  application = aws_elastic_beanstalk_application.business-card-app.name
+  application = aws_elastic_beanstalk_application.business_card_app.name
   description = "application version created by terraform"
-  bucket      = aws_s3_bucket.business-card-bucket.id
-  key         = aws_s3_bucket_object.business-card-payload.id
+  bucket      = aws_s3_bucket.business_card_bucket.id
+  key         = aws_s3_bucket_object.business_card_payload.id
 }
 
-resource "aws_elastic_beanstalk_environment" "business_card_env" {
+resource "aws_elastic_beanstalk_environment" "business_card_prod" {
   name                = "business-card-env"
-  application         = aws_elastic_beanstalk_application.business-card-app.name
+  application         = aws_elastic_beanstalk_application.business_card_app.name
   solution_stack_name = "64bit Amazon Linux 2 v5.4.4 running Node.js 14"
   setting {
     namespace = "aws:autoscaling:launchconfiguration"

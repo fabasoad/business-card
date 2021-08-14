@@ -6,6 +6,10 @@ on:
     tags:
       - 'v*'
     branches:
+      - 'main'
+      - 'bugfix/**'
+      - 'dependabot/*'
+      - 'feature/**'
       - 'test-*'
 
 jobs:

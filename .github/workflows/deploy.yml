@@ -18,7 +18,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: business-card-payload
-          path: server/business-card-payload.zip
+          path: business-card-payload.zip
           retention-days: 5
   terraform:
     name: Terraform

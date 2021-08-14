@@ -7,12 +7,29 @@ on:
       - 'test-*'
 
 jobs:
+  prepare_bundle:
+    name: Prepare bundle
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Prepare bundle
+        run: cd server && ./build_bundle.sh
+      - uses: actions/upload-artifact@v2
+        with:
+          name: business-card-payload
+          path: server/business-card-payload.zip
+          retention-days: 5
   terraform:
     name: Terraform
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Download payload
+        uses: actions/download-artifact@v2
+        with:
+          name: business-card-payload
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:
@@ -27,13 +44,11 @@ jobs:
         run: cd terraform && terraform validate -no-color
       - name: Terraform Plan
         id: plan
-        run: cd terraform && terraform plan -no-color
+        run: cd terraform && terraform plan -no-color -var 'payload_path=../business-card-payload.zip'
         continue-on-error: true
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
-      - name: Prepare bundle
-        run: cd server && ./build_bundle.sh
 #      - name: Terraform Apply
 #        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-#        run: cd terraform && terraform apply -auto-approve
+#        run: cd terraform && terraform apply -auto-approve -var 'payload_path=./server/business-card-payload.zip'

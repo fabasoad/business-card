@@ -7,10 +7,10 @@ variable "aws_region" {
   description = "AWS region"
 }
 variable "environment" {
-  default     = "dev"
+  default     = "prod"
   description = "Environment (prod/stg/dev)"
 }
-variable "lambda_name" {
-  default     = "business_card"
-  description = "Name of AWS lambda function"
+variable "app_version" {
+  default     = "2.6.1"
+  description = "Application version"
 }

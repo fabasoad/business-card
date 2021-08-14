@@ -1,0 +1,27 @@
+{
+  "name": "business-card-server",
+  "version": "1.0.0",
+  "description": "Web server for website.",
+  "homepage": "https://fabasoad.github.io/business-card/",
+  "scripts": {
+    "start:web": "nodemon --watch . -r dotenv/config .web.js"
+  },
+  "bugs": {
+    "url": "https://github.com/fabasoad/business-card/issues",
+    "email": "fabasoad@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fabasoad/business-card.git"
+  },
+  "author": {
+    "name": "Yevhen Fabizhevskyi",
+    "email": "fabasoad@gmail.com",
+    "url": "https://github.com/fabasoad"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "express": "4.17.1",
+    "express-rate-limit": "5.3.0"
+  }
+}

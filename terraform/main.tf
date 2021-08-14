@@ -8,7 +8,7 @@ terraform {
     organization = "fabasoad"
 
     workspaces {
-      name = "gh-actions-business-card"
+      name = "business-card"
     }
   }
 }

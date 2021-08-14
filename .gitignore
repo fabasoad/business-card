@@ -1,7 +1,15 @@
+# MacOS
 .DS_Store
+
+# IDE
 .idea
 .vscode/*
-.idea
+
+# Env vars
+.envrc
+.env.*
+
+# Project
 coverage
 node_modules/
 public/*

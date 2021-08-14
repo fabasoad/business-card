@@ -4,7 +4,8 @@
   "description": "Web server for website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
-    "start:web": "nodemon --watch . -r dotenv/config .web.js"
+    "start": "node app.js",
+    "start:dev": "PUBLIC_PATH='../public' node app.js"
   },
   "bugs": {
     "url": "https://github.com/fabasoad/business-card/issues",
@@ -20,7 +21,7 @@
     "url": "https://github.com/fabasoad"
   },
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "express": "4.17.1",
     "express-rate-limit": "5.3.0"
   }

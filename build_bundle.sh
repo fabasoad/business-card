@@ -1,21 +1,18 @@
 #!/usr/bin/env bash
 app_name='business-card'
 
+echo -ne '[1/4] Cleaning... '
 rm -f terraform/${app_name}-payload.zip
+echo 'Done.'
 
-echo '[1/4] Building latest website bundle'
+echo '[2/4] Building latest website bundle'
 yarn run build:prod
 
-echo '[2/4] Zipping bundle'
+echo '[3/4] Zipping bundle'
 zip -r ${app_name}-payload.zip public
-mv ${app_name}-payload.zip server/${app_name}-payload.zip
-cd server || exit
-
-echo '[3/4] Installing latest server dependencies'
-npm install
 
 echo '[4/4] Zipping server'
-zip -r ${app_name}-payload.zip node_modules package.json package-lock.json web.js
-mv ${app_name}-payload.zip ../terraform/${app_name}-payload.zip
+zip -j ${app_name}-payload.zip server/{package.json,app.js}
+mv ${app_name}-payload.zip terraform/${app_name}-payload.zip
 
 echo 'Done!'

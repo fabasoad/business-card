@@ -4,6 +4,7 @@ name: Deploy
 on:
   push:
     branches:
+      - 'main'
       - 'test-*'
 
 jobs:
@@ -19,9 +20,6 @@ jobs:
         uses: hashicorp/setup-terraform@v1
         with:
           cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
-      - name: Terraform Format
-        id: fmt
-        run: cd terraform && terraform fmt -check
       - name: Terraform Init
         id: init
         run: cd terraform && terraform init
@@ -34,6 +32,6 @@ jobs:
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
-#      - name: Terraform Apply
+      - name: Terraform Apply
 #        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-#        run: cd terraform && terraform apply -auto-approve -var 'payload_path=./server/business-card-payload.zip'
+        run: cd terraform && terraform apply -auto-approve -var 'payload_path=./server/business-card-payload.zip'

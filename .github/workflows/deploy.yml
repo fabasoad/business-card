@@ -45,7 +45,7 @@ jobs:
         run: cd terraform && terraform validate -no-color
       - name: Terraform Plan
         id: plan
-        run: cd terraform && terraform plan -no-color -var 'payload_path=../business-card-payload.zip'
+        run: cd terraform && terraform plan -no-color
         continue-on-error: true
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'

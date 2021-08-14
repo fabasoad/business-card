@@ -7,19 +7,6 @@ on:
       - 'test-*'
 
 jobs:
-  prepare_bundle:
-    name: Prepare bundle
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Prepare bundle
-        run: ./build_bundle.sh
-      - uses: actions/upload-artifact@v2
-        with:
-          name: business-card-payload
-          path: business-card-payload.zip
-          retention-days: 5
   terraform:
     name: Terraform
     needs: prepare_bundle
@@ -27,10 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Download payload
-        uses: actions/download-artifact@v2
-        with:
-          name: business-card-payload
+      - name: Prepare bundle
+        run: ./build_bundle.sh
       - name: Move bundle
         run: mv business-card-payload.zip ./terraform/business-card-payload.zip
       - name: Setup Terraform

@@ -9,7 +9,7 @@ const app = express();
 
 const RateLimit = require('express-rate-limit');
 const limiter = new RateLimit({
-  windowMs: 60 * 1000, // 1 minute
+  windowMs: 3 * 1000,
   max: 150,
 });
 

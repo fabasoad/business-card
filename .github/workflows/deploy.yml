@@ -4,7 +4,7 @@ name: Deploy
 on:
   push:
     branches:
-      - 'back-test-*'
+      - 'test-*'
 
 jobs:
   terraform:
@@ -34,9 +34,9 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
       - name: Prepare bundle
-        run: zip business_card_payload.zip file.txt
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: terraform apply -auto-approve
+        run: cd server && ./build_bundle.sh
+#      - name: Terraform Apply
+#        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+#        run: terraform apply -auto-approve
 
 

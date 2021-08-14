@@ -9,10 +9,6 @@
 .envrc
 .env.*
 
-# Terraform
-.terraform
-.terraform.lock.hcl
-
 # Project
 coverage
 node_modules/

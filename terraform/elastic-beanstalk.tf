@@ -1,3 +1,7 @@
+locals {
+  payload_path = "${path.module}/${var.app}-payload.zip"
+}
+
 resource "aws_elastic_beanstalk_application" "business-card-app" {
   name        = "business-card-app"
   description = "Personal website"
@@ -13,8 +17,7 @@ resource "aws_s3_bucket" "business-card-bucket" {
 resource "aws_s3_bucket_object" "business-card-payload" {
   bucket = aws_s3_bucket.business-card-bucket.id
   key    = "beanstalk/${var.app}-payload.zip"
-  source = var.payload_path
-  etag   = md5(file(var.payload_path))
+  source = local.payload_path
 }
 
 resource "aws_elastic_beanstalk_application_version" "default" {

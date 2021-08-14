@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 app_name='business-card'
 
-cd ..
-rm -f ${app_name}-payload.zip
+rm -f terraform/${app_name}-payload.zip
 
 echo '[1/4] Building latest website bundle'
 yarn run build:prod
@@ -17,6 +16,6 @@ npm install
 
 echo '[4/4] Zipping server'
 zip -r ${app_name}-payload.zip node_modules package.json package-lock.json web.js
-mv ${app_name}-payload.zip ../${app_name}-payload.zip
+mv ${app_name}-payload.zip ../terraform/${app_name}-payload.zip
 
 echo 'Done!'

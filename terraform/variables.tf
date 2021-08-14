@@ -14,6 +14,3 @@ variable "app_version" {
   default     = "2.6.1"
   description = "Application version"
 }
-variable "payload_path" {
-  description = "Path to the zip payload"
-}

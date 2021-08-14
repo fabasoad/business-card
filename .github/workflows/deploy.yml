@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Prepare bundle
-        run: cd server && ./build_bundle.sh
+        run: ./build_bundle.sh
       - uses: actions/upload-artifact@v2
         with:
           name: business-card-payload
@@ -31,6 +31,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: business-card-payload
+      - name: Move bundle
+        run: mv business-card-payload.zip ./terraform/business-card-payload.zip
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
         with:

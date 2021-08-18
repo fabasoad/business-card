@@ -92,7 +92,7 @@
     "redux-mock-store": "1.5.4",
     "redux-thunk": "2.3.0",
     "sass-loader": "12.1.0",
-    "snyk": "1.681.0",
+    "snyk": "1.683.0",
     "style-loader": "3.2.1",
     "ts-jest": "26.5.6",
     "ts-loader": "9.2.5",
@@ -106,6 +106,6 @@
   },
   "snyk": true,
   "dependencies": {
-    "@octokit/rest": "18.9.0"
+    "@octokit/rest": "18.9.1"
   }
 }

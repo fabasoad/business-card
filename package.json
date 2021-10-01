@@ -106,6 +106,6 @@
   },
   "snyk": true,
   "dependencies": {
-    "@octokit/rest": "18.10.0"
+    "@octokit/rest": "18.11.4"
   }
 }

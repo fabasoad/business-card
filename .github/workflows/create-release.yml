@@ -27,6 +27,12 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn run build:prod
+      - name: Deploy to GitHub Pages
+        if: ${{ true }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
       - name: Get latest release tag
         id: latest_release
         run: |
@@ -57,17 +63,6 @@ jobs:
             ${{ steps.changelog.outputs.body }}
           draft: false
           prerelease: false
-  github_pages:
-    name: Deploy to GitHub Pages
-    if: ${{ true }}
-    needs: create_release
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
   trigger_deployment:
     name: Trigger deployment to AWS
     if: ${{ false }}

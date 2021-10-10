@@ -9,12 +9,13 @@
   "coverageReporters": [
     "lcov", "text", "text-summary"
   ],
+  "testEnvironment": "jsdom",
   "coverageThreshold": {
     "global": {
       "branches": 67.65,
-      "functions": 65.91,
-      "lines": 85.45,
-      "statements": 85.06
+      "functions": 64.77,
+      "lines": 85.04,
+      "statements": 85.04
     }
   },
   "moduleFileExtensions": ["ts", "tsx", "js"],

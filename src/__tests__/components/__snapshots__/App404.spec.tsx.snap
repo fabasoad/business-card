@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`redirecting should work correctly 1`] = `
+exports[`App404 redirecting should work correctly 1`] = `
 <div
   className="font-regular font-non-jp"
 >
@@ -53,7 +53,7 @@ exports[`redirecting should work correctly 1`] = `
 </div>
 `;
 
-exports[`should render App404 with gb locale correctly 1`] = `
+exports[`App404 should render App404 with gb locale correctly 1`] = `
 <div
   className="font-regular font-non-jp"
 >
@@ -106,7 +106,7 @@ exports[`should render App404 with gb locale correctly 1`] = `
 </div>
 `;
 
-exports[`should render App404 with jp locale correctly 1`] = `
+exports[`App404 should render App404 with jp locale correctly 1`] = `
 <div
   className="font-regular font-jp"
 >

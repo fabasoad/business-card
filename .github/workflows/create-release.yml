@@ -8,13 +8,10 @@ on:
     branches:
       - 'dependabot/*'
 
-env:
-  DEPLOYMENT_TARGET: 'GITHUB_PAGES'
-
 jobs:
   trigger_deployment:
     name: Trigger deployment
-    if: ${{ DEPLOYMENT_TARGET == 'AWS' }}
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
       - name: Send deployment trigger
@@ -72,7 +69,7 @@ jobs:
           prerelease: false
   github_pages:
     name: Deploy to GitHub Pages
-    if: ${{ DEPLOYMENT_TARGET == 'GITHUB_PAGES' }}
+    if: ${{ true }}
     needs: create_release
     runs-on: ubuntu-latest
     steps:

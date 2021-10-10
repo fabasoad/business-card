@@ -9,6 +9,7 @@
   "coverageReporters": [
     "lcov", "text", "text-summary"
   ],
+  "testEnvironment": "jsdom",
   "coverageThreshold": {
     "global": {
       "branches": 67.65,

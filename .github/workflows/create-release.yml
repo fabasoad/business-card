@@ -5,9 +5,11 @@ on:
   push:
     tags:
       - 'v*'
+    branches:
+      - 'dependabot/*'
 
 env:
-  DEPLOYMENT_TARGET: GITHUB_PAGES
+  DEPLOYMENT_TARGET: 'GITHUB_PAGES'
 
 jobs:
   trigger_deployment:

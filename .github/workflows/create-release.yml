@@ -9,14 +9,6 @@ on:
       - 'dependabot/*'
 
 jobs:
-  trigger_deployment:
-    name: Trigger deployment
-    if: ${{ false }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Send deployment trigger
-        run: |
-          curl -XPOST -u "${{ secrets.PAT_USERNAME }}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches --data '{"ref": "refs/heads/main"}'
   create_release:
     name: Release
     runs-on: ubuntu-latest
@@ -74,9 +66,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2.5.0
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          target_branch: gh-pages
-          build_dir: public
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+  trigger_deployment:
+    name: Trigger deployment
+    if: ${{ false }}
+    needs: create_release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send deployment trigger
+        run: |
+          curl -XPOST -u "${{ secrets.PAT_USERNAME }}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches --data '{"ref": "refs/heads/main"}'

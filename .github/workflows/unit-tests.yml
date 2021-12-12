@@ -17,12 +17,12 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v2.4.0
         with:
           ref: ${{ github.ref }}
       - name: Cache node_modules
         id: yarn-cache
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.7
         with:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}

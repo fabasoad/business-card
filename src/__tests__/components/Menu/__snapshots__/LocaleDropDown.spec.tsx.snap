@@ -2,6 +2,8 @@
 
 exports[`should render LocaleDropDown correctly 1`] = `
 <Dropdown
+  align="start"
+  autoClose={true}
   navbar={false}
 >
   <DropdownToggle
@@ -15,19 +17,10 @@ exports[`should render LocaleDropDown correctly 1`] = `
     RU
   </DropdownToggle>
   <DropdownMenu
-    align="left"
-    alignRight={false}
     flip={true}
   >
     <DropdownItem
-      as={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
       bsPrefix="nav-link"
-      disabled={false}
       eventKey="gb"
       key="gb"
       onSelect={[Function]}

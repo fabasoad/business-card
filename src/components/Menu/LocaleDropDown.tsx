@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Dropdown } from 'react-bootstrap'
+import Dropdown from 'react-bootstrap/Dropdown'
 import FlagIconFactory from 'react-flag-icon-css'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -18,6 +18,7 @@ type Props = LocaleDropDownProps & LinkDispatchProps & LinkStateProps
 
 export function LocaleDropDown(props: Props) {
   const handleClick = (locale: Locale): void => {
+    console.log(locale);
     props.startSetLocale(locale)
   }
   const FlagIcon = FlagIconFactory(React, { 'useCssModules': false })
@@ -30,7 +31,7 @@ export function LocaleDropDown(props: Props) {
       <Dropdown.Menu>
         {props.getLocalesExceptOf(props.locale.code).map((l) => {
           return (
-            <Dropdown.Item onSelect={() => handleClick(l)} bsPrefix="nav-link" eventKey={l.code} key={l.code}>
+            <Dropdown.Item onClick={() => handleClick(l)} bsPrefix="nav-link" eventKey={l.code} key={l.code}>
               <FlagIcon code={l.code} />
               {l.title}
             </Dropdown.Item>

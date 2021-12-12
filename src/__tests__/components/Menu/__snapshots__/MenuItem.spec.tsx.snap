@@ -2,12 +2,6 @@
 
 exports[`should render MenuItem correctly 1`] = `
 <NavLink
-  as={
-    Object {
-      "$$typeof": Symbol(react.forward_ref),
-      "render": [Function],
-    }
-  }
   disabled={false}
   eventKey="#test-menu-item"
   href="#test-menu-item"

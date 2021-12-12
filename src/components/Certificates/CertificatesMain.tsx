@@ -1,6 +1,9 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import CertificateItem from './CertificateItem'
+import Container from 'react-bootstrap/Container'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
 
 import * as items from './items.json'
 import CertificateIssuerStorage
@@ -20,21 +23,22 @@ export default function CertificatesMain(props: CertificatesMainProps) {
         <h2>{t('business-card-certificates-title')}</h2>
         <hr />
       </div>
-      <div className="container">
-        <div className="row justify-content-center">
+      <Container>
+        <Row xs={2} md={3} lg={5}>
           {items
             .sort((a, b) => -a.date.localeCompare(b.date))
-            .map((item) => <CertificateItem
-              key={item.id}
-              id={item.id}
-              issueDate={new Date(item.date)}
-              issuer={props.certificateIssuerStorage.findByName(item.issuer)}
-              technology={props.technologyStorage.findByName(item.technology)}
-              i18nTitleKey={item.i18nTitleKey}
-              url={item.url}
-            />)}
-        </div>
-      </div>
+            .map((item) => <Col lg={true} className="mb-2" key={item.id}>
+              <CertificateItem
+                id={item.id}
+                issueDate={new Date(item.date)}
+                issuer={props.certificateIssuerStorage.findByName(item.issuer)}
+                technology={props.technologyStorage.findByName(item.technology)}
+                i18nTitleKey={item.i18nTitleKey}
+                url={item.url}
+              />
+            </Col>)}
+        </Row>
+      </Container>
     </div>
   )
 }

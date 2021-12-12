@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Image, Toast } from 'react-bootstrap'
+import Card from 'react-bootstrap/Card'
 import { useTranslation } from 'react-i18next'
 import DateLocale from '../controls/DateLocale'
 import { Technology } from '../../scripts/technologies/types'
@@ -17,20 +18,25 @@ interface CertificateItemProps {
 export default function CertificateItem(props: CertificateItemProps) {
   const { t } = useTranslation()
   return (
-    <Toast className="mb-4 mx-2 w-100">
-      <Toast.Header closeButton={false}>
+    <Card>
+      <Card.Header>
         {props.issuer.img &&
-          <Image src={props.issuer.img} className="mr-2" rounded />}
-        <strong className="mr-2">{props.issuer.name}</strong>
-        <DateLocale className="mr-auto" month={props.issueDate.getMonth() + 1} year={props.issueDate.getFullYear()} />
-        <small>{props.id}</small>
-        <Image className="ml-2" src={props.technology.img} />
-      </Toast.Header>
-      <Toast.Body className="text-center">
-        <a target="_blank" rel="noopener noreferrer" href={props.url}>
-          {t(props.i18nTitleKey)}
-        </a>
-      </Toast.Body>
-    </Toast>
+          <Card.Img src={props.issuer.img} className="me-2" />}
+        {props.issuer.name}
+      </Card.Header>
+      <Card.Body>
+        <Card.Text>
+          <Card.Link target="_blank" rel="noopener noreferrer" href={props.url}>
+            {t(props.i18nTitleKey)}
+          </Card.Link>
+        </Card.Text>
+      </Card.Body>
+      <Card.Footer>
+        <DateLocale
+          month={props.issueDate.getMonth() + 1}
+          year={props.issueDate.getFullYear()}
+        />
+      </Card.Footer>
+    </Card>
   )
 }

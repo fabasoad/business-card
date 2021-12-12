@@ -91,7 +91,7 @@
     "redux": "4.1.2",
     "redux-mock-store": "1.5.4",
     "redux-thunk": "2.4.1",
-    "sass-loader": "12.1.0",
+    "sass-loader": "12.4.0",
     "snyk": "1.789.0",
     "style-loader": "3.2.1",
     "ts-jest": "27.1.1",

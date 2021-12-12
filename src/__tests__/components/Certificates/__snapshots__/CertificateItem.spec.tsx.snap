@@ -1,53 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render CertificateItem correctly 1`] = `
-<Toast
-  className="mb-4 mx-2 w-100"
->
-  <ToastHeader
-    closeButton={false}
-    closeLabel="Close"
-  >
-    <Image
-      className="mr-2"
-      fluid={false}
-      rounded={true}
-      roundedCircle={false}
+<Component>
+  <Component>
+    <Component
+      className="me-2"
       src="test-issuer-img"
-      thumbnail={false}
     />
-    <strong
-      className="mr-2"
-    >
-      test-issuer-name
-    </strong>
+    test-issuer-name
+  </Component>
+  <div>
+    <p>
+      <a
+        href="test-url"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        test-title-key
+      </a>
+    </p>
+  </div>
+  <div>
     <Connect(DateLocale)
-      className="mr-auto"
       month={1}
       year={2020}
     />
-    <small>
-      test-id
-    </small>
-    <Image
-      className="ml-2"
-      fluid={false}
-      rounded={false}
-      roundedCircle={false}
-      src="test-technology-img"
-      thumbnail={false}
-    />
-  </ToastHeader>
-  <ToastBody
-    className="text-center"
-  >
-    <a
-      href="test-url"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      test-title-key
-    </a>
-  </ToastBody>
-</Toast>
+  </div>
+</Component>
 `;

@@ -5,9 +5,7 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
   className="light-component"
   id="experience"
 >
-  <div
-    className="container"
-  >
+  <Component>
     <div
       className="section-title text-center"
     >
@@ -490,6 +488,6 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
         </div>
       </li>
     </ul>
-  </div>
+  </Component>
 </div>
 `;

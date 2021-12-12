@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
+import Container from 'react-bootstrap/Container'
 
 import JobAchievements from './JobAchievements'
 import JobDescription from './JobDescription'
@@ -11,7 +12,7 @@ export default function ExperienceMain() {
   const { t } = useTranslation()
   return (
     <div id="experience" className="light-component">
-      <div className="container">
+      <Container>
         <div className="section-title text-center">
           <h2>{t('business-card-experience-title')}</h2>
           <hr />
@@ -293,7 +294,7 @@ export default function ExperienceMain() {
             </div>
           </li>
         </ul>
-      </div>
+      </Container>
     </div>
   )
 }

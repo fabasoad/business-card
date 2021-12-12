@@ -1,10 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render LocaleDropDown correctly 1`] = `
-<Dropdown
-  navbar={false}
->
-  <DropdownToggle
+<Component>
+  <Component
     bsPrefix="nav-link dropdown-toggle"
     id="btnLocale"
     variant={null}
@@ -13,30 +11,21 @@ exports[`should render LocaleDropDown correctly 1`] = `
       code="ru"
     />
     RU
-  </DropdownToggle>
+  </Component>
   <DropdownMenu
-    align="left"
-    alignRight={false}
     flip={true}
   >
-    <DropdownItem
-      as={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "render": [Function],
-        }
-      }
+    <Component
       bsPrefix="nav-link"
-      disabled={false}
       eventKey="gb"
       key="gb"
-      onSelect={[Function]}
+      onClick={[Function]}
     >
       <FlagIcon
         code="gb"
       />
       EN
-    </DropdownItem>
+    </Component>
   </DropdownMenu>
-</Dropdown>
+</Component>
 `;

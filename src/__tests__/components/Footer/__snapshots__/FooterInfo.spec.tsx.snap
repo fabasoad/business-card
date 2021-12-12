@@ -27,7 +27,7 @@ exports[`should render FooterInfo correctly 1`] = `
     </li>
     <li>
       <Badge
-        bg="light"
+        bg="secondary"
         pill={true}
       >
         business-card-version

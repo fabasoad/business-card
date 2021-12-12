@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { Image, Toast } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import { useTranslation } from 'react-i18next'
 import DateLocale from '../controls/DateLocale'

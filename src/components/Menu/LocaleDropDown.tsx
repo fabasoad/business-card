@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownToggle from 'react-bootstrap/DropdownToggle'
 import FlagIconFactory from 'react-flag-icon-css'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -24,10 +25,10 @@ export function LocaleDropDown(props: Props) {
   const FlagIcon = FlagIconFactory(React, { 'useCssModules': false })
   return (
     <Dropdown>
-      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
+      <DropdownToggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
         <FlagIcon code={props.locale.code} />
         {props.locale.title}
-      </Dropdown.Toggle>
+      </DropdownToggle>
       <Dropdown.Menu>
         {props.getLocalesExceptOf(props.locale.code).map((l) => {
           return (

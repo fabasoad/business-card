@@ -33,34 +33,65 @@ exports[`should render AboutMain correctly 1`] = `
         />
       </div>
       <div
-        className="col-md-8 col-md-offset-2 text-center"
+        className="col-md-8 col-md-offset-2"
       >
-        <div
-          className="about-text"
+        <ul
+          className="mt-3"
         >
-          <ul
-            className="list-unstyled mt-3"
-          >
-            <li>
-              business-card-about-me-general-list-item-1
-            </li>
-            <li>
-              business-card-about-me-general-list-item-2
-            </li>
-            <li>
-              business-card-about-me-general-list-item-3
-            </li>
-            <li>
-              business-card-about-me-general-list-item-4
-            </li>
-            <li>
-              business-card-about-me-general-list-item-5
-            </li>
-            <li>
-              business-card-about-me-general-list-item-6
-            </li>
-          </ul>
-        </div>
+          <li>
+            business-card-about-me-general-list-item-1
+          </li>
+          <li>
+            business-card-about-me-general-list-item-2
+          </li>
+          <li>
+            business-card-about-me-general-list-item-3
+          </li>
+          <li>
+            business-card-about-me-general-list-item-4
+          </li>
+          <li>
+            business-card-about-me-general-list-item-5
+          </li>
+          <li>
+            business-card-about-me-general-list-item-6
+          </li>
+          <li>
+            business-card-about-me-general-list-item-7
+          </li>
+          <li>
+            business-card-about-me-general-list-item-8
+          </li>
+          <li>
+            business-card-about-me-general-list-item-9
+          </li>
+          <li>
+            business-card-about-me-general-list-item-10
+          </li>
+          <li>
+            business-card-about-me-general-list-item-11
+          </li>
+          <li>
+            business-card-about-me-general-list-item-12
+          </li>
+          <li>
+            business-card-about-me-general-list-item-13
+            <ul>
+              <li>
+                business-card-about-me-general-list-item-14
+              </li>
+              <li>
+                business-card-about-me-general-list-item-15
+              </li>
+              <li>
+                business-card-about-me-general-list-item-16
+              </li>
+            </ul>
+          </li>
+          <li>
+            business-card-about-me-general-list-item-17
+          </li>
+        </ul>
       </div>
     </div>
   </div>

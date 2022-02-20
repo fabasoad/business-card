@@ -20,7 +20,7 @@ test('should render AboutMain correctly', () => {
   expect(totalHumanizeSpy).toHaveBeenCalledTimes(1)
   expect(totalHumanizeSpy).toHaveBeenCalledWith(locale.code)
 
-  expect(i18next.t).toBeCalledTimes(7)
+  expect(i18next.t).toBeCalledTimes(18)
   expect(i18next.t).toHaveBeenCalledWith(
     expect.stringMatching(/^business-card-about-me-title$/)
   )

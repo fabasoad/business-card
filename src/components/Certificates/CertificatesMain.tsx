@@ -1,9 +1,7 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import CertificateItem from './CertificateItem'
-import Container from 'react-bootstrap/Container'
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
+import { Container, Col, Row } from 'react-bootstrap'
 
 import * as items from './items.json'
 import CertificateIssuerStorage

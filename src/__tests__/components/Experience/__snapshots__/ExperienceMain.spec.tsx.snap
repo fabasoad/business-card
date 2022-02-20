@@ -5,7 +5,9 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
   className="light-component"
   id="experience"
 >
-  <Component>
+  <Container
+    fluid={false}
+  >
     <div
       className="section-title text-center"
     >
@@ -488,6 +490,6 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
         </div>
       </li>
     </ul>
-  </Component>
+  </Container>
 </div>
 `;

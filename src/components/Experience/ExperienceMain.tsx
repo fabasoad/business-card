@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import Container from 'react-bootstrap/Container'
+import { Container } from 'react-bootstrap'
 
 import JobAchievements from './JobAchievements'
 import JobDescription from './JobDescription'

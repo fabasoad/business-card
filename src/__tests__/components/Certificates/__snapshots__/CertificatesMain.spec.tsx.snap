@@ -13,8 +13,10 @@ exports[`should render CertificatesMain correctly 1`] = `
     </h2>
     <hr />
   </div>
-  <Component>
-    <Component
+  <Container
+    fluid={false}
+  >
+    <Row
       lg={5}
       md={3}
       xs={2}
@@ -144,7 +146,7 @@ exports[`should render CertificatesMain correctly 1`] = `
           url="https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
         />
       </Col>
-    </Component>
-  </Component>
+    </Row>
+  </Container>
 </div>
 `;

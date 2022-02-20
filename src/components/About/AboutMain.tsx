@@ -20,8 +20,7 @@ type Props = AboutMeProps & LinkDispatchProps & LinkStateProps
 
 export function AboutMain(props: Props) {
   const generalListItem1Keys = {
-    totalExperience: props.calc.totalHumanize(props.locale.code),
-    agileExperience: props.calc.agileHumanize(props.locale.code)
+    totalExperience: props.calc.totalHumanize(props.locale.code)
   }
   return (
     <div id="about">
@@ -43,22 +42,35 @@ export function AboutMain(props: Props) {
               alt="Oracle 1Z0-808"
             />
           </div>
-          <div className="col-md-8 col-md-offset-2 text-center">
-            <div className="about-text">
-              <ul className="list-unstyled mt-3">
-                <li>
-                  {i18n.t(
-                    'business-card-about-me-general-list-item-1',
-                    generalListItem1Keys
-                  )}
-                </li>
-                <li>{i18n.t('business-card-about-me-general-list-item-2')}</li>
-                <li>{i18n.t('business-card-about-me-general-list-item-3')}</li>
-                <li>{i18n.t('business-card-about-me-general-list-item-4')}</li>
-                <li>{i18n.t('business-card-about-me-general-list-item-5')}</li>
-                <li>{i18n.t('business-card-about-me-general-list-item-6')}</li>
-              </ul>
-            </div>
+          <div className="col-md-8 col-md-offset-2">
+            <ul className="mt-3">
+              <li>
+                {i18n.t(
+                  'business-card-about-me-general-list-item-1',
+                  generalListItem1Keys
+                )}
+              </li>
+              <li>{i18n.t('business-card-about-me-general-list-item-2')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-3')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-4')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-5')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-6')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-7')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-8')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-9')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-10')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-11')}</li>
+              <li>{i18n.t('business-card-about-me-general-list-item-12')}</li>
+              <li>
+                {i18n.t('business-card-about-me-general-list-item-13')}
+                <ul>
+                  <li>{i18n.t('business-card-about-me-general-list-item-14')}</li>
+                  <li>{i18n.t('business-card-about-me-general-list-item-15')}</li>
+                  <li>{i18n.t('business-card-about-me-general-list-item-16')}</li>
+                </ul>
+              </li>
+              <li>{i18n.t('business-card-about-me-general-list-item-17')}</li>
+            </ul>
           </div>
         </div>
       </div>

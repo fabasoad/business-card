@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render JobResponsibilities correctly 1`] = `
+<Fragment>
+  <h5>
+    business-card-experience-responsibilities-title
+  </h5>
+  <ul>
+    <li
+      key="some-prefix-1"
+    >
+      some-prefix-1
+    </li>
+    <li
+      key="some-prefix-2"
+    >
+      some-prefix-2
+    </li>
+  </ul>
+</Fragment>
+`;

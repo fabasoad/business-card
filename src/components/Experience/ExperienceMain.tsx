@@ -35,7 +35,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-4-description"
                 />
                 <JobResponsibilities
-                  count={8}
                   i18nKeyPrefix="business-card-experience-job-woven-planet-4-responsibilities"
                 />
                 <JobTechnologies
@@ -63,7 +62,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-3-description"
                 />
                 <JobResponsibilities
-                  count={11}
                   i18nKeyPrefix="business-card-experience-job-woven-planet-3-responsibilities"
                 />
                 <JobTechnologies
@@ -91,7 +89,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-2-description"
                 />
                 <JobResponsibilities
-                  count={7}
                   i18nKeyPrefix="business-card-experience-job-woven-planet-2-responsibilities"
                 />
                 <JobTechnologies
@@ -119,7 +116,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-1-description"
                 />
                 <JobResponsibilities
-                  count={8}
                   i18nKeyPrefix="business-card-experience-job-woven-planet-1-responsibilities"
                 />
                 <JobTechnologies
@@ -147,7 +143,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-description"
                 />
                 <JobResponsibilities
-                  count={6}
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-responsibilities"
                 />
                 <JobTechnologies
@@ -175,7 +170,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-description"
                 />
                 <JobResponsibilities
-                  count={9}
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-responsibilities"
                 />
                 <JobTechnologies
@@ -207,7 +201,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-lohika-3-description"
                 />
                 <JobResponsibilities
-                  count={10}
                   i18nKeyPrefix="business-card-experience-job-lohika-3-responsibilities"
                 />
                 <JobTechnologies
@@ -239,7 +232,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-lohika-2-description"
                 />
                 <JobResponsibilities
-                  count={6}
                   i18nKeyPrefix="business-card-experience-job-lohika-2-responsibilities"
                 />
                 <JobTechnologies
@@ -270,7 +262,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-lohika-1-description"
                 />
                 <JobResponsibilities
-                  count={5}
                   i18nKeyPrefix="business-card-experience-job-lohika-1-responsibilities"
                 />
                 <JobTechnologies
@@ -298,7 +289,6 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-arka-description"
                 />
                 <JobResponsibilities
-                  count={5}
                   i18nKeyPrefix="business-card-experience-job-arka-responsibilities"
                 />
                 <JobTechnologies

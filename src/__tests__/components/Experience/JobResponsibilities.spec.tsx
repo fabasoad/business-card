@@ -4,22 +4,26 @@ import { shallow } from 'enzyme'
 import JobResponsibilities from '../../../components/Experience/JobResponsibilities'
 import { useTranslation } from '../../__mocks__/react-i18next'
 
-let tMock
+let tMock;
+let i18nMock;
 
 beforeEach(() => {
   tMock = useTranslation().t
+  i18nMock = useTranslation().i18n
 })
 
 test('should render JobResponsibilities correctly', () => {
   const prefix = 'some-prefix'
-  const count = 2
   const wrapper = shallow(<JobResponsibilities
-    count={count}
     i18nKeyPrefix={prefix}
   />)
   expect(wrapper).toMatchSnapshot()
   expect(tMock).toBeCalledWith('business-card-experience-responsibilities-title')
-  for (let i = 1; i < count; i++) {
-    expect(tMock).toHaveBeenNthCalledWith(i + 1, `${prefix}-${i}`)
-  }
+  expect(tMock).toHaveBeenCalledWith(`${prefix}-1`)
+  expect(tMock).toHaveBeenCalledWith(`${prefix}-1-1`)
+  expect(tMock).not.toHaveBeenCalledWith(`${prefix}-2`)
 })
+
+afterEach(() => {
+  jest.restoreAllMocks();
+});

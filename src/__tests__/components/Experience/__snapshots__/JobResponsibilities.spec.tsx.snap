@@ -5,16 +5,20 @@ exports[`should render JobResponsibilities correctly 1`] = `
   <h5>
     business-card-experience-responsibilities-title
   </h5>
-  <ul>
+  <ul
+    className="responsibilities"
+  >
     <li
       key="some-prefix-1"
     >
       some-prefix-1
-    </li>
-    <li
-      key="some-prefix-2"
-    >
-      some-prefix-2
+      <ul>
+        <li
+          key="some-prefix-1-1"
+        >
+          some-prefix-1-1
+        </li>
+      </ul>
     </li>
   </ul>
 </Fragment>

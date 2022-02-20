@@ -8,13 +8,10 @@ import { AboutMain } from '../../../components/About/AboutMain'
 
 test('should render AboutMain correctly', () => {
   const totalHumanize = (code: string) => `total-${code}`
-  const agileHumanize = (code: string) => `agile-${code}`
   const totalHumanizeSpy = jest.fn(totalHumanize)
-  const agileHumanizeSpy = jest.fn(agileHumanize)
 
   const locale: Locale = SupportedLocales.default
   const wrapper = shallow(<AboutMain locale={locale} calc={{
-    agileHumanize: agileHumanizeSpy,
     totalHumanize: totalHumanizeSpy
   }} />)
 
@@ -22,8 +19,6 @@ test('should render AboutMain correctly', () => {
 
   expect(totalHumanizeSpy).toHaveBeenCalledTimes(1)
   expect(totalHumanizeSpy).toHaveBeenCalledWith(locale.code)
-  expect(agileHumanizeSpy).toHaveBeenCalledTimes(1)
-  expect(agileHumanizeSpy).toHaveBeenCalledWith(locale.code)
 
   expect(i18next.t).toBeCalledTimes(7)
   expect(i18next.t).toHaveBeenCalledWith(
@@ -32,8 +27,7 @@ test('should render AboutMain correctly', () => {
   expect(i18next.t).toHaveBeenCalledWith(
     expect.stringMatching(/^business-card-about-me-general-list-item-1$/),
     expect.objectContaining({
-      totalExperience: totalHumanize(locale.code),
-      agileExperience: agileHumanize(locale.code)
+      totalExperience: totalHumanize(locale.code)
     })
   )
   for (let i = 2; i <= 6; i++) {

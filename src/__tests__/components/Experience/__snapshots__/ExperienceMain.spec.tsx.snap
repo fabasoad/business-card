@@ -337,7 +337,7 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
             className="timeline-body"
           >
             <JobDescription
-              count={2}
+              count={1}
               i18nKeyPrefix="business-card-experience-job-lohika-3-description"
               withTitle={true}
             />

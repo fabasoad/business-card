@@ -197,7 +197,7 @@ export default function ExperienceMain() {
               />
               <div className="timeline-body">
                 <JobDescription
-                  count={2}
+                  count={1}
                   i18nKeyPrefix="business-card-experience-job-lohika-3-description"
                 />
                 <JobResponsibilities

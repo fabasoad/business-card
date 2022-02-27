@@ -8,19 +8,16 @@ interface JobResponsibilitiesProps {
 const JobResponsibilities: React.FunctionComponent<JobResponsibilitiesProps> =
   ({ i18nKeyPrefix }) => {
     const { i18n, t } = useTranslation()
-    let i: number = 1
     const respList = []
-    while (i18n.exists(`${i18nKeyPrefix}-${i}`)) {
-      const key: string = `${i18nKeyPrefix}-${i}`
-      let j: number = 1
+    const key = (x) => `${i18nKeyPrefix}-${x}`
+    for (let i = 1; i18n.exists(key(i)); i++) {
       const subList = []
-      while (i18n.exists(`${key}-${j}`)) {
-        const subKey: string = `${key}-${j}`
-        subList.push(<li key={subKey}>{t(subKey)}</li>)
-        j++
+      const subKey = (x) => `${key(i)}-${x}`
+      for (let j = 1; i18n.exists(subKey(j)); j++) {
+        subList.push(<li key={subKey(j)}>{t(subKey(j))}</li>)
       }
-      respList.push(<li key={key}>{t(key)}{subList.length > 0 && <ul>{subList}</ul>}</li>)
-      i++
+      respList
+        .push(<li key={key(i)}>{t(key(i))}{subList.length > 0 && <ul>{subList}</ul>}</li>)
     }
     return (
       <>

@@ -19,10 +19,62 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
     <ul
       className="timeline"
     >
+      <li
+        className="timeline-inverted"
+      >
+        <JobPeriod
+          fromMonth={10}
+          fromYear={2021}
+        />
+        <div
+          className="timeline-panel"
+        >
+          <JobTitle
+            company="Woven Planet"
+            location="business-card-location-tokyo"
+            title="business-card-experience-job-woven-planet-4-title"
+          />
+          <div
+            className="timeline-body"
+          >
+            <JobDescription
+              count={1}
+              i18nKeyPrefix="business-card-experience-job-woven-planet-4-description"
+              withTitle={true}
+            />
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-woven-planet-4-responsibilities"
+            />
+            <JobTechnologies
+              keys={
+                Array [
+                  "docker",
+                  "gitlab",
+                  "gitlabCi",
+                  "typeScript",
+                  "react",
+                  "maven",
+                  "java",
+                  "quarkus",
+                  "mongodb",
+                  "intellijIdea",
+                  "concourseCI",
+                  "kubernetes",
+                  "terraform",
+                  "aws",
+                  "gitHubActions",
+                ]
+              }
+            />
+          </div>
+        </div>
+      </li>
       <li>
         <JobPeriod
           fromMonth={6}
           fromYear={2021}
+          toMonth={9}
+          toYear={2021}
         />
         <div
           className="timeline-panel"
@@ -39,6 +91,9 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
               count={1}
               i18nKeyPrefix="business-card-experience-job-woven-planet-3-description"
               withTitle={true}
+            />
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-woven-planet-3-responsibilities"
             />
             <JobTechnologies
               keys={
@@ -92,6 +147,9 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
               i18nKeyPrefix="business-card-experience-job-woven-planet-2-description"
               withTitle={true}
             />
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-woven-planet-2-responsibilities"
+            />
             <JobTechnologies
               keys={
                 Array [
@@ -140,6 +198,9 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
               i18nKeyPrefix="business-card-experience-job-woven-planet-1-description"
               withTitle={true}
             />
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-woven-planet-1-responsibilities"
+            />
             <JobTechnologies
               keys={
                 Array [
@@ -185,9 +246,8 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
               i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-description"
               withTitle={true}
             />
-            <JobAchievements
-              count={2}
-              i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-achievements"
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-responsibilities"
             />
             <JobTechnologies
               keys={
@@ -229,9 +289,8 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
               i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-description"
               withTitle={true}
             />
-            <JobAchievements
-              count={1}
-              i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-achievements"
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-responsibilities"
             />
             <JobTechnologies
               keys={
@@ -278,13 +337,12 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
             className="timeline-body"
           >
             <JobDescription
-              count={2}
-              i18nKeyPrefix="business-card-experience-job-lohika-3-prysm-description"
+              count={1}
+              i18nKeyPrefix="business-card-experience-job-lohika-3-description"
               withTitle={true}
             />
-            <JobAchievements
-              count={2}
-              i18nKeyPrefix="business-card-experience-job-lohika-3-prysm-achievements"
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-lohika-3-responsibilities"
             />
             <JobTechnologies
               keys={
@@ -292,57 +350,24 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
                   "csharp",
                   "xamarin",
                   "prism",
-                  "git",
-                  "jira",
-                  "teamCity",
-                  "visualStudio",
-                ]
-              }
-            />
-            <p>
-               
-            </p>
-            <JobDescription
-              count={2}
-              i18nKeyPrefix="business-card-experience-job-lohika-3-earnin-description"
-              withTitle={false}
-            />
-            <JobAchievements
-              count={6}
-              i18nKeyPrefix="business-card-experience-job-lohika-3-earnin-achievements"
-            />
-            <JobTechnologies
-              keys={
-                Array [
-                  "csharp",
                   "dotNetCore",
                   "kubernetes",
                   "helm",
-                  "docker",
+                  "jira",
                   "elasticsearch",
                   "jenkins",
                   "kibana",
                   "fluentBit",
                   "fluentD",
+                  "docker",
                   "git",
                   "gitHub",
                   "prometheus",
                   "visualStudio",
                   "grafana",
+                  "teamCity",
                 ]
               }
-            />
-            <p>
-               
-            </p>
-            <JobDescription
-              count={1}
-              i18nKeyPrefix="business-card-experience-job-lohika-3-general-description"
-              withTitle={false}
-            />
-            <JobAchievements
-              count={3}
-              i18nKeyPrefix="business-card-experience-job-lohika-3-general-achievements"
             />
           </div>
         </div>
@@ -370,9 +395,8 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
               i18nKeyPrefix="business-card-experience-job-lohika-2-description"
               withTitle={true}
             />
-            <JobAchievements
-              count={4}
-              i18nKeyPrefix="business-card-experience-job-lohika-2-achievements"
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-lohika-2-responsibilities"
             />
             <JobTechnologies
               keys={
@@ -420,9 +444,8 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
               i18nKeyPrefix="business-card-experience-job-lohika-1-description"
               withTitle={true}
             />
-            <JobAchievements
-              count={3}
-              i18nKeyPrefix="business-card-experience-job-lohika-1-achievements"
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-lohika-1-responsibilities"
             />
             <JobTechnologies
               keys={
@@ -462,9 +485,8 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
               i18nKeyPrefix="business-card-experience-job-arka-description"
               withTitle={true}
             />
-            <JobAchievements
-              count={3}
-              i18nKeyPrefix="business-card-experience-job-arka-achievements"
+            <JobResponsibilities
+              i18nKeyPrefix="business-card-experience-job-arka-responsibilities"
             />
             <JobTechnologies
               keys={

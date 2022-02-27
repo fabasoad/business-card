@@ -9,18 +9,21 @@ interface JobPeriodProps {
   toYear?: number
 }
 
-export default function JobPeriod(props: JobPeriodProps) {
-  const { t } = useTranslation()
-  return (
-    <div className="timeline-image">
-      <h4>
-        {(props.toMonth &&
-          props.toYear &&
-          <DateLocale month={props.toMonth} year={props.toYear} />) ||
-          <div>{t('business-card-experience-present')}</div>}
-        - <br />
-        <DateLocale month={props.fromMonth} year={props.fromYear} />
-      </h4>
-    </div>
-  )
-}
+const JobPeriod: React.FunctionComponent<JobPeriodProps> =
+  ({ fromMonth, fromYear, toMonth, toYear }) => {
+    const { t } = useTranslation()
+    return (
+      <div className="timeline-image">
+        <h4>
+          {(toMonth &&
+            toYear &&
+            <DateLocale month={toMonth} year={toYear} />) ||
+            <div>{t('business-card-experience-present')}</div>}
+          - <br />
+          <DateLocale month={fromMonth} year={fromYear} />
+        </h4>
+      </div>
+    )
+  }
+
+export default JobPeriod

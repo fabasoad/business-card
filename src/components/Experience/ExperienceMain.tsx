@@ -2,11 +2,11 @@ import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from 'react-bootstrap'
 
-import JobAchievements from './JobAchievements'
 import JobDescription from './JobDescription'
 import JobPeriod from './JobPeriod'
 import JobTechnologies from './JobTechnologies'
 import JobTitle from './JobTitle'
+import JobResponsibilities from './JobResponsibilities';
 
 export default function ExperienceMain() {
   const { t } = useTranslation()
@@ -18,10 +18,37 @@ export default function ExperienceMain() {
           <hr />
         </div>
         <ul className="timeline">
+          <li className="timeline-inverted">
+            <JobPeriod
+              fromMonth={10}
+              fromYear={2021}
+            />
+            <div className="timeline-panel">
+              <JobTitle
+                company="Woven Planet"
+                title={t('business-card-experience-job-woven-planet-4-title')}
+                location={t('business-card-location-tokyo')}
+              />
+              <div className="timeline-body">
+                <JobDescription
+                  count={1}
+                  i18nKeyPrefix="business-card-experience-job-woven-planet-4-description"
+                />
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-woven-planet-4-responsibilities"
+                />
+                <JobTechnologies
+                  keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'intellijIdea', 'concourseCI', 'kubernetes', 'terraform', 'aws', 'gitHubActions']}
+                />
+              </div>
+            </div>
+          </li>
           <li>
             <JobPeriod
               fromMonth={6}
               fromYear={2021}
+              toMonth={9}
+              toYear={2021}
             />
             <div className="timeline-panel">
               <JobTitle
@@ -33,6 +60,9 @@ export default function ExperienceMain() {
                 <JobDescription
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-woven-planet-3-description"
+                />
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-woven-planet-3-responsibilities"
                 />
                 <JobTechnologies
                   keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'helm', 'prometheus', 'grafana', 'terraform', 'aws']}
@@ -58,6 +88,9 @@ export default function ExperienceMain() {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-woven-planet-2-description"
                 />
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-woven-planet-2-responsibilities"
+                />
                 <JobTechnologies
                   keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'helm', 'prometheus', 'grafana']}
                 />
@@ -81,6 +114,9 @@ export default function ExperienceMain() {
                 <JobDescription
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-woven-planet-1-description"
+                />
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-woven-planet-1-responsibilities"
                 />
                 <JobTechnologies
                   keys={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea']}
@@ -106,9 +142,8 @@ export default function ExperienceMain() {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-description"
                 />
-                <JobAchievements
-                  count={2}
-                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-achievements"
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-responsibilities"
                 />
                 <JobTechnologies
                   keys={['docker', 'travis', 'gitHubActions', 'bitrise', 'java', 'kafka', 'spring', 'intellijIdea']}
@@ -134,9 +169,8 @@ export default function ExperienceMain() {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-description"
                 />
-                <JobAchievements
-                  count={1}
-                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-achievements"
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-responsibilities"
                 />
                 <JobTechnologies
                   keys={[
@@ -163,42 +197,18 @@ export default function ExperienceMain() {
               />
               <div className="timeline-body">
                 <JobDescription
-                  count={2}
-                  i18nKeyPrefix="business-card-experience-job-lohika-3-prysm-description"
+                  count={1}
+                  i18nKeyPrefix="business-card-experience-job-lohika-3-description"
                 />
-                <JobAchievements
-                  count={2}
-                  i18nKeyPrefix="business-card-experience-job-lohika-3-prysm-achievements"
-                />
-                <JobTechnologies
-                  keys={['csharp', 'xamarin', 'prism', 'git', 'jira', 'teamCity', 'visualStudio']}
-                />
-                <p>&nbsp;</p>
-                <JobDescription
-                  count={2}
-                  i18nKeyPrefix="business-card-experience-job-lohika-3-earnin-description"
-                  withTitle={false}
-                />
-                <JobAchievements
-                  count={6}
-                  i18nKeyPrefix="business-card-experience-job-lohika-3-earnin-achievements"
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-lohika-3-responsibilities"
                 />
                 <JobTechnologies
                   keys={[
-                    'csharp', 'dotNetCore', 'kubernetes', 'helm', 'docker',
-                    'elasticsearch', 'jenkins', 'kibana', 'fluentBit', 'fluentD',
-                    'git', 'gitHub', 'prometheus', 'visualStudio', 'grafana'
+                    'csharp', 'xamarin', 'prism', 'dotNetCore', 'kubernetes', 'helm', 'jira',
+                    'elasticsearch', 'jenkins', 'kibana', 'fluentBit', 'fluentD', 'docker',
+                    'git', 'gitHub', 'prometheus', 'visualStudio', 'grafana', 'teamCity'
                   ]}
-                />
-                <p>&nbsp;</p>
-                <JobDescription
-                  count={1}
-                  i18nKeyPrefix="business-card-experience-job-lohika-3-general-description"
-                  withTitle={false}
-                />
-                <JobAchievements
-                  count={3}
-                  i18nKeyPrefix="business-card-experience-job-lohika-3-general-achievements"
                 />
               </div>
             </div>
@@ -221,9 +231,8 @@ export default function ExperienceMain() {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-lohika-2-description"
                 />
-                <JobAchievements
-                  count={4}
-                  i18nKeyPrefix="business-card-experience-job-lohika-2-achievements"
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-lohika-2-responsibilities"
                 />
                 <JobTechnologies
                   keys={[
@@ -252,9 +261,8 @@ export default function ExperienceMain() {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-lohika-1-description"
                 />
-                <JobAchievements
-                  count={3}
-                  i18nKeyPrefix="business-card-experience-job-lohika-1-achievements"
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-lohika-1-responsibilities"
                 />
                 <JobTechnologies
                   keys={['csharp', 'windowsForms', 'svn', 'visualStudio', 'hpeAlm', 'jenkins']}
@@ -280,9 +288,8 @@ export default function ExperienceMain() {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-arka-description"
                 />
-                <JobAchievements
-                  count={3}
-                  i18nKeyPrefix="business-card-experience-job-arka-achievements"
+                <JobResponsibilities
+                  i18nKeyPrefix="business-card-experience-job-arka-responsibilities"
                 />
                 <JobTechnologies
                   keys={[

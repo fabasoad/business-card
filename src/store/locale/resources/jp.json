@@ -99,7 +99,7 @@
 	"business-card-experience-job-woven-planet-1-responsibilities-7": "Heavily working on CRUD features for applications, users, teams, projects entities.",
 	"business-card-experience-job-woven-planet-1-responsibilities-8": "Doing code reviews.",
 	"business-card-experience-job-woven-planet-1-title": "ソフトウェアエンジニア",
-	"business-card-experience-job-woven-planet-2-description-1": "As a technical lead I was responsible for architectural decisions, have been involved into architectural discussions with other teams. Also, continue improving Arene Central web application. Started connecting another services to the application, such as Keycloak, AWS and Artifactory.",
+	"business-card-experience-job-woven-planet-2-description-1": "As a technical lead I was responsible for architectural decisions, participated at architectural discussions with other teams. Also, continue improving Arene Central web application. Started connecting another services to the application, such as Keycloak, AWS and Artifactory.",
 	"business-card-experience-job-woven-planet-2-responsibilities-1": "Conducting technical interviews for external candidates.",
 	"business-card-experience-job-woven-planet-2-responsibilities-2": "Exposing project metrics to Prometheus and showing them in Grafana.",
 	"business-card-experience-job-woven-planet-2-responsibilities-3": "Implementing caching on a project layer for some heavy operations.",

@@ -12,9 +12,9 @@ export default function StatsStackOverflow() {
   const technologyStorage: TechnologyStorage = new TechnologyStorage()
   const tech: Technology = technologyStorage.findByName('stackoverflow');
   return (
-    <div className="m-4 d-flex flex-column text-center">
+    <div className="m-4 d-flex flex-column stats-item">
       <img key={uuidv4()} src={tech.img} alt={tech.name} title={tech.title} />
-      ➕️{reputation}
+      ➕ ️{reputation}
     </div>
   )
 }

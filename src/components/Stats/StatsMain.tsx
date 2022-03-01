@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import StatsGitHub from './StatsGitHub';
+import StatsLeetcode from './StatsLeetcode';
 import StatsStackOverflow from './StatsStackOverflow';
 
 export default function StatsMain() {
@@ -14,6 +15,7 @@ export default function StatsMain() {
       <div className="container">
         <div className="row">
           <div className="stats-list col d-flex justify-content-center">
+            <StatsLeetcode />
             <StatsGitHub />
             <StatsStackOverflow />
           </div>

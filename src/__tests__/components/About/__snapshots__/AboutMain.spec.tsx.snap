@@ -81,7 +81,18 @@ exports[`should render AboutMain correctly 1`] = `
                 business-card-about-me-general-list-item-14
               </li>
               <li>
-                business-card-about-me-general-list-item-15
+                <Trans
+                  i18nKey="business-card-about-me-general-list-item-15"
+                >
+                  Developed and released 
+                  <a
+                    href="https://github.com/marketplace?type=actions&query=fabasoad+"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    18 GitHub Actions to the marketplace
+                  </a>
+                </Trans>
               </li>
               <li>
                 business-card-about-me-general-list-item-16

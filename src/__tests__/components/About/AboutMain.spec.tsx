@@ -1,10 +1,16 @@
 /// <reference types="jest" />
 import * as React from 'react'
 import { shallow } from 'enzyme'
-import i18next from '../../__mocks__/i18next'
 import { Locale } from '../../../store/locale/types'
 import SupportedLocales from '../../../scripts/SupportedLocales'
 import { AboutMain } from '../../../components/About/AboutMain'
+import { useTranslation } from '../../__mocks__/react-i18next'
+
+let tMock
+
+beforeAll(() => {
+  tMock = useTranslation().t
+})
 
 test('should render AboutMain correctly', () => {
   const totalHumanize = (code: string) => `total-${code}`
@@ -20,18 +26,18 @@ test('should render AboutMain correctly', () => {
   expect(totalHumanizeSpy).toHaveBeenCalledTimes(1)
   expect(totalHumanizeSpy).toHaveBeenCalledWith(locale.code)
 
-  expect(i18next.t).toBeCalledTimes(18)
-  expect(i18next.t).toHaveBeenCalledWith(
+  expect(tMock).toBeCalledTimes(17)
+  expect(tMock).toHaveBeenCalledWith(
     expect.stringMatching(/^business-card-about-me-title$/)
   )
-  expect(i18next.t).toHaveBeenCalledWith(
+  expect(tMock).toHaveBeenCalledWith(
     expect.stringMatching(/^business-card-about-me-general-list-item-1$/),
     expect.objectContaining({
       totalExperience: totalHumanize(locale.code)
     })
   )
   for (let i = 2; i <= 6; i++) {
-    expect(i18next.t).toHaveBeenCalledWith(
+    expect(tMock).toHaveBeenCalledWith(
       expect.stringMatching(
         new RegExp(`^business-card-about-me-general-list-item-${i}$`)
       )

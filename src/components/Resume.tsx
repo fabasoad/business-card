@@ -1,8 +1,6 @@
 /// <reference path='./Resume.d.ts' />
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
-
-import pdfResume from '../assets/files/yf-cv.pdf'
+import { useTranslation, Trans } from 'react-i18next'
 
 export default function Resume() {
   const { t } = useTranslation()
@@ -13,12 +11,9 @@ export default function Resume() {
         <hr />
       </div>
       <div className="d-flex justify-content-center">
-        <a className="btn btn-primary btn-lg mr-1" href={pdfResume} rel="noopener noreferrer" target="_blank">
-          <i className="fas fa-file-pdf"></i>
-        </a>
-        <a className="btn btn-primary btn-lg" href="https://drive.google.com/open?id=1RPKIdkOwcD_A4P0ZWQGrlFt5-abcN6-3CBJ7WvM8mc8" rel="noopener noreferrer" target="_blank">
-          <i className="fas fa-file-word"></i>
-        </a>
+        <Trans i18nKey="business-card-resume-message">
+          To download my resume please go to my <a href="https://www.linkedin.com/in/yevhenfabizhevskyi/" target="_blank" rel="noreferrer">LinkedIn page</a> and choose More → Save to PDF
+        </Trans>
       </div>
     </div>
   )

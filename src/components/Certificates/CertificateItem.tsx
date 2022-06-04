@@ -26,7 +26,7 @@ export default function CertificateItem(props: CertificateItemProps) {
       <Card.Body>
         <Card.Text>
           <Card.Link target="_blank" rel="noopener noreferrer" href={props.url}>
-            {t(props.i18nTitleKey)}
+            {t<string>(props.i18nTitleKey)}
           </Card.Link>
         </Card.Text>
       </Card.Body>

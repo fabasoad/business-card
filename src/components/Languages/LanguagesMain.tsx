@@ -14,7 +14,7 @@ export default function LanguagesMain() {
       <div className="container">
         <div className="row">
           <div className="language-list col text-center">
-            <LanguageLinkItem code="jp" text="JLPT N5" url="https://drive.google.com/file/d/1wDeulFdf9-8DBa_k0F8tiRUtdlG7mh3L/view?usp=sharing" />
+            <LanguageLinkItem code="jp" text="JLPT N4" url="https://drive.google.com/file/d/1QHRRPXiYuOKMmNPeqRf6GQQtyGdBkhQ5/view?usp=sharing" />
             <LanguageLinkItem code="gb" text="TOEIC 825" url="https://drive.google.com/file/d/1nzM9WQqR7PQpHKDiWvkRYtcNbnRW8-OB/view?usp=sharing" />
             <LanguageTextItem code="ru" text={t('business-card-languages-native')} />
             <LanguageTextItem code="ua" text={t('business-card-languages-native')} />

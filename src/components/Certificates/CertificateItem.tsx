@@ -1,9 +1,9 @@
 import * as React from 'react'
-import Card from 'react-bootstrap/Card'
+import { Card } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import DateLocale from '../controls/DateLocale'
-import { Technology } from '../../scripts/technologies/types'
 import { CertificateIssuer } from '../../scripts/certificates/types'
+import { Technology } from '../../scripts/technologies/types'
+import DateLocale from '../controls/DateLocale'
 
 interface CertificateItemProps {
   id: string

@@ -1,11 +1,13 @@
 #about {
 	.about-photo {
 		height: 13rem;
+
 		.about-photo--badge {
 			height: 4rem;
 			margin: 8rem 0 0 5rem;
 			position: absolute;
 		}
+
 		.about-photo--portrait {
 			position: absolute;
 			border-radius: 50%;
@@ -14,9 +16,5 @@
 			display: inline-block;
 			text-align: center;
 		}
-	}
-	p {
-		margin-top: 20px;
-		margin-bottom: 30px;
 	}
 }

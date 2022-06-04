@@ -62,3 +62,9 @@
 		font-family: 'JetBrainsMono-Regular', Helvetica, Arial, sans-serif;
 	}
 }
+a {
+	color: $grey;
+}
+a:hover {
+	color: $dark-grey;
+}

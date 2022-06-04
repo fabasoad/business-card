@@ -16,7 +16,7 @@ import MenuMain from './Menu/MenuMain'
 import PortfolioMain from './Portfolio/PortfolioMain'
 import Resume from './Resume'
 import Skills from './Skills'
-import StatsMain from './Stats/StatsMain';
+import StatsMain from './Stats/StatsMain'
 
 interface AppProps {
 }

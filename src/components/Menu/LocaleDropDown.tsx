@@ -1,15 +1,13 @@
 import * as React from 'react'
-import Dropdown from 'react-bootstrap/Dropdown'
-import DropdownToggle from 'react-bootstrap/DropdownToggle'
+import { Dropdown } from 'react-bootstrap'
 import FlagIconFactory from 'react-flag-icon-css'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { ThunkDispatch } from 'redux-thunk'
-
 import SupportedLocales from '../../scripts/SupportedLocales'
-import { Locale, AppActions } from '../../store/locale/types'
 import { AppState } from '../../store/configureStore'
 import { startSetLocale } from '../../store/locale/actions'
+import { AppActions, Locale } from '../../store/locale/types'
 
 interface LocaleDropDownProps {
   getLocalesExceptOf?: (code: string) => Locale[]
@@ -25,10 +23,10 @@ export function LocaleDropDown(props: Props) {
   const FlagIcon = FlagIconFactory(React, { 'useCssModules': false })
   return (
     <Dropdown>
-      <DropdownToggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
+      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
         <FlagIcon code={props.locale.code} />
         {props.locale.title}
-      </DropdownToggle>
+      </Dropdown.Toggle>
       <Dropdown.Menu>
         {props.getLocalesExceptOf(props.locale.code).map((l) => {
           return (

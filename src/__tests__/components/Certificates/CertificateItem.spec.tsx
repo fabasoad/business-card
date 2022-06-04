@@ -1,10 +1,9 @@
 /// <reference types="jest" />
-import * as React from 'react'
 import { shallow, ShallowWrapper } from 'enzyme'
+import * as React from 'react'
 import CertificateItem from '../../../components/Certificates/CertificateItem'
 
-// TODO: Investigate
-test.skip('should render CertificateItem correctly', () => {
+test('should render CertificateItem correctly', () => {
   const wrapper: ShallowWrapper = shallow(<CertificateItem
     id="test-id"
     issueDate={new Date('2020-01')}

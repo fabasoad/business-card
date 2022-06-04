@@ -24,8 +24,8 @@ exports[`should render LanguageItem correctly 1`] = `
       >
         <LaguageLinkItem
           code="jp"
-          text="JLPT N5"
-          url="https://drive.google.com/file/d/1wDeulFdf9-8DBa_k0F8tiRUtdlG7mh3L/view?usp=sharing"
+          text="JLPT N4"
+          url="https://drive.google.com/file/d/1QHRRPXiYuOKMmNPeqRf6GQQtyGdBkhQ5/view?usp=sharing"
         />
         <LaguageLinkItem
           code="gb"

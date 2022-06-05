@@ -12,7 +12,7 @@ const JobResponsibilities: React.FunctionComponent<JobResponsibilitiesProps> =
     const key = (x) => `${i18nKeyPrefix}-${x}`
     for (let i = 1; i18n.exists(key(i)); i++) {
       const subList = []
-      const subKey = (x) => `${key(i)}-${x}`
+      const subKey = (x: number) => `${key(i)}-${x}`
       for (let j = 1; i18n.exists(subKey(j)); j++) {
         subList.push(<li key={subKey(j)}>{t(subKey(j))}</li>)
       }

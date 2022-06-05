@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render LanguageItem correctly 1`] = `
+exports[`LanguagesMain should render LanguageItem correctly 1`] = `
 <div
   className="light-component"
   id="languages"
@@ -31,10 +31,6 @@ exports[`should render LanguageItem correctly 1`] = `
           code="gb"
           text="TOEIC 825"
           url="https://drive.google.com/file/d/1nzM9WQqR7PQpHKDiWvkRYtcNbnRW8-OB/view?usp=sharing"
-        />
-        <LanguageTextItem
-          code="ru"
-          text="business-card-languages-native"
         />
         <LanguageTextItem
           code="ua"

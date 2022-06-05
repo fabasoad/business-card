@@ -12,9 +12,9 @@ exports[`should render LocaleDropDown correctly 1`] = `
     variant={null}
   >
     <FlagIcon
-      code="ru"
+      code="jp"
     />
-    RU
+    JP
   </DropdownToggle>
   <DropdownMenu
     flip={true}

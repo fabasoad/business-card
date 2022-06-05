@@ -1,15 +1,15 @@
 import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
-import { Action } from 'redux'
-import { AppState } from '../configureStore'
-import { ThunkAction } from 'redux-thunk'
 import { Dispatch } from 'react'
-import { AppActions, Locale } from './types'
+import { initReactI18next } from 'react-i18next'
+import { Action } from 'redux'
+import { ThunkAction } from 'redux-thunk'
 import SupportedLocales from '../../scripts/SupportedLocales'
+import { AppState } from '../configureStore'
 import * as gb from './resources/gb.json'
 import * as jp from './resources/jp.json'
-import * as ru from './resources/ru.json'
+import * as ua from './resources/ua.json'
+import { AppActions, Locale } from './types'
 
 type ThunkLocaleAction = ThunkAction<void, AppState, unknown, Action<string>>
 
@@ -46,7 +46,7 @@ export const startLoadLocale = (): ThunkLocaleAction =>
         resources: {
           gb: { common: gb },
           jp: { common: jp },
-          ru: { common: ru }
+          ua: { common: ua }
         }
       }).then((t) => {
         onLanguageChange(t)

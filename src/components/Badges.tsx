@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import Iframe from 'react-iframe'
 import imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
 
 interface BadgesProps {}
@@ -20,7 +19,7 @@ const Badges: React.FC<BadgesProps> = () => {
               <img className="mb-4 mx-4" src={imgDigitalOceanBadge} alt="Digital Ocean Forest Badge" title="DigitalOcean Forest 2021" />
             </a>
           </div>
-          <div className="col-sm col-md col-lg text-center">
+          {/* <div className="col-sm col-md col-lg text-center">
             <Iframe
               url={'https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=fabasoad&mnOn=true&stat=3&imageNum=1&rankOn=false&projectsOn=false&special=false&link=1&memberId=1103124'}
               frameBorder={0}
@@ -28,7 +27,7 @@ const Badges: React.FC<BadgesProps> = () => {
               scrolling="no"
               display="inline"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -1,16 +1,16 @@
 /// <reference path='./AboutMain.d.ts' />
-import { useTranslation, Trans } from 'react-i18next'
 import * as React from 'react'
+import { Trans, useTranslation } from 'react-i18next'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
-
 import imgAboutMe from '../../assets/images/about_me.jpg'
 import img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
-import { Locale, AppActions } from '../../store/locale/types'
-import { AppState } from '../../store/configureStore'
 import ExperienceCalculations, {
   IExperienceCalculations
 } from '../../scripts/ExperienceCalculations'
+import { AppState } from '../../store/configureStore'
+import { AppActions, Locale } from '../../store/locale/types'
+
 
 interface AboutMeProps {
   calc?: IExperienceCalculations
@@ -68,7 +68,7 @@ export function AboutMain(props: Props) {
                   <li>{t('business-card-about-me-general-list-item-14')}</li>
                   <li>
                     <Trans i18nKey="business-card-about-me-general-list-item-15">
-                      Developed and released <a href="https://github.com/marketplace?type=actions&query=fabasoad+" target="_blank" rel="noreferrer">18 GitHub Actions to the marketplace</a>
+                      Developed and released <a href="https://github.com/marketplace?type=actions&query=fabasoad+" target="_blank" rel="noreferrer">19 GitHub Actions to the marketplace</a>
                     </Trans>
                   </li>
                   <li>{t('business-card-about-me-general-list-item-16')}</li>

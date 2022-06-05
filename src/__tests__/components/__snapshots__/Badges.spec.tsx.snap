@@ -35,17 +35,6 @@ exports[`should render Badges correctly 1`] = `
           />
         </a>
       </div>
-      <div
-        className="col-sm col-md col-lg text-center"
-      >
-        <Iframe
-          display="inline"
-          frameBorder={0}
-          name="di"
-          scrolling="no"
-          url="https://www.worldcommunitygrid.org/getDynamicImage.do?memberName=fabasoad&mnOn=true&stat=3&imageNum=1&rankOn=false&projectsOn=false&special=false&link=1&memberId=1103124"
-        />
-      </div>
     </div>
   </div>
 </div>

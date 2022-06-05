@@ -90,7 +90,7 @@ exports[`should render AboutMain correctly 1`] = `
                     rel="noreferrer"
                     target="_blank"
                   >
-                    18 GitHub Actions to the marketplace
+                    19 GitHub Actions to the marketplace
                   </a>
                 </Trans>
               </li>

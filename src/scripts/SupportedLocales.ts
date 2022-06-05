@@ -4,7 +4,7 @@ export default class SupportedLocales {
   static _items: Locale[] = [
     new Locale('gb', 'en'),
     new Locale('jp'),
-    new Locale('ru')
+    new Locale('ua') 
   ]
 
   static default: Locale = SupportedLocales._items[0]

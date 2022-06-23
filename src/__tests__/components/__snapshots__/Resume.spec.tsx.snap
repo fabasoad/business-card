@@ -22,7 +22,7 @@ exports[`should render Resume correctly 1`] = `
       <Trans
         i18nKey="business-card-resume-message"
       >
-        To download my resume please go to my
+        To download my resume please go to my 
         <a
           href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
           rel="noreferrer"

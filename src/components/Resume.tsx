@@ -10,10 +10,12 @@ export default function Resume() {
         <h2>{t('business-card-resume-title')}</h2>
         <hr />
       </div>
-      <div className="d-flex justify-content-center">
-        <Trans i18nKey="business-card-resume-message">
-          To download my resume please go to my <a href="https://www.linkedin.com/in/yevhenfabizhevskyi/" target="_blank" rel="noreferrer">LinkedIn page</a> and choose More → Save to PDF
-        </Trans>
+      <div className="container">
+        <div className="col text-center">
+          <Trans i18nKey="business-card-resume-message">
+            To download my resume please go to my <a href="https://www.linkedin.com/in/yevhenfabizhevskyi/" target="_blank" rel="noreferrer">LinkedIn page</a> and choose More → Save to PDF
+          </Trans>
+        </div>
       </div>
     </div>
   )

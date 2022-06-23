@@ -1,0 +1,28 @@
+.job-duration {
+  color: $orange;
+  position: absolute;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0.6rem;
+  width: 100%;
+  font-size: 0.3rem;
+}
+@media (min-width: 768px) {
+  .job-duration {
+    margin-top: 0.6rem;
+    font-size: 0.4rem;
+  }
+}
+@media (min-width: 992px) {
+  .job-duration {
+    margin-top: 0.9rem;
+    font-size: 0.6rem;
+  }
+}
+@media (min-width: 1200px) {
+  .job-duration {
+    margin-top: 1.4rem;
+    font-size: 0.7rem;
+  }
+}

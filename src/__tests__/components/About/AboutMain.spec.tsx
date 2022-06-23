@@ -14,17 +14,17 @@ beforeAll(() => {
 
 test('should render AboutMain correctly', () => {
   const totalHumanize = (code: string) => `total-${code}`
-  const totalHumanizeSpy = jest.fn(totalHumanize)
+  const humanizeSpy = jest.fn(totalHumanize)
 
   const locale: Locale = SupportedLocales.default
-  const wrapper = shallow(<AboutMain locale={locale} calc={{
-    totalHumanize: totalHumanizeSpy
+  const wrapper = shallow(<AboutMain locale={locale} totalExperience={{
+    humanize: humanizeSpy
   }} />)
 
   expect(wrapper).toMatchSnapshot()
 
-  expect(totalHumanizeSpy).toHaveBeenCalledTimes(1)
-  expect(totalHumanizeSpy).toHaveBeenCalledWith(locale.code)
+  expect(humanizeSpy).toHaveBeenCalledTimes(1)
+  expect(humanizeSpy).toHaveBeenCalledWith(locale.code)
 
   expect(tMock).toBeCalledTimes(17)
   expect(tMock).toHaveBeenCalledWith(

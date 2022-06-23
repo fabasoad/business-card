@@ -4,12 +4,16 @@ exports[`should render JobPeriod correctly 1`] = `
 <div
   className="timeline-image"
 >
+  <Connect(JobDuration)
+    from={2019-01-31T15:00:00.000Z}
+    to={2020-04-30T15:00:00.000Z}
+  />
   <h4>
     <Connect(DateLocale)
       month={4}
       year={2020}
     />
-    - 
+    -
     <br />
     <Connect(DateLocale)
       month={1}

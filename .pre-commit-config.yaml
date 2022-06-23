@@ -73,3 +73,4 @@ repos:
         args: ["--fix=lf"]
       - id: no-commit-to-branch
       - id: trailing-whitespace
+        exclude: ^.*\.snap$

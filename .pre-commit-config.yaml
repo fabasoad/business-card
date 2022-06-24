@@ -73,3 +73,6 @@ repos:
         args: ["--fix=lf"]
       - id: no-commit-to-branch
       - id: trailing-whitespace
+ci:
+  autofix_prs: false
+  skip: [build, test]

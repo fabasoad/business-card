@@ -75,4 +75,4 @@ repos:
       - id: trailing-whitespace
 ci:
   autofix_prs: false
-  skip: [build, test]
+  skip: [build, eslint, test]

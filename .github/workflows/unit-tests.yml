@@ -29,6 +29,8 @@ jobs:
         env:
           SKIP_POSTINSTALL: 1
         run: yarn install
+      - name: Lint
+        run: yarn run lint
       - name: Unit tests
         if: github.event_name == 'push' && github.ref != 'refs/heads/main'
         run: yarn test

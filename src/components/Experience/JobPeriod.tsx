@@ -13,11 +13,10 @@ interface JobPeriodProps {
 const JobPeriod: React.FunctionComponent<JobPeriodProps> =
   ({ fromMonth, fromYear, toMonth, toYear }) => {
     const { t } = useTranslation()
-    const from: Date = new Date(fromYear, fromMonth)
-    const to: Date = !toYear || !toMonth ? new Date() : new Date(toYear, toMonth)
     return (
       <div className="timeline-image">
-        <JobDuration from={from} to={to} />
+        <JobDuration
+          fromMonth={fromMonth} fromYear={fromYear} toMonth={toMonth} toYear={toYear} />
         <h4>
           {(toMonth &&
             toYear &&

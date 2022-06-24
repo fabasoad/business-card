@@ -11,9 +11,6 @@ export default class DateUtils {
       units: ['y', 'mo']
     }
     const duration: number = to.getTime() - from.getTime()
-    console.log('from:', from)
-    console.log('to:', to)
-    console.log('Duration:', duration)
     return humanizeDuration(duration, opts)
   }
 

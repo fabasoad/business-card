@@ -1,3 +1,4 @@
+@import './components.experience_duration';
 @import './components.experience_technologies';
 
 .timeline {
@@ -107,7 +108,7 @@
         height: 100px;
         margin-left: -50px;
         h4 {
-          font-size: 14px;
+          font-size: 0.6rem;
           margin-top: 16px;
           line-height: 18px;
           font-weight: 400;

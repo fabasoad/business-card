@@ -5,22 +5,21 @@ import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
 import imgAboutMe from '../../assets/images/about_me.jpg'
 import img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
-import ExperienceCalculations, {
-  IExperienceCalculations
-} from '../../scripts/ExperienceCalculations'
+import TotalExperience, {
+  ITotalExperience
+} from '../../scripts/TotalExperience'
 import { AppState } from '../../store/configureStore'
 import { AppActions, Locale } from '../../store/locale/types'
 
-
 interface AboutMeProps {
-  calc?: IExperienceCalculations
+  totalExperience?: ITotalExperience
 }
 
 type Props = AboutMeProps & LinkDispatchProps & LinkStateProps
 
-export function AboutMain(props: Props) {
+export function AboutMain({ totalExperience, locale }: Props) {
   const generalListItem1Keys = {
-    totalExperience: props.calc.totalHumanize(props.locale.code)
+    totalExperience: totalExperience.humanize(locale.code)
   }
   const { t } = useTranslation()
   return (
@@ -84,7 +83,7 @@ export function AboutMain(props: Props) {
 }
 
 AboutMain.defaultProps = {
-  calc: new ExperienceCalculations()
+  totalExperience: new TotalExperience()
 }
 
 interface LinkStateProps {

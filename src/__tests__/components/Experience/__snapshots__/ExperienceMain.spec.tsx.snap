@@ -330,7 +330,7 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="Lohika"
-            location="business-card-location-odessa"
+            location="business-card-location-odesa"
             title="business-card-experience-job-lohika-3-title"
           />
           <div
@@ -384,7 +384,7 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="Lohika"
-            location="business-card-location-odessa"
+            location="business-card-location-odesa"
             title="business-card-experience-job-lohika-2-title"
           />
           <div
@@ -433,7 +433,7 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="Lohika"
-            location="business-card-location-odessa"
+            location="business-card-location-odesa"
             title="business-card-experience-job-lohika-1-title"
           />
           <div
@@ -474,7 +474,7 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
         >
           <JobTitle
             company="ARKA - Finance, Software, Services"
-            location="business-card-location-odessa"
+            location="business-card-location-odesa"
             title="business-card-experience-job-arka-title"
           />
           <div

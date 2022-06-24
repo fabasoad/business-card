@@ -14,21 +14,25 @@ exports[`should render Resume correctly 1`] = `
     <hr />
   </div>
   <div
-    className="d-flex justify-content-center"
+    className="container"
   >
-    <Trans
-      i18nKey="business-card-resume-message"
+    <div
+      className="col text-center"
     >
-      To download my resume please go to my 
-      <a
-        href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
-        rel="noreferrer"
-        target="_blank"
+      <Trans
+        i18nKey="business-card-resume-message"
       >
-        LinkedIn page
-      </a>
-       and choose More → Save to PDF
-    </Trans>
+        To download my resume please go to my 
+        <a
+          href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          LinkedIn page
+        </a>
+         and choose More → Save to PDF
+      </Trans>
+    </div>
   </div>
 </div>
 `;

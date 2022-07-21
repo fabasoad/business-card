@@ -88,6 +88,6 @@
     "webpack-merge": "5.8.0"
   },
   "dependencies": {
-    "@octokit/rest": "18.12.0"
+    "@octokit/rest": "19.0.3"
   }
 }

@@ -22,6 +22,8 @@ repos:
     rev: v1.3.0
     hooks:
       - id: detect-secrets
+        # Excluding Hacker Rank certificate id located in items.json file
+        args: ['--exclude-lines', '^(  "id": "F75CDD8ED9F0",)$']
         stages: ["commit", "push"]
   - repo: https://github.com/zricethezav/gitleaks
     rev: v8.8.12

@@ -24,12 +24,20 @@ exports[`should render AboutMain correctly 1`] = `
         <img
           alt="About me"
           className="about-photo--portrait img-thumbnail"
-          src="test-file-stub"
+          src={
+            Object {
+              "default": "test-file-stub",
+            }
+          }
         />
         <img
           alt="Oracle 1Z0-808"
           className="about-photo--badge"
-          src="test-file-stub"
+          src={
+            Object {
+              "default": "test-file-stub",
+            }
+          }
         />
       </div>
       <div

@@ -10,13 +10,21 @@ exports[`should render JobTechnologies correctly 1`] = `
   <img
     alt="maven"
     key="test-uuid"
-    src="test-file-stub"
+    src={
+      Object {
+        "default": "test-file-stub",
+      }
+    }
     title="Maven"
   />
   <img
     alt="java"
     key="test-uuid"
-    src="test-file-stub"
+    src={
+      Object {
+        "default": "test-file-stub",
+      }
+    }
     title="Java"
   />
 </div>

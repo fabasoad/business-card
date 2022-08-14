@@ -21,7 +21,7 @@ exports[`should render FooterInfo correctly 1`] = `
       >
         <img
           alt="Donate with Bitcoin"
-          src="https://img.shields.io/badge/bitcoin-donate-yellow?style=flat&logo=bitcoin"
+          src="https://img.shields.io/static/v1?label=bitcoin&message=donate&color=f7931a&style=for-the-badge&logo=bitcoin"
         />
       </a>
     </li>

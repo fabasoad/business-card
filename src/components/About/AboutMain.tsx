@@ -3,8 +3,8 @@ import * as React from 'react'
 import { Trans, useTranslation } from 'react-i18next'
 import { connect } from 'react-redux'
 import { ThunkDispatch } from 'redux-thunk'
-import imgAboutMe from '../../assets/images/about_me.jpg'
-import img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
+import * as imgAboutMe from '../../assets/images/about_me.jpg'
+import * as img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
 import TotalExperience, {
   ITotalExperience
 } from '../../scripts/TotalExperience'

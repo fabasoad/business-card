@@ -15,13 +15,13 @@ exports[`should render FooterInfo correctly 1`] = `
     </li>
     <li>
       <a
-        href="https://en.cryptobadges.io/donate/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH"
+        href="https://www.bitcoinqrcodemaker.com/?style=bitcoin&address=145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH&prefix=on"
         rel="noopener noreferrer"
         target="_blank"
       >
         <img
           alt="Donate with Bitcoin"
-          src="https://en.cryptobadges.io/badge/micro/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH"
+          src="https://img.shields.io/badge/bitcoin-donate-yellow?style=flat&logo=bitcoin"
         />
       </a>
     </li>

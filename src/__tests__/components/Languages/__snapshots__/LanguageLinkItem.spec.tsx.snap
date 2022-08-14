@@ -1,16 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render LanguageLinkItem correctly 1`] = `
-<LanguageItem
-  code="gb"
+<div
+  class="mb-4 mx-4"
 >
+  <span
+    class="flag-icon flag-icon-4x flag-icon-gb mx-auto"
+  />
   <a
-    className="h5 mt-2"
+    class="h5 mt-2"
     href="test-url"
     rel="noopener noreferrer"
     target="_blank"
   >
     test-text
   </a>
-</LanguageItem>
+</div>
 `;

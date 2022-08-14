@@ -1,11 +1,11 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
+import { render } from '@testing-library/react'
 import LanguageItem from '../../../components/Languages/LanguageItem'
 
 test('should render LanguageItem correctly', () => {
-  const wrapper: ShallowWrapper = shallow(
+  const { container } = render(
     <LanguageItem code="gb">test-content</LanguageItem>
   )
-  expect(wrapper).toMatchSnapshot()
+  expect(container.firstChild).toMatchSnapshot()
 })

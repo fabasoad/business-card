@@ -2,11 +2,11 @@
 
 exports[`should render Resume correctly 1`] = `
 <div
-  className="light-component"
+  class="light-component"
   id="resume"
 >
   <div
-    className="section-title text-center center"
+    class="section-title text-center center"
   >
     <h2>
       business-card-resume-title
@@ -14,24 +14,12 @@ exports[`should render Resume correctly 1`] = `
     <hr />
   </div>
   <div
-    className="container"
+    class="container"
   >
     <div
-      className="col text-center"
+      class="col text-center"
     >
-      <Trans
-        i18nKey="business-card-resume-message"
-      >
-        To download my resume please go to my 
-        <a
-          href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
-          rel="noreferrer"
-          target="_blank"
-        >
-          LinkedIn page
-        </a>
-         and choose More → Save to PDF
-      </Trans>
+      <div />
     </div>
   </div>
 </div>

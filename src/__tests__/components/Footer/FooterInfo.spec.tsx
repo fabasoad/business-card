@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
+import { render } from '@testing-library/react'
 import FooterInfo from '../../../components/Footer/FooterInfo'
 import { useTranslation } from '../../__mocks__/react-i18next'
 import { version } from '../../../../package.json'
@@ -12,8 +12,8 @@ beforeAll(() => {
 })
 
 test('should render FooterInfo correctly', () => {
-  const wrapper: ShallowWrapper = shallow(<FooterInfo />)
-  expect(wrapper).toMatchSnapshot()
+  const { container } = render(<FooterInfo />)
+  expect(container.firstChild).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith(
     'business-card-version',

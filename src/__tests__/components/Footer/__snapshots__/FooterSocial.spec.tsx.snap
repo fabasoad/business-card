@@ -2,68 +2,68 @@
 
 exports[`should render FooterSocial correctly 1`] = `
 <div
-  className="social d-flex justify-content-center"
+  class="social d-flex justify-content-center"
 >
   <ul
-    className="icon-list"
+    class="icon-list"
   >
     <li>
       <a
-        className="btn"
+        class="btn"
         href="https://twitter.com/fabasoad"
         rel="noopener noreferrer"
         target="_blank"
       >
         <i
-          className="fab fa-twitter fa-2x"
+          class="fab fa-twitter fa-2x"
         />
       </a>
     </li>
     <li>
       <a
-        className="btn"
+        class="btn"
         href="https://github.com/fabasoad"
         rel="noopener noreferrer"
         target="_blank"
       >
         <i
-          className="fab fa-github fa-2x"
+          class="fab fa-github fa-2x"
         />
       </a>
     </li>
     <li>
       <a
-        className="btn"
+        class="btn"
         href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
         rel="noopener noreferrer"
         target="_blank"
       >
         <i
-          className="fab fa-linkedin fa-2x"
+          class="fab fa-linkedin fa-2x"
         />
       </a>
     </li>
     <li>
       <a
-        className="btn"
+        class="btn"
         href="https://stackoverflow.com/users/470214/fabasoad"
         rel="noopener noreferrer"
         target="_blank"
       >
         <i
-          className="fab fa-stack-overflow fa-2x"
+          class="fab fa-stack-overflow fa-2x"
         />
       </a>
     </li>
     <li>
       <a
-        className="btn"
+        class="btn"
         href="https://dev.to/fabasoad"
         rel="noopener noreferrer"
         target="_blank"
       >
         <i
-          className="fab fa-dev fa-2x"
+          class="fab fa-dev fa-2x"
         />
       </a>
     </li>

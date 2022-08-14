@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
+import { render } from '@testing-library/react'
 import PortfolioMain from '../../../components/Portfolio/PortfolioMain'
 import { useTranslation } from '../../__mocks__/react-i18next'
 
@@ -11,8 +11,8 @@ beforeAll(() => {
 })
 
 test('should render PortfolioMain correctly', () => {
-  const wrapper: ShallowWrapper = shallow(<PortfolioMain />)
-  expect(wrapper).toMatchSnapshot()
+  const { container } = render(<PortfolioMain />)
+  expect(container.firstChild).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(35)
   expect(tMock).toHaveBeenNthCalledWith(1, 'business-card-portfolio-title')
   for (let i = 1; i < 34; i += 2) {

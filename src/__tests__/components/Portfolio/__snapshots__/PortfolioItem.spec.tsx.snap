@@ -2,13 +2,13 @@
 
 exports[`should render PortfolioItem correctly 1`] = `
 <div
-  className="col-sm-6 col-md-3 col-lg-3 web"
+  class="col-sm-6 col-md-3 col-lg-3 web"
 >
   <div
-    className="portfolio-item"
+    class="portfolio-item"
   >
     <div
-      className="hover-bg text-center"
+      class="hover-bg text-center"
     >
       <a
         href="test-url"
@@ -17,7 +17,7 @@ exports[`should render PortfolioItem correctly 1`] = `
         title="test-name"
       >
         <div
-          className="hover-text"
+          class="hover-text"
         >
           <h4>
             test-title
@@ -26,12 +26,12 @@ exports[`should render PortfolioItem correctly 1`] = `
             test-subtitle
           </small>
           <i
-            className="fa fa-search"
+            class="fa fa-search"
           />
         </div>
         <img
           alt="test-name"
-          className="img-thumbnail"
+          class="img-thumbnail"
           src="test-img"
         />
       </a>

@@ -2,11 +2,11 @@
 
 exports[`should render Badges correctly 1`] = `
 <div
-  className="light-component"
+  class="light-component"
   id="badges"
 >
   <div
-    className="section-title text-center center"
+    class="section-title text-center center"
   >
     <h2>
       business-card-badges-title
@@ -14,13 +14,13 @@ exports[`should render Badges correctly 1`] = `
     <hr />
   </div>
   <div
-    className="container"
+    class="container"
   >
     <div
-      className="row"
+      class="row"
     >
       <div
-        className="col-sm col-md col-lg text-center"
+        class="col-sm col-md col-lg text-center"
       >
         <a
           href="https://tree-nation.com/profile/digitalocean"
@@ -29,7 +29,7 @@ exports[`should render Badges correctly 1`] = `
         >
           <img
             alt="Digital Ocean Forest Badge"
-            className="mb-4 mx-4"
+            class="mb-4 mx-4"
             src="test-file-stub"
             title="DigitalOcean Forest 2021"
           />

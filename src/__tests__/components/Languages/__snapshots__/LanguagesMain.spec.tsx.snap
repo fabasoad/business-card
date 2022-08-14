@@ -2,11 +2,11 @@
 
 exports[`LanguagesMain should render LanguageItem correctly 1`] = `
 <div
-  className="light-component"
+  class="light-component"
   id="languages"
 >
   <div
-    className="section-title text-center center"
+    class="section-title text-center center"
   >
     <h2>
       business-card-languages-title
@@ -14,28 +14,56 @@ exports[`LanguagesMain should render LanguageItem correctly 1`] = `
     <hr />
   </div>
   <div
-    className="container"
+    class="container"
   >
     <div
-      className="row"
+      class="row"
     >
       <div
-        className="language-list col text-center"
+        class="language-list col text-center"
       >
-        <LaguageLinkItem
-          code="jp"
-          text="JLPT N4"
-          url="https://drive.google.com/file/d/1QHRRPXiYuOKMmNPeqRf6GQQtyGdBkhQ5/view?usp=sharing"
-        />
-        <LaguageLinkItem
-          code="gb"
-          text="TOEIC 825"
-          url="https://drive.google.com/file/d/1nzM9WQqR7PQpHKDiWvkRYtcNbnRW8-OB/view?usp=sharing"
-        />
-        <LanguageTextItem
-          code="ua"
-          text="business-card-languages-native"
-        />
+        <div
+          class="mb-4 mx-4"
+        >
+          <span
+            class="flag-icon flag-icon-4x flag-icon-jp mx-auto"
+          />
+          <a
+            class="h5 mt-2"
+            href="https://drive.google.com/file/d/1QHRRPXiYuOKMmNPeqRf6GQQtyGdBkhQ5/view?usp=sharing"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            JLPT N4
+          </a>
+        </div>
+        <div
+          class="mb-4 mx-4"
+        >
+          <span
+            class="flag-icon flag-icon-4x flag-icon-gb mx-auto"
+          />
+          <a
+            class="h5 mt-2"
+            href="https://drive.google.com/file/d/1nzM9WQqR7PQpHKDiWvkRYtcNbnRW8-OB/view?usp=sharing"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            TOEIC 825
+          </a>
+        </div>
+        <div
+          class="mb-4 mx-4"
+        >
+          <span
+            class="flag-icon flag-icon-4x flag-icon-ua mx-auto"
+          />
+          <span
+            class="h5 mt-2"
+          >
+            business-card-languages-native
+          </span>
+        </div>
       </div>
     </div>
   </div>

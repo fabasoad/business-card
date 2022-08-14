@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
+import { render } from '@testing-library/react'
 import Skills from '../../components/Skills'
 import { useTranslation } from '../__mocks__/react-i18next'
 import { Technology } from '../../scripts/technologies/types'
@@ -20,10 +20,10 @@ test('should render Skills correctly', () => {
   )
   const technologyStorage = new TechnologyStorage(null)
   technologyStorage.findBySkill = findBySkillSpy
-  const wrapper: ShallowWrapper = shallow(
+  const { container } = render(
     <Skills technologyStorage={technologyStorage} />
   )
-  expect(wrapper).toMatchSnapshot()
+  expect(container.firstChild).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith('business-card-skills-title')
   expect(findBySkillSpy).toHaveBeenCalledTimes(1)

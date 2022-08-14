@@ -1,12 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render MenuItem correctly 1`] = `
-<NavLink
-  disabled={false}
-  eventKey="#test-menu-item"
+<a
+  class="nav-link"
   href="#test-menu-item"
-  onClick={[Function]}
 >
   business-card-menu-test-menu-item
-</NavLink>
+</a>
 `;

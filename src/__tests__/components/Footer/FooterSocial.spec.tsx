@@ -1,8 +1,9 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
 import FooterSocial from '../../../components/Footer/FooterSocial'
 
-test('should render FooterSocial correctly', () =>
-  expect(shallow(<FooterSocial />)).toMatchSnapshot()
-)
+test('should render FooterSocial correctly', () => {
+  const { container } = render(<FooterSocial />)
+  expect(container.firstChild).toMatchSnapshot()
+})

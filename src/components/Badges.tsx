@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
+import * as imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
 
 interface BadgesProps {}
 

@@ -1,8 +1,8 @@
 /// <reference path='./CertificateIssuerStorage.d.ts' />
-import imgCoursera from '../../assets/images/certificate-issuers/coursera.png'
-import imgOracle from '../../assets/images/certificate-issuers/oracle.png'
-import imgUdemy from '../../assets/images/certificate-issuers/udemy.png'
-import imgHackerRank from '../../assets/images/certificate-issuers/hacker-rank.png'
+import * as imgCoursera from '../../assets/images/certificate-issuers/coursera.png'
+import * as imgOracle from '../../assets/images/certificate-issuers/oracle.png'
+import * as imgUdemy from '../../assets/images/certificate-issuers/udemy.png'
+import * as imgHackerRank from '../../assets/images/certificate-issuers/hacker-rank.png'
 import { CertificateIssuerProvider, CertificateIssuer } from './types'
 
 export default class CertificateIssuerStorage {

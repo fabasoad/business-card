@@ -16,16 +16,16 @@ module.exports = {
       exclude: /node_modules/
     }, {
       test: /\.(png|jpe?g|gif|pdf|svg)$/i,
-      loader: 'file-loader'
+      type: 'asset/resource',
+      generator: {
+        filename: 'assets/[hash][ext][query]'
+      }
     }, {
       test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]',
-          outputPath: 'fonts/'
-        }
-      }]
+      type: 'asset/resource',
+      generator: {
+        filename: 'fonts/[name][ext][query]'
+      }
     }, {
       test: /\.s?css$/,
       use: [
@@ -35,12 +35,12 @@ module.exports = {
       ]
     }, {
       test: /\.tsx?$/,
-      loader: "ts-loader",
+      loader: 'ts-loader',
       exclude: /node_modules/
     }]
   },
   resolve: {
-    extensions: ['.js','.ts','.tsx'],
+    extensions: ['.js', '.ts', '.tsx'],
     modules: [
       'node_modules'
     ]

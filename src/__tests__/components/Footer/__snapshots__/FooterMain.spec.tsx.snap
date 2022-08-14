@@ -2,23 +2,145 @@
 
 exports[`should render FooterMain correctly 1`] = `
 <div
-  className="footer dark-component"
+  class="footer dark-component"
 >
   <div
-    className="container text-center"
+    class="container text-center"
     id="contact"
   >
     <div
-      className="section-title center"
+      class="section-title center"
     >
       <h2>
         business-card-contact-title
       </h2>
       <hr />
     </div>
-    <FooterContacts />
-    <FooterSocial />
-    <FooterInfo />
+    <div
+      class="row contacts"
+    >
+      <div
+        class="col"
+      >
+        <i
+          class="fa fa-map-marker-alt fa-2x"
+        />
+        <p>
+          business-card-contact-city
+        </p>
+      </div>
+      <div
+        class="col"
+      >
+        <i
+          class="fa fa-envelope fa-2x"
+        />
+        <p>
+          fabasoad@gmail.com
+        </p>
+      </div>
+    </div>
+    <div
+      class="social d-flex justify-content-center"
+    >
+      <ul
+        class="icon-list"
+      >
+        <li>
+          <a
+            class="btn"
+            href="https://twitter.com/fabasoad"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              class="fab fa-twitter fa-2x"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn"
+            href="https://github.com/fabasoad"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              class="fab fa-github fa-2x"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn"
+            href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              class="fab fa-linkedin fa-2x"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn"
+            href="https://stackoverflow.com/users/470214/fabasoad"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              class="fab fa-stack-overflow fa-2x"
+            />
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn"
+            href="https://dev.to/fabasoad"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <i
+              class="fab fa-dev fa-2x"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="social d-flex justify-content-center"
+    >
+      <ul
+        class="icon-list"
+      >
+        <li>
+          <img
+            alt="Made by fabasoad"
+            src="https://img.shields.io/static/v1?label=made%20by&message=fabasoad&color=2c3e50&style=for-the-badge&logo=github"
+          />
+        </li>
+        <li>
+          <a
+            href="https://www.bitcoinqrcodemaker.com/?style=bitcoin&address=145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH&prefix=on"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Donate with Bitcoin"
+              src="https://img.shields.io/badge/bitcoin-donate-yellow?style=flat&logo=bitcoin"
+            />
+          </a>
+        </li>
+        <li>
+          <span
+            class="badge rounded-pill bg-secondary"
+          >
+            business-card-version
+          </span>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 `;

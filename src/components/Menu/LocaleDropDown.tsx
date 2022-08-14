@@ -15,21 +15,18 @@ interface LocaleDropDownProps {
 
 type Props = LocaleDropDownProps & LinkDispatchProps & LinkStateProps
 
-export function LocaleDropDown(props: Props) {
-  const handleClick = (locale: Locale): void => {
-    props.startSetLocale(locale)
-  }
+export function LocaleDropDown({ getLocalesExceptOf, locale, startSetLocale }: Props) {
   const FlagIcon = FlagIconFactory(React, { 'useCssModules': false })
   return (
     <Dropdown>
       <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
-        <FlagIcon code={props.locale.code} />
-        {props.locale.title}
+        <FlagIcon code={locale.code} />
+        {locale.title}
       </Dropdown.Toggle>
       <Dropdown.Menu>
-        {props.getLocalesExceptOf(props.locale.code).map((l: Locale) => {
+        {getLocalesExceptOf(locale.code).map((l: Locale) => {
           return (
-            <Dropdown.Item onClick={() => handleClick(l)} bsPrefix="nav-link" eventKey={l.code} key={l.code}>
+            <Dropdown.Item onClick={() => startSetLocale(l)} bsPrefix="nav-link" eventKey={l.code} key={l.code}>
               <FlagIcon code={l.code} />
               {l.title}
             </Dropdown.Item>

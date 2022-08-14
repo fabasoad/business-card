@@ -1,9 +1,9 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { render } from '@testing-library/react'
 import LoadingSpinner from '../../components/LoadingSpinner'
 
 test('should render LoadingSpinner correctly', () => {
-  const wrapper = shallow(<LoadingSpinner />)
-  expect(wrapper).toMatchSnapshot()
+  const { container } = render(<LoadingSpinner />)
+  expect(container.firstChild).toMatchSnapshot()
 })

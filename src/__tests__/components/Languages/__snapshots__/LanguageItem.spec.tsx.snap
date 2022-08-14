@@ -2,12 +2,10 @@
 
 exports[`should render LanguageItem correctly 1`] = `
 <div
-  className="mb-4 mx-4"
+  class="mb-4 mx-4"
 >
-  <FlagIcon
-    className="mx-auto"
-    code="gb"
-    size="4x"
+  <span
+    class="flag-icon flag-icon-4x flag-icon-gb mx-auto"
   />
   test-content
 </div>

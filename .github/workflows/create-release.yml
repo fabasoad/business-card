@@ -9,10 +9,10 @@ on:
 jobs:
   create_release:
     name: Release
-    runs-on: ubuntu-latest
+    # For some reason build requires OS X 64-bit with Node.js 17.x
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
-      # For some reason node 16, which is installed by default, failed here
       - uses: actions/setup-node@v3
         with:
           node-version: 17

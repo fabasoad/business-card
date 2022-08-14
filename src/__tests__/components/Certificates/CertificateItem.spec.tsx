@@ -1,10 +1,10 @@
 /// <reference types="jest" />
+import { shallow, ShallowWrapper } from 'enzyme'
 import * as React from 'react'
-import { render } from '@testing-library/react'
 import CertificateItem from '../../../components/Certificates/CertificateItem'
 
-test.skip('should render CertificateItem correctly', () => {
-  const { container } = render(<CertificateItem
+test('should render CertificateItem correctly', () => {
+  const wrapper: ShallowWrapper = shallow(<CertificateItem
     id="test-id"
     issueDate={new Date('2020-01')}
     issuer={{ img: 'test-issuer-img', name: 'test-issuer-name' }}
@@ -12,5 +12,5 @@ test.skip('should render CertificateItem correctly', () => {
     i18nTitleKey='test-title-key'
     url='test-url'
   />)
-  expect(container.firstChild).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

@@ -5,10 +5,10 @@ exports[`should render AboutMain correctly 1`] = `
   id="about"
 >
   <div
-    class="container"
+    className="container"
   >
     <div
-      class="section-title text-center center"
+      className="section-title text-center center"
     >
       <h2>
         business-card-about-me-title
@@ -16,27 +16,27 @@ exports[`should render AboutMain correctly 1`] = `
       <hr />
     </div>
     <div
-      class="row d-flex justify-content-center"
+      className="row d-flex justify-content-center"
     >
       <div
-        class="about-photo col-md-12 d-flex justify-content-center"
+        className="about-photo col-md-12 d-flex justify-content-center"
       >
         <img
           alt="About me"
-          class="about-photo--portrait img-thumbnail"
+          className="about-photo--portrait img-thumbnail"
           src="test-file-stub"
         />
         <img
           alt="Oracle 1Z0-808"
-          class="about-photo--badge"
+          className="about-photo--badge"
           src="test-file-stub"
         />
       </div>
       <div
-        class="col-md-8 col-md-offset-2"
+        className="col-md-8 col-md-offset-2"
       >
         <ul
-          class="mt-3"
+          className="mt-3"
         >
           <li>
             business-card-about-me-general-list-item-1
@@ -81,7 +81,18 @@ exports[`should render AboutMain correctly 1`] = `
                 business-card-about-me-general-list-item-14
               </li>
               <li>
-                <div />
+                <Trans
+                  i18nKey="business-card-about-me-general-list-item-15"
+                >
+                  Developed and released 
+                  <a
+                    href="https://github.com/marketplace?type=actions&query=fabasoad+"
+                    rel="noreferrer"
+                    target="_blank"
+                  >
+                    19 GitHub Actions to the marketplace
+                  </a>
+                </Trans>
               </li>
               <li>
                 business-card-about-me-general-list-item-16

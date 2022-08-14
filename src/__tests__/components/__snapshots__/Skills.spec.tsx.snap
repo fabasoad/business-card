@@ -2,11 +2,11 @@
 
 exports[`should render Skills correctly 1`] = `
 <div
-  class="light-component"
+  className="light-component"
   id="skills"
 >
   <div
-    class="section-title text-center center"
+    className="section-title text-center center"
   >
     <h2>
       business-card-skills-title
@@ -14,23 +14,25 @@ exports[`should render Skills correctly 1`] = `
     <hr />
   </div>
   <div
-    class="container"
+    className="container"
   >
     <div
-      class="row"
+      className="row"
     >
       <div
-        class="skills-list col text-center"
+        className="skills-list col text-center"
       >
         <img
           alt="name-1"
-          class="m-4"
+          className="m-4"
+          key="test-uuid"
           src="img-1"
           title="title-1"
         />
         <img
           alt="name-2"
-          class="m-4"
+          className="m-4"
+          key="test-uuid"
           src="img-2"
           title="title-2"
         />

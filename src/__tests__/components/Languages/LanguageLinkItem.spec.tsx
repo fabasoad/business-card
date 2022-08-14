@@ -1,13 +1,13 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render } from '@testing-library/react'
+import { shallow, ShallowWrapper } from 'enzyme'
 import LanguageLinkItem from '../../../components/Languages/LanguageLinkItem'
 
 test('should render LanguageLinkItem correctly', () => {
-  const { container } = render(<LanguageLinkItem
+  const wrapper: ShallowWrapper = shallow(<LanguageLinkItem
     code="gb"
     text="test-text"
     url="test-url"
   />)
-  expect(container.firstChild).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

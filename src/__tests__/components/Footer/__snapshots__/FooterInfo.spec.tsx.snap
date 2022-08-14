@@ -2,10 +2,10 @@
 
 exports[`should render FooterInfo correctly 1`] = `
 <div
-  class="social d-flex justify-content-center"
+  className="social d-flex justify-content-center"
 >
   <ul
-    class="icon-list"
+    className="icon-list"
   >
     <li>
       <img
@@ -26,11 +26,12 @@ exports[`should render FooterInfo correctly 1`] = `
       </a>
     </li>
     <li>
-      <span
-        class="badge rounded-pill bg-secondary"
+      <Badge
+        bg="secondary"
+        pill={true}
       >
         business-card-version
-      </span>
+      </Badge>
     </li>
   </ul>
 </div>

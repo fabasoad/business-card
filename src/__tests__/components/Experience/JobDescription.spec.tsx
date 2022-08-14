@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render, screen } from '@testing-library/react'
+import { shallow } from 'enzyme'
 import JobDescription from '../../../components/Experience/JobDescription'
 import { useTranslation } from '../../__mocks__/react-i18next'
 
@@ -10,31 +10,31 @@ beforeEach(() => {
   tMock = useTranslation().t
 })
 
-test.skip('should render JobDescription without title correctly', () => {
+test('should render JobDescription without title correctly', () => {
   const prefix = 'some-prefix'
   const count = 2
-  const { container } = render(<JobDescription
+  const wrapper = shallow(<JobDescription
     count={count}
     i18nKeyPrefix={prefix}
     withTitle={false}
   />)
-  expect(container.firstChild).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
   expect(tMock).not.toBeCalledWith('business-card-experience-description-title')
   for (let i = 0; i < count; i++) {
-    expect(screen.queryByText(`${prefix}-${i + 1}`)).not.toBeNull()
+    expect(wrapper.childAt(i).childAt(0).text()).toBe(`${prefix}-${i + 1}`)
   }
 })
 
-test.skip('should render JobDescription with title correctly', () => {
+test('should render JobDescription with title correctly', () => {
   const prefix = 'some-prefix'
   const count = 3
-  const { container } = render(<JobDescription
+  const wrapper = shallow(<JobDescription
     count={count}
     i18nKeyPrefix={prefix}
   />)
-  expect(container.firstChild).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
   expect(tMock).toBeCalledWith('business-card-experience-description-title')
   for (let i = 1; i < count; i++) {
-    expect(screen.queryByText(`${prefix}-${i}`)).not.toBeNull()
+    expect(wrapper.childAt(i).childAt(0).text()).toBe(`${prefix}-${i}`)
   }
 })

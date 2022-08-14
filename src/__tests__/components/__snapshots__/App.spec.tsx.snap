@@ -1,0 +1,1535 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render App with gb locale correctly 1`] = `
+<div
+  className="font-regular font-non-jp"
+>
+  <BackToTopButton />
+  <Header />
+  <MenuMain />
+  <Connect(AboutMain) />
+  <StatsMain />
+  <Resume />
+  <Skills
+    technologyStorage={
+      TechnologyStorage {
+        "provider": Object {
+          "items": Map {
+            "algorithms" => Object {
+              "img": "test-file-stub",
+              "name": "algorithms",
+              "title": "Algorithms",
+            },
+            "angular" => Object {
+              "img": "test-file-stub",
+              "name": "angular",
+              "title": "Angular",
+            },
+            "aws" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "aws",
+              "title": "AWS",
+            },
+            "bitrise" => Object {
+              "img": "test-file-stub",
+              "name": "bitrise",
+              "title": "Bitrise",
+            },
+            "bootstrap" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "bootstrap",
+              "title": "Bootstrap",
+            },
+            "codeigniter" => Object {
+              "img": "test-file-stub",
+              "name": "codeigniter",
+              "title": "CodeIgniter",
+            },
+            "concourseCI" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "concourseCI",
+              "title": "Concourse CI",
+            },
+            "csharp" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "csharp",
+              "title": "C#",
+            },
+            "docker" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "docker",
+              "title": "Docker",
+            },
+            "dotNetCore" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "dotNetCore",
+              "title": ".NET Core",
+            },
+            "elasticsearch" => Object {
+              "img": "test-file-stub",
+              "name": "elasticsearch",
+              "title": "Elasticsearch",
+            },
+            "fluentBit" => Object {
+              "img": "test-file-stub",
+              "name": "fluentBit",
+              "title": "fluent-bit",
+            },
+            "fluentD" => Object {
+              "img": "test-file-stub",
+              "name": "fluentD",
+              "title": "FluentD",
+            },
+            "git" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "git",
+              "title": "Git",
+            },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+              "title": "GitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+              "title": "GitHub Actions",
+            },
+            "gitlab" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitlab",
+              "title": "GitLab",
+            },
+            "gitlabCi" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitlabCi",
+              "title": "GitLab CI",
+            },
+            "grafana" => Object {
+              "img": "test-file-stub",
+              "name": "grafana",
+              "title": "Grafana",
+            },
+            "helm" => Object {
+              "img": "test-file-stub",
+              "name": "helm",
+              "title": "Helm",
+            },
+            "hpeAlm" => Object {
+              "img": "test-file-stub",
+              "name": "hpeAlm",
+              "title": "HPE ALM",
+            },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+              "title": "Intellij IDEA",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+              "title": "jQuery",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+              "title": "Java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+              "title": "JavaScript",
+            },
+            "jenkins" => Object {
+              "img": "test-file-stub",
+              "name": "jenkins",
+              "title": "Jenkins",
+            },
+            "jira" => Object {
+              "img": "test-file-stub",
+              "name": "jira",
+              "title": "Jira",
+            },
+            "junit" => Object {
+              "img": "test-file-stub",
+              "name": "junit",
+              "title": "jUnit",
+            },
+            "kafka" => Object {
+              "img": "test-file-stub",
+              "name": "kafka",
+              "title": "",
+            },
+            "kibana" => Object {
+              "img": "test-file-stub",
+              "name": "kibana",
+              "title": "Kibana",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+              "title": "Kubernetes",
+            },
+            "leetcode" => Object {
+              "img": "test-file-stub",
+              "name": "leetcode",
+              "title": "Leetcode",
+            },
+            "lombok" => Object {
+              "img": "test-file-stub",
+              "name": "lombok",
+              "title": "Lombok",
+            },
+            "mariaDb" => Object {
+              "img": "test-file-stub",
+              "name": "mariaDb",
+              "title": "Maria DB",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+              "title": "Maven",
+            },
+            "mongodb" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "mongodb",
+              "title": "MongoDB",
+            },
+            "mssql" => Object {
+              "img": "test-file-stub",
+              "name": "mssql",
+              "title": "MS-SQL",
+            },
+            "mysql" => Object {
+              "img": "test-file-stub",
+              "name": "mysql",
+              "title": "MySQL",
+            },
+            "netBeans" => Object {
+              "img": "test-file-stub",
+              "name": "netBeans",
+              "title": "NetBeans",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "name": "npm",
+              "title": "npm",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
+              "title": "Oracle",
+            },
+            "oxidEShop" => Object {
+              "img": "test-file-stub",
+              "name": "oxidEShop",
+              "title": "Oxid E-Shop",
+            },
+            "php" => Object {
+              "img": "test-file-stub",
+              "name": "php",
+              "title": "PHP",
+            },
+            "prism" => Object {
+              "img": "test-file-stub",
+              "name": "prism",
+              "title": "Prism",
+            },
+            "prometheus" => Object {
+              "img": "test-file-stub",
+              "name": "prometheus",
+              "title": "Prometheus",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+              "title": "Python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
+              "title": "Quarkus",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+              "title": "React",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "name": "redis",
+              "title": "Redis",
+            },
+            "redmine" => Object {
+              "img": "test-file-stub",
+              "name": "redmine",
+              "title": "Redmine",
+            },
+            "silverlight" => Object {
+              "img": "test-file-stub",
+              "name": "silverlight",
+              "title": "Silverlight",
+            },
+            "smarty" => Object {
+              "img": "test-file-stub",
+              "name": "smarty",
+              "title": "Smarty",
+            },
+            "spring" => Object {
+              "img": "test-file-stub",
+              "name": "spring",
+              "title": "Spring",
+            },
+            "stackoverflow" => Object {
+              "img": "test-file-stub",
+              "name": "stackoverflow",
+              "title": "StackOverflow",
+            },
+            "svn" => Object {
+              "img": "test-file-stub",
+              "name": "svn",
+              "title": "SVN",
+            },
+            "teamCity" => Object {
+              "img": "test-file-stub",
+              "name": "teamCity",
+              "title": "Team City",
+            },
+            "terraform" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "terraform",
+              "title": "Terraform",
+            },
+            "tomcat" => Object {
+              "img": "test-file-stub",
+              "name": "tomcat",
+              "title": "Tomcat",
+            },
+            "travis" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "travis",
+              "title": "Travis CI",
+            },
+            "typeScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "typeScript",
+              "title": "TypeScript",
+            },
+            "vBulletin" => Object {
+              "img": "test-file-stub",
+              "name": "vBulletin",
+              "title": "vBulletin",
+            },
+            "visualStudio" => Object {
+              "img": "test-file-stub",
+              "name": "visualStudio",
+              "title": "Visual Studio",
+            },
+            "vsCode" => Object {
+              "img": "test-file-stub",
+              "name": "vsCode",
+              "title": "VS Code",
+            },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "name": "webpack",
+              "title": "Webpack",
+            },
+            "windowsForms" => Object {
+              "img": "test-file-stub",
+              "name": "windowsForms",
+              "title": "Windows Forms",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+              "title": "Xamarin",
+            },
+          },
+        },
+      }
+    }
+  />
+  <ExperienceMain />
+  <EducationMain />
+  <CertificatesMain
+    certificateIssuerStorage={
+      CertificateIssuerStorage {
+        "provider": Object {
+          "items": Map {
+            "coursera" => Object {
+              "img": "test-file-stub",
+              "name": "coursera",
+            },
+            "hacker-rank" => Object {
+              "img": "test-file-stub",
+              "name": "hackerRank",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
+            },
+            "udemy" => Object {
+              "img": "test-file-stub",
+              "name": "udemy",
+            },
+          },
+        },
+      }
+    }
+    technologyStorage={
+      TechnologyStorage {
+        "provider": Object {
+          "items": Map {
+            "algorithms" => Object {
+              "img": "test-file-stub",
+              "name": "algorithms",
+              "title": "Algorithms",
+            },
+            "angular" => Object {
+              "img": "test-file-stub",
+              "name": "angular",
+              "title": "Angular",
+            },
+            "aws" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "aws",
+              "title": "AWS",
+            },
+            "bitrise" => Object {
+              "img": "test-file-stub",
+              "name": "bitrise",
+              "title": "Bitrise",
+            },
+            "bootstrap" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "bootstrap",
+              "title": "Bootstrap",
+            },
+            "codeigniter" => Object {
+              "img": "test-file-stub",
+              "name": "codeigniter",
+              "title": "CodeIgniter",
+            },
+            "concourseCI" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "concourseCI",
+              "title": "Concourse CI",
+            },
+            "csharp" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "csharp",
+              "title": "C#",
+            },
+            "docker" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "docker",
+              "title": "Docker",
+            },
+            "dotNetCore" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "dotNetCore",
+              "title": ".NET Core",
+            },
+            "elasticsearch" => Object {
+              "img": "test-file-stub",
+              "name": "elasticsearch",
+              "title": "Elasticsearch",
+            },
+            "fluentBit" => Object {
+              "img": "test-file-stub",
+              "name": "fluentBit",
+              "title": "fluent-bit",
+            },
+            "fluentD" => Object {
+              "img": "test-file-stub",
+              "name": "fluentD",
+              "title": "FluentD",
+            },
+            "git" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "git",
+              "title": "Git",
+            },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+              "title": "GitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+              "title": "GitHub Actions",
+            },
+            "gitlab" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitlab",
+              "title": "GitLab",
+            },
+            "gitlabCi" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitlabCi",
+              "title": "GitLab CI",
+            },
+            "grafana" => Object {
+              "img": "test-file-stub",
+              "name": "grafana",
+              "title": "Grafana",
+            },
+            "helm" => Object {
+              "img": "test-file-stub",
+              "name": "helm",
+              "title": "Helm",
+            },
+            "hpeAlm" => Object {
+              "img": "test-file-stub",
+              "name": "hpeAlm",
+              "title": "HPE ALM",
+            },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+              "title": "Intellij IDEA",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+              "title": "jQuery",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+              "title": "Java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+              "title": "JavaScript",
+            },
+            "jenkins" => Object {
+              "img": "test-file-stub",
+              "name": "jenkins",
+              "title": "Jenkins",
+            },
+            "jira" => Object {
+              "img": "test-file-stub",
+              "name": "jira",
+              "title": "Jira",
+            },
+            "junit" => Object {
+              "img": "test-file-stub",
+              "name": "junit",
+              "title": "jUnit",
+            },
+            "kafka" => Object {
+              "img": "test-file-stub",
+              "name": "kafka",
+              "title": "",
+            },
+            "kibana" => Object {
+              "img": "test-file-stub",
+              "name": "kibana",
+              "title": "Kibana",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+              "title": "Kubernetes",
+            },
+            "leetcode" => Object {
+              "img": "test-file-stub",
+              "name": "leetcode",
+              "title": "Leetcode",
+            },
+            "lombok" => Object {
+              "img": "test-file-stub",
+              "name": "lombok",
+              "title": "Lombok",
+            },
+            "mariaDb" => Object {
+              "img": "test-file-stub",
+              "name": "mariaDb",
+              "title": "Maria DB",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+              "title": "Maven",
+            },
+            "mongodb" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "mongodb",
+              "title": "MongoDB",
+            },
+            "mssql" => Object {
+              "img": "test-file-stub",
+              "name": "mssql",
+              "title": "MS-SQL",
+            },
+            "mysql" => Object {
+              "img": "test-file-stub",
+              "name": "mysql",
+              "title": "MySQL",
+            },
+            "netBeans" => Object {
+              "img": "test-file-stub",
+              "name": "netBeans",
+              "title": "NetBeans",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "name": "npm",
+              "title": "npm",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
+              "title": "Oracle",
+            },
+            "oxidEShop" => Object {
+              "img": "test-file-stub",
+              "name": "oxidEShop",
+              "title": "Oxid E-Shop",
+            },
+            "php" => Object {
+              "img": "test-file-stub",
+              "name": "php",
+              "title": "PHP",
+            },
+            "prism" => Object {
+              "img": "test-file-stub",
+              "name": "prism",
+              "title": "Prism",
+            },
+            "prometheus" => Object {
+              "img": "test-file-stub",
+              "name": "prometheus",
+              "title": "Prometheus",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+              "title": "Python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
+              "title": "Quarkus",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+              "title": "React",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "name": "redis",
+              "title": "Redis",
+            },
+            "redmine" => Object {
+              "img": "test-file-stub",
+              "name": "redmine",
+              "title": "Redmine",
+            },
+            "silverlight" => Object {
+              "img": "test-file-stub",
+              "name": "silverlight",
+              "title": "Silverlight",
+            },
+            "smarty" => Object {
+              "img": "test-file-stub",
+              "name": "smarty",
+              "title": "Smarty",
+            },
+            "spring" => Object {
+              "img": "test-file-stub",
+              "name": "spring",
+              "title": "Spring",
+            },
+            "stackoverflow" => Object {
+              "img": "test-file-stub",
+              "name": "stackoverflow",
+              "title": "StackOverflow",
+            },
+            "svn" => Object {
+              "img": "test-file-stub",
+              "name": "svn",
+              "title": "SVN",
+            },
+            "teamCity" => Object {
+              "img": "test-file-stub",
+              "name": "teamCity",
+              "title": "Team City",
+            },
+            "terraform" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "terraform",
+              "title": "Terraform",
+            },
+            "tomcat" => Object {
+              "img": "test-file-stub",
+              "name": "tomcat",
+              "title": "Tomcat",
+            },
+            "travis" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "travis",
+              "title": "Travis CI",
+            },
+            "typeScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "typeScript",
+              "title": "TypeScript",
+            },
+            "vBulletin" => Object {
+              "img": "test-file-stub",
+              "name": "vBulletin",
+              "title": "vBulletin",
+            },
+            "visualStudio" => Object {
+              "img": "test-file-stub",
+              "name": "visualStudio",
+              "title": "Visual Studio",
+            },
+            "vsCode" => Object {
+              "img": "test-file-stub",
+              "name": "vsCode",
+              "title": "VS Code",
+            },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "name": "webpack",
+              "title": "Webpack",
+            },
+            "windowsForms" => Object {
+              "img": "test-file-stub",
+              "name": "windowsForms",
+              "title": "Windows Forms",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+              "title": "Xamarin",
+            },
+          },
+        },
+      }
+    }
+  />
+  <LanguagesMain />
+  <PortfolioMain />
+  <Badges />
+  <FooterMain />
+</div>
+`;
+
+exports[`should render App with jp locale correctly 1`] = `
+<div
+  className="font-regular font-jp"
+>
+  <BackToTopButton />
+  <Header />
+  <MenuMain />
+  <Connect(AboutMain) />
+  <StatsMain />
+  <Resume />
+  <Skills
+    technologyStorage={
+      TechnologyStorage {
+        "provider": Object {
+          "items": Map {
+            "algorithms" => Object {
+              "img": "test-file-stub",
+              "name": "algorithms",
+              "title": "Algorithms",
+            },
+            "angular" => Object {
+              "img": "test-file-stub",
+              "name": "angular",
+              "title": "Angular",
+            },
+            "aws" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "aws",
+              "title": "AWS",
+            },
+            "bitrise" => Object {
+              "img": "test-file-stub",
+              "name": "bitrise",
+              "title": "Bitrise",
+            },
+            "bootstrap" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "bootstrap",
+              "title": "Bootstrap",
+            },
+            "codeigniter" => Object {
+              "img": "test-file-stub",
+              "name": "codeigniter",
+              "title": "CodeIgniter",
+            },
+            "concourseCI" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "concourseCI",
+              "title": "Concourse CI",
+            },
+            "csharp" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "csharp",
+              "title": "C#",
+            },
+            "docker" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "docker",
+              "title": "Docker",
+            },
+            "dotNetCore" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "dotNetCore",
+              "title": ".NET Core",
+            },
+            "elasticsearch" => Object {
+              "img": "test-file-stub",
+              "name": "elasticsearch",
+              "title": "Elasticsearch",
+            },
+            "fluentBit" => Object {
+              "img": "test-file-stub",
+              "name": "fluentBit",
+              "title": "fluent-bit",
+            },
+            "fluentD" => Object {
+              "img": "test-file-stub",
+              "name": "fluentD",
+              "title": "FluentD",
+            },
+            "git" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "git",
+              "title": "Git",
+            },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+              "title": "GitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+              "title": "GitHub Actions",
+            },
+            "gitlab" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitlab",
+              "title": "GitLab",
+            },
+            "gitlabCi" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitlabCi",
+              "title": "GitLab CI",
+            },
+            "grafana" => Object {
+              "img": "test-file-stub",
+              "name": "grafana",
+              "title": "Grafana",
+            },
+            "helm" => Object {
+              "img": "test-file-stub",
+              "name": "helm",
+              "title": "Helm",
+            },
+            "hpeAlm" => Object {
+              "img": "test-file-stub",
+              "name": "hpeAlm",
+              "title": "HPE ALM",
+            },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+              "title": "Intellij IDEA",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+              "title": "jQuery",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+              "title": "Java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+              "title": "JavaScript",
+            },
+            "jenkins" => Object {
+              "img": "test-file-stub",
+              "name": "jenkins",
+              "title": "Jenkins",
+            },
+            "jira" => Object {
+              "img": "test-file-stub",
+              "name": "jira",
+              "title": "Jira",
+            },
+            "junit" => Object {
+              "img": "test-file-stub",
+              "name": "junit",
+              "title": "jUnit",
+            },
+            "kafka" => Object {
+              "img": "test-file-stub",
+              "name": "kafka",
+              "title": "",
+            },
+            "kibana" => Object {
+              "img": "test-file-stub",
+              "name": "kibana",
+              "title": "Kibana",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+              "title": "Kubernetes",
+            },
+            "leetcode" => Object {
+              "img": "test-file-stub",
+              "name": "leetcode",
+              "title": "Leetcode",
+            },
+            "lombok" => Object {
+              "img": "test-file-stub",
+              "name": "lombok",
+              "title": "Lombok",
+            },
+            "mariaDb" => Object {
+              "img": "test-file-stub",
+              "name": "mariaDb",
+              "title": "Maria DB",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+              "title": "Maven",
+            },
+            "mongodb" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "mongodb",
+              "title": "MongoDB",
+            },
+            "mssql" => Object {
+              "img": "test-file-stub",
+              "name": "mssql",
+              "title": "MS-SQL",
+            },
+            "mysql" => Object {
+              "img": "test-file-stub",
+              "name": "mysql",
+              "title": "MySQL",
+            },
+            "netBeans" => Object {
+              "img": "test-file-stub",
+              "name": "netBeans",
+              "title": "NetBeans",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "name": "npm",
+              "title": "npm",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
+              "title": "Oracle",
+            },
+            "oxidEShop" => Object {
+              "img": "test-file-stub",
+              "name": "oxidEShop",
+              "title": "Oxid E-Shop",
+            },
+            "php" => Object {
+              "img": "test-file-stub",
+              "name": "php",
+              "title": "PHP",
+            },
+            "prism" => Object {
+              "img": "test-file-stub",
+              "name": "prism",
+              "title": "Prism",
+            },
+            "prometheus" => Object {
+              "img": "test-file-stub",
+              "name": "prometheus",
+              "title": "Prometheus",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+              "title": "Python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
+              "title": "Quarkus",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+              "title": "React",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "name": "redis",
+              "title": "Redis",
+            },
+            "redmine" => Object {
+              "img": "test-file-stub",
+              "name": "redmine",
+              "title": "Redmine",
+            },
+            "silverlight" => Object {
+              "img": "test-file-stub",
+              "name": "silverlight",
+              "title": "Silverlight",
+            },
+            "smarty" => Object {
+              "img": "test-file-stub",
+              "name": "smarty",
+              "title": "Smarty",
+            },
+            "spring" => Object {
+              "img": "test-file-stub",
+              "name": "spring",
+              "title": "Spring",
+            },
+            "stackoverflow" => Object {
+              "img": "test-file-stub",
+              "name": "stackoverflow",
+              "title": "StackOverflow",
+            },
+            "svn" => Object {
+              "img": "test-file-stub",
+              "name": "svn",
+              "title": "SVN",
+            },
+            "teamCity" => Object {
+              "img": "test-file-stub",
+              "name": "teamCity",
+              "title": "Team City",
+            },
+            "terraform" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "terraform",
+              "title": "Terraform",
+            },
+            "tomcat" => Object {
+              "img": "test-file-stub",
+              "name": "tomcat",
+              "title": "Tomcat",
+            },
+            "travis" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "travis",
+              "title": "Travis CI",
+            },
+            "typeScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "typeScript",
+              "title": "TypeScript",
+            },
+            "vBulletin" => Object {
+              "img": "test-file-stub",
+              "name": "vBulletin",
+              "title": "vBulletin",
+            },
+            "visualStudio" => Object {
+              "img": "test-file-stub",
+              "name": "visualStudio",
+              "title": "Visual Studio",
+            },
+            "vsCode" => Object {
+              "img": "test-file-stub",
+              "name": "vsCode",
+              "title": "VS Code",
+            },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "name": "webpack",
+              "title": "Webpack",
+            },
+            "windowsForms" => Object {
+              "img": "test-file-stub",
+              "name": "windowsForms",
+              "title": "Windows Forms",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+              "title": "Xamarin",
+            },
+          },
+        },
+      }
+    }
+  />
+  <ExperienceMain />
+  <EducationMain />
+  <CertificatesMain
+    certificateIssuerStorage={
+      CertificateIssuerStorage {
+        "provider": Object {
+          "items": Map {
+            "coursera" => Object {
+              "img": "test-file-stub",
+              "name": "coursera",
+            },
+            "hacker-rank" => Object {
+              "img": "test-file-stub",
+              "name": "hackerRank",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
+            },
+            "udemy" => Object {
+              "img": "test-file-stub",
+              "name": "udemy",
+            },
+          },
+        },
+      }
+    }
+    technologyStorage={
+      TechnologyStorage {
+        "provider": Object {
+          "items": Map {
+            "algorithms" => Object {
+              "img": "test-file-stub",
+              "name": "algorithms",
+              "title": "Algorithms",
+            },
+            "angular" => Object {
+              "img": "test-file-stub",
+              "name": "angular",
+              "title": "Angular",
+            },
+            "aws" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "aws",
+              "title": "AWS",
+            },
+            "bitrise" => Object {
+              "img": "test-file-stub",
+              "name": "bitrise",
+              "title": "Bitrise",
+            },
+            "bootstrap" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "bootstrap",
+              "title": "Bootstrap",
+            },
+            "codeigniter" => Object {
+              "img": "test-file-stub",
+              "name": "codeigniter",
+              "title": "CodeIgniter",
+            },
+            "concourseCI" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "concourseCI",
+              "title": "Concourse CI",
+            },
+            "csharp" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "csharp",
+              "title": "C#",
+            },
+            "docker" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "docker",
+              "title": "Docker",
+            },
+            "dotNetCore" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "dotNetCore",
+              "title": ".NET Core",
+            },
+            "elasticsearch" => Object {
+              "img": "test-file-stub",
+              "name": "elasticsearch",
+              "title": "Elasticsearch",
+            },
+            "fluentBit" => Object {
+              "img": "test-file-stub",
+              "name": "fluentBit",
+              "title": "fluent-bit",
+            },
+            "fluentD" => Object {
+              "img": "test-file-stub",
+              "name": "fluentD",
+              "title": "FluentD",
+            },
+            "git" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "git",
+              "title": "Git",
+            },
+            "gitHub" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHub",
+              "title": "GitHub",
+            },
+            "gitHubActions" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitHubActions",
+              "title": "GitHub Actions",
+            },
+            "gitlab" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitlab",
+              "title": "GitLab",
+            },
+            "gitlabCi" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "gitlabCi",
+              "title": "GitLab CI",
+            },
+            "grafana" => Object {
+              "img": "test-file-stub",
+              "name": "grafana",
+              "title": "Grafana",
+            },
+            "helm" => Object {
+              "img": "test-file-stub",
+              "name": "helm",
+              "title": "Helm",
+            },
+            "hpeAlm" => Object {
+              "img": "test-file-stub",
+              "name": "hpeAlm",
+              "title": "HPE ALM",
+            },
+            "intellijIdea" => Object {
+              "img": "test-file-stub",
+              "name": "intellijIdea",
+              "title": "Intellij IDEA",
+            },
+            "jQuery" => Object {
+              "img": "test-file-stub",
+              "name": "jQuery",
+              "title": "jQuery",
+            },
+            "java" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "java",
+              "title": "Java",
+            },
+            "javaScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "javaScript",
+              "title": "JavaScript",
+            },
+            "jenkins" => Object {
+              "img": "test-file-stub",
+              "name": "jenkins",
+              "title": "Jenkins",
+            },
+            "jira" => Object {
+              "img": "test-file-stub",
+              "name": "jira",
+              "title": "Jira",
+            },
+            "junit" => Object {
+              "img": "test-file-stub",
+              "name": "junit",
+              "title": "jUnit",
+            },
+            "kafka" => Object {
+              "img": "test-file-stub",
+              "name": "kafka",
+              "title": "",
+            },
+            "kibana" => Object {
+              "img": "test-file-stub",
+              "name": "kibana",
+              "title": "Kibana",
+            },
+            "kubernetes" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "kubernetes",
+              "title": "Kubernetes",
+            },
+            "leetcode" => Object {
+              "img": "test-file-stub",
+              "name": "leetcode",
+              "title": "Leetcode",
+            },
+            "lombok" => Object {
+              "img": "test-file-stub",
+              "name": "lombok",
+              "title": "Lombok",
+            },
+            "mariaDb" => Object {
+              "img": "test-file-stub",
+              "name": "mariaDb",
+              "title": "Maria DB",
+            },
+            "maven" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "maven",
+              "title": "Maven",
+            },
+            "mongodb" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "mongodb",
+              "title": "MongoDB",
+            },
+            "mssql" => Object {
+              "img": "test-file-stub",
+              "name": "mssql",
+              "title": "MS-SQL",
+            },
+            "mysql" => Object {
+              "img": "test-file-stub",
+              "name": "mysql",
+              "title": "MySQL",
+            },
+            "netBeans" => Object {
+              "img": "test-file-stub",
+              "name": "netBeans",
+              "title": "NetBeans",
+            },
+            "npm" => Object {
+              "img": "test-file-stub",
+              "name": "npm",
+              "title": "npm",
+            },
+            "oracle" => Object {
+              "img": "test-file-stub",
+              "name": "oracle",
+              "title": "Oracle",
+            },
+            "oxidEShop" => Object {
+              "img": "test-file-stub",
+              "name": "oxidEShop",
+              "title": "Oxid E-Shop",
+            },
+            "php" => Object {
+              "img": "test-file-stub",
+              "name": "php",
+              "title": "PHP",
+            },
+            "prism" => Object {
+              "img": "test-file-stub",
+              "name": "prism",
+              "title": "Prism",
+            },
+            "prometheus" => Object {
+              "img": "test-file-stub",
+              "name": "prometheus",
+              "title": "Prometheus",
+            },
+            "python" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "python",
+              "title": "Python",
+            },
+            "quarkus" => Object {
+              "img": "test-file-stub",
+              "name": "quarkus",
+              "title": "Quarkus",
+            },
+            "react" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "react",
+              "title": "React",
+            },
+            "redis" => Object {
+              "img": "test-file-stub",
+              "name": "redis",
+              "title": "Redis",
+            },
+            "redmine" => Object {
+              "img": "test-file-stub",
+              "name": "redmine",
+              "title": "Redmine",
+            },
+            "silverlight" => Object {
+              "img": "test-file-stub",
+              "name": "silverlight",
+              "title": "Silverlight",
+            },
+            "smarty" => Object {
+              "img": "test-file-stub",
+              "name": "smarty",
+              "title": "Smarty",
+            },
+            "spring" => Object {
+              "img": "test-file-stub",
+              "name": "spring",
+              "title": "Spring",
+            },
+            "stackoverflow" => Object {
+              "img": "test-file-stub",
+              "name": "stackoverflow",
+              "title": "StackOverflow",
+            },
+            "svn" => Object {
+              "img": "test-file-stub",
+              "name": "svn",
+              "title": "SVN",
+            },
+            "teamCity" => Object {
+              "img": "test-file-stub",
+              "name": "teamCity",
+              "title": "Team City",
+            },
+            "terraform" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "terraform",
+              "title": "Terraform",
+            },
+            "tomcat" => Object {
+              "img": "test-file-stub",
+              "name": "tomcat",
+              "title": "Tomcat",
+            },
+            "travis" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "travis",
+              "title": "Travis CI",
+            },
+            "typeScript" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "typeScript",
+              "title": "TypeScript",
+            },
+            "vBulletin" => Object {
+              "img": "test-file-stub",
+              "name": "vBulletin",
+              "title": "vBulletin",
+            },
+            "visualStudio" => Object {
+              "img": "test-file-stub",
+              "name": "visualStudio",
+              "title": "Visual Studio",
+            },
+            "vsCode" => Object {
+              "img": "test-file-stub",
+              "name": "vsCode",
+              "title": "VS Code",
+            },
+            "webpack" => Object {
+              "img": "test-file-stub",
+              "name": "webpack",
+              "title": "Webpack",
+            },
+            "windowsForms" => Object {
+              "img": "test-file-stub",
+              "name": "windowsForms",
+              "title": "Windows Forms",
+            },
+            "xamarin" => Object {
+              "img": "test-file-stub",
+              "isSkill": true,
+              "name": "xamarin",
+              "title": "Xamarin",
+            },
+          },
+        },
+      }
+    }
+  />
+  <LanguagesMain />
+  <PortfolioMain />
+  <Badges />
+  <FooterMain />
+</div>
+`;

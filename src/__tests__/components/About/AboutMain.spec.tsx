@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render } from '@testing-library/react'
+import { shallow } from 'enzyme'
 import { Locale } from '../../../store/locale/types'
 import SupportedLocales from '../../../scripts/SupportedLocales'
 import { AboutMain } from '../../../components/About/AboutMain'
@@ -17,11 +17,11 @@ test('should render AboutMain correctly', () => {
   const humanizeSpy = jest.fn(totalHumanize)
 
   const locale: Locale = SupportedLocales.default
-  const { container } = render(<AboutMain locale={locale} totalExperience={{
+  const wrapper = shallow(<AboutMain locale={locale} totalExperience={{
     humanize: humanizeSpy
   }} />)
 
-  expect(container.firstChild).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
 
   expect(humanizeSpy).toHaveBeenCalledTimes(1)
   expect(humanizeSpy).toHaveBeenCalledWith(locale.code)

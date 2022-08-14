@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render } from '@testing-library/react'
+import { shallow, ShallowWrapper } from 'enzyme'
 import Resume from '../../components/Resume'
 import { useTranslation } from '../__mocks__/react-i18next'
 
@@ -11,8 +11,8 @@ beforeAll(() => {
 })
 
 test('should render Resume correctly', () => {
-  const { container } = render(<Resume />)
-  expect(container.firstChild).toMatchSnapshot()
+  const wrapper: ShallowWrapper = shallow(<Resume />)
+  expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith('business-card-resume-title')
 })

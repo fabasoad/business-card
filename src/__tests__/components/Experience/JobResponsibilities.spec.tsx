@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render } from '@testing-library/react'
+import { shallow } from 'enzyme'
 import JobResponsibilities from '../../../components/Experience/JobResponsibilities'
 import { useTranslation } from '../../__mocks__/react-i18next'
 
@@ -14,10 +14,10 @@ beforeEach(() => {
 
 test('should render JobResponsibilities correctly', () => {
   const prefix = 'some-prefix'
-  const { container } = render(<JobResponsibilities
+  const wrapper = shallow(<JobResponsibilities
     i18nKeyPrefix={prefix}
   />)
-  expect(container.firstChild).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
   expect(tMock).toBeCalledWith('business-card-experience-responsibilities-title')
   expect(tMock).toHaveBeenCalledWith(`${prefix}-1`)
   expect(tMock).toHaveBeenCalledWith(`${prefix}-1-1`)

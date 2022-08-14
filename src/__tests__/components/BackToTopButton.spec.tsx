@@ -1,22 +1,22 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render, fireEvent } from '@testing-library/react'
+import { shallow, ShallowWrapper } from 'enzyme'
 import BackToTopButton from '../../components/BackToTopButton'
 
-let container: HTMLElement
+let wrapper: ShallowWrapper
 let windowScrollSpy: jest.SpyInstance<void, [number, number]>
 
 beforeAll(() => {
-  container = render(<BackToTopButton />).container
+  wrapper = shallow(<BackToTopButton />)
   windowScrollSpy = jest.spyOn(window, 'scrollTo').mockImplementation()
 })
 
-test('should scroll to top', async () => {
+test('should scroll to top', () => {
   const preventDefaultSpy = jest.fn()
-  const isPrevented: boolean = fireEvent.click(container.querySelector('a'), {
+  wrapper.find('a').simulate('click', {
     preventDefault: preventDefaultSpy
   })
-  expect(isPrevented).toBe(false)
+  expect(preventDefaultSpy).toHaveBeenCalledTimes(1)
   expect(windowScrollSpy).toHaveBeenCalledWith({
     top: 0,
     left: 0,
@@ -28,6 +28,6 @@ new Array<number>(300, 301).forEach((v) => {
   test(`should render BackToTopButton correctly as ${v === 300 ? 'not ' : ''}visible`, () => {
     Object.defineProperty(window, 'scrollY', { value: v })
     window.dispatchEvent(new Event('scroll'))
-    expect(container.firstChild).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 })

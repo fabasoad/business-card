@@ -2,27 +2,9 @@
 
 exports[`should render FooterContacts correctly 1`] = `
 <div
-  class="row contacts"
+  className="row contacts"
 >
-  <div
-    class="col"
-  >
-    <i
-      class="fa fa-map-marker-alt fa-2x"
-    />
-    <p>
-      business-card-contact-city
-    </p>
-  </div>
-  <div
-    class="col"
-  >
-    <i
-      class="fa fa-envelope fa-2x"
-    />
-    <p>
-      fabasoad@gmail.com
-    </p>
-  </div>
+  <FooterLocation />
+  <FooterEmail />
 </div>
 `;

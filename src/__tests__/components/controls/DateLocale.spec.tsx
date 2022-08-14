@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render } from '@testing-library/react'
+import { shallow, ShallowWrapper } from 'enzyme'
 import { DateLocale } from '../../../components/controls/DateLocale'
 import { useTranslation } from '../../__mocks__/react-i18next'
 
@@ -39,7 +39,7 @@ new Array<DateLocaleFixture>({
     const year = 2019
     tMock.mockImplementation((k) => `${f.locale}-${k}`)
     const toDoubleByteSpy: jest.Mock<string, string[]> = jest.fn((k) => k)
-    const { container } = render(
+    const wrapper: ShallowWrapper = shallow(
       <DateLocale
         converter={{
           _convert: null,
@@ -54,7 +54,7 @@ new Array<DateLocaleFixture>({
         year={year}
       />
     )
-    expect(container.firstChild).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
     f.expect(toDoubleByteSpy, year, month)
   })
 )
@@ -80,7 +80,7 @@ new Array<DateLocaleFixture>({
     const year = 2019
     tMock.mockImplementation((k) => `${f.locale}-${k}`)
     const toDoubleByteSpy = jest.fn((k) => k)
-    const { container } = render(
+    const wrapper: ShallowWrapper = shallow(
       <DateLocale
         converter={{
           _convert: null,
@@ -94,7 +94,7 @@ new Array<DateLocaleFixture>({
         year={year}
       />
     )
-    expect(container.firstChild).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
     f.expect(toDoubleByteSpy, year)
   })
 )

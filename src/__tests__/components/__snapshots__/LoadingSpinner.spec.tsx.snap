@@ -2,10 +2,10 @@
 
 exports[`should render LoadingSpinner correctly 1`] = `
 <div
-  class="loader"
+  className="loader"
 >
   <div
-    class="lds-spinner"
+    className="lds-spinner"
   >
     <div />
     <div />

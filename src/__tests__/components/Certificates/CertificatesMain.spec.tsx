@@ -1,6 +1,6 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render } from '@testing-library/react'
+import { shallow, ShallowWrapper } from 'enzyme'
 import CertificatesMain from '../../../components/Certificates/CertificatesMain'
 import { useTranslation } from '../../__mocks__/react-i18next'
 import CertificateIssuerStorage from '../../../scripts/certificates/CertificateIssuerStorage'
@@ -14,7 +14,7 @@ beforeAll(() => {
   tMock = useTranslation().t
 })
 
-test.skip('should render CertificatesMain correctly', () => {
+test('should render CertificatesMain correctly', () => {
   const cisFindByNameSpy = jest.fn((k) => ({ name: `test-name-${k}`, img: `test-img-${k}` }))
   const cis = new CertificateIssuerStorage({ items: new Map<string, CertificateIssuer>() })
   cis.findByName = cisFindByNameSpy
@@ -23,19 +23,19 @@ test.skip('should render CertificatesMain correctly', () => {
   const ts = new TechnologyStorage({ items: new Map<string, Technology>() })
   ts.findByName = tsFindByNameSpy
 
-  const { container } = render(<CertificatesMain
+  const wrapper: ShallowWrapper = shallow(<CertificatesMain
     certificateIssuerStorage={cis}
     technologyStorage={ts}
   />)
-  expect(container.firstChild).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
   expect(tMock).toHaveBeenCalledTimes(1)
   expect(tMock).toHaveBeenCalledWith('business-card-certificates-title')
   expect(cisFindByNameSpy).toHaveBeenCalledTimes(5)
-  new Array<string>('coursera', 'oracle', 'udemy', 'hacker-rank').forEach((t: string) =>
+  new Array<string>('coursera', 'oracle', 'udemy', 'hacker-rank').forEach((t) =>
     expect(cisFindByNameSpy).toHaveBeenCalledWith(t)
   )
   expect(tsFindByNameSpy).toHaveBeenCalledTimes(5)
-  new Array<string>('python', 'java', 'react', 'algorithms').forEach((t: string) =>
+  new Array<string>('python', 'java', 'react', 'algorithms').forEach((t) =>
     expect(tsFindByNameSpy).toHaveBeenCalledWith(t)
   )
 })

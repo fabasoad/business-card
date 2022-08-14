@@ -2,38 +2,50 @@
 
 exports[`App404 redirecting should work correctly 1`] = `
 <div
-  class="font-regular font-non-jp"
+  className="font-regular font-non-jp"
 >
   <p>
     business-card-404-text-1
   </p>
   <p>
     <span
-      class="blinker-prefix"
+      className="blinker-prefix"
     />
      
     business-card-404-text-2
     <span
-      style="display: none;"
+      style={
+        Object {
+          "display": "inline",
+        }
+      }
     >
       .
     </span>
     <span
-      class="blinker"
-      style="display: inline;"
+      className="blinker"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
     >
       _
     </span>
   </p>
   <p
-    style="display: none;"
+    style={
+      Object {
+        "display": "inline",
+      }
+    }
   >
     business-card-404-text-3
     <span>
       3
     </span>
     <span
-      class="blinker"
+      className="blinker"
     >
       _
     </span>
@@ -43,38 +55,50 @@ exports[`App404 redirecting should work correctly 1`] = `
 
 exports[`App404 should render App404 with gb locale correctly 1`] = `
 <div
-  class="font-regular font-non-jp"
+  className="font-regular font-non-jp"
 >
   <p>
     business-card-404-text-1
   </p>
   <p>
     <span
-      class="blinker-prefix"
+      className="blinker-prefix"
     />
      
     business-card-404-text-2
     <span
-      style="display: none;"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
     >
       .
     </span>
     <span
-      class="blinker"
-      style="display: inline;"
+      className="blinker"
+      style={
+        Object {
+          "display": "inline",
+        }
+      }
     >
       _
     </span>
   </p>
   <p
-    style="display: none;"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
   >
     business-card-404-text-3
     <span>
       3
     </span>
     <span
-      class="blinker"
+      className="blinker"
     >
       _
     </span>
@@ -84,38 +108,50 @@ exports[`App404 should render App404 with gb locale correctly 1`] = `
 
 exports[`App404 should render App404 with jp locale correctly 1`] = `
 <div
-  class="font-regular font-jp"
+  className="font-regular font-jp"
 >
   <p>
     business-card-404-text-1
   </p>
   <p>
     <span
-      class="blinker-prefix"
+      className="blinker-prefix"
     />
      
     business-card-404-text-2
     <span
-      style="display: none;"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
     >
       .
     </span>
     <span
-      class="blinker"
-      style="display: inline;"
+      className="blinker"
+      style={
+        Object {
+          "display": "inline",
+        }
+      }
     >
       _
     </span>
   </p>
   <p
-    style="display: none;"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
   >
     business-card-404-text-3
     <span>
       3
     </span>
     <span
-      class="blinker"
+      className="blinker"
     >
       _
     </span>

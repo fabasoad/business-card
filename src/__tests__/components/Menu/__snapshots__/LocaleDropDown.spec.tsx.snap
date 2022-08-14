@@ -1,19 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render LocaleDropDown correctly 1`] = `
-<div
-  class="dropdown"
+<Dropdown
+  align="start"
+  autoClose={true}
+  navbar={false}
 >
-  <button
-    aria-expanded="false"
-    class="nav-link dropdown-toggle btn"
+  <DropdownToggle
+    bsPrefix="nav-link dropdown-toggle"
     id="btnLocale"
-    type="button"
+    variant={null}
   >
-    <span
-      class="flag-icon flag-icon-jp"
+    <FlagIcon
+      code="jp"
     />
     JP
-  </button>
-</div>
+  </DropdownToggle>
+  <DropdownMenu
+    flip={true}
+  >
+    <DropdownItem
+      bsPrefix="nav-link"
+      eventKey="gb"
+      key="gb"
+      onClick={[Function]}
+    >
+      <FlagIcon
+        code="gb"
+      />
+      EN
+    </DropdownItem>
+  </DropdownMenu>
+</Dropdown>
 `;

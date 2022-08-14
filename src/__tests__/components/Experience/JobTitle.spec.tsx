@@ -1,15 +1,15 @@
 /// <reference types="jest" />
 import * as React from 'react'
-import { render } from '@testing-library/react'
+import { shallow } from 'enzyme'
 import JobTitle from '../../../components/Experience/JobTitle'
 
 test('should render JobTitle correctly', () => {
-  const { container } = render(
+  const wrapper = shallow(
     <JobTitle
       company="test-company"
       title="test-title"
       location="test-location"
     />
   )
-  expect(container.firstChild).toMatchSnapshot()
+  expect(wrapper).toMatchSnapshot()
 })

@@ -2,18 +2,20 @@
 
 exports[`should render JobTechnologies correctly 1`] = `
 <div
-  class="technologies"
+  className="technologies"
 >
   <h5>
     business-card-experience-technologies-title
   </h5>
   <img
     alt="maven"
+    key="test-uuid"
     src="test-file-stub"
     title="Maven"
   />
   <img
     alt="java"
+    key="test-uuid"
     src="test-file-stub"
     title="Java"
   />

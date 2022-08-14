@@ -13,8 +13,7 @@ interface CertificatesMainProps {
   technologyStorage?: TechnologyStorage
 }
 
-export default function CertificatesMain(
-  { certificateIssuerStorage, technologyStorage }: CertificatesMainProps) {
+export default function CertificatesMain(props: CertificatesMainProps) {
   const { t } = useTranslation()
   return (
     <div id="certificates" className="light-component">
@@ -26,19 +25,16 @@ export default function CertificatesMain(
         <Row xs={2} md={3} lg={5}>
           {items
             .sort((a, b) => -a.date.localeCompare(b.date))
-            .map(({ id, date, issuer, technology, i18nTitleKey, url }) =>
-              <Col lg={true} className="mb-2" key={id}>
-                <CertificateItem
-                  id={id}
-                  issueDate={new Date(date)}
-                  issuer={certificateIssuerStorage.findByName(issuer)}
-                  technology={technologyStorage.findByName(technology)}
-                  i18nTitleKey={i18nTitleKey}
-                  url={url}
-                />
-              </Col>
-            )
-          }
+            .map((item) => <Col lg={true} className="mb-2" key={item.id}>
+              <CertificateItem
+                id={item.id}
+                issueDate={new Date(item.date)}
+                issuer={props.certificateIssuerStorage.findByName(item.issuer)}
+                technology={props.technologyStorage.findByName(item.technology)}
+                i18nTitleKey={item.i18nTitleKey}
+                url={item.url}
+              />
+            </Col>)}
         </Row>
       </Container>
     </div>

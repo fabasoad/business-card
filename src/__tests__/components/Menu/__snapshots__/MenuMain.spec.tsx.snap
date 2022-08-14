@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render MenuMain correctly 1`] = `
+<div
+  className="affix-top"
+  id="nav"
+>
+  <Navbar
+    className="navbar-custom"
+    collapseOnSelect={true}
+    expand="md"
+    expanded={false}
+    onToggle={[Function]}
+    variant="light"
+  >
+    <NavbarBrand
+      className="ms-2"
+      href="#header"
+    >
+      business-card-author-name
+    </NavbarBrand>
+    <NavbarToggle
+      aria-controls="basic-navbar-nav"
+      className="navbar-dark"
+      label="Toggle navigation"
+    />
+    <NavbarCollapse
+      id="basic-navbar-nav"
+    >
+      <Nav
+        activeKey=""
+        fill={false}
+        justify={false}
+      >
+        <MenuItem
+          name="about"
+          setActiveNavLink={[Function]}
+        />
+        <MenuItem
+          name="skills"
+          setActiveNavLink={[Function]}
+        />
+        <MenuItem
+          name="experience"
+          setActiveNavLink={[Function]}
+        />
+        <MenuItem
+          name="education"
+          setActiveNavLink={[Function]}
+        />
+        <MenuItem
+          name="portfolio"
+          setActiveNavLink={[Function]}
+        />
+        <MenuItem
+          name="resume"
+          setActiveNavLink={[Function]}
+        />
+        <MenuItem
+          name="badges"
+          setActiveNavLink={[Function]}
+        />
+        <MenuItem
+          name="contact"
+          setActiveNavLink={[Function]}
+        />
+      </Nav>
+      <Nav
+        className="me-2"
+        fill={false}
+        justify={false}
+      >
+        <Connect(LocaleDropDown) />
+      </Nav>
+    </NavbarCollapse>
+  </Navbar>
+</div>
+`;

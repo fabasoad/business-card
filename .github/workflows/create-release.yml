@@ -9,13 +9,11 @@ on:
 jobs:
   create_release:
     name: Release
-    # For some reason build requires OS X 64-bit with Node.js 17.x
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
         with:
-          node-version: 17
+          fetch-depth: 0
       - name: Cache node_modules
         id: yarn-cache
         uses: actions/cache@v3
@@ -23,7 +21,7 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-modules-
       - name: Compile
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
         run: yarn install --ignore-scripts

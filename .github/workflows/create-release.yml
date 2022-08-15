@@ -22,11 +22,9 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-modules-
-      - name: Rebuild node-saas
-        run: npm rebuild node-saas
       - name: Compile
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
-        run: yarn install --ignore-scripts
+        run: yarn install --force --ignore-scripts
       - name: Build
         run: yarn run build:prod
       - name: Deploy to GitHub Pages

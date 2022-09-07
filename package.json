@@ -54,7 +54,7 @@
     "express": "4.18.1",
     "express-rate-limit": "6.6.0",
     "humanize-duration": "3.27.3",
-    "i18next": "20.6.0",
+    "i18next": "20.6.1",
     "i18next-browser-languagedetector": "6.1.5",
     "jest": "27.5.1",
     "node-sass": "7.0.1",

@@ -26,7 +26,7 @@ jobs:
             ${{ runner.os }}-modules-
       - name: Compile
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
-        run: yarn install --force --ignore-scripts
+        run: yarn install --ignore-scripts
       - name: Lint
         run: yarn run lint
       - name: Unit tests

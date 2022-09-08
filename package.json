@@ -42,7 +42,7 @@
     "babel-jest": "27.5.1",
     "babel-loader": "8.2.5",
     "babel-plugin-transform-class-properties": "6.24.1",
-    "bootstrap": "5.2.0",
+    "bootstrap": "5.2.1",
     "css-loader": "6.7.1",
     "dotenv": "16.0.2",
     "enzyme": "3.11.0",
@@ -57,7 +57,6 @@
     "i18next": "20.6.1",
     "i18next-browser-languagedetector": "6.1.5",
     "jest": "27.5.1",
-    "node-sass": "7.0.1",
     "nodemon": "2.0.19",
     "normalize.css": "8.0.1",
     "raf": "3.4.1",
@@ -73,6 +72,7 @@
     "redux": "4.2.0",
     "redux-mock-store": "1.5.4",
     "redux-thunk": "2.4.1",
+    "sass": "1.54.9",
     "sass-loader": "13.0.2",
     "style-loader": "3.3.1",
     "ts-jest": "27.1.5",
@@ -82,7 +82,7 @@
     "uuid": "9.0.0",
     "webpack": "5.74.0",
     "webpack-cli": "4.10.0",
-    "webpack-dev-server": "4.10.1",
+    "webpack-dev-server": "4.11.0",
     "webpack-merge": "5.8.0"
   },
   "dependencies": {

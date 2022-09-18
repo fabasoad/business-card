@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import LeetcodeService, { LeetcodeStats } from './LeetcodeService';
+import LeetcodeService, { LeetcodeStats } from '../../scripts/services/LeetcodeService';
 import StatsCommon from './StatsCommon';
 
 export default function StatsLeetcode() {

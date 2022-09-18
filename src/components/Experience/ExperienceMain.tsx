@@ -6,7 +6,12 @@ import JobDescription from './JobDescription'
 import JobPeriod from './JobPeriod'
 import JobTechnologies from './JobTechnologies'
 import JobTitle from './JobTitle'
-import JobResponsibilities from './JobResponsibilities';
+import JobResponsibilities from './JobResponsibilities'
+
+import * as imgArkaFSS from '../../assets/images/companies/arka-fss.png'
+import * as imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'
+import * as imgLohika from '../../assets/images/companies/lohika.png'
+import * as imgWovenPlanet from '../../assets/images/companies/woven-planet.png'
 
 export default function ExperienceMain() {
   const { t } = useTranslation()
@@ -25,6 +30,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgWovenPlanet}
                 company="Woven Planet"
                 title={t('business-card-experience-job-woven-planet-4-title')}
                 location={t('business-card-location-tokyo')}
@@ -52,6 +58,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgWovenPlanet}
                 company="Woven Planet"
                 title={t('business-card-experience-job-woven-planet-3-title')}
                 location={t('business-card-location-tokyo')}
@@ -79,6 +86,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgWovenPlanet}
                 company="Woven Planet"
                 title={t('business-card-experience-job-woven-planet-2-title')}
                 location={t('business-card-location-tokyo')}
@@ -106,6 +114,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgWovenPlanet}
                 company="Woven Planet"
                 title={t('business-card-experience-job-woven-planet-1-title')}
                 location={t('business-card-location-tokyo')}
@@ -133,6 +142,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgBitcoinCom}
                 company="Bitcoin.com"
                 title={t('business-card-experience-job-bitcoin-com-2-title')}
                 location={t('business-card-location-tokyo')}
@@ -160,6 +170,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgBitcoinCom}
                 company="Bitcoin.com"
                 title={t('business-card-experience-job-bitcoin-com-1-title')}
                 location={t('business-card-location-tokyo')}
@@ -191,6 +202,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgLohika}
                 company="Lohika"
                 title={t('business-card-experience-job-lohika-3-title')}
                 location={t('business-card-location-odesa')}
@@ -222,6 +234,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgLohika}
                 company="Lohika"
                 title={t('business-card-experience-job-lohika-2-title')}
                 location={t('business-card-location-odesa')}
@@ -252,6 +265,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgLohika}
                 company="Lohika"
                 title={t('business-card-experience-job-lohika-1-title')}
                 location={t('business-card-location-odesa')}
@@ -279,6 +293,7 @@ export default function ExperienceMain() {
             />
             <div className="timeline-panel">
               <JobTitle
+                logo={imgArkaFSS}
                 company="ARKA - Finance, Software, Services"
                 title={t('business-card-experience-job-arka-title')}
                 location={t('business-card-location-odesa')}

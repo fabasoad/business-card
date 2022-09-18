@@ -1,4 +1,4 @@
-import State from './State';
+import State from '../../components/Stats/State';
 
 export default class StackOverflowService {
   private static instance: StackOverflowService

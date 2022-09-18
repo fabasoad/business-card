@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import StackOverflowService from './StackOverflowService';
+import StackOverflowService from '../../scripts/services/StackOverflowService';
 import StatsCommon from './StatsCommon';
 
 export default function StatsStackOverflow() {

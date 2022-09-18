@@ -4,6 +4,12 @@ exports[`should render JobTitle correctly 1`] = `
 <div
   className="timeline-heading"
 >
+  <img
+    alt="test-company"
+    className="mb-4 mx-4"
+    src="test-logo"
+    title="test-company"
+  />
   <h4>
     test-company
   </h4>

@@ -1,5 +1,5 @@
 import {Octokit} from '@octokit/rest';
-import State from './State';
+import State from '../../components/Stats/State';
 
 export default class GitHubService {
   private static instance: GitHubService

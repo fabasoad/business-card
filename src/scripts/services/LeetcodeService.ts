@@ -1,4 +1,4 @@
-import State from './State'
+import State from '../../components/Stats/State'
 
 export interface LeetcodeStats {
   totalSolved: number

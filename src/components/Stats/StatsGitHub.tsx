@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import GitHubService from './GitHubService';
-import StatsCommon from './StatsCommon';
+import GitHubService from '../../scripts/services/GitHubService'
+import StatsCommon from './StatsCommon'
 
 export default function StatsGitHub() {
   const [stars, setStars] = React.useState<number>(0)

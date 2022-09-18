@@ -32,6 +32,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Woven Planet"
             location="business-card-location-tokyo"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-woven-planet-4-title"
           />
           <div
@@ -82,6 +87,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Woven Planet"
             location="business-card-location-tokyo"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-woven-planet-3-title"
           />
           <div
@@ -137,6 +147,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Woven Planet"
             location="business-card-location-tokyo"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-woven-planet-2-title"
           />
           <div
@@ -188,6 +203,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Woven Planet"
             location="business-card-location-tokyo"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-woven-planet-1-title"
           />
           <div
@@ -236,6 +256,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Bitcoin.com"
             location="business-card-location-tokyo"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-bitcoin-com-2-title"
           />
           <div
@@ -279,6 +304,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Bitcoin.com"
             location="business-card-location-tokyo"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-bitcoin-com-1-title"
           />
           <div
@@ -331,6 +361,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Lohika"
             location="business-card-location-odesa"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-lohika-3-title"
           />
           <div
@@ -385,6 +420,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Lohika"
             location="business-card-location-odesa"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-lohika-2-title"
           />
           <div
@@ -434,6 +474,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="Lohika"
             location="business-card-location-odesa"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-lohika-1-title"
           />
           <div
@@ -475,6 +520,11 @@ exports[`ExperienceMain component should render ExperienceMain correctly 1`] = `
           <JobTitle
             company="ARKA - Finance, Software, Services"
             location="business-card-location-odesa"
+            logo={
+              Object {
+                "default": "test-file-stub",
+              }
+            }
             title="business-card-experience-job-arka-title"
           />
           <div

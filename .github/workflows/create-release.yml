@@ -4,7 +4,7 @@ name: Create release
 on:
   push:
     tags:
-      - 'v*'
+      - 'v*.*.*'
 
 jobs:
   create_release:
@@ -19,9 +19,9 @@ jobs:
         uses: actions/cache@v3
         with:
           path: '**/node_modules'
-          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-modules-
+            ${{ runner.os }}-yarn-
       - name: Compile
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
         run: yarn install --ignore-scripts
@@ -71,4 +71,8 @@ jobs:
     steps:
       - name: Send deployment trigger
         run: |
-          curl -XPOST -u "${{ secrets.PAT_USERNAME }}:${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.everest-preview+json" -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches --data '{"ref": "refs/heads/main"}'
+          curl -XPOST \
+            -u "${{ secrets.PAT_USERNAME }}:${{secrets.PAT_TOKEN}}" \
+            -H "Accept: application/vnd.github.everest-preview+json" \
+            -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches \
+            --data '{"ref": "refs/heads/main"}'

@@ -67,7 +67,7 @@ export function AboutMain({ totalExperience, locale }: Props) {
                   <li>{t('business-card-about-me-general-list-item-14')}</li>
                   <li>
                     <Trans i18nKey="business-card-about-me-general-list-item-15">
-                      Developed and released <a href="https://github.com/marketplace?type=actions&query=fabasoad+" target="_blank" rel="noreferrer">19 GitHub Actions to the marketplace</a>
+                      Developed and released <a href="https://github.com/marketplace?type=actions&query=fabasoad+" target="_blank" rel="noreferrer">25+ GitHub Actions to the marketplace</a>
                     </Trans>
                   </li>
                   <li>{t('business-card-about-me-general-list-item-16')}</li>

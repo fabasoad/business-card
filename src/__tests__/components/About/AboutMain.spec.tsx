@@ -1,46 +1,31 @@
-/// <reference types="jest" />
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
+
 import { Locale } from '../../../store/locale/types'
 import SupportedLocales from '../../../scripts/SupportedLocales'
 import { AboutMain } from '../../../components/About/AboutMain'
-import { useTranslation } from '../../__mocks__/react-i18next'
-
-let tMock
-
-beforeAll(() => {
-  tMock = useTranslation().t
-})
 
 test('should render AboutMain correctly', () => {
-  const totalHumanize = (code: string) => `total-${code}`
-  const humanizeSpy = jest.fn(totalHumanize)
-
+  const humanizeMock = jest.fn((code: string) => `total-${code}`)
   const locale: Locale = SupportedLocales.default
-  const wrapper = shallow(<AboutMain locale={locale} totalExperience={{
-    humanize: humanizeSpy
+
+  render(<AboutMain locale={locale} totalExperience={{
+    humanize: humanizeMock
   }} />)
 
-  expect(wrapper).toMatchSnapshot()
+  expect(screen.getByRole('heading', { level: 2 }))
+    .toHaveTextContent('business-card-about-me-title')
 
-  expect(humanizeSpy).toHaveBeenCalledTimes(1)
-  expect(humanizeSpy).toHaveBeenCalledWith(locale.code)
-
-  expect(tMock).toBeCalledTimes(17)
-  expect(tMock).toHaveBeenCalledWith(
-    expect.stringMatching(/^business-card-about-me-title$/)
-  )
-  expect(tMock).toHaveBeenCalledWith(
-    expect.stringMatching(/^business-card-about-me-general-list-item-1$/),
-    expect.objectContaining({
-      totalExperience: totalHumanize(locale.code)
-    })
-  )
-  for (let i = 2; i <= 6; i++) {
-    expect(tMock).toHaveBeenCalledWith(
-      expect.stringMatching(
-        new RegExp(`^business-card-about-me-general-list-item-${i}$`)
-      )
-    )
+  for (let i = 1; i <= 18; i++) {
+    const exp = expect(screen.queryByText(`business-card-about-me-general-list-item-${i}`))
+    if (i > 17) {
+      exp.toBeNull()
+    } else {
+      exp.not.toBeNull()
+    }
   }
+
+  expect(humanizeMock).toHaveBeenCalledTimes(1)
+  expect(humanizeMock).toHaveBeenCalledWith(locale.code)
 })

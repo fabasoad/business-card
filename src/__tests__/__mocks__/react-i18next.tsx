@@ -9,8 +9,7 @@ const mock = {
 
 export const useTranslation = () => mock
 
-export function Trans() {
-  return (
-    <div></div>
-  )
+// eslint-disable-next-line react/prop-types
+export function Trans({ i18nKey }) {
+  return (<>{i18nKey}</>)
 }

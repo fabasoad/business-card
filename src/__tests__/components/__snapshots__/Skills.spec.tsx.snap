@@ -25,14 +25,14 @@ exports[`should render Skills correctly 1`] = `
         <img
           alt="name-1"
           className="m-4"
-          key="test-uuid"
+          key="tech-1"
           src="img-1"
           title="title-1"
         />
         <img
           alt="name-2"
           className="m-4"
-          key="test-uuid"
+          key="tech-2"
           src="img-2"
           title="title-2"
         />

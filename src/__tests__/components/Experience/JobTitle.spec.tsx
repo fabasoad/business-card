@@ -1,16 +1,25 @@
-/// <reference types="jest" />
 import * as React from 'react'
-import { shallow } from 'enzyme'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
+
 import JobTitle from '../../../components/Experience/JobTitle'
 
 test('should render JobTitle correctly', () => {
-  const wrapper = shallow(
-    <JobTitle
-      logo="test-logo"
-      company="test-company"
-      title="test-title"
-      location="test-location"
-    />
-  )
-  expect(wrapper).toMatchSnapshot()
+  const company = 'test-company'
+  const location = 'test-location'
+  const logo = 'test-logo'
+  const title = 'test-title'
+  const { container } = render(<JobTitle
+    logo={logo}
+    company={company}
+    title={title}
+    location={location}
+  />)
+  const imgElement = container.querySelector('img')
+  expect(imgElement).toHaveAttribute('src', logo)
+  expect(imgElement).toHaveAttribute('alt', company)
+  expect(imgElement).toHaveAttribute('title', company)
+  const subheadElement = container.querySelector('h4.subheading')
+  expect(subheadElement).toHaveTextContent(title)
+  expect(screen.getByRole('heading', { level: 6 })).toHaveTextContent(location)
 })

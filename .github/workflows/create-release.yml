@@ -43,7 +43,7 @@ jobs:
       - name: Get current release tag
         id: current_release
         run: echo "tag=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
-        shell: sh
+        shell: bash
       - name: Build changelog
         id: changelog
         run: |
@@ -52,7 +52,7 @@ jobs:
           body="${body//$'\n'/'%0A'}"
           body="${body//$'\r'/'%0D'}"
           echo "body=${body}" >> $GITHUB_OUTPUT
-        shell: sh
+        shell: bash
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
@@ -78,3 +78,4 @@ jobs:
             -H "Accept: application/vnd.github.everest-preview+json" \
             -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches \
             --data '{"ref": "refs/heads/main"}'
+        shell: sh

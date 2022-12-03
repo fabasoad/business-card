@@ -25,10 +25,11 @@ jobs:
       - name: Compile
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
         run: yarn install --ignore-scripts
+        shell: sh
       - name: Build
         run: yarn run build:prod
+        shell: sh
       - name: Deploy to GitHub Pages
-        if: ${{ true }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,10 +38,12 @@ jobs:
         id: latest_release
         run: |
           latest_tag=$(curl --silent "https://api.github.com/repos/${{ github.repository }}/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-          echo "::set-output name=tag::${latest_tag}"
+          echo "tag=${latest_tag}" >> $GITHUB_OUTPUT
+        shell: sh
       - name: Get current release tag
         id: current_release
-        run: echo "::set-output name=tag::${GITHUB_REF/refs\/tags\//}"
+        run: echo "tag=${GITHUB_REF/refs\/tags\//}" >> $GITHUB_OUTPUT
+        shell: sh
       - name: Build changelog
         id: changelog
         run: |
@@ -48,15 +51,14 @@ jobs:
           body="${body//'%'/'%25'}"
           body="${body//$'\n'/'%0A'}"
           body="${body//$'\r'/'%0D'}"
-          echo "::set-output name=body::${body}"
+          echo "body=${body}" >> $GITHUB_OUTPUT
+        shell: sh
       - name: Create release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{ github.ref }}
-          release_name: ${{ steps.current_release.outputs.tag }}
+          name: ${{ steps.current_release.outputs.tag }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           body: |
             # Changelog
 

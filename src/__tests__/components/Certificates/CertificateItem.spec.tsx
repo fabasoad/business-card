@@ -1,12 +1,11 @@
-/// <reference types="jest" />
-import * as React from 'react'
-import { render } from '@testing-library/react'
-import configureMockStore from 'redux-mock-store'
 import '@testing-library/jest-dom'
+import * as React from 'react'
+import configureMockStore from 'redux-mock-store'
+import { Provider } from 'react-redux'
+import { render } from '@testing-library/react'
 
 import CertificateItem from '../../../components/Certificates/CertificateItem'
 import { CertificateIssuer } from '../../../scripts/certificates/types'
-import {Provider} from 'react-redux'
 
 const mockStore = configureMockStore()
 const store = mockStore({})

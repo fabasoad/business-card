@@ -3,6 +3,7 @@ import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import TechnologyStorage from '../scripts/technologies/TechnologyStorage'
+import StringUtils from '../scripts/StringUtils'
 
 interface SkillsProps {
   technologyStorage?: TechnologyStorage
@@ -19,7 +20,7 @@ export default function Skills(props: SkillsProps) {
       <div className="container">
         <div className="row">
           <div className="skills-list col text-center">
-            {props.technologyStorage.findBySkill(true).map((t, i) => <img key={`tech-${i + 1}`} className="m-4" src={t.img} alt={t.name} title={t.title} />)}
+            {props.technologyStorage.findBySkill(true).map((t) => <img key={StringUtils.random(30)} className="m-4" src={t.img} alt={t.name} title={t.title} />)}
           </div>
         </div>
       </div>

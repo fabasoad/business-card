@@ -15,7 +15,6 @@ test('should render CertificatesMain correctly', () => {
       <CertificatesMain />
     </Provider>
   )
-  console.log(container.innerHTML)
   expect(screen.getByRole('heading', { level: 2 }))
     .toHaveTextContent('business-card-certificates-title')
   const divCardElements = container.querySelectorAll('div.card')

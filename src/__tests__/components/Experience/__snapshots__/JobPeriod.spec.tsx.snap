@@ -15,6 +15,7 @@ exports[`should render JobPeriod correctly 1`] = `
       month={4}
       year={2020}
     />
+    <br />
     - 
     <br />
     <Connect(DateLocale)

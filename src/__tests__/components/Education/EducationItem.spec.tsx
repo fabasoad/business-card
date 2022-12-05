@@ -1,23 +1,24 @@
-/// <reference types="jest" />
+import '@testing-library/jest-dom'
 import * as React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
+import configureMockStore from 'redux-mock-store'
+import { Provider } from 'react-redux'
+import { render } from '@testing-library/react'
+
 import EducationItem from '../../../components/Education/EducationItem'
-import { useTranslation } from '../../__mocks__/react-i18next'
+import { testEducationItem } from './scripts'
 
-let tMock
-
-beforeAll(() => {
-  tMock = useTranslation().t
-})
+const mockStore = configureMockStore()
+const store = mockStore({})
 
 test('should render EducationItem correctly', () => {
-  const wrapper: ShallowWrapper = shallow(<EducationItem
-    from={2019}
-    to={2020}
-    title="test-title"
-  />)
-  expect(wrapper).toMatchSnapshot()
-  expect(tMock).toHaveBeenCalledTimes(2)
-  expect(tMock).toHaveBeenCalledWith('business-card-education-university-title')
-  expect(tMock).toHaveBeenCalledWith('business-card-education-university-speciality')
+  const { container } = render(
+    <Provider store={store}>
+      <EducationItem
+        from={2019}
+        to={2020}
+        title="test-title"
+      />
+    </Provider>
+  )
+  testEducationItem(container, 2019, 2020, 'test-title')
 })

@@ -1,100 +1,34 @@
-/// <reference types="jest" />
 import * as React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
+import { render } from '@testing-library/react'
+import '@testing-library/jest-dom'
+
 import { DateLocale } from '../../../components/controls/DateLocale'
-import { useTranslation } from '../../__mocks__/react-i18next'
+import { Locale } from '../../../store/locale/types'
 
-let tMock
-
-beforeAll(() => {
-  tMock = useTranslation().t
+test('should render correctly with month, year and non-JP locale', () => {
+  const { container } = render(
+    <DateLocale year={2022} month={1} locale={new Locale('en', 'EN')} />
+  )
+  expect(container).toHaveTextContent('business-card-month-1 2022')
 })
 
-interface DateLocaleFixture {
-  title: string
-  locale: string
-  expect: (toDoubleByteSpy: jest.Mock<string, string[]>, year: number, month?: number) => void
-}
+test('should render correctly with year and non-JP locale', () => {
+  const { container } = render(
+    <DateLocale year={2001} locale={new Locale('en', 'EN')} />
+  )
+  expect(container).toHaveTextContent('2001')
+})
 
-new Array<DateLocaleFixture>({
-  title: 'JP',
-  locale: 'jp',
-  expect: (toDoubleByteSpy, year, month) => {
-    expect(tMock).toHaveBeenCalledTimes(2)
-    expect(tMock).toHaveBeenNthCalledWith(1, 'business-card-year-singular')
-    expect(tMock).toHaveBeenNthCalledWith(2, `business-card-month-${month}`)
-    expect(toDoubleByteSpy).toHaveBeenCalledWith(year.toString())
-  }
-}, {
-  title: 'non-JP',
-  locale: 'gb',
-  expect: (toDoubleByteSpy, year, month) => {
-    expect(tMock).toHaveBeenCalledTimes(1)
-    expect(tMock).toHaveBeenCalledWith(`business-card-month-${month}`)
-    expect(toDoubleByteSpy).not.toHaveBeenCalled()
-  }
-}).forEach((f) =>
-  test(`should render DateLocale with month in ${f.title} locale correctly`, () => {
-    const month = 1
-    const year = 2019
-    tMock.mockImplementation((k) => `${f.locale}-${k}`)
-    const toDoubleByteSpy: jest.Mock<string, string[]> = jest.fn((k) => k)
-    const wrapper: ShallowWrapper = shallow(
-      <DateLocale
-        converter={{
-          _convert: null,
-          toDoubleByte: toDoubleByteSpy,
-          toSingleByte: null
-        }}
-        locale={{
-          code: f.locale,
-          title: ''
-        }}
-        month={month}
-        year={year}
-      />
-    )
-    expect(wrapper).toMatchSnapshot()
-    f.expect(toDoubleByteSpy, year, month)
-  })
-)
+test('should render correctly with month, year and JP locale', () => {
+  const { container } = render(
+    <DateLocale year={2012} month={4} locale={new Locale('jp', 'JP')} />
+  )
+  expect(container).toHaveTextContent('２０１２business-card-year-singularbusiness-card-month-4')
+})
 
-new Array<DateLocaleFixture>({
-  title: 'JP',
-  locale: 'jp',
-  expect: (toDoubleByteSpy, year) => {
-    expect(tMock).toHaveBeenCalledTimes(1)
-    expect(tMock).toHaveBeenCalledWith('business-card-year-singular')
-    expect(tMock).not.toHaveBeenCalledWith(expect.stringMatching(/^business-card-month-.*$/))
-    expect(toDoubleByteSpy).toHaveBeenCalledWith(year.toString())
-  }
-}, {
-  title: 'non-JP',
-  locale: 'gb',
-  expect: (toDoubleByteSpy, year) => {
-    expect(tMock).not.toHaveBeenCalled()
-    expect(toDoubleByteSpy).not.toHaveBeenCalled()
-  }
-}).forEach((f) =>
-  test(`should render DateLocale without month in ${f.title} locale correctly`, () => {
-    const year = 2019
-    tMock.mockImplementation((k) => `${f.locale}-${k}`)
-    const toDoubleByteSpy = jest.fn((k) => k)
-    const wrapper: ShallowWrapper = shallow(
-      <DateLocale
-        converter={{
-          _convert: null,
-          toDoubleByte: toDoubleByteSpy,
-          toSingleByte: null
-        }}
-        locale={{
-          code: f.locale,
-          title: ''
-        }}
-        year={year}
-      />
-    )
-    expect(wrapper).toMatchSnapshot()
-    f.expect(toDoubleByteSpy, year)
-  })
-)
+test('should render correctly with year and JP locale', () => {
+  const { container } = render(
+    <DateLocale year={2002} locale={new Locale('jp', 'JP')} />
+  )
+  expect(container).toHaveTextContent('２００２business-card-year-singular')
+})

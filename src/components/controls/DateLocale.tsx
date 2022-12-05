@@ -7,8 +7,6 @@ import { AppState } from '../../store/configureStore'
 import DigitConverter from '../../scripts/DigitConverter'
 
 interface DateProps {
-  className?: string
-  converter?: DigitConverter
   month?: number
   year: number
 }
@@ -17,18 +15,15 @@ type Props = DateProps & LinkDispatchProps & LinkStateProps
 
 export function DateLocale(props: Props) {
   const { t } = useTranslation()
+  const converter = new DigitConverter()
 
   const date: string = props.locale?.code === 'jp'
-    ? props.converter.toDoubleByte(props.year.toString()) + t('business-card-year-singular') + (props.month ? t(`business-card-month-${props.month}`) : '')
+    ? converter.toDoubleByte(props.year.toString()) + t('business-card-year-singular') + (props.month ? t(`business-card-month-${props.month}`) : '')
     : (props.month ? t(`business-card-month-${props.month}`) + ' ' : '') + props.year
 
   return (
-    <div className={props.className || ''}>{date}</div>
+    <>{date}</>
   )
-}
-
-DateLocale.defaultProps = {
-  converter: new DigitConverter()
 }
 
 interface LinkStateProps {

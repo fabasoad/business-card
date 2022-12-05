@@ -35,7 +35,7 @@ test('should render Skills correctly', () => {
   ]
 
   for (const { alt, title } of expectedSkills) {
-    const img = screen.getByAltText(alt);
+    const img = screen.getByAltText(alt)
     expect(img).toHaveAttribute('title', title)
     expect(img).toHaveAttribute('src', '[object Object]')
   }

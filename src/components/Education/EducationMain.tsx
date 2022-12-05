@@ -6,7 +6,7 @@ import EducationItem from './EducationItem'
 export default function EducationMain() {
   const { t } = useTranslation()
   return (
-    <div className="light-component" id="education">
+    <div id="education" className="light-component">
       <div className="container">
         <div className="section-title text-center">
           <h2>{t('business-card-education-title')}</h2>
@@ -16,10 +16,7 @@ export default function EducationMain() {
           <div className="col-lg-12">
             <ul className="timeline">
               <li>
-                <EducationItem from={2009} to={2010} title={t('business-card-education-university-master')} />
-              </li>
-              <li className="timeline-inverted">
-                <EducationItem from={2005} to={2009} title={t('business-card-education-university-bachelor')} />
+                <EducationItem from={2005} to={2010} title={t('business-card-education-university-master')} />
               </li>
             </ul>
           </div>

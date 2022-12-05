@@ -40,7 +40,7 @@ test('should render CertificatesMain correctly', () => {
   expect(aCardLinkElements.item(2)).toHaveAttribute('href', 'http://ude.my/UC-JGDVYKAQ')
   expect(aCardLinkElements.item(3)).toHaveAttribute('href', 'https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY')
   expect(aCardLinkElements.item(4)).toHaveAttribute('href', 'https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS')
-  const divCardFooterElements = container.querySelectorAll('div.card-footer div')
+  const divCardFooterElements = container.querySelectorAll('div.card-footer')
   expect(divCardFooterElements).toHaveLength(5)
   expect(divCardFooterElements.item(0)).toHaveTextContent('business-card-month-9 2020')
   expect(divCardFooterElements.item(1)).toHaveTextContent('business-card-month-5 2020')

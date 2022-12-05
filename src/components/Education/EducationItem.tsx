@@ -13,7 +13,7 @@ export default function EducationItem(props: EducationItemProps) {
   return (
     <>
       <div className="timeline-image">
-        <h4><DateLocale year={props.to} />-<br /><DateLocale year={props.from} /></h4>
+        <h4><DateLocale year={props.to} /><br />-<br /><DateLocale year={props.from} /></h4>
       </div>
       <div className="timeline-panel">
         <div className="timeline-heading">

@@ -1,8 +1,8 @@
 import * as React from 'react'
 
 import { Technology } from '../../scripts/technologies/types';
-import { v4 as uuidv4 } from 'uuid';
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage';
+import StringUtils from '../../scripts/StringUtils'
 
 export interface StatsCommonProps {
   techName: string,
@@ -16,7 +16,12 @@ const StatsCommon: React.FC<React.PropsWithChildren<StatsCommonProps>> =
     return (
       <div className="m-4 d-flex flex-column stats-item">
         <a href={url} target="_blank" rel="noreferrer">
-          <img key={uuidv4()} src={tech.img} alt={tech.name} title={tech.title}/>
+          <img
+            key={StringUtils.random(30)}
+            src={tech.img}
+            alt={tech.name}
+            title={tech.title}
+          />
         </a>
         {children}
       </div>

@@ -2,14 +2,14 @@ import { Technology, TechnologyProvider } from './types'
 import TechnologyProviderDefault from './TechnologyProviderDefault'
 
 export default class TechnologyStorage {
-  provider: TechnologyProvider
+  private readonly provider: TechnologyProvider
 
   constructor(provider: TechnologyProvider = TechnologyProviderDefault) {
     this.provider = provider
   }
 
   findBySkill(isSkill: boolean): Array<Technology> {
-    const result: Array<Technology> = new Array<Technology>()
+    const result = new Array<Technology>()
     for (const technology of this.provider.items.values()) {
       if (technology.isSkill === isSkill) {
         result.push(technology)

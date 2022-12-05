@@ -6,7 +6,7 @@ import * as imgHackerRank from '../../assets/images/certificate-issuers/hacker-r
 import { CertificateIssuerProvider, CertificateIssuer } from './types'
 
 export default class CertificateIssuerStorage {
-  provider: CertificateIssuerProvider
+  private readonly provider: CertificateIssuerProvider
 
   constructor(provider: CertificateIssuerProvider = {
     items: new Map<string, CertificateIssuer>([

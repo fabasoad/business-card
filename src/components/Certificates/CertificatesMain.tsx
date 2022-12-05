@@ -8,13 +8,10 @@ import CertificateIssuerStorage
   from '../../scripts/certificates/CertificateIssuerStorage'
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
 
-interface CertificatesMainProps {
-  certificateIssuerStorage?: CertificateIssuerStorage
-  technologyStorage?: TechnologyStorage
-}
-
-export default function CertificatesMain(props: CertificatesMainProps) {
+export default function CertificatesMain() {
   const { t } = useTranslation()
+  const certificateIssuerStorage = new CertificateIssuerStorage()
+  const technologyStorage = new TechnologyStorage()
   return (
     <div id="certificates" className="light-component">
       <div className="section-title text-center center">
@@ -29,8 +26,8 @@ export default function CertificatesMain(props: CertificatesMainProps) {
               <CertificateItem
                 id={item.id}
                 issueDate={new Date(item.date)}
-                issuer={props.certificateIssuerStorage.findByName(item.issuer)}
-                technology={props.technologyStorage.findByName(item.technology)}
+                issuer={certificateIssuerStorage.findByName(item.issuer)}
+                technology={technologyStorage.findByName(item.technology)}
                 i18nTitleKey={item.i18nTitleKey}
                 url={item.url}
               />
@@ -39,9 +36,4 @@ export default function CertificatesMain(props: CertificatesMainProps) {
       </Container>
     </div>
   )
-}
-
-CertificatesMain.defaultProps = {
-  certificateIssuerStorage: new CertificateIssuerStorage(),
-  technologyStorage: new TechnologyStorage()
 }

@@ -21,7 +21,7 @@ const fixtures = [{
 }]
 
 for (const { code, duration } of fixtures) {
-  test(`[${code}] should render JobDuration correctly`, () => {
+  test(`[${code}] should render JobDuration correctly with from and to`, () => {
     const store = mockStore({
       locale: SupportedLocales.getOrDefault(code)
     })
@@ -32,6 +32,27 @@ for (const { code, duration } of fixtures) {
           fromYear={2018}
           toMonth={3}
           toYear={2022}
+        />
+      </Provider>
+    )
+    expect(container.querySelector('div.job-duration'))
+      .toHaveTextContent(duration)
+  })
+
+  test(`[${code}] should render JobDuration correctly with from only`, () => {
+    const store = mockStore({
+      locale: SupportedLocales.getOrDefault(code)
+    })
+    const now = new Date()
+    const fromMonth = now.getMonth() > 7
+      ? now.getMonth() - 8
+      : now.getMonth() + 4
+    const fromYear = now.getFullYear() - 3
+    const {container} = render(
+      <Provider store={store}>
+        <JobDuration
+          fromMonth={fromMonth}
+          fromYear={fromYear}
         />
       </Provider>
     )

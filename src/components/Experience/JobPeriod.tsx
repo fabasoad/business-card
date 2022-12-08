@@ -22,7 +22,7 @@ const JobPeriod: React.FunctionComponent<JobPeriodProps> =
             toYear &&
             <DateLocale month={toMonth} year={toYear} />) ||
             <div>{t('business-card-experience-present')}</div>}
-          <br />- <br />
+          <br />-<br />
           <DateLocale month={fromMonth} year={fromYear} />
         </h4>
       </div>

@@ -19,7 +19,6 @@ test('should render JobTitle correctly', () => {
   expect(imgElement).toHaveAttribute('src', logo)
   expect(imgElement).toHaveAttribute('alt', company)
   expect(imgElement).toHaveAttribute('title', company)
-  const h4Element = container.querySelector('h4.subheading')
-  expect(h4Element).toHaveTextContent(title)
+  expect(container.querySelector('h4.subheading')).toHaveTextContent(title)
   expect(screen.getByRole('heading', { level: 6 })).toHaveTextContent(location)
 })

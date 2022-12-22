@@ -25,7 +25,7 @@ export default function ExperienceMain() {
         <ul className="timeline">
           <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={10}
+              fromMonthIndex={9}
               fromYear={2021}
             />
             <div className="timeline-panel">
@@ -51,9 +51,9 @@ export default function ExperienceMain() {
           </li>
           <li>
             <JobPeriod
-              fromMonth={6}
+              fromMonthIndex={5}
               fromYear={2021}
-              toMonth={9}
+              toMonthIndex={8}
               toYear={2021}
             />
             <div className="timeline-panel">
@@ -79,9 +79,9 @@ export default function ExperienceMain() {
           </li>
           <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={9}
+              fromMonthIndex={8}
               fromYear={2020}
-              toMonth={5}
+              toMonthIndex={4}
               toYear={2021}
             />
             <div className="timeline-panel">
@@ -107,9 +107,9 @@ export default function ExperienceMain() {
           </li>
           <li>
             <JobPeriod
-              fromMonth={5}
+              fromMonthIndex={4}
               fromYear={2020}
-              toMonth={8}
+              toMonthIndex={7}
               toYear={2020}
             />
             <div className="timeline-panel">
@@ -135,9 +135,9 @@ export default function ExperienceMain() {
           </li>
           <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={7}
+              fromMonthIndex={6}
               fromYear={2019}
-              toMonth={4}
+              toMonthIndex={3}
               toYear={2020}
             />
             <div className="timeline-panel">
@@ -163,9 +163,9 @@ export default function ExperienceMain() {
           </li>
           <li>
             <JobPeriod
-              fromMonth={9}
+              fromMonthIndex={8}
               fromYear={2018}
-              toMonth={6}
+              toMonthIndex={5}
               toYear={2019}
             />
             <div className="timeline-panel">
@@ -195,9 +195,9 @@ export default function ExperienceMain() {
           </li>
           <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={2}
+              fromMonthIndex={1}
               fromYear={2016}
-              toMonth={9}
+              toMonthIndex={8}
               toYear={2018}
             />
             <div className="timeline-panel">
@@ -227,9 +227,9 @@ export default function ExperienceMain() {
           </li>
           <li>
             <JobPeriod
-              fromMonth={5}
+              fromMonthIndex={4}
               fromYear={2013}
-              toMonth={1}
+              toMonthIndex={0}
               toYear={2016}
             />
             <div className="timeline-panel">
@@ -258,9 +258,9 @@ export default function ExperienceMain() {
           </li>
           <li className="timeline-inverted">
             <JobPeriod
-              fromMonth={10}
+              fromMonthIndex={9}
               fromYear={2011}
-              toMonth={4}
+              toMonthIndex={3}
               toYear={2013}
             />
             <div className="timeline-panel">
@@ -286,9 +286,9 @@ export default function ExperienceMain() {
           </li>
           <li>
             <JobPeriod
-              fromMonth={3}
+              fromMonthIndex={2}
               fromYear={2010}
-              toMonth={9}
+              toMonthIndex={8}
               toYear={2011}
             />
             <div className="timeline-panel">

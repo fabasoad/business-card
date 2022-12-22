@@ -6,57 +6,54 @@ import { render } from '@testing-library/react'
 import JobDuration from '../../../components/Experience/JobDuration'
 import SupportedLocales from '../../../scripts/SupportedLocales'
 import { Provider } from 'react-redux'
+import DateUtils from '../../../scripts/DateUtils';
 
 const mockStore = configureMockStore()
 
-const fixtures = [{
-  code: 'gb',
-  duration: '3 years 8 months'
-}, {
-  code: 'jp',
-  duration: '3 年 8 ヶ月'
-}, {
-  code: 'ua',
-  duration: '3 роки 8 місяців'
-}]
-
-for (const { code, duration } of fixtures) {
+for (const code of ['gb', 'jp', 'ua']) {
   test(`[${code}] should render JobDuration correctly with from and to`, () => {
     const store = mockStore({
       locale: SupportedLocales.getOrDefault(code)
     })
-    const {container} = render(
+    const fromMonthIndex = 7
+    const fromYear = 2018
+    const toMonthIndex = 3
+    const toYear = 2022
+    const { container } = render(
       <Provider store={store}>
         <JobDuration
-          fromMonth={7}
-          fromYear={2018}
-          toMonth={3}
-          toYear={2022}
+          fromMonthIndex={fromMonthIndex}
+          fromYear={fromYear}
+          toMonthIndex={toMonthIndex}
+          toYear={toYear}
         />
       </Provider>
     )
-    expect(container.querySelector('div.job-duration'))
-      .toHaveTextContent(duration)
+    expect(container.querySelector('div.job-duration')).toHaveTextContent(
+      DateUtils.humanize(
+        new Date(fromYear, fromMonthIndex),
+        new Date(toYear, toMonthIndex),
+        code
+      )
+    )
   })
 
   test(`[${code}] should render JobDuration correctly with from only`, () => {
     const store = mockStore({
       locale: SupportedLocales.getOrDefault(code)
     })
-    const now = new Date()
-    const fromMonth = now.getMonth() > 7
-      ? now.getMonth() - 8
-      : now.getMonth() + 4
-    const fromYear = now.getFullYear() - 3
-    const {container} = render(
+    const fromMonthIndex = 5
+    const fromYear = 2017
+    const { container } = render(
       <Provider store={store}>
         <JobDuration
-          fromMonth={fromMonth}
+          fromMonthIndex={fromMonthIndex}
           fromYear={fromYear}
         />
       </Provider>
     )
-    expect(container.querySelector('div.job-duration'))
-      .toHaveTextContent(duration)
+    expect(container.querySelector('div.job-duration')).toHaveTextContent(
+      DateUtils.humanize(new Date(fromYear, fromMonthIndex), new Date(), code)
+    )
   })
 }

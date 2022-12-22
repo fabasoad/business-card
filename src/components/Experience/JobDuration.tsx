@@ -6,27 +6,27 @@ import { AppActions, Locale } from '../../store/locale/types'
 import { connect } from 'react-redux'
 
 interface JobDurationProps {
-  fromMonth: number
+  fromMonthIndex: number
   fromYear: number
-  toMonth?: number
+  toMonthIndex?: number
   toYear?: number
 }
 
 type Props = JobDurationProps & LinkDispatchProps & LinkStateProps
 
 const JobDuration: React.FunctionComponent<Props> =
-  ({ fromMonth, fromYear, toMonth, toYear, locale }) => {
-    const from: Date = new Date(fromYear, fromMonth)
-    const to: Date = !toYear || !toMonth ? new Date() : new Date(toYear, toMonth)
+  ({ fromMonthIndex, fromYear, toMonthIndex, toYear, locale }) => {
+    const from: Date = new Date(fromYear, fromMonthIndex)
+    const to: Date = !toYear || !toMonthIndex ? new Date() : new Date(toYear, toMonthIndex)
     return (
       <div className="job-duration">{ DateUtils.humanize(from, to, locale.code) }</div>
     )
   }
 
 JobDuration.defaultProps = {
-  fromMonth: 0,
+  fromMonthIndex: 0,
   fromYear: 0,
-  toMonth: null,
+  toMonthIndex: null,
   toYear: null
 }
 

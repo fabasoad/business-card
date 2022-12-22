@@ -1,18 +1,13 @@
-/// <reference types="jest" />
+import '@testing-library/jest-dom'
 import * as React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
+import { render } from '@testing-library/react'
+
 import FooterLocation from '../../../components/Footer/FooterLocation'
-import { useTranslation } from '../../__mocks__/react-i18next'
-
-let tMock
-
-beforeAll(() => {
-  tMock = useTranslation().t
-})
 
 test('should render FooterLocation correctly', () => {
-  const wrapper: ShallowWrapper = shallow(<FooterLocation />)
-  expect(wrapper).toMatchSnapshot()
-  expect(tMock).toHaveBeenCalledTimes(1)
-  expect(tMock).toHaveBeenCalledWith('business-card-contact-city')
+  const { container } = render(<FooterLocation />)
+  const div = container.querySelector('div')
+  expect(div).toHaveAttribute('class', 'col')
+  expect(div.querySelector('i')).toHaveAttribute('class', 'fa fa-map-marker-alt fa-2x')
+  expect(div.querySelector('p')).toHaveTextContent('business-card-contact-city')
 })

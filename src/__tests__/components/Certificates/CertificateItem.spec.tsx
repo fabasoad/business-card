@@ -11,9 +11,9 @@ const mockStore = configureMockStore()
 const store = mockStore({})
 
 test('should render CertificateItem correctly', () => {
-  const month = 2
+  const monthIndex = 1
   const year = 2022
-  const issueDate = new Date(year, month - 1, 22)
+  const issueDate = new Date(year, monthIndex, 22)
   const issuer: CertificateIssuer = {
     name: 'certificate-name',
     img: 'certificate-img'
@@ -49,5 +49,5 @@ test('should render CertificateItem correctly', () => {
 
   elements = container.getElementsByClassName('card-footer')
   expect(elements).toHaveLength(1)
-  expect(elements[0]).toHaveTextContent(`business-card-month-${month} ${year}`)
+  expect(elements[0]).toHaveTextContent(`business-card-month-${monthIndex} ${year}`)
 })

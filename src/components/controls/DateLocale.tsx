@@ -7,19 +7,19 @@ import { AppState } from '../../store/configureStore'
 import DigitConverter from '../../scripts/DigitConverter'
 
 interface DateProps {
-  month?: number
+  monthIndex?: number
   year: number
 }
 
 type Props = DateProps & LinkDispatchProps & LinkStateProps
 
-export function DateLocale(props: Props) {
+export function DateLocale({ locale, monthIndex, year }: Props) {
   const { t } = useTranslation()
   const converter = new DigitConverter()
 
-  const date: string = props.locale?.code === 'jp'
-    ? converter.toDoubleByte(props.year.toString()) + t('business-card-year-singular') + (props.month ? t(`business-card-month-${props.month}`) : '')
-    : (props.month ? t(`business-card-month-${props.month}`) + ' ' : '') + props.year
+  const date: string = locale?.code === 'jp'
+    ? converter.toDoubleByte(year.toString()) + t('business-card-year-singular') + (monthIndex != undefined ? t(`business-card-month-${monthIndex}`) : '')
+    : (monthIndex != undefined ? t(`business-card-month-${monthIndex}`) + ' ' : '') + year
 
   return (
     <>{date}</>

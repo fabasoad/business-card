@@ -32,7 +32,7 @@ export default function CertificateItem(props: CertificateItemProps) {
       </Card.Body>
       <Card.Footer>
         <DateLocale
-          month={props.issueDate.getMonth() + 1}
+          monthIndex={props.issueDate.getMonth()}
           year={props.issueDate.getFullYear()}
         />
       </Card.Footer>

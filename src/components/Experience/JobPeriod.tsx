@@ -4,26 +4,30 @@ import DateLocale from '../controls/DateLocale'
 import JobDuration from './JobDuration'
 
 interface JobPeriodProps {
-  fromMonth: number
+  fromMonthIndex: number
   fromYear: number
-  toMonth?: number
+  toMonthIndex?: number
   toYear?: number
 }
 
 const JobPeriod: React.FunctionComponent<JobPeriodProps> =
-  ({ fromMonth, fromYear, toMonth, toYear }) => {
+  ({ fromMonthIndex, fromYear, toMonthIndex, toYear }) => {
     const { t } = useTranslation()
     return (
       <div className="timeline-image">
         <JobDuration
-          fromMonth={fromMonth} fromYear={fromYear} toMonth={toMonth} toYear={toYear} />
+          fromMonthIndex={fromMonthIndex}
+          fromYear={fromYear}
+          toMonthIndex={toMonthIndex}
+          toYear={toYear}
+        />
         <h4>
-          {(toMonth &&
+          {(toMonthIndex != undefined &&
             toYear &&
-            <DateLocale month={toMonth} year={toYear} />) ||
+            <DateLocale monthIndex={toMonthIndex} year={toYear} />) ||
             <div>{t('business-card-experience-present')}</div>}
           <br />-<br />
-          <DateLocale month={fromMonth} year={fromYear} />
+          <DateLocale monthIndex={fromMonthIndex} year={fromYear} />
         </h4>
       </div>
     )

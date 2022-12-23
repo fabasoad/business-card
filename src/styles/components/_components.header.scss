@@ -22,7 +22,7 @@
 		@media (min-height: 568px) {
 			top: 50%;
 		}
-		@media (min-width: 768px) {
+		@media (min-width: $small-desktop-breakpoint) {
 			top: 35%;
 			position: absolute;
 			margin-left: 2rem;

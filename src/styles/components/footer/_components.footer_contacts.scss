@@ -1,4 +1,5 @@
-.contacts {
+.footer-contacts {
+	@extend .row;
 	p {
 		font-size: 0.8rem;
 		margin-top: 10px;

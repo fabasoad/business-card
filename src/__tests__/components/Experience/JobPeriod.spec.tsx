@@ -1,34 +1,23 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import configureMockStore from 'redux-mock-store'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import JobPeriod from '../../../components/Experience/JobPeriod'
 import { Provider } from 'react-redux'
 import SupportedLocales from '../../../scripts/SupportedLocales'
-import DateUtils from '../../../scripts/DateUtils';
+import { testJobDuration } from './TestUtils.spec'
+import { testJobTimeline } from './TestUtils.spec'
 
 const mockStore = configureMockStore()
 
-const fixtures = [{
-  code: 'gb',
-  from: 'business-card-month-1 2019',
-  to: 'business-card-month-4 2020'
-}, {
-  code: 'jp',
-  from: '２０１９business-card-year-singularbusiness-card-month-1',
-  to: '２０２０business-card-year-singularbusiness-card-month-4'
-}, {
-  code: 'ua',
-  from: 'business-card-month-1 2019',
-  to: 'business-card-month-4 2020'
-}]
+test('t', () => {})
 
-for (const { code, from, to } of fixtures) {
+for (const code of ['gb', 'jp', 'ua']) {
   test(`[${code}] should render JobPeriod correctly with from and to`, () => {
-    const store = mockStore({
-      locale: SupportedLocales.getOrDefault(code)
-    })
+    const locale = SupportedLocales.find(code)
+    expect(locale).not.toBeNull()
+    const store = mockStore({ locale })
     const fromMonthIndex = 1
     const fromYear = 2019
     const toMonthIndex = 4
@@ -43,23 +32,32 @@ for (const { code, from, to } of fixtures) {
         />
       </Provider>
     )
-    expect(container.querySelector('div.job-duration')).toHaveTextContent(
-      DateUtils.humanize(
-        new Date(fromYear, fromMonthIndex),
-        new Date(toYear, toMonthIndex),
-        code
-      )
+    const div = container.querySelector('div.timeline-image')
+    expect(div).not.toBeNull()
+    testJobDuration(
+      div.querySelector('div.job-duration'),
+      code,
+      fromMonthIndex,
+      fromYear,
+      toMonthIndex,
+      toYear
     )
-    expect(screen.getByRole('heading', { level: 4 }))
-      .toHaveTextContent(`${to}-${from}`)
+    testJobTimeline(
+      div.querySelector('div.job-timeline'),
+      locale,
+      fromMonthIndex,
+      fromYear,
+      toMonthIndex,
+      toYear
+    )
   })
 
-  test(`[${code}] should render JobPeriod correctly with from only`, () => {
-    const store = mockStore({
-      locale: SupportedLocales.getOrDefault(code)
-    })
-    const fromMonthIndex = 3
-    const fromYear = 2016
+  test(`[${code}] should render JobPeriod correctly with from`, () => {
+    const locale = SupportedLocales.find(code)
+    expect(locale).not.toBeNull()
+    const store = mockStore({ locale })
+    const fromMonthIndex = 0
+    const fromYear = 2018
     const { container } = render(
       <Provider store={store}>
         <JobPeriod
@@ -68,9 +66,19 @@ for (const { code, from, to } of fixtures) {
         />
       </Provider>
     )
-    expect(container.querySelector('div.job-duration')).toHaveTextContent(
-      DateUtils.humanize(new Date(fromYear, fromMonthIndex), new Date(), code)
+    const div = container.querySelector('div.timeline-image')
+    expect(div).not.toBeNull()
+    testJobDuration(
+      div.querySelector('div.job-duration'),
+      code,
+      fromMonthIndex,
+      fromYear
     )
-    expect(screen.queryByRole('heading', { level: 4 })).not.toBeNull()
+    testJobTimeline(
+      div.querySelector('div.job-timeline'),
+      locale,
+      fromMonthIndex,
+      fromYear
+    )
   })
 }

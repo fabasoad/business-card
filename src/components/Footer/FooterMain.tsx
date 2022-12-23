@@ -4,11 +4,10 @@ import FooterContacts from './FooterContacts'
 import FooterInfo from './FooterInfo'
 import FooterSocial from './FooterSocial'
 
-
 export default function FooterMain() {
   const { t } = useTranslation()
   return (
-    <div className="footer dark-component">
+    <div className="footer">
       <div id="contact" className="container text-center">
         <div className="section-title center">
           <h2>{t('business-card-contact-title')}</h2>

@@ -4,6 +4,7 @@ exports[`should render LocaleDropDown correctly 1`] = `
 <Dropdown
   align="start"
   autoClose={true}
+  drop="down"
   navbar={false}
 >
   <DropdownToggle

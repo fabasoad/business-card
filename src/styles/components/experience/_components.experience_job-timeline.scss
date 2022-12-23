@@ -1,0 +1,28 @@
+.job-timeline {
+  margin-top: 1rem;
+  font-size: 0.6rem;
+  @media (min-width: $mobile-breakpoint) {
+    margin-top: 1rem;
+    font-size: 0.6rem;
+  }
+  @media (min-width: $tablet-breakpoint) {
+    margin-top: 1rem;
+    font-size: 0.6rem;
+  }
+  @media (min-width: $small-desktop-breakpoint) {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+  }
+  @media (min-width: $tv-breakpoint) {
+    margin-top: 2.5rem;
+    font-size: 1rem;
+  }
+  text-transform: uppercase;
+  .row {
+    @extend .justify-content-center;
+  }
+}

@@ -1,4 +1,5 @@
 @import './components.experience_duration';
+@import './components.experience_job-timeline';
 @import './components.experience_job-titles';
 @import './components.experience_technologies';
 
@@ -34,11 +35,6 @@
       border-radius: 100%;
       text-align: center;
       background: #fff;
-      h4 {
-        margin-top: 20px;
-        font-size: 9px;
-        text-transform: uppercase;
-      }
     }
     &:last-child {
       margin-bottom: 0;
@@ -90,7 +86,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $small-desktop-breakpoint) {
   .timeline {
     &:before {
       left: 50%;
@@ -108,12 +104,6 @@
         width: 100px;
         height: 100px;
         margin-left: -50px;
-        h4 {
-          font-size: 0.6rem;
-          margin-top: 16px;
-          line-height: 18px;
-          font-weight: 400;
-        }
       }
     }
     >li.timeline-inverted {
@@ -125,7 +115,7 @@
     }
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $small-desktop-breakpoint) {
   .timeline {
     >li {
       min-height: 150px;
@@ -136,11 +126,6 @@
         width: 150px;
         height: 150px;
         margin-left: -75px;
-        h4 {
-          margin-top: 30px;
-          font-size: 16px;
-          line-height: 26px;
-        }
       }
     }
     >li.timeline-inverted {
@@ -161,10 +146,6 @@
         width: 150px;
         height: 150px;
         margin-left: -75px;
-        h4 {
-          margin-top: 40px;
-          font-weight: 400;
-        }
       }
     }
     >li.timeline-inverted {

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import DateLocale from '../controls/DateLocale'
 import JobDuration from './JobDuration'
+import JobTimeline from './JobTimeline';
 
 interface JobPeriodProps {
   fromMonthIndex: number
@@ -21,14 +21,12 @@ const JobPeriod: React.FunctionComponent<JobPeriodProps> =
           toMonthIndex={toMonthIndex}
           toYear={toYear}
         />
-        <h4>
-          {(toMonthIndex != undefined &&
-            toYear &&
-            <DateLocale monthIndex={toMonthIndex} year={toYear} />) ||
-            <div>{t('business-card-experience-present')}</div>}
-          <br />-<br />
-          <DateLocale monthIndex={fromMonthIndex} year={fromYear} />
-        </h4>
+        <JobTimeline
+          fromMonthIndex={fromMonthIndex}
+          fromYear={fromYear}
+          toMonthIndex={toMonthIndex}
+          toYear={toYear}
+        />
       </div>
     )
   }

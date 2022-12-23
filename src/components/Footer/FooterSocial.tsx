@@ -2,7 +2,7 @@ import * as React from 'react'
 
 export default function FooterSocial() {
   return (
-    <div className="social d-flex justify-content-center">
+    <div className="footer-social">
       <ul className="icon-list">
         <li><a className="btn" target="_blank" rel="noopener noreferrer" href="https://twitter.com/fabasoad"><i className="fab fa-twitter fa-2x"></i></a></li>
         <li><a className="btn" target="_blank" rel="noopener noreferrer" href="https://github.com/fabasoad"><i className="fab fa-github fa-2x"></i></a></li>

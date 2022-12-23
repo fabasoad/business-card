@@ -5,7 +5,7 @@ import FooterLocation from './FooterLocation'
 
 export default function FooterContacts() {
   return (
-    <div className="row contacts">
+    <div className="footer-contacts">
       <FooterLocation />
       <FooterEmail />
     </div>

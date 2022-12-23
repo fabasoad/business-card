@@ -25,7 +25,7 @@ body {
     }
     .blinker-prefix::before {
       content: 'Tap';
-      @media only screen and (min-width : 992px) {
+      @media only screen and (min-width: $small-desktop-breakpoint) {
         content: 'Click';
       }
     }

@@ -32,6 +32,9 @@
   "snapshotSerializers": [
     "enzyme-to-json/serializer"
   ],
+  "testPathIgnorePatterns": [
+    ".*/TestUtils.spec.ts"
+  ],
   "testRegex": "/src/__tests__/.*\\.(spec|test)\\.(ts|tsx|js)$",
   "transform": {
     "\\.(ts|tsx)$": "ts-jest"

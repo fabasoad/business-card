@@ -8,13 +8,13 @@
   width: 100%;
   font-size: 0.3rem;
 }
-@media (min-width: 768px) {
+@media (min-width: $small-desktop-breakpoint) {
   .job-duration {
     margin-top: 0.6rem;
     font-size: 0.4rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: $small-desktop-breakpoint) {
   .job-duration {
     margin-top: 0.9rem;
     font-size: 0.6rem;

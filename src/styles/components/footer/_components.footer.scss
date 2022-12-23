@@ -1,9 +1,10 @@
 @import './components.footer_contacts';
+@import './components.footer_info';
+@import './components.footer_social';
 
-#contact {
-	color: $white;
-}
 .footer {
+	@extend .dark-component;
+	color: $white;
 	padding-bottom: 1.5rem;
 	.icon-list {
 		padding-left: 0;

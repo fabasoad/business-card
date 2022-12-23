@@ -4,10 +4,8 @@ import { render } from '@testing-library/react'
 
 import FooterInfo from '../../../components/Footer/FooterInfo'
 
-test('should render FooterInfo correctly', () => {
-  const { container } = render(<FooterInfo />)
-  const div = container.querySelector('div')
-  expect(div).toHaveAttribute('class', 'social d-flex justify-content-center')
+export function testFooterInfo(div: HTMLDivElement) {
+  expect(div).toHaveClass('footer-info')
   const ul = div.querySelector('ul')
   expect(ul).toHaveAttribute('class', 'icon-list')
   const liElements = ul.querySelectorAll('li')
@@ -56,4 +54,9 @@ test('should render FooterInfo correctly', () => {
   if (a || b || c) {
     throw new Error('Test failed')
   }
+}
+
+test('should render FooterInfo correctly', () => {
+  const { container } = render(<FooterInfo />)
+  testFooterInfo(container.querySelector('div'))
 })

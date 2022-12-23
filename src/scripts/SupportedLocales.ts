@@ -9,8 +9,12 @@ export default class SupportedLocales {
 
   static default: Locale = SupportedLocales._items[0]
 
+  static find(code: string): Locale | undefined {
+    return SupportedLocales._items.find((l) => l.code === code)
+  }
+
   static getOrDefault(code: string): Locale {
-    return SupportedLocales._items.find((l) => l.code === code) || SupportedLocales.default
+    return SupportedLocales.find(code) || SupportedLocales.default
   }
 
   static getExceptOf(code: string): Locale[] {

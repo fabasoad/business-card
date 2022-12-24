@@ -1,6 +1,3 @@
-import '@testing-library/jest-dom'
-
-/* eslint-disable no-undef */
 export function testEducationItem(
   container: HTMLElement, from: number, to: number, title: string) {
   const h4DateLocaleElements = container.querySelectorAll('div.timeline-image h4')
@@ -14,4 +11,3 @@ export function testEducationItem(
   expect(pBodyElements).toHaveLength(1)
   expect(pBodyElements.item(0)).toHaveTextContent('business-card-education-university-speciality')
 }
-/* eslint-enable */

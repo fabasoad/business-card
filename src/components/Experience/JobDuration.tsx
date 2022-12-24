@@ -17,7 +17,9 @@ type Props = JobDurationProps & LinkDispatchProps & LinkStateProps
 const JobDuration: React.FunctionComponent<Props> =
   ({ fromMonthIndex, fromYear, toMonthIndex, toYear, locale }) => {
     const from: Date = new Date(fromYear, fromMonthIndex)
-    const to: Date = !toYear || !toMonthIndex ? new Date() : new Date(toYear, toMonthIndex)
+    const to: Date = !toYear || toMonthIndex == undefined
+      ? new Date()
+      : new Date(toYear, toMonthIndex)
     return (
       <div className="job-duration">{ DateUtils.humanize(from, to, locale.code) }</div>
     )

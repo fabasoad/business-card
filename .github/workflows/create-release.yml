@@ -58,7 +58,7 @@ jobs:
   trigger-deployment:
     name: Trigger deployment to AWS
     if: ${{ false }}
-    needs: create_release
+    needs: [create-release]
     runs-on: ubuntu-latest
     steps:
       - name: Send deployment trigger

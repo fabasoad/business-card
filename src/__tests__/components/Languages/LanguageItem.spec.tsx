@@ -1,11 +1,18 @@
-/// <reference types="jest" />
+import '@testing-library/jest-dom'
 import * as React from 'react'
-import { shallow, ShallowWrapper } from 'enzyme'
-import LanguageItem from '../../../components/Languages/LanguageItem'
+import { render } from '@testing-library/react'
 
-test('should render LanguageItem correctly', () => {
-  const wrapper: ShallowWrapper = shallow(
-    <LanguageItem code="gb">test-content</LanguageItem>
-  )
-  expect(wrapper).toMatchSnapshot()
-})
+import LanguageItem from '../../../components/Languages/LanguageItem'
+import { testLanguageItem } from './TestUtils'
+
+for (const code of ['gb', 'jp', 'ua']) {
+  test(`[${code}] should render LanguageItem correctly`, () => {
+    const text = 'test-content'
+    const { container } = render(
+      <LanguageItem code={code}>{text}</LanguageItem>
+    )
+    const div = container.querySelector('div')
+    expect(div).toHaveTextContent(text)
+    testLanguageItem(div, code)
+  })
+}

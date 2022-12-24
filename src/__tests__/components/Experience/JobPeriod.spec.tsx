@@ -1,17 +1,14 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import configureMockStore from 'redux-mock-store'
+import { Provider } from 'react-redux'
 import { render } from '@testing-library/react'
 
 import JobPeriod from '../../../components/Experience/JobPeriod'
-import { Provider } from 'react-redux'
 import SupportedLocales from '../../../scripts/SupportedLocales'
-import { testJobDuration } from './TestUtils.spec'
-import { testJobTimeline } from './TestUtils.spec'
+import { testJobPeriod } from './TestUtils'
 
 const mockStore = configureMockStore()
-
-test('t', () => {})
 
 for (const code of ['gb', 'jp', 'ua']) {
   test(`[${code}] should render JobPeriod correctly with from and to`, () => {
@@ -32,18 +29,8 @@ for (const code of ['gb', 'jp', 'ua']) {
         />
       </Provider>
     )
-    const div = container.querySelector('div.timeline-image')
-    expect(div).not.toBeNull()
-    testJobDuration(
-      div.querySelector('div.job-duration'),
-      code,
-      fromMonthIndex,
-      fromYear,
-      toMonthIndex,
-      toYear
-    )
-    testJobTimeline(
-      div.querySelector('div.job-timeline'),
+    testJobPeriod(
+      container.querySelector('div.timeline-image'),
       locale,
       fromMonthIndex,
       fromYear,
@@ -66,16 +53,8 @@ for (const code of ['gb', 'jp', 'ua']) {
         />
       </Provider>
     )
-    const div = container.querySelector('div.timeline-image')
-    expect(div).not.toBeNull()
-    testJobDuration(
-      div.querySelector('div.job-duration'),
-      code,
-      fromMonthIndex,
-      fromYear
-    )
-    testJobTimeline(
-      div.querySelector('div.job-timeline'),
+    testJobPeriod(
+      container.querySelector('div.timeline-image'),
       locale,
       fromMonthIndex,
       fromYear

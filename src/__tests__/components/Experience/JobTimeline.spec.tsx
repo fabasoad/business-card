@@ -6,7 +6,7 @@ import { render } from '@testing-library/react'
 import JobTimeline from '../../../components/Experience/JobTimeline'
 import SupportedLocales from '../../../scripts/SupportedLocales'
 import { Provider } from 'react-redux'
-import { testJobTimeline } from './TestUtils.spec'
+import { testJobTimeline } from './TestUtils'
 
 const mockStore = configureMockStore()
 

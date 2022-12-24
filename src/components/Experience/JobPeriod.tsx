@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
 import JobDuration from './JobDuration'
 import JobTimeline from './JobTimeline';
 
@@ -12,7 +11,6 @@ interface JobPeriodProps {
 
 const JobPeriod: React.FunctionComponent<JobPeriodProps> =
   ({ fromMonthIndex, fromYear, toMonthIndex, toYear }) => {
-    const { t } = useTranslation()
     return (
       <div className="timeline-image">
         <JobDuration

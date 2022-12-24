@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { render } from '@testing-library/react'
 
 import EducationItem from '../../../components/Education/EducationItem'
-import { testEducationItem } from './scripts'
+import { testEducationItem } from './TestUtils'
 
 const mockStore = configureMockStore()
 const store = mockStore({})

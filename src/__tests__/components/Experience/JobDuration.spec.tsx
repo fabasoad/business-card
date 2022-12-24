@@ -6,7 +6,7 @@ import { render } from '@testing-library/react'
 
 import JobDuration from '../../../components/Experience/JobDuration'
 import SupportedLocales from '../../../scripts/SupportedLocales'
-import { testJobDuration } from './TestUtils.spec'
+import { testJobDuration } from './TestUtils'
 
 const mockStore = configureMockStore()
 

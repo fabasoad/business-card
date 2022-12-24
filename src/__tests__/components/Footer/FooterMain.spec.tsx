@@ -3,9 +3,9 @@ import * as React from 'react'
 import { render } from '@testing-library/react'
 
 import FooterMain from '../../../components/Footer/FooterMain'
-import { testFooterContacts } from './FooterContacts.spec'
-import { testFooterSocial } from './FooterSocial.spec'
-import { testFooterInfo } from './FooterInfo.spec'
+import {
+  testFooterContacts, testFooterInfo, testFooterSocial
+} from './TestUtils'
 
 test('should render FooterMain correctly', () => {
   const { container } = render(<FooterMain />)

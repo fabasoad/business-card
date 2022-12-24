@@ -10,12 +10,12 @@ interface JobDescriptionProps {
 export default function JobDescription(props: JobDescriptionProps) {
   const { t } = useTranslation()
   return (
-    <>
+    <div className="job-description">
       {props.withTitle && <h5>{t('business-card-experience-description-title')}</h5>}
       {Array(props.count).fill(props.i18nKeyPrefix)
         .map((p, i) => `${p}-${i + 1}`)
         .map((key) => (<Trans key={key} parent="div" t={t}>{key}</Trans>))}
-    </>
+    </div>
   )
 }
 

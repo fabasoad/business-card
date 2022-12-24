@@ -22,10 +22,10 @@ const JobResponsibilities: React.FunctionComponent<JobResponsibilitiesProps> =
     return (
       <>
         {respList.length > 0 &&
-          <>
+          <div className="job-responsibilities">
             <h5>{t('business-card-experience-responsibilities-title')}</h5>
             <ul className="responsibilities">{respList}</ul>
-          </>
+          </div>
         }
       </>
     )

@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 
 import SupportedLocales from '../../../scripts/SupportedLocales'
 import { DateLocale } from '../../../components/controls/DateLocale'
-import { testDateLocale } from './TestUtils.spec'
+import { testDateLocale } from './TestUtils'
 
 for (const code of ['gb', 'jp', 'ua']) {
   test(`[${code}] should render correctly with year and month`, () => {

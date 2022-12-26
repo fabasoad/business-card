@@ -10,10 +10,8 @@ import { testJobTimeline } from './TestUtils'
 
 const mockStore = configureMockStore()
 
-for (const code of ['gb', 'jp', 'ua']) {
-  test(`[${code}] should render JobTimeline correctly with from and to`, () => {
-    const locale = SupportedLocales.find(code)
-    expect(locale).not.toBeNull()
+for (const locale of SupportedLocales._items) {
+  test(`[${locale.code}] should render JobTimeline correctly with from and to`, () => {
     const store = mockStore({ locale })
     const fromMonthIndex = 6
     const fromYear = 2017
@@ -39,9 +37,7 @@ for (const code of ['gb', 'jp', 'ua']) {
     )
   })
 
-  test(`[${code}] should render JobTimeline correctly with from`, () => {
-    const locale = SupportedLocales.find(code)
-    expect(locale).not.toBeNull()
+  test(`[${locale.code}] should render JobTimeline correctly with from`, () => {
     const store = mockStore({ locale })
     const fromMonthIndex = 6
     const fromYear = 2017

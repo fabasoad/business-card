@@ -1,30 +1,28 @@
-/// <reference types="jest" />
-import { shallow, ShallowWrapper } from 'enzyme'
+import '@testing-library/jest-dom'
 import * as React from 'react'
-import { LocaleDropDown } from '../../../components/Menu/LocaleDropDown'
-import { Locale } from '../../../store/locale/types'
+import configureMockStore from 'redux-mock-store'
+import { Provider } from 'react-redux'
+import { render } from '@testing-library/react'
 
-test('should render LocaleDropDown correctly', () => {
-  const getLocalesExceptOfSpy = jest.fn(() => [{ code: 'gb', title: 'EN' }])
-  const wrapper: ShallowWrapper = shallow(<LocaleDropDown
-    getLocalesExceptOf={getLocalesExceptOfSpy}
-    locale={{ code: 'jp', title: 'JP' }}
-    startSetLocale={null}
-  />)
-  expect(wrapper).toMatchSnapshot()
-  expect(getLocalesExceptOfSpy).toHaveBeenCalledTimes(1)
-  expect(getLocalesExceptOfSpy).toHaveBeenCalledWith('jp')
-})
+import LocaleDropDown from '../../../components/Menu/LocaleDropDown'
+import SupportedLocales from '../../../scripts/SupportedLocales'
 
-test('should change locale correctly', () => {
-  const expectedLocale: Locale = { code: 'jp', title: 'JP' }
-  const startSetLocaleSpy = jest.fn()
-  const wrapper: ShallowWrapper = shallow(<LocaleDropDown
-    getLocalesExceptOf={() => [expectedLocale]}
-    locale={{ code: 'jp', title: 'JP' }}
-    startSetLocale={startSetLocaleSpy}
-  />)
-  wrapper.find('DropdownItem').simulate('click')
-  expect(startSetLocaleSpy).toHaveBeenCalledTimes(1)
-  expect(startSetLocaleSpy).toHaveBeenCalledWith(expectedLocale)
-})
+const mockStore = configureMockStore()
+
+for (const locale of SupportedLocales._items) {
+  test(`[${locale.code}] should render LocaleDropDown correctly`, () => {
+    const store = mockStore({locale})
+    const {container} = render(
+      <Provider store={store}>
+        <LocaleDropDown />
+      </Provider>
+    )
+    const div = container.querySelector('div.dropdown')
+    expect(div).not.toBeNull()
+    const button = div.querySelector('button')
+    expect(button).toHaveClass('nav-link')
+    expect(button.querySelector(`span.flag-icon.flag-icon-${locale.code}`))
+      .not.toBeNull()
+    expect(button.querySelector('span.locale-title')).toHaveTextContent(locale.title)
+  })
+}

@@ -3,18 +3,18 @@
 @import "./base/settings";
 @import "./base/base";
 
-@import "./components/components.general";
 @import "./components/components.about";
-@import "./components/components.badges";
 @import "./components/components.back_to_top";
+@import "./components/components.badges";
 @import "./components/components.certificates";
-@import "./components/experience/components.experience";
-@import "./components/footer/components.footer";
+@import "./components/components.general";
 @import "./components/components.header";
 @import "./components/components.languages";
 @import "./components/components.loader";
-@import "./components/components.menu";
 @import "./components/components.portfolio";
 @import "./components/components.resume";
 @import "./components/components.skills";
 @import "./components/components.stats";
+@import "./components/experience/components.experience";
+@import "./components/footer/components.footer";
+@import "./components/menu/components.menu";

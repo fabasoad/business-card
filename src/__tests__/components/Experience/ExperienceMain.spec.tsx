@@ -163,12 +163,10 @@ function testLi(li: HTMLLIElement, locale: Locale, {
   )
 }
 
-for (const code of ['gb', 'jp', 'ua']) {
-  test(`[${code}] should render ExperienceMain correctly`, () => {
-    const locale = SupportedLocales.find(code)
-    expect(locale).not.toBeNull()
-    const store = mockStore({locale})
-    const {container} = render(
+for (const locale of SupportedLocales._items) {
+  test(`[${locale.code}] should render ExperienceMain correctly`, () => {
+    const store = mockStore({ locale })
+    const { container } = render(
       <Provider store={store}>
         <ExperienceMain/>
       </Provider>

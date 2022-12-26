@@ -1,7 +1,7 @@
 import i18n from 'i18next'
 import LanguageDetector from 'i18next-browser-languagedetector'
 import { Dispatch } from 'react'
-import { initReactI18next } from 'react-i18next'
+import { initReactI18next, TFunction } from 'react-i18next'
 import { Action } from 'redux'
 import { ThunkAction } from 'redux-thunk'
 import SupportedLocales from '../../scripts/SupportedLocales'
@@ -65,7 +65,7 @@ export const setLocale = (payload: Locale): AppActions => ({
 
 export const startSetLocale = (locale: Locale): ThunkLocaleAction =>
   (dispatch: Dispatch<AppActions>) => {
-    i18n.changeLanguage(locale.code, (err, t) => {
+    i18n.changeLanguage(locale.code, (err, t: TFunction) => {
       onLanguageChange(t)
       dispatch(
         setLocale({

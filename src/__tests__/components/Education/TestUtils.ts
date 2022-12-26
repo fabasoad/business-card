@@ -1,5 +1,6 @@
 export function testEducationItem(
-  container: HTMLElement, from: number, to: number, title: string) {
+  container: HTMLElement, from: number, to: number, title: string
+): void {
   const h4DateLocaleElements = container.querySelectorAll('div.timeline-image h4')
   expect(h4DateLocaleElements).toHaveLength(1)
   expect(h4DateLocaleElements.item(0)).toHaveTextContent(`${to}-${from}`)

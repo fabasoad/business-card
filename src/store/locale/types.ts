@@ -7,7 +7,7 @@ export class Locale {
 
   constructor(code: string, title: string = null) {
     this.code = code
-    this.title = ` ${title || code}`
+    this.title = title || code
   }
 }
 

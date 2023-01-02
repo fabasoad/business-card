@@ -44,7 +44,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-4-responsibilities"
                 />
                 <JobTechnologies
-                  key="woven-planet-4"
+                  keyPrefix="woven-planet-4"
                   names={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'intellijIdea', 'concourseCI', 'kubernetes', 'terraform', 'aws', 'gitHubActions']}
                 />
               </div>
@@ -73,7 +73,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-3-responsibilities"
                 />
                 <JobTechnologies
-                  key="woven-planet-3"
+                  keyPrefix="woven-planet-3"
                   names={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'helm', 'prometheus', 'grafana', 'terraform', 'aws']}
                 />
               </div>
@@ -102,7 +102,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-2-responsibilities"
                 />
                 <JobTechnologies
-                  key="woven-planet-2"
+                  keyPrefix="woven-planet-2"
                   names={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'helm', 'prometheus', 'grafana']}
                 />
               </div>
@@ -131,7 +131,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-woven-planet-1-responsibilities"
                 />
                 <JobTechnologies
-                  key="woven-planet-1"
+                  keyPrefix="woven-planet-1"
                   names={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea']}
                 />
               </div>
@@ -160,7 +160,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-responsibilities"
                 />
                 <JobTechnologies
-                  key="bitcoin-com-2"
+                  keyPrefix="bitcoin-com-2"
                   names={['docker', 'travis', 'gitHubActions', 'bitrise', 'java', 'kafka', 'spring', 'intellijIdea']}
                 />
               </div>
@@ -189,7 +189,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-responsibilities"
                 />
                 <JobTechnologies
-                  key="bitcoin-com-1"
+                  keyPrefix="bitcoin-com-1"
                   names={[
                     'maven', 'java', 'tomcat', 'lombok', 'junit', 'python',
                     'javaScript', 'jQuery', 'bootstrap', 'mariaDb', 'redis',
@@ -222,7 +222,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-lohika-3-responsibilities"
                 />
                 <JobTechnologies
-                  key="lohika-3"
+                  keyPrefix="lohika-3"
                   names={[
                     'csharp', 'xamarin', 'prism', 'dotNetCore', 'kubernetes', 'helm', 'jira',
                     'elasticsearch', 'jenkins', 'kibana', 'fluentBit', 'fluentD', 'docker',
@@ -255,7 +255,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-lohika-2-responsibilities"
                 />
                 <JobTechnologies
-                  key="lohika-2"
+                  keyPrefix="lohika-2"
                   names={[
                     'java', 'spring', 'maven', 'javaScript', 'angular', 'mssql',
                     'oracle', 'svn', 'git', 'intellijIdea', 'hpeAlm', 'jenkins'
@@ -287,7 +287,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-lohika-1-responsibilities"
                 />
                 <JobTechnologies
-                  key="lohika-1"
+                  keyPrefix="lohika-1"
                   names={['csharp', 'windowsForms', 'svn', 'visualStudio', 'hpeAlm', 'jenkins']}
                 />
               </div>
@@ -316,7 +316,7 @@ export default function ExperienceMain() {
                   i18nKeyPrefix="business-card-experience-job-arka-responsibilities"
                 />
                 <JobTechnologies
-                  key="arka"
+                  keyPrefix="arka"
                   names={[
                     'php', 'codeigniter', 'vBulletin', 'oxidEShop', 'smarty', 'javaScript', 'jQuery',
                     'csharp', 'silverlight', 'mysql', 'svn', 'visualStudio', 'netBeans', 'redmine'

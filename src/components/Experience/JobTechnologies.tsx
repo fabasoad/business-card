@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next'
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
 
 interface JobTechnologiesProps {
-  key: string
+  keyPrefix: string
   names: string[]
 }
 
 const JobTechnologies: React.FunctionComponent<JobTechnologiesProps> =
-  ({ key, names }) => {
+  ({ keyPrefix, names }) => {
     const technologyStorage = new TechnologyStorage()
     const { t } = useTranslation()
     return (
@@ -17,7 +17,7 @@ const JobTechnologies: React.FunctionComponent<JobTechnologiesProps> =
         {names
           .map((name) => technologyStorage.findByName(name))
           .map((t, i) => <img
-            key={`${key}-${t.name}-${i + 1}`}
+            key={`${keyPrefix}-${t.name}-${i + 1}`}
             src={t.img}
             alt={t.name}
             title={t.title}

@@ -11,7 +11,6 @@ import { testMenuItemRendered } from './TestUtils'
 const mockStore = configureMockStore()
 
 describe('MenuMain', () => {
-
   const fixture: string[] = []
 
   function resetFixture() {

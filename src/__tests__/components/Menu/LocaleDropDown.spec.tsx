@@ -6,6 +6,7 @@ import { render } from '@testing-library/react'
 
 import LocaleDropDown from '../../../components/Menu/LocaleDropDown'
 import SupportedLocales from '../../../scripts/SupportedLocales'
+import { testLocaleDropDown } from './TestUtils'
 
 const mockStore = configureMockStore()
 
@@ -17,12 +18,6 @@ for (const locale of SupportedLocales._items) {
         <LocaleDropDown />
       </Provider>
     )
-    const div = container.querySelector('div.dropdown')
-    expect(div).not.toBeNull()
-    const button = div.querySelector('button')
-    expect(button).toHaveClass('nav-link')
-    expect(button.querySelector(`span.flag-icon.flag-icon-${locale.code}`))
-      .not.toBeNull()
-    expect(button.querySelector('span.locale-title')).toHaveTextContent(locale.title)
+    testLocaleDropDown(container.querySelector('div.dropdown'), locale)
   })
 }

@@ -10,7 +10,7 @@ export default class SupportedLocales {
   static default: Locale = SupportedLocales._items[0]
 
   static find(code: string): Locale | undefined {
-    return SupportedLocales._items.find((l) => l.code === code)
+    return SupportedLocales._items.find((l: Locale) => l.code === code)
   }
 
   static getOrDefault(code: string): Locale {
@@ -18,6 +18,6 @@ export default class SupportedLocales {
   }
 
   static getExceptOf(code: string): Locale[] {
-    return SupportedLocales._items.filter((l) => l.code !== code)
+    return SupportedLocales._items.filter((l: Locale) => l.code !== code)
   }
 }

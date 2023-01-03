@@ -10,7 +10,7 @@ export function testJobDuration(
   fromYear: number,
   toMonthIndex?: number,
   toYear?: number
-) {
+): void {
   expect(div).toHaveTextContent(
     DateUtils.humanize(
       new Date(fromYear, fromMonthIndex),
@@ -28,7 +28,8 @@ export function testJobPeriod(
   fromMonthIndex: number,
   fromYear: number,
   toMonthIndex?: number,
-  toYear?: number) {
+  toYear?: number
+): void {
   expect(div).toHaveClass('timeline-image')
   testJobDuration(
     div.querySelector('div.job-duration'),
@@ -48,7 +49,7 @@ export function testJobPeriod(
   )
 }
 
-export function testJobResponsibilities(div: HTMLDivElement) {
+export function testJobResponsibilities(div: HTMLDivElement): void {
   expect(div.querySelector('h5'))
     .toHaveTextContent('business-card-experience-responsibilities-title')
   const ul = div.querySelector('ul.responsibilities')
@@ -59,7 +60,7 @@ export function testJobResponsibilities(div: HTMLDivElement) {
   expect(liElements[1]).toHaveTextContent('some-prefix-1-1')
 }
 
-export function testJobTechnologies(div: HTMLDivElement, technologies: string[]) {
+export function testJobTechnologies(div: HTMLDivElement, technologies: string[]): void {
   const technologyStorage = new TechnologyStorage()
   const techMap = new Map()
   for (const key of technologies) {
@@ -90,7 +91,7 @@ export function testJobTimeline(
   fromYear: number,
   toMonthIndex?: number,
   toYear?: number
-) {
+): void {
   expect(div).toHaveClass('col')
   const divRows = div.querySelectorAll('div.row')
   expect(divRows).toHaveLength(3)
@@ -106,7 +107,8 @@ export function testJobTimeline(
 }
 
 export function testJobTitle(
-  div: HTMLDivElement, logo: string, company: string, title: string, location: string) {
+  div: HTMLDivElement, logo: string, company: string, title: string, location: string
+): void {
   expect(div).toHaveClass('job-title')
   expect(div).toHaveClass('timeline-heading')
   const h4Logo = div.querySelector('h4:not(.subheading)')

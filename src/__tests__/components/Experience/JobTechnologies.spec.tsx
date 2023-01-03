@@ -6,8 +6,8 @@ import JobTechnologies from '../../../components/Experience/JobTechnologies'
 import { testJobTechnologies } from './TestUtils'
 
 test('should render JobTechnologies correctly', () => {
-  const technologies = ['maven', 'java'];
-  const { container } = render(<JobTechnologies keys={technologies} />)
+  const technologies = ['maven', 'java']
+  const { container } = render(<JobTechnologies keyPrefix="test" names={technologies} />)
   testJobTechnologies(
     container.querySelector('div.technologies'),
     technologies

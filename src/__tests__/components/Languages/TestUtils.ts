@@ -1,4 +1,4 @@
-export function testLanguageItem(div: HTMLDivElement, code: string) {
+export function testLanguageItem(div: HTMLDivElement, code: string): void {
   expect(div).toHaveClass('mb-4')
   expect(div).toHaveClass('mx-4')
   const span = div.querySelector('span')
@@ -8,7 +8,9 @@ export function testLanguageItem(div: HTMLDivElement, code: string) {
   expect(span).toHaveClass('mx-auto')
 }
 
-export function testLanguageLinkItem(div: HTMLDivElement, code: string, url: string, text: string) {
+export function testLanguageLinkItem(
+  div: HTMLDivElement, code: string, url: string, text: string
+): void {
   testLanguageItem(div, code)
   const a = div.querySelector('a')
   expect(a).toHaveClass('h5')
@@ -19,7 +21,7 @@ export function testLanguageLinkItem(div: HTMLDivElement, code: string, url: str
   expect(a).toHaveTextContent(text)
 }
 
-export function testLanguageTextItem(div: HTMLDivElement, code: string, text: string) {
+export function testLanguageTextItem(div: HTMLDivElement, code: string, text: string): void {
   expect(div).toHaveTextContent(text)
   testLanguageItem(div, code)
 }

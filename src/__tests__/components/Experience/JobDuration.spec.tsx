@@ -10,10 +10,8 @@ import { testJobDuration } from './TestUtils'
 
 const mockStore = configureMockStore()
 
-for (const code of ['gb', 'jp', 'ua']) {
-  test(`[${code}] should render JobDuration correctly with from and to`, () => {
-    const locale = SupportedLocales.find(code)
-    expect(locale).not.toBeNull()
+for (const locale of SupportedLocales._items) {
+  test(`[${locale.code}] should render JobDuration correctly with from and to`, () => {
     const store = mockStore({ locale })
     const fromMonthIndex = 7
     const fromYear = 2018
@@ -31,7 +29,7 @@ for (const code of ['gb', 'jp', 'ua']) {
     )
     testJobDuration(
       container.querySelector('div.job-duration'),
-      code,
+      locale.code,
       fromMonthIndex,
       fromYear,
       toMonthIndex,
@@ -39,9 +37,7 @@ for (const code of ['gb', 'jp', 'ua']) {
     )
   })
 
-  test(`[${code}] should render JobDuration correctly with from only`, () => {
-    const locale = SupportedLocales.find(code)
-    expect(locale).not.toBeNull()
+  test(`[${locale.code}] should render JobDuration correctly with from only`, () => {
     const store = mockStore({ locale })
     const fromMonthIndex = 5
     const fromYear = 2017
@@ -55,7 +51,7 @@ for (const code of ['gb', 'jp', 'ua']) {
     )
     testJobDuration(
       container.querySelector('div.job-duration'),
-      code,
+      locale.code,
       fromMonthIndex,
       fromYear
     )

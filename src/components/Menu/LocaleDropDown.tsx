@@ -10,12 +10,12 @@ import { startSetLocale } from '../../store/locale/actions'
 import { AppActions, Locale } from '../../store/locale/types'
 
 interface LocaleDropDownProps {
-  getLocalesExceptOf?: (code: string) => Locale[]
 }
 
 type Props = LocaleDropDownProps & LinkDispatchProps & LinkStateProps
 
 export function LocaleDropDown(props: Props) {
+  console.log('LocaleDropDown rendering')
   const handleClick = (locale: Locale): void => {
     props.startSetLocale(locale)
   }
@@ -24,24 +24,25 @@ export function LocaleDropDown(props: Props) {
     <Dropdown>
       <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
         <FlagIcon code={props.locale.code} />
-        {props.locale.title}
+        <span className="locale-title">{props.locale.title}</span>
       </Dropdown.Toggle>
       <Dropdown.Menu>
-        {props.getLocalesExceptOf(props.locale.code).map((l: Locale) => {
+        {SupportedLocales.getExceptOf(props.locale.code).map((l: Locale) => {
           return (
-            <Dropdown.Item onClick={() => handleClick(l)} bsPrefix="nav-link" eventKey={l.code} key={l.code}>
+            <Dropdown.Item
+              onClick={() => handleClick(l)}
+              bsPrefix="nav-link"
+              eventKey={l.code}
+              key={`dropdown-item-${l.code}`}
+            >
               <FlagIcon code={l.code} />
-              {l.title}
+              <span className="locale-title">{l.title}</span>
             </Dropdown.Item>
           )
         })}
       </Dropdown.Menu>
     </Dropdown>
   )
-}
-
-LocaleDropDown.defaultProps = {
-  getLocalesExceptOf: SupportedLocales.getExceptOf
 }
 
 interface LinkStateProps {

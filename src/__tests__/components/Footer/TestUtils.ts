@@ -1,4 +1,4 @@
-export function testFooterContacts(div: HTMLDivElement) {
+export function testFooterContacts(div: HTMLDivElement): void {
   expect(div).toHaveClass('footer-contacts')
   const divFooters = div.querySelectorAll('div.col')
   expect(divFooters).toHaveLength(2)
@@ -6,14 +6,14 @@ export function testFooterContacts(div: HTMLDivElement) {
   testFooterEmail(divFooters[1] as HTMLDivElement)
 }
 
-export function testFooterEmail(div: HTMLDivElement) {
+export function testFooterEmail(div: HTMLDivElement): void {
   expect(div).toHaveAttribute('class', 'col')
   const i = div.querySelector('i');
   ['fa', 'fa-envelope', 'fa-2x'].forEach((c: string) => expect(i).toHaveClass(c))
   expect(div.querySelector('p')).toHaveTextContent('fabasoad@gmail.com')
 }
 
-export function testFooterInfo(div: HTMLDivElement) {
+export function testFooterInfo(div: HTMLDivElement): void {
   expect(div).toHaveClass('footer-info')
   const ul = div.querySelector('ul')
   expect(ul).toHaveAttribute('class', 'icon-list')
@@ -60,19 +60,17 @@ export function testFooterInfo(div: HTMLDivElement) {
       }
     }
   }
-  if (a || b || c) {
-    throw new Error('Test failed')
-  }
+  expect(a || b || c).toEqual(false)
 }
 
-export function testFooterLocation(div: HTMLDivElement) {
+export function testFooterLocation(div: HTMLDivElement): void {
   expect(div).toHaveAttribute('class', 'col')
   const i = div.querySelector('i');
   ['fa', 'fa-map-marker-alt', 'fa-2x'].forEach((c: string) => expect(i).toHaveClass(c))
   expect(div.querySelector('p')).toHaveTextContent('business-card-contact-city')
 }
 
-export function testFooterSocial(div: HTMLDivElement) {
+export function testFooterSocial(div: HTMLDivElement): void {
   const fixture = new Map<string, string>([
     ['https://twitter.com/fabasoad', 'fab fa-twitter fa-2x'],
     ['https://github.com/fabasoad', 'fab fa-github fa-2x'],
@@ -92,12 +90,9 @@ export function testFooterSocial(div: HTMLDivElement) {
     expect(a).toHaveAttribute('target', '_blank')
     expect(a).toHaveAttribute('rel', 'noopener noreferrer')
     const href = a.getAttribute('href')
-    if (fixture.has(href)) {
-      const i = a.querySelector('i')
-      expect(i).toHaveAttribute('class', fixture.get(href))
-      fixture.delete(href)
-    } else {
-      throw new Error(`'href' attribute does not match. expected - one of the [${Array.from(fixture.keys())}] values, actual - ${href}`)
-    }
+    expect(fixture.has(href)).toEqual(true)
+    const i = a.querySelector('i')
+    expect(i).toHaveAttribute('class', fixture.get(href))
+    fixture.delete(href)
   }
 }

@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 0
+          fetch-depth: 1
       - name: Get changelog
         id: changelog
         uses: simbo/changes-since-last-release-action@v1

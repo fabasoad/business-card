@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Col } from 'react-bootstrap'
 
 interface PortfolioItemProps {
   img: any
@@ -10,7 +11,7 @@ interface PortfolioItemProps {
 
 export default function PortfolioItem(props: PortfolioItemProps) {
   return (
-    <div className="col-sm-6 col-md-3 col-lg-3 web">
+    <Col sm={6} md={3} lg={3}>
       <div className="portfolio-item">
         <div className="hover-bg text-center">
           <a href={props.url} title={props.name} rel="noopener noreferrer" target="_blank">
@@ -23,6 +24,6 @@ export default function PortfolioItem(props: PortfolioItemProps) {
           </a>
         </div>
       </div>
-    </div>
+    </Col>
   )
 }

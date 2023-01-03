@@ -1,5 +1,6 @@
 /// <reference path='./PortfolioMain.d.ts' />
 import * as React from 'react'
+import {Container, Row} from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
 import PortfolioItem from './PortfolioItem'
@@ -26,12 +27,12 @@ export default function PortfolioMain() {
   const { t } = useTranslation()
   return (
     <div id="portfolio">
-      <div className="container">
+      <Container>
         <div className="section-title text-center center">
           <h2>{t('business-card-portfolio-title')}</h2>
           <hr />
         </div>
-        <div className="row">
+        <Row>
           <PortfolioItem
             url="https://markets.bitcoin.com/"
             name="Markets"
@@ -151,8 +152,8 @@ export default function PortfolioMain() {
             subtitle={t('business-card-portfolio-zakupki-subtitle')}
             img={imgArkaZakupki}
           />
-        </div>
-      </div>
+        </Row>
+      </Container>
     </div>
   )
 }

@@ -27,8 +27,6 @@ describe('MenuMain', () => {
 
   beforeEach(resetFixture)
 
-  afterEach(resetFixture)
-
   for (const locale of SupportedLocales._items) {
     test(`[${locale.code}] should render MenuMain correctly`, () => {
       const store = mockStore({ locale })

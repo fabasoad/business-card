@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { CertificateIssuer } from '../../scripts/certificates/types'
 import { Technology } from '../../scripts/technologies/types'
-import DateLocale from '../controls/DateLocale'
+import DateLocale from '../Controls/DateLocale'
 
 interface CertificateItemProps {
   id: string

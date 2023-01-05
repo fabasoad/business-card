@@ -7,6 +7,7 @@ import * as items from './items.json'
 import CertificateIssuerStorage
   from '../../scripts/certificates/CertificateIssuerStorage'
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
+import SectionTitle from '../Controls/SectionTitle'
 
 export default function CertificatesMain() {
   const { t } = useTranslation()
@@ -14,10 +15,7 @@ export default function CertificatesMain() {
   const technologyStorage = new TechnologyStorage()
   return (
     <div id="certificates" className="light-component">
-      <div className="section-title text-center center">
-        <h2>{t('business-card-certificates-title')}</h2>
-        <hr />
-      </div>
+      <SectionTitle>{t('business-card-certificates-title')}</SectionTitle>
       <Container>
         <Row xs={2} md={3} lg={5}>
           {items

@@ -134,7 +134,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'vsCode', img: imgVsCode, title: 'VS Code' },
     { name: 'webpack', img: imgWebpack, title: 'Webpack' },
     { name: 'windowsForms', img: imgWindowsForms, title: 'Windows Forms' },
-    { name: 'xamarin', img: imgXamarin, isSkill: true, title: 'Xamarin' }
+    { name: 'xamarin', img: imgXamarin, isSkill: false, title: 'Xamarin' }
   ).reduce((map, tech) => {
     map.set(tech.name, tech)
     return map

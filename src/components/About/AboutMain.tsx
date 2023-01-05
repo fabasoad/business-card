@@ -10,6 +10,7 @@ import TotalExperience, {
 } from '../../scripts/TotalExperience'
 import { AppState } from '../../store/configureStore'
 import { AppActions, Locale } from '../../store/locale/types'
+import SectionTitle from '../Controls/SectionTitle'
 
 interface AboutMeProps {
   totalExperience?: ITotalExperience
@@ -25,10 +26,7 @@ export function AboutMain({ totalExperience, locale }: Props) {
   return (
     <div id="about">
       <div className="container">
-        <div className="section-title text-center center">
-          <h2>{t('business-card-about-me-title')}</h2>
-          <hr />
-        </div>
+        <SectionTitle>{t('business-card-about-me-title')}</SectionTitle>
         <div className="row d-flex justify-content-center">
           <div className="about-photo col-md-12 d-flex justify-content-center">
             <img

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import * as imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
+import SectionTitle from './Controls/SectionTitle'
 
 interface BadgesProps {}
 
@@ -8,10 +9,9 @@ const Badges: React.FC<BadgesProps> = () => {
   const { t } = useTranslation()
   return (
     <div id="badges" className="light-component">
-      <div className="section-title text-center center">
-        <h2>{t('business-card-badges-title')}</h2>
-        <hr />
-      </div>
+      <SectionTitle>
+        {t('business-card-badges-title')}
+      </SectionTitle>
       <div className="container">
         <div className="row">
           <div className="col-sm col-md col-lg text-center">

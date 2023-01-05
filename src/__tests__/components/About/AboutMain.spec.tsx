@@ -5,17 +5,22 @@ import '@testing-library/jest-dom'
 import { Locale } from '../../../store/locale/types'
 import SupportedLocales from '../../../scripts/SupportedLocales'
 import { AboutMain } from '../../../components/About/AboutMain'
+import { testSectionTitle } from '../Controls/TestUtils'
 
 test('should render AboutMain correctly', () => {
   const humanizeMock = jest.fn((code: string) => `total-${code}`)
   const locale: Locale = SupportedLocales.default
 
-  render(<AboutMain locale={locale} totalExperience={{
-    humanize: humanizeMock
-  }} />)
+  const { container } = render(
+    <AboutMain locale={locale} totalExperience={{
+      humanize: humanizeMock
+    }} />
+  )
 
-  expect(screen.getByRole('heading', { level: 2 }))
-    .toHaveTextContent('business-card-about-me-title')
+  testSectionTitle(
+    container.querySelector('div.section-title'),
+    'business-card-about-me-title'
+  )
 
   for (let i = 1; i <= 18; i++) {
     const exp = expect(screen.queryByText(`business-card-about-me-general-list-item-${i}`))

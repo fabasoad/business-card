@@ -1,0 +1,81 @@
+export function testHeader(header: HTMLElement) {
+  function testButton(div: HTMLDivElement, href: string, text: string) {
+    const a = divHeaderText.querySelector(`a[href="${href}"]`)
+    expect(a).toHaveClass('btn')
+    expect(a).toHaveClass('btn-lg')
+    expect(a).toHaveClass('btn-primary')
+    expect(a).toHaveTextContent(text)
+  }
+  expect(header).toHaveClass('header')
+  const divHeaderText: HTMLDivElement = header.querySelector('div.header__text')
+  expect(divHeaderText.querySelector('h1')).not.toBeNull()
+  const h5 = divHeaderText.querySelector('h5')
+  expect(h5).toHaveClass('header__text-subtitle')
+  expect(h5).toHaveTextContent('business-card-header-occupation')
+  testButton(divHeaderText, '#about', 'business-card-header-about-me')
+  testButton(divHeaderText, '#portfolio', 'business-card-header-portfolio')
+}
+
+export function testResume(div: HTMLDivElement) {
+  expect(div).toHaveClass('light-component')
+  const divSectionTitle = div.querySelector('div.section-title')
+  expect(divSectionTitle).toHaveClass('text-center')
+  expect(divSectionTitle).toHaveClass('center')
+  expect(divSectionTitle.querySelector('h2'))
+  .toHaveTextContent('business-card-resume-title')
+  expect(divSectionTitle.querySelector('hr')).not.toBeNull()
+  const divContainer = div.querySelector('div.container')
+  const divCol = divContainer.querySelector('div.col')
+  expect(divCol).toHaveClass('text-center')
+  expect(divCol).toHaveTextContent('business-card-resume-message')
+}
+
+export function testSkills(div: HTMLDivElement) {
+  const expectedSkillsMap = new Map<string, string>([
+    ['aws', 'AWS'],
+    ['bootstrap', 'Bootstrap'],
+    ['concourseCI', 'Concourse CI'],
+    ['csharp', 'C#'],
+    ['docker', 'Docker'],
+    ['dotNetCore', '.NET Core'],
+    ['git', 'Git'],
+    ['gitHub', 'GitHub'],
+    ['gitHubActions', 'GitHub Actions'],
+    ['gitlab', 'GitLab'],
+    ['gitlabCi', 'GitLab CI'],
+    ['java', 'Java'],
+    ['javaScript', 'JavaScript'],
+    ['kubernetes', 'Kubernetes'],
+    ['maven', 'Maven'],
+    ['mongodb', 'MongoDB'],
+    ['python', 'Python'],
+    ['react', 'React'],
+    ['terraform', 'Terraform'],
+    ['travis', 'Travis CI'],
+    ['typeScript', 'TypeScript']
+  ])
+
+  expect(div).toHaveClass('light-component')
+  const divSectionTitle = div.querySelector('div.section-title')
+  expect(divSectionTitle).toHaveClass('text-center')
+  expect(divSectionTitle).toHaveClass('center')
+  expect(divSectionTitle.querySelector('h2'))
+  .toHaveTextContent('business-card-skills-title')
+  expect(divSectionTitle.querySelector('hr')).not.toBeNull()
+  const divContainer = div.querySelector('div.container')
+  const divRow = divContainer.querySelector('div.row')
+  const divSkillsList = divRow.querySelector('div.skills-list')
+  expect(divSkillsList).toHaveClass('col')
+  expect(divSkillsList).toHaveClass('text-center')
+  const imgElements = divSkillsList.querySelectorAll('img')
+  expect(imgElements).toHaveLength(21)
+  for (const img of imgElements) {
+    const alt = img.getAttribute('alt')
+    expect(expectedSkillsMap.has(alt)).toEqual(true)
+    expect(img).toHaveClass('m-4')
+    expect(img).toHaveAttribute('src', '[object Object]')
+    expect(img).toHaveAttribute('title', expectedSkillsMap.get(alt))
+    expectedSkillsMap.delete(alt)
+  }
+  expect(expectedSkillsMap.size).toEqual(0)
+}

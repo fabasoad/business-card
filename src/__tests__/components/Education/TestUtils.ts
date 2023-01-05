@@ -1,14 +1,14 @@
-import {Locale} from '../../../store/locale/types';
-import {testSectionTitle} from '../Controls/TestUtils';
+import { Locale } from '../../../store/locale/types'
+import { testSectionTitle } from '../Controls/TestUtils'
 
-type BuildTextFunction = (h4: HTMLHeadingElement) => void
+type TestHeadingFunction = (h4: HTMLHeadingElement) => void
 
 export function testEducationItem(
   container: HTMLElement,
   from: number,
   to: number,
   title: string,
-  testHeading: BuildTextFunction = (h4: HTMLHeadingElement) =>
+  testHeading: TestHeadingFunction = (h4: HTMLHeadingElement) =>
     expect(h4).toHaveTextContent(`${to}-${from}`)
 ): void {
   const h4DateLocaleElements = container.querySelectorAll('div.timeline-image h4')

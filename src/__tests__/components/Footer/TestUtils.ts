@@ -8,8 +8,10 @@ export function testFooterContacts(div: HTMLDivElement): void {
 
 export function testFooterEmail(div: HTMLDivElement): void {
   expect(div).toHaveAttribute('class', 'col')
-  const i = div.querySelector('i');
-  ['fa', 'fa-envelope', 'fa-2x'].forEach((c: string) => expect(i).toHaveClass(c))
+  const i = div.querySelector('i')
+  for (const c of ['fa', 'fa-envelope', 'fa-2x']) {
+    expect(i).toHaveClass(c)
+  }
   expect(div.querySelector('p')).toHaveTextContent('fabasoad@gmail.com')
 }
 
@@ -65,8 +67,10 @@ export function testFooterInfo(div: HTMLDivElement): void {
 
 export function testFooterLocation(div: HTMLDivElement): void {
   expect(div).toHaveAttribute('class', 'col')
-  const i = div.querySelector('i');
-  ['fa', 'fa-map-marker-alt', 'fa-2x'].forEach((c: string) => expect(i).toHaveClass(c))
+  const i = div.querySelector('i')
+  for (const c of ['fa', 'fa-map-marker-alt', 'fa-2x']) {
+    expect(i).toHaveClass(c)
+  }
   expect(div.querySelector('p')).toHaveTextContent('business-card-contact-city')
 }
 

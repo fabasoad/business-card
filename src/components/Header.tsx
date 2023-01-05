@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Trans, useTranslation } from 'react-i18next'
-import {Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap'
 
 export default function Header() {
   const { t } = useTranslation()

@@ -2,9 +2,10 @@ import '@testing-library/jest-dom'
 import * as React from 'react'
 import configureMockStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import CertificatesMain from '../../../components/Certificates/CertificatesMain'
+import { testSectionTitle } from '../Controls/TestUtils'
 
 const mockStore = configureMockStore()
 const store = mockStore({})
@@ -15,8 +16,10 @@ test('should render CertificatesMain correctly', () => {
       <CertificatesMain />
     </Provider>
   )
-  expect(screen.getByRole('heading', { level: 2 }))
-    .toHaveTextContent('business-card-certificates-title')
+  testSectionTitle(
+    container.querySelector('div.section-title'),
+    'business-card-certificates-title'
+  )
   const divCardElements = container.querySelectorAll('div.card')
   expect(divCardElements).toHaveLength(5)
   const divCardHeaderElements = container.querySelectorAll('div.card-header')

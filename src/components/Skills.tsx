@@ -3,6 +3,7 @@ import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 
 import TechnologyStorage from '../scripts/technologies/TechnologyStorage'
+import { Col, Container, Row } from 'react-bootstrap'
 
 export default function Skills() {
   const { t } = useTranslation()
@@ -13,9 +14,9 @@ export default function Skills() {
         <h2>{t('business-card-skills-title')}</h2>
         <hr />
       </div>
-      <div className="container">
-        <div className="row">
-          <div className="skills-list col text-center">
+      <Container>
+        <Row>
+          <Col className="skills-list text-center">
             {
               technologyStorage.findBySkill(true)
                 .map((t) => <img
@@ -26,9 +27,9 @@ export default function Skills() {
                   title={t.title}
                 />)
             }
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </div>
   )
 }

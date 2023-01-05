@@ -1,6 +1,6 @@
 import DateUtils from '../../../scripts/DateUtils'
 import { Locale } from '../../../store/locale/types'
-import { testDateLocale } from '../controls/TestUtils'
+import { testDateLocale } from '../Controls/TestUtils'
 import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
 
 export function testJobDuration(

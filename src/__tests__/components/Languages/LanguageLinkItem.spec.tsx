@@ -4,7 +4,7 @@ import { render } from '@testing-library/react'
 
 import LanguageLinkItem from '../../../components/Languages/LanguageLinkItem'
 import { testLanguageLinkItem } from './TestUtils'
-import SupportedLocales from '../../../scripts/SupportedLocales';
+import SupportedLocales from '../../../scripts/SupportedLocales'
 
 for (const { code } of SupportedLocales._items) {
   test(`[${code}] should render LanguageLinkItem correctly`, () => {

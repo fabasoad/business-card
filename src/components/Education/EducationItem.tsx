@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import DateLocale from '../controls/DateLocale'
+import DateLocale from '../Controls/DateLocale'
 
 interface EducationItemProps {
   from: number

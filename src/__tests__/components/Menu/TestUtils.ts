@@ -1,5 +1,5 @@
 import { Locale } from '../../../store/locale/types'
-import {fireEvent} from '@testing-library/react';
+import {fireEvent} from '@testing-library/react'
 
 export function testLocaleDropDown(div: HTMLDivElement, locale: Locale) {
   expect(div).toHaveClass('dropdown')
@@ -27,4 +27,41 @@ export function testMenuItemActive(
     })
   )
   expect(setActiveNavLinkMock).toBeCalledTimes(1)
+}
+
+export function testMenuMain(div: HTMLDivElement) {
+  const expected = [
+    'about',
+    'skills',
+    'experience',
+    'education',
+    'portfolio',
+    'resume',
+    'badges',
+    'contact'
+  ]
+  expect(div).toHaveClass('affix-top')
+  const nav = div.querySelector('nav')
+  expect(nav).toHaveClass('navbar')
+  expect(nav).toHaveClass('navbar-custom')
+  const a = nav.querySelector('a.navbar-brand')
+  expect(a).toHaveAttribute('href', '#header')
+  expect(a).toHaveTextContent('business-card-author-name')
+  const button = nav.querySelector('button.navbar-dark')
+  expect(button).toHaveAttribute('aria-controls', 'basic-navbar-nav')
+  expect(button).toHaveClass('collapsed')
+  const navbarCollapse = nav.querySelector('div#basic-navbar-nav')
+  expect(navbarCollapse).toHaveClass('navbar-collapse')
+  const navbarNav = navbarCollapse.querySelector('div.navbar-nav')
+  expect(navbarNav).not.toBeNull()
+  const navLinkElements = navbarNav.querySelectorAll('a.nav-link')
+  expect(navLinkElements).toHaveLength(8)
+  for (const navLink of navLinkElements) {
+    const actual = navLink.getAttribute('href')
+    const ind = expected.findIndex((v: string): boolean => `#${v}` === actual)
+    expect(ind).toBeGreaterThanOrEqual(0)
+    testMenuItemRendered(navLink as HTMLAnchorElement, expected[ind])
+    expected.splice(ind, 1)
+  }
+  expect(expected).toHaveLength(0)
 }

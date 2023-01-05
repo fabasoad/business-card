@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 import SupportedLocales from '../../../scripts/SupportedLocales'
-import { DateLocale } from '../../../components/controls/DateLocale'
+import { DateLocale } from '../../../components/Controls/DateLocale'
 import { testDateLocale } from './TestUtils'
 
 for (const locale of SupportedLocales._items) {

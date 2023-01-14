@@ -74,6 +74,20 @@ export function testFooterLocation(div: HTMLDivElement): void {
   expect(div.querySelector('p')).toHaveTextContent('business-card-contact-city')
 }
 
+export function testFooterMain(div: HTMLDivElement) {
+  expect(div).not.toBeNull()
+  const divContact = div.querySelector('div#contact')
+  expect(divContact).toHaveClass('container')
+  expect(divContact).toHaveClass('text-center')
+  const divTitle = divContact.querySelector('div.section-title.center')
+  expect(divTitle).not.toBeNull()
+  expect(divTitle.querySelector('h2')).toHaveTextContent('business-card-contact-title')
+  expect(divTitle.querySelector('hr')).not.toBeNull()
+  testFooterContacts(divContact.querySelector('div.footer-contacts'))
+  testFooterSocial(divContact.querySelector('div.footer-social'))
+  testFooterInfo(divContact.querySelector('div.footer-info'))
+}
+
 export function testFooterSocial(div: HTMLDivElement): void {
   const fixture = new Map<string, string>([
     ['https://twitter.com/fabasoad', 'fab fa-twitter fa-2x'],

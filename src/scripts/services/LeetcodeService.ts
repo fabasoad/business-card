@@ -27,12 +27,15 @@ export default class LeetcodeService {
   }
 
   public async getStats(): Promise<LeetcodeStats> {
-    if (this.state === State.NOT_STARTED || this.state === State.FAILED) {
+    if (this.state !== State.FINISHED && this.state !== State.STARTED) {
       this.state = State.STARTED
-      return fetch(`https://leetcode-stats-api.herokuapp.com/${LeetcodeService.LEETCODE_USERNAME}`)
+      this.stats = await fetch(`https://leetcode-stats-api.herokuapp.com/${LeetcodeService.LEETCODE_USERNAME}`)
         .then((resp) => resp.json())
-        .then(({ totalSolved, easySolved, mediumSolved, hardSolved }) => this.stats = {
-          totalSolved, easySolved, mediumSolved, hardSolved
+        .then(({ totalSolved, easySolved, mediumSolved, hardSolved }) => {
+          this.state = State.FINISHED
+          return {
+            totalSolved, easySolved, mediumSolved, hardSolved
+          }
         })
         .catch(() => {
           this.state = State.FAILED

@@ -1,40 +1,32 @@
 import State from '../../components/Stats/State';
+import RemoteService from './RemoteService';
 
-export default class StackOverflowService {
-  private static instance: StackOverflowService
+export default class StackOverflowService implements RemoteService<number> {
   private state: State = State.NOT_STARTED
   private reputation: number = 0
 
-  private constructor() {
-  }
+  private static STACKOVERFLOW_USER_ID = 215523
 
-  public static getInstance(): StackOverflowService {
-    if (!StackOverflowService.instance) {
-      StackOverflowService.instance = new StackOverflowService()
-    }
-    return StackOverflowService.instance
-  }
-
-  public async getReputation(): Promise<number> {
-    if (this.state === State.NOT_STARTED || this.state === State.FAILED) {
+  public async request(): Promise<number> {
+    if (this.state !== State.FINISHED && this.state !== State.STARTED) {
       this.state = State.STARTED
-      const userId: number = 215523;
-      return fetch(`https://api.stackexchange.com/2.3/users/${userId}/associated`)
+      this.reputation = await fetch(`https://api.stackexchange.com/2.3/users/${StackOverflowService.STACKOVERFLOW_USER_ID}/associated`)
         .then((resp) => resp.json())
         .then((data) => {
+          const siteName = 'Stack Overflow'
           for (let i = 0; i < data.items.length; i++) {
-            if (data.items[i]['site_name'] === 'Stack Overflow') {
-              this.reputation = data.items[i]['reputation']
+            if (data.items[i]['site_name'] === siteName) {
               this.state = State.FINISHED
-              return this.reputation
+              return data.items[i]['reputation']
             }
           }
+          throw new Error(`There is no "${siteName}" site name in response`)
         })
         .catch(() => {
           this.state = State.FAILED
           return this.reputation
         })
     }
-    return new Promise(() => this.reputation)
+    return Promise.resolve(this.reputation)
   }
 }

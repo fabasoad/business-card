@@ -10,7 +10,7 @@ export default function StatsLeetcode() {
     mediumSolved: 0,
     hardSolved: 0
   })
-  LeetcodeService.getInstance().getStats().then(setStats)
+  new LeetcodeService().request().then(setStats)
   return (
     <StatsCommon techName="leetcode" url="https://leetcode.com/fabasoad">
       ✔️ {stats.totalSolved}

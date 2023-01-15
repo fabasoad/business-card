@@ -1,5 +1,5 @@
 import * as React from 'react'
-import DateUtils from '../../scripts/DateUtils'
+import DateUtils from '../../scripts/utils/DateUtils'
 import { AppState } from '../../store/configureStore'
 import { ThunkDispatch } from 'redux-thunk'
 import { AppActions, Locale } from '../../store/locale/types'

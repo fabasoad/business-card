@@ -3,7 +3,7 @@ import * as React from 'react'
 import { render } from '@testing-library/react'
 
 import MenuItem from '../../../components/Menu/MenuItem'
-import StringUtils from '../../../scripts/StringUtils'
+import StringUtils from '../../../scripts/utils/StringUtils'
 import { testMenuItemActive, testMenuItemRendered } from './TestUtils'
 
 test('should render MenuItem correctly', () => {

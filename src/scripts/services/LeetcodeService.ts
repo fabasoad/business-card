@@ -1,4 +1,5 @@
 import State from '../../components/Stats/State'
+import RemoteService from './RemoteService';
 
 export interface LeetcodeStats {
   totalSolved: number
@@ -7,26 +8,13 @@ export interface LeetcodeStats {
   hardSolved: number
 }
 
-export type LeetcodeLoaded = (stats: LeetcodeStats) => void
-
-export default class LeetcodeService {
-  private static instance: LeetcodeService
+export default class LeetcodeService implements RemoteService<LeetcodeStats> {
   private state: State = State.NOT_STARTED
   private stats: LeetcodeStats
 
-  private static LEETCODE_USERNAME: string = 'fabasoad'
+  private static LEETCODE_USERNAME = 'fabasoad'
 
-  private constructor() {
-  }
-
-  public static getInstance(): LeetcodeService {
-    if (!LeetcodeService.instance) {
-      LeetcodeService.instance = new LeetcodeService()
-    }
-    return LeetcodeService.instance
-  }
-
-  public async getStats(): Promise<LeetcodeStats> {
+  public async request(): Promise<LeetcodeStats> {
     if (this.state !== State.FINISHED && this.state !== State.STARTED) {
       this.state = State.STARTED
       this.stats = await fetch(`https://leetcode-stats-api.herokuapp.com/${LeetcodeService.LEETCODE_USERNAME}`)

@@ -1,4 +1,4 @@
-import DateUtils from './DateUtils'
+import DateUtils from './utils/DateUtils'
 
 export interface ITotalExperience {
   humanize(code: string): string

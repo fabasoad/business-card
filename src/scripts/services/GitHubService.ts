@@ -1,39 +1,28 @@
 import {Octokit} from '@octokit/rest';
 import State from '../../components/Stats/State';
+import RemoteService from './RemoteService';
 
-export default class GitHubService {
-  private static instance: GitHubService
+export default class GitHubService implements RemoteService<number> {
   private state: State = State.NOT_STARTED
   private starsAmount: number = 0
 
-  private static GITHUB_USERNAME: string = 'fabasoad'
+  private static GITHUB_USERNAME = 'fabasoad'
 
-  private constructor() {
-  }
-
-  public static getInstance(): GitHubService {
-    if (!GitHubService.instance) {
-      GitHubService.instance = new GitHubService()
-    }
-    return GitHubService.instance
-  }
-
-  public async getTotalStarsAmount(): Promise<number> {
+  public async request(): Promise<number> {
     if (this.state == State.NOT_STARTED) {
       this.state = State.STARTED
       const octokit: Octokit = new Octokit();
-      return octokit.rest.repos.listForUser({
+      this.starsAmount = await octokit.rest.repos.listForUser({
         username: GitHubService.GITHUB_USERNAME
-      }).then(({data}) => {
+      }).then(({ data }) => {
         let res: number = 0
         for (let i = 0; i < data.length; i++) {
           res += data[i]['stargazers_count']
         }
         this.state = State.FINISHED
-        this.starsAmount = res
         return res
       })
     }
-    return new Promise(() => this.starsAmount)
+    return Promise.resolve(this.starsAmount)
   }
 }

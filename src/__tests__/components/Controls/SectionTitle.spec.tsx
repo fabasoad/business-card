@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 
 import { testSectionTitle } from './TestUtils'
 import SectionTitle from '../../../components/Controls/SectionTitle'
-import StringUtils from '../../../scripts/StringUtils'
+import StringUtils from '../../../scripts/utils/StringUtils'
 
 test('should render SectionTitle correctly', () => {
   const title = StringUtils.random(10)

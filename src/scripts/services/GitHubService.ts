@@ -1,6 +1,6 @@
-import {Octokit} from '@octokit/rest';
-import State from '../../components/Stats/State';
-import RemoteService from './RemoteService';
+import { Octokit } from '@octokit/rest'
+import State from '../../components/Stats/State'
+import RemoteService from './RemoteService'
 
 export default class GitHubService implements RemoteService<number> {
   private state: State = State.NOT_STARTED

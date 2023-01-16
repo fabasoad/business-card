@@ -1,5 +1,5 @@
 import State from '../../components/Stats/State'
-import RemoteService from './RemoteService';
+import RemoteService from './RemoteService'
 
 export interface LeetcodeStats {
   totalSolved: number

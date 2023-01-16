@@ -1,5 +1,5 @@
-import State from '../../components/Stats/State';
-import RemoteService from './RemoteService';
+import State from '../../components/Stats/State'
+import RemoteService from './RemoteService'
 
 export default class StackOverflowService implements RemoteService<number> {
   private state: State = State.NOT_STARTED

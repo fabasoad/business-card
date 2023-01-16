@@ -8,7 +8,9 @@ exports[`should render App with gb locale correctly 1`] = `
   <Header />
   <MenuMain />
   <Connect(AboutMain) />
-  <StatsMain />
+  <StatsMain
+    autoload={true}
+  />
   <Resume />
   <Skills />
   <ExperienceMain />
@@ -29,7 +31,9 @@ exports[`should render App with jp locale correctly 1`] = `
   <Header />
   <MenuMain />
   <Connect(AboutMain) />
-  <StatsMain />
+  <StatsMain
+    autoload={true}
+  />
   <Resume />
   <Skills />
   <ExperienceMain />

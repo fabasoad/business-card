@@ -19,6 +19,7 @@ import Skills from './Skills'
 import StatsMain from './Stats/StatsMain'
 
 interface AppProps {
+  autoload?: boolean
 }
 
 type Props = AppProps & LinkDispatchProps & LinkStateProps
@@ -30,7 +31,7 @@ export function App(props: Props) {
       <Header />
       <MenuMain />
       <AboutMain />
-      <StatsMain />
+      <StatsMain autoload={props.autoload} />
       <Resume />
       <Skills />
       <ExperienceMain />

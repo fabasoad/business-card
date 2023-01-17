@@ -15,7 +15,6 @@ interface LocaleDropDownProps {
 type Props = LocaleDropDownProps & LinkDispatchProps & LinkStateProps
 
 export function LocaleDropDown(props: Props) {
-  console.log('LocaleDropDown rendering')
   const handleClick = (locale: Locale): void => {
     props.startSetLocale(locale)
   }

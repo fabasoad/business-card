@@ -1,9 +1,7 @@
 import * as React from 'react'
 
-import LeetcodeService, { LeetcodeStats } from '../../scripts/services/LeetcodeService';
-import StatsCommon from './StatsCommon';
-import StatsGitHub, {StatsGitHubProps} from './StatsGitHub';
-import {useEffect} from 'react';
+import LeetcodeService, { LeetcodeStats } from '../../scripts/services/LeetcodeService'
+import StatsCommon from './StatsCommon'
 
 export interface StatsLeetcodeProps {
   autoload?: boolean
@@ -17,7 +15,7 @@ const StatsLeetcode: React.FC<React.PropsWithChildren<StatsLeetcodeProps>> =
       mediumSolved: 0,
       hardSolved: 0
     })
-    useEffect(() => {
+    React.useEffect(() => {
       if (autoload) {
         new LeetcodeService().request().then(setStats)
       }

@@ -1,5 +1,9 @@
 import { testSectionTitle } from './Controls/TestUtils'
 
+export function testBackToTopButton(a: HTMLAnchorElement) {
+  expect(a).toHaveClass('back-to-top')
+}
+
 export function testBadges(div: HTMLDivElement) {
   expect(div).toHaveClass('light-component')
   testSectionTitle(

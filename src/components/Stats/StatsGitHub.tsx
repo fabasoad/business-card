@@ -2,7 +2,6 @@ import * as React from 'react'
 
 import GitHubService from '../../scripts/services/GitHubService'
 import StatsCommon from './StatsCommon'
-import {useEffect} from 'react';
 
 export interface StatsGitHubProps {
   autoload?: boolean
@@ -11,7 +10,7 @@ export interface StatsGitHubProps {
 const StatsGitHub: React.FC<React.PropsWithChildren<StatsGitHubProps>> =
   ({ autoload }) => {
     const [stars, setStars] = React.useState<number>(0)
-    useEffect(() => {
+    React.useEffect(() => {
       if (autoload) {
         new GitHubService().request().then(setStars)
       }

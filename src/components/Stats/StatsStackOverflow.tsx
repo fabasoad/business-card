@@ -2,7 +2,6 @@ import * as React from 'react'
 
 import StackOverflowService from '../../scripts/services/StackOverflowService'
 import StatsCommon from './StatsCommon'
-import {useEffect} from 'react';
 
 export interface StatsStackOverflowProps {
   autoload?: boolean
@@ -11,7 +10,7 @@ export interface StatsStackOverflowProps {
 const StatsStackOverflow: React.FC<React.PropsWithChildren<StatsStackOverflowProps>> =
   ({ autoload }) => {
     const [reputation, setReputation] = React.useState<number>(0)
-    useEffect(() => {
+    React.useEffect(() => {
       if (autoload) {
         new StackOverflowService().request().then(setReputation)
       }

@@ -12,7 +12,7 @@ interface App404Props {
 
 type Props = App404Props & LinkDispatchProps & LinkStateProps
 
-export function App404(props: Props) {
+function App404(props: Props) {
   const { t } = useTranslation()
 
   // eslint-disable-next-line no-undef

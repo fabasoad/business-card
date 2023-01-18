@@ -13,6 +13,6 @@ test('should render LoadingSpinner correctly', () => {
   const divElements = divSpinner.querySelectorAll('div')
   expect(divElements).toHaveLength(12)
   for (const divElement of divElements) {
-    expect(divElement).toBeEmpty()
+    expect(divElement).toBeEmptyDOMElement()
   }
 })

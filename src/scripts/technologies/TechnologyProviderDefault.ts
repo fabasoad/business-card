@@ -97,7 +97,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'jenkins', img: imgJenkins, title: 'Jenkins' },
     { name: 'jira', img: imgJira, title: 'Jira' },
     { name: 'junit', img: imgJunit, title: 'jUnit' },
-    { name: 'kafka', img: imgKafka, title: ''},
+    { name: 'kafka', img: imgKafka, title: 'Kafka'},
     { name: 'kibana', img: imgKibana, title: 'Kibana' },
     { name: 'kubernetes', img: imgKubernetes, isSkill: true, title: 'Kubernetes' },
     { name: 'leetcode', img: imgLeetcode, title: 'Leetcode' },
@@ -115,7 +115,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'prism', img: imgPrism, title: 'Prism' },
     { name: 'prometheus', img: imgPrometheus, title: 'Prometheus' },
     { name: 'python', img: imgPython, isSkill: true, title: 'Python' },
-    { name: 'quarkus', img: imgQuarkus, title: 'Quarkus' },
+    { name: 'quarkus', img: imgQuarkus, isSkill: true, title: 'Quarkus' },
     { name: 'react', img: imgReact, isSkill: true, title: 'React' },
     { name: 'redis', img: imgRedis, title: 'Redis' },
     { name: 'redmine', img: imgRedmine, title: 'Redmine' },
@@ -134,7 +134,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'vsCode', img: imgVsCode, title: 'VS Code' },
     { name: 'webpack', img: imgWebpack, title: 'Webpack' },
     { name: 'windowsForms', img: imgWindowsForms, title: 'Windows Forms' },
-    { name: 'xamarin', img: imgXamarin, isSkill: false, title: 'Xamarin' }
+    { name: 'xamarin', img: imgXamarin, title: 'Xamarin' }
   ).reduce((map, tech) => {
     map.set(tech.name, tech)
     return map

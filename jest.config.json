@@ -26,12 +26,6 @@
   "setupFiles": [
     "raf/polyfill"
   ],
-  "setupFilesAfterEnv": [
-    "<rootDir>/src/__tests__/setupTests.ts"
-  ],
-  "snapshotSerializers": [
-    "enzyme-to-json/serializer"
-  ],
   "testPathIgnorePatterns": [
     ".*/TestUtils.spec.ts"
   ],

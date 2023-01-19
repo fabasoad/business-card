@@ -79,6 +79,7 @@ export function testSkills(div: HTMLDivElement) {
     ['maven', 'Maven'],
     ['mongodb', 'MongoDB'],
     ['python', 'Python'],
+    ['quarkus', 'Quarkus'],
     ['react', 'React'],
     ['terraform', 'Terraform'],
     ['travis', 'Travis CI'],
@@ -98,7 +99,7 @@ export function testSkills(div: HTMLDivElement) {
   expect(divSkillsList).toHaveClass('col')
   expect(divSkillsList).toHaveClass('text-center')
   const imgElements = divSkillsList.querySelectorAll('img')
-  expect(imgElements).toHaveLength(21)
+  expect(imgElements).toHaveLength(expectedSkillsMap.size)
   for (const img of imgElements) {
     const alt = img.getAttribute('alt')
     expect(expectedSkillsMap.has(alt)).toEqual(true)

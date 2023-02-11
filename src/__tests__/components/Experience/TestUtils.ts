@@ -1,6 +1,5 @@
-import DateUtils from '../../../scripts/utils/DateUtils'
 import { Locale } from '../../../store/locale/types'
-import { testDateLocale } from '../Controls/TestUtils'
+import { testDateDuration, testDateTimeline } from '../Controls/TestUtils'
 import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
 
 export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
@@ -160,7 +159,7 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   const divSectionTitle = divContainer.querySelector('div.section-title')
   expect(divSectionTitle).toHaveClass('text-center')
   expect(divSectionTitle.querySelector('h2'))
-  .toHaveTextContent('business-card-experience-title')
+    .toHaveTextContent('business-card-experience-title')
   expect(divSectionTitle.querySelector('hr')).not.toBeNull()
   const ulTimeline = divContainer.querySelector('ul.timeline')
   const liNormal = ulTimeline.querySelectorAll('li:not(.timeline-inverted)')
@@ -179,25 +178,6 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   }
 }
 
-export function testJobDuration(
-  div: HTMLDivElement,
-  code: string,
-  fromMonthIndex: number,
-  fromYear: number,
-  toMonthIndex?: number,
-  toYear?: number
-): void {
-  expect(div).toHaveTextContent(
-    DateUtils.humanize(
-      new Date(fromYear, fromMonthIndex),
-      !toYear || toMonthIndex == undefined
-        ? new Date()
-        : new Date(toYear, toMonthIndex),
-      code
-    )
-  )
-}
-
 export function testJobPeriod(
   div: HTMLDivElement,
   locale: Locale,
@@ -207,16 +187,16 @@ export function testJobPeriod(
   toYear?: number
 ): void {
   expect(div).toHaveClass('timeline-image')
-  testJobDuration(
-    div.querySelector('div.job-duration'),
+  testDateDuration(
+    div.querySelector('div.controls__date-duration'),
     locale.code,
     fromMonthIndex,
     fromYear,
     toMonthIndex,
     toYear
   )
-  testJobTimeline(
-    div.querySelector('div.job-timeline'),
+  testDateTimeline(
+    div.querySelector('div.controls__date-timeline'),
     locale,
     fromMonthIndex,
     fromYear,
@@ -258,28 +238,6 @@ export function testJobTechnologies(div: HTMLDivElement, technologies: string[])
     techMap.delete(name)
   }
   expect(techMap.size).toEqual(0)
-}
-
-export function testJobTimeline(
-  div: HTMLDivElement,
-  locale: Locale,
-  fromMonthIndex: number,
-  fromYear: number,
-  toMonthIndex?: number,
-  toYear?: number
-): void {
-  expect(div).toHaveClass('col')
-  const divRows = div.querySelectorAll('div.row')
-  expect(divRows).toHaveLength(3)
-  const divDateTo = divRows[0] as HTMLElement
-  if (toYear && toMonthIndex != undefined) {
-    testDateLocale(divDateTo, locale, toYear, toMonthIndex)
-  } else {
-    expect(divDateTo).toHaveTextContent('business-card-experience-present')
-  }
-  expect(divRows[1]).toHaveTextContent('-')
-  const divDateFrom = divRows[2] as HTMLElement
-  testDateLocale(divDateFrom, locale, fromYear, fromMonthIndex)
 }
 
 export function testJobTitle(

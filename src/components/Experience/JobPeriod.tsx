@@ -1,6 +1,6 @@
 import * as React from 'react'
-import JobDuration from './JobDuration'
-import JobTimeline from './JobTimeline';
+import DateDuration from '../Controls/DateDuration'
+import DateTimeline from '../Controls/DateTimeline'
 
 interface JobPeriodProps {
   fromMonthIndex: number
@@ -13,13 +13,13 @@ const JobPeriod: React.FunctionComponent<JobPeriodProps> =
   ({ fromMonthIndex, fromYear, toMonthIndex, toYear }) => {
     return (
       <div className="timeline-image">
-        <JobDuration
+        <DateDuration
           fromMonthIndex={fromMonthIndex}
           fromYear={fromYear}
           toMonthIndex={toMonthIndex}
           toYear={toYear}
         />
-        <JobTimeline
+        <DateTimeline
           fromMonthIndex={fromMonthIndex}
           fromYear={fromYear}
           toMonthIndex={toMonthIndex}

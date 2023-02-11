@@ -1,4 +1,24 @@
 import { Locale } from '../../../store/locale/types'
+import DateUtils from '../../../scripts/utils/DateUtils'
+
+export function testDateDuration(
+  div: HTMLDivElement,
+  code: string,
+  fromMonthIndex: number,
+  fromYear: number,
+  toMonthIndex?: number,
+  toYear?: number
+): void {
+  expect(div).toHaveTextContent(
+    DateUtils.humanize(
+      new Date(fromYear, fromMonthIndex),
+      !toYear || toMonthIndex == undefined
+        ? new Date()
+        : new Date(toYear, toMonthIndex),
+      code
+    )
+  )
+}
 
 export function testDateLocale(
   container: HTMLElement, { code }: Locale, year: number, monthIndex?: number
@@ -20,6 +40,28 @@ export function testDateLocale(
       throw new Error(`${code} locale is not covered by tests`)
   }
   expect(container).toHaveTextContent(expectedText)
+}
+
+export function testDateTimeline(
+  div: HTMLDivElement,
+  locale: Locale,
+  fromMonthIndex: number,
+  fromYear: number,
+  toMonthIndex?: number,
+  toYear?: number
+): void {
+  expect(div).toHaveClass('col')
+  const divRows = div.querySelectorAll('div.row')
+  expect(divRows).toHaveLength(3)
+  const divDateTo = divRows[0] as HTMLElement
+  if (toYear && toMonthIndex != undefined) {
+    testDateLocale(divDateTo, locale, toYear, toMonthIndex)
+  } else {
+    expect(divDateTo).toHaveTextContent('business-card-experience-present')
+  }
+  expect(divRows[1]).toHaveTextContent('-')
+  const divDateFrom = divRows[2] as HTMLElement
+  testDateLocale(divDateFrom, locale, fromYear, fromMonthIndex)
 }
 
 export function testSectionTitle(div: HTMLDivElement, title: string) {

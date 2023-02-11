@@ -4,14 +4,14 @@ import configureMockStore from 'redux-mock-store'
 import { Provider } from 'react-redux'
 import { render } from '@testing-library/react'
 
-import JobDuration from '../../../components/Experience/JobDuration'
 import SupportedLocales from '../../../scripts/SupportedLocales'
-import { testJobDuration } from './TestUtils'
+import { testDateDuration } from './TestUtils'
+import DateDuration from '../../../components/Controls/DateDuration'
 
 const mockStore = configureMockStore()
 
 for (const locale of SupportedLocales._items) {
-  test(`[${locale.code}] should render JobDuration correctly with from and to`, () => {
+  test(`[${locale.code}] should render DateDuration correctly with from and to`, () => {
     const store = mockStore({ locale })
     const fromMonthIndex = 7
     const fromYear = 2018
@@ -19,7 +19,7 @@ for (const locale of SupportedLocales._items) {
     const toYear = 2022
     const { container } = render(
       <Provider store={store}>
-        <JobDuration
+        <DateDuration
           fromMonthIndex={fromMonthIndex}
           fromYear={fromYear}
           toMonthIndex={toMonthIndex}
@@ -27,8 +27,8 @@ for (const locale of SupportedLocales._items) {
         />
       </Provider>
     )
-    testJobDuration(
-      container.querySelector('div.job-duration'),
+    testDateDuration(
+      container.querySelector('div.controls__date-duration'),
       locale.code,
       fromMonthIndex,
       fromYear,
@@ -37,20 +37,20 @@ for (const locale of SupportedLocales._items) {
     )
   })
 
-  test(`[${locale.code}] should render JobDuration correctly with from only`, () => {
+  test(`[${locale.code}] should render DateDuration correctly with from only`, () => {
     const store = mockStore({ locale })
     const fromMonthIndex = 5
     const fromYear = 2017
     const { container } = render(
       <Provider store={store}>
-        <JobDuration
+        <DateDuration
           fromMonthIndex={fromMonthIndex}
           fromYear={fromYear}
         />
       </Provider>
     )
-    testJobDuration(
-      container.querySelector('div.job-duration'),
+    testDateDuration(
+      container.querySelector('div.controls__date-duration'),
       locale.code,
       fromMonthIndex,
       fromYear

@@ -3,15 +3,15 @@ import * as React from 'react'
 import configureMockStore from 'redux-mock-store'
 import { render } from '@testing-library/react'
 
-import JobTimeline from '../../../components/Experience/JobTimeline'
+import DateTimeline from '../../../components/Controls/DateTimeline'
 import SupportedLocales from '../../../scripts/SupportedLocales'
 import { Provider } from 'react-redux'
-import { testJobTimeline } from './TestUtils'
+import { testDateTimeline } from './TestUtils'
 
 const mockStore = configureMockStore()
 
 for (const locale of SupportedLocales._items) {
-  test(`[${locale.code}] should render JobTimeline correctly with from and to`, () => {
+  test(`[${locale.code}] should render DateTimeline correctly with from and to`, () => {
     const store = mockStore({ locale })
     const fromMonthIndex = 6
     const fromYear = 2017
@@ -19,7 +19,7 @@ for (const locale of SupportedLocales._items) {
     const toYear = 2021
     const { container } = render(
       <Provider store={store}>
-        <JobTimeline
+        <DateTimeline
           fromMonthIndex={fromMonthIndex}
           fromYear={fromYear}
           toMonthIndex={toMonthIndex}
@@ -27,8 +27,8 @@ for (const locale of SupportedLocales._items) {
         />
       </Provider>
     )
-    testJobTimeline(
-      container.querySelector('div.job-timeline'),
+    testDateTimeline(
+      container.querySelector('div.controls__date-timeline'),
       locale,
       fromMonthIndex,
       fromYear,
@@ -37,20 +37,20 @@ for (const locale of SupportedLocales._items) {
     )
   })
 
-  test(`[${locale.code}] should render JobTimeline correctly with from`, () => {
+  test(`[${locale.code}] should render DateTimeline correctly with from`, () => {
     const store = mockStore({ locale })
     const fromMonthIndex = 6
     const fromYear = 2017
     const { container } = render(
       <Provider store={store}>
-        <JobTimeline
+        <DateTimeline
           fromMonthIndex={fromMonthIndex}
           fromYear={fromYear}
         />
       </Provider>
     )
-    testJobTimeline(
-      container.querySelector('div.job-timeline'),
+    testDateTimeline(
+      container.querySelector('div.controls__date-timeline'),
       locale,
       fromMonthIndex,
       fromYear

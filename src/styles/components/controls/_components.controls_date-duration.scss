@@ -1,4 +1,4 @@
-.job-duration {
+.controls__date-duration {
   color: $orange;
   position: absolute;
   text-align: center;
@@ -7,21 +7,15 @@
   margin-top: 0.6rem;
   width: 100%;
   font-size: 0.3rem;
-}
-@media (min-width: $small-desktop-breakpoint) {
-  .job-duration {
+  @media (min-width: $small-desktop-breakpoint) {
     margin-top: 0.6rem;
     font-size: 0.4rem;
   }
-}
-@media (min-width: $small-desktop-breakpoint) {
-  .job-duration {
+  @media (min-width: $desktop-breakpoint) {
     margin-top: 0.9rem;
     font-size: 0.6rem;
   }
-}
-@media (min-width: 1200px) {
-  .job-duration {
+  @media (min-width: $tv-breakpoint) {
     margin-top: 1.4rem;
     font-size: 0.7rem;
   }

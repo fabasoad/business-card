@@ -12,12 +12,12 @@ export default class LeetcodeService implements RemoteService<LeetcodeStats> {
   private state: State = State.NOT_STARTED
   private stats: LeetcodeStats
 
-  private static LEETCODE_USERNAME = 'fabasoad'
+  private static LEETCODE_URL = 'https://leetcodestats.cyclic.app/fabasoad'
 
   public async request(): Promise<LeetcodeStats> {
     if (this.state !== State.FINISHED && this.state !== State.STARTED) {
       this.state = State.STARTED
-      this.stats = await fetch(`https://leetcode-stats-api.herokuapp.com/${LeetcodeService.LEETCODE_USERNAME}`)
+      this.stats = await fetch(LeetcodeService.LEETCODE_URL)
         .then((resp) => resp.json())
         .then(({ totalSolved, easySolved, mediumSolved, hardSolved }) => {
           this.state = State.FINISHED

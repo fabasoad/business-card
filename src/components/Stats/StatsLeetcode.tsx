@@ -10,10 +10,10 @@ export interface StatsLeetcodeProps {
 const StatsLeetcode: React.FC<React.PropsWithChildren<StatsLeetcodeProps>> =
   ({ autoload }) => {
     const [stats, setStats] = React.useState<LeetcodeStats>({
-      totalSolved: 180,
-      easySolved: 0,
-      mediumSolved: 0,
-      hardSolved: 0
+      totalSolved: 184,
+      easySolved: 90,
+      mediumSolved: 91,
+      hardSolved: 3
     })
     // React.useEffect(() => {
     //   if (autoload) {

@@ -25,7 +25,7 @@ jobs:
             ${{ runner.os }}-modules-
       - name: Compile
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
-        run: yarn install --ignore-scripts
+        run: yarn install
         shell: sh
       - name: Lint
         run: yarn run lint

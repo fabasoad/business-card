@@ -11,10 +11,19 @@
 
 # Project
 coverage
-node_modules/
 public/*
 !public/404.html
 !public/favicon.png
 !public/index.html
 !public/meta.png
+
+# yarn
+node_modules
 yarn-error.log
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

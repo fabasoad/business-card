@@ -27,6 +27,13 @@ repos:
         verbose: true
         stages: ["push"]
   # Security
+      - id: audit
+        name: Yarn audit
+        entry: yarn npm audit --all
+        language: system
+        pass_filenames: false
+        verbose: false
+        stages: ["push"]
   - repo: https://github.com/Yelp/detect-secrets
     rev: v1.4.0
     hooks:

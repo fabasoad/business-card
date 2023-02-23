@@ -1,5 +1,6 @@
 # My personal website
 
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://stand-with-ukraine.pp.ua)
 ![Unit Tests](https://github.com/fabasoad/business-card/workflows/Unit%20Tests/badge.svg)
 ![Security Tests](https://github.com/fabasoad/business-card/workflows/Security%20Tests/badge.svg)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/fabasoad/business-card/main.svg)](https://results.pre-commit.ci/latest/github/fabasoad/business-card/main)

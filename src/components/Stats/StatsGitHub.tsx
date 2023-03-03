@@ -1,29 +1,22 @@
 import * as React from 'react'
-
-import GitHubService from '../../scripts/services/GitHubService'
+import remoteService from '../../scripts/services/GitHubService'
 import StatsCommon from './StatsCommon'
+import { AutoloadProps } from '../Controls/AutoloadProps'
 
-export interface StatsGitHubProps {
-  autoload?: boolean
+export default function StatsGitHub({ autoload }: AutoloadProps) {
+  const [stars, setStars] = React.useState<number>(0)
+  React.useEffect(() => {
+    if (autoload) {
+      remoteService.request().then(setStars)
+    }
+  })
+  return (
+    <StatsCommon techName="gitHub" url="https://github.com/fabasoad">
+      ⭐️ {stars}
+    </StatsCommon>
+  )
 }
-
-const StatsGitHub: React.FC<React.PropsWithChildren<StatsGitHubProps>> =
-  ({ autoload }) => {
-    const [stars, setStars] = React.useState<number>(0)
-    React.useEffect(() => {
-      if (autoload) {
-        new GitHubService().request().then(setStars)
-      }
-    })
-    return (
-      <StatsCommon techName="gitHub" url="https://github.com/fabasoad">
-        ⭐️ {stars}
-      </StatsCommon>
-    )
-  }
 
 StatsGitHub.defaultProps = {
   autoload: true
 }
-
-export default StatsGitHub

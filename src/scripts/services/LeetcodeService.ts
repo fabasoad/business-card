@@ -8,7 +8,7 @@ export interface LeetcodeStats {
   hardSolved: number
 }
 
-export default class LeetcodeService implements RemoteService<LeetcodeStats> {
+class LeetcodeService implements RemoteService<LeetcodeStats> {
   private state: State = State.NOT_STARTED
   private stats: LeetcodeStats
 
@@ -33,3 +33,6 @@ export default class LeetcodeService implements RemoteService<LeetcodeStats> {
     return Promise.resolve(this.stats)
   }
 }
+
+const remoteService = new LeetcodeService()
+export default remoteService

@@ -9,24 +9,23 @@ interface JobPeriodProps {
   toYear?: number
 }
 
-const JobPeriod: React.FunctionComponent<JobPeriodProps> =
-  ({ fromMonthIndex, fromYear, toMonthIndex, toYear }) => {
-    return (
-      <div className="timeline-image">
-        <DateDuration
-          fromMonthIndex={fromMonthIndex}
-          fromYear={fromYear}
-          toMonthIndex={toMonthIndex}
-          toYear={toYear}
-        />
-        <DateTimeline
-          fromMonthIndex={fromMonthIndex}
-          fromYear={fromYear}
-          toMonthIndex={toMonthIndex}
-          toYear={toYear}
-        />
-      </div>
-    )
-  }
+function JobPeriod({ fromMonthIndex, fromYear, toMonthIndex, toYear }: JobPeriodProps) {
+  return (
+    <div className="timeline-image">
+      <DateDuration
+        fromMonthIndex={fromMonthIndex}
+        fromYear={fromYear}
+        toMonthIndex={toMonthIndex}
+        toYear={toYear}
+      />
+      <DateTimeline
+        fromMonthIndex={fromMonthIndex}
+        fromYear={fromYear}
+        toMonthIndex={toMonthIndex}
+        toYear={toYear}
+      />
+    </div>
+  )
+}
 
 export default JobPeriod

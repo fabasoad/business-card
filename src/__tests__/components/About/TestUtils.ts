@@ -1,4 +1,3 @@
-import { Locale } from '../../../store/locale/types'
 import { testSectionTitle } from '../Controls/TestUtils'
 
 export function testAboutMain(div: HTMLDivElement) {
@@ -11,7 +10,7 @@ export function testAboutMain(div: HTMLDivElement) {
   expect(divRow).toHaveClass('d-flex')
   expect(divRow).toHaveClass('justify-content-center')
   const divAboutPhoto = divRow.querySelector('div.about-photo')
-  expect(divAboutPhoto).toHaveClass('col-md-12')
+  expect(divAboutPhoto).toHaveClass('col-md')
   expect(divAboutPhoto).toHaveClass('d-flex')
   expect(divAboutPhoto).toHaveClass('justify-content-center')
   const imgElements = divAboutPhoto.querySelectorAll('img')
@@ -25,7 +24,7 @@ export function testAboutMain(div: HTMLDivElement) {
   expect(imgBadge).toHaveClass('about-photo--badge')
   expect(imgBadge).toHaveAttribute('src', '[object Object]')
   expect(imgBadge).toHaveAttribute('alt', 'Oracle 1Z0-808')
-  const divListItems = divRow.querySelector('div.col-md-8.col-md-offset-2')
+  const divListItems = divRow.querySelector('div.col-md-8.offset-md-2')
   expect(divListItems).not.toBeNull()
   const ul = divListItems.querySelector('ul')
   expect(ul).toHaveClass('mt-3')

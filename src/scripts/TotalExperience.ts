@@ -1,4 +1,4 @@
-import DateUtils from './utils/DateUtils'
+import { humanize } from './utils/DateUtils'
 
 export interface ITotalExperience {
   humanize(code: string): string
@@ -16,7 +16,7 @@ export default class TotalExperience implements ITotalExperience {
   }
 
   public humanize(code: string): string {
-    return DateUtils.humanize(
+    return humanize(
       TotalExperience.EXPERIENCE_START_DATE, this.endDateGenerator(), code)
   }
 }

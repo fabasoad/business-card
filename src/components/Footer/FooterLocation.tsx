@@ -1,12 +1,14 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
+import { withTranslation, WithTranslation } from 'react-i18next'
+import { Col } from 'react-bootstrap'
 
-export default function FooterLocation() {
-  const { t } = useTranslation()
+function FooterLocation({ t }: WithTranslation) {
   return (
-    <div className="col">
+    <Col>
       <i className="fa fa-map-marker-alt fa-2x"></i>
       <p>{t('business-card-contact-city')}</p>
-    </div>
+    </Col>
   )
 }
+
+export default withTranslation()(FooterLocation)

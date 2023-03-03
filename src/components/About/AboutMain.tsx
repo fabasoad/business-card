@@ -1,32 +1,19 @@
 /// <reference path='./AboutMain.d.ts' />
 import * as React from 'react'
-import { Trans, useTranslation } from 'react-i18next'
-import { connect } from 'react-redux'
-import { ThunkDispatch } from 'redux-thunk'
+import { Trans, withTranslation, WithTranslation } from 'react-i18next'
 import * as imgAboutMe from '../../assets/images/about_me.jpg'
 import * as img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
 import TotalExperience from '../../scripts/TotalExperience'
-import { AppState } from '../../store/configureStore'
-import { AppActions, Locale } from '../../store/locale/types'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 
-interface AboutMeProps {
-}
-
-type Props = AboutMeProps & LinkDispatchProps & LinkStateProps
-
-export function AboutMain({ locale }: Props) {
+function AboutMain({ t, i18n }: WithTranslation) {
   const totalExperience = new TotalExperience()
-  const generalListItem1Keys = {
-    totalExperience: totalExperience.humanize(locale.code)
-  }
-  const { t } = useTranslation()
   return (
     <Container id="about">
       <SectionTitle>{t('business-card-about-me-title')}</SectionTitle>
       <Row className="d-flex justify-content-center">
-        <Col md={12} className="about-photo d-flex justify-content-center">
+        <Col md className="about-photo d-flex justify-content-center">
           <img
             className="about-photo--portrait img-thumbnail"
             src={imgAboutMe}
@@ -38,12 +25,12 @@ export function AboutMain({ locale }: Props) {
             alt="Oracle 1Z0-808"
           />
         </Col>
-        <div className="col-md-8 col-md-offset-2">
+        <Col md={{ span: 8, offset: 2 }}>
           <ul className="mt-3">
             <li>
               {t(
                 'business-card-about-me-general-list-item-1',
-                generalListItem1Keys
+                { totalExperience: totalExperience.humanize(i18n.language) }
               )}
             </li>
             <li>{t('business-card-about-me-general-list-item-2')}</li>
@@ -71,33 +58,10 @@ export function AboutMain({ locale }: Props) {
             </li>
             <li>{t('business-card-about-me-general-list-item-17')}</li>
           </ul>
-        </div>
+        </Col>
       </Row>
     </Container>
   )
 }
 
-interface LinkStateProps {
-  locale: Locale
-}
-
-interface LinkDispatchProps {
-}
-
-const mapStateToProps = (
-  state: AppState,
-  ownProps: AboutMeProps
-): LinkStateProps => ({
-  locale: state.locale
-})
-
-const mapDispatchToProps = (
-  dispatch: ThunkDispatch<any, any, AppActions>,
-  ownProps: AboutMeProps
-): LinkDispatchProps => ({
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AboutMain)
+export default withTranslation()(AboutMain)

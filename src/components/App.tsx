@@ -1,8 +1,4 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
-import { ThunkDispatch } from 'redux-thunk'
-import { AppState } from '../store/configureStore'
-import { AppActions, Locale } from '../store/locale/types'
 import AboutMain from './About/AboutMain'
 import BackToTopButton from './BackToTopButton'
 import Badges from './Badges'
@@ -17,21 +13,17 @@ import PortfolioMain from './Portfolio/PortfolioMain'
 import Resume from './Resume'
 import Skills from './Skills'
 import StatsMain from './Stats/StatsMain'
+import { AutoloadProps } from './Controls/AutoloadProps'
+import { WithTranslation, withTranslation} from 'react-i18next'
 
-interface AppProps {
-  autoload?: boolean
-}
-
-type Props = AppProps & LinkDispatchProps & LinkStateProps
-
-export function App(props: Props) {
+export function App({ autoload, i18n }: WithTranslation & AutoloadProps) {
   return (
-    <div className={`font-regular font-${props.locale.code === 'jp' ? '' : 'non-'}jp`}>
+    <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
       <BackToTopButton />
       <Header />
       <MenuMain />
       <AboutMain />
-      <StatsMain autoload={props.autoload} />
+      <StatsMain autoload={autoload} />
       <Resume />
       <Skills />
       <ExperienceMain />
@@ -45,27 +37,8 @@ export function App(props: Props) {
   )
 }
 
-interface LinkStateProps {
-  locale: Locale
+App.defaultProps = {
+  autoload: true
 }
 
-interface LinkDispatchProps {
-}
-
-const mapStateToProps = (
-  state: AppState,
-  ownProps: AppProps
-): LinkStateProps => ({
-  locale: state.locale
-})
-
-const mapDispatchToProps = (
-  dispatch: ThunkDispatch<any, any, AppActions>,
-  ownProps: AppProps
-): LinkDispatchProps => ({
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App)
+export default withTranslation()(App)

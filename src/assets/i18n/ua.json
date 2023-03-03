@@ -1,5 +1,4 @@
 {
-	"business-card-404-text-1": "Ця сторінка не існує.",
 	"business-card-404-text-2": "on a screen to continue",
 	"business-card-404-text-3": "Перенаправлення...",
 	"business-card-badges-title": "Бейджі",
@@ -17,6 +16,7 @@
 	"business-card-version": "Версія {{version}}",
 	"business-card-year-plural": "років",
 	"business-card-year-singular": "рік",
+  "business-card-404-text-1": "Ця сторінка не існує.",
   "business-card-about-me-general-list-item-1": "{{totalExperience}} досвіду у комерційній розробці програмного забезпечення.",
   "business-card-about-me-general-list-item-10": "Великий досвід Java, C#, Python, GitHub Actions, AWS, CI/CD, TypeScript.",
   "business-card-about-me-general-list-item-11": "Написання клієнтської та внутрішньої документації.",

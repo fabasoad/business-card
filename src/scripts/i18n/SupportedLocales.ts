@@ -1,4 +1,4 @@
-import { Locale } from '../store/locale/types'
+import { Locale } from './types'
 
 export default class SupportedLocales {
   static _items: Locale[] = [

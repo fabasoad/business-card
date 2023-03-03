@@ -1,12 +1,12 @@
-import { Locale } from '../../../store/locale/types'
-import {fireEvent} from '@testing-library/react'
+import { Locale } from '../../../scripts/i18n/types'
+import { fireEvent } from '@testing-library/react'
 
 export function testLocaleDropDown(div: HTMLDivElement, locale: Locale) {
   expect(div).toHaveClass('dropdown')
   const button = div.querySelector('button')
   expect(button).toHaveClass('nav-link')
   expect(button.querySelector(`span.flag-icon.flag-icon-${locale.code}`))
-  .not.toBeNull()
+    .not.toBeNull()
   expect(button.querySelector('span.locale-title')).toHaveTextContent(locale.title)
 }
 

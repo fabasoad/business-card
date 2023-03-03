@@ -1,18 +1,14 @@
-import * as React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import App404 from './components/App404';
-import LoadingSpinner from './components/LoadingSpinner';
-import { store } from './store/configureStore';
-import { startLoadLocale } from './store/locale/actions';
-import './styles/style404.scss';
-
-store.dispatch(startLoadLocale())
+import './styles/style404.scss'
+import * as React from 'react'
+import App404 from './components/App404'
+import AppWrapper from './components/AppWrapper'
+import LoadingSpinner from './components/LoadingSpinner'
+import { createRoot } from 'react-dom/client'
 
 createRoot(document.getElementById('app')!).render(
   <React.Suspense fallback={<LoadingSpinner />}>
-    <Provider store={store}>
+    <AppWrapper>
       <App404 />
-    </Provider>
+    </AppWrapper>
   </React.Suspense>
 )

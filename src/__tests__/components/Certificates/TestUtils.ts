@@ -1,7 +1,7 @@
 import * as items from '../../../components/Certificates/items.json'
 import CertificateIssuerStorage from '../../../scripts/certificates/CertificateIssuerStorage'
 import { CertificateIssuer } from '../../../scripts/certificates/types'
-import { Locale } from '../../../store/locale/types'
+import { Locale } from '../../../scripts/i18n/types'
 import { testSectionTitle } from '../Controls/TestUtils'
 
 export function testCertificateItem(

@@ -1,9 +1,6 @@
 import * as React from 'react'
-import DateUtils from '../../scripts/utils/DateUtils'
-import { AppState } from '../../store/configureStore'
-import { ThunkDispatch } from 'redux-thunk'
-import { AppActions, Locale } from '../../store/locale/types'
-import { connect } from 'react-redux'
+import { humanize } from '../../scripts/utils/DateUtils'
+import { withTranslation, WithTranslation} from 'react-i18next'
 
 interface DateDurationProps {
   fromMonthIndex: number
@@ -12,20 +9,19 @@ interface DateDurationProps {
   toYear?: number
 }
 
-type Props = DateDurationProps & LinkDispatchProps & LinkStateProps
-
-const DateDuration: React.FunctionComponent<Props> =
-  ({ fromMonthIndex, fromYear, toMonthIndex, toYear, locale }) => {
-    const from = new Date(fromYear, fromMonthIndex)
-    const to = !toYear || toMonthIndex == undefined
-      ? new Date()
-      : new Date(toYear, toMonthIndex)
-    return (
-      <div className="controls__date-duration">
-        {DateUtils.humanize(from, to, locale.code)}
-      </div>
-    )
-  }
+function DateDuration(
+  { fromMonthIndex, fromYear, toMonthIndex, toYear, i18n }: WithTranslation & DateDurationProps
+) {
+  const from = new Date(fromYear, fromMonthIndex)
+  const to = !toYear || toMonthIndex == undefined
+    ? new Date()
+    : new Date(toYear, toMonthIndex)
+  return (
+    <div className="controls__date-duration">
+      {humanize(from, to, i18n.language)}
+    </div>
+  )
+}
 
 DateDuration.defaultProps = {
   fromMonthIndex: 0,
@@ -34,27 +30,4 @@ DateDuration.defaultProps = {
   toYear: null
 }
 
-interface LinkStateProps {
-  locale: Locale
-}
-
-interface LinkDispatchProps {
-}
-
-const mapStateToProps = (
-  state: AppState,
-  ownProps: DateDurationProps
-): LinkStateProps => ({
-  locale: state.locale
-})
-
-const mapDispatchToProps = (
-  dispatch: ThunkDispatch<any, any, AppActions>,
-  ownProps: DateDurationProps
-): LinkDispatchProps => ({
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(DateDuration)
+export default withTranslation()(DateDuration)

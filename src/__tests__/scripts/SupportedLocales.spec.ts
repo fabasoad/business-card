@@ -1,6 +1,6 @@
-import SupportedLocales from '../../scripts/SupportedLocales'
+import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 import fixture from '../fixtures/locales'
-import { Locale } from '../../store/locale/types'
+import { Locale } from '../../scripts/i18n/types'
 
 test('should return gb locale as default', () => {
   const locale: Locale = SupportedLocales.default

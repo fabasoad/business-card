@@ -1,35 +1,24 @@
 import * as React from 'react'
-import { Dropdown } from 'react-bootstrap'
 import FlagIconFactory from 'react-flag-icon-css'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { ThunkDispatch } from 'redux-thunk'
-import SupportedLocales from '../../scripts/SupportedLocales'
-import { AppState } from '../../store/configureStore'
-import { startSetLocale } from '../../store/locale/actions'
-import { AppActions, Locale } from '../../store/locale/types'
+import SupportedLocales from '../../scripts/i18n/SupportedLocales'
+import { Dropdown } from 'react-bootstrap'
+import { withTranslation, WithTranslation } from 'react-i18next'
+import { Locale } from '../../scripts/i18n/types'
+import i18nService from '../../scripts/i18n/I18nService'
 
-interface LocaleDropDownProps {
-}
-
-type Props = LocaleDropDownProps & LinkDispatchProps & LinkStateProps
-
-export function LocaleDropDown(props: Props) {
-  const handleClick = (locale: Locale): void => {
-    props.startSetLocale(locale)
-  }
+function LocaleDropDown({ i18n }: WithTranslation) {
   const FlagIcon = FlagIconFactory(React, { 'useCssModules': false })
   return (
     <Dropdown>
       <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
-        <FlagIcon code={props.locale.code} />
-        <span className="locale-title">{props.locale.title}</span>
+        <FlagIcon code={i18n.language} />
+        <span className="locale-title">{SupportedLocales.getOrDefault(i18n.language).title}</span>
       </Dropdown.Toggle>
       <Dropdown.Menu>
-        {SupportedLocales.getExceptOf(props.locale.code).map((l: Locale) => {
+        {SupportedLocales.getExceptOf(i18n.language).map((l: Locale) => {
           return (
             <Dropdown.Item
-              onClick={() => handleClick(l)}
+              onClick={() => i18nService.set(l)}
               bsPrefix="nav-link"
               eventKey={l.code}
               key={`dropdown-item-${l.code}`}
@@ -44,29 +33,4 @@ export function LocaleDropDown(props: Props) {
   )
 }
 
-interface LinkStateProps {
-  locale: Locale
-}
-
-interface LinkDispatchProps {
-  startSetLocale: (locale: Locale) => void
-}
-
-const mapStateToProps = (
-  state: AppState,
-  ownProps: LocaleDropDownProps
-): LinkStateProps => ({
-  locale: state.locale
-})
-
-const mapDispatchToProps = (
-  dispatch: ThunkDispatch<any, any, AppActions>,
-  ownProps: LocaleDropDownProps
-): LinkDispatchProps => ({
-  startSetLocale: bindActionCreators(startSetLocale, dispatch)
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(LocaleDropDown)
+export default withTranslation()(LocaleDropDown)

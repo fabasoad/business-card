@@ -1,10 +1,9 @@
 import * as React from 'react'
 import { Badge } from 'react-bootstrap'
-import { useTranslation } from 'react-i18next'
 import { version } from '../../../package.json'
+import { withTranslation, WithTranslation } from 'react-i18next'
 
-export default function FooterInfo() {
-  const { t } = useTranslation()
+function FooterInfo({ t }: WithTranslation) {
   return (
     <div className="footer-info">
       <ul className="icon-list">
@@ -15,3 +14,5 @@ export default function FooterInfo() {
     </div>
   )
 }
+
+export default withTranslation()(FooterInfo)

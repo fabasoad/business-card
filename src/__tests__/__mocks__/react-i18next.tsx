@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as gb from '../../assets/i18n/gb.json'
-import SupportedLocales from '../../scripts/i18n/SupportedLocales';
+import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 
 const reactI18Next: any = jest.createMockFromModule('react-i18next')
 
@@ -22,8 +22,6 @@ reactI18Next.withTranslation = () => (Component) => {
   Component.defaultProps.t = tMock
   return Component
 }
-
-reactI18Next.useTranslation = () => ({ t: tMock, i18n })
 
 // eslint-disable-next-line react/prop-types
 reactI18Next.Trans = function Trans({ i18nKey }) {

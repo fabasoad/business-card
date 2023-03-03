@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { withTranslation, WithTranslation } from 'react-i18next'
 import { Col } from 'react-bootstrap'
+import { WithTranslation, withTranslation } from 'react-i18next'
 
 function FooterLocation({ t }: WithTranslation) {
   return (

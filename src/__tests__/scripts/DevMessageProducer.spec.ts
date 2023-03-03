@@ -1,4 +1,4 @@
-import DevMessageProducer from '../../scripts/DevMessageProducer'
+import producer from '../../scripts/DevMessageProducer'
 
 describe('DevMessageProducer', () => {
   let consoleLogSpy
@@ -9,15 +9,15 @@ describe('DevMessageProducer', () => {
   })
 
   test('should build default messages correctly', () => {
-    const messages: string[] = new DevMessageProducer()._messages
-    expect(messages.length).toBe(9)
+    const messages: string[] = producer._messages
+    expect(messages.length).toBe(8)
     new Array<string>(
       'Open Collective',
       'Ko-fi',
       'Liberapay',
       'IssueHunt',
       'BTC'
-    ).forEach((m) => expect(messages[messages.length - 1]).toContain<string>(m))
+    ).forEach((m: string) => expect(messages[messages.length - 1]).toContain<string>(m))
   })
 
   afterEach(() => {

@@ -1,4 +1,4 @@
-export default class DevMessageProducer {
+class DevMessageProducer {
   _messages: string[]
   _counter: number = 0
   // eslint-disable-next-line no-undef
@@ -18,15 +18,14 @@ export default class DevMessageProducer {
       '* IssueHunt: https://issuehunt.io/r/fabasoad\n' +
       '* BTC: https://en.cryptobadges.io/donate/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH'
     return [
-      'Hey! So, you are opening a Developer Tools..',
-      'Okay.',
-      'What are you looking for here?',
-      'It\'s one page application.',
-      'Hosted on GitHub Pages. Written in TypeScript + React.',
-      'So, I don\'t think you can find anything interesting here ;)',
-      'But if you want to take a look on the code closer, here is the repo:\n* https://github.com/fabasoad/business-card',
-      'Also, feel free to add me in LinkedIn:\n* https://www.linkedin.com/in/yevhenfabizhevskyi/',
-      `Or if you want to buy me a cup of coffee (I love coffee very much), here are the resources where you can do it:\n${donates}`
+      'Hello my curious friend!',
+      'I am glad that you are interested in internals of my website',
+      'Feel free to take a look at the source code in case you want to see more. Here is the link:',
+      '* https://github.com/fabasoad/business-card',
+      'Also, feel free to add me in LinkedIn:',
+      '* https://www.linkedin.com/in/yevhenfabizhevskyi/',
+      'Or if you want to buy me a cup of coffee (I love coffee very much), here are the resources where you can do it:',
+      donates
     ]
   }
 
@@ -45,3 +44,6 @@ export default class DevMessageProducer {
     }
   }
 }
+
+const producer = new DevMessageProducer()
+export default producer

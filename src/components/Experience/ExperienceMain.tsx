@@ -10,15 +10,13 @@ import JobTechnologies from './JobTechnologies'
 import JobTitle from './JobTitle'
 import { Container } from 'react-bootstrap'
 import { withTranslation, WithTranslation } from 'react-i18next'
+import SectionTitle from '../Controls/SectionTitle';
 
 function ExperienceMain({ t }: WithTranslation) {
   return (
     <div id="experience" className="light-component">
       <Container>
-        <div className="section-title text-center">
-          <h2>{t('business-card-experience-title')}</h2>
-          <hr />
-        </div>
+        <SectionTitle>{t('business-card-experience-title')}</SectionTitle>
         <ul className="timeline">
           <li className="timeline-inverted">
             <JobPeriod

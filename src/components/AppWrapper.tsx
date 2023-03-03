@@ -1,9 +1,9 @@
 import * as React from 'react'
-import { useEffect } from 'react'
+import Error from './Controls/Error'
 import LoadingSpinner from './LoadingSpinner'
-import i18nService, {I18nServiceCallbackTypes} from '../scripts/i18n/I18nService'
-import Error from './Controls/Error';
-import {Row} from 'react-bootstrap';
+import i18nService, { I18nServiceCallbackTypes } from '../scripts/i18n/I18nService'
+import producer from '../scripts/DevMessageProducer'
+import { Row } from 'react-bootstrap'
 
 enum Status {
   LOADING,
@@ -17,7 +17,10 @@ export default function AppWrapper({ children }: React.PropsWithChildren<{}>) {
     I18nServiceCallbackTypes.ON_LOADED,
     () => setStatus(Status.FINISHED)
   )
-  useEffect(() => {
+
+  producer.run()
+
+  React.useEffect(() => {
     i18nService.load().catch((e: any) => {
       setStatus(Status.ERROR)
       console.error(e)

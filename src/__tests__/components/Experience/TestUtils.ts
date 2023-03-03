@@ -1,6 +1,6 @@
-import { Locale } from '../../../scripts/i18n/types'
-import { testDateDuration, testDateTimeline } from '../Controls/TestUtils'
 import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
+import { Locale } from '../../../scripts/i18n/types'
+import { testDateDuration, testDateTimeline, testSectionTitle } from '../Controls/TestUtils'
 
 export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   type Fixture = {
@@ -156,11 +156,10 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   expect(div).toHaveClass('light-component')
   const divContainer = div.querySelector('div.container')
   expect(divContainer).not.toBeNull()
-  const divSectionTitle = divContainer.querySelector('div.section-title')
-  expect(divSectionTitle).toHaveClass('text-center')
-  expect(divSectionTitle.querySelector('h2'))
-    .toHaveTextContent('business-card-experience-title')
-  expect(divSectionTitle.querySelector('hr')).not.toBeNull()
+  testSectionTitle(
+    divContainer.querySelector('div.section-title'),
+    'business-card-experience-title'
+  )
   const ulTimeline = divContainer.querySelector('ul.timeline')
   expect(ulTimeline).not.toBeNull()
   const liNormal = divContainer.querySelectorAll('ul.timeline>li:not(.timeline-inverted)')

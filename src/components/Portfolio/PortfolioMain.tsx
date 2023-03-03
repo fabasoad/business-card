@@ -1,10 +1,5 @@
 /// <reference path='./PortfolioMain.d.ts' />
 import * as React from 'react'
-import {Container, Row} from 'react-bootstrap'
-import { useTranslation } from 'react-i18next'
-
-import PortfolioItem from './PortfolioItem'
-
 import * as imgArkaDeutscheLieferadresse from '../../assets/images/portfolio/deutsche_lieferadresse_website.jpg'
 import * as imgArkaInvebstor from '../../assets/images/portfolio/invebstor.jpg'
 import * as imgArkaMedisport from '../../assets/images/portfolio/medisport_website.jpg'
@@ -16,22 +11,22 @@ import * as imgBitcoinComGames from '../../assets/images/portfolio/bitcoin.com_g
 import * as imgBitcoinComGamesAdmin from '../../assets/images/portfolio/bitcoin.com_games_admin.png'
 import * as imgBitcoinComGamesAndroid from '../../assets/images/portfolio/bitcoin.com_android.png'
 import * as imgBitcoinComMarkets from '../../assets/images/portfolio/bitcoin.com_markets.png'
+import * as imgLohikaEarnin from '../../assets/images/portfolio/earnin.png'
 import * as imgLohikaHpeAlm from '../../assets/images/portfolio/alm.jpg'
 import * as imgLohikaHpeAlmRobot from '../../assets/images/portfolio/alm_robot.png'
 import * as imgLohikaHpeLabManagement from '../../assets/images/portfolio/lab_management.jpg'
-import * as imgLohikaEarnin from '../../assets/images/portfolio/earnin.png'
 import * as imgLohikaPrysm from '../../assets/images/portfolio/prysm_iphone_app.png'
 import * as imgSMA from '../../assets/images/portfolio/sma.png'
+import PortfolioItem from './PortfolioItem'
+import SectionTitle from '../Controls/SectionTitle'
+import { Container, Row } from 'react-bootstrap'
+import { withTranslation, WithTranslation } from 'react-i18next'
 
-export default function PortfolioMain() {
-  const { t } = useTranslation()
+function PortfolioMain({ t }: WithTranslation) {
   return (
     <div id="portfolio">
       <Container>
-        <div className="section-title text-center center">
-          <h2>{t('business-card-portfolio-title')}</h2>
-          <hr />
-        </div>
+        <SectionTitle>{t('business-card-portfolio-title')}</SectionTitle>
         <Row>
           <PortfolioItem
             url="https://markets.bitcoin.com/"
@@ -157,3 +152,5 @@ export default function PortfolioMain() {
     </div>
   )
 }
+
+export default withTranslation()(PortfolioMain)

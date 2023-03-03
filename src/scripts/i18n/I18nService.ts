@@ -1,7 +1,6 @@
 import * as gb from '../../assets/i18n/gb.json'
 import * as jp from '../../assets/i18n/jp.json'
 import * as ua from '../../assets/i18n/ua.json'
-import LanguageDetector from 'i18next-browser-languagedetector'
 import SupportedLocales from './SupportedLocales'
 import i18n from 'i18next'
 import { Locale } from './types'
@@ -31,8 +30,8 @@ class I18nService {
   }
 
   async load(): Promise<void> {
-    console.log('i18n is loading', LanguageDetector)
     return i18n
+    // TODO: to fix lang detector
       // .use(LanguageDetector)
       .use(initReactI18next)
       .init({

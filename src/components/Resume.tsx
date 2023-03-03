@@ -1,16 +1,12 @@
-/// <reference path='./Resume.d.ts' />
 import * as React from 'react'
-import { useTranslation, Trans } from 'react-i18next'
+import SectionTitle from './Controls/SectionTitle'
 import { Col, Container } from 'react-bootstrap'
+import { WithTranslation, withTranslation, Trans } from 'react-i18next'
 
-export default function Resume() {
-  const { t } = useTranslation()
+function Resume({ t }: WithTranslation) {
   return (
     <div id="resume" className="light-component">
-      <div className="section-title text-center center">
-        <h2>{t('business-card-resume-title')}</h2>
-        <hr />
-      </div>
+      <SectionTitle>{t('business-card-resume-title')}</SectionTitle>
       <Container>
         <Col className="text-center">
           <Trans i18nKey="business-card-resume-message">
@@ -21,3 +17,5 @@ export default function Resume() {
     </div>
   )
 }
+
+export default withTranslation()(Resume)

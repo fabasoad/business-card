@@ -1,3 +1,5 @@
+import { testSectionTitle } from '../Controls/TestUtils'
+
 export function testPortfolioItem(
   div: HTMLDivElement,
   url: string,
@@ -126,12 +128,10 @@ export function testPortfolioMain(div: HTMLDivElement) {
   expect(div).not.toBeNull()
   const divContainer = div.querySelector('div.container')
   expect(divContainer).not.toBeNull()
-  const divSectionTitle = divContainer.querySelector('div.section-title')
-  expect(divSectionTitle).toHaveClass('text-center')
-  expect(divSectionTitle).toHaveClass('center')
-  expect(divSectionTitle.querySelector('h2'))
-  .toHaveTextContent('business-card-portfolio-title')
-  expect(divSectionTitle.querySelector('hr')).not.toBeNull()
+  testSectionTitle(
+    divContainer.querySelector('div.section-title'),
+    'business-card-portfolio-title'
+  )
   const divRow = divContainer.querySelector('div.row')
   expect(divRow).not.toBeNull()
   const divPortfolioItems = divRow.querySelectorAll('div.col-sm-6.col-md-3.col-lg-3')

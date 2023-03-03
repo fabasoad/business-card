@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 
 import LanguageTextItem from '../../../components/Languages/LanguageTextItem'
 import { testLanguageTextItem } from './TestUtils'
-import SupportedLocales from '../../../scripts/SupportedLocales'
+import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 
 for (const { code } of SupportedLocales._items) {
   test(`[${code}] should render LanguageTextItem correctly`, () => {

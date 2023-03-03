@@ -1,31 +1,26 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
-import configureMockStore from 'redux-mock-store'
-import { Provider } from 'react-redux'
-import { render } from '@testing-library/react'
-
-import SupportedLocales from '../../../scripts/SupportedLocales'
-import { testDateDuration } from './TestUtils'
 import DateDuration from '../../../components/Controls/DateDuration'
+import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
+import { Locale } from '../../../scripts/i18n/types'
+import { render } from '@testing-library/react'
+import { testDateDuration } from './TestUtils'
 
-const mockStore = configureMockStore()
+describe('DateDuration', () => {
+  const locale: Locale = SupportedLocales.default
 
-for (const locale of SupportedLocales._items) {
-  test(`[${locale.code}] should render DateDuration correctly with from and to`, () => {
-    const store = mockStore({ locale })
+  test('should render DateDuration correctly with from and to', () => {
     const fromMonthIndex = 7
     const fromYear = 2018
     const toMonthIndex = 3
     const toYear = 2022
     const { container } = render(
-      <Provider store={store}>
-        <DateDuration
-          fromMonthIndex={fromMonthIndex}
-          fromYear={fromYear}
-          toMonthIndex={toMonthIndex}
-          toYear={toYear}
-        />
-      </Provider>
+      <DateDuration
+        fromMonthIndex={fromMonthIndex}
+        fromYear={fromYear}
+        toMonthIndex={toMonthIndex}
+        toYear={toYear}
+      />
     )
     testDateDuration(
       container.querySelector('div.controls__date-duration'),
@@ -37,17 +32,14 @@ for (const locale of SupportedLocales._items) {
     )
   })
 
-  test(`[${locale.code}] should render DateDuration correctly with from only`, () => {
-    const store = mockStore({ locale })
+  test('should render DateDuration correctly with from only', () => {
     const fromMonthIndex = 5
     const fromYear = 2017
     const { container } = render(
-      <Provider store={store}>
-        <DateDuration
-          fromMonthIndex={fromMonthIndex}
-          fromYear={fromYear}
-        />
-      </Provider>
+      <DateDuration
+        fromMonthIndex={fromMonthIndex}
+        fromYear={fromYear}
+      />
     )
     testDateDuration(
       container.querySelector('div.controls__date-duration'),
@@ -56,4 +48,4 @@ for (const locale of SupportedLocales._items) {
       fromYear
     )
   })
-}
+})

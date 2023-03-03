@@ -1,27 +1,22 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
-import { Container } from 'react-bootstrap'
-
-import JobDescription from './JobDescription'
-import JobPeriod from './JobPeriod'
-import JobTechnologies from './JobTechnologies'
-import JobTitle from './JobTitle'
-import JobResponsibilities from './JobResponsibilities'
-
 import * as imgArkaFSS from '../../assets/images/companies/arka-fss.png'
 import * as imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'
 import * as imgLohika from '../../assets/images/companies/lohika.png'
 import * as imgWovenPlanet from '../../assets/images/companies/woven-planet.png'
+import JobDescription from './JobDescription'
+import JobPeriod from './JobPeriod'
+import JobResponsibilities from './JobResponsibilities'
+import JobTechnologies from './JobTechnologies'
+import JobTitle from './JobTitle'
+import { Container } from 'react-bootstrap'
+import { withTranslation, WithTranslation } from 'react-i18next'
+import SectionTitle from '../Controls/SectionTitle';
 
-export default function ExperienceMain() {
-  const { t } = useTranslation()
+function ExperienceMain({ t }: WithTranslation) {
   return (
     <div id="experience" className="light-component">
       <Container>
-        <div className="section-title text-center">
-          <h2>{t('business-card-experience-title')}</h2>
-          <hr />
-        </div>
+        <SectionTitle>{t('business-card-experience-title')}</SectionTitle>
         <ul className="timeline">
           <li className="timeline-inverted">
             <JobPeriod
@@ -330,3 +325,5 @@ export default function ExperienceMain() {
     </div>
   )
 }
+
+export default withTranslation()(ExperienceMain)

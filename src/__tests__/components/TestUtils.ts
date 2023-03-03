@@ -14,7 +14,7 @@ export function testBadges(div: HTMLDivElement) {
   expect(divContainer).not.toBeNull()
   const divRow = divContainer.querySelector('div.row')
   expect(divRow).not.toBeNull()
-  const divCol = divRow.querySelector('div.col-sm-12.col-md-12.col-lg-12')
+  const divCol = divRow.querySelector('div.col-sm.col-md.col-lg')
   expect(divCol).toHaveClass('text-center')
   const a = divCol.querySelector('a')
   expect(a).toHaveAttribute('href', 'https://tree-nation.com/profile/digitalocean')
@@ -48,12 +48,10 @@ export function testHeader(header: HTMLElement) {
 
 export function testResume(div: HTMLDivElement) {
   expect(div).toHaveClass('light-component')
-  const divSectionTitle = div.querySelector('div.section-title')
-  expect(divSectionTitle).toHaveClass('text-center')
-  expect(divSectionTitle).toHaveClass('center')
-  expect(divSectionTitle.querySelector('h2'))
-  .toHaveTextContent('business-card-resume-title')
-  expect(divSectionTitle.querySelector('hr')).not.toBeNull()
+  testSectionTitle(
+    div.querySelector('div.section-title'),
+    'business-card-resume-title'
+  )
   const divContainer = div.querySelector('div.container')
   const divCol = divContainer.querySelector('div.col')
   expect(divCol).toHaveClass('text-center')
@@ -87,12 +85,10 @@ export function testSkills(div: HTMLDivElement) {
   ])
 
   expect(div).toHaveClass('light-component')
-  const divSectionTitle = div.querySelector('div.section-title')
-  expect(divSectionTitle).toHaveClass('text-center')
-  expect(divSectionTitle).toHaveClass('center')
-  expect(divSectionTitle.querySelector('h2'))
-  .toHaveTextContent('business-card-skills-title')
-  expect(divSectionTitle.querySelector('hr')).not.toBeNull()
+  testSectionTitle(
+    div.querySelector('div.section-title'),
+    'business-card-skills-title'
+  )
   const divContainer = div.querySelector('div.container')
   const divRow = divContainer.querySelector('div.row')
   const divSkillsList = divRow.querySelector('div.skills-list')

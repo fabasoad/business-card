@@ -1,9 +1,8 @@
 import * as React from 'react'
-import { Trans, useTranslation } from 'react-i18next'
 import { Button } from 'react-bootstrap'
+import { Trans, withTranslation, WithTranslation } from 'react-i18next'
 
-export default function Header() {
-  const { t } = useTranslation()
+function Header({ t }: WithTranslation) {
   return (
     <header className="header" id="header">
       <div className="header__text">
@@ -19,3 +18,5 @@ export default function Header() {
     </header>
   )
 }
+
+export default withTranslation()(Header)

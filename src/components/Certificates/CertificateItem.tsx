@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Card } from 'react-bootstrap'
-import { useTranslation } from 'react-i18next'
 import { CertificateIssuer } from '../../scripts/certificates/types'
 import { Technology } from '../../scripts/technologies/types'
-import DateLocale from '../Controls/DateLocale'
+import { WithTranslation, withTranslation} from 'react-i18next'
+import { getDateLocale } from '../../scripts/utils/DateUtils'
 
 interface CertificateItemProps {
   id: string
@@ -14,28 +14,28 @@ interface CertificateItemProps {
   url: string
 }
 
-export default function CertificateItem(props: CertificateItemProps) {
-  const { t } = useTranslation()
+function CertificateItem({
+  issueDate, issuer, i18nTitleKey, url, t
+}: WithTranslation & CertificateItemProps) {
   return (
     <Card>
       <Card.Header>
-        {props.issuer.img &&
-          <Card.Img src={props.issuer.img} className="me-2" />}
-        {props.issuer.name}
+        {issuer.img &&
+          <Card.Img src={issuer.img} className="me-2" />}
+        {issuer.name}
       </Card.Header>
       <Card.Body>
         <Card.Text>
-          <Card.Link target="_blank" rel="noopener noreferrer" href={props.url}>
-            {t<string>(props.i18nTitleKey)}
+          <Card.Link target="_blank" rel="noopener noreferrer" href={url}>
+            {t<string>(i18nTitleKey)}
           </Card.Link>
         </Card.Text>
       </Card.Body>
       <Card.Footer>
-        <DateLocale
-          monthIndex={props.issueDate.getMonth()}
-          year={props.issueDate.getFullYear()}
-        />
+        {getDateLocale(issueDate.getFullYear(), issueDate.getMonth())}
       </Card.Footer>
     </Card>
   )
 }
+
+export default withTranslation()(CertificateItem)

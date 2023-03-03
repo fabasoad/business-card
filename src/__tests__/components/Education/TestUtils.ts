@@ -1,4 +1,4 @@
-import { Locale } from '../../../store/locale/types'
+import { Locale } from '../../../scripts/i18n/types'
 import { testSectionTitle } from '../Controls/TestUtils'
 
 type TestHeadingFunction = (h4: HTMLHeadingElement) => void
@@ -33,7 +33,7 @@ export function testEducationMain(div: HTMLDivElement, locale: Locale) {
     'business-card-education-title'
   )
   const divRow = divContainer.querySelector('div.row')
-  const divCol = divRow.querySelector('div.col-lg-12')
+  const divCol = divRow.querySelector('div.col-lg')
   expect(divCol).not.toBeNull()
   const ul = divCol.querySelector('ul.timeline')
   expect(ul).not.toBeNull()

@@ -1,17 +1,14 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
 import LanguageLinkItem from './LanguageLinkItem'
 import LanguageTextItem from './LanguageTextItem'
+import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
+import { withTranslation, WithTranslation } from 'react-i18next'
 
-export default function LanguagesMain() {
-  const { t } = useTranslation()
+function LanguagesMain({ t }: WithTranslation) {
   return (
     <div id="languages" className="light-component">
-      <div className="section-title text-center center">
-        <h2>{t('business-card-languages-title')}</h2>
-        <hr />
-      </div>
+      <SectionTitle>{t('business-card-languages-title')}</SectionTitle>
       <Container>
         <Row>
           <Col className="language-list text-center">
@@ -24,3 +21,5 @@ export default function LanguagesMain() {
     </div>
   )
 }
+
+export default withTranslation()(LanguagesMain)

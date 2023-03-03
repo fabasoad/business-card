@@ -1,5 +1,5 @@
-import { Locale } from '../../../store/locale/types'
-import DateUtils from '../../../scripts/utils/DateUtils'
+import { humanize } from '../../../scripts/utils/DateUtils'
+import { Locale } from '../../../scripts/i18n/types'
 
 export function testDateDuration(
   div: HTMLDivElement,
@@ -10,7 +10,7 @@ export function testDateDuration(
   toYear?: number
 ): void {
   expect(div).toHaveTextContent(
-    DateUtils.humanize(
+    humanize(
       new Date(fromYear, fromMonthIndex),
       !toYear || toMonthIndex == undefined
         ? new Date()

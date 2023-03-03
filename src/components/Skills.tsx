@@ -1,19 +1,15 @@
 /// <reference path='./Skills.d.ts' />
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
-
+import SectionTitle from './Controls/SectionTitle'
 import TechnologyStorage from '../scripts/technologies/TechnologyStorage'
 import { Col, Container, Row } from 'react-bootstrap'
+import { withTranslation, WithTranslation } from 'react-i18next'
 
-export default function Skills() {
-  const { t } = useTranslation()
+function Skills({ t }: WithTranslation) {
   const technologyStorage = new TechnologyStorage()
   return (
     <div id="skills" className="light-component">
-      <div className="section-title text-center center">
-        <h2>{t('business-card-skills-title')}</h2>
-        <hr />
-      </div>
+      <SectionTitle>{t('business-card-skills-title')}</SectionTitle>
       <Container>
         <Row>
           <Col className="skills-list text-center">
@@ -33,3 +29,5 @@ export default function Skills() {
     </div>
   )
 }
+
+export default withTranslation()(Skills)

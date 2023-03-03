@@ -1,7 +1,7 @@
 import State from '../../components/Stats/State'
 import RemoteService from './RemoteService'
 
-export default class StackOverflowService implements RemoteService<number> {
+class StackOverflowService implements RemoteService<number> {
   private state: State = State.NOT_STARTED
   private reputation: number = 0
 
@@ -30,3 +30,6 @@ export default class StackOverflowService implements RemoteService<number> {
     return Promise.resolve(this.reputation)
   }
 }
+
+const remoteService = new StackOverflowService()
+export default remoteService

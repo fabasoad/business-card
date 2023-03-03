@@ -1,6 +1,6 @@
-import { Locale } from '../../../store/locale/types'
-import { testDateDuration, testDateTimeline } from '../Controls/TestUtils'
 import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
+import { Locale } from '../../../scripts/i18n/types'
+import { testDateDuration, testDateTimeline, testSectionTitle } from '../Controls/TestUtils'
 
 export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   type Fixture = {
@@ -156,20 +156,20 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   expect(div).toHaveClass('light-component')
   const divContainer = div.querySelector('div.container')
   expect(divContainer).not.toBeNull()
-  const divSectionTitle = divContainer.querySelector('div.section-title')
-  expect(divSectionTitle).toHaveClass('text-center')
-  expect(divSectionTitle.querySelector('h2'))
-    .toHaveTextContent('business-card-experience-title')
-  expect(divSectionTitle.querySelector('hr')).not.toBeNull()
+  testSectionTitle(
+    divContainer.querySelector('div.section-title'),
+    'business-card-experience-title'
+  )
   const ulTimeline = divContainer.querySelector('ul.timeline')
-  const liNormal = ulTimeline.querySelectorAll('li:not(.timeline-inverted)')
+  expect(ulTimeline).not.toBeNull()
+  const liNormal = divContainer.querySelectorAll('ul.timeline>li:not(.timeline-inverted)')
   expect(liNormal).toHaveLength(5)
   let i = 1
   for (const li of liNormal) {
     testLi(li as HTMLLIElement, locale, fixtures[i])
     i += 2
   }
-  const liInverted = ulTimeline.querySelectorAll('li.timeline-inverted')
+  const liInverted = divContainer.querySelectorAll('ul.timeline>li.timeline-inverted')
   expect(liInverted).toHaveLength(5)
   i = 0
   for (const li of liInverted) {
@@ -212,8 +212,8 @@ export function testJobResponsibilities(div: HTMLDivElement): void {
   expect(ul).not.toBeNull()
   const liElements = ul.querySelectorAll('li')
   expect(liElements).toHaveLength(2)
-  expect(liElements[0]).toHaveTextContent('some-prefix-1')
-  expect(liElements[1]).toHaveTextContent('some-prefix-1-1')
+  expect(liElements[0]).toHaveTextContent('testing-prefix-1')
+  expect(liElements[1]).toHaveTextContent('testing-prefix-1-1')
 }
 
 export function testJobTechnologies(div: HTMLDivElement, technologies: string[]): void {

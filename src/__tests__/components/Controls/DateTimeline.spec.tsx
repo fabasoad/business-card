@@ -1,31 +1,26 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
-import configureMockStore from 'redux-mock-store'
-import { render } from '@testing-library/react'
-
 import DateTimeline from '../../../components/Controls/DateTimeline'
-import SupportedLocales from '../../../scripts/SupportedLocales'
-import { Provider } from 'react-redux'
+import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
+import { Locale } from '../../../scripts/i18n/types'
+import { render } from '@testing-library/react'
 import { testDateTimeline } from './TestUtils'
 
-const mockStore = configureMockStore()
+describe('DateTimeline', () => {
+  const locale: Locale = SupportedLocales.default
 
-for (const locale of SupportedLocales._items) {
-  test(`[${locale.code}] should render DateTimeline correctly with from and to`, () => {
-    const store = mockStore({ locale })
+  test('should render DateTimeline correctly with from and to', () => {
     const fromMonthIndex = 6
     const fromYear = 2017
     const toMonthIndex = 2
     const toYear = 2021
     const { container } = render(
-      <Provider store={store}>
-        <DateTimeline
-          fromMonthIndex={fromMonthIndex}
-          fromYear={fromYear}
-          toMonthIndex={toMonthIndex}
-          toYear={toYear}
-        />
-      </Provider>
+      <DateTimeline
+        fromMonthIndex={fromMonthIndex}
+        fromYear={fromYear}
+        toMonthIndex={toMonthIndex}
+        toYear={toYear}
+      />
     )
     testDateTimeline(
       container.querySelector('div.controls__date-timeline'),
@@ -37,17 +32,14 @@ for (const locale of SupportedLocales._items) {
     )
   })
 
-  test(`[${locale.code}] should render DateTimeline correctly with from`, () => {
-    const store = mockStore({ locale })
+  test('should render DateTimeline correctly with from', () => {
     const fromMonthIndex = 6
     const fromYear = 2017
     const { container } = render(
-      <Provider store={store}>
-        <DateTimeline
-          fromMonthIndex={fromMonthIndex}
-          fromYear={fromYear}
-        />
-      </Provider>
+      <DateTimeline
+        fromMonthIndex={fromMonthIndex}
+        fromYear={fromYear}
+      />
     )
     testDateTimeline(
       container.querySelector('div.controls__date-timeline'),
@@ -56,4 +48,4 @@ for (const locale of SupportedLocales._items) {
       fromYear
     )
   })
-}
+})

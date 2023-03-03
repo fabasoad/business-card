@@ -1,5 +1,5 @@
-import SupportedLocales from '../../../scripts/SupportedLocales';
-import DateUtils from '../../../scripts/utils/DateUtils';
+import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
+import { humanize } from '../../../scripts/utils/DateUtils'
 
 describe('DateUtils', () => {
   type Fixture = { codes: string[], expected: string }
@@ -13,7 +13,7 @@ describe('DateUtils', () => {
   for (const locale of SupportedLocales._items) {
     for (let i = 0; i < expectedMap.get(locale.code).codes.length; i++) {
       test(`[${expectedMap.get(locale.code).codes[i]}] should return humanized date`, () => {
-        const actual: string = DateUtils.humanize(
+        const actual: string = humanize(
           new Date('2010-01-23'),
           new Date('2019-02-21'),
           expectedMap.get(locale.code).codes[i]

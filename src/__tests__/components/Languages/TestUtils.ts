@@ -1,3 +1,5 @@
+import { testSectionTitle } from '../Controls/TestUtils'
+
 export function testLanguageItem(div: HTMLDivElement, code: string): void {
   expect(div).toHaveClass('mb-4')
   expect(div).toHaveClass('mx-4')
@@ -23,12 +25,10 @@ export function testLanguageLinkItem(
 
 export function testLanguageMain(div: HTMLDivElement) {
   expect(div).toHaveClass('light-component')
-  const divSectionTitle = div.querySelector('div.section-title')
-  expect(divSectionTitle).toHaveClass('text-center')
-  expect(divSectionTitle).toHaveClass('center')
-  expect(divSectionTitle.querySelector('h2'))
-  .toHaveTextContent('business-card-languages-title')
-  expect(divSectionTitle.querySelector('hr')).not.toBeNull()
+  testSectionTitle(
+    div.querySelector('div.section-title'),
+    'business-card-languages-title'
+  )
   const divContainer = div.querySelector('div.container')
   expect(divContainer).not.toBeNull()
   const divRow = divContainer.querySelector('div.row')

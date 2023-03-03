@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
-import DateLocale from './DateLocale'
 import { Col, Row } from 'react-bootstrap'
+import { getDateLocale } from '../../scripts/utils/DateUtils'
+import { withTranslation, WithTranslation } from 'react-i18next'
 
 interface DateTimelineProps {
   fromMonthIndex: number
@@ -10,23 +10,24 @@ interface DateTimelineProps {
   toYear?: number
 }
 
-const DateTimeline: React.FunctionComponent<DateTimelineProps> =
-  ({ fromMonthIndex, fromYear, toMonthIndex, toYear }) => {
-    const { t } = useTranslation()
-    return (
-      <Col className="controls__date-timeline">
-        <Row>
-          {
-            (toMonthIndex != undefined &&
-              toYear &&
-              <DateLocale monthIndex={toMonthIndex} year={toYear} />) ||
-            <div>{t('business-card-experience-present')}</div>
-          }
-        </Row>
-        <Row>-</Row>
-        <Row><DateLocale monthIndex={fromMonthIndex} year={fromYear} /></Row>
-      </Col>
-    )
-  }
+function DateTimeline({
+  fromMonthIndex, fromYear, toMonthIndex, toYear, t
+}: WithTranslation & DateTimelineProps) {
+  return (
+    <Col className="controls__date-timeline">
+      <Row>
+        {
+          (toMonthIndex != undefined &&
+            toYear && getDateLocale(toYear, toMonthIndex)) ||
+          t('business-card-experience-present')
+        }
+      </Row>
+      <Row>-</Row>
+      <Row>
+        {getDateLocale(fromYear, fromMonthIndex)}
+      </Row>
+    </Col>
+  )
+}
 
-export default DateTimeline
+export default withTranslation()(DateTimeline)

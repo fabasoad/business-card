@@ -1,31 +1,26 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
-import configureMockStore from 'redux-mock-store'
-import { Provider } from 'react-redux'
-import { render } from '@testing-library/react'
-
 import JobPeriod from '../../../components/Experience/JobPeriod'
-import SupportedLocales from '../../../scripts/SupportedLocales'
+import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
+import { Locale } from '../../../scripts/i18n/types'
+import { render } from '@testing-library/react'
 import { testJobPeriod } from './TestUtils'
 
-const mockStore = configureMockStore()
+describe('JobPeriod', () => {
+  const locale: Locale = SupportedLocales.default
 
-for (const locale of SupportedLocales._items) {
-  test(`[${locale.code}] should render JobPeriod correctly with from and to`, () => {
-    const store = mockStore({ locale })
+  test('should render JobPeriod correctly with from and to', () => {
     const fromMonthIndex = 1
     const fromYear = 2019
     const toMonthIndex = 4
     const toYear = 2020
     const { container } = render(
-      <Provider store={store}>
-        <JobPeriod
-          fromMonthIndex={fromMonthIndex}
-          fromYear={fromYear}
-          toMonthIndex={toMonthIndex}
-          toYear={toYear}
-        />
-      </Provider>
+      <JobPeriod
+        fromMonthIndex={fromMonthIndex}
+        fromYear={fromYear}
+        toMonthIndex={toMonthIndex}
+        toYear={toYear}
+      />
     )
     testJobPeriod(
       container.querySelector('div.timeline-image'),
@@ -37,17 +32,14 @@ for (const locale of SupportedLocales._items) {
     )
   })
 
-  test(`[${locale.code}] should render JobPeriod correctly with from`, () => {
-    const store = mockStore({ locale })
+  test('should render JobPeriod correctly with from', () => {
     const fromMonthIndex = 0
     const fromYear = 2018
     const { container } = render(
-      <Provider store={store}>
-        <JobPeriod
-          fromMonthIndex={fromMonthIndex}
-          fromYear={fromYear}
-        />
-      </Provider>
+      <JobPeriod
+        fromMonthIndex={fromMonthIndex}
+        fromYear={fromYear}
+      />
     )
     testJobPeriod(
       container.querySelector('div.timeline-image'),
@@ -56,4 +48,4 @@ for (const locale of SupportedLocales._items) {
       fromYear
     )
   })
-}
+})

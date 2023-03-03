@@ -1,0 +1,31 @@
+.error {
+  @extend .font-regular;
+  @extend .font-non-jp;
+
+  align-items: center;
+  background-color: $blue;
+  color: $dark-blue;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+
+  a {
+    color: $orange;
+    text-decoration: none;
+    &:hover {
+      outline: 0;
+      color: $dark-orange;
+      background-color: transparent;
+    }
+  }
+
+  .container {
+    @extend .text-center;
+  }
+
+  div.row {
+    @extend .d-flex;
+    @extend .justify-content-center;
+  }
+}

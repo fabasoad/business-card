@@ -2,7 +2,7 @@ import { Octokit } from '@octokit/rest'
 import State from '../../components/Stats/State'
 import RemoteService from './RemoteService'
 
-export default class GitHubService implements RemoteService<number> {
+class GitHubService implements RemoteService<number> {
   private state: State = State.NOT_STARTED
   private starsAmount: number = 0
 
@@ -26,3 +26,6 @@ export default class GitHubService implements RemoteService<number> {
     return Promise.resolve(this.starsAmount)
   }
 }
+
+const remoteService = new GitHubService()
+export default remoteService

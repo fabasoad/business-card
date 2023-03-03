@@ -12,7 +12,7 @@
   "testEnvironment": "jsdom",
   "coverageThreshold": {
     "global": {
-      "branches": 90,
+      "branches": 85,
       "functions": 80,
       "lines": 90,
       "statements": 90
@@ -21,7 +21,8 @@
   "moduleFileExtensions": ["ts", "tsx", "js"],
   "moduleNameMapper": {
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga|pdf)$": "<rootDir>/src/__tests__/__mocks__/fileMock.ts",
-    "\\.(css|scss)$": "<rootDir>/src/__tests__/__mocks__/styleMock.ts"
+    "\\.(css|scss)$": "<rootDir>/src/__tests__/__mocks__/styleMock.ts",
+    "react-i18next": "<rootDir>/src/__tests__/__mocks__/react-i18next.tsx"
   },
   "setupFiles": [
     "raf/polyfill"

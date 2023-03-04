@@ -1,12 +1,13 @@
 import * as gb from '../../assets/i18n/gb.json'
+import * as i18n from 'i18next'
 import * as jp from '../../assets/i18n/jp.json'
 import * as ua from '../../assets/i18n/ua.json'
+import I18nLanguageDetector from './I18nLanguageDetector'
 import SupportedLocales from './SupportedLocales'
-import i18n from 'i18next'
 import { Locale } from './types'
-import { initReactI18next, TFunction } from 'react-i18next'
+import { initReactI18next } from 'react-i18next'
 
-type I18nServiceCallback = (t: TFunction) => void
+type I18nServiceCallback = (t: i18n.TFunction) => void
 
 export enum I18nServiceCallbackTypes {
   ON_LOADED,
@@ -17,22 +18,14 @@ class I18nService {
   private readonly callbacks = new Map<I18nServiceCallbackTypes, I18nServiceCallback[]>()
 
   constructor() {
-    if (document.location.search) {
-      window.history.replaceState(
-        {},
-        document.title,
-        document.location.origin + document.location.pathname + document.location.hash
-      )
-    }
-    const callback: I18nServiceCallback = (t: TFunction) => document.title = t('business-card-title')
+    const callback: I18nServiceCallback = (t: i18n.TFunction) => document.title = t('business-card-title')
     this.registerCallback(I18nServiceCallbackTypes.ON_LOADED, callback)
     this.registerCallback(I18nServiceCallbackTypes.ON_CHANGED, callback)
   }
 
   async load(): Promise<void> {
     return i18n
-    // TODO: to fix lang detector
-      // .use(LanguageDetector)
+      .use(I18nLanguageDetector)
       .use(initReactI18next)
       .init({
         debug: process.env.NODE_ENV === 'development',
@@ -45,13 +38,13 @@ class I18nService {
           jp: { common: jp },
           ua: { common: ua }
         }
-      }).then((t: TFunction) => {
+      }).then((t: i18n.TFunction) => {
         this.fireCallbacks(I18nServiceCallbackTypes.ON_LOADED, t)
       })
   }
 
-  async set({ code }: Locale): Promise<TFunction> {
-    return i18n.changeLanguage(code, (err: any, t: TFunction) => this.fireCallbacks(
+  async set({ code }: Locale): Promise<i18n.TFunction> {
+    return i18n.changeLanguage(code, (err: any, t: i18n.TFunction) => this.fireCallbacks(
       I18nServiceCallbackTypes.ON_CHANGED, t
     ))
   }
@@ -63,7 +56,7 @@ class I18nService {
     this.callbacks.get(type).push(callback)
   }
 
-  private fireCallbacks(type: I18nServiceCallbackTypes, t: TFunction): void {
+  private fireCallbacks(type: I18nServiceCallbackTypes, t: i18n.TFunction): void {
     this.callbacks.get(type).forEach((c: I18nServiceCallback) => c(t))
   }
 }

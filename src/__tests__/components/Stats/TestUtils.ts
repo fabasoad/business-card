@@ -49,13 +49,23 @@ export function testStatsMain(div: HTMLDivElement) {
   testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement)
   testStatsGitHub(divStatsItems.item(1) as HTMLDivElement)
   testStatsStackOverflow(divStatsItems.item(2) as HTMLDivElement)
+  testStatsStatsSuperUser(divStatsItems.item(3) as HTMLDivElement)
 }
 
 export function testStatsStackOverflow(div: HTMLDivElement) {
   testStatsCommon(
     div,
     'https://stackoverflow.com/users/470214/fabasoad',
-    new RegExp('➕️ \\d+'),
+    new RegExp('🏆️ \\d+'),
     'stackoverflow'
+  )
+}
+
+export function testStatsStatsSuperUser(div: HTMLDivElement) {
+  testStatsCommon(
+    div,
+    'https://superuser.com/users/1123723/fabasoad',
+    new RegExp('➕ \\d+'),
+    'superuser'
   )
 }

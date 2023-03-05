@@ -1,10 +1,9 @@
-import * as React from 'react'
-import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
-
-import { testSectionTitle } from './TestUtils'
+import * as React from 'react'
 import SectionTitle from '../../../components/Controls/SectionTitle'
 import StringUtils from '../../../scripts/utils/StringUtils'
+import { render } from '@testing-library/react'
+import { testSectionTitle } from './TestUtils'
 
 test('should render SectionTitle correctly', () => {
   const title = StringUtils.random(10)

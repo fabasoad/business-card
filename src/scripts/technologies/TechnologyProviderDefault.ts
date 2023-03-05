@@ -52,6 +52,7 @@ import * as imgSilverlight from '../../assets/images/technologies/silverlight.pn
 import * as imgSmarty from '../../assets/images/technologies/smarty.png'
 import * as imgSpring from '../../assets/images/technologies/spring.png'
 import * as imgStackOverflow from '../../assets/images/technologies/stackoverflow.png'
+import * as imgSuperUser from '../../assets/images/technologies/superuser.png'
 import * as imgSvn from '../../assets/images/technologies/svn.png'
 import * as imgTeamCity from '../../assets/images/technologies/teamCity.png'
 import * as imgTerraform from '../../assets/images/technologies/terraform.png'
@@ -123,6 +124,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'smarty', img: imgSmarty, title: 'Smarty' },
     { name: 'spring', img: imgSpring, title: 'Spring' },
     { name: 'stackoverflow', img: imgStackOverflow, title: 'StackOverflow' },
+    { name: 'superuser', img: imgSuperUser, title: 'SuperUser' },
     { name: 'svn', img: imgSvn, title: 'SVN' },
     { name: 'teamCity', img: imgTeamCity, title: 'Team City' },
     { name: 'terraform', img: imgTerraform, isSkill: true, title: 'Terraform' },

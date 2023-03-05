@@ -61,6 +61,7 @@ describe('TechnologyProviderDefault', () => {
       ['smarty', 'Smarty', false],
       ['spring', 'Spring', false],
       ['stackoverflow', 'StackOverflow', false],
+      ['superuser', 'SuperUser', false],
       ['svn', 'SVN', false],
       ['teamCity', 'Team City', false],
       ['terraform', 'Terraform', true],
@@ -77,7 +78,7 @@ describe('TechnologyProviderDefault', () => {
   })
 
   test('should have correct name and title', () => {
-    expect(TechnologyProviderDefault.items.size).toEqual(66)
+    expect(TechnologyProviderDefault.items.size).toEqual(67)
     let ind = 0
     for (const [name, tech] of TechnologyProviderDefault.items) {
       expect(name).toEqual(expected[ind][0])

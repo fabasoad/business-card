@@ -3,22 +3,22 @@ import remoteService, { StackOverflowData } from '../../scripts/services/StackOv
 import StatsCommon from './StatsCommon'
 import { AutoloadProps } from '../Controls/AutoloadProps'
 
-export default function StatsStackOverflow({ autoload }: AutoloadProps) {
+export default function StatsSuperUser({ autoload }: AutoloadProps) {
   const [reputation, setReputation] = React.useState<number>(0)
   React.useEffect(() => {
     if (autoload) {
       remoteService.request().then(({
-        stackOverflow
-      }: StackOverflowData) => setReputation(stackOverflow.reputation))
+        superUser
+      }: StackOverflowData) => setReputation(superUser.reputation))
     }
   })
   return (
-    <StatsCommon techName="stackoverflow" url="https://stackoverflow.com/users/470214/fabasoad">
-      🏆️ {reputation}
+    <StatsCommon techName="superuser" url="https://superuser.com/users/1123723/fabasoad">
+      ➕ {reputation}
     </StatsCommon>
   )
 }
 
-StatsStackOverflow.defaultProps = {
+StatsSuperUser.defaultProps = {
   autoload: true
 }

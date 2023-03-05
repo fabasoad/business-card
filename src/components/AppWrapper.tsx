@@ -3,7 +3,6 @@ import Error from './Controls/Error'
 import LoadingSpinner from './LoadingSpinner'
 import i18nService, { I18nServiceCallbackTypes } from '../scripts/i18n/I18nService'
 import producer from '../scripts/DevMessageProducer'
-import { Row } from 'react-bootstrap'
 
 enum Status {
   LOADING,
@@ -34,9 +33,8 @@ export default function AppWrapper({ children }: React.PropsWithChildren<{}>) {
       return <>{children}</>
     default:
       return (
-        <Error>
-          <Row>Failed to load i18n settings</Row>
-          <Row><a target="_blank" rel="noopener noreferrer" href="https://github.com/fabasoad/business-card/issues/new/choose">Please raise GitHub issue</a></Row>
+        <Error title="Failed to load i18n settings">
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/fabasoad/business-card/issues/new/choose">Please raise GitHub issue</a>
         </Error>
       )
   }

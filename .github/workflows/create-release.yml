@@ -6,6 +6,10 @@ on:
     tags:
       - 'v*.*.*'
 
+defaults:
+  run:
+    shell: sh
+
 jobs:
   deploy:
     name: Deploy
@@ -25,10 +29,8 @@ jobs:
       - name: Compile
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
         run: yarn install
-        shell: sh
       - name: Build
         run: yarn run build:prod
-        shell: sh
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -70,4 +72,3 @@ jobs:
             -H "Accept: application/vnd.github.everest-preview+json" \
             -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches \
             --data '{"ref": "refs/heads/main"}'
-        shell: sh

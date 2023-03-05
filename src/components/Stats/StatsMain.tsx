@@ -6,6 +6,7 @@ import StatsStackOverflow from './StatsStackOverflow'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 import { AutoloadProps } from '../Controls/AutoloadProps'
+import StatsSuperUser from './StatsSuperUser';
 
 function StatsMain({ autoload, t }: WithTranslation & AutoloadProps) {
   return (
@@ -19,6 +20,7 @@ function StatsMain({ autoload, t }: WithTranslation & AutoloadProps) {
             <StatsLeetcode autoload={autoload} />
             <StatsGitHub autoload={autoload} />
             <StatsStackOverflow autoload={autoload} />
+            <StatsSuperUser autoload={autoload} />
           </Col>
         </Row>
       </Container>

@@ -49,7 +49,7 @@ export function testStatsMain(div: HTMLDivElement) {
   testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement)
   testStatsGitHub(divStatsItems.item(1) as HTMLDivElement)
   testStatsStackOverflow(divStatsItems.item(2) as HTMLDivElement)
-  testStatsStatsSuperUser(divStatsItems.item(3) as HTMLDivElement)
+  testStatsSuperUser(divStatsItems.item(3) as HTMLDivElement)
 }
 
 export function testStatsStackOverflow(div: HTMLDivElement) {
@@ -61,7 +61,7 @@ export function testStatsStackOverflow(div: HTMLDivElement) {
   )
 }
 
-export function testStatsStatsSuperUser(div: HTMLDivElement) {
+export function testStatsSuperUser(div: HTMLDivElement) {
   testStatsCommon(
     div,
     'https://superuser.com/users/1123723/fabasoad',

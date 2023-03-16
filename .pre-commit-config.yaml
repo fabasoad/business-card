@@ -42,7 +42,7 @@ repos:
         args: ['--exclude-lines', '^(  "id": "F75CDD8ED9F0",)$']
         stages: ["commit", "push"]
   - repo: https://github.com/zricethezav/gitleaks
-    rev: v8.16.0
+    rev: v8.16.1
     hooks:
       - id: gitleaks
         stages: ["commit", "push"]

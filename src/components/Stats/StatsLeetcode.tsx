@@ -5,8 +5,8 @@ import { AutoloadProps } from '../Controls/AutoloadProps'
 
 export default function StatsLeetcode({ autoload }: AutoloadProps) {
   const [stats, setStats] = React.useState<LeetcodeStats>({
-    totalSolved: 186,
-    easySolved: 92,
+    totalSolved: 187,
+    easySolved: 93,
     mediumSolved: 91,
     hardSolved: 3
   })

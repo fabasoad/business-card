@@ -6,10 +6,10 @@ type LanguageLinkItemProps = LanguageTextItemProps & {
   url: string
 }
 
-export default function LanguageLinkItem(props: LanguageLinkItemProps) {
+export default function LanguageLinkItem({ code, text, url }: LanguageLinkItemProps) {
   return (
-    <LanguageItem code={props.code}>
-      <a className="h5 mt-2" target="_blank" rel="noopener noreferrer" href={props.url}>{props.text}</a>
+    <LanguageItem code={code}>
+      <a className="h5 mt-2" target="_blank" rel="noopener noreferrer" href={url}>{text}</a>
     </LanguageItem>
   )
 }

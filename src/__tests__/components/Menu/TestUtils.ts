@@ -6,6 +6,7 @@ export function testLocaleDropDown(div: HTMLDivElement, locale: Locale) {
   const button = div.querySelector('button')
   expect(button).toHaveClass('nav-link')
   expect(button).toHaveTextContent(`business-card-languages-${locale.code}`)
+  expect(button.querySelector('svg.locale-icon')).not.toBeNull()
 }
 
 export function testMenuItemRendered(a: HTMLAnchorElement, name: string) {

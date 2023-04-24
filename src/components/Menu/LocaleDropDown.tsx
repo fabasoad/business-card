@@ -11,7 +11,7 @@ function LocaleDropDown({ i18n, t }: WithTranslation) {
     <Dropdown>
       <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
         <BsGlobe className="locale-icon" />
-        <span>{t(`business-card-languages-${SupportedLocales.getOrDefault(i18n.language).code}`)}</span>
+        {t(`business-card-languages-${SupportedLocales.getOrDefault(i18n.language).code}`)}
       </Dropdown.Toggle>
       <Dropdown.Menu>
         {SupportedLocales.getExceptOf(i18n.language).map((l: Locale) => {

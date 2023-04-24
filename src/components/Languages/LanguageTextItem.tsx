@@ -5,10 +5,10 @@ export type LanguageTextItemProps = LanguageItemProps & {
   text: string
 }
 
-export default function LanguageTextItem(props: LanguageTextItemProps) {
+export default function LanguageTextItem({ code, text }: LanguageTextItemProps) {
   return (
-    <LanguageItem code={props.code}>
-      <span className="h5 mt-2">{props.text}</span>
+    <LanguageItem code={code}>
+      <span className="h5 mt-2">{text}</span>
     </LanguageItem>
   )
 }

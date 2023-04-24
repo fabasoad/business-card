@@ -1,20 +1,20 @@
 .language-list {
-  div {
+  >div {
     display: inline-grid;
+    .h4 {
+      color: $dark-blue;
+    }
     .h5 {
 			text-transform: uppercase;
+      color: $dark-orange;
     }
     a {
-      color: $blue;
       text-decoration: none;
 			&:hover {
 				outline: 0;
 				color: $orange;
 				background-color: transparent;
 			}
-    }
-    .flag-icon {
-      border-radius: 30px;
     }
   }
 }

@@ -2,7 +2,7 @@ import { Locale } from './types'
 
 export default class SupportedLocales {
   static _items: Locale[] = [
-    new Locale('gb', 'en'),
+    new Locale('gb'),
     new Locale('jp'),
     new Locale('ua')
   ]

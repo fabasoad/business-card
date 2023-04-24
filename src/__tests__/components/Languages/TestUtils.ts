@@ -3,11 +3,8 @@ import { testSectionTitle } from '../Controls/TestUtils'
 export function testLanguageItem(div: HTMLDivElement, code: string): void {
   expect(div).toHaveClass('mb-4')
   expect(div).toHaveClass('mx-4')
-  const span = div.querySelector('span')
-  expect(span).toHaveClass('flag-icon')
-  expect(span).toHaveClass('flag-icon-4x')
-  expect(span).toHaveClass(`flag-icon-${code}`)
-  expect(span).toHaveClass('mx-auto')
+  const divH4 = div.querySelector('div.h4')
+  expect(divH4).toHaveTextContent(code)
 }
 
 export function testLanguageLinkItem(

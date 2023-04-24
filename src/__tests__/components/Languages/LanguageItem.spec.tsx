@@ -6,14 +6,14 @@ import LanguageItem from '../../../components/Languages/LanguageItem'
 import { testLanguageItem } from './TestUtils'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 
-for (const locale of SupportedLocales._items) {
-  test(`[${locale.code}] should render LanguageItem correctly`, () => {
+for (const { code } of SupportedLocales._items) {
+  test(`[${code}] should render LanguageItem correctly`, () => {
     const text = 'test-content'
     const { container } = render(
-      <LanguageItem code={locale.code}>{text}</LanguageItem>
+      <LanguageItem code={code}>{text}</LanguageItem>
     )
     const div = container.querySelector('div')
     expect(div).toHaveTextContent(text)
-    testLanguageItem(div, locale.code)
+    testLanguageItem(div, code)
   })
 }

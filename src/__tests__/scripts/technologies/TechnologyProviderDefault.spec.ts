@@ -10,13 +10,15 @@ describe('TechnologyProviderDefault', () => {
       ['algorithms', 'Algorithms', false],
       ['angular', 'Angular', false],
       ['aws', 'AWS', true],
+      ['azureAd', 'Azure AD', false],
       ['bitrise', 'Bitrise', false],
       ['bootstrap', 'Bootstrap', true],
       ['codeigniter', 'CodeIgniter', false],
+      ['codeql', 'CodeQL', false],
       ['concourseCI', 'Concourse CI', true],
       ['csharp', 'C#', true],
       ['docker', 'Docker', true],
-      ['dotNetCore', '.NET Core', true],
+      ['dotNetCore', '.NET Core', false],
       ['elasticsearch', 'Elasticsearch', false],
       ['fluentBit', 'fluent-bit', false],
       ['fluentD', 'FluentD', false],
@@ -25,10 +27,12 @@ describe('TechnologyProviderDefault', () => {
       ['gitHubActions', 'GitHub Actions', true],
       ['gitlab', 'GitLab', true],
       ['gitlabCi', 'GitLab CI', true],
+      ['go', 'Go', true],
       ['grafana', 'Grafana', false],
       ['helm', 'Helm', false],
       ['hpeAlm', 'HPE ALM', false],
       ['intellijIdea', 'Intellij IDEA', false],
+      ['istio', 'Istio', false],
       ['jQuery', 'jQuery', false],
       ['java', 'Java', true],
       ['javaScript', 'JavaScript', true],
@@ -48,6 +52,7 @@ describe('TechnologyProviderDefault', () => {
       ['netBeans', 'NetBeans', false],
       ['npm', 'npm', false],
       ['oracle', 'Oracle', false],
+      ['opa', 'Open Policy Agent', false],
       ['oxidEShop', 'Oxid E-Shop', false],
       ['php', 'PHP', false],
       ['prism', 'Prism', false],
@@ -59,6 +64,7 @@ describe('TechnologyProviderDefault', () => {
       ['redmine', 'Redmine', false],
       ['silverlight', 'Silverlight', false],
       ['smarty', 'Smarty', false],
+      ['snyk', 'Snyk', true],
       ['spring', 'Spring', false],
       ['stackoverflow', 'StackOverflow', false],
       ['superuser', 'SuperUser', false],
@@ -78,7 +84,7 @@ describe('TechnologyProviderDefault', () => {
   })
 
   test('should have correct name and title', () => {
-    expect(TechnologyProviderDefault.items.size).toEqual(67)
+    expect(TechnologyProviderDefault.items.size).toEqual(73)
     let ind = 0
     for (const [name, tech] of TechnologyProviderDefault.items) {
       expect(name).toEqual(expected[ind][0])

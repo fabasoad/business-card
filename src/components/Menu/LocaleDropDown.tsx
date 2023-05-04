@@ -22,7 +22,7 @@ function LocaleDropDown({ i18n, t }: WithTranslation) {
               eventKey={l.code}
               key={`dropdown-item-${l.code}`}
             >
-              {t(`business-card-languages-${l.code}`)}
+              {t(`business-card-languages-${l.code}`, { lng: l.code })}
             </Dropdown.Item>
           )
         })}

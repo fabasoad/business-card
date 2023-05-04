@@ -12,8 +12,7 @@ export default function StatsLeetcode({ autoload }: AutoloadProps) {
   })
   React.useEffect(() => {
     if (autoload) {
-      // TODO: Uncomment once BE service is ready
-      // remoteService.request().then(setStats)
+      remoteService.request().then(setStats)
     }
   })
   return (

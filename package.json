@@ -6,6 +6,7 @@
   "scripts": {
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
+    "lint": "eslint --ext ts --ext tsx src",
     "start:dev": "webpack serve --config webpack.dev.js",
     "start:web": "nodemon --watch ./server -r dotenv/config server/app.js",
     "test": "jest --coverage"

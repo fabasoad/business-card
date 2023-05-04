@@ -13,13 +13,6 @@ repos:
         pass_filenames: false
         verbose: true
         stages: ["push"]
-      - id: eslint
-        name: Lint
-        entry: yarn run lint
-        language: system
-        pass_filenames: false
-        verbose: true
-        stages: ["commit"]
       - id: test
         name: Unit tests
         entry: yarn test
@@ -50,6 +43,13 @@ repos:
     hooks:
       - id: snyk-test
         stages: ["push"]
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v8.39.0
+    hooks:
+      - id: eslint
+        args: ["--ext", "ts", "--ext", "tsx", "src"]
+        verbose: true
+        stages: ["commit"]
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
     rev: v0.34.0

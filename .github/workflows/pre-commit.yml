@@ -19,8 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/fabasoad/pre-commit-container:latest
-    permissions:
-      contents: read
+      options: --user root
     steps:
       - uses: actions/checkout@v3
       - name: Update git config

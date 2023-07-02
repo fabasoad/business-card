@@ -77,7 +77,7 @@
   "dependencies": {
     "@octokit/rest": "19.0.13",
     "react-bootstrap": "2.7.4",
-    "react-icons": "4.8.0"
+    "react-icons": "4.10.1"
   },
   "packageManager": "yarn@3.6.1"
 }

@@ -1,5 +1,5 @@
 ---
-name: Create release
+name: Release
 
 on:  # yamllint disable-line rule:truthy
   push:

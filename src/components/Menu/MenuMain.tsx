@@ -34,7 +34,7 @@ function MenuMain({ t }: WithTranslation) {
   return (
     <div className="affix-top" id="nav">
       <Navbar expanded={expanded} onToggle={setExpanded} collapseOnSelect={true} expand="md" className="navbar-custom">
-        <Navbar.Brand href="#header" className="ms-2">{t<string>('business-card-author-name')}</Navbar.Brand>
+        <Navbar.Brand href="#header" className="ms-2">{t('business-card-author-name')}</Navbar.Brand>
         <Navbar.Toggle className="navbar-dark" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse role={undefined} id="basic-navbar-nav">
           <Nav activeKey={activeNavLink}>

@@ -27,7 +27,7 @@ function CertificateItem({
       <Card.Body>
         <Card.Text>
           <Card.Link target="_blank" rel="noopener noreferrer" href={url}>
-            {t<string>(i18nTitleKey)}
+            {t(i18nTitleKey)}
           </Card.Link>
         </Card.Text>
       </Card.Body>

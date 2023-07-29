@@ -14,7 +14,7 @@ function MenuItem({ name, setActiveNavLink, t }: WithTranslation & MenuItemProps
       eventKey={`#${name}`}
       href={`#${name}`}
     >
-      {t<string>(`business-card-menu-${name}`)}
+      {t(`business-card-menu-${name}`)}
     </Nav.Link>
   )
 }

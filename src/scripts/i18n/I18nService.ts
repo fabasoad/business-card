@@ -33,6 +33,7 @@ class I18nService {
         fallbackLng: SupportedLocales.default.code,
         ns: ['common'],
         returnNull: false,
+        returnObjects: true,
         resources: {
           gb: { common: gb },
           jp: { common: jp },

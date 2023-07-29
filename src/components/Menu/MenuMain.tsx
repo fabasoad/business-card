@@ -4,18 +4,18 @@ import { WithTranslation, withTranslation } from 'react-i18next'
 import LocaleDropDown from './LocaleDropDown'
 import MenuItem from './MenuItem'
 
+
 function MenuMain({ t }: WithTranslation) {
   const [expanded, setExpanded] = React.useState<boolean>(false)
   const [activeNavLink, setActiveNavLink] = React.useState<string>(document.location.hash)
 
   document.querySelectorAll('*').forEach((el) => {
     el.addEventListener('click', (e) => {
-      const findParent = (el1: HTMLElement | null, el2: HTMLElement | null):
-          HTMLElement | null => {
+      const findParent = (el1: HTMLElement, el2: HTMLElement): HTMLElement => {
         if (el1 === el2) {
           return el1
         }
-        if (el1?.parentElement == null) {
+        if (el1.parentElement == null) {
           return null
         }
         return findParent(el1.parentElement, el2)

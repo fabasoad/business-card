@@ -3,8 +3,7 @@
     "target": "es2022",
     "jsx": "react",
     "module": "commonjs",
-    "resolveJsonModule": true,
-    "strictNullChecks": true
+    "resolveJsonModule": true
   },
   "exclude": [
     "node_modules"

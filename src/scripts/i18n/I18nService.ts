@@ -33,6 +33,7 @@ class I18nService {
         fallbackLng: SupportedLocales.default.code,
         ns: ['common'],
         returnNull: false,
+        returnObjects: true,
         resources: {
           gb: { common: gb },
           jp: { common: jp },
@@ -53,11 +54,11 @@ class I18nService {
     if (!this.callbacks.has(type)) {
       this.callbacks.set(type, [])
     }
-    this.callbacks.get(type).push(callback)
+    this.callbacks.get(type)?.push(callback)
   }
 
   private fireCallbacks(type: I18nServiceCallbackTypes, t: i18n.TFunction): void {
-    this.callbacks.get(type).forEach((c: I18nServiceCallback) => c(t))
+    this.callbacks.get(type)?.forEach((c: I18nServiceCallback) => c(t))
   }
 }
 

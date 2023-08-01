@@ -37,7 +37,7 @@ jobs:
         run: yarn test
       - name: Unit tests with coverage
         if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
-        uses: paambaati/codeclimate-action@v4.0.0
+        uses: paambaati/codeclimate-action@v5.0.0
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:

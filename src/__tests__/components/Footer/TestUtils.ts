@@ -90,7 +90,7 @@ export function testFooterMain(div: HTMLDivElement) {
 
 export function testFooterSocial(div: HTMLDivElement): void {
   const fixture = new Map<string, string>([
-    ['https://twitter.com/fabasoad', 'fab fa-twitter fa-2x'],
+    ['https://twitter.com/fabasoad', 'fab fa-x-twitter fa-2x'],
     ['https://github.com/fabasoad', 'fab fa-github fa-2x'],
     ['https://www.linkedin.com/in/yevhenfabizhevskyi/', 'fab fa-linkedin fa-2x'],
     ['https://stackoverflow.com/users/470214/fabasoad', 'fab fa-stack-overflow fa-2x'],

@@ -21,6 +21,10 @@ class GitHubService implements RemoteService<number> {
         }
         this.state = State.FINISHED
         return res
+      }).catch((reason) => {
+        console.log(reason)
+        this.state = State.FAILED
+        return 47;
       })
     }
     return Promise.resolve(this.starsAmount)

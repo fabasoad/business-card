@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { BsGlobe } from 'react-icons/bs'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 import { Dropdown } from 'react-bootstrap'
 import { withTranslation, WithTranslation } from 'react-i18next'
@@ -10,7 +9,7 @@ function LocaleDropDown({ i18n, t }: WithTranslation) {
   return (
     <Dropdown>
       <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
-        <BsGlobe className="locale-icon" />
+        <i className="fa fa-globe locale-icon"></i>
         {t(`business-card-languages-${SupportedLocales.getOrDefault(i18n.language).code}`)}
       </Dropdown.Toggle>
       <Dropdown.Menu>

@@ -40,7 +40,7 @@ repos:
       - id: detect-secrets
         # Excluding Hacker Rank certificate id located in items.json file
         args: ['--exclude-lines', '^(  "id": "F75CDD8ED9F0",)$']
-  - repo: https://github.com/zricethezav/gitleaks
+  - repo: https://github.com/gitleaks/gitleaks
     rev: v8.17.0
     hooks:
       - id: gitleaks

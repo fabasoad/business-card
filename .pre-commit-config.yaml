@@ -1,7 +1,7 @@
 ---
 default_install_hook_types: ["pre-commit", "pre-push"]
 default_stages: ["commit", "push"]
-exclude: ^(\.gitleaks\.toml|\.yarn/.*|src/libs/.*)$
+exclude: ^(\.yarn/.*|src/libs/.*)$
 minimum_pre_commit_version: 2.18.0
 repos:
   - repo: local
@@ -70,7 +70,7 @@ repos:
         stages: ["push"]
   # Other
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
       - id: check-merge-conflict
       - id: check-json

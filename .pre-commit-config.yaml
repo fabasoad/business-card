@@ -66,7 +66,7 @@ repos:
     rev: v1.6.26
     hooks:
       - id: actionlint
-        args: ["-shellcheck=", "-pyflakes="]
+        args: ["-pyflakes="]
         stages: ["push"]
   # Other
   - repo: https://github.com/pre-commit/pre-commit-hooks

@@ -4461,7 +4461,7 @@ __metadata:
     eslint-config-google: 0.14.0
     eslint-plugin-react: 7.33.2
     express: 4.18.2
-    express-rate-limit: 6.11.2
+    express-rate-limit: 7.1.0
     humanize-duration: 3.30.0
     i18next: 23.5.1
     jest: 29.7.0
@@ -5927,12 +5927,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-rate-limit@npm:6.11.2":
-  version: 6.11.2
-  resolution: "express-rate-limit@npm:6.11.2"
+"express-rate-limit@npm:7.1.0":
+  version: 7.1.0
+  resolution: "express-rate-limit@npm:7.1.0"
   peerDependencies:
     express: ^4 || ^5
-  checksum: 3cc4032ee2f7063647f45e338e10c9a67d8595a0f9a5a291d6633b6d96aab6201c8943bae74491f824cb6230a59921daec95ef4e22c1112759a766456c0f1f19
+  checksum: d10e5419058d62d696b4ca9279cdd6089e808b4480e880968b662ba739fe0fed91f8a610ab608fce68dd1da6c2ddb7aa9f08de8a929ea1909e82682081dcee15
   languageName: node
   linkType: hard
 

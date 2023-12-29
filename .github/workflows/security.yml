@@ -1,5 +1,5 @@
 ---
-name: Security Tests
+name: Security
 
 on:  # yamllint disable-line rule:truthy
   push:

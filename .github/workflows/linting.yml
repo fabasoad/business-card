@@ -1,0 +1,39 @@
+---
+name: Linting
+
+on: # yamllint disable-line rule:truthy
+  pull_request: {}
+  push:
+    branches:
+      - main
+
+jobs:
+  eslint:
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: ".nvmrc"
+      - name: Cache yarn dependencies
+        id: yarn-cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            .yarn/cache
+            node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/.yarnrc.yml') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+      - name: Compile
+        if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
+        run: yarn install
+      - name: Run ESLint
+        run: yarn run lint
+  pre-commit:
+    name: Pre-commit
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-pre-commit.yml@main
+    with:
+      skip-hooks: "audit, build, lint, test, snyk-test"

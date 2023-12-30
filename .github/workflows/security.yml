@@ -1,5 +1,5 @@
 ---
-name: Security Tests
+name: Security
 
 on:  # yamllint disable-line rule:truthy
   push:
@@ -7,21 +7,21 @@ on:  # yamllint disable-line rule:truthy
       - 'main'
   pull_request:
 
+defaults:
+  run:
+    shell: sh
+
 jobs:
   codeql:
     name: CodeQL
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        language: ['javascript']
     steps:
-      - name: Checkout repository
+      - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v2
         with:
-          languages: ${{ matrix.language }}
+          languages: "javascript"
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
       - name: Perform CodeQL Analysis
@@ -30,8 +30,7 @@ jobs:
     name: Yarn audit
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
       - name: Yarn audit
         run: yarn npm audit --all
-        shell: sh

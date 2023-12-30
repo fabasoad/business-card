@@ -4485,7 +4485,7 @@ __metadata:
     eslint-plugin-react: "npm:7.33.2"
     express: "npm:4.18.2"
     express-rate-limit: "npm:7.1.5"
-    humanize-duration: "npm:3.30.0"
+    humanize-duration: "npm:3.31.0"
     i18next: "npm:23.7.12"
     jest: "npm:29.7.0"
     jest-environment-jsdom: "npm:29.7.0"
@@ -4493,7 +4493,7 @@ __metadata:
     normalize.css: "npm:8.0.1"
     raf: "npm:3.4.1"
     react: "npm:18.2.0"
-    react-bootstrap: "npm:2.9.1"
+    react-bootstrap: "npm:2.9.2"
     react-dom: "npm:18.2.0"
     react-i18next: "npm:14.0.0"
     react-iframe: "npm:1.8.5"
@@ -6741,10 +6741,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"humanize-duration@npm:3.30.0":
-  version: 3.30.0
-  resolution: "humanize-duration@npm:3.30.0"
-  checksum: cd0b71189fb61022b82cee8acabdb83322e1652158c1dfcfecab693e53372a70b3ba393c836fb90f1c05a63b65d56a70f28e9707e2ebf41f0990a5212b17fc79
+"humanize-duration@npm:3.31.0":
+  version: 3.31.0
+  resolution: "humanize-duration@npm:3.31.0"
+  checksum: a78612f6920bd1348401632f4d707da877878473d0b92b6df4c8eff65700365715daae3238324a2c49e25dbddd5d033d5acbb85edc1551eb5f6120a61eb3fd2b
   languageName: node
   linkType: hard
 
@@ -9354,9 +9354,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:2.9.1":
-  version: 2.9.1
-  resolution: "react-bootstrap@npm:2.9.1"
+"react-bootstrap@npm:2.9.2":
+  version: 2.9.2
+  resolution: "react-bootstrap@npm:2.9.2"
   dependencies:
     "@babel/runtime": "npm:^7.22.5"
     "@restart/hooks": "npm:^0.4.9"
@@ -9377,7 +9377,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 2b89b5ce17e1ab9dd17d14f359b3c19fee97961c4886c4a1b8b1ad79df69d387cdf1e566863d4b10abfd9eb568bb0434dfc6911049539ae1627f4e04277d020a
+  checksum: fc5647d9bd99810925781f1c752ce231159809f075ea54c90ece3ef5aa8452b0b1e8bd3fd325c14e68cf1a04d69353c051e359b4f30e4337bf8b6756ccb2dcca
   languageName: node
   linkType: hard
 

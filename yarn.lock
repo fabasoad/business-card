@@ -2500,6 +2500,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@microsoft/eslint-formatter-sarif@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@microsoft/eslint-formatter-sarif@npm:3.0.0"
+  dependencies:
+    eslint: "npm:^8.9.0"
+    jschardet: "npm:latest"
+    lodash: "npm:^4.17.14"
+    utf8: "npm:^3.0.0"
+  checksum: e083246b50b02852806511a408c7b272f7f81b837b5625c5f1e42171e11b82fa6b03ede5dec5ba6a9b72081217ff3be1d608deec455ca65c4dc7b0724d4c52c2
+  languageName: node
+  linkType: hard
+
 "@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.3":
   version: 2.1.8-no-fsevents.3
   resolution: "@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.3"
@@ -4442,6 +4454,7 @@ __metadata:
     "@babel/preset-env": "npm:7.23.7"
     "@babel/preset-react": "npm:7.23.3"
     "@babel/preset-typescript": "npm:7.23.3"
+    "@microsoft/eslint-formatter-sarif": "npm:3.0.0"
     "@octokit/rest": "npm:20.0.2"
     "@popperjs/core": "npm:2.11.8"
     "@testing-library/jest-dom": "npm:6.1.6"
@@ -5746,7 +5759,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.56.0":
+"eslint@npm:8.56.0, eslint@npm:^8.9.0":
   version: 8.56.0
   resolution: "eslint@npm:8.56.0"
   dependencies:
@@ -7923,6 +7936,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jschardet@npm:latest":
+  version: 3.0.0
+  resolution: "jschardet@npm:3.0.0"
+  checksum: 5d12d351cf1fbd3e4644418e6d7545acdd36eb198caad1ba0d98b91c54f75936d51bcf369412f5f296766913c1e1899543c8da4dd8fc1fc7f142d760beff5d4e
+  languageName: node
+  linkType: hard
+
 "jsdom@npm:^20.0.0":
   version: 20.0.3
   resolution: "jsdom@npm:20.0.3"
@@ -8140,7 +8160,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.4":
+"lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -11061,6 +11081,13 @@ __metadata:
     querystringify: "npm:^2.1.1"
     requires-port: "npm:^1.0.0"
   checksum: bd5aa9389f896974beb851c112f63b466505a04b4807cea2e5a3b7092f6fbb75316f0491ea84e44f66fed55f1b440df5195d7e3a8203f64fcefa19d182f5be87
+  languageName: node
+  linkType: hard
+
+"utf8@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "utf8@npm:3.0.0"
+  checksum: 675d008bab65fc463ce718d5cae8fd4c063540f269e4f25afebce643098439d53e7164bb1f193e0c3852825c7e3e32fbd8641163d19a618dbb53f1f09acb0d5a
   languageName: node
   linkType: hard
 

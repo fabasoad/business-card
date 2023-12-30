@@ -37,7 +37,6 @@ jobs:
           eslint-args: "-o eslint-results.sarif"
           extensions: "js,jsx,ts,tsx"
           annotations: true
-          working-directory: "${{ github.workspace }}/src"
       - name: Upload to GHAS
         uses: github/codeql-action/upload-sarif@v2
         with:

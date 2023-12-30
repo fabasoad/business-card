@@ -12,8 +12,8 @@ defaults:
     shell: sh
 
 jobs:
-  codeql:
-    name: CodeQL
+  code-scanning:
+    name: Code scanning
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ${{ github.repository }}
@@ -30,6 +30,7 @@ jobs:
       - name: Upload to GHAS
         uses: github/codeql-action/upload-sarif@v2
         with:
+          category: "code-scanning"
           sarif_file: "${{ steps.codeql-analysis.outputs.sarif-output }}"
   yarn-audit:
     name: Yarn audit
@@ -53,4 +54,5 @@ jobs:
       - name: Upload to GHAS
         uses: github/codeql-action/upload-sarif@v2
         with:
+          category: "directory-scanning"
           sarif_file: "${{ steps.scan-directory.outputs.sarif }}"

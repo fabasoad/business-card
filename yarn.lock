@@ -12,7 +12,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/css-tools@npm:^4.3.1":
+"@adobe/css-tools@npm:^4.3.2":
   version: 4.3.2
   resolution: "@adobe/css-tools@npm:4.3.2"
   checksum: 296a03dd29f227c60500d2da8c7f64991fecf1d8b456ce2b4adb8cec7363d9c08b5b03f1463673fc8cbfe54b538745588e7a13c736d2dd14a80c01a20f127f39
@@ -1529,14 +1529,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-display-name@npm:^7.22.5":
-  version: 7.22.5
-  resolution: "@babel/plugin-transform-react-display-name@npm:7.22.5"
+"@babel/plugin-transform-react-display-name@npm:^7.23.3":
+  version: 7.23.3
+  resolution: "@babel/plugin-transform-react-display-name@npm:7.23.3"
   dependencies:
     "@babel/helper-plugin-utils": "npm:^7.22.5"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 41e0167ecd8e5281e427556146b1d3bee8652bcd0664be013f16ffeeb4d61b7ab0b1e59bcc2c923774f0d265f78012628d5277880f758f3675893226f9be012e
+  checksum: 3aed142af7bd1aed1df2bdad91ed33ba1cdd5c3c67ce6eafba821ff72f129162a197ffb55f1eb1775af276abd5545934489a8257fef6c6665ddf253a4f39a939
   languageName: node
   linkType: hard
 
@@ -1581,15 +1581,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/plugin-transform-react-pure-annotations@npm:^7.22.5":
-  version: 7.22.5
-  resolution: "@babel/plugin-transform-react-pure-annotations@npm:7.22.5"
+"@babel/plugin-transform-react-pure-annotations@npm:^7.23.3":
+  version: 7.23.3
+  resolution: "@babel/plugin-transform-react-pure-annotations@npm:7.23.3"
   dependencies:
     "@babel/helper-annotate-as-pure": "npm:^7.22.5"
     "@babel/helper-plugin-utils": "npm:^7.22.5"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 18db2e2346d79ebe4a3f85f51fa7757a63a09bc6da7f339e6ce9e7534de68b5165fe7d49ac363dee6ba3f81eb904d44bf9c13653331805f9b236a1d9fec7e018
+  checksum: 76287adeab656fb7f39243e5ab6a8c60069cf69fffeebd1566457d56cb2f966366a23bd755d3e369f4d0437459e3b76243df370caa7d7d2287a8560b66c53ca2
   languageName: node
   linkType: hard
 
@@ -1836,19 +1836,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/preset-react@npm:7.22.15":
-  version: 7.22.15
-  resolution: "@babel/preset-react@npm:7.22.15"
+"@babel/preset-react@npm:7.23.3":
+  version: 7.23.3
+  resolution: "@babel/preset-react@npm:7.23.3"
   dependencies:
     "@babel/helper-plugin-utils": "npm:^7.22.5"
     "@babel/helper-validator-option": "npm:^7.22.15"
-    "@babel/plugin-transform-react-display-name": "npm:^7.22.5"
+    "@babel/plugin-transform-react-display-name": "npm:^7.23.3"
     "@babel/plugin-transform-react-jsx": "npm:^7.22.15"
     "@babel/plugin-transform-react-jsx-development": "npm:^7.22.5"
-    "@babel/plugin-transform-react-pure-annotations": "npm:^7.22.5"
+    "@babel/plugin-transform-react-pure-annotations": "npm:^7.23.3"
   peerDependencies:
     "@babel/core": ^7.0.0-0
-  checksum: 80940aa494292b7f689d902b76828cb3ab4eaf4e6421107f23388b6ea7316ab25ccd817b766fde5c40787fd92f1cba1f660190bfd71965c902e49b42c9e290c2
+  checksum: cecb2493e09fd4ffa5effcef1d06e968386b1bfe077a99834f7e8ef249208274fca62fe5a6b3986ef1c1c3900b2eb409adb528ae1b73dba31397b16f9262e83c
   languageName: node
   linkType: hard
 
@@ -2500,6 +2500,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@microsoft/eslint-formatter-sarif@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@microsoft/eslint-formatter-sarif@npm:3.0.0"
+  dependencies:
+    eslint: "npm:^8.9.0"
+    jschardet: "npm:latest"
+    lodash: "npm:^4.17.14"
+    utf8: "npm:^3.0.0"
+  checksum: e083246b50b02852806511a408c7b272f7f81b837b5625c5f1e42171e11b82fa6b03ede5dec5ba6a9b72081217ff3be1d608deec455ca65c4dc7b0724d4c52c2
+  languageName: node
+  linkType: hard
+
 "@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.3":
   version: 2.1.8-no-fsevents.3
   resolution: "@nicolo-ribaudo/chokidar-2@npm:2.1.8-no-fsevents.3"
@@ -2810,11 +2822,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/jest-dom@npm:6.1.4":
-  version: 6.1.4
-  resolution: "@testing-library/jest-dom@npm:6.1.4"
+"@testing-library/jest-dom@npm:6.1.6":
+  version: 6.1.6
+  resolution: "@testing-library/jest-dom@npm:6.1.6"
   dependencies:
-    "@adobe/css-tools": "npm:^4.3.1"
+    "@adobe/css-tools": "npm:^4.3.2"
     "@babel/runtime": "npm:^7.9.2"
     aria-query: "npm:^5.0.0"
     chalk: "npm:^3.0.0"
@@ -2836,13 +2848,13 @@ __metadata:
       optional: true
     vitest:
       optional: true
-  checksum: 2e23f120613fd8ae6d5169bbc94f1a2e4c82b07182057dc94db8ec54ebf32555833442e6c43a187e59715d83704ffb5df49ba88a71f6f32d2683f3d95ba721c7
+  checksum: f98f79f3e470517469c86947d0ff1bb83ac2e59fd2a29728ab306eca5fba63c948084ec06b7b531642e6002d1f0211d918c298c628f0d386c0ef63ba881c47ba
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:14.0.0":
-  version: 14.0.0
-  resolution: "@testing-library/react@npm:14.0.0"
+"@testing-library/react@npm:14.1.2":
+  version: 14.1.2
+  resolution: "@testing-library/react@npm:14.1.2"
   dependencies:
     "@babel/runtime": "npm:^7.12.5"
     "@testing-library/dom": "npm:^9.0.0"
@@ -2850,7 +2862,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 81035913024faf18ba7e163418af517b2c3b85aef496fbd6334bda38f6f6dd4072678c6b76c41148b46b7fc846764f875e1156cbfc7643ffa1b62ee069d78951
+  checksum: b5b0990d3aa0ea8b37c55804e0d5d584fc638a5c7d4df90da9a0fdb00bc981b27b6991468b2dc719982a5d0b0107a41596063ce51ad519eeab47b22bc04d6779
   languageName: node
   linkType: hard
 
@@ -3154,12 +3166,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.2.14":
-  version: 18.2.14
-  resolution: "@types/react-dom@npm:18.2.14"
+"@types/react-dom@npm:18.2.18":
+  version: 18.2.18
+  resolution: "@types/react-dom@npm:18.2.18"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 1f79a7708d038cd651bdb21e01a99c594761bc9a40a565abe98958e1d27facfeb6e9824ddf6ae3504e7a56568f0f3da2380fe52ac18477b5864d2d5cf1386a9e
+  checksum: 74dba11a1b8156f3a763f3fca1fb4ec1dcd349153279b8bf79210024a69f994bf2cf0728198c047f8130c5318420ea56281b0a4ef84c8ae943cd9a0cac705220
   languageName: node
   linkType: hard
 
@@ -3192,14 +3204,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:18.2.31":
-  version: 18.2.31
-  resolution: "@types/react@npm:18.2.31"
+"@types/react@npm:18.2.46":
+  version: 18.2.46
+  resolution: "@types/react@npm:18.2.46"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: d2793873aef68038e0dc3ee05a573c663fcd3ba7402f1134a633df25aaeb72fd397479d5a5f02e9edc8cd5d000479a73f7bdc64cf00c50fb022c883f22e1fd0f
+  checksum: 814cc67107e5e69501d65bfc371cc2c716665d2a3608d395a2f81e24c3a2875db28e2cad717dfb17017eabcffd1d68ee2c9e09ecaba3f7108d5b7fbb9888ebab
   languageName: node
   linkType: hard
 
@@ -4440,16 +4452,17 @@ __metadata:
     "@babel/cli": "npm:7.23.4"
     "@babel/core": "npm:7.23.7"
     "@babel/preset-env": "npm:7.23.7"
-    "@babel/preset-react": "npm:7.22.15"
+    "@babel/preset-react": "npm:7.23.3"
     "@babel/preset-typescript": "npm:7.23.3"
+    "@microsoft/eslint-formatter-sarif": "npm:3.0.0"
     "@octokit/rest": "npm:20.0.2"
     "@popperjs/core": "npm:2.11.8"
-    "@testing-library/jest-dom": "npm:6.1.4"
-    "@testing-library/react": "npm:14.0.0"
+    "@testing-library/jest-dom": "npm:6.1.6"
+    "@testing-library/react": "npm:14.1.2"
     "@types/jest": "npm:29.5.11"
     "@types/node": "npm:20.10.6"
-    "@types/react": "npm:18.2.31"
-    "@types/react-dom": "npm:18.2.14"
+    "@types/react": "npm:18.2.46"
+    "@types/react-dom": "npm:18.2.18"
     "@typescript-eslint/eslint-plugin": "npm:6.16.0"
     "@typescript-eslint/parser": "npm:6.16.0"
     babel-jest: "npm:29.7.0"
@@ -5746,7 +5759,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.56.0":
+"eslint@npm:8.56.0, eslint@npm:^8.9.0":
   version: 8.56.0
   resolution: "eslint@npm:8.56.0"
   dependencies:
@@ -7923,6 +7936,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jschardet@npm:latest":
+  version: 3.0.0
+  resolution: "jschardet@npm:3.0.0"
+  checksum: 5d12d351cf1fbd3e4644418e6d7545acdd36eb198caad1ba0d98b91c54f75936d51bcf369412f5f296766913c1e1899543c8da4dd8fc1fc7f142d760beff5d4e
+  languageName: node
+  linkType: hard
+
 "jsdom@npm:^20.0.0":
   version: 20.0.3
   resolution: "jsdom@npm:20.0.3"
@@ -8140,7 +8160,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.15, lodash@npm:^4.17.4":
+"lodash@npm:^4.17.14, lodash@npm:^4.17.15, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: d8cbea072bb08655bb4c989da418994b073a608dffa608b09ac04b43a791b12aeae7cd7ad919aa4c925f33b48490b5cfe6c1f71d827956071dae2e7bb3a6b74c
@@ -11061,6 +11081,13 @@ __metadata:
     querystringify: "npm:^2.1.1"
     requires-port: "npm:^1.0.0"
   checksum: bd5aa9389f896974beb851c112f63b466505a04b4807cea2e5a3b7092f6fbb75316f0491ea84e44f66fed55f1b440df5195d7e3a8203f64fcefa19d182f5be87
+  languageName: node
+  linkType: hard
+
+"utf8@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "utf8@npm:3.0.0"
+  checksum: 675d008bab65fc463ce718d5cae8fd4c063540f269e4f25afebce643098439d53e7164bb1f193e0c3852825c7e3e32fbd8641163d19a618dbb53f1f09acb0d5a
   languageName: node
   linkType: hard
 

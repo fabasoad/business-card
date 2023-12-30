@@ -31,7 +31,17 @@ jobs:
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
         run: yarn install
       - name: Run ESLint
-        run: yarn run lint
+        uses: sibiraj-s/action-eslint@v3
+        with:
+          all-files: "true"
+          eslint-args: "-o eslint-results.sarif -f ${{ github.workspace }}/node_modules/@microsoft/eslint-formatter-sarif/sarif.js"
+          extensions: "js,jsx,ts,tsx"
+          annotations: true
+      - name: Upload to GHAS
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          category: "eslint"
+          sarif_file: "eslint-results.sarif"
   pre-commit:
     name: Pre-commit
     uses: fabasoad/reusable-workflows/.github/workflows/wf-pre-commit.yml@main

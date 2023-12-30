@@ -26,6 +26,10 @@ jobs:
         uses: github/codeql-action/autobuild@v2
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v2
+      - name: Upload to GHAS
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: "${{ steps.scan-directory.outputs.sarif }}"
   yarn-audit:
     name: Yarn audit
     runs-on: ubuntu-latest
@@ -41,6 +45,11 @@ jobs:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
       - name: Scan current project
+        id: scan-directory
         uses: anchore/scan-action@v3
         with:
           path: "."
+      - name: Upload to GHAS
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: "${{ steps.scan-directory.outputs.sarif }}"

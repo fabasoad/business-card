@@ -25,11 +25,12 @@ jobs:
       - name: Autobuild
         uses: github/codeql-action/autobuild@v2
       - name: Perform CodeQL Analysis
+        id: codeql-analysis
         uses: github/codeql-action/analyze@v2
       - name: Upload to GHAS
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: "${{ steps.scan-directory.outputs.sarif }}"
+          sarif_file: "${{ steps.codeql-analysis.outputs.sarif-output }}"
   yarn-audit:
     name: Yarn audit
     runs-on: ubuntu-latest

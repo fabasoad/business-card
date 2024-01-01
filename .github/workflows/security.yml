@@ -19,16 +19,16 @@ jobs:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: "javascript"
       - name: Autobuild
-        uses: github/codeql-action/autobuild@v2
+        uses: github/codeql-action/autobuild@v3
       - name: Perform CodeQL Analysis
         id: codeql-analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
       - name: Upload to GHAS
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           category: "code-scanning"
           sarif_file: "${{ steps.codeql-analysis.outputs.sarif-output }}"
@@ -52,7 +52,7 @@ jobs:
         with:
           path: "."
       - name: Upload to GHAS
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@v3
         with:
           category: "directory-scanning"
           sarif_file: "${{ steps.scan-directory.outputs.sarif }}"

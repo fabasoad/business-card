@@ -1,3 +1,4 @@
+/* global NodeJS */
 import * as React from 'react'
 import BaseConstants from '../scripts/BaseConstants'
 import { WithTranslation, withTranslation } from 'react-i18next'
@@ -7,7 +8,6 @@ interface App404Props {
 }
 
 function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
-  // eslint-disable-next-line no-undef
   let timer: NodeJS.Timeout
   let counterValue: number = 3
 

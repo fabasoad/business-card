@@ -3703,26 +3703,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"body-parser@npm:1.20.1":
-  version: 1.20.1
-  resolution: "body-parser@npm:1.20.1"
-  dependencies:
-    bytes: "npm:3.1.2"
-    content-type: "npm:~1.0.4"
-    debug: "npm:2.6.9"
-    depd: "npm:2.0.0"
-    destroy: "npm:1.2.0"
-    http-errors: "npm:2.0.0"
-    iconv-lite: "npm:0.4.24"
-    on-finished: "npm:2.4.1"
-    qs: "npm:6.11.0"
-    raw-body: "npm:2.5.1"
-    type-is: "npm:~1.6.18"
-    unpipe: "npm:1.0.0"
-  checksum: 10c0/a202d493e2c10a33fb7413dac7d2f713be579c4b88343cd814b6df7a38e5af1901fc31044e04de176db56b16d9772aa25a7723f64478c20f4d91b1ac223bf3b8
-  languageName: node
-  linkType: hard
-
 "body-parser@npm:1.20.2":
   version: 1.20.2
   resolution: "body-parser@npm:1.20.2"
@@ -3858,8 +3838,8 @@ __metadata:
     eslint: "npm:8.57.0"
     eslint-config-google: "npm:0.14.0"
     eslint-plugin-react: "npm:7.33.2"
-    express: "npm:4.18.2"
-    express-rate-limit: "npm:7.1.5"
+    express: "npm:4.18.3"
+    express-rate-limit: "npm:7.2.0"
     humanize-duration: "npm:3.31.0"
     i18next: "npm:23.8.2"
     jest: "npm:29.7.0"
@@ -3874,7 +3854,7 @@ __metadata:
     react-iframe: "npm:1.8.5"
     react-modal: "npm:3.16.1"
     react-test-renderer: "npm:18.2.0"
-    sass: "npm:1.70.0"
+    sass: "npm:1.71.1"
     sass-loader: "npm:14.1.1"
     style-loader: "npm:3.3.4"
     ts-jest: "npm:29.1.2"
@@ -5210,55 +5190,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"express-rate-limit@npm:7.1.5":
-  version: 7.1.5
-  resolution: "express-rate-limit@npm:7.1.5"
+"express-rate-limit@npm:7.2.0":
+  version: 7.2.0
+  resolution: "express-rate-limit@npm:7.2.0"
   peerDependencies:
     express: 4 || 5 || ^5.0.0-beta.1
-  checksum: 10c0/547d5e36113fa71e923a887a5fe90b0af2dbd30260ed6604c31d19b38e4c18e1cdb288b5e3cf131a211632ea715b7e2ba419d7adbfa915db85c52e73f1514932
+  checksum: 10c0/5b3d047d14b6de40fea355be8313ea205b4c7ddaa167c3683779038b8a203a62d4d0a995b1f0bb6fc540abfd5923ac9af905d2cf748fc28af1cb24aefd6c718c
   languageName: node
   linkType: hard
 
-"express@npm:4.18.2":
-  version: 4.18.2
-  resolution: "express@npm:4.18.2"
-  dependencies:
-    accepts: "npm:~1.3.8"
-    array-flatten: "npm:1.1.1"
-    body-parser: "npm:1.20.1"
-    content-disposition: "npm:0.5.4"
-    content-type: "npm:~1.0.4"
-    cookie: "npm:0.5.0"
-    cookie-signature: "npm:1.0.6"
-    debug: "npm:2.6.9"
-    depd: "npm:2.0.0"
-    encodeurl: "npm:~1.0.2"
-    escape-html: "npm:~1.0.3"
-    etag: "npm:~1.8.1"
-    finalhandler: "npm:1.2.0"
-    fresh: "npm:0.5.2"
-    http-errors: "npm:2.0.0"
-    merge-descriptors: "npm:1.0.1"
-    methods: "npm:~1.1.2"
-    on-finished: "npm:2.4.1"
-    parseurl: "npm:~1.3.3"
-    path-to-regexp: "npm:0.1.7"
-    proxy-addr: "npm:~2.0.7"
-    qs: "npm:6.11.0"
-    range-parser: "npm:~1.2.1"
-    safe-buffer: "npm:5.2.1"
-    send: "npm:0.18.0"
-    serve-static: "npm:1.15.0"
-    setprototypeof: "npm:1.2.0"
-    statuses: "npm:2.0.1"
-    type-is: "npm:~1.6.18"
-    utils-merge: "npm:1.0.1"
-    vary: "npm:~1.1.2"
-  checksum: 10c0/75af556306b9241bc1d7bdd40c9744b516c38ce50ae3210658efcbf96e3aed4ab83b3432f06215eae5610c123bc4136957dc06e50dfc50b7d4d775af56c4c59c
-  languageName: node
-  linkType: hard
-
-"express@npm:^4.17.3":
+"express@npm:4.18.3, express@npm:^4.17.3":
   version: 4.18.3
   resolution: "express@npm:4.18.3"
   dependencies:
@@ -8504,18 +8445,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"raw-body@npm:2.5.1":
-  version: 2.5.1
-  resolution: "raw-body@npm:2.5.1"
-  dependencies:
-    bytes: "npm:3.1.2"
-    http-errors: "npm:2.0.0"
-    iconv-lite: "npm:0.4.24"
-    unpipe: "npm:1.0.0"
-  checksum: 10c0/5dad5a3a64a023b894ad7ab4e5c7c1ce34d3497fc7138d02f8c88a3781e68d8a55aa7d4fd3a458616fa8647cc228be314a1c03fb430a07521de78b32c4dd09d2
-  languageName: node
-  linkType: hard
-
 "raw-body@npm:2.5.2":
   version: 2.5.2
   resolution: "raw-body@npm:2.5.2"
@@ -9047,16 +8976,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.70.0":
-  version: 1.70.0
-  resolution: "sass@npm:1.70.0"
+"sass@npm:1.71.1":
+  version: 1.71.1
+  resolution: "sass@npm:1.71.1"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 10c0/7c309ee1c096d591746d122da9f1ebd65b4c4b3a60c2cc0ec720fd98fe1205fa8b44c9f563d113b9fdfeb25af1e32ec9b3e048bd4b8e05d267f020953bd7baf0
+  checksum: 10c0/59d79a6e106747746792b0c71908ae0aecdaf9b794d5724ee64e5249412f0d8ebe7ee2bf12946618848f14f949c4f6b530d82da3e62ab31c71198c6f73002130
   languageName: node
   linkType: hard
 

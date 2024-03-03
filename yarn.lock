@@ -3850,7 +3850,7 @@ __metadata:
     express: "npm:4.18.3"
     express-rate-limit: "npm:7.2.0"
     humanize-duration: "npm:3.31.0"
-    i18next: "npm:23.8.2"
+    i18next: "npm:23.10.0"
     jest: "npm:29.7.0"
     jest-environment-jsdom: "npm:29.7.0"
     nodemon: "npm:3.1.0"
@@ -5990,12 +5990,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:23.8.2":
-  version: 23.8.2
-  resolution: "i18next@npm:23.8.2"
+"i18next@npm:23.10.0":
+  version: 23.10.0
+  resolution: "i18next@npm:23.10.0"
   dependencies:
     "@babel/runtime": "npm:^7.23.2"
-  checksum: 10c0/c16ccee81bc1e096fec8d10000de42f10137f7cd27b295eca22492cb174b364ebca72327b2e6be066c4308c79bf72c8585d1c7cde2aedf556e3f423af60cd66c
+  checksum: 10c0/b6161075cfc2f3238e8e293306d70f173b5d5f4b7217d29ba15d4b70bd876911ccf15ca8fed238405c735c2a2e86e26658a17ea7cfd4040abd3100fef0a7c7d4
   languageName: node
   linkType: hard
 

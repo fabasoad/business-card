@@ -81,5 +81,5 @@
     "@octokit/rest": "20.0.2",
     "react-bootstrap": "2.10.1"
   },
-  "packageManager": "yarn@4.1.0"
+  "packageManager": "yarn@4.1.1"
 }

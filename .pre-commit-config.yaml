@@ -46,7 +46,7 @@ repos:
       - id: gitleaks
         exclude: ^(\.yarn\/.*)$
   - repo: https://github.com/fabasoad/pre-commit-snyk
-    rev: v0.5.0
+    rev: v0.6.1
     hooks:
       - id: snyk-test
         stages: ["push"]
@@ -71,7 +71,7 @@ repos:
         stages: ["push"]
   # Other
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.5.0
+    rev: v4.6.0
     hooks:
       - id: check-merge-conflict
       - id: check-json

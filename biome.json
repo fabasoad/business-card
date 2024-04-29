@@ -7,7 +7,6 @@
     "formatter": {
       "indentStyle": "space",
       "quoteStyle": "single",
-      "jsxQuoteStyle": "single",
       "semicolons": "asNeeded"
     }
   },

@@ -67,7 +67,7 @@
     "react-test-renderer": "18.3.1",
     "sass": "1.75.0",
     "sass-loader": "14.2.1",
-    "style-loader": "3.3.4",
+    "style-loader": "4.0.0",
     "ts-jest": "29.1.2",
     "ts-loader": "9.5.1",
     "ts-node": "10.9.2",
@@ -78,7 +78,7 @@
     "webpack-merge": "5.10.0"
   },
   "dependencies": {
-    "@octokit/rest": "20.0.2",
+    "@octokit/rest": "20.1.0",
     "react-bootstrap": "2.10.2"
   },
   "packageManager": "yarn@4.1.1"

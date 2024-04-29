@@ -12,7 +12,7 @@ export function testDateDuration(
   expect(div).toHaveTextContent(
     humanize(
       new Date(fromYear, fromMonthIndex),
-      !toYear || toMonthIndex == undefined
+      !toYear || toMonthIndex === undefined
         ? new Date()
         : new Date(toYear, toMonthIndex),
       code
@@ -31,13 +31,13 @@ export function testDateLocale(
     case 'gb':
     case 'ua':
       expectedText =
-        monthIndex == undefined
+        monthIndex === undefined
           ? year
           : `business-card-month-${monthIndex} ${year}`
       break
     case 'jp':
       expectedText =
-        monthIndex == undefined
+        monthIndex === undefined
           ? 'business-card-year-singular'
           : `business-card-year-singularbusiness-card-month-${monthIndex}`
       break
@@ -59,7 +59,7 @@ export function testDateTimeline(
   const divRows = div.querySelectorAll('div.row')
   expect(divRows).toHaveLength(3)
   const divDateTo = divRows[0] as HTMLElement
-  if (toYear && toMonthIndex != undefined) {
+  if (toYear && toMonthIndex !== undefined) {
     testDateLocale(divDateTo, locale, toYear, toMonthIndex)
   } else {
     expect(divDateTo).toHaveTextContent('business-card-experience-present')

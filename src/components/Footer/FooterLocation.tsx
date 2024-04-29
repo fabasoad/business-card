@@ -5,7 +5,7 @@ import { type WithTranslation, withTranslation } from 'react-i18next'
 function FooterLocation({ t }: WithTranslation) {
   return (
     <Col>
-      <i className="fa fa-map-marker-alt fa-2x"></i>
+      <i className="fa fa-map-marker-alt fa-2x" />
       <p>{t('business-card-contact-city')}</p>
     </Col>
   )

@@ -13,7 +13,7 @@ function LocaleDropDown({ i18n, t }: WithTranslation) {
         variant={null}
         id="btnLocale"
       >
-        <i className="fa fa-globe locale-icon"></i>
+        <i className="fa fa-globe locale-icon" />
         {t(
           `business-card-languages-${
             SupportedLocales.getOrDefault(i18n.language).code

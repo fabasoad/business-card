@@ -22,7 +22,7 @@ function MenuMain({ t }: WithTranslation) {
         return findParent(el1.parentElement, el2)
       }
       const element = e.target as HTMLElement
-      const isNotNav = element.getAttribute('id') != 'nav'
+      const isNotNav = element.getAttribute('id') !== 'nav'
       const isNotParentOfNav =
         findParent(document.getElementById('nav'), element) == null
       const isNavIsNotParent =

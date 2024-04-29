@@ -9,7 +9,7 @@ class GitHubService implements RemoteService<number> {
   private static GITHUB_USERNAME = 'fabasoad'
 
   public async request(): Promise<number> {
-    if (this.state == State.NOT_STARTED) {
+    if (this.state === State.NOT_STARTED) {
       this.state = State.STARTED
       const octokit: Octokit = new Octokit()
       this.starsAmount = await octokit.rest.repos

@@ -23,7 +23,7 @@ export default function PortfolioItem(props: PortfolioItemProps) {
             <div className="hover-text">
               <h4>{props.title}</h4>
               <small>{props.subtitle}</small>
-              <i className="fa fa-search"></i>
+              <i className="fa fa-search" />
             </div>
             <img className="img-thumbnail" src={props.img} alt={props.name} />
           </a>

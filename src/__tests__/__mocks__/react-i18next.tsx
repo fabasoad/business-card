@@ -23,7 +23,6 @@ reactI18Next.withTranslation = () => (Component) => {
   return Component
 }
 
-// eslint-disable-next-line react/prop-types
 reactI18Next.Trans = function Trans({ i18nKey }) {
   return (<>{i18nKey}</>)
 }

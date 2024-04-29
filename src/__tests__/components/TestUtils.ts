@@ -17,7 +17,10 @@ export function testBadges(div: HTMLDivElement) {
   const divCol = divRow.querySelector('div.col-sm.col-md.col-lg')
   expect(divCol).toHaveClass('text-center')
   const a = divCol.querySelector('a')
-  expect(a).toHaveAttribute('href', 'https://tree-nation.com/profile/digitalocean')
+  expect(a).toHaveAttribute(
+    'href',
+    'https://tree-nation.com/profile/digitalocean'
+  )
   expect(a).toHaveAttribute('rel', 'noopener noreferrer')
   expect(a).toHaveAttribute('target', '_blank')
   const img = a.querySelector('img')

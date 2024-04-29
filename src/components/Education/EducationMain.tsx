@@ -1,8 +1,8 @@
 import * as React from 'react'
-import EducationItem from './EducationItem'
-import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation} from 'react-i18next'
+import { type WithTranslation, withTranslation } from 'react-i18next'
+import SectionTitle from '../Controls/SectionTitle'
+import EducationItem from './EducationItem'
 
 function EducationMain({ t }: WithTranslation) {
   return (

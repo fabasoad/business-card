@@ -1,13 +1,17 @@
-import * as React from 'react'
+import type * as React from 'react'
 import { Nav } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { type WithTranslation, withTranslation } from 'react-i18next'
 
 interface MenuItemProps {
   name: string
   setActiveNavLink: React.Dispatch<React.SetStateAction<string>>
 }
 
-function MenuItem({ name, setActiveNavLink, t }: WithTranslation & MenuItemProps) {
+function MenuItem({
+  name,
+  setActiveNavLink,
+  t
+}: WithTranslation & MenuItemProps) {
   return (
     <Nav.Link
       onClick={() => setActiveNavLink(`#${name}`)}

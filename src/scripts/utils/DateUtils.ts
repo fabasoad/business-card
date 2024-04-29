@@ -1,17 +1,23 @@
 import * as humanizeDuration from 'humanize-duration'
-import DigitConverter from '../DigitConverter'
 import { getI18n } from 'react-i18next'
+import DigitConverter from '../DigitConverter'
 
 export function getDateLocale(year: number, monthIndex?: number): string {
   const i18n = getI18n()
   const converter = new DigitConverter()
 
   return i18n.language === 'jp'
-    ? converter.toDoubleByte(year.toString()) + i18n.t('business-card-year-singular') + (monthIndex != undefined ? i18n.t(`business-card-month-${monthIndex}`) : '')
-    : (monthIndex != undefined ? i18n.t(`business-card-month-${monthIndex}`) + ' ' : '') + year
+    ? converter.toDoubleByte(year.toString()) +
+        i18n.t('business-card-year-singular') +
+        (monthIndex != undefined
+          ? i18n.t(`business-card-month-${monthIndex}`)
+          : '')
+    : (monthIndex != undefined
+        ? i18n.t(`business-card-month-${monthIndex}`) + ' '
+        : '') + year
 }
 
-export function humanize(from: Date, to: Date, code: string = 'gb'): string {
+export function humanize(from: Date, to: Date, code = 'gb'): string {
   const opts = {
     delimiter: ' ',
     fallbacks: ['en'],

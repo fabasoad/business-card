@@ -2,7 +2,11 @@ import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
 import { testSectionTitle } from '../Controls/TestUtils'
 
 export function testStatsCommon(
-  div: HTMLDivElement, url: string, content: string | RegExp, techName: string) {
+  div: HTMLDivElement,
+  url: string,
+  content: string | RegExp,
+  techName: string
+) {
   const tech = new TechnologyStorage().findByName(techName)
   expect(div).toHaveClass('m-4')
   expect(div).toHaveClass('d-flex')
@@ -19,21 +23,11 @@ export function testStatsCommon(
 }
 
 export function testStatsGitHub(div: HTMLDivElement) {
-  testStatsCommon(
-    div,
-    'https://github.com/fabasoad',
-    new RegExp('⭐️ \\d+'),
-    'gitHub'
-  )
+  testStatsCommon(div, 'https://github.com/fabasoad', /⭐️ \d+/, 'gitHub')
 }
 
 export function testStatsLeetcode(div: HTMLDivElement) {
-  testStatsCommon(
-    div,
-    'https://leetcode.com/fabasoad',
-    new RegExp('✔️ \\d+'),
-    'leetcode'
-  )
+  testStatsCommon(div, 'https://leetcode.com/fabasoad', /✔️ \d+/, 'leetcode')
 }
 
 export function testStatsMain(div: HTMLDivElement) {
@@ -56,7 +50,7 @@ export function testStatsStackOverflow(div: HTMLDivElement) {
   testStatsCommon(
     div,
     'https://stackoverflow.com/users/470214/fabasoad',
-    new RegExp('🏆️ \\d+'),
+    /🏆️ \d+/,
     'stackoverflow'
   )
 }
@@ -65,7 +59,7 @@ export function testStatsSuperUser(div: HTMLDivElement) {
   testStatsCommon(
     div,
     'https://superuser.com/users/1123723/fabasoad',
-    new RegExp('➕ \\d+'),
+    /➕ \d+/,
     'superuser'
   )
 }

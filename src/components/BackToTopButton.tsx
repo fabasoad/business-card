@@ -3,11 +3,9 @@ import * as React from 'react'
 export default function BackToTopButton() {
   const [isVisible, setIsVisible] = React.useState<boolean>(false)
 
-  window.addEventListener(
-    'scroll',
-    () => setIsVisible(window.scrollY > 300),
-    { passive: true }
-  )
+  window.addEventListener('scroll', () => setIsVisible(window.scrollY > 300), {
+    passive: true
+  })
 
   const handleClick = (e) => {
     e.preventDefault()
@@ -19,6 +17,9 @@ export default function BackToTopButton() {
   }
 
   return (
-    <a onClick={handleClick} className={(isVisible ? 'show ' : '') + 'back-to-top'}></a>
+    <a
+      onClick={handleClick}
+      className={(isVisible ? 'show ' : '') + 'back-to-top'}
+    ></a>
   )
 }

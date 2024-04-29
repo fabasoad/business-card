@@ -1,36 +1,42 @@
-[{
-  "id": "MWE43H8YDS",
-  "date": "2015-05",
-  "issuer": "coursera",
-  "technology": "python",
-  "i18nTitleKey": "business-card-certificate-1",
-  "url": "https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
-}, {
-  "id": "W5AB2PBZQNPY",
-  "date": "2018-03",
-  "issuer": "coursera",
-  "technology": "java",
-  "i18nTitleKey": "business-card-certificate-2",
-  "url": "https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
-}, {
-  "id": "UC-JGDVYKAQ",
-  "date": "2019-10",
-  "issuer": "udemy",
-  "technology": "react",
-  "i18nTitleKey": "business-card-certificate-3",
-  "url": "http://ude.my/UC-JGDVYKAQ"
-}, {
-  "id": "",
-  "date": "2020-05",
-  "issuer": "oracle",
-  "technology": "java",
-  "i18nTitleKey": "business-card-certificate-4",
-  "url": "https://www.youracclaim.com/badges/689b9d7e-cae5-4e36-8a1f-c8c34f104249/public_url"
-}, {
-  "id": "F75CDD8ED9F0",
-  "date": "2020-09",
-  "issuer": "hacker-rank",
-  "technology": "algorithms",
-  "i18nTitleKey": "business-card-certificate-5",
-  "url": "https://www.hackerrank.com/certificates/f75cdd8ed9f0"
-}]
+[
+  {
+    "id": "MWE43H8YDS",
+    "date": "2015-05",
+    "issuer": "coursera",
+    "technology": "python",
+    "i18nTitleKey": "business-card-certificate-1",
+    "url": "https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
+  },
+  {
+    "id": "W5AB2PBZQNPY",
+    "date": "2018-03",
+    "issuer": "coursera",
+    "technology": "java",
+    "i18nTitleKey": "business-card-certificate-2",
+    "url": "https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
+  },
+  {
+    "id": "UC-JGDVYKAQ",
+    "date": "2019-10",
+    "issuer": "udemy",
+    "technology": "react",
+    "i18nTitleKey": "business-card-certificate-3",
+    "url": "http://ude.my/UC-JGDVYKAQ"
+  },
+  {
+    "id": "",
+    "date": "2020-05",
+    "issuer": "oracle",
+    "technology": "java",
+    "i18nTitleKey": "business-card-certificate-4",
+    "url": "https://www.youracclaim.com/badges/689b9d7e-cae5-4e36-8a1f-c8c34f104249/public_url"
+  },
+  {
+    "id": "F75CDD8ED9F0",
+    "date": "2020-09",
+    "issuer": "hacker-rank",
+    "technology": "algorithms",
+    "i18nTitleKey": "business-card-certificate-5",
+    "url": "https://www.hackerrank.com/certificates/f75cdd8ed9f0"
+  }
+]

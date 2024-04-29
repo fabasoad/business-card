@@ -1,16 +1,16 @@
 import * as React from 'react'
+import { Container } from 'react-bootstrap'
+import { type WithTranslation, withTranslation } from 'react-i18next'
 import * as imgArkaFSS from '../../assets/images/companies/arka-fss.png'
 import * as imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'
 import * as imgLohika from '../../assets/images/companies/lohika.png'
 import * as imgWbyT from '../../assets/images/companies/wbyt.png'
+import SectionTitle from '../Controls/SectionTitle'
 import JobDescription from './JobDescription'
 import JobPeriod from './JobPeriod'
 import JobResponsibilities from './JobResponsibilities'
 import JobTechnologies from './JobTechnologies'
 import JobTitle from './JobTitle'
-import { Container } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
-import SectionTitle from '../Controls/SectionTitle';
 
 function ExperienceMain({ t }: WithTranslation) {
   return (
@@ -19,10 +19,7 @@ function ExperienceMain({ t }: WithTranslation) {
         <SectionTitle>{t('business-card-experience-title')}</SectionTitle>
         <ul className="timeline">
           <li className="timeline-inverted">
-            <JobPeriod
-              fromMonthIndex={10}
-              fromYear={2022}
-            />
+            <JobPeriod fromMonthIndex={10} fromYear={2022} />
             <div className="timeline-panel">
               <JobTitle
                 logo={imgWbyT}
@@ -35,12 +32,20 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-wbyt-6-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-wbyt-6-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-wbyt-6-responsibilities" />
                 <JobTechnologies
                   keyPrefix="wbyt-6"
-                  names={['go', 'kubernetes', 'terraform', 'aws', 'gitHubActions', 'python', 'snyk', 'codeql', 'intellijIdea']}
+                  names={[
+                    'go',
+                    'kubernetes',
+                    'terraform',
+                    'aws',
+                    'gitHubActions',
+                    'python',
+                    'snyk',
+                    'codeql',
+                    'intellijIdea'
+                  ]}
                 />
               </div>
             </div>
@@ -64,12 +69,17 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-wbyt-5-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-wbyt-5-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-wbyt-5-responsibilities" />
                 <JobTechnologies
                   keyPrefix="wbyt-5"
-                  names={['docker', 'intellijIdea', 'kubernetes', 'istio', 'opa', 'azureAd']}
+                  names={[
+                    'docker',
+                    'intellijIdea',
+                    'kubernetes',
+                    'istio',
+                    'opa',
+                    'azureAd'
+                  ]}
                 />
               </div>
             </div>
@@ -93,12 +103,26 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-wbyt-4-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-wbyt-4-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-wbyt-4-responsibilities" />
                 <JobTechnologies
                   keyPrefix="wbyt-4"
-                  names={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'intellijIdea', 'concourseCI', 'kubernetes', 'terraform', 'aws', 'gitHubActions']}
+                  names={[
+                    'docker',
+                    'gitlab',
+                    'gitlabCi',
+                    'typeScript',
+                    'react',
+                    'maven',
+                    'java',
+                    'quarkus',
+                    'mongodb',
+                    'intellijIdea',
+                    'concourseCI',
+                    'kubernetes',
+                    'terraform',
+                    'aws',
+                    'gitHubActions'
+                  ]}
                 />
               </div>
             </div>
@@ -122,12 +146,29 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-wbyt-3-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-wbyt-3-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-wbyt-3-responsibilities" />
                 <JobTechnologies
                   keyPrefix="wbyt-3"
-                  names={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'helm', 'prometheus', 'grafana', 'terraform', 'aws']}
+                  names={[
+                    'docker',
+                    'gitlab',
+                    'gitlabCi',
+                    'typeScript',
+                    'react',
+                    'maven',
+                    'java',
+                    'quarkus',
+                    'mongodb',
+                    'vsCode',
+                    'intellijIdea',
+                    'concourseCI',
+                    'kubernetes',
+                    'helm',
+                    'prometheus',
+                    'grafana',
+                    'terraform',
+                    'aws'
+                  ]}
                 />
               </div>
             </div>
@@ -151,12 +192,27 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-wbyt-2-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-wbyt-2-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-wbyt-2-responsibilities" />
                 <JobTechnologies
                   keyPrefix="wbyt-2"
-                  names={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea', 'concourseCI', 'kubernetes', 'helm', 'prometheus', 'grafana']}
+                  names={[
+                    'docker',
+                    'gitlab',
+                    'gitlabCi',
+                    'typeScript',
+                    'react',
+                    'maven',
+                    'java',
+                    'quarkus',
+                    'mongodb',
+                    'vsCode',
+                    'intellijIdea',
+                    'concourseCI',
+                    'kubernetes',
+                    'helm',
+                    'prometheus',
+                    'grafana'
+                  ]}
                 />
               </div>
             </div>
@@ -180,12 +236,22 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-wbyt-1-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-wbyt-1-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-wbyt-1-responsibilities" />
                 <JobTechnologies
                   keyPrefix="wbyt-1"
-                  names={['docker', 'gitlab', 'gitlabCi', 'typeScript', 'react', 'maven', 'java', 'quarkus', 'mongodb', 'vsCode', 'intellijIdea']}
+                  names={[
+                    'docker',
+                    'gitlab',
+                    'gitlabCi',
+                    'typeScript',
+                    'react',
+                    'maven',
+                    'java',
+                    'quarkus',
+                    'mongodb',
+                    'vsCode',
+                    'intellijIdea'
+                  ]}
                 />
               </div>
             </div>
@@ -209,12 +275,19 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-bitcoin-com-2-responsibilities" />
                 <JobTechnologies
                   keyPrefix="bitcoin-com-2"
-                  names={['docker', 'travis', 'gitHubActions', 'bitrise', 'java', 'kafka', 'spring', 'intellijIdea']}
+                  names={[
+                    'docker',
+                    'travis',
+                    'gitHubActions',
+                    'bitrise',
+                    'java',
+                    'kafka',
+                    'spring',
+                    'intellijIdea'
+                  ]}
                 />
               </div>
             </div>
@@ -238,15 +311,25 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-bitcoin-com-1-responsibilities" />
                 <JobTechnologies
                   keyPrefix="bitcoin-com-1"
                   names={[
-                    'maven', 'java', 'tomcat', 'lombok', 'junit', 'python',
-                    'javaScript', 'jQuery', 'bootstrap', 'mariaDb', 'redis',
-                    'git', 'intellijIdea', 'vsCode', 'jira'
+                    'maven',
+                    'java',
+                    'tomcat',
+                    'lombok',
+                    'junit',
+                    'python',
+                    'javaScript',
+                    'jQuery',
+                    'bootstrap',
+                    'mariaDb',
+                    'redis',
+                    'git',
+                    'intellijIdea',
+                    'vsCode',
+                    'jira'
                   ]}
                 />
               </div>
@@ -271,15 +354,29 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-lohika-3-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-lohika-3-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-lohika-3-responsibilities" />
                 <JobTechnologies
                   keyPrefix="lohika-3"
                   names={[
-                    'csharp', 'xamarin', 'prism', 'dotNetCore', 'kubernetes', 'helm', 'jira',
-                    'elasticsearch', 'jenkins', 'kibana', 'fluentBit', 'fluentD', 'docker',
-                    'git', 'gitHub', 'prometheus', 'visualStudio', 'grafana', 'teamCity'
+                    'csharp',
+                    'xamarin',
+                    'prism',
+                    'dotNetCore',
+                    'kubernetes',
+                    'helm',
+                    'jira',
+                    'elasticsearch',
+                    'jenkins',
+                    'kibana',
+                    'fluentBit',
+                    'fluentD',
+                    'docker',
+                    'git',
+                    'gitHub',
+                    'prometheus',
+                    'visualStudio',
+                    'grafana',
+                    'teamCity'
                   ]}
                 />
               </div>
@@ -304,14 +401,22 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-lohika-2-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-lohika-2-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-lohika-2-responsibilities" />
                 <JobTechnologies
                   keyPrefix="lohika-2"
                   names={[
-                    'java', 'spring', 'maven', 'javaScript', 'angular', 'mssql',
-                    'oracle', 'svn', 'git', 'intellijIdea', 'hpeAlm', 'jenkins'
+                    'java',
+                    'spring',
+                    'maven',
+                    'javaScript',
+                    'angular',
+                    'mssql',
+                    'oracle',
+                    'svn',
+                    'git',
+                    'intellijIdea',
+                    'hpeAlm',
+                    'jenkins'
                   ]}
                 />
               </div>
@@ -336,12 +441,17 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-lohika-1-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-lohika-1-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-lohika-1-responsibilities" />
                 <JobTechnologies
                   keyPrefix="lohika-1"
-                  names={['csharp', 'windowsForms', 'svn', 'visualStudio', 'hpeAlm', 'jenkins']}
+                  names={[
+                    'csharp',
+                    'windowsForms',
+                    'svn',
+                    'visualStudio',
+                    'hpeAlm',
+                    'jenkins'
+                  ]}
                 />
               </div>
             </div>
@@ -365,14 +475,24 @@ function ExperienceMain({ t }: WithTranslation) {
                   count={1}
                   i18nKeyPrefix="business-card-experience-job-arka-description"
                 />
-                <JobResponsibilities
-                  i18nKeyPrefix="business-card-experience-job-arka-responsibilities"
-                />
+                <JobResponsibilities i18nKeyPrefix="business-card-experience-job-arka-responsibilities" />
                 <JobTechnologies
                   keyPrefix="arka"
                   names={[
-                    'php', 'codeigniter', 'vBulletin', 'oxidEShop', 'smarty', 'javaScript', 'jQuery',
-                    'csharp', 'silverlight', 'mysql', 'svn', 'visualStudio', 'netBeans', 'redmine'
+                    'php',
+                    'codeigniter',
+                    'vBulletin',
+                    'oxidEShop',
+                    'smarty',
+                    'javaScript',
+                    'jQuery',
+                    'csharp',
+                    'silverlight',
+                    'mysql',
+                    'svn',
+                    'visualStudio',
+                    'netBeans',
+                    'redmine'
                   ]}
                 />
               </div>

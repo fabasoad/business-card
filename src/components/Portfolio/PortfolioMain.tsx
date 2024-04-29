@@ -1,26 +1,26 @@
 /// <reference path='./PortfolioMain.d.ts' />
 import * as React from 'react'
-import * as imgArkaDeutscheLieferadresse from '../../assets/images/portfolio/deutsche_lieferadresse_website.jpg'
-import * as imgArkaInvebstor from '../../assets/images/portfolio/invebstor.jpg'
-import * as imgArkaMedisport from '../../assets/images/portfolio/medisport_website.jpg'
-import * as imgArkaPrintAndPost from '../../assets/images/portfolio/print_and_post_website.jpg'
-import * as imgArkaWebsite from '../../assets/images/portfolio/arka_website.png'
-import * as imgArkaWorkPlus from '../../assets/images/portfolio/work_plus.png'
-import * as imgArkaZakupki from '../../assets/images/portfolio/zakupki_website.png'
-import * as imgBitcoinComGames from '../../assets/images/portfolio/bitcoin.com_games.png'
-import * as imgBitcoinComGamesAdmin from '../../assets/images/portfolio/bitcoin.com_games_admin.png'
-import * as imgBitcoinComGamesAndroid from '../../assets/images/portfolio/bitcoin.com_android.png'
-import * as imgBitcoinComMarkets from '../../assets/images/portfolio/bitcoin.com_markets.png'
-import * as imgLohikaEarnin from '../../assets/images/portfolio/earnin.png'
+import { Container, Row } from 'react-bootstrap'
+import { type WithTranslation, withTranslation } from 'react-i18next'
 import * as imgLohikaHpeAlm from '../../assets/images/portfolio/alm.jpg'
 import * as imgLohikaHpeAlmRobot from '../../assets/images/portfolio/alm_robot.png'
+import * as imgArkaWebsite from '../../assets/images/portfolio/arka_website.png'
+import * as imgBitcoinComGamesAndroid from '../../assets/images/portfolio/bitcoin.com_android.png'
+import * as imgBitcoinComGames from '../../assets/images/portfolio/bitcoin.com_games.png'
+import * as imgBitcoinComGamesAdmin from '../../assets/images/portfolio/bitcoin.com_games_admin.png'
+import * as imgBitcoinComMarkets from '../../assets/images/portfolio/bitcoin.com_markets.png'
+import * as imgArkaDeutscheLieferadresse from '../../assets/images/portfolio/deutsche_lieferadresse_website.jpg'
+import * as imgLohikaEarnin from '../../assets/images/portfolio/earnin.png'
+import * as imgArkaInvebstor from '../../assets/images/portfolio/invebstor.jpg'
 import * as imgLohikaHpeLabManagement from '../../assets/images/portfolio/lab_management.jpg'
+import * as imgArkaMedisport from '../../assets/images/portfolio/medisport_website.jpg'
+import * as imgArkaPrintAndPost from '../../assets/images/portfolio/print_and_post_website.jpg'
 import * as imgLohikaPrysm from '../../assets/images/portfolio/prysm_iphone_app.png'
 import * as imgSMA from '../../assets/images/portfolio/sma.png'
-import PortfolioItem from './PortfolioItem'
+import * as imgArkaWorkPlus from '../../assets/images/portfolio/work_plus.png'
+import * as imgArkaZakupki from '../../assets/images/portfolio/zakupki_website.png'
 import SectionTitle from '../Controls/SectionTitle'
-import { Container, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import PortfolioItem from './PortfolioItem'
 
 function PortfolioMain({ t }: WithTranslation) {
   return (
@@ -46,7 +46,9 @@ function PortfolioMain({ t }: WithTranslation) {
             url="https://games.bitcoin.com/"
             name="Games Admin"
             title={t('business-card-portfolio-casino-admin-web-app-title')}
-            subtitle={t('business-card-portfolio-casino-admin-web-app-subtitle')}
+            subtitle={t(
+              'business-card-portfolio-casino-admin-web-app-subtitle'
+            )}
             img={imgBitcoinComGamesAdmin}
           />
           <PortfolioItem
@@ -123,7 +125,9 @@ function PortfolioMain({ t }: WithTranslation) {
             url="https://www.deutsche-lieferadresse.com/"
             name="Deutsche Lieferadresse Website"
             title={t('business-card-portfolio-deutsche-lieferadresse-title')}
-            subtitle={t('business-card-portfolio-deutsche-lieferadresse-subtitle')}
+            subtitle={t(
+              'business-card-portfolio-deutsche-lieferadresse-subtitle'
+            )}
             img={imgArkaDeutscheLieferadresse}
           />
           <PortfolioItem

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import JobResponsibilities from '../../../components/Experience/JobResponsibilities'
-import { render } from '@testing-library/react'
 import { testJobResponsibilities } from './TestUtils'
 
 test('should render JobResponsibilities correctly', () => {

@@ -1,20 +1,21 @@
 import * as React from 'react'
+import producer from '../scripts/DevMessageProducer'
+import i18nService, {
+  I18nServiceCallbackTypes
+} from '../scripts/i18n/I18nService'
 import Error from './Controls/Error'
 import LoadingSpinner from './LoadingSpinner'
-import i18nService, { I18nServiceCallbackTypes } from '../scripts/i18n/I18nService'
-import producer from '../scripts/DevMessageProducer'
 
 enum Status {
-  LOADING,
-  FINISHED,
-  ERROR
+  LOADING = 0,
+  FINISHED = 1,
+  ERROR = 2
 }
 
 export default function AppWrapper({ children }: React.PropsWithChildren<{}>) {
   const [status, setStatus] = React.useState<Status>(Status.LOADING)
-  i18nService.registerCallback(
-    I18nServiceCallbackTypes.ON_LOADED,
-    () => setStatus(Status.FINISHED)
+  i18nService.registerCallback(I18nServiceCallbackTypes.ON_LOADED, () =>
+    setStatus(Status.FINISHED)
   )
 
   producer.run()
@@ -34,7 +35,13 @@ export default function AppWrapper({ children }: React.PropsWithChildren<{}>) {
     default:
       return (
         <Error title="Failed to load i18n settings">
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/fabasoad/business-card/issues/new/choose">Please raise GitHub issue</a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/fabasoad/business-card/issues/new/choose"
+          >
+            Please raise GitHub issue
+          </a>
         </Error>
       )
   }

@@ -2,7 +2,7 @@ import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 import { humanize } from '../../../scripts/utils/DateUtils'
 
 describe('DateUtils', () => {
-  type Fixture = { codes: string[], expected: string }
+  type Fixture = { codes: string[]; expected: string }
 
   const expectedMap = new Map<string, Fixture>([
     ['jp', { codes: ['jp', 'ja'], expected: '9 年 1 ヶ月' }],
@@ -12,7 +12,9 @@ describe('DateUtils', () => {
 
   for (const locale of SupportedLocales._items) {
     for (let i = 0; i < expectedMap.get(locale.code).codes.length; i++) {
-      test(`[${expectedMap.get(locale.code).codes[i]}] should return humanized date`, () => {
+      test(`[${
+        expectedMap.get(locale.code).codes[i]
+      }] should return humanized date`, () => {
         const actual: string = humanize(
           new Date('2010-01-23'),
           new Date('2019-02-21'),

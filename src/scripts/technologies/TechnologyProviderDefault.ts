@@ -4,18 +4,18 @@ import * as imgAws from '../../assets/images/technologies/aws.png'
 import * as imgAzureAd from '../../assets/images/technologies/azure-ad.png'
 import * as imgBitrise from '../../assets/images/technologies/bitrise.png'
 import * as imgBootstrap from '../../assets/images/technologies/bootstrap.png'
-import * as imgCSharp from '../../assets/images/technologies/csharp.png'
 import * as imgCodeIgniter from '../../assets/images/technologies/codeIgniter.png'
 import * as imgCodeQL from '../../assets/images/technologies/codeql.png'
 import * as imgConcourseCI from '../../assets/images/technologies/concourseCI.png'
+import * as imgCSharp from '../../assets/images/technologies/csharp.png'
 import * as imgDocker from '../../assets/images/technologies/docker.png'
 import * as imgDotNetCore from '../../assets/images/technologies/dotnet-core.png'
 import * as imgElasticsearch from '../../assets/images/technologies/elasticsearch.png'
 import * as imgFluentBit from '../../assets/images/technologies/fluentBit.png'
 import * as imgFluentD from '../../assets/images/technologies/fluentD.png'
 import * as imgGit from '../../assets/images/technologies/git.png'
-import * as imgGitHub from '../../assets/images/technologies/github.png'
 import * as imgGitHubActions from '../../assets/images/technologies/github-actions.png'
+import * as imgGitHub from '../../assets/images/technologies/github.png'
 import * as imgGitlab from '../../assets/images/technologies/gitlab.png'
 import * as imgGitlabCi from '../../assets/images/technologies/gitlabCi.png'
 import * as imgGo from '../../assets/images/technologies/go.png'
@@ -72,7 +72,7 @@ import * as imgWebpack from '../../assets/images/technologies/webpack.png'
 import * as imgWindowsForms from '../../assets/images/technologies/windowsForms.png'
 import * as imgXamarin from '../../assets/images/technologies/xamarin.png'
 
-import { Technology, TechnologyProvider } from './types'
+import type { Technology, TechnologyProvider } from './types'
 
 const TechnologyProviderDefault: TechnologyProvider = {
   items: new Array<Technology>(
@@ -84,7 +84,12 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'bootstrap', img: imgBootstrap, isSkill: true, title: 'Bootstrap' },
     { name: 'codeigniter', img: imgCodeIgniter, title: 'CodeIgniter' },
     { name: 'codeql', img: imgCodeQL, title: 'CodeQL' },
-    { name: 'concourseCI', img: imgConcourseCI, isSkill: true, title: 'Concourse CI' },
+    {
+      name: 'concourseCI',
+      img: imgConcourseCI,
+      isSkill: true,
+      title: 'Concourse CI'
+    },
     { name: 'csharp', img: imgCSharp, isSkill: true, title: 'C#' },
     { name: 'docker', img: imgDocker, isSkill: true, title: 'Docker' },
     { name: 'dotNetCore', img: imgDotNetCore, title: '.NET Core' },
@@ -93,7 +98,12 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'fluentD', img: imgFluentD, title: 'FluentD' },
     { name: 'git', img: imgGit, isSkill: true, title: 'Git' },
     { name: 'gitHub', img: imgGitHub, isSkill: true, title: 'GitHub' },
-    { name: 'gitHubActions', img: imgGitHubActions, isSkill: true, title: 'GitHub Actions' },
+    {
+      name: 'gitHubActions',
+      img: imgGitHubActions,
+      isSkill: true,
+      title: 'GitHub Actions'
+    },
     { name: 'gitlab', img: imgGitlab, isSkill: true, title: 'GitLab' },
     { name: 'gitlabCi', img: imgGitlabCi, isSkill: true, title: 'GitLab CI' },
     { name: 'go', img: imgGo, isSkill: true, title: 'Go' },
@@ -104,13 +114,23 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'istio', img: imgIstio, title: 'Istio' },
     { name: 'jQuery', img: imgJquery, title: 'jQuery' },
     { name: 'java', img: imgJava, isSkill: true, title: 'Java' },
-    { name: 'javaScript', img: imgJavaScript, isSkill: true, title: 'JavaScript' },
+    {
+      name: 'javaScript',
+      img: imgJavaScript,
+      isSkill: true,
+      title: 'JavaScript'
+    },
     { name: 'jenkins', img: imgJenkins, title: 'Jenkins' },
     { name: 'jira', img: imgJira, title: 'Jira' },
     { name: 'junit', img: imgJunit, title: 'jUnit' },
-    { name: 'kafka', img: imgKafka, title: 'Kafka'},
+    { name: 'kafka', img: imgKafka, title: 'Kafka' },
     { name: 'kibana', img: imgKibana, title: 'Kibana' },
-    { name: 'kubernetes', img: imgKubernetes, isSkill: true, title: 'Kubernetes' },
+    {
+      name: 'kubernetes',
+      img: imgKubernetes,
+      isSkill: true,
+      title: 'Kubernetes'
+    },
     { name: 'leetcode', img: imgLeetcode, title: 'Leetcode' },
     { name: 'lombok', img: imgLombok, title: 'Lombok' },
     { name: 'mariaDb', img: imgMariaDb, title: 'Maria DB' },
@@ -142,7 +162,12 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'terraform', img: imgTerraform, isSkill: true, title: 'Terraform' },
     { name: 'tomcat', img: imgTomcat, title: 'Tomcat' },
     { name: 'travis', img: imgTravis, isSkill: true, title: 'Travis CI' },
-    { name: 'typeScript', img: imgTypeScript, isSkill: true, title: 'TypeScript' },
+    {
+      name: 'typeScript',
+      img: imgTypeScript,
+      isSkill: true,
+      title: 'TypeScript'
+    },
     { name: 'vBulletin', img: imgVBulletin, title: 'vBulletin' },
     { name: 'visualStudio', img: imgVisualStudio, title: 'Visual Studio' },
     { name: 'vsCode', img: imgVsCode, title: 'VS Code' },

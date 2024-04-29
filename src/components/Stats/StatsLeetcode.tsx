@@ -1,7 +1,9 @@
 import * as React from 'react'
+import remoteService, {
+  type LeetcodeStats
+} from '../../scripts/services/LeetcodeService'
+import type { AutoloadProps } from '../Controls/AutoloadProps'
 import StatsCommon from './StatsCommon'
-import remoteService, { LeetcodeStats } from '../../scripts/services/LeetcodeService'
-import { AutoloadProps } from '../Controls/AutoloadProps'
 
 export default function StatsLeetcode({ autoload }: AutoloadProps) {
   const [stats, setStats] = React.useState<LeetcodeStats>({

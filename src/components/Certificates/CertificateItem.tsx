@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Card } from 'react-bootstrap'
-import { CertificateIssuer } from '../../scripts/certificates/types'
-import { Technology } from '../../scripts/technologies/types'
-import { WithTranslation, withTranslation} from 'react-i18next'
+import { type WithTranslation, withTranslation } from 'react-i18next'
+import type { CertificateIssuer } from '../../scripts/certificates/types'
+import type { Technology } from '../../scripts/technologies/types'
 import { getDateLocale } from '../../scripts/utils/DateUtils'
 
 interface CertificateItemProps {
@@ -15,13 +15,16 @@ interface CertificateItemProps {
 }
 
 function CertificateItem({
-  issueDate, issuer, i18nTitleKey, url, t
+  issueDate,
+  issuer,
+  i18nTitleKey,
+  url,
+  t
 }: WithTranslation & CertificateItemProps) {
   return (
     <Card>
       <Card.Header>
-        {issuer.img &&
-          <Card.Img src={issuer.img} className="me-2" />}
+        {issuer.img && <Card.Img src={issuer.img} className="me-2" />}
         {issuer.name}
       </Card.Header>
       <Card.Body>

@@ -1,5 +1,5 @@
-import { Technology, TechnologyProvider } from './types'
 import TechnologyProviderDefault from './TechnologyProviderDefault'
+import type { Technology, TechnologyProvider } from './types'
 
 export default class TechnologyStorage {
   private readonly provider: TechnologyProvider

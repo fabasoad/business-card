@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import App404 from '../../components/App404'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
-import { Locale } from '../../scripts/i18n/types'
-import { render } from '@testing-library/react'
+import type { Locale } from '../../scripts/i18n/types'
 
 describe('App404', () => {
   const locale: Locale = SupportedLocales.default
@@ -34,9 +34,7 @@ describe('App404', () => {
 
   test('redirecting should work correctly', () => {
     const redirectUrl = '/test'
-    render(
-      <App404 redirectUrl={redirectUrl} />
-    )
+    render(<App404 redirectUrl={redirectUrl} />)
     // TODO: Implement this test
   })
 

@@ -1,5 +1,5 @@
 import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
-import { Technology } from '../../../scripts/technologies/types'
+import type { Technology } from '../../../scripts/technologies/types'
 
 let technologyStorage: TechnologyStorage
 

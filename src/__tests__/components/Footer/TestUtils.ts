@@ -28,12 +28,17 @@ export function testFooterInfo(div: HTMLDivElement): void {
     if (a) {
       const img = li.querySelector('img')
       if (img != null) {
-        expect(img).toHaveAttribute('src', 'https://img.shields.io/static/v1?label=made%20by&amp;message=fabasoad&amp;color=2c3e50&amp;style=for-the-badge&amp;logo=github')
+        expect(img).toHaveAttribute(
+          'src',
+          'https://img.shields.io/static/v1?label=made%20by&amp;message=fabasoad&amp;color=2c3e50&amp;style=for-the-badge&amp;logo=github'
+        )
         expect(img).toHaveAttribute('alt', 'Made by fabasoad')
         a = false
         continue
       } else if (!b && !c) {
-        throw new Error(`Expected img inside li element. Actual: ${li.innerHTML}`)
+        throw new Error(
+          `Expected img inside li element. Actual: ${li.innerHTML}`
+        )
       }
     }
     if (b) {
@@ -41,9 +46,15 @@ export function testFooterInfo(div: HTMLDivElement): void {
       if (a != null) {
         expect(a).toHaveAttribute('target', '_blank')
         expect(a).toHaveAttribute('rel', 'noopener noreferrer')
-        expect(a).toHaveAttribute('href', 'https://www.bitcoinqrcodemaker.com/?style=bitcoin&address=145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH&prefix=on')
+        expect(a).toHaveAttribute(
+          'href',
+          'https://www.bitcoinqrcodemaker.com/?style=bitcoin&address=145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH&prefix=on'
+        )
         const img = a.querySelector('img')
-        expect(img).toHaveAttribute('src', 'https://img.shields.io/static/v1?label=bitcoin&amp;message=donate&amp;color=f7931a&amp;style=for-the-badge&amp;logo=bitcoin')
+        expect(img).toHaveAttribute(
+          'src',
+          'https://img.shields.io/static/v1?label=bitcoin&amp;message=donate&amp;color=f7931a&amp;style=for-the-badge&amp;logo=bitcoin'
+        )
         expect(img).toHaveAttribute('alt', 'Donate with Bitcoin')
         b = false
         continue
@@ -58,7 +69,9 @@ export function testFooterInfo(div: HTMLDivElement): void {
         expect(span).toHaveTextContent('business-card-version')
         c = false
       } else if (!a && !b) {
-        throw new Error(`Expected span inside li element. Actual: ${li.innerHTML}`)
+        throw new Error(
+          `Expected span inside li element. Actual: ${li.innerHTML}`
+        )
       }
     }
   }
@@ -81,7 +94,9 @@ export function testFooterMain(div: HTMLDivElement) {
   expect(divContact).toHaveClass('text-center')
   const divTitle = divContact.querySelector('div.section-title.center')
   expect(divTitle).not.toBeNull()
-  expect(divTitle.querySelector('h2')).toHaveTextContent('business-card-contact-title')
+  expect(divTitle.querySelector('h2')).toHaveTextContent(
+    'business-card-contact-title'
+  )
   expect(divTitle.querySelector('hr')).not.toBeNull()
   testFooterContacts(divContact.querySelector('div.footer-contacts'))
   testFooterSocial(divContact.querySelector('div.footer-social'))
@@ -92,8 +107,14 @@ export function testFooterSocial(div: HTMLDivElement): void {
   const fixture = new Map<string, string>([
     ['https://twitter.com/fabasoad', 'fab fa-x-twitter fa-2x'],
     ['https://github.com/fabasoad', 'fab fa-github fa-2x'],
-    ['https://www.linkedin.com/in/yevhenfabizhevskyi/', 'fab fa-linkedin fa-2x'],
-    ['https://stackoverflow.com/users/470214/fabasoad', 'fab fa-stack-overflow fa-2x'],
+    [
+      'https://www.linkedin.com/in/yevhenfabizhevskyi/',
+      'fab fa-linkedin fa-2x'
+    ],
+    [
+      'https://stackoverflow.com/users/470214/fabasoad',
+      'fab fa-stack-overflow fa-2x'
+    ],
     ['https://dev.to/fabasoad', 'fab fa-dev fa-2x']
   ])
   expect(div).toHaveClass('footer-social')

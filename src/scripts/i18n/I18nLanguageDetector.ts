@@ -1,15 +1,16 @@
-import SupportedLocales from './SupportedLocales'
-import { LanguageDetectorModule } from 'i18next'
+import type { LanguageDetectorModule } from 'i18next'
 import i18nLanguageCodeTranslator, {
   I18nLanguageCodeFormat,
-  I18nLanguageCodeTranslatorFunc
+  type I18nLanguageCodeTranslatorFunc
 } from './I18nLanguageCodeTranslator'
+import SupportedLocales from './SupportedLocales'
 
 const I18nLanguageDetector: LanguageDetectorModule = {
   type: 'languageDetector',
   detect: () => {
     const params = new URLSearchParams(document.location.search)
-    let code: string = params.get('lng') ||
+    let code: string =
+      params.get('lng') ||
       localStorage.getItem('i18nextLng') ||
       SupportedLocales.default.code
     const translate: I18nLanguageCodeTranslatorFunc =
@@ -22,7 +23,9 @@ const I18nLanguageDetector: LanguageDetectorModule = {
       window.history.replaceState(
         {},
         document.title,
-        document.location.origin + document.location.pathname + document.location.hash
+        document.location.origin +
+          document.location.pathname +
+          document.location.hash
       )
     }
     return code
@@ -30,6 +33,6 @@ const I18nLanguageDetector: LanguageDetectorModule = {
   init: () => {},
   cacheUserLanguage: (lng: string) => {
     localStorage.setItem('i18nextLng', lng)
-  },
+  }
 }
 export default I18nLanguageDetector

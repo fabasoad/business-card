@@ -1,15 +1,26 @@
 import * as React from 'react'
 import LanguageItem from './LanguageItem'
-import { LanguageTextItemProps } from './LanguageTextItem'
+import type { LanguageTextItemProps } from './LanguageTextItem'
 
 type LanguageLinkItemProps = LanguageTextItemProps & {
   url: string
 }
 
-export default function LanguageLinkItem({ code, text, url }: LanguageLinkItemProps) {
+export default function LanguageLinkItem({
+  code,
+  text,
+  url
+}: LanguageLinkItemProps) {
   return (
     <LanguageItem code={code}>
-      <a className="h5 mt-2" target="_blank" rel="noopener noreferrer" href={url}>{text}</a>
+      <a
+        className="h5 mt-2"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={url}
+      >
+        {text}
+      </a>
     </LanguageItem>
   )
 }

@@ -1,9 +1,9 @@
 import * as React from 'react'
+import { type WithTranslation, withTranslation } from 'react-i18next'
+import SectionTitle from '../Controls/SectionTitle'
 import FooterContacts from './FooterContacts'
 import FooterInfo from './FooterInfo'
 import FooterSocial from './FooterSocial'
-import SectionTitle from '../Controls/SectionTitle'
-import { withTranslation, WithTranslation } from 'react-i18next'
 
 function FooterMain({ t }: WithTranslation) {
   return (

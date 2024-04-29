@@ -1,6 +1,6 @@
-import * as React from 'react'
-import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
+import * as React from 'react'
 
 import JobTitle from '../../../components/Experience/JobTitle'
 import { testJobTitle } from './TestUtils'
@@ -11,12 +11,7 @@ test('should render JobTitle correctly', () => {
   const logo = 'test-logo'
   const title = 'test-title'
   const { container } = render(
-    <JobTitle
-      logo={logo}
-      company={company}
-      title={title}
-      location={location}
-    />
+    <JobTitle logo={logo} company={company} title={title} location={location} />
   )
   testJobTitle(
     container.querySelector('div.job-title'),

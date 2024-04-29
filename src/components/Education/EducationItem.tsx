@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { withTranslation, WithTranslation} from 'react-i18next'
+import { type WithTranslation, withTranslation } from 'react-i18next'
 import { getDateLocale } from '../../scripts/utils/DateUtils'
 
 interface EducationItemProps {
@@ -8,11 +8,20 @@ interface EducationItemProps {
   title: string
 }
 
-function EducationItem({ from, to, title, t }: WithTranslation & EducationItemProps) {
+function EducationItem({
+  from,
+  to,
+  title,
+  t
+}: WithTranslation & EducationItemProps) {
   return (
     <>
       <div className="timeline-image">
-        <h4>{getDateLocale(to)}<br />-<br />{getDateLocale(from)}</h4>
+        <h4>
+          {getDateLocale(to)}
+          <br />-<br />
+          {getDateLocale(from)}
+        </h4>
       </div>
       <div className="timeline-panel">
         <div className="timeline-heading">

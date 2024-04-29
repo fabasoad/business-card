@@ -1,5 +1,5 @@
+import type { Locale } from '../../../scripts/i18n/types'
 import { humanize } from '../../../scripts/utils/DateUtils'
-import { Locale } from '../../../scripts/i18n/types'
 
 export function testDateDuration(
   div: HTMLDivElement,
@@ -21,20 +21,25 @@ export function testDateDuration(
 }
 
 export function testDateLocale(
-  container: HTMLElement, { code }: Locale, year: number, monthIndex?: number
+  container: HTMLElement,
+  { code }: Locale,
+  year: number,
+  monthIndex?: number
 ): void {
   let expectedText
   switch (code) {
     case 'gb':
     case 'ua':
-      expectedText = monthIndex == undefined
-        ? year
-        : `business-card-month-${monthIndex} ${year}`
+      expectedText =
+        monthIndex == undefined
+          ? year
+          : `business-card-month-${monthIndex} ${year}`
       break
     case 'jp':
-      expectedText = monthIndex == undefined
-        ? 'business-card-year-singular'
-        : `business-card-year-singularbusiness-card-month-${monthIndex}`
+      expectedText =
+        monthIndex == undefined
+          ? 'business-card-year-singular'
+          : `business-card-year-singularbusiness-card-month-${monthIndex}`
       break
     default:
       throw new Error(`${code} locale is not covered by tests`)

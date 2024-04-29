@@ -1,7 +1,7 @@
 import * as React from 'react'
-import SectionTitle from './Controls/SectionTitle'
 import { Col, Container } from 'react-bootstrap'
-import { WithTranslation, withTranslation, Trans } from 'react-i18next'
+import { Trans, type WithTranslation, withTranslation } from 'react-i18next'
+import SectionTitle from './Controls/SectionTitle'
 
 function Resume({ t }: WithTranslation) {
   return (
@@ -10,7 +10,15 @@ function Resume({ t }: WithTranslation) {
       <Container>
         <Col className="text-center">
           <Trans i18nKey="business-card-resume-message">
-            To download my resume please go to my <a href="https://www.linkedin.com/in/yevhenfabizhevskyi/" target="_blank" rel="noreferrer">LinkedIn page</a> and choose More → Save to PDF
+            To download my resume please go to my{' '}
+            <a
+              href="https://www.linkedin.com/in/yevhenfabizhevskyi/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              LinkedIn page
+            </a>{' '}
+            and choose More → Save to PDF
           </Trans>
         </Col>
       </Container>

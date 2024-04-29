@@ -9,7 +9,12 @@ interface JobPeriodProps {
   toYear?: number
 }
 
-function JobPeriod({ fromMonthIndex, fromYear, toMonthIndex, toYear }: JobPeriodProps) {
+function JobPeriod({
+  fromMonthIndex,
+  fromYear,
+  toMonthIndex,
+  toYear
+}: JobPeriodProps) {
   return (
     <div className="timeline-image">
       <DateDuration

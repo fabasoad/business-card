@@ -17,6 +17,9 @@ export default class TotalExperience implements ITotalExperience {
 
   public humanize(code: string): string {
     return humanize(
-      TotalExperience.EXPERIENCE_START_DATE, this.endDateGenerator(), code)
+      TotalExperience.EXPERIENCE_START_DATE,
+      this.endDateGenerator(),
+      code
+    )
   }
 }

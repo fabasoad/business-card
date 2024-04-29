@@ -1,5 +1,4 @@
-import CertificateIssuerStorage
-  from '../../../scripts/certificates/CertificateIssuerStorage'
+import CertificateIssuerStorage from '../../../scripts/certificates/CertificateIssuerStorage'
 
 new Array<string>('coursera', 'udemy').forEach((i) =>
   test(`should find ${i} successfully`, () => {

@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import AboutMain from '../../../components/About/AboutMain'
-import { render } from '@testing-library/react'
 import { testAboutMain } from './TestUtils'
 
 describe('AboutMain', () => {

@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
-import * as React from 'react'
 import { render } from '@testing-library/react'
+import * as React from 'react'
 
 import StatsCommon from '../../../components/Stats/StatsCommon'
 import StringUtils from '../../../scripts/utils/StringUtils'
@@ -11,9 +11,14 @@ test('should render StatsCommon correctly', () => {
   const techName = 'maven'
   const content = StringUtils.random(10)
   const { container } = render(
-    <StatsCommon techName={techName} url={url}>{content}</StatsCommon>
+    <StatsCommon techName={techName} url={url}>
+      {content}
+    </StatsCommon>
   )
   testStatsCommon(
-    container.querySelector('div.stats-item'), url, content, techName
+    container.querySelector('div.stats-item'),
+    url,
+    content,
+    techName
   )
 })

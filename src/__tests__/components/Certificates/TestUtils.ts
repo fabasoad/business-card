@@ -1,7 +1,7 @@
 import * as items from '../../../components/Certificates/items.json'
 import CertificateIssuerStorage from '../../../scripts/certificates/CertificateIssuerStorage'
-import { CertificateIssuer } from '../../../scripts/certificates/types'
-import { Locale } from '../../../scripts/i18n/types'
+import type { CertificateIssuer } from '../../../scripts/certificates/types'
+import type { Locale } from '../../../scripts/i18n/types'
 import { testSectionTitle } from '../Controls/TestUtils'
 
 export function testCertificateItem(
@@ -14,7 +14,8 @@ export function testCertificateItem(
   url: string
 ) {
   const certificateIssuerStorage = new CertificateIssuerStorage()
-  const issuer: CertificateIssuer = certificateIssuerStorage.findByName(issuerName)
+  const issuer: CertificateIssuer =
+    certificateIssuerStorage.findByName(issuerName)
 
   const monthIndex = date.getMonth()
   const year = date.getFullYear()
@@ -37,7 +38,9 @@ export function testCertificateItem(
   expect(elements).toHaveLength(1)
   expect(elements[0]).toHaveTextContent(
     locale.code === 'jp'
-      ? new RegExp(`.+business-card-year-singularbusiness-card-month-${monthIndex}`)
+      ? new RegExp(
+          `.+business-card-year-singularbusiness-card-month-${monthIndex}`
+        )
       : `business-card-month-${monthIndex} ${year}`
   )
 }

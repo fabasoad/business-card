@@ -1,5 +1,5 @@
-import { Locale } from '../../../scripts/i18n/types'
 import { fireEvent } from '@testing-library/react'
+import type { Locale } from '../../../scripts/i18n/types'
 
 export function testLocaleDropDown(div: HTMLDivElement, locale: Locale) {
   expect(div).toHaveClass('dropdown')
@@ -17,7 +17,8 @@ export function testMenuItemRendered(a: HTMLAnchorElement, name: string) {
 
 export function testMenuItemActive(
   a: HTMLAnchorElement,
-  setActiveNavLinkMock: jest.Mock<void, [actual: string]>) {
+  setActiveNavLinkMock: jest.Mock<void, [actual: string]>
+) {
   fireEvent(
     a,
     new MouseEvent('click', {

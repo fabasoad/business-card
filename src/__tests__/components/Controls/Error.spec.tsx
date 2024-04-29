@@ -1,12 +1,16 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import Error from '../../../components/Controls/Error'
 import StringUtils from '../../../scripts/utils/StringUtils'
-import { render } from '@testing-library/react'
 
 test('should render Error correctly', () => {
   const title = StringUtils.random(10)
-  const { container } = render(<Error title={title}><div id="test"></div></Error>)
+  const { container } = render(
+    <Error title={title}>
+      <div id="test"></div>
+    </Error>
+  )
   const div = container.querySelector('div.error')
   const divContainer = div.querySelector('div.container')
   const divRows = divContainer.querySelectorAll('div.row')

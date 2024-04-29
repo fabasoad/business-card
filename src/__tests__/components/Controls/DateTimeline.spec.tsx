@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import DateTimeline from '../../../components/Controls/DateTimeline'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
-import { Locale } from '../../../scripts/i18n/types'
-import { render } from '@testing-library/react'
+import type { Locale } from '../../../scripts/i18n/types'
 import { testDateTimeline } from './TestUtils'
 
 describe('DateTimeline', () => {
@@ -36,10 +36,7 @@ describe('DateTimeline', () => {
     const fromMonthIndex = 6
     const fromYear = 2017
     const { container } = render(
-      <DateTimeline
-        fromMonthIndex={fromMonthIndex}
-        fromYear={fromYear}
-      />
+      <DateTimeline fromMonthIndex={fromMonthIndex} fromYear={fromYear} />
     )
     testDateTimeline(
       container.querySelector('div.controls__date-timeline'),

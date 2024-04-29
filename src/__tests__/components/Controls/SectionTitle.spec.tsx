@@ -1,8 +1,8 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import SectionTitle from '../../../components/Controls/SectionTitle'
 import StringUtils from '../../../scripts/utils/StringUtils'
-import { render } from '@testing-library/react'
 import { testSectionTitle } from './TestUtils'
 
 test('should render SectionTitle correctly', () => {

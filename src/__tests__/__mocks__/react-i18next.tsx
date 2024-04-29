@@ -9,9 +9,11 @@ const tMock = jest.fn((key) => key)
 const i18n = {
   language: SupportedLocales.default.code,
   t: tMock,
-  exists: (key: string): boolean => Object.hasOwn(gb, key) ||
+  exists: (key: string): boolean =>
+    Object.hasOwn(gb, key) ||
     // For testing purposes
-    key === 'testing-prefix-1' || key === 'testing-prefix-1-1'
+    key === 'testing-prefix-1' ||
+    key === 'testing-prefix-1-1'
 }
 
 reactI18Next.withTranslation = () => (Component) => {
@@ -24,7 +26,7 @@ reactI18Next.withTranslation = () => (Component) => {
 }
 
 reactI18Next.Trans = function Trans({ i18nKey }) {
-  return (<>{i18nKey}</>)
+  return <>{i18nKey}</>
 }
 
 reactI18Next.getI18n = () => i18n

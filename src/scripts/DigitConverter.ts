@@ -7,7 +7,9 @@ export default class DigitConverter {
     return this._convert(num, /[\uFF10-\uFF19]/g, -1)
   }
 
-  _convert(num: string, regExp: RegExp, delta: number = 1) {
-    return num.replace(regExp, (ch) => String.fromCharCode(ch.charCodeAt(0) + (delta * 65248)))
+  _convert(num: string, regExp: RegExp, delta = 1) {
+    return num.replace(regExp, (ch) =>
+      String.fromCharCode(ch.charCodeAt(0) + delta * 65248)
+    )
   }
 }

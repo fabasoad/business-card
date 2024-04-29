@@ -17,7 +17,9 @@ describe('DevMessageProducer', () => {
       'Liberapay',
       'IssueHunt',
       'BTC'
-    ).forEach((m: string) => expect(messages[messages.length - 1]).toContain<string>(m))
+    ).forEach((m: string) =>
+      expect(messages[messages.length - 1]).toContain<string>(m)
+    )
   })
 
   afterEach(() => {

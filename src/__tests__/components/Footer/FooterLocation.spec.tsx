@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
-import * as React from 'react'
 import { render } from '@testing-library/react'
+import * as React from 'react'
 
 import FooterLocation from '../../../components/Footer/FooterLocation'
 import { testFooterLocation } from './TestUtils'

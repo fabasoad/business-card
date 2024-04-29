@@ -1,7 +1,7 @@
 /* global NodeJS */
 import * as React from 'react'
+import { type WithTranslation, withTranslation } from 'react-i18next'
 import BaseConstants from '../scripts/BaseConstants'
-import { WithTranslation, withTranslation } from 'react-i18next'
 
 interface App404Props {
   redirectUrl?: string
@@ -9,7 +9,7 @@ interface App404Props {
 
 function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
   let timer: NodeJS.Timeout
-  let counterValue: number = 3
+  let counterValue = 3
 
   const [isRedirecting, setIsRedirecting] = React.useState<boolean>(false)
   const [counter, setCounter] = React.useState<number>(counterValue)
@@ -28,10 +28,14 @@ function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
     }, 1000)
   })
 
-  const isRedirectingStyle = (flag: boolean) => ({ display: `${isRedirecting === flag ? 'inline' : 'none'}` })
+  const isRedirectingStyle = (flag: boolean) => ({
+    display: `${isRedirecting === flag ? 'inline' : 'none'}`
+  })
 
   return (
-    <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
+    <div
+      className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}
+    >
       <p>
         <>{t('business-card-404-text-1')}</>
       </p>
@@ -39,8 +43,11 @@ function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
         <>
           <span className="blinker-prefix"></span>
           {/* JP: 画面をクリックして続ける */}
-          &nbsp;{t('business-card-404-text-2')}<span style={isRedirectingStyle(true)}>.</span>
-          <span style={isRedirectingStyle(false)} className="blinker">_</span>
+          &nbsp;{t('business-card-404-text-2')}
+          <span style={isRedirectingStyle(true)}>.</span>
+          <span style={isRedirectingStyle(false)} className="blinker">
+            _
+          </span>
         </>
       </p>
       <p style={isRedirectingStyle(true)}>

@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import JobPeriod from '../../../components/Experience/JobPeriod'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
-import { Locale } from '../../../scripts/i18n/types'
-import { render } from '@testing-library/react'
+import type { Locale } from '../../../scripts/i18n/types'
 import { testJobPeriod } from './TestUtils'
 
 describe('JobPeriod', () => {
@@ -36,10 +36,7 @@ describe('JobPeriod', () => {
     const fromMonthIndex = 0
     const fromYear = 2018
     const { container } = render(
-      <JobPeriod
-        fromMonthIndex={fromMonthIndex}
-        fromYear={fromYear}
-      />
+      <JobPeriod fromMonthIndex={fromMonthIndex} fromYear={fromYear} />
     )
     testJobPeriod(
       container.querySelector('div.timeline-image'),

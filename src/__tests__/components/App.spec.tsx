@@ -1,17 +1,10 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import App from '../../components/App'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
-import { Locale } from '../../scripts/i18n/types'
-import { render } from '@testing-library/react'
+import type { Locale } from '../../scripts/i18n/types'
 import { testAboutMain } from './About/TestUtils'
-import {
-  testBackToTopButton,
-  testBadges,
-  testHeader,
-  testResume,
-  testSkills
-} from './TestUtils'
 import { testCertificatesMain } from './Certificates/TestUtils'
 import { testEducationMain } from './Education/TestUtils'
 import { testExperienceMain } from './Experience/TestUtils'
@@ -20,13 +13,18 @@ import { testLanguageMain } from './Languages/TestUtils'
 import { testMenuMain } from './Menu/TestUtils'
 import { testPortfolioMain } from './Portfolio/TestUtils'
 import { testStatsMain } from './Stats/TestUtils'
+import {
+  testBackToTopButton,
+  testBadges,
+  testHeader,
+  testResume,
+  testSkills
+} from './TestUtils'
 
 describe('App', () => {
   test('should render App correctly', () => {
     const locale: Locale = SupportedLocales.default
-    const { container } = render(
-      <App autoload={false} />
-    )
+    const { container } = render(<App autoload={false} />)
     const div = container.querySelector('div.font-regular')
     expect(div).toHaveClass(`font-${locale.code === 'jp' ? '' : 'non-'}jp`)
     testBackToTopButton(div.querySelector('a.back-to-top'))

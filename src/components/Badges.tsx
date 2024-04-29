@@ -1,8 +1,8 @@
 import * as React from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
+import { type WithTranslation, withTranslation } from 'react-i18next'
 import * as imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
 import SectionTitle from './Controls/SectionTitle'
-import { Col, Container, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
 
 function Badges({ t }: WithTranslation) {
   return (
@@ -11,8 +11,17 @@ function Badges({ t }: WithTranslation) {
       <Container>
         <Row>
           <Col sm md lg className="text-center">
-            <a href="https://tree-nation.com/profile/digitalocean" rel="noopener noreferrer" target="_blank">
-              <img className="mb-4 mx-4" src={imgDigitalOceanBadge} alt="Digital Ocean Forest Badge" title="DigitalOcean Forest 2021" />
+            <a
+              href="https://tree-nation.com/profile/digitalocean"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                className="mb-4 mx-4"
+                src={imgDigitalOceanBadge}
+                alt="Digital Ocean Forest Badge"
+                title="DigitalOcean Forest 2021"
+              />
             </a>
           </Col>
           {/* <Col sm md lg className="text-center">

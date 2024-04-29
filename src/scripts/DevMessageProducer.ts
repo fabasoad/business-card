@@ -1,7 +1,7 @@
 /* global NodeJS */
 class DevMessageProducer {
   _messages: string[]
-  _counter: number = 0
+  _counter = 0
   _timer: NodeJS.Timeout
 
   constructor(

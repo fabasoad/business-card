@@ -1,13 +1,13 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
-import CertificateIssuerStorage from '../../../scripts/certificates/CertificateIssuerStorage'
 import CertificateItem from '../../../components/Certificates/CertificateItem'
+import CertificateIssuerStorage from '../../../scripts/certificates/CertificateIssuerStorage'
+import type { CertificateIssuer } from '../../../scripts/certificates/types'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
-import { CertificateIssuer } from '../../../scripts/certificates/types'
-import { render } from '@testing-library/react'
+import type { Technology } from '../../../scripts/technologies/types'
 import { testCertificateItem } from './TestUtils'
-import { Technology } from '../../../scripts/technologies/types'
 
 describe('CertificateItem', () => {
   test('should render CertificateItem correctly', () => {
@@ -18,7 +18,8 @@ describe('CertificateItem', () => {
     const technologyName = 'maven'
     const technology: Technology = technologyStorage.findByName(technologyName)
     const issuerName = 'udemy'
-    const issuer: CertificateIssuer = certificateIssuerStorage.findByName(issuerName)
+    const issuer: CertificateIssuer =
+      certificateIssuerStorage.findByName(issuerName)
     const i18nTitleKey = 'certificate-i18nTitleKey'
     const url = 'certificate-url'
 

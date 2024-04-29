@@ -14,7 +14,12 @@ export default function PortfolioItem(props: PortfolioItemProps) {
     <Col sm={6} md={3} lg={3}>
       <div className="portfolio-item">
         <div className="hover-bg text-center">
-          <a href={props.url} title={props.name} rel="noopener noreferrer" target="_blank">
+          <a
+            href={props.url}
+            title={props.name}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
             <div className="hover-text">
               <h4>{props.title}</h4>
               <small>{props.subtitle}</small>

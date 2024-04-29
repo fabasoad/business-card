@@ -1,13 +1,13 @@
 import State from '../../components/Stats/State'
-import RemoteService from './RemoteService'
+import type RemoteService from './RemoteService'
 
 type StackOverflowServiceData = {
-  reputation: number,
+  reputation: number
   answerCount: number
 }
 
 export type StackOverflowData = {
-  stackOverflow: StackOverflowServiceData,
+  stackOverflow: StackOverflowServiceData
   superUser: StackOverflowServiceData
 }
 
@@ -18,10 +18,12 @@ class StackOverflowService implements RemoteService<StackOverflowData> {
 
   public async request(): Promise<StackOverflowData> {
     if (!this.cache) {
-      this.cache = await fetch(`https://api.stackexchange.com/2.3/users/${StackOverflowService.STACKOVERFLOW_USER_ID}/associated`)
+      this.cache = await fetch(
+        `https://api.stackexchange.com/2.3/users/${StackOverflowService.STACKOVERFLOW_USER_ID}/associated`
+      )
         .then((resp) => resp.json())
         .then((data) => {
-          let flag: boolean = false
+          let flag = false
           let stackOverflow: StackOverflowServiceData
           let superUser: StackOverflowServiceData
           for (let i = 0; i < data.items.length; i++) {

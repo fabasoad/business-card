@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import DateDuration from '../../../components/Controls/DateDuration'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
-import { Locale } from '../../../scripts/i18n/types'
-import { render } from '@testing-library/react'
+import type { Locale } from '../../../scripts/i18n/types'
 import { testDateDuration } from './TestUtils'
 
 describe('DateDuration', () => {
@@ -36,10 +36,7 @@ describe('DateDuration', () => {
     const fromMonthIndex = 5
     const fromYear = 2017
     const { container } = render(
-      <DateDuration
-        fromMonthIndex={fromMonthIndex}
-        fromYear={fromYear}
-      />
+      <DateDuration fromMonthIndex={fromMonthIndex} fromYear={fromYear} />
     )
     testDateDuration(
       container.querySelector('div.controls__date-duration'),

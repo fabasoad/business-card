@@ -1,7 +1,7 @@
 import * as React from 'react'
 import remoteService from '../../scripts/services/GitHubService'
+import type { AutoloadProps } from '../Controls/AutoloadProps'
 import StatsCommon from './StatsCommon'
-import { AutoloadProps } from '../Controls/AutoloadProps'
 
 export default function StatsGitHub({ autoload }: AutoloadProps) {
   const [stars, setStars] = React.useState<number>(0)

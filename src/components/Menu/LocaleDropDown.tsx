@@ -1,16 +1,24 @@
 import * as React from 'react'
-import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 import { Dropdown } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
-import { Locale } from '../../scripts/i18n/types'
+import { type WithTranslation, withTranslation } from 'react-i18next'
 import i18nService from '../../scripts/i18n/I18nService'
+import SupportedLocales from '../../scripts/i18n/SupportedLocales'
+import type { Locale } from '../../scripts/i18n/types'
 
 function LocaleDropDown({ i18n, t }: WithTranslation) {
   return (
     <Dropdown>
-      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
+      <Dropdown.Toggle
+        bsPrefix="nav-link dropdown-toggle"
+        variant={null}
+        id="btnLocale"
+      >
         <i className="fa fa-globe locale-icon"></i>
-        {t(`business-card-languages-${SupportedLocales.getOrDefault(i18n.language).code}`)}
+        {t(
+          `business-card-languages-${
+            SupportedLocales.getOrDefault(i18n.language).code
+          }`
+        )}
       </Dropdown.Toggle>
       <Dropdown.Menu>
         {SupportedLocales.getExceptOf(i18n.language).map((l: Locale) => {

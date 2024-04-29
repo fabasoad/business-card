@@ -1,4 +1,4 @@
-import { Locale } from '../../../scripts/i18n/types'
+import type { Locale } from '../../../scripts/i18n/types'
 import { testSectionTitle } from '../Controls/TestUtils'
 
 type TestHeadingFunction = (h4: HTMLHeadingElement) => void
@@ -11,16 +11,24 @@ export function testEducationItem(
   testHeading: TestHeadingFunction = (h4: HTMLHeadingElement) =>
     expect(h4).toHaveTextContent(`${to}-${from}`)
 ): void {
-  const h4DateLocaleElements = container.querySelectorAll('div.timeline-image h4')
+  const h4DateLocaleElements = container.querySelectorAll(
+    'div.timeline-image h4'
+  )
   expect(h4DateLocaleElements).toHaveLength(1)
   testHeading(h4DateLocaleElements.item(0) as HTMLHeadingElement)
-  const h4TimelineElements = container.querySelectorAll('div.timeline-heading h4')
+  const h4TimelineElements = container.querySelectorAll(
+    'div.timeline-heading h4'
+  )
   expect(h4TimelineElements).toHaveLength(2)
-  expect(h4TimelineElements.item(0)).toHaveTextContent('business-card-education-university-title')
+  expect(h4TimelineElements.item(0)).toHaveTextContent(
+    'business-card-education-university-title'
+  )
   expect(h4TimelineElements.item(1)).toHaveTextContent(title)
   const pBodyElements = container.querySelectorAll('div.timeline-body p')
   expect(pBodyElements).toHaveLength(1)
-  expect(pBodyElements.item(0)).toHaveTextContent('business-card-education-university-speciality')
+  expect(pBodyElements.item(0)).toHaveTextContent(
+    'business-card-education-university-speciality'
+  )
 }
 
 export function testEducationMain(div: HTMLDivElement, locale: Locale) {
@@ -45,9 +53,11 @@ export function testEducationMain(div: HTMLDivElement, locale: Locale) {
     to,
     'business-card-education-university-master',
     locale.code === 'jp'
-      ? (h4: HTMLHeadingElement): void => expect(h4).toHaveTextContent(
-        new RegExp('.+business-card-year-singular-.+business-card-year-singular')
-      )
-      : (h4: HTMLHeadingElement): void => expect(h4).toHaveTextContent(`${to}-${from}`)
+      ? (h4: HTMLHeadingElement): void =>
+          expect(h4).toHaveTextContent(
+            /.+business-card-year-singular-.+business-card-year-singular/
+          )
+      : (h4: HTMLHeadingElement): void =>
+          expect(h4).toHaveTextContent(`${to}-${from}`)
   )
 }

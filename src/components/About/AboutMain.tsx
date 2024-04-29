@@ -1,11 +1,11 @@
 /// <reference path='./AboutMain.d.ts' />
 import * as React from 'react'
-import { Trans, withTranslation, WithTranslation } from 'react-i18next'
+import { Col, Container, Row } from 'react-bootstrap'
+import { Trans, type WithTranslation, withTranslation } from 'react-i18next'
 import * as imgAboutMe from '../../assets/images/about_me.jpg'
 import * as img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
 import TotalExperience from '../../scripts/TotalExperience'
 import SectionTitle from '../Controls/SectionTitle'
-import { Col, Container, Row } from 'react-bootstrap'
 
 function AboutMain({ t, i18n }: WithTranslation) {
   const totalExperience = new TotalExperience()
@@ -28,10 +28,9 @@ function AboutMain({ t, i18n }: WithTranslation) {
         <Col md={{ span: 8, offset: 2 }}>
           <ul className="mt-3">
             <li>
-              {t(
-                'business-card-about-me-general-list-item-1',
-                { totalExperience: totalExperience.humanize(i18n.language) }
-              )}
+              {t('business-card-about-me-general-list-item-1', {
+                totalExperience: totalExperience.humanize(i18n.language)
+              })}
             </li>
             <li>{t('business-card-about-me-general-list-item-2')}</li>
             <li>{t('business-card-about-me-general-list-item-3')}</li>
@@ -50,7 +49,14 @@ function AboutMain({ t, i18n }: WithTranslation) {
                 <li>{t('business-card-about-me-general-list-item-14')}</li>
                 <li>
                   <Trans i18nKey="business-card-about-me-general-list-item-15">
-                    Developed and released <a href="https://github.com/marketplace?type=actions&query=fabasoad+" target="_blank" rel="noreferrer">25+ GitHub Actions to the marketplace</a>
+                    Developed and released{' '}
+                    <a
+                      href="https://github.com/marketplace?type=actions&query=fabasoad+"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      25+ GitHub Actions to the marketplace
+                    </a>
                   </Trans>
                 </li>
                 <li>{t('business-card-about-me-general-list-item-16')}</li>

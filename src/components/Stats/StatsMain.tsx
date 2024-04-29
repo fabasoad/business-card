@@ -1,19 +1,17 @@
 import * as React from 'react'
-import { WithTranslation, withTranslation } from 'react-i18next'
+import { Col, Container, Row } from 'react-bootstrap'
+import { type WithTranslation, withTranslation } from 'react-i18next'
+import type { AutoloadProps } from '../Controls/AutoloadProps'
+import SectionTitle from '../Controls/SectionTitle'
 import StatsGitHub from './StatsGitHub'
 import StatsLeetcode from './StatsLeetcode'
 import StatsStackOverflow from './StatsStackOverflow'
-import SectionTitle from '../Controls/SectionTitle'
-import { Col, Container, Row } from 'react-bootstrap'
-import { AutoloadProps } from '../Controls/AutoloadProps'
-import StatsSuperUser from './StatsSuperUser';
+import StatsSuperUser from './StatsSuperUser'
 
 function StatsMain({ autoload, t }: WithTranslation & AutoloadProps) {
   return (
     <div id="stats">
-      <SectionTitle>
-        {t('business-card-stats-title')}
-      </SectionTitle>
+      <SectionTitle>{t('business-card-stats-title')}</SectionTitle>
       <Container>
         <Row>
           <Col className="stats-list d-flex justify-content-center">

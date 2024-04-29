@@ -1,5 +1,5 @@
 import State from '../../components/Stats/State'
-import RemoteService from './RemoteService'
+import type RemoteService from './RemoteService'
 
 export interface LeetcodeStats {
   totalSolved: number
@@ -22,7 +22,10 @@ class LeetcodeService implements RemoteService<LeetcodeStats> {
         .then(({ totalSolved, easySolved, mediumSolved, hardSolved }) => {
           this.state = State.FINISHED
           return {
-            totalSolved, easySolved, mediumSolved, hardSolved
+            totalSolved,
+            easySolved,
+            mediumSolved,
+            hardSolved
           }
         })
         .catch(() => {

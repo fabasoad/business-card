@@ -1,4 +1,4 @@
-import State from '../../../components/Stats/State';
+import State from '../../../components/Stats/State'
 
 test('State should be in correct order', () => {
   expect(State.NOT_STARTED).toEqual(0)

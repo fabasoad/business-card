@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
+import { render } from '@testing-library/react'
 import * as React from 'react'
 import StatsStackOverflow from '../../../components/Stats/StatsStackOverflow'
-import { render } from '@testing-library/react'
 import { testStatsStackOverflow } from './TestUtils'
 
 test('should render StatsStackOverflow correctly', () => {

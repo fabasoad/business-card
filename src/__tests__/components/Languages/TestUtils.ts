@@ -8,7 +8,10 @@ export function testLanguageItem(div: HTMLDivElement, code: string): void {
 }
 
 export function testLanguageLinkItem(
-  div: HTMLDivElement, code: string, url: string, text: string
+  div: HTMLDivElement,
+  code: string,
+  url: string,
+  text: string
 ): void {
   testLanguageItem(div, code)
   const a = div.querySelector('a')
@@ -54,7 +57,11 @@ export function testLanguageMain(div: HTMLDivElement) {
   )
 }
 
-export function testLanguageTextItem(div: HTMLDivElement, code: string, text: string): void {
+export function testLanguageTextItem(
+  div: HTMLDivElement,
+  code: string,
+  text: string
+): void {
   expect(div).toHaveTextContent(text)
   testLanguageItem(div, code)
 }

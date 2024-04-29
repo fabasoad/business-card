@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom'
-import * as React from 'react'
 import { render } from '@testing-library/react'
+import * as React from 'react'
 
 import LanguagesMain from '../../../components/Languages/LanguagesMain'
 import { testLanguageMain } from './TestUtils'

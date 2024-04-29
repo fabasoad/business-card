@@ -1,6 +1,6 @@
 import TotalExperience from '../../scripts/TotalExperience'
 
-test(`should calculate total experience correctly`, () => {
+test('should calculate total experience correctly', () => {
   const c = new TotalExperience(() => new Date(2012, 6, 1))
   const actual: string[] = c.humanize('gb').split(' ')
   expect<number>(actual.length).toBe(4)

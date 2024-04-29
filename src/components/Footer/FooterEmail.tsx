@@ -4,7 +4,7 @@ import { Col } from 'react-bootstrap'
 export default function FooterEmail() {
   return (
     <Col>
-      <i className="fa fa-envelope fa-2x"></i>
+      <i className="fa fa-envelope fa-2x" />
       <p>fabasoad@gmail.com</p>
     </Col>
   )

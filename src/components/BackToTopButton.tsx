@@ -19,7 +19,7 @@ export default function BackToTopButton() {
   return (
     <a
       onClick={handleClick}
-      className={(isVisible ? 'show ' : '') + 'back-to-top'}
-    ></a>
+      className={`${isVisible ? 'show ' : ''}back-to-top`}
+    />
   )
 }

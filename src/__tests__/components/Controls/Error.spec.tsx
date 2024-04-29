@@ -8,7 +8,7 @@ test('should render Error correctly', () => {
   const title = StringUtils.random(10)
   const { container } = render(
     <Error title={title}>
-      <div id="test"></div>
+      <div id="test" />
     </Error>
   )
   const div = container.querySelector('div.error')

@@ -18,7 +18,7 @@ function DateDuration({
 }: WithTranslation & DateDurationProps) {
   const from = new Date(fromYear, fromMonthIndex)
   const to =
-    !toYear || toMonthIndex == undefined
+    !toYear || toMonthIndex === undefined
       ? new Date()
       : new Date(toYear, toMonthIndex)
   return (

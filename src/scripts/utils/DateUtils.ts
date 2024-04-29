@@ -9,11 +9,11 @@ export function getDateLocale(year: number, monthIndex?: number): string {
   return i18n.language === 'jp'
     ? converter.toDoubleByte(year.toString()) +
         i18n.t('business-card-year-singular') +
-        (monthIndex != undefined
+        (monthIndex !== undefined
           ? i18n.t(`business-card-month-${monthIndex}`)
           : '')
-    : (monthIndex != undefined
-        ? i18n.t(`business-card-month-${monthIndex}`) + ' '
+    : (monthIndex !== undefined
+        ? `${i18n.t(`business-card-month-${monthIndex}`)} `
         : '') + year
 }
 

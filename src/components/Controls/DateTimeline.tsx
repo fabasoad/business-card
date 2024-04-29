@@ -20,7 +20,7 @@ function DateTimeline({
   return (
     <Col className="controls__date-timeline">
       <Row>
-        {(toMonthIndex != undefined &&
+        {(toMonthIndex !== undefined &&
           toYear &&
           getDateLocale(toYear, toMonthIndex)) ||
           t('business-card-experience-present')}

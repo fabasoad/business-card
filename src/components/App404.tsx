@@ -18,7 +18,7 @@ function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
     e.preventDefault()
     setIsRedirecting(true)
     timer = setInterval(() => {
-      if (counterValue == 1) {
+      if (counterValue === 1) {
         clearInterval(timer)
         window.location.replace(redirectUrl)
       } else {
@@ -36,12 +36,10 @@ function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
     <div
       className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}
     >
-      <p>
-        <>{t('business-card-404-text-1')}</>
-      </p>
+      <p>{t('business-card-404-text-1')}</p>
       <p>
         <>
-          <span className="blinker-prefix"></span>
+          <span className="blinker-prefix" />
           {/* JP: 画面をクリックして続ける */}
           &nbsp;{t('business-card-404-text-2')}
           <span style={isRedirectingStyle(true)}>.</span>

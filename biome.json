@@ -7,7 +7,8 @@
     "formatter": {
       "indentStyle": "space",
       "quoteStyle": "single",
-      "semicolons": "asNeeded"
+      "semicolons": "asNeeded",
+      "trailingComma": "none"
     }
   },
   "json": {

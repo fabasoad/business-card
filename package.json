@@ -34,7 +34,7 @@
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@popperjs/core": "2.11.8",
     "@testing-library/jest-dom": "6.4.2",
-    "@testing-library/react": "14.2.2",
+    "@testing-library/react": "15.0.5",
     "@types/jest": "29.5.12",
     "@types/node": "20.12.2",
     "@types/react": "18.2.73",

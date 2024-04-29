@@ -16,7 +16,12 @@ import Resume from './Resume'
 import Skills from './Skills'
 import StatsMain from './Stats/StatsMain'
 
-export function App({ autoload, i18n }: WithTranslation & AutoloadProps) {
+const defaultProps = {
+  autoload: true
+}
+
+export function App(props: WithTranslation & AutoloadProps) {
+  const { autoload, i18n } = {...defaultProps, ...props}
   return (
     <div
       className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}
@@ -37,10 +42,6 @@ export function App({ autoload, i18n }: WithTranslation & AutoloadProps) {
       <FooterMain />
     </div>
   )
-}
-
-App.defaultProps = {
-  autoload: true
 }
 
 export default withTranslation()(App)

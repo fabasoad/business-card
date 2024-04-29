@@ -6,7 +6,7 @@
   "scripts": {
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
-    "lint": "yarn biome check --apply src",
+    "lint": "yarn biome check src",
     "start:dev": "webpack serve --config webpack.dev.js",
     "start:web": "nodemon --watch ./server -r dotenv/config server/app.js",
     "test": "jest --coverage"

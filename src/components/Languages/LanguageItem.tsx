@@ -1,4 +1,4 @@
-import type * as React from 'react'
+import * as React from 'react'
 import { type WithTranslation, withTranslation } from 'react-i18next'
 
 export type LanguageItemProps = {

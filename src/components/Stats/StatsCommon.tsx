@@ -1,4 +1,4 @@
-import type * as React from 'react'
+import * as React from 'react'
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
 import type { Technology } from '../../scripts/technologies/types'
 

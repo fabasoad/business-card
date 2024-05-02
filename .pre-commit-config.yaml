@@ -44,7 +44,6 @@ repos:
     rev: v8.18.2
     hooks:
       - id: gitleaks
-        exclude: ^(\.yarn\/.*)$
   - repo: https://github.com/fabasoad/pre-commit-snyk
     rev: v0.6.1
     hooks:
@@ -52,7 +51,7 @@ repos:
         stages: ["push"]
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.39.0
+    rev: v0.40.0
     hooks:
       - id: markdownlint-fix
         stages: ["commit"]

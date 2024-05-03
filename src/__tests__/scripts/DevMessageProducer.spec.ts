@@ -1,7 +1,7 @@
 import producer from '../../scripts/DevMessageProducer'
 
 describe('DevMessageProducer', () => {
-  let consoleLogSpy
+  let consoleLogSpy: jest.SpyInstance
 
   beforeAll(() => {
     jest.useFakeTimers()

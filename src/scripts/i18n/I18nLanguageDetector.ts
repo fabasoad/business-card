@@ -27,7 +27,7 @@ const I18nLanguageDetector: LanguageDetectorModule = {
     }
     return code
   },
-  init: () => {},
+  init: () => {/* no action needed */},
   cacheUserLanguage: (lng: string) => {
     localStorage.setItem('i18nextLng', lng)
   },

@@ -1,21 +1,21 @@
 import DigitConverter from '../../scripts/DigitConverter'
 
-interface DigitConverterFixture {
-  convert: (c: DigitConverter) => string
-  expected: string
-  title: string
-}
+describe('DigitConverter', () => {
+  type DigitConverterFixture = {
+    convert: (c: DigitConverter) => string
+    expected: string
+    title: string
+  }
 
-new Array<DigitConverterFixture>({
-  convert: (c) => c.toSingleByte('２０１９'),
-  expected: '2019',
-  title: 'single'
-}, {
-  convert: (c) => c.toDoubleByte('2019'),
-  expected: '２０１９',
-  title: 'double'
-}).forEach((f) =>
-  test(`should convert to ${f.title} byte correctly`, () =>
+  test.each([{
+    convert: (c: DigitConverter) => c.toSingleByte('２０１９'),
+    expected: '2019',
+    title: 'single'
+  }, {
+    convert: (c: DigitConverter) => c.toDoubleByte('2019'),
+    expected: '２０１９',
+    title: 'double'
+  }])('should convert to $title byte correctly', (f: DigitConverterFixture) =>
     expect(f.convert(new DigitConverter())).toBe(f.expected)
   )
-)
+})

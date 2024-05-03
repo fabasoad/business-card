@@ -5,9 +5,10 @@ import { render } from '@testing-library/react'
 import LanguageItem from '../../../components/Languages/LanguageItem'
 import { testLanguageItem } from './TestUtils'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
+import { Locale } from '../../../scripts/i18n/types'
 
-for (const { code } of SupportedLocales._items) {
-  test(`[${code}] should render LanguageItem correctly`, () => {
+describe('LanguageItem', () => {
+  test.each(SupportedLocales._items)('[$code] should render LanguageItem correctly', ({ code }: Locale) => {
     const text = 'test-content'
     const { container } = render(
       <LanguageItem code={code}>{text}</LanguageItem>
@@ -16,4 +17,4 @@ for (const { code } of SupportedLocales._items) {
     expect(div).toHaveTextContent(text)
     testLanguageItem(div, code)
   })
-}
+})

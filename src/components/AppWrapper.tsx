@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Error from './Controls/Error'
+import ErrorBlock from './Controls/ErrorBlock'
 import LoadingSpinner from './LoadingSpinner'
 import i18nService, { I18nServiceCallbackTypes } from '../scripts/i18n/I18nService'
 import producer from '../scripts/DevMessageProducer'
@@ -33,9 +33,9 @@ export default function AppWrapper({ children }: React.PropsWithChildren<{}>) {
       return <>{children}</>
     default:
       return (
-        <Error title="Failed to load i18n settings">
+        <ErrorBlock title="Failed to load i18n settings">
           <a target="_blank" rel="noopener noreferrer" href="https://github.com/fabasoad/business-card/issues/new/choose">Please raise GitHub issue</a>
-        </Error>
+        </ErrorBlock>
       )
   }
 }

@@ -8,8 +8,8 @@ on: # yamllint disable-line rule:truthy
       - main
 
 jobs:
-  eslint:
-    name: ESLint
+  biome:
+    name: Biome
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ${{ github.repository }}
@@ -22,27 +22,10 @@ jobs:
           cache-dependency-path: "yarn.lock"
       - name: Compile
         run: yarn install
-      - name: Run ESLint
-        uses: sibiraj-s/action-eslint@v3
-        with:
-          all-files: "true"
-          ignore-patterns: |
-            .github
-            .yarn
-            coverage
-            node_modules
-            public
-          eslint-args: "-o eslint-results.sarif -f ${{ github.workspace }}/node_modules/@microsoft/eslint-formatter-sarif/sarif.js"
-          extensions: "js,jsx,ts,tsx"
-          annotations: true
-      - name: Upload to GHAS
-        if: always()
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          category: "eslint"
-          sarif_file: "eslint-results.sarif"
+      - name: Run Biome
+        run: yarn run lint
   pre-commit:
     name: Pre-commit
     uses: fabasoad/reusable-workflows/.github/workflows/wf-pre-commit.yml@main
     with:
-      skip-hooks: "audit, build, eslint, test, snyk-test"
+      skip-hooks: "audit, build, lint, test, snyk-test"

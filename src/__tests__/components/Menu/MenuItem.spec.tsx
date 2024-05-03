@@ -8,7 +8,10 @@ import { testMenuItemActive, testMenuItemRendered } from './TestUtils'
 
 test('should render MenuItem correctly', () => {
   const name = StringUtils.random(10)
-  const { container } = render(<MenuItem name={name} setActiveNavLink={() => {}} />)
+  const { container } = render(<MenuItem
+    name={name}
+    setActiveNavLink={() => {/* no action needed */}}
+  />)
   testMenuItemRendered(container.querySelector('a'), name)
 })
 

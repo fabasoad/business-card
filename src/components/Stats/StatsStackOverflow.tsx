@@ -3,7 +3,7 @@ import remoteService, { StackOverflowData } from '../../scripts/services/StackOv
 import StatsCommon from './StatsCommon'
 import { AutoloadProps } from '../Controls/AutoloadProps'
 
-export default function StatsStackOverflow({ autoload }: AutoloadProps) {
+export default function StatsStackOverflow({ autoload = true }: AutoloadProps) {
   const [reputation, setReputation] = React.useState<number>(0)
   React.useEffect(() => {
     if (autoload) {
@@ -17,8 +17,4 @@ export default function StatsStackOverflow({ autoload }: AutoloadProps) {
       🏆️ {reputation}
     </StatsCommon>
   )
-}
-
-StatsStackOverflow.defaultProps = {
-  autoload: true
 }

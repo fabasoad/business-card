@@ -5,7 +5,7 @@ type ErrorProps = {
   title: string
 }
 
-export default function Error({ children, title }: React.PropsWithChildren<ErrorProps>) {
+export default function ErrorBlock({ children, title }: React.PropsWithChildren<ErrorProps>) {
   return (
     <div className="error">
       <Container>

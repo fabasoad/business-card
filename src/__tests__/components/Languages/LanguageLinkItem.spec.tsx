@@ -5,9 +5,10 @@ import { render } from '@testing-library/react'
 import LanguageLinkItem from '../../../components/Languages/LanguageLinkItem'
 import { testLanguageLinkItem } from './TestUtils'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
+import { Locale } from '../../../scripts/i18n/types'
 
-for (const { code } of SupportedLocales._items) {
-  test(`[${code}] should render LanguageLinkItem correctly`, () => {
+describe('LanguageLinkItem', () => {
+  test.each(SupportedLocales._items)('[$code] should render LanguageLinkItem correctly', ({ code }: Locale) => {
     const text = 'test-text'
     const url = 'test-url'
     const {container} = render(
@@ -15,4 +16,4 @@ for (const { code } of SupportedLocales._items) {
     )
     testLanguageLinkItem(container.querySelector('div'), code, url, text)
   })
-}
+})

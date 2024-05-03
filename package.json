@@ -6,7 +6,8 @@
   "scripts": {
     "build:dev": "webpack --config webpack.dev.js",
     "build:prod": "webpack --config webpack.prod.js",
-    "lint": "DEBUG=eslint:cli-engine eslint --ext ts --ext tsx src",
+    "lint": "biome lint src",
+    "lint2": "DEBUG=eslint:cli-engine eslint --ext ts --ext tsx src",
     "start:dev": "webpack serve --config webpack.dev.js",
     "start:web": "nodemon --watch ./server -r dotenv/config server/app.js",
     "test": "jest --coverage"
@@ -31,6 +32,7 @@
     "@babel/preset-env": "7.24.5",
     "@babel/preset-react": "7.24.1",
     "@babel/preset-typescript": "7.24.1",
+    "@biomejs/biome": "1.7.2",
     "@microsoft/eslint-formatter-sarif": "3.1.0",
     "@popperjs/core": "2.11.8",
     "@testing-library/jest-dom": "6.4.2",

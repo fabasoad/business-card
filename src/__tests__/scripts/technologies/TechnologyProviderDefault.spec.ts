@@ -1,9 +1,8 @@
 import TechnologyProviderDefault
   from '../../../scripts/technologies/TechnologyProviderDefault';
-import {Technology} from '../../../scripts/technologies/types';
 
 describe('TechnologyProviderDefault', () => {
-  let expected
+  let expected: [string, string, boolean][]
 
   beforeAll(() => {
     expected = [

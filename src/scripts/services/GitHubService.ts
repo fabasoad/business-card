@@ -1,6 +1,7 @@
 import { Octokit } from '@octokit/rest'
 import State from '../../components/Stats/State'
 import RemoteService from './RemoteService'
+import fetch from 'cross-fetch'
 
 class GitHubService implements RemoteService<number> {
   private state: State = State.NOT_STARTED
@@ -11,7 +12,7 @@ class GitHubService implements RemoteService<number> {
   public async request(): Promise<number> {
     if (this.state == State.NOT_STARTED) {
       this.state = State.STARTED
-      const octokit: Octokit = new Octokit();
+      const octokit: Octokit = new Octokit({ request: { fetch } });
       this.starsAmount = await octokit.rest.repos.listForUser({
         username: GitHubService.GITHUB_USERNAME
       }).then(({ data }) => {

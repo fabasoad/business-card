@@ -3,7 +3,7 @@ import * as React from 'react'
 import App from '../../components/App'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 import { Locale } from '../../scripts/i18n/types'
-import { render } from '@testing-library/react'
+import { act, render } from '@testing-library/react'
 import { testAboutMain } from './About/TestUtils'
 import {
   testBackToTopButton,
@@ -20,15 +20,13 @@ import { testLanguageMain } from './Languages/TestUtils'
 import { testMenuMain } from './Menu/TestUtils'
 import { testPortfolioMain } from './Portfolio/TestUtils'
 import { testStatsMain } from './Stats/TestUtils'
-import { getLeetcodeStatsMock, LeetcodeStatsMock } from './TestUtils'
 
-const leetcodeStatsMock: LeetcodeStatsMock = getLeetcodeStatsMock()
-leetcodeStatsMock.mock()
+jest.mock('../../scripts/services/LeetcodeService')
 
 describe('App', () => {
-  test('should render App correctly', () => {
+  test('should render App correctly', async () => {
     const locale: Locale = SupportedLocales.default
-    const { container } = render(<App />)
+    const { container } = await act(() => render(<App />))
     const div = container.querySelector('div.font-regular')
     expect(div).toHaveClass(`font-${locale.code === 'jp' ? '' : 'non-'}jp`)
     testBackToTopButton(div.querySelector('a.back-to-top'))
@@ -36,7 +34,7 @@ describe('App', () => {
     testMenuMain(div.querySelector('div#nav'))
     testAboutMain(div.querySelector('div#about'))
     testStatsMain(div.querySelector('div#stats'), {
-      leetcode: { totalSolved: leetcodeStatsMock.expectedTotalSolved }
+      leetcode: { totalSolved: 6 }
     })
     testResume(div.querySelector('div#resume'))
     testSkills(div.querySelector('div#skills'))

@@ -15,10 +15,26 @@ export type StackOverflowData = {
   superUser: StackOverflowServiceData
 }
 
-class StackOverflowService implements RemoteService<StackOverflowData> {
+export const stackOverflowDataDefault: StackOverflowData = {
+  stackOverflow: {
+    answerCount: 0,
+    reputation: 0
+  },
+  superUser: {
+    answerCount: 0,
+    reputation: 0
+  }
+}
+
+export class StackOverflowService implements RemoteService<StackOverflowData> {
   private cache: StackOverflowData | undefined
+  private readonly defaultVal: StackOverflowData
 
   private static STACKOVERFLOW_USER_ID = 215523
+
+  public constructor(defaultVal: StackOverflowData) {
+    this.defaultVal = defaultVal
+  }
 
   public async request(): Promise<StackOverflowData> {
     if (!this.cache) {
@@ -48,20 +64,8 @@ class StackOverflowService implements RemoteService<StackOverflowData> {
           }
           return { stackOverflow, superUser }
         })
-        .catch(() => ({
-          stackOverflow: {
-            answerCount: 0,
-            reputation: 0
-          },
-          superUser: {
-            answerCount: 0,
-            reputation: 0
-          }
-        }))
+        .catch(() => this.defaultVal)
     }
     return Promise.resolve(this.cache)
   }
 }
-
-const remoteService = new StackOverflowService()
-export default remoteService

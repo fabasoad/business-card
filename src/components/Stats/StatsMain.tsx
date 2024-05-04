@@ -6,8 +6,14 @@ import StatsStackOverflow from './StatsStackOverflow'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 import StatsSuperUser from './StatsSuperUser'
+import type { StatsStackOverflowProps } from './StatsStackOverflow'
+import type { StatsSuperUserProps } from './StatsSuperUser'
 
-function StatsMain({ t }: WithTranslation) {
+export type StatsMainProps = StatsStackOverflowProps & StatsSuperUserProps
+
+function StatsMain({
+  t, defaultStackOverflowReputation = 0, defaultSuperUserReputation = 0
+}: WithTranslation & StatsMainProps) {
   return (
     <div id="stats">
       <SectionTitle>
@@ -18,8 +24,8 @@ function StatsMain({ t }: WithTranslation) {
           <Col className="stats-list d-flex justify-content-center">
             <StatsLeetcode />
             <StatsGitHub />
-            <StatsStackOverflow />
-            <StatsSuperUser />
+            <StatsStackOverflow defaultStackOverflowReputation={defaultStackOverflowReputation} />
+            <StatsSuperUser defaultSuperUserReputation={defaultSuperUserReputation} />
           </Col>
         </Row>
       </Container>

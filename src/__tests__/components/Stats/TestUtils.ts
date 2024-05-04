@@ -37,12 +37,14 @@ export function testStatsLeetcode(div: HTMLDivElement, totalSolved: number) {
 }
 
 export type TestStatsMainProps = {
-  leetcode: {
-    totalSolved: number
-  }
+  leetcodeTotalSolved: number,
+  stackOverflowReputation: number,
+  superUserReputation: number,
 }
 
-export function testStatsMain(div: HTMLDivElement, { leetcode }: TestStatsMainProps): void {
+export function testStatsMain(div: HTMLDivElement, {
+  leetcodeTotalSolved, stackOverflowReputation, superUserReputation
+}: TestStatsMainProps): void {
   testSectionTitle(
     div.querySelector('div.section-title'),
     'business-card-stats-title'
@@ -52,26 +54,26 @@ export function testStatsMain(div: HTMLDivElement, { leetcode }: TestStatsMainPr
   expect(divCol).toHaveClass('d-flex')
   expect(divCol).toHaveClass('justify-content-center')
   const divStatsItems = divCol.querySelectorAll('div.stats-item')
-  testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement, leetcode.totalSolved)
+  testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement, leetcodeTotalSolved)
   testStatsGitHub(divStatsItems.item(1) as HTMLDivElement)
-  testStatsStackOverflow(divStatsItems.item(2) as HTMLDivElement)
-  testStatsSuperUser(divStatsItems.item(3) as HTMLDivElement)
+  testStatsStackOverflow(divStatsItems.item(2) as HTMLDivElement, stackOverflowReputation)
+  testStatsSuperUser(divStatsItems.item(3) as HTMLDivElement, superUserReputation)
 }
 
-export function testStatsStackOverflow(div: HTMLDivElement) {
+export function testStatsStackOverflow(div: HTMLDivElement, reputation: number) {
   testStatsCommon(
     div,
     'https://stackoverflow.com/users/470214/fabasoad',
-    new RegExp('🏆️ \\d+'),
+    `🏆️ ${reputation}`,
     'stackoverflow'
   )
 }
 
-export function testStatsSuperUser(div: HTMLDivElement) {
+export function testStatsSuperUser(div: HTMLDivElement, reputation: number) {
   testStatsCommon(
     div,
     'https://superuser.com/users/1123723/fabasoad',
-    new RegExp('➕ \\d+'),
+    `➕ ${reputation}`,
     'superuser'
   )
 }

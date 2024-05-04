@@ -20,13 +20,21 @@ import { testLanguageMain } from './Languages/TestUtils'
 import { testMenuMain } from './Menu/TestUtils'
 import { testPortfolioMain } from './Portfolio/TestUtils'
 import { testStatsMain } from './Stats/TestUtils'
+import {randomNumber} from "../TestUtils";
 
 jest.mock('../../scripts/services/LeetcodeService')
 
 describe('App', () => {
   test('should render App correctly', async () => {
+    const expectedStackOverflowReputation: number = randomNumber(1, 100)
+    const expectedSuperUserReputation: number = randomNumber(1, 100)
     const locale: Locale = SupportedLocales.default
-    const { container } = await act(() => render(<App />))
+    const { container } = await act(() => render(
+      <App
+        defaultStackOverflowReputation={expectedStackOverflowReputation}
+        defaultSuperUserReputation={expectedSuperUserReputation}
+      />
+    ))
     const div = container.querySelector('div.font-regular')
     expect(div).toHaveClass(`font-${locale.code === 'jp' ? '' : 'non-'}jp`)
     testBackToTopButton(div.querySelector('a.back-to-top'))
@@ -34,7 +42,9 @@ describe('App', () => {
     testMenuMain(div.querySelector('div#nav'))
     testAboutMain(div.querySelector('div#about'))
     testStatsMain(div.querySelector('div#stats'), {
-      leetcode: { totalSolved: 6 }
+      leetcodeTotalSolved: 6,
+      stackOverflowReputation: expectedStackOverflowReputation,
+      superUserReputation: expectedSuperUserReputation
     })
     testResume(div.querySelector('div#resume'))
     testSkills(div.querySelector('div#skills'))

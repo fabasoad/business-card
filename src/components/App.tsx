@@ -14,15 +14,19 @@ import Resume from './Resume'
 import Skills from './Skills'
 import StatsMain from './Stats/StatsMain'
 import { WithTranslation, withTranslation} from 'react-i18next'
+import type { StatsMainProps } from './Stats/StatsMain'
 
-export function App({ i18n }: WithTranslation) {
+export function App({ i18n, defaultStackOverflowReputation = 0, defaultSuperUserReputation = 0 }: WithTranslation & StatsMainProps) {
   return (
     <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
       <BackToTopButton />
       <Header />
       <MenuMain />
       <AboutMain />
-      <StatsMain />
+      <StatsMain
+        defaultSuperUserReputation={defaultSuperUserReputation}
+        defaultStackOverflowReputation={defaultStackOverflowReputation}
+      />
       <Resume />
       <Skills />
       <ExperienceMain />

@@ -4,12 +4,22 @@ import { act, render } from '@testing-library/react'
 
 import StatsMain from '../../../components/Stats/StatsMain'
 import { testStatsMain } from './TestUtils'
+import {randomNumber} from "../../TestUtils";
 
 jest.mock('../../../scripts/services/LeetcodeService')
 
 test('should render StatsMain correctly', async () => {
-  const { container } = await act(() => render(<StatsMain />))
+  const expectedStackOverflowReputation: number = randomNumber(1, 100)
+  const expectedSuperUserReputation: number = randomNumber(1, 100)
+  const { container } = await act(() => render(
+    <StatsMain
+      defaultStackOverflowReputation={expectedStackOverflowReputation}
+      defaultSuperUserReputation={expectedSuperUserReputation}
+    />
+  ))
   testStatsMain(container.querySelector('div#stats'), {
-    leetcode: { totalSolved: 6 }
+    leetcodeTotalSolved: 6,
+    stackOverflowReputation: expectedStackOverflowReputation,
+    superUserReputation: expectedSuperUserReputation
   })
 })

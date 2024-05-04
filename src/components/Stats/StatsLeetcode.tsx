@@ -1,27 +1,21 @@
 import * as React from 'react'
 import StatsCommon from './StatsCommon'
-import remoteService, { LeetcodeStats } from '../../scripts/services/LeetcodeService'
-import { AutoloadProps } from '../Controls/AutoloadProps'
+import { LeetcodeService, LeetcodeStats } from '../../scripts/services/LeetcodeService'
+import StatsMainContext from '../../contexts/StatsMainContext'
 
-export default function StatsLeetcode({ autoload }: AutoloadProps) {
-  const [stats, setStats] = React.useState<LeetcodeStats>({
-    totalSolved: 190,
-    easySolved: 96,
-    mediumSolved: 91,
-    hardSolved: 3
-  })
+export default function StatsLeetcode() {
+  const { leetcode } = React.useContext(StatsMainContext)
+  const [stats, setStats] = React.useState<LeetcodeStats>(leetcode)
   React.useEffect(() => {
-    if (autoload) {
-      remoteService.request().then(setStats)
-    }
-  })
+    const leetcodeService = new LeetcodeService(stats);
+    (async () => {
+      const data: LeetcodeStats = await leetcodeService.request()
+      setStats(data)
+    })()
+  }, [stats])
   return (
     <StatsCommon techName="leetcode" url="https://leetcode.com/fabasoad">
       ✔️ {stats.totalSolved}
     </StatsCommon>
   )
-}
-
-StatsLeetcode.defaultProps = {
-  autoload: true
 }

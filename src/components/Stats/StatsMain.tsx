@@ -5,10 +5,9 @@ import StatsLeetcode from './StatsLeetcode'
 import StatsStackOverflow from './StatsStackOverflow'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
-import { AutoloadProps } from '../Controls/AutoloadProps'
-import StatsSuperUser from './StatsSuperUser';
+import StatsSuperUser from './StatsSuperUser'
 
-function StatsMain({ autoload, t }: WithTranslation & AutoloadProps) {
+function StatsMain({ t }: WithTranslation) {
   return (
     <div id="stats">
       <SectionTitle>
@@ -17,19 +16,15 @@ function StatsMain({ autoload, t }: WithTranslation & AutoloadProps) {
       <Container>
         <Row>
           <Col className="stats-list d-flex justify-content-center">
-            <StatsLeetcode autoload={autoload} />
-            <StatsGitHub autoload={autoload} />
-            <StatsStackOverflow autoload={autoload} />
-            <StatsSuperUser autoload={autoload} />
+            <StatsLeetcode />
+            <StatsGitHub />
+            <StatsStackOverflow />
+            <StatsSuperUser />
           </Col>
         </Row>
       </Container>
     </div>
   )
-}
-
-StatsMain.defaultProps = {
-  autoload: true
 }
 
 export default withTranslation()(StatsMain)

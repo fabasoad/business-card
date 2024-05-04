@@ -1,20 +1,25 @@
 import * as React from 'react'
-import remoteService, { StackOverflowData } from '../../scripts/services/StackOverflowService'
+import StatsMainContext from '../../contexts/StatsMainContext'
+import {
+  StackExchangeService,
+  StackExchangeData
+} from '../../scripts/services/StackExchangeService'
 import StatsCommon from './StatsCommon'
-import { AutoloadProps } from '../Controls/AutoloadProps'
 
-export default function StatsStackOverflow({ autoload = true }: AutoloadProps) {
-  const [reputation, setReputation] = React.useState<number>(0)
+export default function StatsStackOverflow() {
+  const { stackExchange } = React.useContext(StatsMainContext)
+  const [stats, setStats] =
+    React.useState<StackExchangeData>(stackExchange)
   React.useEffect(() => {
-    if (autoload) {
-      remoteService.request().then(({
-        stackOverflow
-      }: StackOverflowData) => setReputation(stackOverflow.reputation))
-    }
-  })
+    const stackOverflowService = new StackExchangeService(stats);
+    (async () => {
+      const data: StackExchangeData = await stackOverflowService.request()
+      setStats(data)
+    })()
+  }, [stats])
   return (
     <StatsCommon techName="stackoverflow" url="https://stackoverflow.com/users/470214/fabasoad">
-      🏆️ {reputation}
+      🏆️ {stats.stackOverflow.reputation}
     </StatsCommon>
   )
 }

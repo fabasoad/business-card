@@ -1,24 +1,25 @@
 import * as React from 'react'
-import remoteService, { StackOverflowData } from '../../scripts/services/StackOverflowService'
+import StatsMainContext from '../../contexts/StatsMainContext'
+import {
+  StackExchangeService,
+  StackExchangeData
+} from '../../scripts/services/StackExchangeService'
 import StatsCommon from './StatsCommon'
-import { AutoloadProps } from '../Controls/AutoloadProps'
 
-export default function StatsSuperUser({ autoload }: AutoloadProps) {
-  const [reputation, setReputation] = React.useState<number>(0)
+export default function StatsSuperUser() {
+  const { stackExchange } = React.useContext(StatsMainContext)
+  const [stats, setStats] =
+    React.useState<StackExchangeData>(stackExchange)
   React.useEffect(() => {
-    if (autoload) {
-      remoteService.request().then(({
-        superUser
-      }: StackOverflowData) => setReputation(superUser.reputation))
-    }
-  })
+    const stackOverflowService = new StackExchangeService(stats);
+    (async () => {
+      const data: StackExchangeData = await stackOverflowService.request()
+      setStats(data)
+    })()
+  }, [stats])
   return (
     <StatsCommon techName="superuser" url="https://superuser.com/users/1123723/fabasoad">
-      ➕ {reputation}
+      ➕ {stats.superUser.reputation}
     </StatsCommon>
   )
-}
-
-StatsSuperUser.defaultProps = {
-  autoload: true
 }

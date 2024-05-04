@@ -27,16 +27,24 @@ export function testStatsGitHub(div: HTMLDivElement) {
   )
 }
 
-export function testStatsLeetcode(div: HTMLDivElement) {
+export function testStatsLeetcode(div: HTMLDivElement, totalSolved: number) {
   testStatsCommon(
     div,
     'https://leetcode.com/fabasoad',
-    new RegExp('✔️ \\d+'),
+    `✔️ ${totalSolved}`,
     'leetcode'
   )
 }
 
-export function testStatsMain(div: HTMLDivElement) {
+export type TestStatsMainProps = {
+  leetcodeTotalSolved: number,
+  stackOverflowReputation: number,
+  superUserReputation: number,
+}
+
+export function testStatsMain(div: HTMLDivElement, {
+  leetcodeTotalSolved, stackOverflowReputation, superUserReputation
+}: TestStatsMainProps): void {
   testSectionTitle(
     div.querySelector('div.section-title'),
     'business-card-stats-title'
@@ -46,26 +54,26 @@ export function testStatsMain(div: HTMLDivElement) {
   expect(divCol).toHaveClass('d-flex')
   expect(divCol).toHaveClass('justify-content-center')
   const divStatsItems = divCol.querySelectorAll('div.stats-item')
-  testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement)
+  testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement, leetcodeTotalSolved)
   testStatsGitHub(divStatsItems.item(1) as HTMLDivElement)
-  testStatsStackOverflow(divStatsItems.item(2) as HTMLDivElement)
-  testStatsSuperUser(divStatsItems.item(3) as HTMLDivElement)
+  testStatsStackOverflow(divStatsItems.item(2) as HTMLDivElement, stackOverflowReputation)
+  testStatsSuperUser(divStatsItems.item(3) as HTMLDivElement, superUserReputation)
 }
 
-export function testStatsStackOverflow(div: HTMLDivElement) {
+export function testStatsStackOverflow(div: HTMLDivElement, reputation: number) {
   testStatsCommon(
     div,
     'https://stackoverflow.com/users/470214/fabasoad',
-    new RegExp('🏆️ \\d+'),
+    `🏆️ ${reputation}`,
     'stackoverflow'
   )
 }
 
-export function testStatsSuperUser(div: HTMLDivElement) {
+export function testStatsSuperUser(div: HTMLDivElement, reputation: number) {
   testStatsCommon(
     div,
     'https://superuser.com/users/1123723/fabasoad',
-    new RegExp('➕ \\d+'),
+    `➕ ${reputation}`,
     'superuser'
   )
 }

@@ -5,6 +5,6 @@ import { render } from '@testing-library/react'
 import { testStatsSuperUser } from './TestUtils'
 
 test('should render StatsSuperUser correctly', () => {
-  const { container } = render(<StatsSuperUser autoload={false} />)
+  const { container } = render(<StatsSuperUser />)
   testStatsSuperUser(container.querySelector('div.stats-item'))
 })

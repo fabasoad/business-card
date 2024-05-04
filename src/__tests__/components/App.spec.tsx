@@ -20,20 +20,24 @@ import { testLanguageMain } from './Languages/TestUtils'
 import { testMenuMain } from './Menu/TestUtils'
 import { testPortfolioMain } from './Portfolio/TestUtils'
 import { testStatsMain } from './Stats/TestUtils'
+import { getLeetcodeStatsMock, LeetcodeStatsMock } from './TestUtils'
+
+const leetcodeStatsMock: LeetcodeStatsMock = getLeetcodeStatsMock()
+leetcodeStatsMock.mock()
 
 describe('App', () => {
   test('should render App correctly', () => {
     const locale: Locale = SupportedLocales.default
-    const { container } = render(
-      <App autoload={false} />
-    )
+    const { container } = render(<App />)
     const div = container.querySelector('div.font-regular')
     expect(div).toHaveClass(`font-${locale.code === 'jp' ? '' : 'non-'}jp`)
     testBackToTopButton(div.querySelector('a.back-to-top'))
     testHeader(div.querySelector('header#header'))
     testMenuMain(div.querySelector('div#nav'))
     testAboutMain(div.querySelector('div#about'))
-    testStatsMain(div.querySelector('div#stats'))
+    testStatsMain(div.querySelector('div#stats'), {
+      leetcode: { totalSolved: leetcodeStatsMock.expectedTotalSolved }
+    })
     testResume(div.querySelector('div#resume'))
     testSkills(div.querySelector('div#skills'))
     testExperienceMain(div.querySelector('div#experience'), locale)

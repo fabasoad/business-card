@@ -1,5 +1,9 @@
-import State from '../../components/Stats/State'
 import RemoteService from './RemoteService'
+import fetch from 'cross-fetch'
+
+export type StackOverflowResponse = {
+  items: { answer_count: number, reputation: number, site_name: string }[]
+}
 
 type StackOverflowServiceData = {
   reputation: number,
@@ -20,22 +24,22 @@ class StackOverflowService implements RemoteService<StackOverflowData> {
     if (!this.cache) {
       this.cache = await fetch(`https://api.stackexchange.com/2.3/users/${StackOverflowService.STACKOVERFLOW_USER_ID}/associated`)
         .then((resp) => resp.json())
-        .then((data) => {
+        .then((data: StackOverflowResponse) => {
           let flag: boolean = false
           let stackOverflow: StackOverflowServiceData
           let superUser: StackOverflowServiceData
           for (let i = 0; i < data.items.length; i++) {
-            if (data.items[i]['site_name'] === 'Stack Overflow') {
+            if (data.items[i].site_name === 'Stack Overflow') {
               flag = true
               stackOverflow = {
-                answerCount: data.items[i]['answer_count'],
-                reputation: data.items[i]['reputation']
+                answerCount: data.items[i].answer_count,
+                reputation: data.items[i].reputation
               }
-            } else if (data.items[i]['site_name'] === 'Super User') {
+            } else if (data.items[i].site_name === 'Super User') {
               flag = true
               superUser = {
-                answerCount: data.items[i]['answer_count'],
-                reputation: data.items[i]['reputation']
+                answerCount: data.items[i].answer_count,
+                reputation: data.items[i].reputation
               }
             }
           }

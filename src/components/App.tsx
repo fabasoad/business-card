@@ -13,17 +13,16 @@ import PortfolioMain from './Portfolio/PortfolioMain'
 import Resume from './Resume'
 import Skills from './Skills'
 import StatsMain from './Stats/StatsMain'
-import { AutoloadProps } from './Controls/AutoloadProps'
 import { WithTranslation, withTranslation} from 'react-i18next'
 
-export function App({ autoload, i18n }: WithTranslation & AutoloadProps) {
+export function App({ i18n }: WithTranslation) {
   return (
     <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
       <BackToTopButton />
       <Header />
       <MenuMain />
       <AboutMain />
-      <StatsMain autoload={autoload} />
+      <StatsMain />
       <Resume />
       <Skills />
       <ExperienceMain />
@@ -35,10 +34,6 @@ export function App({ autoload, i18n }: WithTranslation & AutoloadProps) {
       <FooterMain />
     </div>
   )
-}
-
-App.defaultProps = {
-  autoload: true
 }
 
 export default withTranslation()(App)

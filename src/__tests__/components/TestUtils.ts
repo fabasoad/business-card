@@ -107,3 +107,32 @@ export function testSkills(div: HTMLDivElement) {
   }
   expect(expectedSkillsMap.size).toEqual(0)
 }
+
+// Mocks
+export type LeetcodeStatsMock = {
+  mock: () => void
+  expectedTotalSolved: number
+}
+
+export function getLeetcodeStatsMock(): LeetcodeStatsMock {
+  const expectedTotalSolved = 6
+  return {
+    mock: () => {
+      jest.mock('../../../scripts/services/LeetcodeService', () => {
+        const original = jest.requireActual('../../../scripts/services/LeetcodeService')
+        return {
+          ...original,
+          remoteService: {
+            request: async () => Promise.resolve({
+              totalSolved: expectedTotalSolved,
+              easySolved: 3,
+              mediumSolved: 2,
+              hardSolved: 1
+            })
+          }
+        }
+      })
+    },
+    expectedTotalSolved: expectedTotalSolved
+  }
+}

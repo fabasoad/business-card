@@ -27,16 +27,22 @@ export function testStatsGitHub(div: HTMLDivElement) {
   )
 }
 
-export function testStatsLeetcode(div: HTMLDivElement) {
+export function testStatsLeetcode(div: HTMLDivElement, totalSolved: number) {
   testStatsCommon(
     div,
     'https://leetcode.com/fabasoad',
-    new RegExp('✔️ \\d+'),
+    `✔️ ${totalSolved}`,
     'leetcode'
   )
 }
 
-export function testStatsMain(div: HTMLDivElement) {
+export type TestStatsMainProps = {
+  leetcode: {
+    totalSolved: number
+  }
+}
+
+export function testStatsMain(div: HTMLDivElement, { leetcode }: TestStatsMainProps): void {
   testSectionTitle(
     div.querySelector('div.section-title'),
     'business-card-stats-title'
@@ -46,7 +52,7 @@ export function testStatsMain(div: HTMLDivElement) {
   expect(divCol).toHaveClass('d-flex')
   expect(divCol).toHaveClass('justify-content-center')
   const divStatsItems = divCol.querySelectorAll('div.stats-item')
-  testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement)
+  testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement, leetcode.totalSolved)
   testStatsGitHub(divStatsItems.item(1) as HTMLDivElement)
   testStatsStackOverflow(divStatsItems.item(2) as HTMLDivElement)
   testStatsSuperUser(divStatsItems.item(3) as HTMLDivElement)

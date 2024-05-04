@@ -1,30 +1,25 @@
 import * as React from 'react'
+import StatsMainContext from '../../contexts/StatsMainContext'
 import {
-  StackOverflowService,
-  StackOverflowData,
-  stackOverflowDataDefault
-} from '../../scripts/services/StackOverflowService'
+  StackExchangeService,
+  StackExchangeData
+} from '../../scripts/services/StackExchangeService'
 import StatsCommon from './StatsCommon'
 
-export type StatsSuperUserProps = {
-  defaultSuperUserReputation?: number
-}
-
-export default function StatsSuperUser({ defaultSuperUserReputation = 0 }: StatsSuperUserProps) {
-  const [reputation, setReputation] =
-    React.useState<number>(defaultSuperUserReputation)
+export default function StatsSuperUser() {
+  const { stackExchange } = React.useContext(StatsMainContext)
+  const [stats, setStats] =
+    React.useState<StackExchangeData>(stackExchange)
   React.useEffect(() => {
-    const data: StackOverflowData = stackOverflowDataDefault
-    data.superUser.reputation = reputation
-    const stackOverflowService = new StackOverflowService(data);
+    const stackOverflowService = new StackExchangeService(stats);
     (async () => {
-      const { superUser }: StackOverflowData = await stackOverflowService.request()
-      setReputation(superUser.reputation)
+      const data: StackExchangeData = await stackOverflowService.request()
+      setStats(data)
     })()
-  }, [reputation])
+  }, [stats])
   return (
     <StatsCommon techName="superuser" url="https://superuser.com/users/1123723/fabasoad">
-      ➕ {reputation}
+      ➕ {stats.superUser.reputation}
     </StatsCommon>
   )
 }

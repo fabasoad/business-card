@@ -1,14 +1,14 @@
 import RemoteService from '../RemoteService'
-import type { StackOverflowData } from '../StackOverflowService'
+import type { StackExchangeData } from '../StackExchangeService'
 
-export class StackOverflowService implements RemoteService<StackOverflowData> {
-  private readonly defaultVal: StackOverflowData
+export class StackOverflowService implements RemoteService<StackExchangeData> {
+  private readonly defaultVal: StackExchangeData
 
-  public constructor(defaultVal: StackOverflowData) {
+  public constructor(defaultVal: StackExchangeData) {
     this.defaultVal = defaultVal
   }
 
-  public async request(): Promise<StackOverflowData> {
+  public async request(): Promise<StackExchangeData> {
     return Promise.resolve(this.defaultVal)
   }
 }

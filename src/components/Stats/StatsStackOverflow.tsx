@@ -1,30 +1,25 @@
 import * as React from 'react'
+import StatsMainContext from '../../contexts/StatsMainContext'
 import {
-  StackOverflowService,
-  StackOverflowData,
-  stackOverflowDataDefault
-} from '../../scripts/services/StackOverflowService'
+  StackExchangeService,
+  StackExchangeData
+} from '../../scripts/services/StackExchangeService'
 import StatsCommon from './StatsCommon'
 
-export type StatsStackOverflowProps = {
-  defaultStackOverflowReputation?: number
-}
-
-export default function StatsStackOverflow({ defaultStackOverflowReputation = 0 }: StatsStackOverflowProps) {
-  const [reputation, setReputation] =
-    React.useState<number>(defaultStackOverflowReputation)
+export default function StatsStackOverflow() {
+  const { stackExchange } = React.useContext(StatsMainContext)
+  const [stats, setStats] =
+    React.useState<StackExchangeData>(stackExchange)
   React.useEffect(() => {
-    const data: StackOverflowData = stackOverflowDataDefault
-    data.stackOverflow.reputation = reputation
-    const stackOverflowService = new StackOverflowService(data);
+    const stackOverflowService = new StackExchangeService(stats);
     (async () => {
-      const { stackOverflow }: StackOverflowData = await stackOverflowService.request()
-      setReputation(stackOverflow.reputation)
+      const data: StackExchangeData = await stackOverflowService.request()
+      setStats(data)
     })()
-  }, [reputation])
+  }, [stats])
   return (
     <StatsCommon techName="stackoverflow" url="https://stackoverflow.com/users/470214/fabasoad">
-      🏆️ {reputation}
+      🏆️ {stats.stackOverflow.reputation}
     </StatsCommon>
   )
 }

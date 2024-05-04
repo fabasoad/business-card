@@ -1,16 +1,14 @@
 import RemoteService from '../RemoteService'
 import type { LeetcodeStats } from '../LeetcodeService'
 
-class LeetcodeService implements RemoteService<LeetcodeStats> {
+export class LeetcodeService implements RemoteService<LeetcodeStats> {
+  private readonly defaultVal: LeetcodeStats
+
+  public constructor(defaultVal: LeetcodeStats) {
+    this.defaultVal = defaultVal
+  }
+
   public async request(): Promise<LeetcodeStats> {
-    return Promise.resolve({
-      totalSolved: 6,
-      easySolved: 3,
-      mediumSolved: 2,
-      hardSolved: 1
-    })
+    return Promise.resolve(this.defaultVal)
   }
 }
-
-const remoteService = new LeetcodeService()
-export default remoteService

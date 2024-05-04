@@ -10,35 +10,24 @@ type StackOverflowServiceData = {
   answerCount: number
 }
 
-export type StackOverflowData = {
+export type StackExchangeData = {
   stackOverflow: StackOverflowServiceData,
   superUser: StackOverflowServiceData
 }
 
-export const stackOverflowDataDefault: StackOverflowData = {
-  stackOverflow: {
-    answerCount: 0,
-    reputation: 0
-  },
-  superUser: {
-    answerCount: 0,
-    reputation: 0
-  }
-}
-
-export class StackOverflowService implements RemoteService<StackOverflowData> {
-  private cache: StackOverflowData | undefined
-  private readonly defaultVal: StackOverflowData
+export class StackExchangeService implements RemoteService<StackExchangeData> {
+  private cache: StackExchangeData | undefined
+  private readonly defaultVal: StackExchangeData
 
   private static STACKOVERFLOW_USER_ID = 215523
 
-  public constructor(defaultVal: StackOverflowData) {
+  public constructor(defaultVal: StackExchangeData) {
     this.defaultVal = defaultVal
   }
 
-  public async request(): Promise<StackOverflowData> {
+  public async request(): Promise<StackExchangeData> {
     if (!this.cache) {
-      this.cache = await fetch(`https://api.stackexchange.com/2.3/users/${StackOverflowService.STACKOVERFLOW_USER_ID}/associated`)
+      this.cache = await fetch(`https://api.stackexchange.com/2.3/users/${StackExchangeService.STACKOVERFLOW_USER_ID}/associated`)
         .then((resp) => resp.json())
         .then((data: StackOverflowResponse) => {
           let flag: boolean = false

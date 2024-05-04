@@ -18,11 +18,11 @@ export function testStatsCommon(
   expect(img).toHaveAttribute('title', tech.title)
 }
 
-export function testStatsGitHub(div: HTMLDivElement) {
+export function testStatsGitHub(div: HTMLDivElement, starsAmount: number) {
   testStatsCommon(
     div,
     'https://github.com/fabasoad',
-    new RegExp('⭐️ \\d+'),
+    `⭐️ ${starsAmount}`,
     'gitHub'
   )
 }
@@ -40,10 +40,11 @@ export type TestStatsMainProps = {
   leetcodeTotalSolved: number,
   stackOverflowReputation: number,
   superUserReputation: number,
+  githubStarsAmount: number
 }
 
 export function testStatsMain(div: HTMLDivElement, {
-  leetcodeTotalSolved, stackOverflowReputation, superUserReputation
+  leetcodeTotalSolved, stackOverflowReputation, superUserReputation, githubStarsAmount
 }: TestStatsMainProps): void {
   testSectionTitle(
     div.querySelector('div.section-title'),
@@ -55,7 +56,7 @@ export function testStatsMain(div: HTMLDivElement, {
   expect(divCol).toHaveClass('justify-content-center')
   const divStatsItems = divCol.querySelectorAll('div.stats-item')
   testStatsLeetcode(divStatsItems.item(0) as HTMLDivElement, leetcodeTotalSolved)
-  testStatsGitHub(divStatsItems.item(1) as HTMLDivElement)
+  testStatsGitHub(divStatsItems.item(1) as HTMLDivElement, githubStarsAmount)
   testStatsStackOverflow(divStatsItems.item(2) as HTMLDivElement, stackOverflowReputation)
   testStatsSuperUser(divStatsItems.item(3) as HTMLDivElement, superUserReputation)
 }

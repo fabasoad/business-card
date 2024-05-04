@@ -4,7 +4,9 @@ import type { StackExchangeData } from '../scripts/services/StackExchangeService
 
 export type StatsDefaultProps = {
   leetcode: LeetcodeStats
-  stackExchange: StackExchangeData
+  stackOverflow: StackExchangeData
+  superUser: StackExchangeData
+  github: { starsAmount: number }
 }
 
 export const defaultStatsDefaultProps: StatsDefaultProps = {
@@ -14,15 +16,16 @@ export const defaultStatsDefaultProps: StatsDefaultProps = {
     mediumSolved: 106,
     hardSolved: 3
   },
-  stackExchange: {
-    stackOverflow: {
-      reputation: 0,
-      answerCount: 0
-    },
-    superUser: {
-      reputation: 0,
-      answerCount: 0
-    }
+  stackOverflow: {
+    reputation: 0,
+    answerCount: 0
+  },
+  superUser: {
+    reputation: 0,
+    answerCount: 0
+  },
+  github: {
+    starsAmount: 0
   }
 }
 

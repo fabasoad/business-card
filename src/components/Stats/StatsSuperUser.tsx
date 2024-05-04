@@ -1,25 +1,23 @@
 import * as React from 'react'
 import StatsMainContext from '../../contexts/StatsMainContext'
-import {
-  StackExchangeService,
-  StackExchangeData
-} from '../../scripts/services/StackExchangeService'
+import { StackExchangeData } from '../../scripts/services/StackExchangeService'
+import { SuperUserService } from '../../scripts/services/SuperUserService'
 import StatsCommon from './StatsCommon'
 
 export default function StatsSuperUser() {
-  const { stackExchange } = React.useContext(StatsMainContext)
+  const { superUser } = React.useContext(StatsMainContext)
   const [stats, setStats] =
-    React.useState<StackExchangeData>(stackExchange)
+    React.useState<StackExchangeData>(superUser)
   React.useEffect(() => {
-    const stackOverflowService = new StackExchangeService(stats);
+    const service = new SuperUserService(stats);
     (async () => {
-      const data: StackExchangeData = await stackOverflowService.request()
+      const data: StackExchangeData = await service.request()
       setStats(data)
     })()
-  }, [stats])
+  }, [])
   return (
     <StatsCommon techName="superuser" url="https://superuser.com/users/1123723/fabasoad">
-      ➕ {stats.superUser.reputation}
+      ➕ {stats.reputation}
     </StatsCommon>
   )
 }

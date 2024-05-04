@@ -12,7 +12,7 @@ import {randomNumber} from "../../TestUtils";
 test('should render StatsSuperUser correctly', () => {
   const expectedReputation: number = randomNumber(1, 100)
   const stats: StatsDefaultProps = defaultStatsDefaultProps
-  stats.stackExchange.superUser.reputation = expectedReputation
+  stats.superUser.reputation = expectedReputation
   const { container } = render(
     <StatsMainContext.Provider value={stats}>
       <StatsSuperUser />

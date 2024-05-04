@@ -1,25 +1,23 @@
 import * as React from 'react'
 import StatsMainContext from '../../contexts/StatsMainContext'
-import {
-  StackExchangeService,
-  StackExchangeData
-} from '../../scripts/services/StackExchangeService'
+import { StackExchangeData } from '../../scripts/services/StackExchangeService'
+import { StackOverflowService } from '../../scripts/services/StackOverflowService'
 import StatsCommon from './StatsCommon'
 
 export default function StatsStackOverflow() {
-  const { stackExchange } = React.useContext(StatsMainContext)
+  const { stackOverflow } = React.useContext(StatsMainContext)
   const [stats, setStats] =
-    React.useState<StackExchangeData>(stackExchange)
+    React.useState<StackExchangeData>(stackOverflow)
   React.useEffect(() => {
-    const stackOverflowService = new StackExchangeService(stats);
+    const service = new StackOverflowService(stats);
     (async () => {
-      const data: StackExchangeData = await stackOverflowService.request()
+      const data: StackExchangeData = await service.request()
       setStats(data)
     })()
-  }, [stats])
+  }, [])
   return (
     <StatsCommon techName="stackoverflow" url="https://stackoverflow.com/users/470214/fabasoad">
-      🏆️ {stats.stackOverflow.reputation}
+      🏆️ {stats.reputation}
     </StatsCommon>
   )
 }

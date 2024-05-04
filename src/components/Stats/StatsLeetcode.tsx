@@ -7,12 +7,12 @@ export default function StatsLeetcode() {
   const { leetcode } = React.useContext(StatsMainContext)
   const [stats, setStats] = React.useState<LeetcodeStats>(leetcode)
   React.useEffect(() => {
-    const leetcodeService = new LeetcodeService(stats);
+    const service = new LeetcodeService(stats);
     (async () => {
-      const data: LeetcodeStats = await leetcodeService.request()
+      const data: LeetcodeStats = await service.request()
       setStats(data)
     })()
-  }, [stats])
+  }, [])
   return (
     <StatsCommon techName="leetcode" url="https://leetcode.com/fabasoad">
       ✔️ {stats.totalSolved}

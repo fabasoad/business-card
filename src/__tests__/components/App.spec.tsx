@@ -35,8 +35,8 @@ describe('App', () => {
     const expectedSuperUserReputation: number = randomNumber(1, 100)
     const stats: StatsDefaultProps = defaultStatsDefaultProps
     stats.leetcode.totalSolved = expectedLeetcodeTotalSolved
-    stats.stackExchange.stackOverflow.reputation = expectedStackOverflowReputation
-    stats.stackExchange.superUser.reputation = expectedSuperUserReputation
+    stats.stackOverflow.reputation = expectedStackOverflowReputation
+    stats.superUser.reputation = expectedSuperUserReputation
     const { container } = await act(() => render(
       <StatsMainContext.Provider value={stats}>
         <App />

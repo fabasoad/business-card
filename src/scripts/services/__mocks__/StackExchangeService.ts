@@ -1,10 +1,10 @@
 import RemoteService from '../RemoteService'
 import type { StackExchangeData } from '../StackExchangeService'
 
-export class StackOverflowService implements RemoteService<StackExchangeData> {
+export class StackExchangeService implements RemoteService<StackExchangeData> {
   private readonly defaultVal: StackExchangeData
 
-  public constructor(defaultVal: StackExchangeData) {
+  public constructor(defaultVal: StackExchangeData, siteName: string) {
     this.defaultVal = defaultVal
   }
 

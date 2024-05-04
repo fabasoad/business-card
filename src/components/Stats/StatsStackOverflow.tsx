@@ -17,7 +17,7 @@ export default function StatsStackOverflow() {
   }, [])
   return (
     <StatsCommon techName="stackoverflow" url="https://stackoverflow.com/users/470214/fabasoad">
-      🏆️ {stackOverflow.reputation}
+      🏆️ {stats.reputation}
     </StatsCommon>
   )
 }

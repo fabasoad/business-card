@@ -17,7 +17,7 @@ export default function StatsSuperUser() {
   }, [])
   return (
     <StatsCommon techName="superuser" url="https://superuser.com/users/1123723/fabasoad">
-      ➕ {superUser.reputation}
+      ➕ {stats.reputation}
     </StatsCommon>
   )
 }

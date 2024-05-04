@@ -3,34 +3,34 @@ import State from '../../components/Stats/State'
 import RemoteService from './RemoteService'
 import fetch from 'cross-fetch'
 
-class GitHubService implements RemoteService<number> {
+export class GitHubService implements RemoteService<number> {
   private state: State = State.NOT_STARTED
-  private starsAmount: number = 0
+  private starsAmount: number
 
   private static GITHUB_USERNAME = 'fabasoad'
+
+  public constructor(starsAmount: number) {
+    this.starsAmount = starsAmount
+  }
 
   public async request(): Promise<number> {
     if (this.state == State.NOT_STARTED) {
       this.state = State.STARTED
-      const octokit: Octokit = new Octokit({ request: { fetch } });
-      this.starsAmount = await octokit.rest.repos.listForUser({
-        username: GitHubService.GITHUB_USERNAME
-      }).then(({ data }) => {
+      const octokit: Octokit = new Octokit({ request: { fetch } })
+      try {
+        const { data } = await octokit.rest.repos.listForUser({
+          username: GitHubService.GITHUB_USERNAME
+        })
         let res: number = 0
         for (let i = 0; i < data.length; i++) {
           res += data[i]['stargazers_count']
         }
         this.state = State.FINISHED
-        return res
-      }).catch((reason) => {
-        console.log(reason)
+        this.starsAmount = res
+      } catch (reason) {
         this.state = State.FAILED
-        return 47;
-      })
+      }
     }
-    return Promise.resolve(this.starsAmount)
+    return this.starsAmount
   }
 }
-
-const remoteService = new GitHubService()
-export default remoteService

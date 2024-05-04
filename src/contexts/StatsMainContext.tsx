@@ -6,6 +6,7 @@ export type StatsDefaultProps = {
   leetcode: LeetcodeStats
   stackOverflow: StackExchangeData
   superUser: StackExchangeData
+  github: { starsAmount: number }
 }
 
 export const defaultStatsDefaultProps: StatsDefaultProps = {
@@ -22,6 +23,9 @@ export const defaultStatsDefaultProps: StatsDefaultProps = {
   superUser: {
     reputation: 0,
     answerCount: 0
+  },
+  github: {
+    starsAmount: 0
   }
 }
 

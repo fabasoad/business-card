@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: zaproxy/zap-stable:2.14.0
+      options: --user root
     steps:
       - name: Perform testing
-        run: python zap-baseline.py -t "https://fabasoad.com"
-        working-directory: /zap
+        run: zap-baseline.py -t "https://fabasoad.com"

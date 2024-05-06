@@ -1,0 +1,23 @@
+---
+name: DAST
+
+on: # yamllint disable-line rule:truthy
+  deployment_status: {}
+  push:
+    branches:
+      - feat/dast
+
+defaults:
+  run:
+    shell: sh
+
+jobs:
+  dast:
+    name: ZAP
+    # if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    container:
+      image: zaproxy/zap-stable:2.14.0
+    steps:
+      - name: Perform testing
+        run: python zap-baseline.py -t "https://fabasoad.com"

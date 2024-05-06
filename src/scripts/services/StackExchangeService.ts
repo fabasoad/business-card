@@ -6,8 +6,8 @@ export type StackOverflowResponse = {
 }
 
 export type StackExchangeData = {
-  reputation: number,
-  answerCount: number
+  reputation?: number,
+  answerCount?: number
 }
 
 export abstract class StackExchangeService implements RemoteService<StackExchangeData> {

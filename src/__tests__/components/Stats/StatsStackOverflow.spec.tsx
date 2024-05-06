@@ -15,7 +15,7 @@ test('should render StatsStackOverflow correctly', () => {
   testStatsCommon(
     container.querySelector('div.stats-item'),
     'https://stackoverflow.com/users/470214/fabasoad',
-    `🏆️ ${expectedReputation}`,
+    `🏆 ${expectedReputation}`,
     'stackoverflow'
   )
 })

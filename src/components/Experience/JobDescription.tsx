@@ -8,7 +8,7 @@ interface JobDescriptionProps {
 }
 
 function JobDescription(
-  { t, count, i18nKeyPrefix, withTitle }: WithTranslation & JobDescriptionProps
+  { t, count, i18nKeyPrefix, withTitle = true }: WithTranslation & JobDescriptionProps
 ) {
   return (
     <div className="job-description">
@@ -18,10 +18,6 @@ function JobDescription(
         .map((key) => (<Trans key={key} parent="div" t={t}>{key}</Trans>))}
     </div>
   )
-}
-
-JobDescription.defaultProps = {
-  withTitle: true
 }
 
 export default withTranslation()(JobDescription)

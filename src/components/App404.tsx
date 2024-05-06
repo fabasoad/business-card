@@ -7,7 +7,7 @@ interface App404Props {
   redirectUrl?: string
 }
 
-function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
+function App404({ i18n, t, redirectUrl = BaseConstants.BASE_URL }: WithTranslation & App404Props) {
   let timer: NodeJS.Timeout
   let counterValue: number = 3
 
@@ -52,10 +52,6 @@ function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
       </p>
     </div>
   )
-}
-
-App404.defaultProps = {
-  redirectUrl: BaseConstants.BASE_URL
 }
 
 export default withTranslation()(App404)

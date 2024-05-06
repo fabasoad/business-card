@@ -3,9 +3,6 @@ name: DAST
 
 on: # yamllint disable-line rule:truthy
   deployment_status: {}
-  push:
-    branches:
-      - feat/dast
 
 defaults:
   run:
@@ -14,7 +11,7 @@ defaults:
 jobs:
   dast:
     name: ZAP
-    # if: github.event.deployment_status.state == 'success'
+    if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
     container:
       image: zaproxy/zap-stable:2.14.0

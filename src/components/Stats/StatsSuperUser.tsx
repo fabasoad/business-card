@@ -1,13 +1,15 @@
 import * as React from 'react'
-import StatsMainContext from '../../contexts/StatsMainContext'
 import { StackExchangeData } from '../../scripts/services/StackExchangeService'
 import { SuperUserService } from '../../scripts/services/SuperUserService'
 import StatsCommon from './StatsCommon'
 
-export default function StatsSuperUser() {
-  const { superUser } = React.useContext(StatsMainContext)
+type StatsSuperUserProps = {
+  reputation?: number
+}
+
+export default function StatsSuperUser({ reputation = 101 }: StatsSuperUserProps) {
   const [stats, setStats] =
-    React.useState<StackExchangeData>(superUser)
+    React.useState<StackExchangeData>({ reputation, answerCount: 0 })
   React.useEffect(() => {
     const service = new SuperUserService(stats);
     (async () => {

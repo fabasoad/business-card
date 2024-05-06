@@ -1,7 +1,7 @@
 ---
 name: SAST
 
-on:  # yamllint disable-line rule:truthy
+on: # yamllint disable-line rule:truthy
   pull_request: {}
   push:
     branches:
@@ -12,8 +12,8 @@ defaults:
     shell: sh
 
 jobs:
-  code-scanning:
-    name: Code scanning
+  codeql:
+    name: CodeQL
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ${{ github.repository }}
@@ -39,8 +39,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Yarn audit
         run: yarn npm audit --all
-  directory-scanning:
-    name: Directory scanning
+  grype:
+    name: Grype
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ${{ github.repository }}

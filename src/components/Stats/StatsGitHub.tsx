@@ -1,11 +1,13 @@
 import * as React from 'react'
-import StatsMainContext from '../../contexts/StatsMainContext'
 import { GitHubService } from '../../scripts/services/GitHubService'
 import StatsCommon from './StatsCommon'
 
-export default function StatsGitHub() {
-  const { github } = React.useContext(StatsMainContext)
-  const [stars, setStars] = React.useState<number>(github.starsAmount)
+type StatsGitHubProps = {
+  starsAmount?: number
+}
+
+export default function StatsGitHub({ starsAmount = 57 }: StatsGitHubProps) {
+  const [stars, setStars] = React.useState<number>(starsAmount)
   React.useEffect(() => {
     const service = new GitHubService(stars);
     (async () => {

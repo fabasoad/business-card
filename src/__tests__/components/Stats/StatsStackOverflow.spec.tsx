@@ -2,24 +2,20 @@ import '@testing-library/jest-dom'
 import * as React from 'react'
 import StatsStackOverflow from '../../../components/Stats/StatsStackOverflow'
 import { render } from '@testing-library/react'
-import StatsMainContext, {
-  defaultStatsDefaultProps,
-  StatsDefaultProps
-} from '../../../contexts/StatsMainContext'
-import { testStatsStackOverflow } from './TestUtils'
+import { testStatsCommon } from './TestUtils'
 import { randomNumber } from '../../TestUtils'
+
+jest.mock('../../../scripts/services/StackExchangeService')
 
 test('should render StatsStackOverflow correctly', () => {
   const expectedReputation: number = randomNumber(1, 100)
-  const stats: StatsDefaultProps = defaultStatsDefaultProps
-  stats.stackOverflow.reputation = expectedReputation
   const { container } = render(
-    <StatsMainContext.Provider value={stats}>
-      <StatsStackOverflow />
-    </StatsMainContext.Provider>
+    <StatsStackOverflow reputation={expectedReputation} />
   )
-  testStatsStackOverflow(
+  testStatsCommon(
     container.querySelector('div.stats-item'),
-    expectedReputation
+    'https://stackoverflow.com/users/470214/fabasoad',
+    `🏆️ ${expectedReputation}`,
+    'stackoverflow'
   )
 })

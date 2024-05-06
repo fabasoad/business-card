@@ -14,7 +14,6 @@ import Resume from './Resume'
 import Skills from './Skills'
 import StatsMain from './Stats/StatsMain'
 import { WithTranslation, withTranslation} from 'react-i18next'
-import StatsMainContext, { defaultStatsDefaultProps } from '../contexts/StatsMainContext'
 
 export function App({ i18n }: WithTranslation) {
   return (
@@ -23,9 +22,7 @@ export function App({ i18n }: WithTranslation) {
       <Header />
       <MenuMain />
       <AboutMain />
-      <StatsMainContext.Provider value={defaultStatsDefaultProps}>
-        <StatsMain />
-      </StatsMainContext.Provider>
+      <StatsMain />
       <Resume />
       <Skills />
       <ExperienceMain />

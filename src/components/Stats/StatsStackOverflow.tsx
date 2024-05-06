@@ -1,13 +1,15 @@
 import * as React from 'react'
-import StatsMainContext from '../../contexts/StatsMainContext'
 import { StackExchangeData } from '../../scripts/services/StackExchangeService'
 import { StackOverflowService } from '../../scripts/services/StackOverflowService'
 import StatsCommon from './StatsCommon'
 
-export default function StatsStackOverflow() {
-  const { stackOverflow } = React.useContext(StatsMainContext)
+type StatsStackOverflowProps = {
+  reputation?: number
+}
+
+export default function StatsStackOverflow({ reputation = 1783 }: StatsStackOverflowProps) {
   const [stats, setStats] =
-    React.useState<StackExchangeData>(stackOverflow)
+    React.useState<StackExchangeData>({ reputation, answerCount: 0 })
   React.useEffect(() => {
     const service = new StackOverflowService(stats);
     (async () => {

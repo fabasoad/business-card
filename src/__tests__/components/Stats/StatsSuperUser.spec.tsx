@@ -2,24 +2,20 @@ import '@testing-library/jest-dom'
 import * as React from 'react'
 import StatsSuperUser from '../../../components/Stats/StatsSuperUser'
 import { render } from '@testing-library/react'
-import StatsMainContext, {
-  defaultStatsDefaultProps,
-  StatsDefaultProps
-} from '../../../contexts/StatsMainContext'
-import { testStatsSuperUser } from './TestUtils'
-import {randomNumber} from "../../TestUtils";
+import { testStatsCommon } from './TestUtils'
+import { randomNumber } from '../../TestUtils'
+
+jest.mock('../../../scripts/services/StackExchangeService')
 
 test('should render StatsSuperUser correctly', () => {
   const expectedReputation: number = randomNumber(1, 100)
-  const stats: StatsDefaultProps = defaultStatsDefaultProps
-  stats.superUser.reputation = expectedReputation
   const { container } = render(
-    <StatsMainContext.Provider value={stats}>
-      <StatsSuperUser />
-    </StatsMainContext.Provider>
+    <StatsSuperUser reputation={expectedReputation} />
   )
-  testStatsSuperUser(
+  testStatsCommon(
     container.querySelector('div.stats-item'),
-    expectedReputation
+    'https://superuser.com/users/1123723/fabasoad',
+    `➕ ${expectedReputation}`,
+    'superuser'
   )
 })

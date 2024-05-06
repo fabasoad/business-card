@@ -21,3 +21,4 @@ jobs:
     steps:
       - name: Perform testing
         run: python zap-baseline.py -t "https://fabasoad.com"
+        working-directory: /zap

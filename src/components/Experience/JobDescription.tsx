@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Trans, withTranslation, WithTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 interface JobDescriptionProps {
   count: number
@@ -7,9 +7,10 @@ interface JobDescriptionProps {
   withTitle?: boolean
 }
 
-function JobDescription(
-  { t, count, i18nKeyPrefix, withTitle = true }: WithTranslation & JobDescriptionProps
+export default function JobDescription(
+  { count, i18nKeyPrefix, withTitle = true }: JobDescriptionProps
 ) {
+  const { t } = useTranslation()
   return (
     <div className="job-description">
       {withTitle && <h5>{t('business-card-experience-description-title')}</h5>}
@@ -19,5 +20,3 @@ function JobDescription(
     </div>
   )
 }
-
-export default withTranslation()(JobDescription)

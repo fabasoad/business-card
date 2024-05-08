@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { Col } from 'react-bootstrap'
-import { WithTranslation, withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-function FooterLocation({ t }: WithTranslation) {
+export default function FooterLocation() {
+  const { t } = useTranslation()
   return (
     <Col>
       <i className="fa fa-map-marker-alt fa-2x"></i>
@@ -10,5 +11,3 @@ function FooterLocation({ t }: WithTranslation) {
     </Col>
   )
 }
-
-export default withTranslation()(FooterLocation)

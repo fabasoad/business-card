@@ -2,9 +2,10 @@ import * as React from 'react'
 import * as imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
 import SectionTitle from './Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-function Badges({ t }: WithTranslation) {
+export default function Badges() {
+  const { t } = useTranslation()
   return (
     <div id="badges" className="light-component">
       <SectionTitle>{t('business-card-badges-title')}</SectionTitle>
@@ -29,5 +30,3 @@ function Badges({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(Badges)

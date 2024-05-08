@@ -1,13 +1,14 @@
 import * as React from 'react'
 import { Nav } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 interface MenuItemProps {
   name: string
   setActiveNavLink: React.Dispatch<React.SetStateAction<string>>
 }
 
-function MenuItem({ name, setActiveNavLink, t }: WithTranslation & MenuItemProps) {
+export default function MenuItem({ name, setActiveNavLink }: MenuItemProps) {
+  const { t } = useTranslation()
   return (
     <Nav.Link
       onClick={() => setActiveNavLink(`#${name}`)}
@@ -18,5 +19,3 @@ function MenuItem({ name, setActiveNavLink, t }: WithTranslation & MenuItemProps
     </Nav.Link>
   )
 }
-
-export default withTranslation()(MenuItem)

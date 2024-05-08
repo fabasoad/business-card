@@ -1,11 +1,12 @@
 import * as React from 'react'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 import { Dropdown } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import { Locale } from '../../scripts/i18n/types'
 import i18nService from '../../scripts/i18n/I18nService'
 
-function LocaleDropDown({ i18n, t }: WithTranslation) {
+export default function LocaleDropDown() {
+  const { i18n, t } = useTranslation()
   return (
     <Dropdown>
       <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
@@ -29,5 +30,3 @@ function LocaleDropDown({ i18n, t }: WithTranslation) {
     </Dropdown>
   )
 }
-
-export default withTranslation()(LocaleDropDown)

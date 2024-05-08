@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { humanize } from '../../scripts/utils/DateUtils'
-import { withTranslation, WithTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 interface DateDurationProps {
   fromMonthIndex?: number
@@ -9,9 +9,10 @@ interface DateDurationProps {
   toYear?: number
 }
 
-function DateDuration(
-  { fromMonthIndex = 0, fromYear = 0, toMonthIndex, toYear, i18n }: WithTranslation & DateDurationProps
+export default function DateDuration(
+  { fromMonthIndex = 0, fromYear = 0, toMonthIndex, toYear }: DateDurationProps
 ) {
+  const { i18n } = useTranslation()
   const from = new Date(fromYear, fromMonthIndex)
   const to = !toYear || toMonthIndex == undefined
     ? new Date()
@@ -22,5 +23,3 @@ function DateDuration(
     </div>
   )
 }
-
-export default withTranslation()(DateDuration)

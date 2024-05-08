@@ -6,9 +6,11 @@ import CertificateItem from './CertificateItem'
 import SectionTitle from '../Controls/SectionTitle'
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
 import { Container, Col, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-function CertificatesMain({ t }: WithTranslation) {
+export default function CertificatesMain() {
+  const { t } = useTranslation()
+
   const certificateIssuerStorage = new CertificateIssuerStorage()
   const technologyStorage = new TechnologyStorage()
   return (
@@ -24,7 +26,7 @@ function CertificatesMain({ t }: WithTranslation) {
                 issueDate={new Date(item.date)}
                 issuer={certificateIssuerStorage.findByName(item.issuer)}
                 technology={technologyStorage.findByName(item.technology)}
-                i18nTitleKey={item.i18nTitleKey}
+                name={t(item.i18nTitleKey)}
                 url={item.url}
               />
             </Col>)}
@@ -33,5 +35,3 @@ function CertificatesMain({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(CertificatesMain)

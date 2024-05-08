@@ -13,9 +13,10 @@ import PortfolioMain from './Portfolio/PortfolioMain'
 import Resume from './Resume'
 import Skills from './Skills'
 import StatsMain from './Stats/StatsMain'
-import { WithTranslation, withTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-export function App({ i18n }: WithTranslation) {
+export default function App() {
+  const { i18n } = useTranslation()
   return (
     <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
       <BackToTopButton />
@@ -35,5 +36,3 @@ export function App({ i18n }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(App)

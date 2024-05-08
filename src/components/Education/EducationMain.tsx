@@ -2,9 +2,10 @@ import * as React from 'react'
 import EducationItem from './EducationItem'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation} from 'react-i18next'
+import { useTranslation} from 'react-i18next'
 
-function EducationMain({ t }: WithTranslation) {
+export default function EducationMain() {
+  const { t } = useTranslation()
   return (
     <div id="education" className="light-component">
       <Container>
@@ -26,5 +27,3 @@ function EducationMain({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(EducationMain)

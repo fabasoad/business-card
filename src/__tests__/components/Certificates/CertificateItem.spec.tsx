@@ -9,37 +9,35 @@ import { render } from '@testing-library/react'
 import { testCertificateItem } from './TestUtils'
 import { Technology } from '../../../scripts/technologies/types'
 
-describe('CertificateItem', () => {
-  test('should render CertificateItem correctly', () => {
-    const technologyStorage = new TechnologyStorage()
-    const certificateIssuerStorage = new CertificateIssuerStorage()
+test('should render CertificateItem correctly', () => {
+  const technologyStorage = new TechnologyStorage()
+  const certificateIssuerStorage = new CertificateIssuerStorage()
 
-    const issueDate = new Date(2022, 1, 22)
-    const technologyName = 'maven'
-    const technology: Technology = technologyStorage.findByName(technologyName)
-    const issuerName = 'udemy'
-    const issuer: CertificateIssuer = certificateIssuerStorage.findByName(issuerName)
-    const i18nTitleKey = 'certificate-i18nTitleKey'
-    const url = 'certificate-url'
+  const issueDate = new Date(2022, 1, 22)
+  const technologyName = 'maven'
+  const technology: Technology = technologyStorage.findByName(technologyName)
+  const issuerName = 'udemy'
+  const issuer: CertificateIssuer = certificateIssuerStorage.findByName(issuerName)
+  const name = 'Udemy Certificate'
+  const url = 'certificate-url'
 
-    const { container } = render(
-      <CertificateItem
-        id={null}
-        issueDate={issueDate}
-        issuer={issuer}
-        technology={technology}
-        i18nTitleKey={i18nTitleKey}
-        url={url}
-      />
-    )
-    testCertificateItem(
-      container.querySelector('div.card'),
-      SupportedLocales.default,
-      issueDate,
-      issuer.name,
-      technologyName,
-      i18nTitleKey,
-      url
-    )
-  })
+  const { container } = render(
+    <CertificateItem
+      id={null}
+      issueDate={issueDate}
+      issuer={issuer}
+      technology={technology}
+      name={name}
+      url={url}
+    />
+  )
+  testCertificateItem(
+    container.querySelector('div.card'),
+    SupportedLocales.default,
+    issueDate,
+    issuer.name,
+    technologyName,
+    name,
+    url
+  )
 })

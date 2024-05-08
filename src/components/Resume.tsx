@@ -1,9 +1,15 @@
 import * as React from 'react'
 import SectionTitle from './Controls/SectionTitle'
 import { Col, Container } from 'react-bootstrap'
-import { WithTranslation, withTranslation, Trans } from 'react-i18next'
+import {
+  WithTranslation,
+  withTranslation,
+  Trans,
+  useTranslation
+} from 'react-i18next'
 
-function Resume({ t }: WithTranslation) {
+export default function Resume() {
+  const { t } = useTranslation()
   return (
     <div id="resume" className="light-component">
       <SectionTitle>{t('business-card-resume-title')}</SectionTitle>
@@ -17,5 +23,3 @@ function Resume({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(Resume)

@@ -1,13 +1,14 @@
 import * as React from 'react'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 export type LanguageItemProps = {
   code: string
 }
 
-function LanguageItem({
-  children, code, t
-}: WithTranslation & React.PropsWithChildren<LanguageItemProps>) {
+export default function LanguageItem({
+  children, code
+}: React.PropsWithChildren<LanguageItemProps>) {
+  const { t } = useTranslation()
   return (
     <div className="mb-4 mx-4">
       <div className="h4">{t(`business-card-languages-${code}`)}</div>
@@ -15,5 +16,3 @@ function LanguageItem({
     </div>
   )
 }
-
-export default withTranslation()(LanguageItem)

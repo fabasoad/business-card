@@ -3,9 +3,10 @@ import LanguageLinkItem from './LanguageLinkItem'
 import LanguageTextItem from './LanguageTextItem'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-function LanguagesMain({ t }: WithTranslation) {
+export default function LanguagesMain() {
+  const { t } = useTranslation()
   return (
     <div id="languages" className="light-component">
       <SectionTitle>{t('business-card-languages-title')}</SectionTitle>
@@ -21,5 +22,3 @@ function LanguagesMain({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(LanguagesMain)

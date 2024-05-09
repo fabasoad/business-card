@@ -21,7 +21,7 @@ import { testMenuMain } from './Menu/TestUtils'
 import { testPortfolioMain } from './Portfolio/TestUtils'
 
 jest.mock('../../scripts/services/LeetcodeService')
-jest.mock('../../components/stats/StatsMain')
+jest.mock('../../components/Stats/StatsMain')
 
 describe('App', () => {
   test('should render App correctly', async () => {

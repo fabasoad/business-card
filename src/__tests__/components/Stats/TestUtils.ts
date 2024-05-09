@@ -1,5 +1,4 @@
 import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
-import { testSectionTitle } from '../Controls/TestUtils'
 
 export function testStatsCommon(
   div: HTMLDivElement, url: string, content: string | RegExp, techName: string) {

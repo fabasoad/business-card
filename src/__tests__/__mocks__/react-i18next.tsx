@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { useTranslation } from 'react-i18next'
 import * as gb from '../../assets/i18n/gb.json'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 

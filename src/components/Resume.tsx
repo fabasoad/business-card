@@ -1,12 +1,7 @@
 import * as React from 'react'
 import SectionTitle from './Controls/SectionTitle'
 import { Col, Container } from 'react-bootstrap'
-import {
-  WithTranslation,
-  withTranslation,
-  Trans,
-  useTranslation
-} from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 
 export default function Resume() {
   const { t } = useTranslation()

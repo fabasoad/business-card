@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { Nav, Navbar } from 'react-bootstrap'
-import { WithTranslation, withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import LocaleDropDown from './LocaleDropDown'
 import MenuItem from './MenuItem'
 
+export default function MenuMain() {
+  const { t } = useTranslation()
 
-function MenuMain({ t }: WithTranslation) {
   const [expanded, setExpanded] = React.useState<boolean>(false)
   const [activeNavLink, setActiveNavLink] = React.useState<string>(document.location.hash)
 
@@ -55,5 +56,3 @@ function MenuMain({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(MenuMain)

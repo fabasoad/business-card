@@ -1,15 +1,15 @@
 /* global NodeJS */
 import * as React from 'react'
 import BaseConstants from '../scripts/BaseConstants'
-import { WithTranslation, withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 interface App404Props {
   redirectUrl?: string
 }
 
-function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
+export default function App404({ redirectUrl = BaseConstants.BASE_URL }: App404Props) {
   let timer: NodeJS.Timeout
-  let counterValue: number = 3
+  let counterValue = 3
 
   const [isRedirecting, setIsRedirecting] = React.useState<boolean>(false)
   const [counter, setCounter] = React.useState<number>(counterValue)
@@ -29,6 +29,8 @@ function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
   })
 
   const isRedirectingStyle = (flag: boolean) => ({ display: `${isRedirecting === flag ? 'inline' : 'none'}` })
+
+  const { i18n, t } = useTranslation()
 
   return (
     <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
@@ -53,9 +55,3 @@ function App404({ i18n, t, redirectUrl }: WithTranslation & App404Props) {
     </div>
   )
 }
-
-App404.defaultProps = {
-  redirectUrl: BaseConstants.BASE_URL
-}
-
-export default withTranslation()(App404)

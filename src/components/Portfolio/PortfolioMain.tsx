@@ -20,9 +20,10 @@ import * as imgSMA from '../../assets/images/portfolio/sma.png'
 import PortfolioItem from './PortfolioItem'
 import SectionTitle from '../Controls/SectionTitle'
 import { Container, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-function PortfolioMain({ t }: WithTranslation) {
+export default function PortfolioMain() {
+  const { t } = useTranslation()
   return (
     <div id="portfolio">
       <Container>
@@ -152,5 +153,3 @@ function PortfolioMain({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(PortfolioMain)

@@ -9,10 +9,11 @@ import JobResponsibilities from './JobResponsibilities'
 import JobTechnologies from './JobTechnologies'
 import JobTitle from './JobTitle'
 import { Container } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import SectionTitle from '../Controls/SectionTitle';
 
-function ExperienceMain({ t }: WithTranslation) {
+export default function ExperienceMain() {
+  const { t } = useTranslation()
   return (
     <div id="experience" className="light-component">
       <Container>
@@ -383,5 +384,3 @@ function ExperienceMain({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(ExperienceMain)

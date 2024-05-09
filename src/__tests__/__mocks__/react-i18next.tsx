@@ -6,7 +6,7 @@ const reactI18Next: any = jest.createMockFromModule('react-i18next')
 
 const tMock = jest.fn((key) => key)
 
-const i18n = {
+const i18nMock = {
   language: SupportedLocales.default.code,
   t: tMock,
   exists: (key: string): boolean => Object.hasOwn(gb, key) ||
@@ -14,19 +14,15 @@ const i18n = {
     key === 'testing-prefix-1' || key === 'testing-prefix-1-1'
 }
 
-reactI18Next.withTranslation = () => (Component) => {
-  if (!Component.defaultProps) {
-    Component.defaultProps = {}
-  }
-  Component.defaultProps.i18n = i18n
-  Component.defaultProps.t = tMock
-  return Component
-}
-
 reactI18Next.Trans = function Trans({ i18nKey }) {
   return (<>{i18nKey}</>)
 }
 
-reactI18Next.getI18n = () => i18n
+reactI18Next.getI18n = () => i18nMock
+
+reactI18Next.useTranslation = () => ({
+  t: tMock,
+  i18n: i18nMock
+})
 
 module.exports = reactI18Next

@@ -3,9 +3,10 @@ import * as React from 'react'
 import SectionTitle from './Controls/SectionTitle'
 import TechnologyStorage from '../scripts/technologies/TechnologyStorage'
 import { Col, Container, Row } from 'react-bootstrap'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-function Skills({ t }: WithTranslation) {
+export default function Skills() {
+  const { t } = useTranslation()
   const technologyStorage = new TechnologyStorage()
   return (
     <div id="skills" className="light-component">
@@ -29,5 +30,3 @@ function Skills({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(Skills)

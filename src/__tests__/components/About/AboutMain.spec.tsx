@@ -4,9 +4,7 @@ import AboutMain from '../../../components/About/AboutMain'
 import { render } from '@testing-library/react'
 import { testAboutMain } from './TestUtils'
 
-describe('AboutMain', () => {
-  test('should render AboutMain correctly', () => {
-    const { container } = render(<AboutMain />)
-    testAboutMain(container.querySelector('div#about'))
-  })
+test('should render AboutMain correctly', () => {
+  const { container } = render(<AboutMain />)
+  testAboutMain(container.querySelector('div#about'))
 })

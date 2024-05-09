@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { getDateLocale } from '../../scripts/utils/DateUtils'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 interface DateTimelineProps {
   fromMonthIndex: number
@@ -10,9 +10,10 @@ interface DateTimelineProps {
   toYear?: number
 }
 
-function DateTimeline({
-  fromMonthIndex, fromYear, toMonthIndex, toYear, t
-}: WithTranslation & DateTimelineProps) {
+export default function DateTimeline({
+  fromMonthIndex, fromYear, toMonthIndex, toYear
+}: DateTimelineProps) {
+  const { t } = useTranslation()
   return (
     <Col className="controls__date-timeline">
       <Row>
@@ -29,5 +30,3 @@ function DateTimeline({
     </Col>
   )
 }
-
-export default withTranslation()(DateTimeline)

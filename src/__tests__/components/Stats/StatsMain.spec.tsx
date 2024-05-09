@@ -1,36 +1,26 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
-import { act, render } from '@testing-library/react'
+import { render } from '@testing-library/react'
 
 import StatsMain from '../../../components/Stats/StatsMain'
-import { testStatsMain } from './TestUtils'
-import { randomNumber } from '../../TestUtils'
-import StatsMainContext, {
-  defaultStatsDefaultProps,
-  StatsDefaultProps
-} from '../../../contexts/StatsMainContext'
+import { testSectionTitle } from '../Controls/TestUtils'
 
-jest.mock('../../../scripts/services/LeetcodeService')
+jest.mock('../../../components/Stats/StatsGitHub')
+jest.mock('../../../components/Stats/StatsLeetcode')
+jest.mock('../../../components/Stats/StatsStackOverflow')
+jest.mock('../../../components/Stats/StatsSuperUser')
 
-test('should render StatsMain correctly', async () => {
-  const expectedLeetcodeTotalSolved: number = randomNumber(1, 100)
-  const expectedStackOverflowReputation: number = randomNumber(1, 100)
-  const expectedSuperUserReputation: number = randomNumber(1, 100)
-  const expectedGitHubStarsAmount: number = randomNumber(1, 100)
-  const stats: StatsDefaultProps = defaultStatsDefaultProps
-  stats.leetcode.totalSolved = expectedLeetcodeTotalSolved
-  stats.stackOverflow.reputation = expectedStackOverflowReputation
-  stats.superUser.reputation = expectedSuperUserReputation
-  stats.github.starsAmount = expectedGitHubStarsAmount
-  const { container } = await act(() => render(
-    <StatsMainContext.Provider value={stats}>
-      <StatsMain />
-    </StatsMainContext.Provider>
-  ))
-  testStatsMain(container.querySelector('div#stats'), {
-    leetcodeTotalSolved: expectedLeetcodeTotalSolved,
-    stackOverflowReputation: expectedStackOverflowReputation,
-    superUserReputation: expectedSuperUserReputation,
-    githubStarsAmount: expectedGitHubStarsAmount
-  })
+test('should render StatsMain correctly', () => {
+  const { container } = render(<StatsMain />)
+  const div = container.querySelector('div#stats')
+  testSectionTitle(
+    div.querySelector('div.section-title'),
+    'business-card-stats-title'
+  )
+  const divCol = div.querySelector('div.container div.row div.col')
+  expect(divCol).toHaveClass('stats-list')
+  expect(divCol).toHaveClass('d-flex')
+  expect(divCol).toHaveClass('justify-content-center')
+  const divStatsItems = divCol.querySelectorAll('div.stats-item')
+  expect(divStatsItems).toHaveLength(4)
 })

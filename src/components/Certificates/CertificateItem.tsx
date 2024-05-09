@@ -2,7 +2,6 @@ import * as React from 'react'
 import { Card } from 'react-bootstrap'
 import { CertificateIssuer } from '../../scripts/certificates/types'
 import { Technology } from '../../scripts/technologies/types'
-import { WithTranslation, withTranslation} from 'react-i18next'
 import { getDateLocale } from '../../scripts/utils/DateUtils'
 
 interface CertificateItemProps {
@@ -10,13 +9,13 @@ interface CertificateItemProps {
   issueDate: Date
   issuer: CertificateIssuer
   technology: Technology
-  i18nTitleKey: string
+  name: string
   url: string
 }
 
-function CertificateItem({
-  issueDate, issuer, i18nTitleKey, url, t
-}: WithTranslation & CertificateItemProps) {
+export default function CertificateItem({
+  issueDate, issuer, name, url
+}: CertificateItemProps) {
   return (
     <Card>
       <Card.Header>
@@ -27,7 +26,7 @@ function CertificateItem({
       <Card.Body>
         <Card.Text>
           <Card.Link target="_blank" rel="noopener noreferrer" href={url}>
-            {t(i18nTitleKey)}
+            {name}
           </Card.Link>
         </Card.Text>
       </Card.Body>
@@ -37,5 +36,3 @@ function CertificateItem({
     </Card>
   )
 }
-
-export default withTranslation()(CertificateItem)

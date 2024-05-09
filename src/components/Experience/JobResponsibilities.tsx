@@ -1,15 +1,14 @@
 import * as React from 'react'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
 type JobResponsibilitiesProps = {
   i18nKeyPrefix: string
 }
 
-type Props = WithTranslation & JobResponsibilitiesProps
-
-function JobResponsibilities({ i18nKeyPrefix, i18n, t }: Props) {
+export default function JobResponsibilities({ i18nKeyPrefix }: JobResponsibilitiesProps) {
+  const { i18n, t } = useTranslation()
   const respList = []
-  const key = (x) => `${i18nKeyPrefix}-${x}`
+  const key = (x: number) => `${i18nKeyPrefix}-${x}`
   for (let i = 1; i18n.exists(key(i)); i++) {
     const subList = []
     const subKey = (x: number) => `${key(i)}-${x}`
@@ -30,5 +29,3 @@ function JobResponsibilities({ i18nKeyPrefix, i18n, t }: Props) {
     </>
   )
 }
-
-export default withTranslation()(JobResponsibilities)

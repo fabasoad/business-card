@@ -1,13 +1,14 @@
 /// <reference path='./AboutMain.d.ts' />
 import * as React from 'react'
-import { Trans, withTranslation, WithTranslation } from 'react-i18next'
+import { Trans, useTranslation } from 'react-i18next'
 import * as imgAboutMe from '../../assets/images/about_me.jpg'
 import * as img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
 import TotalExperience from '../../scripts/TotalExperience'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 
-function AboutMain({ t, i18n }: WithTranslation) {
+export default function AboutMain() {
+  const { t, i18n } = useTranslation()
   const totalExperience = new TotalExperience()
   return (
     <Container id="about">
@@ -63,5 +64,3 @@ function AboutMain({ t, i18n }: WithTranslation) {
     </Container>
   )
 }
-
-export default withTranslation()(AboutMain)

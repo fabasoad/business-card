@@ -3,9 +3,10 @@ import FooterContacts from './FooterContacts'
 import FooterInfo from './FooterInfo'
 import FooterSocial from './FooterSocial'
 import SectionTitle from '../Controls/SectionTitle'
-import { withTranslation, WithTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-function FooterMain({ t }: WithTranslation) {
+export default function FooterMain() {
+  const { t } = useTranslation()
   return (
     <div className="footer">
       <div id="contact" className="container text-center">
@@ -17,5 +18,3 @@ function FooterMain({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(FooterMain)

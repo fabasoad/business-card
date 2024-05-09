@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { WithTranslation, withTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import StatsGitHub from './StatsGitHub'
 import StatsLeetcode from './StatsLeetcode'
 import StatsStackOverflow from './StatsStackOverflow'
@@ -7,7 +7,8 @@ import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 import StatsSuperUser from './StatsSuperUser'
 
-function StatsMain({ t }: WithTranslation) {
+export default function StatsMain() {
+  const { t } = useTranslation()
   return (
     <div id="stats">
       <SectionTitle>
@@ -26,5 +27,3 @@ function StatsMain({ t }: WithTranslation) {
     </div>
   )
 }
-
-export default withTranslation()(StatsMain)

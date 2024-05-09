@@ -74,6 +74,8 @@
     },
     "ignore": ["src/libs", "**/TestUtils.ts"]
   },
-  "javascript": { "globals": ["Atomics", "SharedArrayBuffer", "jest", "afterEach", "beforeAll", "beforeEach", "expect", "test", "describe"] },
+  "javascript": {
+    "globals": ["Atomics", "SharedArrayBuffer", "jest", "afterEach", "beforeAll", "beforeEach", "expect", "test", "describe"]
+  },
   "overrides": [{ "include": ["**/*.spec.ts", "**/*.spec.tsx"] }]
 }

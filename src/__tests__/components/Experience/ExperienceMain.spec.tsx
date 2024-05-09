@@ -5,9 +5,7 @@ import { render } from '@testing-library/react'
 import { testExperienceMain } from './TestUtils'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales';
 
-describe('ExperienceMain', () => {
-  test('should render ExperienceMain correctly', () => {
-    const { container } = render(<ExperienceMain />)
-    testExperienceMain(container.querySelector('div#experience'), SupportedLocales.default)
-  })
+test('should render ExperienceMain correctly', () => {
+  const { container } = render(<ExperienceMain />)
+  testExperienceMain(container.querySelector('div#experience'), SupportedLocales.default)
 })

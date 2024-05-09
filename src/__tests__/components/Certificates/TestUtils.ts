@@ -10,7 +10,7 @@ export function testCertificateItem(
   date: Date,
   issuerName: string,
   technology: string,
-  i18nTitleKey: string,
+  name: string,
   url: string
 ) {
   const certificateIssuerStorage = new CertificateIssuerStorage()
@@ -31,7 +31,7 @@ export function testCertificateItem(
   expect(elements).toHaveLength(1)
   const cardLink = expect(elements[0])
   cardLink.toHaveAttribute('href', url)
-  cardLink.toHaveTextContent(i18nTitleKey)
+  cardLink.toHaveTextContent(name)
 
   elements = div.getElementsByClassName('card-footer')
   expect(elements).toHaveLength(1)
@@ -71,13 +71,14 @@ export function testCertificatesMain(div: HTMLDivElement, locale: Locale) {
     const divCardLinks = divCard.getElementsByClassName('card-link')
     expect(divCardLinks).toHaveLength(1)
     const item = findByUrl(items, divCardLinks.item(0).getAttribute('href'))
+    const name = item.i18nTitleKey
     testCertificateItem(
       divCard,
       locale,
       new Date(item.date),
       item.issuer,
       item.technology,
-      item.i18nTitleKey,
+      name,
       item.url
     )
   }

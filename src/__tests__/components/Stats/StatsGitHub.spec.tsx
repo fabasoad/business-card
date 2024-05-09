@@ -3,24 +3,20 @@ import * as React from 'react'
 import { render } from '@testing-library/react'
 
 import StatsGitHub from '../../../components/Stats/StatsGitHub'
-import StatsMainContext, {
-  defaultStatsDefaultProps,
-  StatsDefaultProps
-} from '../../../contexts/StatsMainContext'
 import { randomNumber } from '../../TestUtils'
-import { testStatsGitHub } from './TestUtils'
+import { testStatsCommon } from './TestUtils'
+
+jest.mock('../../../scripts/services/GitHubService')
 
 test('should render StatsGitHub correctly', () => {
   const expectedStarsAmount: number = randomNumber(1, 100)
-  const stats: StatsDefaultProps = defaultStatsDefaultProps
-  stats.github.starsAmount = expectedStarsAmount
   const { container } = render(
-    <StatsMainContext.Provider value={stats}>
-      <StatsGitHub />
-    </StatsMainContext.Provider>
+    <StatsGitHub starsAmount={expectedStarsAmount} />
   )
-  testStatsGitHub(
+  testStatsCommon(
     container.querySelector('div.stats-item'),
-    expectedStarsAmount
+    'https://github.com/fabasoad',
+    `⭐️ ${expectedStarsAmount}`,
+    'gitHub'
   )
 })

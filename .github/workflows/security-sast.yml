@@ -15,6 +15,7 @@ jobs:
   codeql:
     name: CodeQL
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
@@ -34,6 +35,7 @@ jobs:
   yarn-audit:
     name: Yarn audit
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
@@ -42,6 +44,7 @@ jobs:
   grype:
     name: Grype
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4

@@ -22,19 +22,15 @@ export class LeetcodeService implements RemoteService<LeetcodeStats> {
   public async request(): Promise<LeetcodeStats> {
     if (this.state !== State.FINISHED && this.state !== State.STARTED) {
       this.state = State.STARTED
-      this.stats = await fetch(LeetcodeService.LEETCODE_URL)
-        .then((resp) => resp.json())
-        .then(({ totalSolved, easySolved, mediumSolved, hardSolved }) => {
-          this.state = State.FINISHED
-          return {
-            totalSolved, easySolved, mediumSolved, hardSolved
-          }
-        })
-        .catch(() => {
-          this.state = State.FAILED
-          return this.stats
-        })
+      try {
+        const resp: Response = await fetch(LeetcodeService.LEETCODE_URL)
+        const { totalSolved, easySolved, mediumSolved, hardSolved } = await resp.json()
+        this.state = State.FINISHED
+        this.stats = { totalSolved, easySolved, mediumSolved, hardSolved }
+      } catch (err) {
+        this.state = State.FAILED
+      }
     }
-    return Promise.resolve(this.stats)
+    return this.stats
   }
 }

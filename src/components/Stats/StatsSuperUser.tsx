@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StackExchangeData } from '../../scripts/services/StackExchangeService'
+import type { StackExchangeData } from '../../scripts/services/StackExchangeService'
 import { SuperUserService } from '../../scripts/services/SuperUserService'
 import StatsStackExchange from './StatsStackExchange'
 

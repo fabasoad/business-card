@@ -21,13 +21,13 @@ export class GitHubService implements RemoteService<number> {
         const { data } = await octokit.rest.repos.listForUser({
           username: GitHubService.GITHUB_USERNAME
         })
-        let res: number = 0
+        let sum: number = 0
         for (let i = 0; i < data.length; i++) {
-          res += data[i]['stargazers_count']
+          sum += data[i]['stargazers_count']
         }
         this.state = State.FINISHED
-        this.starsAmount = res
-      } catch (reason) {
+        this.starsAmount = sum
+      } catch (err) {
         this.state = State.FAILED
       }
     }

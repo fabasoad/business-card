@@ -1,13 +1,13 @@
 ---
-name: Security
+name: DAST
 
 on: # yamllint disable-line rule:truthy
   deployment_status: {}
   pull_request: {}
 
 jobs:
-  dast:
-    name: DAST
+  security:
+    name: Security
     permissions:
       contents: read
       security-events: write

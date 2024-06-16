@@ -1,5 +1,5 @@
 ---
-name: Security
+name: SAST
 
 on: # yamllint disable-line rule:truthy
   pull_request: {}
@@ -8,13 +8,9 @@ on: # yamllint disable-line rule:truthy
       - main
 
 jobs:
-  sast:
-    name: SAST
+  security:
+    name: Security
     permissions:
       contents: read
       security-events: write
     uses: fabasoad/reusable-workflows/.github/workflows/wf-security-sast.yml@feat/security
-    with:
-      codeql-run: true
-      grype-run: true
-      yarn-audit-run: true

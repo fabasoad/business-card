@@ -1,42 +1,18 @@
 ---
-name: DAST
+name: Security
 
 on: # yamllint disable-line rule:truthy
-  deployment_status: {}
-
-defaults:
-  run:
-    shell: sh
-
-env:
-  TARGET_WEBSITE: "https://fabasoad.com"
+  deployment_status:
+    branches:
+      - gh-pages
+  pull_request: {}
 
 jobs:
-  nuclei:
-    name: Nuclei
-    if: github.event.deployment_status.state == 'success'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Perform scanning
-        uses: projectdiscovery/nuclei-action@v2.0.1
-        with:
-          target: "${{ env.TARGET_WEBSITE }}"
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: nuclei.log
-          path: nuclei.log
-      - name: Upload to GHAS
-        uses: github/codeql-action/upload-sarif@v3
-        with:
-          sarif_file: nuclei.sarif
-  zap:
-    name: ZAP
-    if: github.event.deployment_status.state == 'success'
-    runs-on: ubuntu-latest
-    container:
-      image: zaproxy/zap-stable:2.14.0
-      options: --user root
-    steps:
-      - name: Perform scanning
-        run: zap-baseline.py -t "${TARGET_WEBSITE}"
+  dast:
+    name: DAST
+    permissions:
+      contents: read
+      security-events: write
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-security-dast.yml@feat/security
+    with:
+      target-url: "https://fabasoad.com"

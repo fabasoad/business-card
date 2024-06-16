@@ -2,9 +2,7 @@
 name: Security
 
 on: # yamllint disable-line rule:truthy
-  deployment_status:
-    branches:
-      - gh-pages
+  deployment_status: {}
   pull_request: {}
 
 jobs:

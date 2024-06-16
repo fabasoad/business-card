@@ -13,4 +13,4 @@ jobs:
     permissions:
       contents: read
       security-events: write
-    uses: fabasoad/reusable-workflows/.github/workflows/wf-security-sast.yml@feat/security
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-security-sast.yml@main

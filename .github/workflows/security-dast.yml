@@ -3,7 +3,6 @@ name: DAST
 
 on: # yamllint disable-line rule:truthy
   deployment_status: {}
-  pull_request: {}
 
 jobs:
   security:
@@ -11,6 +10,6 @@ jobs:
     permissions:
       contents: read
       security-events: write
-    uses: fabasoad/reusable-workflows/.github/workflows/wf-security-dast.yml@feat/security
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-security-dast.yml@main
     with:
       target-url: "https://fabasoad.com"

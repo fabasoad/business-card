@@ -12,8 +12,8 @@ defaults:
     shell: sh
 
 jobs:
-  unit-tests:
-    name: Unit Tests
+  unit-tests-all:
+    name: All
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ${{ github.repository }}

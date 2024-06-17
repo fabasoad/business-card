@@ -2223,7 +2223,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^10.0.0":
+"@testing-library/dom@npm:10.1.0":
   version: 10.1.0
   resolution: "@testing-library/dom@npm:10.1.0"
   dependencies:
@@ -2272,21 +2272,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:15.0.7":
-  version: 15.0.7
-  resolution: "@testing-library/react@npm:15.0.7"
+"@testing-library/react@npm:16.0.0":
+  version: 16.0.0
+  resolution: "@testing-library/react@npm:16.0.0"
   dependencies:
     "@babel/runtime": "npm:^7.12.5"
-    "@testing-library/dom": "npm:^10.0.0"
-    "@types/react-dom": "npm:^18.0.0"
   peerDependencies:
+    "@testing-library/dom": ^10.0.0
     "@types/react": ^18.0.0
+    "@types/react-dom": ^18.0.0
     react: ^18.0.0
     react-dom: ^18.0.0
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/ac8ee8968e81949ecb35f7ee34741c2c043f73dd7fee2247d56f6de6a30de4742af94f25264356863974e54387485b46c9448ecf3f6ca41cf4339011c369f2d4
+    "@types/react-dom":
+      optional: true
+  checksum: 10c0/297f97bf4722dad05f11d9cafd47d387dbdb096fea4b79b876c7466460f0f2e345b55b81b3e37fc81ed8185c528cb53dd8455ca1b6b019b229edf6c796f11c9f
   languageName: node
   linkType: hard
 
@@ -2556,16 +2558,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 20.14.2
-  resolution: "@types/node@npm:20.14.2"
-  dependencies:
-    undici-types: "npm:~5.26.4"
-  checksum: 10c0/2d86e5f2227aaa42212e82ea0affe72799111b888ff900916376450b02b09b963ca888b20d9c332d8d2b833ed4781987867a38eaa2e4863fa8439071468b0a6f
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:20.14.4":
+"@types/node@npm:*, @types/node@npm:20.14.4":
   version: 20.14.4
   resolution: "@types/node@npm:20.14.4"
   dependencies:
@@ -2595,7 +2588,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.3.0, @types/react-dom@npm:^18.0.0":
+"@types/react-dom@npm:18.3.0":
   version: 18.3.0
   resolution: "@types/react-dom@npm:18.3.0"
   dependencies:
@@ -3590,8 +3583,9 @@ __metadata:
     "@biomejs/biome": "npm:1.8.1"
     "@octokit/rest": "npm:20.1.1"
     "@popperjs/core": "npm:2.11.8"
+    "@testing-library/dom": "npm:10.1.0"
     "@testing-library/jest-dom": "npm:6.4.6"
-    "@testing-library/react": "npm:15.0.7"
+    "@testing-library/react": "npm:16.0.0"
     "@types/jest": "npm:29.5.12"
     "@types/node": "npm:20.14.4"
     "@types/react": "npm:18.3.3"
@@ -3702,9 +3696,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001629":
-  version: 1.0.30001634
-  resolution: "caniuse-lite@npm:1.0.30001634"
-  checksum: 10c0/43e8e95fc9f23bc00962bef0b044fe531316eb2d5b294b6f3aca6550aab91d5ce44863f6981200cf4d1b9c83265247fa2b284ddbd7961911b2594c42a18b73e2
+  version: 1.0.30001636
+  resolution: "caniuse-lite@npm:1.0.30001636"
+  checksum: 10c0/e5f965b4da7bae1531fd9f93477d015729ff9e3fa12670ead39a9e6cdc4c43e62c272d47857c5cc332e7b02d697cb3f2f965a1030870ac7476da60c2fc81ee94
   languageName: node
   linkType: hard
 

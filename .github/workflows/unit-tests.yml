@@ -1,7 +1,7 @@
 ---
 name: Unit Tests
 
-on:
+on: # yamllint disable-line rule:truthy
   pull_request:
     paths:
       - .github/workflows/unit-tests.yml
@@ -17,6 +17,6 @@ on:
 jobs:
   jest:
     name: Jest
-    uses: fabasoad/reusable-workflows/.github/workflows/wf-js-unit-tests.yml@feat/js-ut
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-js-unit-tests.yml@main
     secrets:
       code-climate-test-reporter-id: "${{ secrets.CC_TEST_REPORTER_ID }}"

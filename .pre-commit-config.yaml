@@ -44,6 +44,11 @@ repos:
     rev: v8.18.4
     hooks:
       - id: gitleaks
+  - repo: https://github.com/fabasoad/pre-commit-grype
+    rev: v0.1.0
+    hooks:
+      - id: grype-dir
+        stages: ["push"]
   - repo: https://github.com/fabasoad/pre-commit-snyk
     rev: v0.6.2
     hooks:

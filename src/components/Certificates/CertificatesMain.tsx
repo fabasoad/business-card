@@ -19,7 +19,17 @@ export default function CertificatesMain() {
       <Container>
         <Row xs={2} md={3} lg={5}>
           {items
-            .sort((a, b) => -a.date.localeCompare(b.date))
+            .sort((a, b) => {
+              let res = a.date.localeCompare(b.date)
+              if (res !== 0) {
+                return -res
+              }
+              res = a.issuer.localeCompare(b.issuer)
+              if (res !== 0) {
+                return -res
+              }
+              return -t(b.i18nTitleKey).localeCompare(t(a.i18nTitleKey))
+            })
             .map((item) => <Col lg className="mb-2" key={item.id}>
               <CertificateItem
                 id={item.id}

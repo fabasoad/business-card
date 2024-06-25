@@ -13,7 +13,7 @@ export class LeetcodeService implements RemoteService<LeetcodeStats> {
   private state: State = State.NOT_STARTED
   private stats: LeetcodeStats
 
-  private static LEETCODE_URL = 'https://leetcodestats.cyclic.app/fabasoad'
+  private static LEETCODE_URL = 'https://leetcode-stats-api.herokuapp.com/fabasoad'
 
   public constructor(defaultVal: LeetcodeStats) {
     this.stats = defaultVal

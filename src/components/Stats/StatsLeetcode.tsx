@@ -10,7 +10,7 @@ type StatsLeetcodeProps = {
 }
 
 export default function StatsLeetcode({
-  totalSolved = 234, easySolved = 125, mediumSolved = 106, hardSolved = 3
+  totalSolved = 238, easySolved = 129, mediumSolved = 106, hardSolved = 3
 }: StatsLeetcodeProps) {
   const [stats, setStats] = React.useState<LeetcodeStats>({
     totalSolved,

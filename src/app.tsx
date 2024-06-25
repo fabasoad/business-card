@@ -1,4 +1,3 @@
-import './libs/fontawesome'
 import './styles/style.scss'
 import * as React from 'react'
 import App from './components/App'

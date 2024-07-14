@@ -1,8 +1,7 @@
 ---
 name: DAST
 
-on: # yamllint disable-line rule:truthy
-  deployment_status: {}
+on: deployment_status
 
 jobs:
   security:

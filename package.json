@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "2.11.25",
+  "version": "2.11.26",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -26,18 +26,18 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@babel/cli": "7.24.7",
-    "@babel/core": "7.24.7",
-    "@babel/preset-env": "7.24.7",
+    "@babel/cli": "7.24.8",
+    "@babel/core": "7.24.8",
+    "@babel/preset-env": "7.24.8",
     "@babel/preset-react": "7.24.7",
     "@babel/preset-typescript": "7.24.7",
-    "@biomejs/biome": "1.8.2",
+    "@biomejs/biome": "1.8.3",
     "@popperjs/core": "2.11.8",
-    "@testing-library/dom": "10.2.0",
+    "@testing-library/dom": "10.3.1",
     "@testing-library/jest-dom": "6.4.6",
     "@testing-library/react": "16.0.0",
     "@types/jest": "29.5.12",
-    "@types/node": "20.14.8",
+    "@types/node": "20.14.10",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.3.0",
     "babel-jest": "29.7.0",
@@ -60,14 +60,14 @@
     "react-iframe": "1.8.5",
     "react-modal": "3.16.1",
     "react-test-renderer": "18.3.1",
-    "sass": "1.77.6",
+    "sass": "1.77.8",
     "sass-loader": "14.2.1",
     "style-loader": "4.0.0",
-    "ts-jest": "29.1.5",
+    "ts-jest": "29.2.2",
     "ts-loader": "9.5.1",
     "ts-node": "10.9.2",
-    "typescript": "5.5.2",
-    "webpack": "5.92.1",
+    "typescript": "5.5.3",
+    "webpack": "5.93.0",
     "webpack-cli": "5.1.4",
     "webpack-dev-server": "5.0.4",
     "webpack-merge": "5.10.0"
@@ -75,7 +75,7 @@
   "dependencies": {
     "@octokit/rest": "20.1.1",
     "cross-fetch": "4.0.0",
-    "react-bootstrap": "2.10.3"
+    "react-bootstrap": "2.10.4"
   },
   "packageManager": "yarn@4.3.1"
 }

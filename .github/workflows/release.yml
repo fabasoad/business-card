@@ -14,6 +14,8 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    outputs:
+      deploy-time: "${{ steps.metadata.outputs.deploy-time }}"
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
@@ -32,6 +34,9 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn run build:prod
+      - name: Prepare metadata
+        id: metadata
+        run: echo "deploy-time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> "$GITHUB_OUTPUT"
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -43,16 +48,22 @@ jobs:
     uses: fabasoad/reusable-workflows/.github/workflows/wf-github-release.yml@main
     with:
       bump-tags: false
-  trigger-deployment:
-    name: Trigger deployment to AWS
-    if: false
-    needs: [github]
+  trigger-security-dast:
+    name: Trigger Security DAST
+    needs: [deploy]
     runs-on: ubuntu-latest
     steps:
-      - name: Send deployment trigger
-        run: |
-          curl -XPOST \
-            -u "${{ secrets.PAT_USERNAME }}:${{secrets.PAT_TOKEN}}" \
-            -H "Accept: application/vnd.github.everest-preview+json" \
-            -H "Content-Type: application/json" https://api.github.com/repos/${{ secrets.PAT_USERNAME }}/business-card-deployment/actions/workflows/terraform.yml/dispatches \
-            --data '{"ref": "refs/heads/main"}'
+      - name: Dispatch workflow
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.PAT_TOKEN }}
+          script: |
+            github.rest.actions.createWorkflowDispatch({
+              owner: "fabasoad",
+              repo: "business-card",
+              workflow_id: "security-dast.yml",
+              ref: "main",
+              inputs: {
+                "deploy-time": "${{ needs.deploy.outputs.deploy-time }}"
+              }
+            });

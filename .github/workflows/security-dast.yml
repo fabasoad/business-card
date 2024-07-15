@@ -1,11 +1,34 @@
 ---
 name: DAST
 
-on: deployment_status
+on:
+  workflow_dispatch:
+    inputs:
+      deploy-time:
+        description: "Deploy time specified as an ISO 8601 timestamp"
+        required: true
+        type: string
+
+defaults:
+  run:
+    shell: sh
 
 jobs:
+  wait-deployment:
+    name: Wait for deployment
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v4
+      - name: Monitor status
+        env:
+          INPUT_DEPLOY_TIME: "${{ inputs.deploy-time }}"
+        run: ./wait-deploy-completed.sh "${INPUT_DEPLOY_TIME}"
+        working-directory: "${{ github.workspace }}/scripts"
   security:
     name: Security
+    needs: [wait-deployment]
     permissions:
       contents: read
       security-events: write

@@ -8,8 +8,26 @@ on: # yamllint disable-line rule:truthy
       - main
 
 jobs:
+  paths-filter:
+    name: Paths filter
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      trigger-js-lint: "${{ steps.metadata.outputs.trigger-js-lint }}"
+    steps:
+      - name: Filter changed files
+        id: metadata
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            trigger-js-lint:
+              - '.github/workflows/linting.yml'
+              - 'src/**'
+              - 'biome.json'
   js-lint:
     name: JS Lint
+    needs: [paths-filter]
+    if: ${{ needs.paths-filter.outputs.trigger-js-lint == 'true' }}
     uses: fabasoad/reusable-workflows/.github/workflows/wf-js-lint.yml@main
   pre-commit:
     name: Pre-commit

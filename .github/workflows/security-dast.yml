@@ -24,6 +24,8 @@ jobs:
       - name: Monitor status
         env:
           INPUT_DEPLOY_TIME: "${{ inputs.deploy-time }}"
+          RENDER_SERVICE_ID: "${{ secrets.RENDER_SERVICE_ID }}"
+          RENDER_API_KEY: "${{ secrets.RENDER_API_KEY }}"
         run: ./wait-deploy-completed.sh "${INPUT_DEPLOY_TIME}"
         working-directory: "${{ github.workspace }}/scripts"
   security:

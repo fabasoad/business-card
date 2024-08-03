@@ -22,4 +22,4 @@ jobs:
     secrets:
       code-climate-test-reporter-id: "${{ secrets.CC_TEST_REPORTER_ID }}"
     with:
-      report-to-cc: true
+      report-coverage: true

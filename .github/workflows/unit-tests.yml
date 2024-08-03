@@ -13,10 +13,13 @@ on: # yamllint disable-line rule:truthy
   push:
     branches:
       - main
+      - fix/ci-tests
 
 jobs:
   jest:
     name: Jest
-    uses: fabasoad/reusable-workflows/.github/workflows/wf-js-unit-tests.yml@main
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-js-unit-tests.yml@fix/cc
     secrets:
       code-climate-test-reporter-id: "${{ secrets.CC_TEST_REPORTER_ID }}"
+    with:
+      report-to-cc: true

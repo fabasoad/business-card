@@ -16,7 +16,8 @@ jobs:
       trigger-js-lint: "${{ steps.metadata.outputs.trigger-js-lint }}"
     steps:
       - name: Filter changed files
-        id: metadata
+        id: filter
+        if: ${{ github.event_name == 'pull_request' }}
         uses: dorny/paths-filter@v3
         with:
           filters: |
@@ -24,6 +25,15 @@ jobs:
               - '.github/workflows/linting.yml'
               - 'src/**'
               - 'biome.json'
+      - name: Prepare metadata
+        id: metadata
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            trigger="true"
+          else
+            trigger="${{ steps.filter.outputs.trigger-js-lint }}"
+          fi
+          echo "trigger-js-lint=${trigger}" >> "$GITHUB_OUTPUT"
   js-lint:
     name: JS Lint
     needs: [paths-filter]

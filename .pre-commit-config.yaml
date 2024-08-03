@@ -50,11 +50,11 @@ repos:
       - id: snyk-test
         stages: ["push"]
   - repo: https://github.com/fabasoad/pre-commit-grype
-    rev: v0.3.3
+    rev: v0.6.0
     hooks:
       - id: grype-dir
         args:
-          - --grype-args=--by-cve --fail-on=low
+          - --grype-args=--by-cve --fail-on=low --exclude=**/node_modules
           - --hook-args=--log-level debug
         stages: ["push"]
   # Markdown

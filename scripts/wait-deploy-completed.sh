@@ -76,4 +76,4 @@ main() {
   done
 }
 
-main $@
+main "$@"

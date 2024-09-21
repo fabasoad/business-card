@@ -45,7 +45,7 @@
     "bootstrap": "5.3.3",
     "css-loader": "7.1.2",
     "dotenv": "16.4.5",
-    "express": "4.19.2",
+    "express": "4.20.0",
     "express-rate-limit": "7.4.0",
     "humanize-duration": "3.32.1",
     "i18next": "23.14.0",

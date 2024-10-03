@@ -41,7 +41,7 @@ repos:
         # Excluding Hacker Rank certificate id located in items.json file
         args: ['--exclude-lines', '^(  "id": "F75CDD8ED9F0",)$']
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.19.2
+    rev: v8.19.3
     hooks:
       - id: gitleaks
   - repo: https://github.com/fabasoad/pre-commit-snyk
@@ -61,7 +61,7 @@ repos:
           - --hook-args=--log-level debug
         stages: ["push"]
   - repo: https://github.com/google/osv-scanner
-    rev: v1.8.5
+    rev: v1.9.0
     hooks:
       - id: osv-scanner
         args:
@@ -82,7 +82,7 @@ repos:
         stages: ["push"]
   # GitHub Actions
   - repo: https://github.com/rhysd/actionlint
-    rev: v1.7.2
+    rev: v1.7.3
     hooks:
       - id: actionlint
         args: ["-pyflakes="]

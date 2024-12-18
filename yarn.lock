@@ -2092,7 +2092,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^1.9.0":
+"@restart/ui@npm:^1.9.2":
   version: 1.9.2
   resolution: "@restart/ui@npm:1.9.2"
   dependencies:
@@ -2487,7 +2487,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:22.10.2":
   version: 22.10.2
   resolution: "@types/node@npm:22.10.2"
   dependencies:
@@ -2496,16 +2496,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:22.10.0":
-  version: 22.10.0
-  resolution: "@types/node@npm:22.10.0"
-  dependencies:
-    undici-types: "npm:~6.20.0"
-  checksum: 10c0/efb3783b6fe74b4300c5bdd4f245f1025887d9b1d0950edae584af58a30d95cc058c10b4b3428f8300e4318468b605240c2ede8fcfb6ead2e0f05bca31e54c1b
-  languageName: node
-  linkType: hard
-
-"@types/prop-types@npm:*":
+"@types/prop-types@npm:*, @types/prop-types@npm:^15.7.12":
   version: 15.7.14
   resolution: "@types/prop-types@npm:15.7.14"
   checksum: 10c0/1ec775160bfab90b67a782d735952158c7e702ca4502968aa82565bd8e452c2de8601c8dfe349733073c31179116cf7340710160d3836aa8a1ef76d1532893b1
@@ -3384,7 +3375,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:6.6.3"
     "@testing-library/react": "npm:16.0.1"
     "@types/jest": "npm:29.5.14"
-    "@types/node": "npm:22.10.0"
+    "@types/node": "npm:22.10.2"
     "@types/react": "npm:18.3.12"
     "@types/react-dom": "npm:18.3.1"
     babel-jest: "npm:29.7.0"
@@ -3403,11 +3394,11 @@ __metadata:
     normalize.css: "npm:8.0.1"
     raf: "npm:3.4.1"
     react: "npm:18.3.1"
-    react-bootstrap: "npm:2.10.6"
+    react-bootstrap: "npm:2.10.7"
     react-dom: "npm:18.3.1"
     react-i18next: "npm:15.1.2"
     react-iframe: "npm:1.8.5"
-    react-modal: "npm:3.16.1"
+    react-modal: "npm:3.16.3"
     react-test-renderer: "npm:18.3.1"
     sass: "npm:1.77.6"
     sass-loader: "npm:14.2.1"
@@ -3450,7 +3441,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"call-bind-apply-helpers@npm:^1.0.0, call-bind-apply-helpers@npm:^1.0.1":
+"call-bind-apply-helpers@npm:^1.0.1":
   version: 1.0.1
   resolution: "call-bind-apply-helpers@npm:1.0.1"
   dependencies:
@@ -4075,13 +4066,13 @@ __metadata:
   linkType: hard
 
 "dunder-proto@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "dunder-proto@npm:1.0.0"
+  version: 1.0.1
+  resolution: "dunder-proto@npm:1.0.1"
   dependencies:
-    call-bind-apply-helpers: "npm:^1.0.0"
+    call-bind-apply-helpers: "npm:^1.0.1"
     es-errors: "npm:^1.3.0"
     gopd: "npm:^1.2.0"
-  checksum: 10c0/b321e5cbf64f0a4c786b0b3dc187eb5197a83f6e05a1e11b86db25251b3ae6747c4b805d9e0a4fbf481d22a86a539dc75f82d883daeac7fc2ce4bd72ff5ef5a2
+  checksum: 10c0/199f2a0c1c16593ca0a145dbf76a962f8033ce3129f01284d48c45ed4e14fea9bbacd7b3610b6cdc33486cef20385ac054948fefc6272fcce645c09468f93031
   languageName: node
   linkType: hard
 
@@ -4111,9 +4102,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.73":
-  version: 1.5.73
-  resolution: "electron-to-chromium@npm:1.5.73"
-  checksum: 10c0/b97118d469f2b3b7a816932004cd36d82879829904ca4a8daf70eaefbe686a23afa6e39e0ad0cdc39d00a9ebab97160d072b786fdeb6964f13fb15aa688958f1
+  version: 1.5.74
+  resolution: "electron-to-chromium@npm:1.5.74"
+  checksum: 10c0/1a93119adbdeb0bba4c29e3bad5a48e6a4626ae50fbff2bc5c207f32e67ed64a5d8db6500befb44080359be3b18be7bf830fb920d5199d935be95bb9f97deb10
   languageName: node
   linkType: hard
 
@@ -7066,13 +7057,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:2.10.6":
-  version: 2.10.6
-  resolution: "react-bootstrap@npm:2.10.6"
+"react-bootstrap@npm:2.10.7":
+  version: 2.10.7
+  resolution: "react-bootstrap@npm:2.10.7"
   dependencies:
     "@babel/runtime": "npm:^7.24.7"
     "@restart/hooks": "npm:^0.4.9"
-    "@restart/ui": "npm:^1.9.0"
+    "@restart/ui": "npm:^1.9.2"
+    "@types/prop-types": "npm:^15.7.12"
     "@types/react-transition-group": "npm:^4.4.6"
     classnames: "npm:^2.3.2"
     dom-helpers: "npm:^5.2.1"
@@ -7089,7 +7081,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/27bdafb917787b07c8c7d63ad2b5c116ce664efca866ccf43c607b9c4a8ef785c1913ad780e086e42c474b4a8bdb142d97356e3c438328214f95bb641b39f746
+  checksum: 10c0/3b0b447bd0501cb66a9de05313bc840b1cc799d28a912370e1daaea7134749d8df1948a04c08c693f3fc496417cb6ffc3fdd8d651ee21b46f90eebd068018123
   languageName: node
   linkType: hard
 
@@ -7162,18 +7154,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-modal@npm:3.16.1":
-  version: 3.16.1
-  resolution: "react-modal@npm:3.16.1"
+"react-modal@npm:3.16.3":
+  version: 3.16.3
+  resolution: "react-modal@npm:3.16.3"
   dependencies:
     exenv: "npm:^1.2.0"
     prop-types: "npm:^15.7.2"
     react-lifecycles-compat: "npm:^3.0.0"
     warning: "npm:^4.0.3"
   peerDependencies:
-    react: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18
-    react-dom: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18
-  checksum: 10c0/7b56e2c505b2b924736c471a34754a4211df40ac2d6fb0949cf095aea5e65d3326bd9f111fa7898acf40afa54f526809ad8aa47e02b8328663d11422568dc7b1
+    react: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18 || ^19
+    react-dom: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18 || ^19
+  checksum: 10c0/b541c91aef680c51ee9edf4ec14b3be29787e34d4df174150361b1d42b2416b28336e2280abdc71df082b1380d0786fe2122cdca31e19a74b54b49d17855a0f2
   languageName: node
   linkType: hard
 

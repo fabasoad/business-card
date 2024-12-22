@@ -41,7 +41,7 @@ repos:
         # Excluding Hacker Rank certificate id located in items.json file
         args: ['--exclude-lines', '^(  "id": "F75CDD8ED9F0",)$']
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.21.2
+    rev: v8.22.0
     hooks:
       - id: gitleaks
   - repo: https://github.com/fabasoad/pre-commit-snyk
@@ -73,6 +73,13 @@ repos:
     rev: v0.43.0
     hooks:
       - id: markdownlint-fix
+        stages: ["pre-commit"]
+  # Shell
+  - repo: https://github.com/openstack/bashate
+    rev: 2.1.1
+    hooks:
+      - id: bashate
+        args: ["-i", "E003,E006"]
         stages: ["pre-commit"]
   # Yaml
   - repo: https://github.com/adrienverge/yamllint

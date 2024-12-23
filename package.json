@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "2.11.35",
+  "version": "2.11.36",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -38,8 +38,8 @@
     "@testing-library/react": "16.1.0",
     "@types/jest": "29.5.14",
     "@types/node": "22.10.2",
-    "@types/react": "18.3.12",
-    "@types/react-dom": "18.3.1",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
     "babel-jest": "29.7.0",
     "babel-loader": "9.2.1",
     "bootstrap": "5.3.3",
@@ -68,7 +68,7 @@
     "ts-node": "10.9.2",
     "typescript": "5.7.2",
     "webpack": "5.97.1",
-    "webpack-cli": "5.1.4",
+    "webpack-cli": "6.0.1",
     "webpack-dev-server": "5.2.0",
     "webpack-merge": "6.0.1"
   },

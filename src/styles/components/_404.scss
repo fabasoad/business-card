@@ -1,3 +1,5 @@
+@use "../base/settings" as *;
+
 @keyframes blinker {
   50% {
     opacity: 0;
@@ -17,12 +19,15 @@ body {
   display: flex;
   height: 100%;
   justify-content: center;
-  >div {
+
+  > div {
     color: $white;
     text-align: center;
+
     .blinker {
       animation: blinker 0.7s linear infinite;
     }
+
     .blinker-prefix::before {
       content: 'Tap';
       @media only screen and (min-width: $small-desktop-breakpoint) {

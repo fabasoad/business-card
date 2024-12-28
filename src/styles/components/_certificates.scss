@@ -1,0 +1,50 @@
+@use "~bootstrap/scss/bootstrap";
+@use "../base/settings" as *;
+
+#certificates {
+  img {
+    max-height: 6rem;
+    max-width: 6rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .card {
+    @extend .text-muted;
+    background: $white;
+    text-align: center;
+    width: 9.4rem;
+    border-color: var(--bs-gray-300);
+  }
+
+  @mixin truncate-single-line($max-width) {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: $max-width;
+  }
+
+  .card-title {
+    @include truncate-single-line(7rem);
+    margin-top: 2rem;
+    margin-bottom: 0;
+    font-size: 0.8rem;
+  }
+
+  .card-subtitle {
+    @include truncate-single-line(7rem);
+    padding-top: 1rem;
+    font-size: 0.7rem;
+    text-transform: capitalize;
+  }
+
+  .card-footer {
+    padding-top: 0.45rem;
+    padding-bottom: 0.45rem;
+    font-size: 0.6rem;
+    border-top-color: var(--bs-gray-300);
+    color: var(--bs-gray-500);
+  }
+}

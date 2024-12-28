@@ -1,3 +1,5 @@
+@use "../base/settings" as *;
+
 #badges {
   img {
     width: 200px;
@@ -5,6 +7,7 @@
       width: 250px;
     }
   }
+
   iframe {
     width: 240px;
     @media (min-width: $mobile-breakpoint) {

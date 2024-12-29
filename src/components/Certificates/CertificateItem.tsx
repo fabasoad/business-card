@@ -18,17 +18,16 @@ export default function CertificateItem({
 }: CertificateItemProps) {
   return (
     <Card>
-      <Card.Header>
-        {issuer.img &&
-          <Card.Img src={issuer.img} className="me-2" />}
-        {issuer.name}
-      </Card.Header>
-      <Card.Body>
-        <Card.Text>
+      <Card.Body className="d-flex flex-column">
+        <div className="justify-content-center mt-2">
+          <Card.Img src={issuer.img} />
+        </div>
+        <Card.Title>
           <Card.Link target="_blank" rel="noopener noreferrer" href={url}>
             {name}
           </Card.Link>
-        </Card.Text>
+        </Card.Title>
+        <Card.Subtitle>Issuer: {issuer.name}</Card.Subtitle>
       </Card.Body>
       <Card.Footer>
         {getDateLocale(issueDate.getFullYear(), issueDate.getMonth())}

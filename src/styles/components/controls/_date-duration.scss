@@ -1,3 +1,5 @@
+@use "../../base/settings" as *;
+
 .controls__date-duration {
   color: $orange;
   position: absolute;

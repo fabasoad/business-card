@@ -1,0 +1,6 @@
+@use "~bootstrap/scss/bootstrap";
+
+.footer-info {
+  @extend .d-flex;
+  @extend .justify-content-center;
+}

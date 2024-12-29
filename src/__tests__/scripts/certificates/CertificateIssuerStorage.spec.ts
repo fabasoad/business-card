@@ -13,6 +13,6 @@ describe('CertificateIssuerStorage', () => {
     const item: CertificateIssuer =
       new CertificateIssuerStorage().findByName('test-name')
     expect(item.name).toBe('test-name')
-    expect(item.img).toBeFalsy()
+    expect(item.img).not.toBeFalsy()
   })
 })

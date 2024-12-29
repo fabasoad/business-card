@@ -26,6 +26,6 @@ export default class CertificateIssuerStorage {
   findByName(name: string): CertificateIssuer {
     return this.provider.items.has(name)
       ? this.provider.items.get(name)
-      : { name }
+      : { name, img: imgUdemy }
   }
 }

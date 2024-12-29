@@ -1,6 +1,6 @@
 export interface CertificateIssuer {
   name: string
-  img?: any
+  img: any
 }
 
 export interface CertificateIssuerProvider {

@@ -1,3 +1,5 @@
+@use "../base/settings" as *;
+
 .back-to-top {
   display: inline-block;
   background-color: $dark-blue;
@@ -9,11 +11,12 @@
   bottom: 30px;
   right: 30px;
   transition: background-color .3s,
-    opacity .5s, visibility .5s;
+  opacity .5s, visibility .5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
 }
+
 .back-to-top::after {
   content: "↑";
   font-family: FontAwesome;
@@ -23,12 +26,15 @@
   line-height: 50px;
   color: $white;
 }
+
 .back-to-top:hover {
   cursor: pointer;
 }
+
 .back-to-top:active {
   background-color: #555;
 }
+
 .back-to-top.show {
   opacity: 0.3;
   visibility: visible;

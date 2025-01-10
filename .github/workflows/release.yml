@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v4
+
       - name: Cache yarn dependencies
         id: yarn-cache
         uses: actions/cache@v4
@@ -29,14 +30,27 @@ jobs:
           key: "${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/.yarnrc.yml') }}"
           restore-keys: |
             ${{ runner.os }}-yarn-
+
       - name: Compile
         if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
         run: yarn install
+
       - name: Build
-        run: yarn run build:prod
+        uses: pyTooling/Actions/with-post-step@v3.1.1
+        with:
+          key: "build-business-card"
+          main: |
+            {
+              echo "REACT_APP_PUBLIC_POSTHOG_KEY=${{ secrets.REACT_APP_PUBLIC_POSTHOG_KEY }}"
+              echo "REACT_APP_PUBLIC_POSTHOG_HOST=${{ secrets.REACT_APP_PUBLIC_POSTHOG_HOST }}"
+            } > .env
+            yarn run build:prod
+          post: rm -f .env
+
       - name: Prepare metadata
         id: metadata
         run: echo "deploy-time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> "$GITHUB_OUTPUT"
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

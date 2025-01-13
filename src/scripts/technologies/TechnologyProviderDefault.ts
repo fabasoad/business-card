@@ -2,6 +2,7 @@ import * as imgAlgorithms from '../../assets/images/technologies/algorithms.png'
 import * as imgAngular from '../../assets/images/technologies/angular.png'
 import * as imgAws from '../../assets/images/technologies/aws.png'
 import * as imgAzureAd from '../../assets/images/technologies/azure-ad.png'
+import * as imgBash from '../../assets/images/technologies/bash.png'
 import * as imgBitrise from '../../assets/images/technologies/bitrise.png'
 import * as imgBootstrap from '../../assets/images/technologies/bootstrap.png'
 import * as imgCSharp from '../../assets/images/technologies/csharp.png'
@@ -80,6 +81,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'angular', img: imgAngular, title: 'Angular' },
     { name: 'aws', img: imgAws, isSkill: true, title: 'AWS' },
     { name: 'azureAd', img: imgAzureAd, title: 'Azure AD' },
+    { name: 'bash', img: imgBash, isSkill: true, title: 'Bash' },
     { name: 'bitrise', img: imgBitrise, title: 'Bitrise' },
     { name: 'bootstrap', img: imgBootstrap, isSkill: true, title: 'Bootstrap' },
     { name: 'codeigniter', img: imgCodeIgniter, title: 'CodeIgniter' },
@@ -110,12 +112,12 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'junit', img: imgJunit, title: 'jUnit' },
     { name: 'kafka', img: imgKafka, title: 'Kafka'},
     { name: 'kibana', img: imgKibana, title: 'Kibana' },
-    { name: 'kubernetes', img: imgKubernetes, isSkill: true, title: 'Kubernetes' },
+    { name: 'kubernetes', img: imgKubernetes, title: 'Kubernetes' },
     { name: 'leetcode', img: imgLeetcode, title: 'Leetcode' },
     { name: 'lombok', img: imgLombok, title: 'Lombok' },
     { name: 'mariaDb', img: imgMariaDb, title: 'Maria DB' },
     { name: 'maven', img: imgMaven, isSkill: true, title: 'Maven' },
-    { name: 'mongodb', img: imgMongoDb, isSkill: true, title: 'MongoDB' },
+    { name: 'mongodb', img: imgMongoDb, title: 'MongoDB' },
     { name: 'mssql', img: imgMsSql, title: 'MS-SQL' },
     { name: 'mysql', img: imgMySql, title: 'MySQL' },
     { name: 'netBeans', img: imgNetBeans, title: 'NetBeans' },
@@ -127,7 +129,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'prism', img: imgPrism, title: 'Prism' },
     { name: 'prometheus', img: imgPrometheus, title: 'Prometheus' },
     { name: 'python', img: imgPython, isSkill: true, title: 'Python' },
-    { name: 'quarkus', img: imgQuarkus, isSkill: true, title: 'Quarkus' },
+    { name: 'quarkus', img: imgQuarkus, title: 'Quarkus' },
     { name: 'react', img: imgReact, isSkill: true, title: 'React' },
     { name: 'redis', img: imgRedis, title: 'Redis' },
     { name: 'redmine', img: imgRedmine, title: 'Redmine' },

@@ -85,7 +85,7 @@ const TechnologyProviderDefault: TechnologyProvider = {
     { name: 'bitrise', img: imgBitrise, title: 'Bitrise' },
     { name: 'bootstrap', img: imgBootstrap, isSkill: true, title: 'Bootstrap' },
     { name: 'codeigniter', img: imgCodeIgniter, title: 'CodeIgniter' },
-    { name: 'codeql', img: imgCodeQL, title: 'CodeQL' },
+    { name: 'codeql', img: imgCodeQL, isSkill: true, title: 'CodeQL' },
     { name: 'concourseCI', img: imgConcourseCI, isSkill: true, title: 'Concourse CI' },
     { name: 'csharp', img: imgCSharp, isSkill: true, title: 'C#' },
     { name: 'docker', img: imgDocker, isSkill: true, title: 'Docker' },

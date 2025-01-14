@@ -31,7 +31,7 @@ get_current_status() {
 }
 
 main() {
-  created_after="$1"
+  created_after="${1}"
 
   max_attempts_timeout=10
   attempt_timeout=1

@@ -10,10 +10,11 @@ describe('TechnologyProviderDefault', () => {
       ['angular', 'Angular', false],
       ['aws', 'AWS', true],
       ['azureAd', 'Azure AD', false],
+      ['bash', 'Bash', true],
       ['bitrise', 'Bitrise', false],
       ['bootstrap', 'Bootstrap', true],
       ['codeigniter', 'CodeIgniter', false],
-      ['codeql', 'CodeQL', false],
+      ['codeql', 'CodeQL', true],
       ['concourseCI', 'Concourse CI', true],
       ['csharp', 'C#', true],
       ['docker', 'Docker', true],
@@ -40,12 +41,12 @@ describe('TechnologyProviderDefault', () => {
       ['junit', 'jUnit', false],
       ['kafka', 'Kafka', false],
       ['kibana', 'Kibana', false],
-      ['kubernetes', 'Kubernetes', true],
+      ['kubernetes', 'Kubernetes', false],
       ['leetcode', 'Leetcode', false],
       ['lombok', 'Lombok', false],
       ['mariaDb', 'Maria DB', false],
       ['maven', 'Maven', true],
-      ['mongodb', 'MongoDB', true],
+      ['mongodb', 'MongoDB', false],
       ['mssql', 'MS-SQL', false],
       ['mysql', 'MySQL', false],
       ['netBeans', 'NetBeans', false],
@@ -57,7 +58,7 @@ describe('TechnologyProviderDefault', () => {
       ['prism', 'Prism', false],
       ['prometheus', 'Prometheus', false],
       ['python', 'Python', true],
-      ['quarkus', 'Quarkus', true],
+      ['quarkus', 'Quarkus', false],
       ['react', 'React', true],
       ['redis', 'Redis', false],
       ['redmine', 'Redmine', false],
@@ -83,7 +84,7 @@ describe('TechnologyProviderDefault', () => {
   })
 
   test('should have correct name and title', () => {
-    expect(TechnologyProviderDefault.items.size).toEqual(73)
+    expect(TechnologyProviderDefault.items.size).toEqual(expected.length)
     let ind = 0
     for (const [name, tech] of TechnologyProviderDefault.items) {
       expect(name).toEqual(expected[ind][0])

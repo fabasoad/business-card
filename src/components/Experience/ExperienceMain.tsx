@@ -41,7 +41,7 @@ export default function ExperienceMain() {
                 />
                 <JobTechnologies
                   keyPrefix="wbyt-6"
-                  names={['go', 'kubernetes', 'terraform', 'aws', 'gitHubActions', 'python', 'snyk', 'codeql', 'intellijIdea']}
+                  names={['bash', 'go', 'terraform', 'aws', 'gitHubActions', 'python', 'snyk', 'codeql', 'intellijIdea']}
                 />
               </div>
             </div>

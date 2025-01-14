@@ -53,7 +53,7 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
     title: 'business-card-experience-job-wbyt-6-title',
     location: 'business-card-location-tokyo',
     company: 'Woven by Toyota',
-    technologies: ['go', 'kubernetes', 'terraform', 'aws', 'gitHubActions', 'python', 'snyk', 'codeql', 'intellijIdea'],
+    technologies: ['bash', 'go', 'terraform', 'aws', 'gitHubActions', 'python', 'snyk', 'codeql', 'intellijIdea'],
     fromMonthIndex: 10,
     fromYear: 2022
   }, {

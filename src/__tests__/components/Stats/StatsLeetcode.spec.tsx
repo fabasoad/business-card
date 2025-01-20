@@ -13,7 +13,7 @@ test('should render StatsLeetcode correctly', async () => {
     <StatsLeetcode totalSolved={expectedTotalSolved} />
   ))
   testStatsCommon(
-    container.querySelector('div.stats-item'),
+    container.querySelector('div.row.justify-content-center'),
     'https://leetcode.com/fabasoad',
     `✔️ ${expectedTotalSolved}`,
     'leetcode'

@@ -17,10 +17,6 @@ test('should render StatsMain correctly', () => {
     div.querySelector('div.section-title'),
     'business-card-stats-title'
   )
-  const divCol = div.querySelector('div.container div.row div.col')
-  expect(divCol).toHaveClass('stats-list')
-  expect(divCol).toHaveClass('d-flex')
-  expect(divCol).toHaveClass('justify-content-center')
-  const divStatsItems = divCol.querySelectorAll('div.stats-item')
-  expect(divStatsItems).toHaveLength(4)
+  const cols = div.querySelectorAll('div.container div.row div.col')
+  expect(cols).toHaveLength(4)
 })

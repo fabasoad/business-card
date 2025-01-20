@@ -2,6 +2,6 @@ import * as React from 'react'
 
 export default function StatsGitHub() {
   return (
-    <div className="stats-item">StatsGitHub</div>
+    <div className="row justify-content-center">StatsGitHub</div>
   )
 }

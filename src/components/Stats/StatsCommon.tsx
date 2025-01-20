@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Row } from 'react-bootstrap'
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
 import { Technology } from '../../scripts/technologies/types'
 
@@ -12,8 +13,8 @@ const StatsCommon: React.FC<React.PropsWithChildren<StatsCommonProps>> =
     const technologyStorage: TechnologyStorage = new TechnologyStorage()
     const tech: Technology = technologyStorage.findByName(techName)
     return (
-      <div className="m-4 d-flex flex-column stats-item">
-        <a href={url} target="_blank" rel="noreferrer">
+      <Row className="justify-content-center">
+        <a href={url} target="_blank" rel="noreferrer" className="text-center">
           <img
             src={tech.img}
             alt={tech.name}
@@ -21,7 +22,7 @@ const StatsCommon: React.FC<React.PropsWithChildren<StatsCommonProps>> =
           />
         </a>
         {children}
-      </div>
+      </Row>
     )
   }
 

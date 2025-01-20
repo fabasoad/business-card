@@ -13,7 +13,7 @@ test('should render StatsStackOverflow correctly', async () => {
     <StatsStackOverflow reputation={expectedReputation} />
   ))
   testStatsCommon(
-    container.querySelector('div.stats-item'),
+    container.querySelector('div.row.justify-content-center'),
     'https://stackoverflow.com/users/470214/fabasoad',
     `🏆 ${expectedReputation}`,
     'stackoverflow'

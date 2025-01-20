@@ -14,7 +14,7 @@ test('should render StatsGitHub correctly', () => {
     <StatsGitHub starsAmount={expectedStarsAmount} />
   )
   testStatsCommon(
-    container.querySelector('div.stats-item'),
+    container.querySelector('div.row.justify-content-center'),
     'https://github.com/fabasoad',
     `⭐️ ${expectedStarsAmount}`,
     'gitHub'

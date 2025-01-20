@@ -13,7 +13,7 @@ test('should render StatsSuperUser correctly', async () => {
     <StatsSuperUser reputation={expectedReputation} />
   ))
   testStatsCommon(
-    container.querySelector('div.stats-item'),
+    container.querySelector('div.row.justify-content-center'),
     'https://superuser.com/users/1123723/fabasoad',
     `➕ ${expectedReputation}`,
     'superuser'

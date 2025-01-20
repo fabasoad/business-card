@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "2.13.1",
+  "version": "2.13.2",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -35,10 +35,10 @@
     "@popperjs/core": "2.11.8",
     "@testing-library/dom": "10.4.0",
     "@testing-library/jest-dom": "6.6.3",
-    "@testing-library/react": "16.1.0",
+    "@testing-library/react": "16.2.0",
     "@types/jest": "29.5.14",
-    "@types/node": "22.10.6",
-    "@types/react": "19.0.6",
+    "@types/node": "22.10.7",
+    "@types/react": "19.0.7",
     "@types/react-dom": "19.0.3",
     "babel-jest": "29.7.0",
     "babel-loader": "9.2.1",
@@ -60,7 +60,7 @@
     "react-iframe": "1.8.5",
     "react-modal": "3.16.3",
     "react-test-renderer": "19.0.0",
-    "sass": "1.83.1",
+    "sass": "1.83.4",
     "sass-loader": "16.0.4",
     "style-loader": "4.0.0",
     "ts-jest": "29.2.5",
@@ -75,7 +75,7 @@
   "dependencies": {
     "@octokit/rest": "21.1.0",
     "cross-fetch": "4.1.0",
-    "posthog-js": "1.205.1",
+    "posthog-js": "1.207.0",
     "react-bootstrap": "2.10.7"
   },
   "packageManager": "yarn@4.6.0"

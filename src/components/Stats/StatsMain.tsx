@@ -16,10 +16,16 @@ export default function StatsMain() {
       </SectionTitle>
       <Container>
         <Row>
-          <Col className="stats-list d-flex justify-content-center">
+          <Col className="m-2">
             <StatsLeetcode />
+          </Col>
+          <Col className="m-2">
             <StatsGitHub />
+          </Col>
+          <Col className="m-2">
             <StatsStackOverflow />
+          </Col>
+          <Col className="m-2">
             <StatsSuperUser />
           </Col>
         </Row>

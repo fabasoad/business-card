@@ -14,6 +14,6 @@ test('should render StatsCommon correctly', () => {
     <StatsCommon techName={techName} url={url}>{content}</StatsCommon>
   )
   testStatsCommon(
-    container.querySelector('div.stats-item'), url, content, techName
+    container.querySelector('div.row.justify-content-center'), url, content, techName
   )
 })

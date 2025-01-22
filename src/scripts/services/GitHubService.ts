@@ -18,12 +18,21 @@ export class GitHubService implements RemoteService<number> {
       this.state = State.STARTED
       const octokit: Octokit = new Octokit({ request: { fetch } })
       try {
-        const { data } = await octokit.rest.repos.listForUser({
-          username: GitHubService.GITHUB_USERNAME
-        })
         let sum: number = 0
-        for (let i = 0; i < data.length; i++) {
-          sum += data[i]['stargazers_count']
+        let page: number = 1
+        const perPage: number = 100
+        let length: number = perPage
+        while (length === perPage) {
+          const { data } = await octokit.rest.repos.listForUser({
+            username: GitHubService.GITHUB_USERNAME,
+            page,
+            per_page: perPage
+          })
+          length = data.length
+          for (let i = 0; i < data.length; i++) {
+            sum += data[i]['stargazers_count']
+          }
+          page++
         }
         this.state = State.FINISHED
         this.starsAmount = sum

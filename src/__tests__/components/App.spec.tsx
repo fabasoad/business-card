@@ -38,7 +38,7 @@ describe('App', () => {
     testSkills(div.querySelector('div#skills'))
     testExperienceMain(div.querySelector('div#experience'), locale)
     testEducationMain(div.querySelector('div#education'), locale)
-    testCertificatesMain(div.querySelector('div#certificates'))
+    testCertificatesMain(div.querySelector('div#certificates'), locale)
     testLanguageMain(div.querySelector('div#languages'))
     testPortfolioMain(div.querySelector('div#portfolio'))
     testBadges(div.querySelector('div#badges'))

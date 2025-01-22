@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "2.13.2",
+  "version": "2.13.3",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -75,8 +75,8 @@
   "dependencies": {
     "@octokit/rest": "21.1.0",
     "cross-fetch": "4.1.0",
-    "posthog-js": "1.207.0",
-    "react-bootstrap": "2.10.7"
+    "posthog-js": "1.207.2",
+    "react-bootstrap": "2.10.8"
   },
   "packageManager": "yarn@4.6.0"
 }

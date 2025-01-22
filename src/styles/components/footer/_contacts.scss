@@ -1,4 +1,5 @@
 @use "~bootstrap/scss/bootstrap";
+@use "../../base/settings" as *;
 
 .footer-contacts {
   @extend .row;
@@ -6,5 +7,15 @@
   p {
     font-size: 0.8rem;
     margin-top: 10px;
+
+    a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        outline: 0;
+        color: $orange;
+        background-color: transparent;
+      }
+    }
   }
 }

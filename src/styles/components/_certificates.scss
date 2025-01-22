@@ -8,7 +8,13 @@
   }
 
   a {
+    color: $blue;
     text-decoration: none;
+    &:hover {
+      outline: 0;
+      color: $orange;
+      background-color: transparent;
+    }
   }
 
   .card {

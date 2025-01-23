@@ -1,9 +1,6 @@
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import { getDateLocale } from '../../scripts/utils/DateUtils'
 import DateCircleBox from '../Controls/DateCircleBox'
-import DateDuration from '../Controls/DateDuration'
-import DateTimeline from '../Controls/DateTimeline'
 
 interface EducationItemProps {
   from: number

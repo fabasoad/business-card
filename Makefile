@@ -1,6 +1,9 @@
-.PHONY: build install lint start test upgrade
+.PHONY: audit build clean install reinstall lint start test upgrade
 
 .DEFAULT_GOAL := build
+
+audit:
+	@yarn npm audit --all
 
 build:
 	@yarn run build:prod

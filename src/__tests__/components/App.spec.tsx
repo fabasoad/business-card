@@ -21,6 +21,7 @@ import { testMenuMain } from './Menu/TestUtils'
 import { testPortfolioMain } from './Portfolio/TestUtils'
 
 jest.mock('../../scripts/services/LeetcodeService')
+jest.mock('../../components/Controls/DateCircleBox')
 jest.mock('../../components/Stats/StatsMain')
 
 describe('App', () => {

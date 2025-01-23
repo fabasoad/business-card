@@ -5,6 +5,8 @@ import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 import { render } from '@testing-library/react'
 import { testEducationMain } from './TestUtils'
 
+jest.mock('../../../components/Controls/DateCircleBox')
+
 describe('EducationMain', () => {
   test('should render EducationMain correctly', () => {
     const { container } = render(<EducationMain/>)

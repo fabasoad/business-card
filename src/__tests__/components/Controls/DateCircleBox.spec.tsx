@@ -1,28 +1,28 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
-import JobPeriod from '../../../components/Experience/JobPeriod'
+import DateCircleBox from '../../../components/Controls/DateCircleBox'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 import { Locale } from '../../../scripts/i18n/types'
 import { render } from '@testing-library/react'
-import { testJobPeriod } from './TestUtils'
+import { testDateCircleBox } from '../Experience/TestUtils'
 
-describe('JobPeriod', () => {
+describe('DateCircleBox', () => {
   const locale: Locale = SupportedLocales.default
 
-  test('should render JobPeriod correctly with from and to', () => {
+  test('should render DateCircleBox correctly with from and to', () => {
     const fromMonthIndex = 1
     const fromYear = 2019
     const toMonthIndex = 4
     const toYear = 2020
     const { container } = render(
-      <JobPeriod
+      <DateCircleBox
         fromMonthIndex={fromMonthIndex}
         fromYear={fromYear}
         toMonthIndex={toMonthIndex}
         toYear={toYear}
       />
     )
-    testJobPeriod(
+    testDateCircleBox(
       container.querySelector('div.timeline-image'),
       locale,
       fromMonthIndex,
@@ -32,16 +32,16 @@ describe('JobPeriod', () => {
     )
   })
 
-  test('should render JobPeriod correctly with from', () => {
+  test('should render DateCircleBox correctly with from', () => {
     const fromMonthIndex = 0
     const fromYear = 2018
     const { container } = render(
-      <JobPeriod
+      <DateCircleBox
         fromMonthIndex={fromMonthIndex}
         fromYear={fromYear}
       />
     )
-    testJobPeriod(
+    testDateCircleBox(
       container.querySelector('div.timeline-image'),
       locale,
       fromMonthIndex,

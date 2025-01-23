@@ -3,8 +3,8 @@ import * as imgArkaFSS from '../../assets/images/companies/arka-fss.png'
 import * as imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'
 import * as imgLohika from '../../assets/images/companies/lohika.png'
 import * as imgWbyT from '../../assets/images/companies/wbyt.png'
+import DateCircleBox from '../Controls/DateCircleBox'
 import JobDescription from './JobDescription'
-import JobPeriod from './JobPeriod'
 import JobResponsibilities from './JobResponsibilities'
 import JobTechnologies from './JobTechnologies'
 import JobTitle from './JobTitle'
@@ -20,7 +20,7 @@ export default function ExperienceMain() {
         <SectionTitle>{t('business-card-experience-title')}</SectionTitle>
         <ul className="timeline">
           <li className="timeline-inverted">
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={10}
               fromYear={2022}
             />
@@ -47,7 +47,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li>
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={6}
               fromYear={2022}
               toMonthIndex={9}
@@ -76,7 +76,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li className="timeline-inverted">
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={9}
               fromYear={2021}
               toMonthIndex={5}
@@ -105,7 +105,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li>
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={5}
               fromYear={2021}
               toMonthIndex={8}
@@ -134,7 +134,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li className="timeline-inverted">
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={8}
               fromYear={2020}
               toMonthIndex={4}
@@ -163,7 +163,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li>
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={4}
               fromYear={2020}
               toMonthIndex={7}
@@ -192,7 +192,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li className="timeline-inverted">
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={6}
               fromYear={2019}
               toMonthIndex={3}
@@ -221,7 +221,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li>
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={8}
               fromYear={2018}
               toMonthIndex={5}
@@ -254,7 +254,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li className="timeline-inverted">
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={1}
               fromYear={2016}
               toMonthIndex={8}
@@ -287,7 +287,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li>
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={4}
               fromYear={2013}
               toMonthIndex={0}
@@ -319,7 +319,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li className="timeline-inverted">
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={9}
               fromYear={2011}
               toMonthIndex={3}
@@ -348,7 +348,7 @@ export default function ExperienceMain() {
             </div>
           </li>
           <li>
-            <JobPeriod
+            <DateCircleBox
               fromMonthIndex={2}
               fromYear={2010}
               toMonthIndex={8}

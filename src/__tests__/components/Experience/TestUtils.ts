@@ -14,24 +14,13 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
     toYear?: number
   }
 
-  function testLi(li: HTMLLIElement, locale: Locale, {
+  function testLi(li: HTMLLIElement, {
     title,
     location,
     company,
-    technologies,
-    fromMonthIndex,
-    fromYear,
-    toMonthIndex,
-    toYear
+    technologies
   }: Fixture) {
-    testJobPeriod(
-      li.querySelector('div.timeline-image'),
-      locale,
-      fromMonthIndex,
-      fromYear,
-      toMonthIndex,
-      toYear
-    )
+    expect(li.querySelector('div.timeline-image')).toBeInTheDocument()
     const divTimelinePanel = li.querySelector('div.timeline-panel')
     expect(divTimelinePanel).not.toBeNull()
     testJobTitle(
@@ -184,19 +173,19 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   expect(liNormal).toHaveLength(6)
   let i = 1
   for (const li of liNormal) {
-    testLi(li as HTMLLIElement, locale, fixtures[i])
+    testLi(li as HTMLLIElement, fixtures[i])
     i += 2
   }
   const liInverted = divContainer.querySelectorAll('ul.timeline>li.timeline-inverted')
   expect(liInverted).toHaveLength(6)
   i = 0
   for (const li of liInverted) {
-    testLi(li as HTMLLIElement, locale, fixtures[i])
+    testLi(li as HTMLLIElement, fixtures[i])
     i += 2
   }
 }
 
-export function testJobPeriod(
+export function testDateCircleBox(
   div: HTMLDivElement,
   locale: Locale,
   fromMonthIndex: number,

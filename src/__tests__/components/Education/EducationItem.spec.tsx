@@ -4,6 +4,8 @@ import EducationItem from '../../../components/Education/EducationItem'
 import { render } from '@testing-library/react'
 import { testEducationItem } from './TestUtils'
 
+jest.mock('../../../components/Controls/DateCircleBox')
+
 describe('EducationItem', () => {
   test('should render EducationItem correctly', () => {
     const { container} = render(
@@ -13,6 +15,6 @@ describe('EducationItem', () => {
         title="test-title"
       />
     )
-    testEducationItem(container, 2019, 2020, 'test-title')
+    testEducationItem(container, 'test-title')
   })
 })

@@ -2,6 +2,11 @@ import * as humanizeDuration from 'humanize-duration'
 import DigitConverter from '../DigitConverter'
 import { getI18n } from 'react-i18next'
 
+const i18CodeMap = new Map<string, string>()
+i18CodeMap.set('jp', 'ja')
+i18CodeMap.set('ua', 'uk')
+i18CodeMap.set('gb', 'en')
+
 export function getDateLocale(year: number, monthIndex?: number): string {
   const i18n = getI18n()
   const converter = new DigitConverter()
@@ -15,7 +20,7 @@ export function humanize(from: Date, to: Date, code: string = 'gb'): string {
   const opts = {
     delimiter: ' ',
     fallbacks: ['en'],
-    language: i18nCode(code),
+    language: getOrDefault<string, string>(i18CodeMap, code, code),
     largest: 2,
     round: true,
     units: ['y', 'mo']
@@ -24,15 +29,6 @@ export function humanize(from: Date, to: Date, code: string = 'gb'): string {
   return humanizeDuration(duration, opts)
 }
 
-function i18nCode(code: string) {
-  switch (code) {
-    case 'jp':
-      return 'ja'
-    case 'ua':
-      return 'uk'
-    case 'gb':
-      return 'en'
-    default:
-      return code
-  }
+function getOrDefault<K, V>(map: Map<K, V>, key: K, defaultValue: V): V {
+  return map.has(key) ? map.get(key)! : defaultValue;
 }

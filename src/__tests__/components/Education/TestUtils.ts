@@ -1,20 +1,10 @@
 import { Locale } from '../../../scripts/i18n/types'
 import { testSectionTitle } from '../Controls/TestUtils'
 
-type TestHeadingFunction = (h4: HTMLHeadingElement) => void
-
-export function testEducationItem(
-  container: HTMLElement,
-  from: number,
-  to: number,
-  title: string,
-  testHeading: TestHeadingFunction = (h4: HTMLHeadingElement) =>
-    expect(h4).toHaveTextContent(`${to}-${from}`)
-): void {
-  const h4DateLocaleElements = container.querySelectorAll('div.timeline-image h4')
-  expect(h4DateLocaleElements).toHaveLength(1)
-  testHeading(h4DateLocaleElements.item(0) as HTMLHeadingElement)
-  const h4TimelineElements = container.querySelectorAll('div.timeline-heading h4')
+export function testEducationItem(container: HTMLElement, title: string): void {
+  expect(container.querySelector('div.timeline-image')).toBeInTheDocument()
+  const divTimelinePanel = container.querySelector('div.timeline-panel')
+  const h4TimelineElements = divTimelinePanel.querySelectorAll('div.timeline-heading h4')
   expect(h4TimelineElements).toHaveLength(2)
   expect(h4TimelineElements.item(0)).toHaveTextContent('business-card-education-university-title')
   expect(h4TimelineElements.item(1)).toHaveTextContent(title)
@@ -24,8 +14,6 @@ export function testEducationItem(
 }
 
 export function testEducationMain(div: HTMLDivElement, locale: Locale) {
-  const from = 2005
-  const to = 2010
   expect(div).toHaveClass('light-component')
   const divContainer = div.querySelector('div.container')
   testSectionTitle(
@@ -41,13 +29,6 @@ export function testEducationMain(div: HTMLDivElement, locale: Locale) {
   expect(listItems).toHaveLength(1)
   testEducationItem(
     listItems.item(0),
-    from,
-    to,
-    'business-card-education-university-master',
-    locale.code === 'jp'
-      ? (h4: HTMLHeadingElement): void => expect(h4).toHaveTextContent(
-        new RegExp('.+business-card-year-singular-.+business-card-year-singular')
-      )
-      : (h4: HTMLHeadingElement): void => expect(h4).toHaveTextContent(`${to}-${from}`)
+    'business-card-education-university-master'
   )
 }

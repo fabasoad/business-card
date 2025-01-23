@@ -13,6 +13,18 @@
   <meta property="og:image:alt" content="Personal website" />
   <meta property="og:url" content="https://fabasoad.github.io/business-card/" />
   <meta property="og:type" content="website" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://*.posthog.com https://*.fontawesome.com https://*.ko-fi.com;
+      style-src 'self' 'unsafe-inline' https://*.ko-fi.com https://fonts.googleapis.com;
+      img-src 'self' https://img.shields.io https://*.ko-fi.com;
+      font-src 'self' https://*.fontawesome.com https://fonts.gstatic.com;
+      connect-src 'self' https://*.posthog.com https://*.fontawesome.com https://leetcode-stats-api.herokuapp.com https://api.github.com https://api.stackexchange.com;
+      frame-src 'none';
+    "
+  />
   <link rel="icon" type="image/png" href="favicon.png" />
   <title></title>
 </head>
@@ -36,11 +48,6 @@
     async>
   </script>
   <script src="app.js"></script>
-  <script
-    type="text/javascript"
-    async
-    src="https://cdn.credly.com/assets/utilities/embed.js">
-  </script>
 </body>
 
 </html>

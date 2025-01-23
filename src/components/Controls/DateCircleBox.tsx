@@ -1,15 +1,15 @@
 import * as React from 'react'
-import DateDuration from '../Controls/DateDuration'
-import DateTimeline from '../Controls/DateTimeline'
+import DateDuration from './DateDuration'
+import DateTimeline from './DateTimeline'
 
-interface JobPeriodProps {
+interface DateCircleBoxProps {
   fromMonthIndex: number
   fromYear: number
   toMonthIndex?: number
   toYear?: number
 }
 
-function JobPeriod({ fromMonthIndex, fromYear, toMonthIndex, toYear }: JobPeriodProps) {
+function DateCircleBox({ fromMonthIndex, fromYear, toMonthIndex, toYear }: DateCircleBoxProps) {
   return (
     <div className="timeline-image">
       <DateDuration
@@ -28,4 +28,4 @@ function JobPeriod({ fromMonthIndex, fromYear, toMonthIndex, toYear }: JobPeriod
   )
 }
 
-export default JobPeriod
+export default DateCircleBox

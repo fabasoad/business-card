@@ -24,7 +24,7 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
     toMonthIndex,
     toYear
   }: Fixture) {
-    testJobPeriod(
+    testDateCircleBox(
       li.querySelector('div.timeline-image'),
       locale,
       fromMonthIndex,
@@ -196,7 +196,7 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   }
 }
 
-export function testJobPeriod(
+export function testDateCircleBox(
   div: HTMLDivElement,
   locale: Locale,
   fromMonthIndex: number,

@@ -20,7 +20,7 @@ export default function DateTimeline({
         {
           (toMonthIndex != undefined &&
             toYear && getDateLocale(toYear, toMonthIndex)) ||
-          t('business-card-experience-present')
+          t('experience.present')
         }
       </Row>
       <Row>-</Row>

@@ -1,26 +1,38 @@
 {
-  "business-card-404-text-1": "このページは存在しません。",
-  "business-card-404-text-2": "on a screen to continue",
-  "business-card-404-text-3": "リダイレクトしています...",
-  "business-card-about-me-general-list-item-1": "{{totalExperience}}の商用ソフトウェア開発。",
-  "business-card-about-me-general-list-item-10": "Strong experience in Java, TypeScript, C#, Python, GitHub Actions, DevSecOps, Application Security.",
-  "business-card-about-me-general-list-item-11": "Writing customer facing as well as internal documentation.",
-  "business-card-about-me-general-list-item-12": "Publishing technical articles.",
-  "business-card-about-me-general-list-item-13": "Participating in open source community:",
-  "business-card-about-me-general-list-item-14": "Creating pull requests and opening tickets to open source projects.",
-  "business-card-about-me-general-list-item-15": "Developed and released <1>30+ GitHub Actions to the marketplace</1>.",
-  "business-card-about-me-general-list-item-16": "Actively participating in StackOverflow and LeetCode discussions.",
-  "business-card-about-me-general-list-item-17": "Business level English.",
-  "business-card-about-me-general-list-item-2": "Experience in managing team.",
-  "business-card-about-me-general-list-item-3": "Leading features and projects.",
-  "business-card-about-me-general-list-item-4": "Designing software architecture.",
-  "business-card-about-me-general-list-item-5": "Planning features implementation and delivery them in time.",
-  "business-card-about-me-general-list-item-6": "Conducting technical and manager interviews.",
-  "business-card-about-me-general-list-item-7": "Experience in working with multiple teams and departments to integrate all development pieces together.",
-  "business-card-about-me-general-list-item-8": "Experience in mentoring and teaching junior peers.",
-  "business-card-about-me-general-list-item-9": "Solid knowledge and experience in backend, frontend, infrastructure, CI/CD development.",
-  "business-card-about-me-title": "自己紹介",
-  "business-card-author-name": "ファビジェブスキーイェブヘン",
+  "404": {
+    "text": {
+      "1": "このページは存在しません。",
+      "2": "on a screen to continue",
+      "3": "リダイレクトしています..."
+    }
+  },
+  "about-me": {
+    "title": "自己紹介",
+    "list": [
+      { "title": "{{totalExperience}}の商用ソフトウェア開発。" },
+      { "title": "Experience in managing team." },
+      { "title": "Leading features and projects." },
+      { "title": "Designing software architecture." },
+      { "title": "Planning features implementation and delivery them in time." },
+      { "title": "Conducting technical and manager interviews." },
+      { "title": "Experience in working with multiple teams and departments to integrate all development pieces together." },
+      { "title": "Experience in mentoring and teaching junior peers." },
+      { "title": "Solid knowledge and experience in backend, frontend, infrastructure, CI/CD development." },
+      { "title": "Strong experience in Java, TypeScript, C#, Python, GitHub Actions, DevSecOps, Application Security." },
+      { "title": "Writing customer facing as well as internal documentation." },
+      { "title": "Publishing technical articles." },
+      {
+        "title": "Participating in open source community:",
+        "list": [
+          "Creating pull requests and opening tickets to open source projects",
+          "Developed and released 35+ GitHub Actions to the marketplace",
+          "Actively participating in StackOverflow and LeetCode discussions"
+        ]
+      },
+      { "title": "Business level English." }
+    ]
+  },
+  "author-name": "ファビジェブスキーイェブヘン",
   "business-card-badges-title": "バッジ",
   "business-card-certificate-1": "Programming for everybody (Python)",
   "business-card-certificate-10": "Certified DevSecOps Professional (CDP)",
@@ -151,14 +163,18 @@
   "business-card-experience-job-wbyt-6-responsibilities-2": "Implementing, maintaining and support of Application Security GitHub Actions.",
   "business-card-experience-job-wbyt-6-responsibilities-3": "Fixing bugs in GitHub Actions and SAST related tools that team owns.",
   "business-card-experience-job-wbyt-6-title": "Senior Software Engineer, Application Security",
-  "business-card-experience-present": "現在",
+  "experience": {
+    "present": "現在"
+  },
   "business-card-experience-responsibilities-title": "Responsibilities",
   "business-card-experience-technologies-title": "技術",
   "business-card-experience-title": "職歴",
-  "business-card-header-about-me": "自己紹介",
-  "business-card-header-occupation": "シニアソフトウェアエンジニア",
-  "business-card-header-portfolio": "私のポートフォリオ",
-  "business-card-header-title": "<p>こんにちは、</p><p>ファビジェブスキー</p><p>イェブヘンです。</p>",
+  "header": {
+    "about-me": "自己紹介",
+    "occupation": "シニアソフトウェアエンジニア",
+    "portfolio": "私のポートフォリオ",
+    "title": "<p>こんにちは、</p><p>{{authorName}}です。</p>"
+  },
   "business-card-languages-gb": "英語",
   "business-card-languages-jp": "日本語",
   "business-card-languages-native": "母国語",
@@ -175,17 +191,7 @@
   "business-card-menu-portfolio": "ポートフォリオ",
   "business-card-menu-resume": "履歴書",
   "business-card-menu-skills": "スキル",
-  "business-card-month-0": "一月",
-  "business-card-month-1": "二月",
-  "business-card-month-10": "十一月",
-  "business-card-month-2": "三月",
-  "business-card-month-3": "四月",
-  "business-card-month-4": "五月",
-  "business-card-month-5": "六月",
-  "business-card-month-6": "七月",
-  "business-card-month-7": "八月",
-  "business-card-month-8": "九月",
-  "business-card-month-9": "十月",
+  "month": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
   "business-card-portfolio-alm-lab-management-subtitle": "ソフトウェアエンジニア - C#/.NET (WinForms)",
   "business-card-portfolio-alm-lab-management-title": "ALM Lab Management",
   "business-card-portfolio-alm-robot-subtitle": "フルスタックエンジニア - Java 8, JavaScript (AngularJS)",

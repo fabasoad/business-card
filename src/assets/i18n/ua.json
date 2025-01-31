@@ -1,26 +1,38 @@
 {
-  "business-card-404-text-1": "Ця сторінка не існує.",
-  "business-card-404-text-2": "on a screen to continue",
-  "business-card-404-text-3": "Перенаправлення...",
-  "business-card-about-me-general-list-item-1": "{{totalExperience}} досвіду у комерційній розробці програмного забезпечення.",
-  "business-card-about-me-general-list-item-10": "Великий досвід Java, TypeScript, C#, Python, GitHub Actions, DevSecOps, Application Security.",
-  "business-card-about-me-general-list-item-11": "Написання клієнтської та внутрішньої документації.",
-  "business-card-about-me-general-list-item-12": "Публікація технічних статей.",
-  "business-card-about-me-general-list-item-13": "Участь в open source спільноті:",
-  "business-card-about-me-general-list-item-14": "Створення pull requests та відкриття тикетів у open source проектах.",
-  "business-card-about-me-general-list-item-15": "Розроблено та <1>випущено в marketplace більш ніж 30 GitHub Actions</1>.",
-  "business-card-about-me-general-list-item-16": "Активна участь у StackOverflow та LeetCode дискусіях.",
-  "business-card-about-me-general-list-item-17": "Професійний рівень володіння англійською мовою.",
-  "business-card-about-me-general-list-item-2": "Досвід в управлінні командою.",
-  "business-card-about-me-general-list-item-3": "Ведення проектів та розробкою функціональності.",
-  "business-card-about-me-general-list-item-4": "Проектування архітектури програмного забезпечення.",
-  "business-card-about-me-general-list-item-5": "Планування функціональності та їх своєчасна доставка.",
-  "business-card-about-me-general-list-item-6": "Проведення технічних та менеджерських співбесід.",
-  "business-card-about-me-general-list-item-7": "Досвід роботи з кількома командами та відділами для інтеграції всіх частин розробки разом.",
-  "business-card-about-me-general-list-item-8": "Досвід навчання та наставництва молодших колег.",
-  "business-card-about-me-general-list-item-9": "Впевнені знання та досвід у розробці backend, frontend, інфраструктури та CI/CD.",
-  "business-card-about-me-title": "Про мене",
-  "business-card-author-name": "Євген Фабіжевський",
+  "404": {
+    "text": {
+      "1": "Ця сторінка не існує.",
+      "2": "on a screen to continue",
+      "3": "Перенаправлення..."
+    }
+  },
+  "about-me": {
+    "title": "Про мене",
+    "list": [
+      { "title": "{{totalExperience}} досвіду у комерційній розробці програмного забезпечення." },
+      { "title": "Досвід в управлінні командою." },
+      { "title": "Ведення проектів та розробкою функціональності." },
+      { "title": "Проектування архітектури програмного забезпечення." },
+      { "title": "Планування функціональності та їх своєчасна доставка." },
+      { "title": "Проведення технічних та менеджерських співбесід." },
+      { "title": "Досвід роботи з кількома командами та відділами для інтеграції всіх частин розробки разом." },
+      { "title": "Досвід навчання та наставництва молодших колег." },
+      { "title": "Впевнені знання та досвід у розробці backend, frontend, інфраструктури та CI/CD." },
+      { "title": "Великий досвід Java, TypeScript, C#, Python, GitHub Actions, DevSecOps, Application Security." },
+      { "title": "Написання клієнтської та внутрішньої документації." },
+      { "title": "Публікація технічних статей." },
+      {
+        "title": "Участь в open source спільноті:",
+        "list": [
+          "Створення pull requests та відкриття тикетів у open source проектах.",
+          "Розроблено та випущено в marketplace більш ніж 35 GitHub Actions.",
+          "Активна участь у StackOverflow та LeetCode дискусіях."
+        ]
+      },
+      { "title": "Професійний рівень володіння англійською мовою." }
+    ]
+  },
+  "author-name": "Євген Фабіжевський",
   "business-card-badges-title": "Бейджі",
   "business-card-certificate-1": "Програмування для всіх (Python)",
   "business-card-certificate-10": "Certified DevSecOps Professional (CDP)",
@@ -151,14 +163,18 @@
   "business-card-experience-job-wbyt-6-responsibilities-2": "Впровадження, супровід і підтримка Application Security GitHub Actions.",
   "business-card-experience-job-wbyt-6-responsibilities-3": "Виправлення помилок у GitHub Actions та інструментах, пов'язаних із SAST, якими володіє команда.",
   "business-card-experience-job-wbyt-6-title": "Старший інженер-програміст, Application Security",
-  "business-card-experience-present": "Зараз",
+  "experience": {
+    "present": "Зараз"
+  },
   "business-card-experience-responsibilities-title": "Обов'язки",
   "business-card-experience-technologies-title": "Технології",
   "business-card-experience-title": "Досвід",
-  "business-card-header-about-me": "Про мене",
-  "business-card-header-occupation": "Розробник програмного забезпечення",
-  "business-card-header-portfolio": "Моє портфоліо",
-  "business-card-header-title": "<p>Привіт,</p><p>я Євген Фабіжевський</p>",
+  "header": {
+    "about-me": "Про мене",
+    "occupation": "Розробник програмного забезпечення",
+    "portfolio": "Моє портфоліо",
+    "title": "<p>Привіт,</p><p>я {{authorName}}</p>"
+  },
   "business-card-languages-gb": "Англійська",
   "business-card-languages-jp": "Японська",
   "business-card-languages-native": "Рідна",
@@ -175,17 +191,7 @@
   "business-card-menu-portfolio": "Портфоліо",
   "business-card-menu-resume": "Резюме",
   "business-card-menu-skills": "Навички",
-  "business-card-month-0": "Січень",
-  "business-card-month-1": "Лютий",
-  "business-card-month-10": "Листопад",
-  "business-card-month-2": "Березень",
-  "business-card-month-3": "Квітень",
-  "business-card-month-4": "Травень",
-  "business-card-month-5": "Червень",
-  "business-card-month-6": "Липень",
-  "business-card-month-7": "Серпень",
-  "business-card-month-8": "Вересень",
-  "business-card-month-9": "Жовтень",
+  "month": ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
   "business-card-portfolio-alm-lab-management-subtitle": "Інженер-програміст - C#/.NET (WinForms)",
   "business-card-portfolio-alm-lab-management-title": "ALM Lab Management",
   "business-card-portfolio-alm-robot-subtitle": "Розробник програмного забезпечення - Java 8, JavaScript (AngularJS)",

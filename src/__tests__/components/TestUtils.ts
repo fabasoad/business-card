@@ -43,7 +43,7 @@ export function testHeader(header: HTMLElement) {
   const h5 = divHeaderText.querySelector('h5')
   expect(h5).toHaveClass('header__text-subtitle')
   expect(h5).toHaveTextContent('business-card-header-occupation')
-  testButton(divHeaderText, '#about', 'business-card-header-about-me')
+  testButton(divHeaderText, '#about', 'header.about-me')
   testButton(divHeaderText, '#portfolio', 'business-card-header-portfolio')
 }
 

@@ -12,8 +12,8 @@ export function getDateLocale(year: number, monthIndex?: number): string {
   const converter = new DigitConverter()
 
   return i18n.language === 'jp'
-    ? converter.toDoubleByte(year.toString()) + i18n.t('business-card-year-singular') + (monthIndex != undefined ? i18n.t(`business-card-month-${monthIndex}`) : '')
-    : (monthIndex != undefined ? i18n.t(`business-card-month-${monthIndex}`) + ' ' : '') + year
+    ? converter.toDoubleByte(year.toString()) + i18n.t('business-card-year-singular') + (monthIndex != undefined ? i18n.t(`month.${monthIndex}`) : '')
+    : (monthIndex != undefined ? i18n.t(`month.${monthIndex}`) + ' ' : '') + year
 }
 
 export function humanize(from: Date, to: Date, code: string = 'gb'): string {

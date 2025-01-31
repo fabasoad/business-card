@@ -7,13 +7,13 @@ export default function Header() {
   return (
     <header className="header" id="header">
       <div className="header__text">
-        <h1><Trans t={t}>business-card-header-title</Trans></h1>
-        <h5 className="header__text-subtitle">{t('business-card-header-occupation')}</h5>
+        <h1><Trans t={t} values={{ authorName: t('author-name') }}>header.title</Trans></h1>
+        <h5 className="header__text-subtitle">{t('header.occupation')}</h5>
         <Button variant="primary" size="lg" href="#about">
-          {t('business-card-header-about-me')}
+          {t('header.about-me')}
         </Button>
         <Button variant="primary" size="lg" href="#portfolio">
-          {t('business-card-header-portfolio')}
+          {t('header.portfolio')}
         </Button>
       </div>
     </header>

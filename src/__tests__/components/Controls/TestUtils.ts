@@ -29,12 +29,12 @@ export function testDateLocale(
     case 'ua':
       expectedText = monthIndex == undefined
         ? year
-        : `business-card-month-${monthIndex} ${year}`
+        : `month.${monthIndex} ${year}`
       break
     case 'jp':
       expectedText = monthIndex == undefined
         ? 'business-card-year-singular'
-        : `business-card-year-singularbusiness-card-month-${monthIndex}`
+        : `business-card-year-singularmonth.${monthIndex}`
       break
     default:
       throw new Error(`${code} locale is not covered by tests`)
@@ -57,7 +57,7 @@ export function testDateTimeline(
   if (toYear && toMonthIndex != undefined) {
     testDateLocale(divDateTo, locale, toYear, toMonthIndex)
   } else {
-    expect(divDateTo).toHaveTextContent('business-card-experience-present')
+    expect(divDateTo).toHaveTextContent('experience.present')
   }
   expect(divRows[1]).toHaveTextContent('-')
   const divDateFrom = divRows[2] as HTMLElement

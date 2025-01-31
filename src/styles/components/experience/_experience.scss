@@ -1,182 +1,48 @@
 @use "../../base/settings" as *;
-@use "./job-titles" as *;
-@use "./technologies" as *;
 
-.timeline {
-  list-style: none;
-  font-size: small;
-  margin: 0;
-  padding: 0;
+ul.experience-timeline {
+  list-style-type: none;
+  position: relative;
+
+  p {
+    margin-left: 1rem;
+
+    &.experience-title {
+      margin-bottom: 0;
+    }
+
+    &.experience-subtitle {
+      padding-top: 0.1rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  &:before {
+    content: ' ';
+    background: $white;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+  }
 
   > li {
-    position: relative;
-    margin-bottom: 50px;
-    min-height: 50px;
+    margin: 1rem 0;
+    padding-left: 20px;
 
-    &:after {
-      content: " ";
-      display: table;
-      clear: both;
-    }
-
-    .timeline-panel {
-      float: right;
-      position: relative;
-      width: 100%;
-      padding: 0 20px 0 100px;
-      text-align: left;
-    }
-
-    .timeline-image {
-      z-index: 100;
-      position: absolute;
-      left: 0;
-      width: 4.5rem;
-      height: 4.5rem;
-      margin-left: 0;
-      border: 1px solid #eee;
-      border-radius: 100%;
-      text-align: center;
-      background: #fff;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  > li.timeline-inverted {
-    > .timeline-panel {
-      float: right;
-      padding: 0 20px 0 100px;
-      text-align: left;
-
-      &:before {
-        right: auto;
-        left: -15px;
-        border-right-width: 15px;
-        border-left-width: 0;
-      }
-
-      &:after {
-        right: auto;
-        left: -14px;
-        border-right-width: 14px;
-        border-left-width: 0;
-      }
-    }
-  }
-
-  .timeline-heading {
-    h4 {
-      margin-top: 0;
-      text-transform: uppercase;
-    }
-
-    h2 {
-      margin-top: 30px;
-    }
-
-    h4.subheading {
-      text-transform: none;
-      color: $orange;
-    }
-  }
-
-  .timeline-body {
-    > p {
-      margin-bottom: 0;
-    }
-
-    > ul {
-      margin-bottom: 0;
-    }
-  }
-
-  h5 {
-    font-weight: 600;
-    margin-top: 1.5rem;
-  }
-}
-
-@media (min-width: $small-desktop-breakpoint) {
-  .timeline {
     &:before {
-      left: 50%;
-    }
-
-    > li {
-      min-height: 100px;
-
-      .timeline-panel {
-        float: left;
-        width: 41%;
-        padding: 0 20px 20px 30px;
-        text-align: left;
-      }
-
-      .timeline-image {
-        left: 50%;
-        width: 100px;
-        height: 100px;
-        margin-left: -50px;
-      }
-    }
-
-    > li.timeline-inverted {
-      > .timeline-panel {
-        float: right;
-        padding: 0 30px 20px 20px;
-        text-align: left;
-      }
-    }
-  }
-}
-
-@media (min-width: $small-desktop-breakpoint) {
-  .timeline {
-    > li {
-      min-height: 150px;
-
-      .timeline-panel {
-        padding: 0 20px 20px;
-      }
-
-      .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
-      }
-    }
-
-    > li.timeline-inverted {
-      > .timeline-panel {
-        padding: 0 20px 20px;
-      }
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .timeline {
-    > li {
-      min-height: 170px;
-
-      .timeline-panel {
-        padding: 10px 20px 20px 100px;
-      }
-
-      .timeline-image {
-        width: 150px;
-        height: 150px;
-        margin-left: -75px;
-      }
-    }
-
-    > li.timeline-inverted {
-      > .timeline-panel {
-        padding: 10px 100px 20px 20px;
-      }
+      content: ' ';
+      background: $white;
+      display: inline-block;
+      position: absolute;
+      border-radius: 50%;
+      border: 0.2rem solid $orange;
+      left: 1.2rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      z-index: 400;
     }
   }
 }

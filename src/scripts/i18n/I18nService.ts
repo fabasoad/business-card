@@ -50,6 +50,10 @@ class I18nService {
           gb: { common: gb },
           jp: { common: jp },
           ua: { common: ua }
+        },
+        react: {
+          transSupportBasicHtmlNodes: true,
+          transKeepBasicHtmlNodesFor: ['li', 'p']
         }
       }).then((t: i18n.TFunction) => {
         this.fireCallbacks(

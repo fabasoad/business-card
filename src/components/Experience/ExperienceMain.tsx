@@ -3,6 +3,10 @@ import * as imgArkaFSS from '../../assets/images/companies/arka-fss.png'
 import * as imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'
 import * as imgLohika from '../../assets/images/companies/lohika.png'
 import * as imgWbyT from '../../assets/images/companies/wbyt.png'
+import i18nService, {
+  I18nServiceCallback,
+  I18nServiceCallbackTypes
+} from '../../scripts/i18n/I18nService'
 import { getDateLocale } from '../../scripts/utils/DateUtils'
 import { Container, Row } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
@@ -10,6 +14,15 @@ import SectionTitle from '../Controls/SectionTitle';
 
 export default function ExperienceMain() {
   const { t } = useTranslation()
+
+  const [clazz, setClazz] = React.useState<string>('font-jp')
+
+  const callback: I18nServiceCallback =
+    (code: string) => setClazz(`font-${code === 'jp' ? '' : 'non-'}jp`)
+
+  i18nService.registerCallback(I18nServiceCallbackTypes.ON_LOADED, callback)
+  i18nService.registerCallback(I18nServiceCallbackTypes.ON_CHANGED, callback)
+
   return (
     <div id="experience" className="light-component">
       <Container>
@@ -17,7 +30,7 @@ export default function ExperienceMain() {
         <Row>
           <ul className="timeline">
             <li>
-              <p className="timeline__title">
+              <p className={`timeline__title ${clazz}`}>
                 <img src={imgWbyT}  alt="Woven by Toyota" />
                 Woven by Toyota ({t('locations.chuo')})
               </p>
@@ -38,7 +51,7 @@ export default function ExperienceMain() {
               </p>
             </li>
             <li>
-              <p className="timeline__title">
+              <p className={`timeline__title ${clazz}`}>
                 <img src={imgBitcoinCom}  alt="Bitcoin.com" />
                 Bitcoin.com ({t('locations.shibuya')})
               </p>
@@ -58,7 +71,7 @@ export default function ExperienceMain() {
               </p>
             </li>
             <li>
-              <p className="timeline__title">
+              <p className={`timeline__title ${clazz}`}>
                 <img src={imgLohika}  alt="Lohika" />
                 Lohika ({t('locations.odesa')})
               </p>
@@ -71,7 +84,7 @@ export default function ExperienceMain() {
               </p>
             </li>
             <li>
-              <p className="timeline__title">
+              <p className={`timeline__title ${clazz}`}>
                 <img src={imgArkaFSS}  alt="ARKA - Finance, Software, Services" />
                 ARKA - Finance, Software, Services ({t('locations.odesa')})
               </p>

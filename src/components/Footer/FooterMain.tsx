@@ -10,7 +10,7 @@ export default function FooterMain() {
   return (
     <div className="footer">
       <div id="contact" className="container text-center">
-        <SectionTitle>{t('business-card-contact-title')}</SectionTitle>
+        <SectionTitle>{t('contacts.title')}</SectionTitle>
         <FooterContacts />
         <FooterSocial />
         <FooterInfo />

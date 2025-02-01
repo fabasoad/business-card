@@ -6,7 +6,7 @@ type StatsGitHubProps = {
   starsAmount?: number
 }
 
-export default function StatsGitHub({ starsAmount = 57 }: StatsGitHubProps) {
+export default function StatsGitHub({ starsAmount = 286 }: StatsGitHubProps) {
   const [stars, setStars] = React.useState<number>(starsAmount)
   React.useEffect(() => {
     const service = new GitHubService(stars);

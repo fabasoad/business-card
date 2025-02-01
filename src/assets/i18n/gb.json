@@ -53,12 +53,17 @@
       "55ddd8bd-950d-45bb-ad25-d08269bc9ca1": "GitHub Copilot"
     }
   },
-  "business-card-contact-city": "Tokyo, Japan",
-  "business-card-contact-title": "Contact me",
-  "business-card-education-title": "Education",
-  "business-card-education-university-master": "Master",
-  "business-card-education-university-speciality": "Information Technology",
-  "business-card-education-university-title": "Odesa State Academy of Refrigeration",
+  "contacts": {
+    "title": "Contacts",
+    "location": "Tokyo, Japan"
+  },
+  "education": {
+    "title": "Education",
+    "university": {
+      "speciality": "Information Technology. Master.",
+      "title": "Odesa State Academy of Refrigeration"
+    }
+  },
   "business-card-experience-description-title": "Description",
   "business-card-experience-job-arka-description-1": "I have started my professional career as a C# Developer using Silverlight. First half of a year I was fully involved into Silverlight development for customer from Germany. After the project has been finished I’ve been switched to full stack development of short-term web applications using PHP on backend and JavaScript on frontend. Last year I was working in parallel in 2 areas: company product development using Silverlight and short-term external web applications.",
   "business-card-experience-job-arka-responsibilities-1": "Developing RIA using C#, Silverlight.",
@@ -242,7 +247,7 @@
   "business-card-skills-title": "Skills",
   "business-card-stats-title": "Stats",
   "title": "{{authorName}} :: Senior Software Engineer",
-  "business-card-version": "Version {{version}}",
+  "version": "Version {{version}}",
   "business-card-year-plural": "years",
   "business-card-year-singular": "year"
 }

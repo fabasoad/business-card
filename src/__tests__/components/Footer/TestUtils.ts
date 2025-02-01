@@ -55,7 +55,7 @@ export function testFooterInfo(div: HTMLDivElement): void {
       const span = li.querySelector('span')
       if (span != null) {
         expect(span).toHaveAttribute('class', 'badge rounded-pill bg-secondary')
-        expect(span).toHaveTextContent('business-card-version')
+        expect(span).toHaveTextContent('version')
         c = false
       } else if (!a && !b) {
         throw new Error(`Expected span inside li element. Actual: ${li.innerHTML}`)
@@ -71,7 +71,7 @@ export function testFooterLocation(div: HTMLDivElement): void {
   for (const c of ['fa', 'fa-map-marker-alt', 'fa-2x']) {
     expect(i).toHaveClass(c)
   }
-  expect(div.querySelector('p')).toHaveTextContent('business-card-contact-city')
+  expect(div.querySelector('p')).toHaveTextContent('contacts.location')
 }
 
 export function testFooterMain(div: HTMLDivElement) {
@@ -81,7 +81,7 @@ export function testFooterMain(div: HTMLDivElement) {
   expect(divContact).toHaveClass('text-center')
   const divTitle = divContact.querySelector('div.section-title.center')
   expect(divTitle).not.toBeNull()
-  expect(divTitle.querySelector('h2')).toHaveTextContent('business-card-contact-title')
+  expect(divTitle.querySelector('h2')).toHaveTextContent('contacts.title')
   expect(divTitle.querySelector('hr')).not.toBeNull()
   testFooterContacts(divContact.querySelector('div.footer-contacts'))
   testFooterSocial(divContact.querySelector('div.footer-social'))

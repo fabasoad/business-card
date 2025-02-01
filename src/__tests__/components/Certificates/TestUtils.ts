@@ -33,7 +33,7 @@ export function testCertificateItem(
 
   elements = div.getElementsByClassName('card-subtitle')
   expect(elements).toHaveLength(1)
-  expect(elements[0]).toHaveTextContent(`Issuer: ${issuer.name}`)
+  expect(elements[0]).toHaveTextContent('by-issuer')
 
   elements = div.getElementsByClassName('card-footer')
   expect(elements).toHaveLength(1)
@@ -56,7 +56,7 @@ export function testCertificatesMain(div: HTMLDivElement, locale: Locale) {
   expect(div).toHaveClass('light-component')
   testSectionTitle(
     div.querySelector('div.section-title'),
-    'business-card-certificates-title'
+    'certificates.title'
   )
   const divContainer = div.querySelector('div.container')
   expect(divContainer).not.toBeNull()
@@ -74,7 +74,7 @@ export function testCertificatesMain(div: HTMLDivElement, locale: Locale) {
     const divCardLinks = divCard.getElementsByClassName('card-link')
     expect(divCardLinks).toHaveLength(1)
     const item = findByUrl(items, divCardLinks.item(0).getAttribute('href'))
-    const name = item.i18nTitleKey
+    const name = `certificates.list.${item.id}`
     testCertificateItem(
       divCard,
       locale,

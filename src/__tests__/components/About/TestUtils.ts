@@ -2,10 +2,7 @@ import { testSectionTitle } from '../Controls/TestUtils'
 
 export function testAboutMain(div: HTMLDivElement) {
   expect(div).toHaveClass('container')
-  testSectionTitle(
-    div.querySelector('div.section-title'),
-    'business-card-about-me-title'
-  )
+  testSectionTitle(div.querySelector('div.section-title'), 'about-me.title')
   const divRow = div.querySelector('div.row')
   expect(divRow).toHaveClass('d-flex')
   expect(divRow).toHaveClass('justify-content-center')
@@ -29,14 +26,14 @@ export function testAboutMain(div: HTMLDivElement) {
   const ul = divListItems.querySelector('ul')
   expect(ul).toHaveClass('mt-3')
   const liElements = divListItems.querySelectorAll('ul>li')
-  expect(liElements).toHaveLength(17)
+  expect(liElements).toHaveLength(14)
 
-  for (let i = 1; i <= 18; i++) {
+  for (let i = 1; i <= 14; i++) {
     const exp = expect(liElements.item(i - 1))
     if (i > 17) {
       exp.toBeNull()
     } else {
-      exp.toHaveTextContent(`business-card-about-me-general-list-item-${i}`)
+      exp.toHaveTextContent(`about-me.list.${i - 1}.title`)
     }
   }
 }

@@ -53,12 +53,17 @@
       "55ddd8bd-950d-45bb-ad25-d08269bc9ca1": "GitHub Copilot"
     }
   },
-  "business-card-contact-city": "Токио, Япония",
-  "business-card-contact-title": "Контакты",
-  "business-card-education-title": "Образование",
-  "business-card-education-university-master": "Магистр",
-  "business-card-education-university-speciality": "Информационные технологии",
-  "business-card-education-university-title": "Одесская Государственная Академия Холода",
+  "contacts": {
+    "title": "Контакты",
+    "location": "Токио, Япония"
+  },
+  "education": {
+    "title": "Образование",
+    "university": {
+      "speciality": "Информационные технологии. Магистр.",
+      "title": "Одесская Государственная Академия Холода"
+    }
+  },
   "business-card-experience-description-title": "Описание",
   "business-card-experience-job-arka-description-1": "Я начал своб профессиональную карьеру как C# разработчик используя технологию Silverlight. Первые полгода я занимался разработкой Silverlight приложения для клиента из Германии. После того как проект был завершён я переключился на full stack разработку краткосрочных web сайтов используя PHP на серверной части и JavaScript на клиентской. Последний год я работал параллельно над разработкой web сайтов, а так же над внутренним Silverlight проектом.",
   "business-card-experience-job-arka-responsibilities-1": "Разработка многофункциональных интернет приложений используя C#, Silverlight.",
@@ -242,7 +247,7 @@
   "business-card-skills-title": "Навыки",
   "business-card-stats-title": "Статистика",
   "title": "{{authorName}} :: Разработчик программного обеспечения",
-  "business-card-version": "Версия {{version}}",
+  "version": "Версия {{version}}",
   "business-card-year-plural": "лет",
   "business-card-year-singular": "год"
 }

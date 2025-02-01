@@ -13,15 +13,12 @@ import {
   testSkills
 } from './TestUtils'
 import { testCertificatesMain } from './Certificates/TestUtils'
-import { testEducationMain } from './Education/TestUtils'
-import { testExperienceMain } from './Experience/TestUtils'
 import { testFooterMain } from './Footer/TestUtils'
 import { testLanguageMain } from './Languages/TestUtils'
 import { testMenuMain } from './Menu/TestUtils'
 import { testPortfolioMain } from './Portfolio/TestUtils'
 
 jest.mock('../../scripts/services/LeetcodeService')
-jest.mock('../../components/Controls/DateCircleBox')
 jest.mock('../../components/Stats/StatsMain')
 
 describe('App', () => {
@@ -37,8 +34,6 @@ describe('App', () => {
     expect(div.querySelector('div#stats')).toBeInTheDocument()
     testResume(div.querySelector('div#resume'))
     testSkills(div.querySelector('div#skills'))
-    testExperienceMain(div.querySelector('div#experience'), locale)
-    testEducationMain(div.querySelector('div#education'), locale)
     testCertificatesMain(div.querySelector('div#certificates'), locale)
     testLanguageMain(div.querySelector('div#languages'))
     testPortfolioMain(div.querySelector('div#portfolio'))

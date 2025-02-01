@@ -1,7 +1,8 @@
 import * as React from 'react'
-import EducationItem from './EducationItem'
+import * as imgOSAR from '../../assets/images/education/osar.png'
+import { getDateLocale } from '../../scripts/utils/DateUtils'
 import SectionTitle from '../Controls/SectionTitle'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import { useTranslation} from 'react-i18next'
 
 export default function EducationMain() {
@@ -9,19 +10,20 @@ export default function EducationMain() {
   return (
     <div id="education" className="light-component">
       <Container>
-        <SectionTitle>{t('business-card-education-title')}</SectionTitle>
+        <SectionTitle>{t('education.title')}</SectionTitle>
         <Row>
-          <Col lg>
-            <ul className="timeline">
-              <li>
-                <EducationItem
-                  from={2005}
-                  to={2010}
-                  title={t('business-card-education-university-master')}
-                />
-              </li>
-            </ul>
-          </Col>
+          <ul className="timeline">
+            <li>
+              <p className="timeline-title">
+                <img src={imgOSAR} alt="Odesa State Academy of Refrigeration" />
+                {t('education.university.title')} ({t('business-card-location-odesa')})
+              </p>
+              <p className="timeline-subtitle">{getDateLocale(2005)} - {getDateLocale(2010)}</p>
+              <p className="timeline-body">
+                {t('education.university.speciality')}
+              </p>
+            </li>
+          </ul>
         </Row>
       </Container>
     </div>

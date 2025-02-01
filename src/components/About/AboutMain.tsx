@@ -7,6 +7,11 @@ import TotalExperience from '../../scripts/TotalExperience'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 
+type AboutMeItem = {
+  title: string,
+  list?: AboutMeItem[]
+}
+
 export default function AboutMain() {
   const { t, i18n } = useTranslation()
   const totalExperience = new TotalExperience()
@@ -15,22 +20,20 @@ export default function AboutMain() {
     returnObjects: true,
     totalExperience: totalExperience.humanize(i18n.language)
   })
-  const renderList = (level: number, array) => {
+
+  const renderList = (level: number, array: AboutMeItem[]) => {
     // For tests
-    if (typeof array === 'string') {
-      return array
-    }
-    return (
+    return typeof array === 'string' ? array : (
       <ul>
-        {array.map((item, index) => (
+        {array.map(({ title, list }: AboutMeItem, index: number) => (
           <li key={`about-me-item-${level}-${index}`}>
-            {item.title}
-            {Array.isArray(item.list) ? renderList(level + 1, item.list) : <></>}
+            {title}
+            {Array.isArray(list) ? renderList(level + 1, list) : <></>}
           </li>
         ))}
       </ul>
-    );
-  };
+    )
+  }
 
   return (
     <Container id="about-me">
@@ -49,9 +52,7 @@ export default function AboutMain() {
           />
         </Col>
         <Col md={{ span: 8, offset: 2 }}>
-          <ul className="mt-3">
-            {renderList(1, list)}
-          </ul>
+          {renderList(0, list as AboutMeItem[])}
         </Col>
       </Row>
     </Container>

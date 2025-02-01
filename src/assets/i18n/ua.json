@@ -18,7 +18,7 @@
       { "title": "Досвід роботи з кількома командами та відділами для інтеграції всіх частин розробки разом." },
       { "title": "Досвід навчання та наставництва молодших колег." },
       { "title": "Впевнені знання та досвід у розробці backend, frontend, інфраструктури та CI/CD." },
-      { "title": "Великий досвід Java, TypeScript, C#, Python, GitHub Actions, DevSecOps, Application Security." },
+      { "title": "Великий досвід Java, TypeScript, Go, Python, GitHub Actions, DevSecOps, Application Security." },
       { "title": "Написання клієнтської та внутрішньої документації." },
       { "title": "Публікація технічних статей." },
       {
@@ -33,19 +33,26 @@
     ]
   },
   "author-name": "Євген Фабіжевський",
-  "business-card-badges-title": "Бейджі",
-  "business-card-certificate-1": "Програмування для всіх (Python)",
-  "business-card-certificate-10": "Certified DevSecOps Professional (CDP)",
-  "business-card-certificate-11": "GitHub Copilot",
-  "business-card-certificate-2": "Паралельне, конкурентне та розподілене програмування в Java спеціалізації",
-  "business-card-certificate-3": "Повний курс React розробника (з хуками та Redux)",
-  "business-card-certificate-4": "Oracle Certified Associate, Програміст Java SE 8",
-  "business-card-certificate-5": "Problem Solving (Basic)",
-  "business-card-certificate-6": "GitHub Advanced Security",
-  "business-card-certificate-7": "GitHub Actions",
-  "business-card-certificate-8": "GitHub Foundations",
-  "business-card-certificate-9": "GitHub Administration",
-  "business-card-certificates-title": "Сертифікати",
+  "badges": {
+    "title": "Бейджі"
+  },
+  "by-issuer": "від {{issuer}}",
+  "certificates": {
+    "title": "Сертифікати",
+    "list": {
+      "MWE43H8YDS": "Програмування для всіх (Python)",
+      "W5AB2PBZQNPY": "Паралельне, конкурентне та розподілене програмування в Java спеціалізації",
+      "UC-JGDVYKAQ": "Повний курс React розробника (з хуками та Redux)",
+      "689b9d7e-cae5-4e36-8a1f-c8c34f104249": "Oracle Certified Associate, Програміст Java SE 8",
+      "F75CDD8ED9F0": "Problem Solving (Basic)",
+      "24722d5e-1738-4cec-808b-b4b83a94a8ad": "GitHub Advanced Security",
+      "711c8e30-13e7-499e-aad6-5da9d468177a": "GitHub Actions",
+      "6f36f952-612a-4aa1-8a3d-adb29396c967": "GitHub Foundations",
+      "a1c1ec77-29db-4139-8fcb-ac95408653e8": "GitHub Administration",
+      "9f12275d-a5b5-4d4d-9127-c975c555f0ab": "Certified DevSecOps Professional (CDP)",
+      "55ddd8bd-950d-45bb-ad25-d08269bc9ca1": "GitHub Copilot"
+    }
+  },
   "business-card-contact-city": "Токіо, Японія",
   "business-card-contact-title": "Контакти",
   "business-card-education-title": "Освіта",

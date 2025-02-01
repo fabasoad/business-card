@@ -8,7 +8,7 @@ export default function Badges() {
   const { t } = useTranslation()
   return (
     <div id="badges" className="light-component">
-      <SectionTitle>{t('business-card-badges-title')}</SectionTitle>
+      <SectionTitle>{t('badges.title')}</SectionTitle>
       <Container>
         <Row>
           <Col sm md lg className="text-center">

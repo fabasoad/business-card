@@ -15,7 +15,7 @@ export default function CertificatesMain() {
   const technologyStorage = new TechnologyStorage()
   return (
     <div id="certificates" className="light-component">
-      <SectionTitle>{t('business-card-certificates-title')}</SectionTitle>
+      <SectionTitle>{t('certificates.title')}</SectionTitle>
       <Container>
         <Row xs={2} sm={3} md={4} lg={6}>
           {
@@ -29,16 +29,16 @@ export default function CertificatesMain() {
                 if (res !== 0) {
                   return -res
                 }
-                return -t(b.i18nTitleKey).localeCompare(t(a.i18nTitleKey))
+                return -t(b.issuer).localeCompare(t(a.issuer))
               })
-              .map(({ id, date, issuer, technology, url, i18nTitleKey }) =>
+              .map(({ id, date, issuer, technology, url }) =>
                 <Col lg className="mb-2" key={id}>
                   <CertificateItem
                     id={id}
                     issueDate={new Date(date)}
                     issuer={certificateIssuerStorage.findByName(issuer)}
                     technology={technologyStorage.findByName(technology)}
-                    name={t(i18nTitleKey)}
+                    name={t(`certificates.list.${id}`)}
                     url={url}
                   />
                 </Col>

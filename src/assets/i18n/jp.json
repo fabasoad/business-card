@@ -10,42 +10,49 @@
     "title": "自己紹介",
     "list": [
       { "title": "{{totalExperience}}の商用ソフトウェア開発。" },
-      { "title": "Experience in managing team." },
-      { "title": "Leading features and projects." },
-      { "title": "Designing software architecture." },
-      { "title": "Planning features implementation and delivery them in time." },
-      { "title": "Conducting technical and manager interviews." },
-      { "title": "Experience in working with multiple teams and departments to integrate all development pieces together." },
-      { "title": "Experience in mentoring and teaching junior peers." },
-      { "title": "Solid knowledge and experience in backend, frontend, infrastructure, CI/CD development." },
-      { "title": "Strong experience in Java, TypeScript, C#, Python, GitHub Actions, DevSecOps, Application Security." },
-      { "title": "Writing customer facing as well as internal documentation." },
-      { "title": "Publishing technical articles." },
+      { "title": "チームを管理した経験。" },
+      { "title": "機能やプロジェクトのリード。" },
+      { "title": "ソフトウェアアーキテクチャの設計。" },
+      { "title": "機能の実装計画と納期内での提供。" },
+      { "title": "技術面およびマネージャー面接の実施。" },
+      { "title": "複数のチームや部門と連携し、開発要素を統合した経験。" },
+      { "title": "ジュニアメンバーへの指導および教育経験。" },
+      { "title": "バックエンド、フロントエンド、インフラ、CI/CD開発における豊富な知識と経験。" },
+      { "title": "Java、TypeScript、Go、GitHub Actions、DevSecOps、アプリケーションセキュリティにおける強力な実績。" },
+      { "title": "顧客向けおよび社内向けドキュメントの作成。" },
+      { "title": "技術記事の公開。" },
       {
-        "title": "Participating in open source community:",
+        "title": "オープンソースコミュニティへの参加：",
         "list": [
-          "Creating pull requests and opening tickets to open source projects",
-          "Developed and released 35+ GitHub Actions to the marketplace",
-          "Actively participating in StackOverflow and LeetCode discussions"
+          "プルリクエスト作成やオープンソースプロジェクトへのチケット提出。",
+          "GitHub Actionsを35以上開発・リリースし、マーケットプレイスで公開。",
+          "StackOverflowやLeetCodeディスカッションへの積極的参加。"
         ]
       },
-      { "title": "Business level English." }
+      { "title": "ビジネスレベルの英語力。" }
     ]
   },
   "author-name": "ファビジェブスキーイェブヘン",
-  "business-card-badges-title": "バッジ",
-  "business-card-certificate-1": "Programming for everybody (Python)",
-  "business-card-certificate-10": "Certified DevSecOps Professional (CDP)",
-  "business-card-certificate-11": "GitHub Copilot",
-  "business-card-certificate-2": "Parallel, Concurrent, and Distributed Programming in Java Specialization",
-  "business-card-certificate-3": "The Complete React Developer Course (w/ Hooks and Redux)",
-  "business-card-certificate-4": "Oracle Certified Associate, Java SE 8 Programmer",
-  "business-card-certificate-5": "Problem Solving (Basic)",
-  "business-card-certificate-6": "GitHub Advanced Security",
-  "business-card-certificate-7": "GitHub Actions",
-  "business-card-certificate-8": "GitHub Foundations",
-  "business-card-certificate-9": "GitHub Administration",
-  "business-card-certificates-title": "資格",
+  "badges": {
+    "title": "バッジ"
+  },
+  "by-issuer": "{{issuer}}から",
+  "certificates": {
+    "title": "資格",
+    "list": {
+      "MWE43H8YDS": "Programming for everybody (Python)",
+      "W5AB2PBZQNPY": "Parallel, Concurrent, and Distributed Programming in Java Specialization",
+      "UC-JGDVYKAQ": "The Complete React Developer Course (w/ Hooks and Redux)",
+      "689b9d7e-cae5-4e36-8a1f-c8c34f104249": "Oracle Certified Associate, Java SE 8 Programmer",
+      "F75CDD8ED9F0": "Problem Solving (Basic)",
+      "24722d5e-1738-4cec-808b-b4b83a94a8ad": "GitHub Advanced Security",
+      "711c8e30-13e7-499e-aad6-5da9d468177a": "GitHub Actions",
+      "6f36f952-612a-4aa1-8a3d-adb29396c967": "GitHub Foundations",
+      "a1c1ec77-29db-4139-8fcb-ac95408653e8": "GitHub Administration",
+      "9f12275d-a5b5-4d4d-9127-c975c555f0ab": "Certified DevSecOps Professional (CDP)",
+      "55ddd8bd-950d-45bb-ad25-d08269bc9ca1": "GitHub Copilot"
+    }
+  },
   "business-card-contact-city": "日本、東京都",
   "business-card-contact-title": "連絡先",
   "business-card-education-title": "学歴",
@@ -233,7 +240,7 @@
   "business-card-resume-message": "私の履歴書をダウンロードするには、<1>LinkedInページ</1>にアクセスし、「リソース」→「PDFとして保存」を選択してください。",
   "business-card-resume-title": "履歴書",
   "business-card-skills-title": "スキル",
-  "business-card-stats-title": "Stats",
+  "business-card-stats-title": "データ",
   "title": "{{authorName}} :: シニアソフトウェアエンジニア",
   "business-card-version": "バージョン{{version}}",
   "business-card-year-plural": "年",

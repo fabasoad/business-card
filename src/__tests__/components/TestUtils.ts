@@ -9,7 +9,7 @@ export function testBadges(div: HTMLDivElement) {
   expect(div).toHaveClass('light-component')
   testSectionTitle(
     div.querySelector('div.section-title'),
-    'business-card-badges-title'
+    'badges.title'
   )
   const divContainer = div.querySelector('div.container')
   expect(divContainer).not.toBeNull()

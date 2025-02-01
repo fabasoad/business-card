@@ -18,7 +18,7 @@
       { "title": "Опыт работы с несколькими командами и отделами для интеграции всех частей разработки вместе." },
       { "title": "Опыт обучения и наставничества младших коллег." },
       { "title": "Уверенные знания и опыт в разработке backend, frontend, инфраструктуры и CI/CD." },
-      { "title": "Большой опыт в Java, TypeScript, C#, Python, GitHub Actions, DevSecOps, Application Security." },
+      { "title": "Большой опыт в Java, TypeScript, Go, Python, GitHub Actions, DevSecOps, Application Security." },
       { "title": "Написание клиентской и внутренней документации." },
       { "title": "Публикация технических статей." },
       {
@@ -33,19 +33,26 @@
     ]
   },
   "author-name": "Евгений Фабижевский",
-  "business-card-badges-title": "Бэйджи",
-  "business-card-certificate-1": "Программирование для всех (Python)",
-  "business-card-certificate-10": "Certified DevSecOps Professional (CDP)",
-  "business-card-certificate-11": "GitHub Copilot",
-  "business-card-certificate-2": "Параллельное, конкурентное, и распределенное программирование в Java специализации",
-  "business-card-certificate-3": "Полный курс React разработчика (с хуками и Redux)",
-  "business-card-certificate-4": "Oracle Certified Associate, Программист Java SE 8",
-  "business-card-certificate-5": "Problem Solving (Basic)",
-  "business-card-certificate-6": "GitHub Advanced Security",
-  "business-card-certificate-7": "GitHub Actions",
-  "business-card-certificate-8": "GitHub Foundations",
-  "business-card-certificate-9": "GitHub Administration",
-  "business-card-certificates-title": "Сертификаты",
+  "badges": {
+    "title": "Бэйджи"
+  },
+  "by-issuer": "от {{issuer}}",
+  "certificates": {
+    "title": "Сертификаты",
+    "list": {
+      "MWE43H8YDS": "Программирование для всех (Python)",
+      "W5AB2PBZQNPY": "Параллельное, конкурентное, и распределенное программирование в Java специализации",
+      "UC-JGDVYKAQ": "Полный курс React разработчика (с хуками и Redux)",
+      "689b9d7e-cae5-4e36-8a1f-c8c34f104249": "Oracle Certified Associate, Программист Java SE 8",
+      "F75CDD8ED9F0": "Problem Solving (Basic)",
+      "24722d5e-1738-4cec-808b-b4b83a94a8ad": "GitHub Advanced Security",
+      "711c8e30-13e7-499e-aad6-5da9d468177a": "GitHub Actions",
+      "6f36f952-612a-4aa1-8a3d-adb29396c967": "GitHub Foundations",
+      "a1c1ec77-29db-4139-8fcb-ac95408653e8": "GitHub Administration",
+      "9f12275d-a5b5-4d4d-9127-c975c555f0ab": "Certified DevSecOps Professional (CDP)",
+      "55ddd8bd-950d-45bb-ad25-d08269bc9ca1": "GitHub Copilot"
+    }
+  },
   "business-card-contact-city": "Токио, Япония",
   "business-card-contact-title": "Контакты",
   "business-card-education-title": "Образование",

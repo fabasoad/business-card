@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { Card } from 'react-bootstrap'
+import { useTranslation } from 'react-i18next'
 import { CertificateIssuer } from '../../scripts/certificates/types'
 import { Technology } from '../../scripts/technologies/types'
 import { getDateLocale } from '../../scripts/utils/DateUtils'
@@ -16,6 +17,8 @@ interface CertificateItemProps {
 export default function CertificateItem({
   issueDate, issuer, name, url
 }: CertificateItemProps) {
+  const { t } = useTranslation()
+
   return (
     <Card>
       <Card.Body className="d-flex flex-column">
@@ -27,7 +30,7 @@ export default function CertificateItem({
             {name}
           </Card.Link>
         </Card.Title>
-        <Card.Subtitle>Issuer: {issuer.name}</Card.Subtitle>
+        <Card.Subtitle>{t('by-issuer', { issuer: issuer.name })}</Card.Subtitle>
       </Card.Body>
       <Card.Footer>
         {getDateLocale(issueDate.getFullYear(), issueDate.getMonth())}

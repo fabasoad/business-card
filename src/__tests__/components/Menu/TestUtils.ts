@@ -5,7 +5,7 @@ export function testLocaleDropDown(div: HTMLDivElement, locale: Locale) {
   expect(div).toHaveClass('dropdown')
   const button = div.querySelector('button')
   expect(button).toHaveClass('nav-link')
-  expect(button).toHaveTextContent(`business-card-languages-${locale.code}`)
+  expect(button).toHaveTextContent(`languages.codes.${locale.code}`)
   expect(button.querySelector('i.locale-icon')).not.toBeNull()
 }
 
@@ -34,7 +34,6 @@ export function testMenuMain(div: HTMLDivElement) {
     'skills',
     'experience',
     'education',
-    'portfolio',
     'resume',
     'badges',
     'contact'
@@ -54,7 +53,7 @@ export function testMenuMain(div: HTMLDivElement) {
   const navbarNav = navbarCollapse.querySelector('div.navbar-nav')
   expect(navbarNav).not.toBeNull()
   const navLinkElements = navbarNav.querySelectorAll('a.nav-link')
-  expect(navLinkElements).toHaveLength(8)
+  expect(navLinkElements).toHaveLength(7)
   for (const navLink of navLinkElements) {
     const actual = navLink.getAttribute('href')
     const ind = expected.findIndex((v: string): boolean => `#${v}` === actual)

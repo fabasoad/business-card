@@ -11,7 +11,7 @@ export default function LanguageItem({
   const { t } = useTranslation()
   return (
     <div className="mb-4 mx-4">
-      <div className="h4">{t(`business-card-languages-${code}`)}</div>
+      <div className="h4">{t(`languages.codes.${code}`)}</div>
       {children}
     </div>
   )

@@ -12,8 +12,8 @@ export default function Header() {
         <Button variant="primary" size="lg" href="#about">
           {t('header.about-me')}
         </Button>
-        <Button variant="primary" size="lg" href="#portfolio">
-          {t('header.portfolio')}
+        <Button variant="primary" size="lg" href="#experience">
+          {t('experience.title')}
         </Button>
       </div>
     </header>

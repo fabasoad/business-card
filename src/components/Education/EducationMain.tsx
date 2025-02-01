@@ -16,7 +16,7 @@ export default function EducationMain() {
             <li>
               <p className="timeline-title">
                 <img src={imgOSAR} alt="Odesa State Academy of Refrigeration" />
-                {t('education.university.title')} ({t('business-card-location-odesa')})
+                {t('education.university.title')} ({t('locations.odesa')})
               </p>
               <p className="timeline-subtitle">{getDateLocale(2005)} - {getDateLocale(2010)}</p>
               <p className="timeline-body">

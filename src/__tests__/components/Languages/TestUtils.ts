@@ -22,10 +22,7 @@ export function testLanguageLinkItem(
 
 export function testLanguageMain(div: HTMLDivElement) {
   expect(div).toHaveClass('light-component')
-  testSectionTitle(
-    div.querySelector('div.section-title'),
-    'business-card-languages-title'
-  )
+  testSectionTitle(div.querySelector('div.section-title'), 'languages.title')
   const divContainer = div.querySelector('div.container')
   expect(divContainer).not.toBeNull()
   const divRow = divContainer.querySelector('div.row')
@@ -50,7 +47,7 @@ export function testLanguageMain(div: HTMLDivElement) {
   testLanguageTextItem(
     divLanguages.item(2) as HTMLDivElement,
     'ua',
-    'business-card-languages-native'
+    'languages.native'
   )
 }
 

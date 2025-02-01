@@ -19,7 +19,7 @@ export default function ExperienceMain() {
             <li>
               <p className="timeline-title">
                 <img src={imgWbyT}  alt="Woven by Toyota" />
-                Woven by Toyota ({t('business-card-location-chuo')})
+                Woven by Toyota ({t('locations.chuo')})
               </p>
               <p className="timeline-subtitle">{getDateLocale(2020, 4)} - {t('experience.present')}</p>
               <div className="timeline-body">
@@ -40,7 +40,7 @@ export default function ExperienceMain() {
             <li>
               <p className="timeline-title">
                 <img src={imgBitcoinCom}  alt="Bitcoin.com" />
-                Bitcoin.com ({t('business-card-location-shibuya')})
+                Bitcoin.com ({t('locations.shibuya')})
               </p>
               <p className="timeline-subtitle">{getDateLocale(2018, 8)} - {getDateLocale(2020, 3)}</p>
               <div className="timeline-body">
@@ -60,7 +60,7 @@ export default function ExperienceMain() {
             <li>
               <p className="timeline-title">
                 <img src={imgLohika}  alt="Lohika" />
-                Lohika ({t('business-card-location-odesa')})
+                Lohika ({t('locations.odesa')})
               </p>
               <p className="timeline-subtitle">{getDateLocale(2011, 9)} - {getDateLocale(2018, 8)}</p>
               <p className="timeline-body">
@@ -73,7 +73,7 @@ export default function ExperienceMain() {
             <li>
               <p className="timeline-title">
                 <img src={imgArkaFSS}  alt="ARKA - Finance, Software, Services" />
-                ARKA - Finance, Software, Services ({t('business-card-location-odesa')})
+                ARKA - Finance, Software, Services ({t('locations.odesa')})
               </p>
               <p className="timeline-subtitle">{getDateLocale(2010, 2)} - {getDateLocale(2011, 8)}</p>
               <p className="timeline-body">

@@ -16,7 +16,6 @@ import { testCertificatesMain } from './Certificates/TestUtils'
 import { testFooterMain } from './Footer/TestUtils'
 import { testLanguageMain } from './Languages/TestUtils'
 import { testMenuMain } from './Menu/TestUtils'
-import { testPortfolioMain } from './Portfolio/TestUtils'
 
 jest.mock('../../scripts/services/LeetcodeService')
 jest.mock('../../components/Stats/StatsMain')
@@ -36,7 +35,6 @@ describe('App', () => {
     testSkills(div.querySelector('div#skills'))
     testCertificatesMain(div.querySelector('div#certificates'), locale)
     testLanguageMain(div.querySelector('div#languages'))
-    testPortfolioMain(div.querySelector('div#portfolio'))
     testBadges(div.querySelector('div#badges'))
     testFooterMain(div.querySelector('div.footer'))
   })

@@ -44,7 +44,7 @@ export function testHeader(header: HTMLElement) {
   expect(h5).toHaveClass('header__text-subtitle')
   expect(h5).toHaveTextContent('header.occupation')
   testButton(divHeaderText, '#about', 'header.about-me')
-  testButton(divHeaderText, '#portfolio', 'header.portfolio')
+  testButton(divHeaderText, '#experience', 'experience.title')
 }
 
 export function testResume(div: HTMLDivElement) {

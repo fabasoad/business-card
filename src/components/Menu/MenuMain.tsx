@@ -43,7 +43,6 @@ export default function MenuMain() {
             <MenuItem setActiveNavLink={setActiveNavLink} name={'skills'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'experience'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'education'} />
-            <MenuItem setActiveNavLink={setActiveNavLink} name={'portfolio'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'resume'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'badges'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'contact'} />

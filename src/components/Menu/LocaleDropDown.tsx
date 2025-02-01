@@ -11,7 +11,7 @@ export default function LocaleDropDown() {
     <Dropdown>
       <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
         <i className="fa fa-globe locale-icon"></i>
-        {t(`business-card-languages-${SupportedLocales.getOrDefault(i18n.language).code}`)}
+        {t(`languages.codes.${SupportedLocales.getOrDefault(i18n.language).code}`)}
       </Dropdown.Toggle>
       <Dropdown.Menu>
         {SupportedLocales.getExceptOf(i18n.language).map((l: Locale) => {
@@ -22,7 +22,7 @@ export default function LocaleDropDown() {
               eventKey={l.code}
               key={`dropdown-item-${l.code}`}
             >
-              {t(`business-card-languages-${l.code}`, { lng: l.code })}
+              {t(`languages.codes.${l.code}`, { lng: l.code })}
             </Dropdown.Item>
           )
         })}

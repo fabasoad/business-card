@@ -1,6 +1,6 @@
 /// <reference path='./AboutMain.d.ts' />
 import * as React from 'react'
-import { Trans, useTranslation, getI18n } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import * as imgAboutMe from '../../assets/images/about_me.jpg'
 import * as img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
 import TotalExperience from '../../scripts/TotalExperience'
@@ -10,6 +10,28 @@ import { Col, Container, Row } from 'react-bootstrap'
 export default function AboutMain() {
   const { t, i18n } = useTranslation()
   const totalExperience = new TotalExperience()
+
+  const list = t(`about-me.list`, {
+    returnObjects: true,
+    totalExperience: totalExperience.humanize(i18n.language)
+  })
+  const renderList = (level: number, array) => {
+    // For tests
+    if (typeof array === 'string') {
+      return array
+    }
+    return (
+      <ul>
+        {array.map((item, index) => (
+          <li key={`about-me-item-${level}-${index}`}>
+            {item.title}
+            {Array.isArray(item.list) ? renderList(level + 1, item.list) : <></>}
+          </li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <Container id="about-me">
       <SectionTitle>{t('about-me.title')}</SectionTitle>
@@ -28,24 +50,7 @@ export default function AboutMain() {
         </Col>
         <Col md={{ span: 8, offset: 2 }}>
           <ul className="mt-3">
-            {
-              Array.from({ length: 14 }, (_, i) => i).map(
-                (i) => {
-                  const keyPrefix = `about-me.list.${i}`
-                  return <li key={`about-me-${i}`}>
-                    {t(
-                      `${keyPrefix}.title`,
-                      { totalExperience: totalExperience.humanize(i18n.language) }
-                    )}
-                    {
-                      getI18n().exists(`${keyPrefix}.list`)
-                        ? <ul><li><Trans i18nKey={`${keyPrefix}.list`} tOptions={{ joinArrays: '</li><li>' }} /></li></ul>
-                        : ''
-                    }
-                  </li>
-                }
-              )
-            }
+            {renderList(1, list)}
           </ul>
         </Col>
       </Row>

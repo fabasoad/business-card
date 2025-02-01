@@ -4,16 +4,25 @@
 ul.timeline {
   list-style-type: none;
   position: relative;
+  margin: 0 0.5rem;
 
   div.timeline__body {
-    margin-left: 1rem;
+    div.timeline__body__achievements {
+      @extend .font-bold;
+    }
+  }
+
+  div.timeline__tech-stack {
+    margin-top: 1rem;
+
+    .timeline__tech-stack__title {
+      @extend .font-bold;
+    }
   }
 
   p {
-    margin-left: 1rem;
-
     &.timeline__title {
-      @extend .font-bold;
+      @extend .font-extra-bold;
       margin-bottom: 0;
 
       img {
@@ -27,10 +36,6 @@ ul.timeline {
     &.timeline__subtitle {
       padding-top: 0.1rem;
       font-size: 0.8rem;
-    }
-
-    &.timeline__tech-stack {
-      margin-top: 1rem;
     }
   }
 

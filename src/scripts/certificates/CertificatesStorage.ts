@@ -52,7 +52,7 @@ class CertificatesStorage {
       .map((json: CertificateJSON) => ({
         id: json.id,
         date: new Date(json.date),
-        issuer: json.issuer.replaceAll('-', ' '),
+        issuer: (json.issuer === 'github' ? 'GitHub' : json.issuer).replaceAll('-', ' '),
         technology: this._technologyStorage.findByName(json.technology),
         url: json.url,
         img: map.get(json.id)

@@ -34,9 +34,7 @@ export default function App404({ redirectUrl = BaseConstants.BASE_URL }: App404P
 
   return (
     <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
-      <p>
-        <>{t('404.text.1')}</>
-      </p>
+      <p>{t('404.text.1')}</p>
       <p>
         <>
           <span className="blinker-prefix"></span>
@@ -46,11 +44,9 @@ export default function App404({ redirectUrl = BaseConstants.BASE_URL }: App404P
         </>
       </p>
       <p style={isRedirectingStyle(true)}>
-        <>
-          {t('404.text.3')}
-          <span>{counter}</span>
-          <span className="blinker">_</span>
-        </>
+        {t('404.text.3')}
+        <span>{counter}</span>
+        <span className="blinker">_</span>
       </p>
     </div>
   )

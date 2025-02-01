@@ -11,7 +11,7 @@ import SupportedLocales from './SupportedLocales'
 import { Locale } from './types'
 import { initReactI18next } from 'react-i18next'
 
-export type I18nServiceCallback = (code: string, t: i18n.TFunction) => void
+type I18nServiceCallback = (code: string, t: i18n.TFunction) => void
 
 export enum I18nServiceCallbackTypes {
   ON_LOADED,

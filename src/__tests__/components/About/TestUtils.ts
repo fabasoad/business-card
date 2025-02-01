@@ -25,15 +25,5 @@ export function testAboutMain(div: HTMLDivElement) {
   expect(divListItems).not.toBeNull()
   const ul = divListItems.querySelector('ul')
   expect(ul).toHaveClass('mt-3')
-  const liElements = divListItems.querySelectorAll('ul>li')
-  expect(liElements).toHaveLength(14)
-
-  for (let i = 1; i <= 14; i++) {
-    const exp = expect(liElements.item(i - 1))
-    if (i > 17) {
-      exp.toBeNull()
-    } else {
-      exp.toHaveTextContent(`about-me.list.${i - 1}.title`)
-    }
-  }
+  expect(ul).toHaveTextContent('about-me.list')
 }

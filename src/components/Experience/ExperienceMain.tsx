@@ -4,7 +4,6 @@ import * as imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'
 import * as imgLohika from '../../assets/images/companies/lohika.png'
 import * as imgWbyT from '../../assets/images/companies/wbyt.png'
 import i18nService, {
-  I18nServiceCallback,
   I18nServiceCallbackTypes
 } from '../../scripts/i18n/I18nService'
 import { getDateLocale } from '../../scripts/utils/DateUtils'
@@ -13,15 +12,16 @@ import { useTranslation } from 'react-i18next'
 import SectionTitle from '../Controls/SectionTitle';
 
 export default function ExperienceMain() {
-  const { t } = useTranslation()
+  const getClazzName = (code: string) =>
+    `font-${code === 'jp' ? '' : 'non-'}jp`
 
-  const [clazz, setClazz] = React.useState<string>('font-jp')
+  const { t, i18n } = useTranslation()
+  const [clazz, setClazz] = React.useState<string>(getClazzName(i18n.language))
 
-  const callback: I18nServiceCallback =
-    (code: string) => setClazz(`font-${code === 'jp' ? '' : 'non-'}jp`)
-
-  i18nService.registerCallback(I18nServiceCallbackTypes.ON_LOADED, callback)
-  i18nService.registerCallback(I18nServiceCallbackTypes.ON_CHANGED, callback)
+  i18nService.registerCallback(
+    I18nServiceCallbackTypes.ON_CHANGED,
+    (code: string) => setClazz(getClazzName(code))
+  )
 
   return (
     <div id="experience" className="light-component">
@@ -36,7 +36,7 @@ export default function ExperienceMain() {
               </p>
               <p className="timeline__subtitle">{getDateLocale(2020, 4)} - {t('experience.present')}</p>
               <div className="timeline__body">
-                <div>{t('experience.achievements')}:</div>
+                <div className={`timeline__body__achievements ${clazz}`}>{t('experience.achievements')}</div>
                 <ul>
                   <li>Created 3 main Application Security GitHub Actions for performing code scanning, SCA and SBOM analysis. They are used widely within the whole company. Currently, there are 1000+ invocations of those GitHub Actions per day.</li>
                   <li>Designed authN/authZ system that is used as a core Auth system within the whole department (11 teams).</li>
@@ -46,9 +46,10 @@ export default function ExperienceMain() {
                   <li>Leading backend project in Go from E2E.</li>
                 </ul>
               </div>
-              <p className="timeline__tech-stack">
-                {t('experience.tech-stack.title')}: Java, Go, TypeScript, React, Terraform, AWS, GitLab CI, Concourse CI, GitHub Actions, shell scripting, Python, Kubernetes, MongoDB, Keycloak, Azure AD, GitHub, Application Security.
-              </p>
+              <div className="timeline__tech-stack">
+                <div className={`timeline__tech-stack__title ${clazz}`}>{t('experience.tech-stack.title')}</div>
+                Java, Go, TypeScript, React, Terraform, AWS, GitLab CI, Concourse CI, GitHub Actions, shell scripting, Python, Kubernetes, MongoDB, Keycloak, Azure AD, GitHub, Application Security.
+              </div>
             </li>
             <li>
               <p className={`timeline__title ${clazz}`}>
@@ -57,7 +58,7 @@ export default function ExperienceMain() {
               </p>
               <p className="timeline__subtitle">{getDateLocale(2018, 8)} - {getDateLocale(2020, 3)}</p>
               <div className="timeline__body">
-                <div>{t('experience.achievements')}:</div>
+                <div className={`timeline__body__achievements ${clazz}`}>{t('experience.achievements')}</div>
                 <ul>
                   <li>Increased unit tests code coverage on a Java backend project from 0% to 80%.</li>
                   <li>Restored legacy Android application. Upgraded it to the latest version, redesigned, added additional features and published a new release.</li>
@@ -66,9 +67,10 @@ export default function ExperienceMain() {
                   <li>Configured GitHub Actions for the web application from scratch.</li>
                 </ul>
               </div>
-              <p className="timeline__tech-stack">
-                {t('experience.tech-stack.title')}: Java, JavaScript, GitHub Actions, Python, Redis, Kafka, Travis CI, Bitrise, GitHub.
-              </p>
+              <div className="timeline__tech-stack">
+                <div className={`timeline__tech-stack__title ${clazz}`}>{t('experience.tech-stack.title')}</div>
+                Java, JavaScript, GitHub Actions, Python, Redis, Kafka, Travis CI, Bitrise, GitHub.
+              </div>
             </li>
             <li>
               <p className={`timeline__title ${clazz}`}>
@@ -79,9 +81,10 @@ export default function ExperienceMain() {
               <div className="timeline__body">
                 Lohika is an outsourcing company, where I was working as an off-shore contractor for various companies but mostly for Hewlett Packard Enterprise. I developed RIA, backend, mobile and various web applications.
               </div>
-              <p className="timeline__tech-stack">
-                {t('experience.tech-stack.title')}: C#/WinForms/Xamarin/.NET Core, Java, JavaScript, Angular, Oracle, MSSQL, Redis, Kubernetes, GitHub, Docker, Prometheus, ELK, Helm, Delphi.
-              </p>
+              <div className="timeline__tech-stack">
+                <div className={`timeline__tech-stack__title ${clazz}`}>{t('experience.tech-stack.title')}</div>
+                C#/WinForms/Xamarin/.NET Core, Java, JavaScript, Angular, Oracle, MSSQL, Redis, Kubernetes, GitHub, Docker, Prometheus, ELK, Helm, Delphi.
+              </div>
             </li>
             <li>
               <p className={`timeline__title ${clazz}`}>
@@ -92,9 +95,10 @@ export default function ExperienceMain() {
               <div className="timeline__body">
                 Developing investing application as an internal project. Also, developing various web applications for external customers mostly from Germany.
               </div>
-              <p className="timeline__tech-stack">
-                {t('experience.tech-stack.title')}: C#/Silverlight, JavaScript, PHP, MySQL.
-              </p>
+              <div className="timeline__tech-stack">
+                <div className={`timeline__tech-stack__title ${clazz}`}>{t('experience.tech-stack.title')}</div>
+                C#/Silverlight, JavaScript, PHP, MySQL.
+              </div>
             </li>
           </ul>
         </Row>

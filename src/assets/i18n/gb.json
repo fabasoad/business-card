@@ -24,9 +24,9 @@
       {
         "title": "Participating in open source community:",
         "list": [
-          "Creating pull requests and opening tickets to open source projects",
-          "Developed and released 35+ GitHub Actions to the marketplace",
-          "Actively participating in StackOverflow and LeetCode discussions"
+          { "title": "Creating pull requests and opening tickets to open source projects" },
+          { "title": "Developed and released 35+ GitHub Actions to the marketplace" },
+          { "title": "Actively participating in StackOverflow and LeetCode discussions" }
         ]
       },
       { "title": "Business level English." }

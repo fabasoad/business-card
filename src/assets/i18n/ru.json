@@ -24,9 +24,9 @@
       {
         "title": "Участие в open source сообществе:",
         "list": [
-          "Создание pull requests и открытие тикетов в open source проектах.",
-          "Разработано и выпущено в marketplace больше, чем 35 GitHub Actions.",
-          "Активное участие в StackOverflow и LeetCode дискуссиях."
+          { "title": "Создание pull requests и открытие тикетов в open source проектах." },
+          { "title": "Разработано и выпущено в marketplace больше, чем 35 GitHub Actions." },
+          { "title": "Активное участие в StackOverflow и LeetCode дискуссиях." }
         ]
       },
       { "title": "Профессиональный уровень владения английским языком." }

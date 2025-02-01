@@ -14,14 +14,14 @@ export default function EducationMain() {
         <Row>
           <ul className="timeline">
             <li>
-              <p className="timeline-title">
+              <p className="timeline__title">
                 <img src={imgOSAR} alt="Odesa State Academy of Refrigeration" />
                 {t('education.university.title')} ({t('locations.odesa')})
               </p>
-              <p className="timeline-subtitle">{getDateLocale(2005)} - {getDateLocale(2010)}</p>
-              <p className="timeline-body">
+              <p className="timeline__subtitle">{getDateLocale(2005)} - {getDateLocale(2010)}</p>
+              <div className="timeline__body">
                 {t('education.university.speciality')}
-              </p>
+              </div>
             </li>
           </ul>
         </Row>

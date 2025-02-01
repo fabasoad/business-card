@@ -12,7 +12,7 @@ export function testLocaleDropDown(div: HTMLDivElement, locale: Locale) {
 export function testMenuItemRendered(a: HTMLAnchorElement, name: string) {
   expect(a).toHaveClass('nav-link')
   expect(a).toHaveAttribute('href', `#${name}`)
-  expect(a).toHaveTextContent(`business-card-menu-${name}`)
+  expect(a).toHaveTextContent(`${name}.title`)
 }
 
 export function testMenuItemActive(
@@ -30,13 +30,13 @@ export function testMenuItemActive(
 
 export function testMenuMain(div: HTMLDivElement) {
   const expected = [
-    'about',
+    'about-me',
     'skills',
     'experience',
     'education',
     'resume',
     'badges',
-    'contact'
+    'contacts'
   ]
   expect(div).toHaveClass('affix-top')
   const nav = div.querySelector('nav')

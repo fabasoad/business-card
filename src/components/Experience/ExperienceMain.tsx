@@ -17,12 +17,12 @@ export default function ExperienceMain() {
         <Row>
           <ul className="timeline">
             <li>
-              <p className="timeline-title">
+              <p className="timeline__title">
                 <img src={imgWbyT}  alt="Woven by Toyota" />
                 Woven by Toyota ({t('locations.chuo')})
               </p>
-              <p className="timeline-subtitle">{getDateLocale(2020, 4)} - {t('experience.present')}</p>
-              <div className="timeline-body">
+              <p className="timeline__subtitle">{getDateLocale(2020, 4)} - {t('experience.present')}</p>
+              <div className="timeline__body">
                 <div>{t('experience.achievements')}:</div>
                 <ul>
                   <li>Created 3 main Application Security GitHub Actions for performing code scanning, SCA and SBOM analysis. They are used widely within the whole company. Currently, there are 1000+ invocations of those GitHub Actions per day.</li>
@@ -33,17 +33,17 @@ export default function ExperienceMain() {
                   <li>Leading backend project in Go from E2E.</li>
                 </ul>
               </div>
-              <p className="timeline-techstack">
+              <p className="timeline__tech-stack">
                 {t('experience.tech-stack.title')}: Java, Go, TypeScript, React, Terraform, AWS, GitLab CI, Concourse CI, GitHub Actions, shell scripting, Python, Kubernetes, MongoDB, Keycloak, Azure AD, GitHub, Application Security.
               </p>
             </li>
             <li>
-              <p className="timeline-title">
+              <p className="timeline__title">
                 <img src={imgBitcoinCom}  alt="Bitcoin.com" />
                 Bitcoin.com ({t('locations.shibuya')})
               </p>
-              <p className="timeline-subtitle">{getDateLocale(2018, 8)} - {getDateLocale(2020, 3)}</p>
-              <div className="timeline-body">
+              <p className="timeline__subtitle">{getDateLocale(2018, 8)} - {getDateLocale(2020, 3)}</p>
+              <div className="timeline__body">
                 <div>{t('experience.achievements')}:</div>
                 <ul>
                   <li>Increased unit tests code coverage on a Java backend project from 0% to 80%.</li>
@@ -53,33 +53,33 @@ export default function ExperienceMain() {
                   <li>Configured GitHub Actions for the web application from scratch.</li>
                 </ul>
               </div>
-              <p className="timeline-techstack">
+              <p className="timeline__tech-stack">
                 {t('experience.tech-stack.title')}: Java, JavaScript, GitHub Actions, Python, Redis, Kafka, Travis CI, Bitrise, GitHub.
               </p>
             </li>
             <li>
-              <p className="timeline-title">
+              <p className="timeline__title">
                 <img src={imgLohika}  alt="Lohika" />
                 Lohika ({t('locations.odesa')})
               </p>
-              <p className="timeline-subtitle">{getDateLocale(2011, 9)} - {getDateLocale(2018, 8)}</p>
-              <p className="timeline-body">
+              <p className="timeline__subtitle">{getDateLocale(2011, 9)} - {getDateLocale(2018, 8)}</p>
+              <div className="timeline__body">
                 Lohika is an outsourcing company, where I was working as an off-shore contractor for various companies but mostly for Hewlett Packard Enterprise. I developed RIA, backend, mobile and various web applications.
-              </p>
-              <p className="timeline-techstack">
+              </div>
+              <p className="timeline__tech-stack">
                 {t('experience.tech-stack.title')}: C#/WinForms/Xamarin/.NET Core, Java, JavaScript, Angular, Oracle, MSSQL, Redis, Kubernetes, GitHub, Docker, Prometheus, ELK, Helm, Delphi.
               </p>
             </li>
             <li>
-              <p className="timeline-title">
+              <p className="timeline__title">
                 <img src={imgArkaFSS}  alt="ARKA - Finance, Software, Services" />
                 ARKA - Finance, Software, Services ({t('locations.odesa')})
               </p>
-              <p className="timeline-subtitle">{getDateLocale(2010, 2)} - {getDateLocale(2011, 8)}</p>
-              <p className="timeline-body">
+              <p className="timeline__subtitle">{getDateLocale(2010, 2)} - {getDateLocale(2011, 8)}</p>
+              <div className="timeline__body">
                 Developing investing application as an internal project. Also, developing various web applications for external customers mostly from Germany.
-              </p>
-              <p className="timeline-techstack">
+              </div>
+              <p className="timeline__tech-stack">
                 {t('experience.tech-stack.title')}: C#/Silverlight, JavaScript, PHP, MySQL.
               </p>
             </li>

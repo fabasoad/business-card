@@ -4,14 +4,14 @@ ul.timeline {
   list-style-type: none;
   position: relative;
 
-  div.timeline-body {
+  div.timeline__body {
     margin-left: 1rem;
   }
 
   p {
     margin-left: 1rem;
 
-    &.timeline-title {
+    &.timeline__title {
       margin-bottom: 0;
 
       img {
@@ -22,9 +22,13 @@ ul.timeline {
       }
     }
 
-    &.timeline-subtitle {
+    &.timeline__subtitle {
       padding-top: 0.1rem;
       font-size: 0.8rem;
+    }
+
+    &.timeline__tech-stack {
+      margin-top: 1rem;
     }
   }
 

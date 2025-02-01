@@ -1,43 +1,22 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
-import CertificateIssuerStorage from '../../../scripts/certificates/CertificateIssuerStorage'
+import certificatesStorage from '../../../scripts/certificates/CertificatesStorage'
 import CertificateItem from '../../../components/Certificates/CertificateItem'
+import { Certificate } from '../../../scripts/certificates/types'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
-import TechnologyStorage from '../../../scripts/technologies/TechnologyStorage'
-import { CertificateIssuer } from '../../../scripts/certificates/types'
 import { render } from '@testing-library/react'
 import { testCertificateItem } from './TestUtils'
-import { Technology } from '../../../scripts/technologies/types'
 
 describe('CertificateItem', () => {
   test('should render CertificateItem correctly', () => {
-    const technologyStorage = new TechnologyStorage()
-    const certificateIssuerStorage = new CertificateIssuerStorage()
-
-    const issueDate = new Date(2022, 1, 22)
-    const technology: Technology = technologyStorage.findByName('maven')
-    const issuerName = 'udemy'
-    const issuer: CertificateIssuer = certificateIssuerStorage.findByName(issuerName)
-    const name = 'Udemy Certificate'
-    const url = 'certificate-url'
-
+    const certificate: Certificate = certificatesStorage.certificates[0]
     const { container } = render(
-      <CertificateItem
-        id={null}
-        issueDate={issueDate}
-        issuer={issuer}
-        technology={technology}
-        name={name}
-        url={url}
-      />
+      <CertificateItem certificate={certificate}/>
     )
     testCertificateItem(
       container.querySelector('div.card'),
       SupportedLocales.default,
-      issueDate,
-      issuer.name,
-      name,
-      url
+      certificate
     )
   })
 })

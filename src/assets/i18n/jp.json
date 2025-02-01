@@ -164,11 +164,14 @@
   "business-card-experience-job-wbyt-6-responsibilities-3": "Fixing bugs in GitHub Actions and SAST related tools that team owns.",
   "business-card-experience-job-wbyt-6-title": "Senior Software Engineer, Application Security",
   "experience": {
-    "present": "現在"
+    "present": "現在",
+    "title": "職歴",
+    "tech-stack": {
+      "title": "技術"
+    },
+    "achievements": "実績"
   },
   "business-card-experience-responsibilities-title": "Responsibilities",
-  "business-card-experience-technologies-title": "技術",
-  "business-card-experience-title": "職歴",
   "header": {
     "about-me": "自己紹介",
     "occupation": "シニアソフトウェアエンジニア",
@@ -227,11 +230,11 @@
   "business-card-portfolio-work-plus-title": "Work+",
   "business-card-portfolio-zakupki-subtitle": "フルスタックエンジニア - JavaScript, PHP",
   "business-card-portfolio-zakupki-title": "Zakupki Website",
-  "business-card-resume-message": "To download my resume please go to my <1>LinkedIn page</1> and choose Resources → Save to PDF",
+  "business-card-resume-message": "私の履歴書をダウンロードするには、<1>LinkedInページ</1>にアクセスし、「リソース」→「PDFとして保存」を選択してください。",
   "business-card-resume-title": "履歴書",
   "business-card-skills-title": "スキル",
   "business-card-stats-title": "Stats",
-  "business-card-title": "ファビジェブスキーイェブヘン :: シニアソフトウェアエンジニア",
+  "title": "{{authorName}} :: シニアソフトウェアエンジニア",
   "business-card-version": "バージョン{{version}}",
   "business-card-year-plural": "年",
   "business-card-year-singular": "年"

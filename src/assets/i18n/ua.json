@@ -164,11 +164,14 @@
   "business-card-experience-job-wbyt-6-responsibilities-3": "Виправлення помилок у GitHub Actions та інструментах, пов'язаних із SAST, якими володіє команда.",
   "business-card-experience-job-wbyt-6-title": "Старший інженер-програміст, Application Security",
   "experience": {
-    "present": "Зараз"
+    "present": "Зараз",
+    "title": "Досвід",
+    "tech-stack": {
+      "title": "Технології"
+    },
+    "achievements": "Досягнення"
   },
   "business-card-experience-responsibilities-title": "Обов'язки",
-  "business-card-experience-technologies-title": "Технології",
-  "business-card-experience-title": "Досвід",
   "header": {
     "about-me": "Про мене",
     "occupation": "Розробник програмного забезпечення",
@@ -231,7 +234,7 @@
   "business-card-resume-title": "Резюме",
   "business-card-skills-title": "Навички",
   "business-card-stats-title": "Статистика",
-  "business-card-title": "Євген Фабіжевський :: Розробник програмного забезпечення",
+  "title": "{{authorName}} :: Розробник програмного забезпечення",
   "business-card-version": "Версія {{version}}",
   "business-card-year-plural": "років",
   "business-card-year-singular": "рік"

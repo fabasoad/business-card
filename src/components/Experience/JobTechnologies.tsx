@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Container, Col, Row } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
 import { Technology } from '../../scripts/technologies/types'
@@ -12,8 +13,8 @@ export default function JobTechnologies({ keyPrefix, names }: JobTechnologiesPro
   const { t } = useTranslation()
   const technologyStorage = new TechnologyStorage()
   return (
-    <div className="technologies">
-      <h5>{t('business-card-experience-technologies-title')}</h5>
+    <p className="experience-tech-stack d-flex">
+      <div className="experience-tech-stack__title">{t('experience.tech-stack.title')}:</div>
       {names
         .map((name: string) => technologyStorage.findByName(name))
         .map((t: Technology, i: number) => <img
@@ -22,6 +23,6 @@ export default function JobTechnologies({ keyPrefix, names }: JobTechnologiesPro
           alt={t.name}
           title={t.title}
         />)}
-    </div>
+    </p>
   )
 }

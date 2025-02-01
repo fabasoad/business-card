@@ -165,7 +165,7 @@ export function testExperienceMain(div: HTMLDivElement, locale: Locale) {
   expect(divContainer).not.toBeNull()
   testSectionTitle(
     divContainer.querySelector('div.section-title'),
-    'business-card-experience-title'
+    'experience.title'
   )
   const ulTimeline = divContainer.querySelector('ul.timeline')
   expect(ulTimeline).not.toBeNull()
@@ -233,7 +233,7 @@ export function testJobTechnologies(div: HTMLDivElement, technologies: string[])
 
   expect(div).toHaveClass('technologies')
   expect(div.querySelector('h5'))
-  .toHaveTextContent('business-card-experience-technologies-title')
+  .toHaveTextContent('experience.tech-stack')
   const imgElements = div.querySelectorAll('img')
   expect(imgElements).toHaveLength(technologies.length)
   for (const img of imgElements) {

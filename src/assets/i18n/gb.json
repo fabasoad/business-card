@@ -164,11 +164,14 @@
   "business-card-experience-job-wbyt-6-responsibilities-3": "Fixing bugs in GitHub Actions and SAST related tools that team owns.",
   "business-card-experience-job-wbyt-6-title": "Senior Software Engineer, Application Security",
   "experience": {
-    "present": "Present"
+    "present": "Present",
+    "title": "Experience",
+    "tech-stack": {
+      "title": "Tech stack"
+    },
+    "achievements": "Achievements"
   },
   "business-card-experience-responsibilities-title": "Responsibilities",
-  "business-card-experience-technologies-title": "Technologies",
-  "business-card-experience-title": "Experience",
   "header": {
     "about-me": "About me",
     "occupation": "Senior Software Engineer",
@@ -231,7 +234,7 @@
   "business-card-resume-title": "Resume",
   "business-card-skills-title": "Skills",
   "business-card-stats-title": "Stats",
-  "business-card-title": "Yevhen Fabizhevskyi :: Senior Software Engineer",
+  "title": "{{authorName}} :: Senior Software Engineer",
   "business-card-version": "Version {{version}}",
   "business-card-year-plural": "years",
   "business-card-year-singular": "year"

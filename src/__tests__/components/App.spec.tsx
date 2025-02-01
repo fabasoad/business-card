@@ -29,7 +29,7 @@ describe('App', () => {
     testBackToTopButton(div.querySelector('a.back-to-top'))
     testHeader(div.querySelector('header#header'))
     testMenuMain(div.querySelector('div#nav'))
-    testAboutMain(div.querySelector('div#about'))
+    testAboutMain(div.querySelector('div#about-me'))
     expect(div.querySelector('div#stats')).toBeInTheDocument()
     testResume(div.querySelector('div#resume'))
     testSkills(div.querySelector('div#skills'))

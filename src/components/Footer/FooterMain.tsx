@@ -9,7 +9,7 @@ export default function FooterMain() {
   const { t } = useTranslation()
   return (
     <div className="footer">
-      <div id="contact" className="container text-center">
+      <div id="contacts" className="container text-center">
         <SectionTitle>{t('contacts.title')}</SectionTitle>
         <FooterContacts />
         <FooterSocial />

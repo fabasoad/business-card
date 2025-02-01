@@ -43,20 +43,17 @@ export function testHeader(header: HTMLElement) {
   const h5 = divHeaderText.querySelector('h5')
   expect(h5).toHaveClass('header__text-subtitle')
   expect(h5).toHaveTextContent('header.occupation')
-  testButton(divHeaderText, '#about', 'header.about-me')
+  testButton(divHeaderText, '#about-me', 'header.about-me')
   testButton(divHeaderText, '#experience', 'experience.title')
 }
 
 export function testResume(div: HTMLDivElement) {
   expect(div).toHaveClass('light-component')
-  testSectionTitle(
-    div.querySelector('div.section-title'),
-    'business-card-resume-title'
-  )
+  testSectionTitle(div.querySelector('div.section-title'), 'resume.title')
   const divContainer = div.querySelector('div.container')
   const divCol = divContainer.querySelector('div.col')
   expect(divCol).toHaveClass('text-center')
-  expect(divCol).toHaveTextContent('business-card-resume-message')
+  expect(divCol).toHaveTextContent('resume.body')
 }
 
 export function testSkills(div: HTMLDivElement) {
@@ -86,10 +83,7 @@ export function testSkills(div: HTMLDivElement) {
   ])
 
   expect(div).toHaveClass('light-component')
-  testSectionTitle(
-    div.querySelector('div.section-title'),
-    'business-card-skills-title'
-  )
+  testSectionTitle(div.querySelector('div.section-title'), 'skills.title')
   const divContainer = div.querySelector('div.container')
   const divRow = divContainer.querySelector('div.row')
   const divSkillsList = divRow.querySelector('div.skills-list')

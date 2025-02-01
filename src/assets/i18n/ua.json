@@ -32,7 +32,11 @@
       { "title": "Професійний рівень володіння англійською мовою." }
     ]
   },
-  "author-name": "Євген Фабіжевський",
+  "author": {
+    "full-name": "Євген Фабіжевський",
+    "given-name": "Євген",
+    "job-title": "Розробник програмного забезпечення"
+  },
   "badges": {
     "title": "Бейджі"
   },
@@ -75,7 +79,7 @@
   "header": {
     "about-me": "Про мене",
     "occupation": "Розробник програмного забезпечення",
-    "title": "<p>Привіт,</p><p>я {{authorName}}</p>"
+    "title": "Привіт, я {{authorGivenName}}"
   },
   "languages": {
     "title": "Мови",
@@ -92,20 +96,18 @@
     "chuo": "Чуо, Токіо, Японія",
     "shibuya": "Шибуя, Токіо, Японія"
   },
-  "business-card-menu-about": "Про мене",
-  "business-card-menu-badges": "Бейджі",
-  "business-card-menu-contact": "Контакти",
-  "business-card-menu-education": "Освіта",
-  "business-card-menu-experience": "Досвід",
-  "business-card-menu-portfolio": "Портфоліо",
-  "business-card-menu-resume": "Резюме",
-  "business-card-menu-skills": "Навички",
   "month": ["Січень", "Лютий", "Березень", "Квітень", "Травень", "Червень", "Липень", "Серпень", "Вересень", "Жовтень", "Листопад", "Грудень"],
-  "business-card-resume-message": "Для того, щоб завантажити моє резюме, будь ласка, відкрийте мою <1>сторінку LinkedIn</1> і виберіть Resources → Save to PDF",
-  "business-card-resume-title": "Резюме",
-  "business-card-skills-title": "Навички",
-  "business-card-stats-title": "Статистика",
-  "title": "{{authorName}} :: Розробник програмного забезпечення",
+  "resume": {
+    "title": "Резюме",
+    "body": "Для того, щоб завантажити моє резюме, будь ласка, відкрийте мою <1>сторінку LinkedIn</1> і виберіть Resources → Save to PDF"
+  },
+  "skills": {
+    "title": "Навички"
+  },
+  "stats": {
+    "title": "Статистика"
+  },
+  "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "Версія {{version}}",
   "business-card-year-plural": "років",
   "business-card-year-singular": "рік"

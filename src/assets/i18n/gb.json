@@ -32,7 +32,11 @@
       { "title": "Business level English." }
     ]
   },
-  "author-name": "Yevhen Fabizhevskyi",
+  "author": {
+    "full-name": "Yevhen Fabizhevskyi",
+    "given-name": "Yevhen",
+    "job-title": "Senior Software Engineer"
+  },
   "badges": {
     "title": "Badges"
   },
@@ -75,7 +79,7 @@
   "header": {
     "about-me": "About me",
     "occupation": "Senior Software Engineer",
-    "title": "<p>Hello,</p><p>I'm {{authorName}}</p>"
+    "title": "Hello, I'm {{authorGivenName}}"
   },
   "languages": {
     "title": "Languages",
@@ -92,20 +96,18 @@
     "chuo": "Chuo, Tokyo, Japan",
     "shibuya": "Shibuya, Tokyo, Japan"
   },
-  "business-card-menu-about": "About me",
-  "business-card-menu-badges": "Badges",
-  "business-card-menu-contact": "Contact",
-  "business-card-menu-education": "Education",
-  "business-card-menu-experience": "Experience",
-  "business-card-menu-portfolio": "Portfolio",
-  "business-card-menu-resume": "Resume",
-  "business-card-menu-skills": "Skills",
   "month": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-  "business-card-resume-message": "To download my resume please go to my <1>LinkedIn page</1> and choose Resources → Save to PDF",
-  "business-card-resume-title": "Resume",
-  "business-card-skills-title": "Skills",
-  "business-card-stats-title": "Stats",
-  "title": "{{authorName}} :: Senior Software Engineer",
+  "resume": {
+    "title": "Resume",
+    "body": "To download my resume please go to my <1>LinkedIn page</1> and choose Resources → Save to PDF"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "stats": {
+    "title": "Stats"
+  },
+  "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "Version {{version}}",
   "business-card-year-plural": "years",
   "business-card-year-singular": "year"

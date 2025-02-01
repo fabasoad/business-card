@@ -7,9 +7,9 @@ export default function Header() {
   return (
     <header className="header" id="header">
       <div className="header__text">
-        <h1><Trans t={t} values={{ authorName: t('author-name') }}>header.title</Trans></h1>
+        <h1><Trans t={t} values={{ authorGivenName: t('author.given-name') }}>header.title</Trans></h1>
         <h5 className="header__text-subtitle">{t('header.occupation')}</h5>
-        <Button variant="primary" size="lg" href="#about">
+        <Button variant="primary" size="lg" href="#about-me">
           {t('header.about-me')}
         </Button>
         <Button variant="primary" size="lg" href="#experience">

@@ -44,7 +44,7 @@ export function testMenuMain(div: HTMLDivElement) {
   expect(nav).toHaveClass('navbar-custom')
   const a = nav.querySelector('a.navbar-brand')
   expect(a).toHaveAttribute('href', '#header')
-  expect(a).toHaveTextContent('author-name')
+  expect(a).toHaveTextContent('author.full-name')
   const button = nav.querySelector('button.navbar-dark')
   expect(button).toHaveAttribute('aria-controls', 'basic-navbar-nav')
   expect(button).toHaveClass('collapsed')

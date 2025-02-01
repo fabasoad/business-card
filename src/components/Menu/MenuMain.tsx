@@ -35,17 +35,17 @@ export default function MenuMain() {
   return (
     <div className="affix-top" id="nav">
       <Navbar expanded={expanded} onToggle={setExpanded} collapseOnSelect={true} expand="md" className="navbar-custom">
-        <Navbar.Brand href="#header" className="ms-2">{t('author-name')}</Navbar.Brand>
+        <Navbar.Brand href="#header" className="ms-2">{t('author.full-name')}</Navbar.Brand>
         <Navbar.Toggle className="navbar-dark" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse role={undefined} id="basic-navbar-nav">
           <Nav activeKey={activeNavLink}>
-            <MenuItem setActiveNavLink={setActiveNavLink} name={'about'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'about-me'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'skills'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'experience'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'education'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'resume'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'badges'} />
-            <MenuItem setActiveNavLink={setActiveNavLink} name={'contact'} />
+            <MenuItem setActiveNavLink={setActiveNavLink} name={'contacts'} />
           </Nav>
           <Nav className="me-2">
             <LocaleDropDown />

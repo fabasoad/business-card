@@ -11,9 +11,7 @@ export default function StatsMain() {
   const { t } = useTranslation()
   return (
     <div id="stats">
-      <SectionTitle>
-        {t('business-card-stats-title')}
-      </SectionTitle>
+      <SectionTitle>{t('stats.title')}</SectionTitle>
       <Container>
         <Row>
           <Col className="m-2">

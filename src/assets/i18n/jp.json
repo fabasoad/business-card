@@ -32,7 +32,11 @@
       { "title": "ビジネスレベルの英語力。" }
     ]
   },
-  "author-name": "ファビジェブスキーイェブヘン",
+  "author": {
+    "full-name": "ファビジェブスキーイェブヘン",
+    "given-name": "イェブヘン",
+    "job-title": "シニアソフトウェアエンジニア"
+  },
   "badges": {
     "title": "バッジ"
   },
@@ -40,16 +44,16 @@
   "certificates": {
     "title": "資格",
     "list": {
-      "MWE43H8YDS": "Programming for everybody (Python)",
-      "W5AB2PBZQNPY": "Parallel, Concurrent, and Distributed Programming in Java Specialization",
-      "UC-JGDVYKAQ": "The Complete React Developer Course (w/ Hooks and Redux)",
+      "MWE43H8YDS": "みんなのためのプログラミング（Python）",
+      "W5AB2PBZQNPY": "Javaにおける並列・並行・分散プログラミング専門講座",
+      "UC-JGDVYKAQ": "React完全開発者コース（HooksとRedux付き）",
       "689b9d7e-cae5-4e36-8a1f-c8c34f104249": "Oracle Certified Associate, Java SE 8 Programmer",
-      "F75CDD8ED9F0": "Problem Solving (Basic)",
+      "F75CDD8ED9F0": "問題解決（基礎）",
       "24722d5e-1738-4cec-808b-b4b83a94a8ad": "GitHub Advanced Security",
       "711c8e30-13e7-499e-aad6-5da9d468177a": "GitHub Actions",
       "6f36f952-612a-4aa1-8a3d-adb29396c967": "GitHub Foundations",
       "a1c1ec77-29db-4139-8fcb-ac95408653e8": "GitHub Administration",
-      "9f12275d-a5b5-4d4d-9127-c975c555f0ab": "Certified DevSecOps Professional (CDP)",
+      "9f12275d-a5b5-4d4d-9127-c975c555f0ab": "認定DevSecOpsプロフェッショナル（CDP）",
       "55ddd8bd-950d-45bb-ad25-d08269bc9ca1": "GitHub Copilot"
     }
   },
@@ -75,7 +79,7 @@
   "header": {
     "about-me": "自己紹介",
     "occupation": "シニアソフトウェアエンジニア",
-    "title": "<p>{{authorName}}です。</p><p>よろしくお願いいたします。</p>"
+    "title": "<p>{{authorGivenName}}です。</p><p>よろしくお願いいたします。</p>"
   },
   "languages": {
     "title": "言語",
@@ -92,20 +96,18 @@
     "chuo": "日本東京都中央区",
     "shibuya": "日本東京都渋谷区"
   },
-  "business-card-menu-about": "自己紹介",
-  "business-card-menu-badges": "バッジ",
-  "business-card-menu-contact": "連絡先",
-  "business-card-menu-education": "学歴",
-  "business-card-menu-experience": "職歴",
-  "business-card-menu-portfolio": "ポートフォリオ",
-  "business-card-menu-resume": "履歴書",
-  "business-card-menu-skills": "スキル",
   "month": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-  "business-card-resume-message": "私の履歴書をダウンロードするには、<1>LinkedInページ</1>にアクセスし、「リソース」→「PDFとして保存」を選択してください。",
-  "business-card-resume-title": "履歴書",
-  "business-card-skills-title": "スキル",
-  "business-card-stats-title": "データ",
-  "title": "{{authorName}} :: シニアソフトウェアエンジニア",
+  "resume": {
+    "title": "履歴書",
+    "body": "私の履歴書をダウンロードするには、<1>LinkedInページ</1>にアクセスし、「リソース」→「PDFとして保存」を選択してください。"
+  },
+  "skills": {
+    "title": "スキル"
+  },
+  "stats": {
+    "title": "データ"
+  },
+  "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "バージョン{{version}}",
   "business-card-year-plural": "年",
   "business-card-year-singular": "年"

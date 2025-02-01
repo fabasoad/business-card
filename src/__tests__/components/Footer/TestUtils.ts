@@ -76,7 +76,7 @@ export function testFooterLocation(div: HTMLDivElement): void {
 
 export function testFooterMain(div: HTMLDivElement) {
   expect(div).not.toBeNull()
-  const divContact = div.querySelector('div#contact')
+  const divContact = div.querySelector('div#contacts')
   expect(divContact).toHaveClass('container')
   expect(divContact).toHaveClass('text-center')
   const divTitle = divContact.querySelector('div.section-title.center')

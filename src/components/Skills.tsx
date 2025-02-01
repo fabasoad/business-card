@@ -10,7 +10,7 @@ export default function Skills() {
   const technologyStorage = new TechnologyStorage()
   return (
     <div id="skills" className="light-component">
-      <SectionTitle>{t('business-card-skills-title')}</SectionTitle>
+      <SectionTitle>{t('skills.title')}</SectionTitle>
       <Container>
         <Row>
           <Col className="skills-list text-center">

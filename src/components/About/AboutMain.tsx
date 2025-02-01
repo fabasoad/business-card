@@ -1,7 +1,6 @@
 /// <reference path='./AboutMain.d.ts' />
 import * as React from 'react'
 import { Trans, useTranslation, getI18n } from 'react-i18next'
-import joinArrays from 'webpack-merge/dist/join-arrays'
 import * as imgAboutMe from '../../assets/images/about_me.jpg'
 import * as img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
 import TotalExperience from '../../scripts/TotalExperience'
@@ -12,7 +11,7 @@ export default function AboutMain() {
   const { t, i18n } = useTranslation()
   const totalExperience = new TotalExperience()
   return (
-    <Container id="about">
+    <Container id="about-me">
       <SectionTitle>{t('about-me.title')}</SectionTitle>
       <Row className="d-flex justify-content-center">
         <Col md className="about-photo d-flex justify-content-center">

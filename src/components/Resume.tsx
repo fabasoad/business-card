@@ -7,10 +7,10 @@ export default function Resume() {
   const { t } = useTranslation()
   return (
     <div id="resume" className="light-component">
-      <SectionTitle>{t('business-card-resume-title')}</SectionTitle>
+      <SectionTitle>{t('resume.title')}</SectionTitle>
       <Container>
         <Col className="text-center">
-          <Trans i18nKey="business-card-resume-message">
+          <Trans i18nKey="resume.body">
             To download my resume please go to my <a href="https://www.linkedin.com/in/yevhenfabizhevskyi/" target="_blank" rel="noreferrer">LinkedIn page</a> and choose More → Save to PDF
           </Trans>
         </Col>

@@ -3,76 +3,65 @@
   "date": "2015-05",
   "issuer": "coursera",
   "technology": "python",
-  "i18nTitleKey": "business-card-certificate-1",
   "url": "https://www.coursera.org/account/accomplishments/verify/MWE43H8YDS"
 }, {
   "id": "W5AB2PBZQNPY",
   "date": "2018-03",
   "issuer": "coursera",
   "technology": "java",
-  "i18nTitleKey": "business-card-certificate-2",
   "url": "https://www.coursera.org/account/accomplishments/specialization/W5AB2PBZQNPY"
 }, {
   "id": "UC-JGDVYKAQ",
   "date": "2019-10",
   "issuer": "udemy",
   "technology": "react",
-  "i18nTitleKey": "business-card-certificate-3",
   "url": "http://ude.my/UC-JGDVYKAQ"
 }, {
   "id": "689b9d7e-cae5-4e36-8a1f-c8c34f104249",
   "date": "2020-05",
   "issuer": "oracle",
   "technology": "java",
-  "i18nTitleKey": "business-card-certificate-4",
   "url": "https://www.youracclaim.com/badges/689b9d7e-cae5-4e36-8a1f-c8c34f104249/public_url"
 }, {
   "id": "F75CDD8ED9F0",
   "date": "2020-09",
   "issuer": "hacker-rank",
   "technology": "algorithms",
-  "i18nTitleKey": "business-card-certificate-5",
   "url": "https://www.hackerrank.com/certificates/f75cdd8ed9f0"
 }, {
   "id": "24722d5e-1738-4cec-808b-b4b83a94a8ad",
   "date": "2023-11",
   "issuer": "github",
   "technology": "github",
-  "i18nTitleKey": "business-card-certificate-6",
   "url": "https://www.credly.com/badges/24722d5e-1738-4cec-808b-b4b83a94a8ad"
 }, {
   "id": "711c8e30-13e7-499e-aad6-5da9d468177a",
   "date": "2023-11",
   "issuer": "github",
   "technology": "github",
-  "i18nTitleKey": "business-card-certificate-7",
   "url": "https://www.credly.com/badges/711c8e30-13e7-499e-aad6-5da9d468177a"
 }, {
   "id": "6f36f952-612a-4aa1-8a3d-adb29396c967",
   "date": "2024-06",
   "issuer": "github",
   "technology": "github",
-  "i18nTitleKey": "business-card-certificate-8",
   "url": "https://www.credly.com/badges/6f36f952-612a-4aa1-8a3d-adb29396c967"
 }, {
   "id": "a1c1ec77-29db-4139-8fcb-ac95408653e8",
   "date": "2024-06",
   "issuer": "github",
   "technology": "github",
-  "i18nTitleKey": "business-card-certificate-9",
   "url": "https://www.credly.com/badges/a1c1ec77-29db-4139-8fcb-ac95408653e8"
 }, {
   "id": "9f12275d-a5b5-4d4d-9127-c975c555f0ab",
   "date": "2024-06",
   "issuer": "practical-devsecops",
   "technology": "devsecops",
-  "i18nTitleKey": "business-card-certificate-10",
   "url": "https://www.credly.com/badges/9f12275d-a5b5-4d4d-9127-c975c555f0ab"
 }, {
   "id": "55ddd8bd-950d-45bb-ad25-d08269bc9ca1",
   "date": "2024-10",
   "issuer": "github",
   "technology": "github",
-  "i18nTitleKey": "business-card-certificate-11",
   "url": "https://www.credly.com/badges/55ddd8bd-950d-45bb-ad25-d08269bc9ca1"
 }]

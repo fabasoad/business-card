@@ -15,7 +15,7 @@ export default function MenuItem({ name, setActiveNavLink }: MenuItemProps) {
       eventKey={`#${name}`}
       href={`#${name}`}
     >
-      {t(`business-card-menu-${name}`)}
+      {t(`${name}.title`)}
     </Nav.Link>
   )
 }

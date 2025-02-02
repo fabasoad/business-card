@@ -28,7 +28,10 @@ class I18nService {
         I18nLanguageCodeFormat.ISO_639_1
       )
     const callback: I18nServiceCallback = (code: string, t: i18n.TFunction): void => {
-      document.title = t('business-card-title')
+      document.title = t('title', {
+        authorFullName: t('author.full-name'),
+        authorJobTitle: t('author.job-title')
+      })
       document.documentElement.setAttribute('lang', translate(code))
     }
     this.registerCallback(I18nServiceCallbackTypes.ON_LOADED, callback)
@@ -50,6 +53,10 @@ class I18nService {
           gb: { common: gb },
           jp: { common: jp },
           ua: { common: ua }
+        },
+        react: {
+          transSupportBasicHtmlNodes: true,
+          transKeepBasicHtmlNodesFor: ['li', 'p']
         }
       }).then((t: i18n.TFunction) => {
         this.fireCallbacks(

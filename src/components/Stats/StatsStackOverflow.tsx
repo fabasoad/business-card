@@ -3,7 +3,7 @@ import type { StackExchangeData } from '../../scripts/services/StackExchangeServ
 import { StackOverflowService } from '../../scripts/services/StackOverflowService'
 import StatsStackExchange from './StatsStackExchange'
 
-export default function StatsStackOverflow({ reputation = 1783, answerCount = 0 }: StackExchangeData) {
+export default function StatsStackOverflow({ reputation = 1863, answerCount = 0 }: StackExchangeData) {
   return (
     <StatsStackExchange
       data={{ reputation, answerCount }}

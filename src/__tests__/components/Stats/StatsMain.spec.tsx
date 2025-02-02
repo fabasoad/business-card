@@ -15,7 +15,7 @@ test('should render StatsMain correctly', () => {
   const div = container.querySelector('div#stats')
   testSectionTitle(
     div.querySelector('div.section-title'),
-    'business-card-stats-title'
+    'stats.title'
   )
   const cols = div.querySelectorAll('div.container div.row div.col')
   expect(cols).toHaveLength(4)

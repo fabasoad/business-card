@@ -34,23 +34,19 @@ export default function App404({ redirectUrl = BaseConstants.BASE_URL }: App404P
 
   return (
     <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
-      <p>
-        <>{t('business-card-404-text-1')}</>
-      </p>
+      <p>{t('404.text.1')}</p>
       <p>
         <>
           <span className="blinker-prefix"></span>
           {/* JP: 画面をクリックして続ける */}
-          &nbsp;{t('business-card-404-text-2')}<span style={isRedirectingStyle(true)}>.</span>
+          &nbsp;{t('404.text.2')}<span style={isRedirectingStyle(true)}>.</span>
           <span style={isRedirectingStyle(false)} className="blinker">_</span>
         </>
       </p>
       <p style={isRedirectingStyle(true)}>
-        <>
-          {t('business-card-404-text-3')}
-          <span>{counter}</span>
-          <span className="blinker">_</span>
-        </>
+        {t('404.text.3')}
+        <span>{counter}</span>
+        <span className="blinker">_</span>
       </p>
     </div>
   )

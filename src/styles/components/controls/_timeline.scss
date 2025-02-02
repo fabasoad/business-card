@@ -1,0 +1,70 @@
+@use "../../base/base" as *;
+@use "../../base/settings" as *;
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+  margin: 0 0.5rem;
+
+  div.timeline__body {
+    div.timeline__body__achievements {
+      @extend .font-bold;
+    }
+  }
+
+  div.timeline__tech-stack {
+    margin-top: 1rem;
+
+    .timeline__tech-stack__title {
+      @extend .font-bold;
+    }
+  }
+
+  p {
+    &.timeline__title {
+      @extend .font-extra-bold;
+      margin-bottom: 0;
+
+      img {
+        max-width: 1.5rem;
+        max-height: 1.5rem;
+        margin-left: -2rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    &.timeline__subtitle {
+      padding-top: 0.1rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  &:before {
+    background: $white;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+  }
+
+  > li {
+    margin: 1rem 0;
+    padding-left: 20px;
+
+    // Orange circle
+    //&:before {
+    //  content: ' ';
+    //  background: $white;
+    //  display: inline-block;
+    //  position: absolute;
+    //  border-radius: 50%;
+    //  border: 0.2rem solid $orange;
+    //  left: 1.2rem;
+    //  width: 1.2rem;
+    //  height: 1.2rem;
+    //  z-index: 400;
+    //}
+  }
+}

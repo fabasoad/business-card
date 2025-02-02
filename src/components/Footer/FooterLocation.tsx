@@ -7,7 +7,7 @@ export default function FooterLocation() {
   return (
     <Col>
       <i className="fa fa-map-marker-alt fa-2x"></i>
-      <p>{t('business-card-contact-city')}</p>
+      <p>{t('contacts.location')}</p>
     </Col>
   )
 }

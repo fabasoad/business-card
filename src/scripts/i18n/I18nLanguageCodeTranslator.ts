@@ -13,7 +13,7 @@ class I18nLanguageCodeTranslator {
       [I18nLanguageCodeFormat.ISO_639_1, this.formatsISO6391],
       [I18nLanguageCodeFormat.ISO_3166_1_alpha_2, this.formatsISO31661Alpha2],
     ])
-  getTranslateFunc(from: I18nLanguageCodeFormat, to: I18nLanguageCodeFormat):
+  public getTranslateFunc(from: I18nLanguageCodeFormat, to: I18nLanguageCodeFormat):
     I18nLanguageCodeTranslatorFunc {
     const fromCodes: string[] = this.formatsMap.get(from)
     const toCodes: string[] = this.formatsMap.get(to)

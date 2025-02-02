@@ -6,5 +6,5 @@ import { testAboutMain } from './TestUtils'
 
 test('should render AboutMain correctly', () => {
   const { container } = render(<AboutMain />)
-  testAboutMain(container.querySelector('div#about'))
+  testAboutMain(container.querySelector('div#about-me'))
 })

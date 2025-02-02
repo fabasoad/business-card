@@ -38,11 +38,15 @@ export default function ExperienceItem({
       // For tests
       return typeof body === 'string' ? body : (
         <>
-          <div className={`timeline__body__achievements ${clazz}`}>{t('experience.achievements')}</div>
+          <div className={`timeline__body__achievements ${clazz}`}>
+            {t('experience.achievements')}
+          </div>
           <ul>
-            {body.map((bodyItem: string, index: number) => (
-              <li key={`${k}-${index}`}>{bodyItem}</li>
-            ))}
+            {
+              body.map((bodyItem: string, index: number) => (
+                <li key={`${k}-${index}`}>{bodyItem}</li>
+              ))
+            }
           </ul>
         </>
       )

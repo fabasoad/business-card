@@ -65,8 +65,10 @@
   "education": {
     "title": "Education",
     "university": {
-      "speciality": "Information Technology. Master.",
-      "title": "Odesa State Academy of Refrigeration"
+      "osar": {
+        "speciality": "Information Technology. Master.",
+        "title": "Odesa State Academy of Refrigeration"
+      }
     }
   },
   "experience": {

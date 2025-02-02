@@ -65,8 +65,10 @@
   "education": {
     "title": "学歴",
     "university": {
-      "speciality": "情報科学技術。修士号。",
-      "title": "オデッサ国立冷凍学アカデミー"
+      "osar": {
+        "speciality": "情報科学技術。修士号。",
+        "title": "オデッサ国立冷凍学アカデミー"
+      }
     }
   },
   "experience": {

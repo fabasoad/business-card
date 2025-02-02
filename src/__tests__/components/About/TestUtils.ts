@@ -23,7 +23,5 @@ export function testAboutMain(div: HTMLDivElement) {
   expect(imgBadge).toHaveAttribute('alt', 'Oracle 1Z0-808')
   const divListItems = divRow.querySelector('div.col-md-8.offset-md-2')
   expect(divListItems).not.toBeNull()
-  const ul = divListItems.querySelector('ul')
-  expect(ul).toHaveClass('mt-3')
-  expect(ul).toHaveTextContent('about-me.list')
+  expect(divListItems).toHaveTextContent('about-me.list')
 }

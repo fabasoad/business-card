@@ -30,7 +30,7 @@ export function testCertificateItem(
   expect(elements).toHaveLength(1)
   expect(elements[0]).toHaveTextContent(
     locale.code === 'jp'
-      ? new RegExp(`.+business-card-year-singularmonth.${certificate.date.getMonth()}`)
+      ? new RegExp(`.+yearmonth.${certificate.date.getMonth()}`)
       : `month.${certificate.date.getMonth()} ${certificate.date.getFullYear()}`
   )
 }

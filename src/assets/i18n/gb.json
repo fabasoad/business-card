@@ -57,6 +57,7 @@
       "55ddd8bd-950d-45bb-ad25-d08269bc9ca1": "GitHub Copilot"
     }
   },
+  "comma": ", ",
   "contacts": {
     "title": "Contacts",
     "location": "Tokyo, Japan"
@@ -71,10 +72,27 @@
   "experience": {
     "present": "Present",
     "title": "Experience",
-    "tech-stack": {
-      "title": "Tech stack"
-    },
-    "achievements": "Achievements"
+    "tech-stack": "Tech stack",
+    "achievements": "Achievements",
+    "body": {
+      "woven-by-toyota": [
+        "Created 3 main Application Security GitHub Actions for performing code scanning, SCA and SBOM analysis. They are used widely within the whole company. Currently, there are 1000+ invocations of those GitHub Actions per day.",
+        "Designed authorization/authentication system that is used as a core system within the entire department (11 teams).",
+        "Built a team of 6 engineers. It includes reviewing candidates, hiring process, mentoring and helping with personal growth.",
+        "As a Security Champion in a team I've configured Application Security best practices on 50+ repositories (frontend, backend, IaC, etc.).",
+        "Configured Keycloak as authorization/authentication system for the backend.",
+        "Leading backend project in Go from E2E."
+      ],
+      "bitcoin-com": [
+        "Increased unit tests code coverage on a Java backend project from 0% to 80%.",
+        "Restored legacy Android application. Upgraded it to the latest version, redesigned, added additional features and published a new release.",
+        "Configured Travis CI for the backend application from scratch.",
+        "Configured Bitrise for legacy Android application from scratch.",
+        "Configured GitHub Actions for the web application from scratch."
+      ],
+      "lohika": "Lohika is an outsourcing company, where I was working as an off-shore contractor for various companies but mostly for Hewlett Packard Enterprise. I developed RIA, backend, mobile and various web applications.",
+      "arka": "Developing investing application as an internal project. Also, developing various web applications for external customers mostly from Germany."
+    }
   },
   "header": {
     "about-me": "About me",
@@ -109,6 +127,5 @@
   },
   "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "Version {{version}}",
-  "business-card-year-plural": "years",
-  "business-card-year-singular": "year"
+  "year": "year"
 }

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Certificate } from '../../scripts/certificates/types'
 import { getDateLocale } from '../../scripts/utils/DateUtils'
 
-interface CertificateItemProps {
+export type CertificateItemProps = {
   certificate: Certificate
 }
 

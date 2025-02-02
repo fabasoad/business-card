@@ -1,5 +1,4 @@
 import { testSectionTitle } from './Controls/TestUtils'
-import {LeetcodeStats} from "../../scripts/services/LeetcodeService";
 
 export function testBackToTopButton(a: HTMLAnchorElement) {
   expect(a).toHaveClass('back-to-top')

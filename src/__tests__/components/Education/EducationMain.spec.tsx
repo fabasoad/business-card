@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import EducationMain from '../../../components/Education/EducationMain'
-import { render } from '@testing-library/react'
+import { queryByTestId, render } from '@testing-library/react'
 
 jest.mock('../../../components/Controls/SectionTitle')
 jest.mock('../../../components/Education/EducationItem')
@@ -15,8 +15,14 @@ describe('EducationMain', () => {
     expect(divContainer.querySelector('div[data-testid="SectionTitle"]')).not.toBeNull()
     const liElements = divContainer.querySelectorAll('div.row > ul.timeline > li')
     expect(liElements).toHaveLength(1)
-    for (const li of liElements) {
-      expect(li.querySelector('div[data-testid="EducationItem"]')).not.toBeNull()
-    }
+    const divEducationItem =
+      liElements.item(0).querySelector<HTMLElement>('div[data-testid="EducationItem"]')
+    expect(divEducationItem).not.toBeNull()
+    expect(queryByTestId(divEducationItem, 'universityKey', { exact: true })).toHaveTextContent('osar')
+    expect(queryByTestId(divEducationItem, 'universityName', { exact: true })).toHaveTextContent('Odesa State Academy of Refrigeration')
+    expect(queryByTestId(divEducationItem, 'location', { exact: true })).toHaveTextContent('odesa')
+    expect(queryByTestId(divEducationItem, 'img', { exact: true })).toHaveAttribute('src', '[object Object]')
+    expect(queryByTestId(divEducationItem, 'fromYear', { exact: true })).toHaveTextContent('2005')
+    expect(queryByTestId(divEducationItem, 'toYear', { exact: true })).toHaveTextContent('2010')
   })
 })

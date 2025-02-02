@@ -5,7 +5,7 @@ import i18nService, {
 import { getDateLocale, humanize } from '../../scripts/utils/DateUtils'
 import { useTranslation} from 'react-i18next'
 
-type EducationItemProps = {
+export type EducationItemProps = {
   universityKey: string,
   universityName: string,
   location: string,

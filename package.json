@@ -75,7 +75,7 @@
   "dependencies": {
     "@octokit/rest": "21.1.0",
     "cross-fetch": "4.1.0",
-    "posthog-js": "1.215.2",
+    "posthog-js": "1.215.3",
     "react-bootstrap": "2.10.9"
   },
   "packageManager": "yarn@4.6.0"

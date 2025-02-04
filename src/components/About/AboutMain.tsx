@@ -1,4 +1,5 @@
 /// <reference path='./AboutMain.d.ts' />
+import { ReactElement } from 'react'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import * as imgAboutMe from '../../assets/images/about_me.jpg'
@@ -7,9 +8,23 @@ import TotalExperience from '../../scripts/TotalExperience'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 
-type AboutMeItem = {
+export type AboutMeItem = {
   title: string,
   list?: AboutMeItem[]
+}
+
+export function renderList(level: number, children: AboutMeItem[] | string): ReactElement<'ul'> | string {
+  // For tests
+  return typeof children === 'string' ? children : (
+    <ul>
+      {children.map(({ title, list }: AboutMeItem, index: number) => (
+        <li key={`about-me-item-${level}-${index}`}>
+          {title}
+          {Array.isArray(list) ? renderList(level + 1, list) : <></>}
+        </li>
+      ))}
+    </ul>
+  )
 }
 
 export default function AboutMain() {
@@ -20,20 +35,6 @@ export default function AboutMain() {
     returnObjects: true,
     totalExperience: totalExperience.humanize(i18n.language)
   })
-
-  const renderList = (level: number, array: AboutMeItem[]) => {
-    // For tests
-    return typeof array === 'string' ? array : (
-      <ul>
-        {array.map(({ title, list }: AboutMeItem, index: number) => (
-          <li key={`about-me-item-${level}-${index}`}>
-            {title}
-            {Array.isArray(list) ? renderList(level + 1, list) : <></>}
-          </li>
-        ))}
-      </ul>
-    )
-  }
 
   return (
     <Container id="about-me">

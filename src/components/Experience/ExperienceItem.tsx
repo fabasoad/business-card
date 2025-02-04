@@ -2,26 +2,18 @@ import * as React from 'react'
 import i18nService, {
   I18nServiceCallbackTypes
 } from '../../scripts/i18n/I18nService'
-import { getDateLocale, humanize } from '../../scripts/utils/DateUtils'
+import { humanize, toDateLocaleFromDate } from '../../scripts/utils/DateUtils'
 import { useTranslation } from 'react-i18next'
+import { Experience } from '../../scripts/experience/types'
 
 type ExperienceBodyItem = string | string[]
 
-type ExperienceItemProps = {
-  companyKey: string,
-  companyName: string,
-  location: string,
-  techStack: string,
-  img: any,
-  fromYear: number,
-  fromMonthIndex: number,
-  toYear?: number,
-  toMonthIndex?: number
+export type ExperienceItemProps = {
+  experience: Experience
 }
 
-export default function ExperienceItem({
-  companyKey, companyName, location, techStack, img, fromYear, fromMonthIndex, toYear, toMonthIndex
-}: ExperienceItemProps) {
+export default function ExperienceItem({ experience }: ExperienceItemProps) {
+  const { id, title, locationI18nKey, techStack, img, from, to } = experience
   const getClazzName = (code: string) =>
     `font-${code === 'jp' ? '' : 'non-'}jp`
 
@@ -52,31 +44,24 @@ export default function ExperienceItem({
       )
     }
 
-  let toDate: Date
-  let toDateLocale: string
-  if (toYear != undefined) {
-    toDate = new Date(toYear, toMonthIndex === undefined ? 0 : toMonthIndex)
-    toDateLocale = getDateLocale(fromYear, toMonthIndex)
-  } else {
-    toDate = new Date()
-    toDateLocale = t('experience.present')
-  }
-
+  const toDate = to === undefined
+    ? t('experience.present')
+    : toDateLocaleFromDate(to)
   return (
     <>
       <p className={`timeline__title ${clazz}`}>
-        <img src={img} alt={companyName} />
-        {companyName} ({t(`locations.${location}`)})
+        <img src={img} alt={title} />
+        {title} ({t(locationI18nKey)})
       </p>
       <p className="timeline__subtitle">
-        {getDateLocale(fromYear, fromMonthIndex)} - {toDateLocale}{t('comma')}{humanize(new Date(fromYear, fromMonthIndex), toDate, i18n.language)}
+        {toDateLocaleFromDate(from)} - {toDate}{t('comma')}{humanize(from, to || new Date(), i18n.language)}
       </p>
       <div className="timeline__body">
-        {renderExperienceBody(companyKey, t(`experience.body.${companyKey}`, { returnObjects: true }) as ExperienceBodyItem)}
+        {renderExperienceBody(id, t(`experience.body.${id}`, { returnObjects: true }) as ExperienceBodyItem)}
       </div>
       <div className="timeline__tech-stack">
         <div className={`timeline__tech-stack__title ${clazz}`}>{t('experience.tech-stack')}</div>
-        <div>{techStack}</div>
+        <div>{techStack.join(t('comma'))}</div>
       </div>
     </>
   )

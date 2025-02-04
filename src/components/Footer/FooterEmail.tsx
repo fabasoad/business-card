@@ -1,13 +1,17 @@
 import * as React from 'react'
 import { Col } from 'react-bootstrap'
 
-export default function FooterEmail() {
+export type FooterEmailProps = {
+  email: string
+}
+
+export default function FooterEmail({ email }: FooterEmailProps) {
   return (
     <Col>
       <i className="fa fa-envelope fa-2x"></i>
       <p>
-        <a target="_blank" rel="noreferrer" href="mailto:fabasoad@gmail.com">
-          fabasoad@gmail.com
+        <a target="_blank" rel="noreferrer" href={`mailto:${email}`}>
+          {email}
         </a>
       </p>
     </Col>

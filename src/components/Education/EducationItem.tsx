@@ -2,7 +2,7 @@ import * as React from 'react'
 import i18nService, {
   I18nServiceCallbackTypes
 } from '../../scripts/i18n/I18nService'
-import { getDateLocale, humanize } from '../../scripts/utils/DateUtils'
+import { toDateLocale, humanize } from '../../scripts/utils/DateUtils'
 import { useTranslation} from 'react-i18next'
 
 export type EducationItemProps = {
@@ -35,7 +35,7 @@ export default function EducationItem({
         {t(`education.university.${universityKey}.title`)} ({t(`locations.${location}`)})
       </p>
       <p className="timeline__subtitle">
-        {getDateLocale(fromYear)} - {getDateLocale(toYear)}{t('comma')}{humanize(new Date(fromYear), new Date(toYear), i18n.language)}
+        {toDateLocale(fromYear)} - {toDateLocale(toYear)}{t('comma')}{humanize(new Date(fromYear), new Date(toYear), i18n.language)}
       </p>
       <div className="timeline__body">
         {t(`education.university.${universityKey}.speciality`)}

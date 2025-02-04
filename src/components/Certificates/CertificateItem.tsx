@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Card } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import { Certificate } from '../../scripts/certificates/types'
-import { getDateLocale } from '../../scripts/utils/DateUtils'
+import { toDateLocale } from '../../scripts/utils/DateUtils'
 
 export type CertificateItemProps = {
   certificate: Certificate
@@ -26,7 +26,7 @@ export default function CertificateItem({ certificate }: CertificateItemProps) {
         <Card.Subtitle>{t('by-issuer', { issuer })}</Card.Subtitle>
       </Card.Body>
       <Card.Footer>
-        {getDateLocale(date.getFullYear(), date.getMonth())}
+        {toDateLocale(date.getFullYear(), date.getMonth())}
       </Card.Footer>
     </Card>
   )

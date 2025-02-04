@@ -2,7 +2,7 @@ import * as React from 'react'
 import { GitHubService } from '../../scripts/services/GitHubService'
 import StatsCommon from './StatsCommon'
 
-type StatsGitHubProps = {
+export type StatsGitHubProps = {
   starsAmount?: number
 }
 

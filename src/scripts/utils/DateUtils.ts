@@ -12,7 +12,11 @@ const translate: I18nLanguageCodeTranslatorFunc =
     I18nLanguageCodeFormat.ISO_639_1
   )
 
-export function getDateLocale(year: number, monthIndex?: number): string {
+export function toDateLocaleFromDate(date: Date): string {
+  return toDateLocale(date.getFullYear(), date.getMonth())
+}
+
+export function toDateLocale(year: number, monthIndex?: number): string {
   const { language, t } = getI18n()
   const converter = new DigitConverter()
 

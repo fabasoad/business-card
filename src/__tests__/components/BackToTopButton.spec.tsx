@@ -3,12 +3,11 @@ import * as React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 
 import BackToTopButton from '../../components/BackToTopButton'
-import { testBackToTopButton } from './TestUtils'
 
 describe('BackToTopButton', () => {
   test('should render BackToTopButton correctly', () => {
     const { container } = render(<BackToTopButton />)
-    testBackToTopButton(container.querySelector('a'))
+    expect(container.querySelector('a.back-to-top')).toBeInTheDocument()
   })
 
   test('should scroll to top', () => {

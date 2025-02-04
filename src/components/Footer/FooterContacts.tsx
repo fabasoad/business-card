@@ -7,7 +7,7 @@ export default function FooterContacts() {
   return (
     <div className="footer-contacts">
       <FooterLocation />
-      <FooterEmail />
+      <FooterEmail email="fabasoad@gmail.com" />
     </div>
   )
 }

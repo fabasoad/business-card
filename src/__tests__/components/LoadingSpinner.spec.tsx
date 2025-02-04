@@ -7,9 +7,9 @@ import LoadingSpinner from '../../components/LoadingSpinner'
 test('should render LoadingSpinner correctly', () => {
   const { container } = render(<LoadingSpinner />)
   const div = container.querySelector('div.loader')
-  expect(div).not.toBeNull()
+  expect(div).toBeInTheDocument()
   const divSpinner = div.querySelector('div.lds-spinner')
-  expect(divSpinner).not.toBeNull()
+  expect(divSpinner).toBeInTheDocument()
   const divElements = divSpinner.querySelectorAll('div')
   expect(divElements).toHaveLength(12)
   for (const divElement of divElements) {

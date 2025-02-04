@@ -1,33 +1,5 @@
 import { testSectionTitle } from './Controls/TestUtils'
 
-export function testBackToTopButton(a: HTMLAnchorElement) {
-  expect(a).toHaveClass('back-to-top')
-}
-
-export function testBadges(div: HTMLDivElement) {
-  expect(div).toHaveClass('light-component')
-  testSectionTitle(
-    div.querySelector('div.section-title'),
-    'badges.title'
-  )
-  const divContainer = div.querySelector('div.container')
-  expect(divContainer).not.toBeNull()
-  const divRow = divContainer.querySelector('div.row')
-  expect(divRow).not.toBeNull()
-  const divCol = divRow.querySelector('div.col-sm.col-md.col-lg')
-  expect(divCol).toHaveClass('text-center')
-  const a = divCol.querySelector('a')
-  expect(a).toHaveAttribute('href', 'https://tree-nation.com/profile/digitalocean')
-  expect(a).toHaveAttribute('rel', 'noopener noreferrer')
-  expect(a).toHaveAttribute('target', '_blank')
-  const img = a.querySelector('img')
-  expect(img).toHaveClass('mb-4')
-  expect(img).toHaveClass('mx-4')
-  expect(img).toHaveAttribute('src', '[object Object]')
-  expect(img).toHaveAttribute('alt', 'Digital Ocean Forest Badge')
-  expect(img).toHaveAttribute('title', 'DigitalOcean Forest 2021')
-}
-
 export function testHeader(header: HTMLElement) {
   function testButton(div: HTMLDivElement, href: string, text: string) {
     const a = divHeaderText.querySelector(`a[href="${href}"]`)
@@ -44,15 +16,6 @@ export function testHeader(header: HTMLElement) {
   expect(h5).toHaveTextContent('header.occupation')
   testButton(divHeaderText, '#about-me', 'header.about-me')
   testButton(divHeaderText, '#experience', 'experience.title')
-}
-
-export function testResume(div: HTMLDivElement) {
-  expect(div).toHaveClass('light-component')
-  testSectionTitle(div.querySelector('div.section-title'), 'resume.title')
-  const divContainer = div.querySelector('div.container')
-  const divCol = divContainer.querySelector('div.col')
-  expect(divCol).toHaveClass('text-center')
-  expect(divCol).toHaveTextContent('resume.body')
 }
 
 export function testSkills(div: HTMLDivElement) {

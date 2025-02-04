@@ -1,0 +1,83 @@
+[{
+  "id": "woven-by-toyota",
+  "title": "Woven by Toyota",
+  "locationI18nKey": "experience.locations.chuo",
+  "techStack": [
+    "Java",
+    "Go",
+    "TypeScript",
+    "React",
+    "Terraform",
+    "AWS",
+    "GitLab CI",
+    "Concourse CI",
+    "GitHub Actions",
+    "shell scripting",
+    "Python",
+    "Kubernetes",
+    "MongoDB",
+    "Keycloak",
+    "Azure AD",
+    "GitHub",
+    "Application Security"
+  ],
+  "fromYear": 2020,
+  "fromMonthIndex": 4
+}, {
+  "id": "bitcoin-com",
+  "title": "Bitcoin.com",
+  "locationI18nKey": "shibuya",
+  "techStack": [
+    "JavaScript",
+    "Java",
+    "GitHub Actions",
+    "Python",
+    "Redis",
+    "Travis CI",
+    "Kafka",
+    "Bitrise",
+    "GitHub"
+  ],
+  "fromYear": 2018,
+  "fromMonthIndex": 8,
+  "toYear": 2020,
+  "toMonthIndex": 3
+}, {
+  "id": "lohika",
+  "title": "Lohika",
+  "locationI18nKey": "odesa",
+  "techStack": [
+    "JavaScript",
+    "Java",
+    "C#/WinForms/Xamarin/.NET Core",
+    "Angular",
+    "Oracle",
+    "MS SQL",
+    "Redis",
+    "Docker",
+    "Kubernetes",
+    "GitHub",
+    "Prometheus",
+    "ELK",
+    "Helm",
+    "Delphi"
+  ],
+  "fromYear": 2011,
+  "fromMonthIndex": 9,
+  "toYear": 2018,
+  "toMonthIndex": 8
+}, {
+  "id": "arka",
+  "title": "Arka - Finance, Software, Services",
+  "locationI18nKey": "odesa",
+  "techStack": [
+      "JavaScript",
+      "C#/Silverlight",
+      "PHP",
+      "MySQL"
+  ],
+  "fromYear": 2010,
+  "fromMonthIndex": 2,
+  "toYear": 2011,
+  "toMonthIndex": 8
+}]

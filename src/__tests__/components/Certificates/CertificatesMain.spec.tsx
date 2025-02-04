@@ -4,6 +4,7 @@ import CertificatesMain from '../../../components/Certificates/CertificatesMain'
 import certificatesStorage
   from '../../../scripts/certificates/CertificatesStorage'
 import { render } from '@testing-library/react'
+import { testSectionTitle } from '../Controls/TestUtils'
 
 jest.mock('../../../components/Controls/SectionTitle')
 jest.mock('../../../components/Certificates/CertificateItem')
@@ -11,9 +12,9 @@ jest.mock('../../../components/Certificates/CertificateItem')
 describe('CertificatesMain', () => {
   test('should render CertificatesMain correctly', () => {
     const { container } = render(<CertificatesMain />)
-    const div = container.querySelector('div#certificates')
+    const div = container.querySelector<HTMLDivElement>('div#certificates')
     expect(div).toHaveClass('light-component')
-    expect(div.querySelector('div[data-testid="SectionTitle"]')).not.toBeNull()
+    testSectionTitle(div, 'certificates.title')
     const divContainer = div.querySelector('div.container')
     expect(divContainer).not.toBeNull()
     const divRow = divContainer.querySelector(

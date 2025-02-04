@@ -7,7 +7,7 @@ import BackToTopButton from '../../components/BackToTopButton'
 describe('BackToTopButton', () => {
   test('should render BackToTopButton correctly', () => {
     const { container } = render(<BackToTopButton />)
-    expect(container.querySelector('a.back-to-top')).not.toBeNull()
+    expect(container.querySelector('a.back-to-top')).toBeInTheDocument()
   })
 
   test('should scroll to top', () => {

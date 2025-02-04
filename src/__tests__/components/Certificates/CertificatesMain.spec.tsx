@@ -16,14 +16,14 @@ describe('CertificatesMain', () => {
     expect(div).toHaveClass('light-component')
     testSectionTitle(div, 'certificates.title')
     const divContainer = div.querySelector('div.container')
-    expect(divContainer).not.toBeNull()
+    expect(divContainer).toBeInTheDocument()
     const divRow = divContainer.querySelector(
       'div.row.row-cols-2.row-cols-sm-3.row-cols-md-4.row-cols-lg-6'
     )
-    expect(divRow).not.toBeNull()
+    expect(divRow).toBeInTheDocument()
     for (const { id } of certificatesStorage.certificates) {
       const selector = `div.col-lg.mb-2 > div[data-testid="${id}"]`
-      expect(divRow.querySelector(selector)).not.toBeNull()
+      expect(divRow.querySelector(selector)).toBeInTheDocument()
     }
   })
 })

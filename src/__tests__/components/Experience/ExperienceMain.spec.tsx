@@ -21,7 +21,7 @@ describe('ExperienceMain', () => {
       const divExperienceItem = divContainer.querySelector<HTMLElement>(
         `div.row > ul.timeline > li > div[data-testid="${id}"]`
       )
-      expect(divExperienceItem).not.toBeNull()
+      expect(divExperienceItem).toBeInTheDocument()
       expect(
         queryByTestId(divExperienceItem, 'title', { exact: true })
       ).toHaveTextContent(title)

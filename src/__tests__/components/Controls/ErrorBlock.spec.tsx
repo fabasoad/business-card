@@ -13,5 +13,5 @@ test('should render ErrorBlock correctly', () => {
   expect(divRows).toHaveLength(2)
   expect(divRows.item(0)).toHaveTextContent(title)
   const divTest = divRows.item(1).querySelector('div#test')
-  expect(divTest).not.toBeNull()
+  expect(divTest).toBeInTheDocument()
 })

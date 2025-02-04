@@ -18,7 +18,7 @@ describe('EducationMain', () => {
     expect(liElements).toHaveLength(1)
     const divEducationItem =
       liElements.item(0).querySelector<HTMLElement>('div[data-testid="EducationItem"]')
-    expect(divEducationItem).not.toBeNull()
+    expect(divEducationItem).toBeInTheDocument()
     expect(
       queryByTestId(divEducationItem, 'universityKey', { exact: true })
     ).toHaveTextContent('osar')

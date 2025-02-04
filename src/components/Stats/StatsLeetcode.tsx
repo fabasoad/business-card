@@ -2,7 +2,7 @@ import * as React from 'react'
 import StatsCommon from './StatsCommon'
 import { LeetcodeService, LeetcodeStats } from '../../scripts/services/LeetcodeService'
 
-type StatsLeetcodeProps = {
+export type StatsLeetcodeProps = {
   totalSolved?: number,
   easySolved?: number,
   mediumSolved?: number,

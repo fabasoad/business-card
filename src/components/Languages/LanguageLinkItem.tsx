@@ -2,7 +2,7 @@ import * as React from 'react'
 import LanguageItem from './LanguageItem'
 import type { LanguageTextItemProps } from './LanguageTextItem'
 
-type LanguageLinkItemProps = LanguageTextItemProps & {
+export type LanguageLinkItemProps = LanguageTextItemProps & {
   url: string
 }
 

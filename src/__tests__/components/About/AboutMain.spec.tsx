@@ -14,11 +14,11 @@ describe('AboutMain', () => {
     const divRow = div.querySelector(
       'div.row.d-flex.justify-content-center'
     )
-    expect(divRow).not.toBeNull()
+    expect(divRow).toBeInTheDocument()
     const divAboutPhoto = divRow.querySelector(
       'div.about-photo.col-md.d-flex.justify-content-center'
     )
-    expect(divAboutPhoto).not.toBeNull()
+    expect(divAboutPhoto).toBeInTheDocument()
     const imgElements = divAboutPhoto.querySelectorAll('img')
     expect(imgElements).toHaveLength(2)
     const imgPortrait: HTMLImageElement = imgElements.item(0)
@@ -31,7 +31,7 @@ describe('AboutMain', () => {
     expect(imgBadge).toHaveAttribute('src', '[object Object]')
     expect(imgBadge).toHaveAttribute('alt', 'Oracle 1Z0-808')
     const divListItems = divRow.querySelector('div.col-md-8.offset-md-2')
-    expect(divListItems).not.toBeNull()
+    expect(divListItems).toBeInTheDocument()
     expect(divListItems).toHaveTextContent('about-me.list')
   })
 })

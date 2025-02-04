@@ -6,7 +6,7 @@ export function testLocaleDropDown(div: HTMLDivElement, locale: Locale) {
   const button = div.querySelector('button')
   expect(button).toHaveClass('nav-link')
   expect(button).toHaveTextContent(`languages.codes.${locale.code}`)
-  expect(button.querySelector('i.locale-icon')).not.toBeNull()
+  expect(button.querySelector('i.locale-icon')).toBeInTheDocument()
 }
 
 export function testMenuItemRendered(a: HTMLAnchorElement, name: string) {
@@ -51,7 +51,7 @@ export function testMenuMain(div: HTMLDivElement) {
   const navbarCollapse = nav.querySelector('div#basic-navbar-nav')
   expect(navbarCollapse).toHaveClass('navbar-collapse')
   const navbarNav = navbarCollapse.querySelector('div.navbar-nav')
-  expect(navbarNav).not.toBeNull()
+  expect(navbarNav).toBeInTheDocument()
   const navLinkElements = navbarNav.querySelectorAll('a.nav-link')
   expect(navLinkElements).toHaveLength(7)
   for (const navLink of navLinkElements) {

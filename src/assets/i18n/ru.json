@@ -97,7 +97,6 @@
     }
   },
   "header": {
-    "about-me": "Обо мне",
     "occupation": "Разработчик программного обеспечения",
     "title": "Привет, я {{authorGivenName}}"
   },

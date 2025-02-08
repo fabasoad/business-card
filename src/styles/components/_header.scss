@@ -1,39 +1,20 @@
 @use "../base/settings" as *;
 
 .header {
-  position: relative;
-  height: 100vh;
-  background-image: url('../assets/images/logo.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: $light-blue;
   text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
 
-  .header__text {
-    position: relative;
-    padding: 1rem;
-    top: 20%;
-    background-color: rgba(255, 255, 255, 0.4);
-    color: $dark-grey;
+  @media (min-width: $md-breakpoint) {
+    padding-bottom: 0;
+  }
 
-    .header__text-subtitle {
-      font-weight: 500;
-      font-size: 1.2rem;
-    }
+  .header__img-container {
+    display: ruby;
 
-    p {
-      font-size: smaller;
-    }
-
-    @media (min-height: 568px) {
-      top: 50%;
-    }
-    @media (min-width: $small-desktop-breakpoint) {
-      top: 35%;
-      position: absolute;
-      margin-left: 2rem;
-    }
-    @media (min-width: 830px) {
-      margin-left: 5rem;
+    img {
+      max-height: 30rem;
     }
   }
 
@@ -44,31 +25,26 @@
   .btn-primary {
     color: $dark-grey;
     border-color: $dark-grey;
-  }
-}
+    background-color: transparent;
+    margin: 0 10px;
+    font-size: 16px;
 
-.btn-primary {
-  color: #76818d;
-  background-color: transparent;
-  border-color: #76818d;
-  margin: 0 10px;
-  font-size: 16px;
+    &:hover {
+      color: #eee;
+      background-color: $blue;
+      border-color: $blue;
+    }
 
-  &:hover {
-    color: #eee;
-    background-color: $blue;
-    border-color: $blue;
-  }
+    &:focus {
+      color: #eee;
+      background-color: $blue;
+      border-color: $blue;
+    }
 
-  &:focus {
-    color: #eee;
-    background-color: $blue;
-    border-color: $blue;
-  }
-
-  &:active {
-    color: #eee;
-    background-color: $blue;
-    border-color: $blue;
+    &:active {
+      color: #eee;
+      background-color: $blue;
+      border-color: $blue;
+    }
   }
 }

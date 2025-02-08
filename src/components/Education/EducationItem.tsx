@@ -35,7 +35,7 @@ export default function EducationItem({
         {t(`education.university.${universityKey}.title`)} ({t(`locations.${location}`)})
       </p>
       <p className="timeline__subtitle">
-        {toDateLocale(fromYear)} - {toDateLocale(toYear)}{t('comma')}{humanize(new Date(fromYear), new Date(toYear), i18n.language)}
+        {toDateLocale(fromYear)} - {toDateLocale(toYear)}{t('comma')}{humanize(new Date(fromYear, 0), new Date(toYear, 0), i18n.language)}
       </p>
       <div className="timeline__body">
         {t(`education.university.${universityKey}.speciality`)}

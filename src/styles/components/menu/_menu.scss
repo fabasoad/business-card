@@ -19,6 +19,19 @@
   .navbar-brand {
     color: $dark-white !important;
     font-weight: 700;
+    font-size: 1.2rem;
+
+    @media (min-width: $small-desktop-breakpoint) {
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: $lg-breakpoint) {
+      font-size: 1.1rem;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+      font-size: 1.2rem;
+    }
 
     &:focus {
       outline: 0;
@@ -27,7 +40,7 @@
 
   .navbar-toggler {
     border-color: transparent;
-    font-size: 16px;
+    font-size: 1rem;
     padding: 4px 6px;
 
     &:focus {
@@ -46,8 +59,8 @@
   .navbar-nav {
     .dropdown {
       color: $white;
-      font-size: 14px;
-      letter-spacing: 1px;
+      font-size: 0.9rem;
+      line-break: anywhere;
 
       .dropdown-menu {
         background: $blue;
@@ -60,16 +73,40 @@
       }
     }
 
+    a {
+      margin-left: 1.3rem;
+
+      @media (min-width: $small-desktop-breakpoint) {
+        margin-left: 0;
+      }
+    }
+
     .nav-link {
       -webkit-transition: background .3s ease-in-out;
       -moz-transition: background .3s ease-in-out;
       color: $white;
-      font-size: 14px;
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: background .3s ease-in-out;
-      @media (min-width: 830px) {
-        font-size: 16px;
+
+      @media (min-width: $small-desktop-breakpoint) {
+        font-size: 0.68rem;
+      }
+
+      @media (min-width: 790px) {
+        font-size: 0.7rem;
+      }
+
+      @media (min-width: 848px) {
+        font-size: 0.8rem;
+      }
+
+      @media (min-width: $lg-breakpoint) {
+        font-size: 0.9rem;
+      }
+
+      @media (min-width: $desktop-breakpoint) {
+        font-size: 1rem;
       }
 
       &:hover {

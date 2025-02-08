@@ -1,11 +1,11 @@
+@use "../base/settings" as *;
+
 #about-me {
   .about-photo {
     height: 13rem;
 
-    .about-photo--badge {
-      height: 4rem;
-      margin: 8rem 0 0 10rem;
-      position: absolute;
+    @media (min-width: $small-desktop-breakpoint) {
+      margin-left: 4rem;
     }
 
     .about-photo--portrait {

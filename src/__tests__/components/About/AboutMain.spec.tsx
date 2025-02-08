@@ -19,29 +19,19 @@ describe('AboutMain', () => {
       'div.row.d-flex.justify-content-center'
     )
     expect(divRow).toBeInTheDocument()
-    const divAboutPhoto = divRow.querySelector(
-      'div.about-photo.col-md.d-flex.justify-content-center'
-    )
-    expect(divAboutPhoto).toBeInTheDocument()
-    const imgElements = divAboutPhoto.querySelectorAll('img')
-    expect(imgElements).toHaveLength(2)
-    const imgPortrait: HTMLImageElement = imgElements.item(0)
-    expect(imgPortrait).toHaveClass('about-photo--portrait')
-    expect(imgPortrait).toHaveClass('img-thumbnail')
-    expect(imgPortrait).toHaveAttribute('src', '[object Object]')
-    expect(imgPortrait).toHaveAttribute('alt', 'About me')
-    const imgBadge: HTMLImageElement = imgElements.item(1)
-    expect(imgBadge).toHaveClass('about-photo--badge')
-    expect(imgBadge).toHaveAttribute('src', '[object Object]')
-    expect(imgBadge).toHaveAttribute('alt', 'Oracle 1Z0-808')
-    const divListItems = divRow.querySelector('div.col-md-8.offset-md-2')
-    expect(divListItems).toBeInTheDocument()
-    expect(divListItems).toHaveTextContent('about-me.list')
+    expect(
+      divRow.querySelector(
+        'div.about-photo.col-md.d-flex.justify-content-center > img.about-photo--portrait.img-thumbnail[src="[object Object]"][alt="About me"][loading="lazy"]'
+      )
+    ).toBeInTheDocument()
+    expect(
+      divRow.querySelector('div.col-md-8.offset-md-2')
+    ).toHaveTextContent('about-me.list')
   })
 
   test('renderList should return string when children is string', () => {
     const children = StringUtils.random(10)
-    const { container } = render(renderList(0, children))
+    const { container } = render(renderList(children))
     expect(container).toHaveTextContent(children)
   })
 
@@ -54,7 +44,7 @@ describe('AboutMain', () => {
         title: StringUtils.random(10)
       }]
     }]
-    const { container } = render(renderList(0, children))
+    const { container } = render(renderList(children))
     const ul1 = container.querySelector('ul')
     expect(ul1.children).toHaveLength(1)
     const li1 = ul1.querySelector('li')

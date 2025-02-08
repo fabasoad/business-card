@@ -97,7 +97,6 @@
     }
   },
   "header": {
-    "about-me": "About me",
     "occupation": "Senior Software Engineer",
     "title": "Hello, I'm {{authorGivenName}}"
   },

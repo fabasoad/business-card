@@ -2,8 +2,7 @@
 import { ReactElement } from 'react'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import * as imgAboutMe from '../../assets/images/about_me.jpg'
-import * as img1z0808Badge from '../../assets/images/badges/oracle-1z0-808.png'
+import * as imgPortraitSm from '../../assets/images/portrait-sm-light-blue.png'
 import TotalExperience from '../../scripts/TotalExperience'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
@@ -13,14 +12,14 @@ export type AboutMeItem = {
   list?: AboutMeItem[]
 }
 
-export function renderList(level: number, children: AboutMeItem[] | string): ReactElement<'ul'> | string {
+export function renderList(children: AboutMeItem[] | string, level: number = 0): ReactElement<'ul'> | string {
   // For tests
   return typeof children === 'string' ? children : (
     <ul>
       {children.map(({ title, list }: AboutMeItem, index: number) => (
         <li key={`about-me-item-${level}-${index}`}>
           {title}
-          {Array.isArray(list) ? renderList(level + 1, list) : <></>}
+          {Array.isArray(list) ? renderList(list, level + 1) : <></>}
         </li>
       ))}
     </ul>
@@ -43,17 +42,13 @@ export default function AboutMain() {
         <Col md className="about-photo d-flex justify-content-center">
           <img
             className="about-photo--portrait img-thumbnail"
-            src={imgAboutMe}
+            src={imgPortraitSm}
             alt="About me"
-          />
-          <img
-            className="about-photo--badge"
-            src={img1z0808Badge}
-            alt="Oracle 1Z0-808"
+            loading="lazy"
           />
         </Col>
         <Col md={{ span: 8, offset: 2 }}>
-          {renderList(0, list as AboutMeItem[])}
+          {renderList(list as AboutMeItem[])}
         </Col>
       </Row>
     </Container>

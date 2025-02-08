@@ -97,7 +97,6 @@
     }
   },
   "header": {
-    "about-me": "自己紹介",
     "occupation": "シニアソフトウェアエンジニア",
     "title": "<p>{{authorGivenName}}です。</p><p>よろしくお願いいたします。</p>"
   },

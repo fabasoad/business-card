@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "biome lint --write src",
     "start:dev": "webpack serve --config webpack.dev.js",
     "start:web": "PUBLIC_PATH=../public nodemon --watch ./server server/app.js",
-    "test": "jest --coverage"
+    "test": "jest --config=jest.config.json --json --outputFile=jest-report.json --coverage"
   },
   "bugs": {
     "url": "https://github.com/fabasoad/business-card/issues",
@@ -27,8 +27,8 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "7.26.4",
-    "@babel/core": "7.26.7",
-    "@babel/preset-env": "7.26.7",
+    "@babel/core": "7.26.8",
+    "@babel/preset-env": "7.26.8",
     "@babel/preset-react": "7.26.3",
     "@babel/preset-typescript": "7.26.0",
     "@biomejs/biome": "1.9.4",
@@ -60,7 +60,7 @@
     "react-iframe": "1.8.5",
     "react-modal": "3.16.3",
     "react-test-renderer": "19.0.0",
-    "sass": "1.83.4",
+    "sass": "1.84.0",
     "sass-loader": "16.0.4",
     "style-loader": "4.0.0",
     "ts-jest": "29.2.5",
@@ -75,7 +75,7 @@
   "dependencies": {
     "@octokit/rest": "21.1.0",
     "cross-fetch": "4.1.0",
-    "posthog-js": "1.215.3",
+    "posthog-js": "1.215.6",
     "react-bootstrap": "2.10.9"
   },
   "packageManager": "yarn@4.6.0"

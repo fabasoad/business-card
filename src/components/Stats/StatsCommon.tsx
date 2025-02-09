@@ -14,7 +14,7 @@ const StatsCommon: React.FC<React.PropsWithChildren<StatsCommonProps>> =
     const tech: Technology = technologyStorage.findByName(techName)
     return (
       <Row className="justify-content-center">
-        <a href={url} target="_blank" rel="noreferrer" className="text-center">
+        <a href={url} target="_blank" rel="noreferrer">
           <img
             src={tech.img}
             alt={tech.name}

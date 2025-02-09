@@ -6,14 +6,16 @@ import StatsCommon from '../../../components/Stats/StatsCommon'
 import StringUtils from '../../../scripts/utils/StringUtils'
 import { testStatsCommon } from './TestUtils'
 
-test('should render StatsCommon correctly', () => {
-  const url = StringUtils.random(10)
-  const techName = 'maven'
-  const content = StringUtils.random(10)
-  const { container } = render(
-    <StatsCommon techName={techName} url={url}>{content}</StatsCommon>
-  )
-  testStatsCommon(
-    container.querySelector('div.row.justify-content-center'), url, content, techName
-  )
+describe('StatsCommon', () => {
+  test('should render StatsCommon correctly', () => {
+    const url = StringUtils.random(10)
+    const techName = 'maven'
+    const content = StringUtils.random(10)
+    const { container } = render(
+      <StatsCommon techName={techName} url={url}>{content}</StatsCommon>
+    )
+    testStatsCommon(
+      container.querySelector('div.row.justify-content-center'), url, content, techName
+    )
+  })
 })

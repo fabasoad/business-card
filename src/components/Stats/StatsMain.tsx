@@ -14,16 +14,16 @@ export default function StatsMain() {
       <SectionTitle>{t('stats.title')}</SectionTitle>
       <Container>
         <Row>
-          <Col className="m-2">
+          <Col className="text-center">
             <StatsLeetcode />
           </Col>
-          <Col className="m-2">
+          <Col className="text-center">
             <StatsGitHub />
           </Col>
-          <Col className="m-2">
+          <Col className="text-center">
             <StatsStackOverflow />
           </Col>
-          <Col className="m-2">
+          <Col className="text-center">
             <StatsSuperUser />
           </Col>
         </Row>

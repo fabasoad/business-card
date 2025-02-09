@@ -17,7 +17,7 @@ describe('Header', () => {
     expect(container.querySelector(divSelector).children).toHaveLength(2)
     expect(
       container.querySelector<HTMLImageElement>(
-        `${divSelector} > div.header__img-container.col-md-5.col-lg-5 > img.d-flex.mx-lg-auto.img-fluid[src="[object Object]"][alt="Portrait"][loading="lazy"]`
+        `${divSelector} > div.header__img-container.col-md-5.col-lg-5 > img.mx-lg-auto.img-fluid[src="[object Object]"][alt="Portrait"][loading="lazy"]`
       )
     ).toBeInTheDocument()
     const divText = container.querySelector<HTMLDivElement>(

@@ -10,7 +10,7 @@ export default function Header() {
       <div className="header__img-container col-md-5 col-lg-5">
         <img
           src={imgPortrait}
-          className="d-flex mx-lg-auto img-fluid"
+          className="mx-lg-auto img-fluid"
           alt="Portrait"
           loading="lazy"
         />

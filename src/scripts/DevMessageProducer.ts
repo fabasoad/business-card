@@ -16,7 +16,7 @@ class DevMessageProducer {
       '* Ko-fi: https://ko-fi.com/fabasoad\n' +
       '* Liberapay: https://liberapay.com/fabasoad\n' +
       '* IssueHunt: https://issuehunt.io/r/fabasoad\n' +
-      '* BTC: https://en.cryptobadges.io/donate/145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH'
+      '* BTC: https://www.bitcoinqrcodemaker.com/?style=bitcoin&address=145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH&prefix=on'
     return [
       'Hello my curious friend!',
       'I am glad that you are interested in internals of my website',

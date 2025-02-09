@@ -1,7 +1,7 @@
 [{
   "id": "woven-by-toyota",
   "title": "Woven by Toyota",
-  "locationI18nKey": "experience.locations.chuo",
+  "locationI18nKey": "chuo",
   "techStack": [
     "Java",
     "Go",

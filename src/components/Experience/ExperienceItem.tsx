@@ -51,7 +51,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
     <>
       <p className={`timeline__title ${clazz}`}>
         <img src={img} alt={title} />
-        {title} ({t(locationI18nKey)})
+        {title} ({t(`locations.${locationI18nKey}`)})
       </p>
       <p className="timeline__subtitle">
         {toDateLocaleFromDate(from)} - {toDate}{t('comma')}{humanize(from, to || new Date(), i18n.language)}

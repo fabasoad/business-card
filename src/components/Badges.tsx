@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
+import * as imgSupportUkraine from '../assets/images/badges/support-ukraine.png'
 import SectionTitle from './Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
@@ -12,8 +13,29 @@ export default function Badges() {
       <Container>
         <Row>
           <Col sm md lg className="text-center">
-            <a href="https://tree-nation.com/profile/digitalocean" rel="noopener noreferrer" target="_blank">
-              <img className="mb-4 mx-4" src={imgDigitalOceanBadge} alt="Digital Ocean Forest Badge" title="DigitalOcean Forest 2021" />
+            <a
+              href="https://standforukraine.com"
+              rel="noopener noreferrer"
+              target="_blank">
+              <img
+                className="mb-4 mx-4"
+                src={imgSupportUkraine}
+                alt="Support Ukraine"
+                title="Stand With Ukraine"
+              />
+            </a>
+          </Col>
+          <Col sm md lg className="text-center">
+            <a
+              href="https://tree-nation.com/profile/digitalocean"
+              rel="noopener noreferrer"
+              target="_blank">
+              <img
+                className="img-circle mb-4 mx-4"
+                src={imgDigitalOceanBadge}
+                alt="Digital Ocean Forest Badge"
+                title="DigitalOcean Forest 2021"
+              />
             </a>
           </Col>
           {/* <Col sm md lg className="text-center">

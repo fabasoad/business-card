@@ -21,7 +21,7 @@ describe('AboutMain', () => {
     expect(divRow).toBeInTheDocument()
     expect(
       divRow.querySelector(
-        'div.about-photo.col-md.d-flex.justify-content-center > img.about-photo--portrait.img-thumbnail[src="[object Object]"][alt="About me"][loading="lazy"]'
+        'div.about-photo.col-md.d-flex.justify-content-center > img.about-photo--portrait.img-circle.img-thumbnail[src="[object Object]"][alt="About me"][loading="lazy"]'
       )
     ).toBeInTheDocument()
     expect(

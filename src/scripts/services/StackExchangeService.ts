@@ -25,12 +25,9 @@ export abstract class StackExchangeService implements RemoteService<StackExchang
     try {
       const response: Response = await fetch(`https://api.stackexchange.com/2.3/users/${StackExchangeService.STACKOVERFLOW_USER_ID}/associated`)
       const data: StackOverflowResponse = await response.json()
-      for (let i = 0; i < data.items.length; i++) {
-        if (data.items[i].site_name === this.siteName) {
-          this.stats = {
-            answerCount: data.items[i].answer_count,
-            reputation: data.items[i].reputation
-          }
+      for (const { answer_count, reputation, site_name } of data.items) {
+        if (site_name === this.siteName) {
+          this.stats = { answerCount: answer_count, reputation }
           break
         }
       }

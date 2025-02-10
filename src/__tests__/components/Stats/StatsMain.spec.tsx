@@ -17,7 +17,7 @@ describe('StatsMain', () => {
     const div = container.querySelector<HTMLDivElement>('div#stats')
     testSectionTitle(div, 'stats.title')
     const selector = (testId: string) =>
-      `div.container > div.row > div.col.m-2 > div[data-testid="${testId}"]`
+      `div.container > div.row > div.col.text-center > div[data-testid="${testId}"]`
     let el = div.querySelector(selector('StatsGitHub'))
     expect(el).toBeInTheDocument()
     expect(

@@ -3535,7 +3535,7 @@ __metadata:
     jest-environment-jsdom: "npm:29.7.0"
     nodemon: "npm:3.1.9"
     normalize.css: "npm:8.0.1"
-    posthog-js: "npm:1.215.6"
+    posthog-js: "npm:1.215.7"
     raf: "npm:3.4.1"
     react: "npm:19.0.0"
     react-bootstrap: "npm:2.10.9"
@@ -7107,15 +7107,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"posthog-js@npm:1.215.6":
-  version: 1.215.6
-  resolution: "posthog-js@npm:1.215.6"
+"posthog-js@npm:1.215.7":
+  version: 1.215.7
+  resolution: "posthog-js@npm:1.215.7"
   dependencies:
     core-js: "npm:^3.38.1"
     fflate: "npm:^0.4.8"
     preact: "npm:^10.19.3"
     web-vitals: "npm:^4.2.0"
-  checksum: 10c0/7e25544b80513ba54166600f6999acd6eb79964fe7ed1c4e4813c9d579e5d003f8d07c59188a6be84d46a25be05d7bdabcfa130c85d599bf8b3db831cc20aa92
+  checksum: 10c0/996c10212a7a4b99811fe76de4a869458265649f33c9fdfa9d3d711e9caef74820cae3ef19c21d198e3d5218d74edb26e2d620caa294fc389ac12e0aa5bc77d3
   languageName: node
   linkType: hard
 

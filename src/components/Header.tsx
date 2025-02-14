@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Button } from 'react-bootstrap'
-import * as imgPortrait from '../assets/images/portrait-light-blue.png'
+import * as imgPortrait from '../assets/images/portrait.png'
 import { Trans, useTranslation } from 'react-i18next'
 
 export default function Header() {

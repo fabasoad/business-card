@@ -2,7 +2,7 @@
 import { ReactElement } from 'react'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import * as imgPortraitSm from '../../assets/images/portrait-sm-light-blue.png'
+import * as imgPortraitSm from '../../assets/images/portrait-sm.png'
 import TotalExperience from '../../scripts/TotalExperience'
 import SectionTitle from '../Controls/SectionTitle'
 import { Col, Container, Row } from 'react-bootstrap'

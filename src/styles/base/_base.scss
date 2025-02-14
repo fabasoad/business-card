@@ -96,3 +96,43 @@ a:hover {
 .img-circle {
   border-radius: 50%;
 }
+
+:root {
+  /** Base colors */
+  $clr-a0: #ffffff;
+
+  /** Light theme primary colors */
+  $clr-primary-a0: #7ac6a2;
+  $clr-primary-a1: #91cfb1;
+  $clr-primary-a2: #a7d9c1;
+
+  /** Light theme surface colors */
+  $clr-surface-a0: #575757;
+  $clr-surface-a1: #717171;
+  $clr-surface-a2: #8b8b8b;
+
+  /** Light theme tonal surface colors */
+  $clr-surface-tonal-a0: #63776d;
+  $clr-surface-tonal-a1: #7c8c84;
+  $clr-surface-tonal-a2: #95a29b;
+}
+
+[data-theme="dark"] {
+  /** Base colors */
+  $clr-a0: #000000;
+
+  /** Dark theme primary colors */
+  $clr-primary-a0: #19a877;
+  $clr-primary-a1: #44b285;
+  $clr-primary-a2: #61bc94;
+
+  /** Dark theme surface colors */
+  $clr-surface-a0: #121212;
+  $clr-surface-a1: #282828;
+  $clr-surface-a2: #3f3f3f;
+
+  /** Dark theme tonal surface colors */
+  $clr-surface-tonal-a0: #1f3b2e;
+  $clr-surface-tonal-a1: #354e42;
+  $clr-surface-tonal-a2: #4c6257;
+}

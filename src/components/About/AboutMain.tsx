@@ -36,21 +36,23 @@ export default function AboutMain() {
   })
 
   return (
-    <Container id="about-me">
+    <div id="about-me" className="light-component">
       <SectionTitle>{t('about-me.title')}</SectionTitle>
-      <Row className="d-flex justify-content-center">
-        <Col md className="about-photo d-flex justify-content-center">
-          <img
-            className="about-photo--portrait img-thumbnail img-circle"
-            src={imgPortraitSm}
-            alt="About me"
-            loading="lazy"
-          />
-        </Col>
-        <Col md={{ span: 8, offset: 2 }}>
-          {renderList(list as AboutMeItem[])}
-        </Col>
-      </Row>
-    </Container>
+      <Container>
+        <Row className="d-flex justify-content-center">
+          <Col md className="about-photo d-flex justify-content-center">
+            <img
+              className="about-photo--portrait img-thumbnail img-circle"
+              src={imgPortraitSm}
+              alt="About me"
+              loading="lazy"
+            />
+          </Col>
+          <Col md={{ span: 8, offset: 2 }}>
+            {renderList(list as AboutMeItem[])}
+          </Col>
+        </Row>
+      </Container>
+    </div>
   )
 }

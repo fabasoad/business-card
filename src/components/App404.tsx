@@ -33,21 +33,21 @@ export default function App404({ redirectUrl = BaseConstants.BASE_URL }: App404P
   const { i18n, t } = useTranslation()
 
   return (
-    <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
-      <p>{t('404.text.1')}</p>
-      <p>
-        <>
+    <div className={`container d-flex font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
+      <div className="row">
+        <div className="col-12">{t('404.text.1')}</div>
+        <div className="col-12">
           <span className="blinker-prefix"></span>
           {/* JP: 画面をクリックして続ける */}
           &nbsp;{t('404.text.2')}<span style={isRedirectingStyle(true)}>.</span>
           <span style={isRedirectingStyle(false)} className="blinker">_</span>
-        </>
-      </p>
-      <p style={isRedirectingStyle(true)}>
-        {t('404.text.3')}
-        <span>{counter}</span>
-        <span className="blinker">_</span>
-      </p>
+        </div>
+        <div className="col-12" style={isRedirectingStyle(true)}>
+          {t('404.text.3')}
+          <span>{counter}</span>
+          <span className="blinker">_</span>
+        </div>
+      </div>
     </div>
   )
 }

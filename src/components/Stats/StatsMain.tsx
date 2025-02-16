@@ -10,7 +10,7 @@ import StatsSuperUser from './StatsSuperUser'
 export default function StatsMain() {
   const { t } = useTranslation()
   return (
-    <div id="stats">
+    <div id="stats" className="light-component">
       <SectionTitle>{t('stats.title')}</SectionTitle>
       <Container>
         <Row>

@@ -3,8 +3,6 @@ import { LanguageTextItemProps } from '../LanguageTextItem'
 
 export default function LanguageTextItem({ code, text }: LanguageTextItemProps) {
   return (
-    <div data-testid={code}>
-      <div data-testid="text">{text}</div>
-    </div>
+    <div data-testid={code}>{text}</div>
   )
 }

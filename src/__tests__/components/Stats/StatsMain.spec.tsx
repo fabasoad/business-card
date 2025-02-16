@@ -3,8 +3,8 @@ import * as React from 'react'
 import { render } from '@testing-library/react'
 
 import StatsMain from '../../../components/Stats/StatsMain'
-import { testSectionTitle } from '../Controls/TestUtils'
 
+jest.mock('../../../components/Controls/Section')
 jest.mock('../../../components/Controls/SectionTitle')
 jest.mock('../../../components/Stats/StatsGitHub')
 jest.mock('../../../components/Stats/StatsLeetcode')
@@ -14,16 +14,14 @@ jest.mock('../../../components/Stats/StatsSuperUser')
 describe('StatsMain', () => {
   test('should render StatsMain correctly', () => {
     const { container } = render(<StatsMain />)
-    const div = container.querySelector<HTMLDivElement>('div#stats')
-    testSectionTitle(div, 'stats.title')
     const selector = (testId: string) =>
-      `div.container > div.row > div.col.text-center > div[data-testid="${testId}"]`
-    let el = div.querySelector(selector('StatsGitHub'))
+      `div[data-testid="Section-stats"] > div.row > div.col.text-center > div[data-testid="${testId}"]`
+    let el = container.querySelector(selector('StatsGitHub'))
     expect(el).toBeInTheDocument()
     expect(
       el.querySelector('div[data-testid="starsAmount"]')
     ).toHaveTextContent('1')
-    el = div.querySelector(selector('StatsLeetcode'))
+    el = container.querySelector(selector('StatsLeetcode'))
     expect(el).toBeInTheDocument()
     expect(
       el.querySelector('div[data-testid="totalSolved"]')
@@ -37,7 +35,7 @@ describe('StatsMain', () => {
     expect(
       el.querySelector('div[data-testid="hardSolved"]')
     ).toHaveTextContent('1')
-    el = div.querySelector(selector('StatsStackOverflow'))
+    el = container.querySelector(selector('StatsStackOverflow'))
     expect(el).toBeInTheDocument()
     expect(
       el.querySelector('div[data-testid="reputation"]')
@@ -45,7 +43,7 @@ describe('StatsMain', () => {
     expect(
       el.querySelector('div[data-testid="answerCount"]')
     ).toHaveTextContent('1')
-    el = div.querySelector(selector('StatsSuperUser'))
+    el = container.querySelector(selector('StatsSuperUser'))
     expect(el).toBeInTheDocument()
     expect(
       el.querySelector('div[data-testid="reputation"]')

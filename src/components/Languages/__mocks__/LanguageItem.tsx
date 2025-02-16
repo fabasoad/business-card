@@ -5,6 +5,6 @@ export default function LanguageItem({
   children, code
 }: React.PropsWithChildren<LanguageItemProps>) {
   return (
-    <div data-testid={code}>{children}</div>
+    <div data-testid={`LanguageItem-${code}`}>{children}</div>
   )
 }

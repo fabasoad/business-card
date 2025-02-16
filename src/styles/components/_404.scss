@@ -20,7 +20,7 @@ body {
   height: 90vh;
   justify-content: center;
 
-  div.col-12 {
+  div.col {
     color: $white;
     text-align: center;
 
@@ -34,5 +34,17 @@ body {
         content: 'Click';
       }
     }
+  }
+
+  div[data-redirecting="true"] {
+    display: block;
+  }
+
+  span[data-redirecting="true"] {
+    display: inline;
+  }
+
+  [data-redirecting="false"] {
+    display: none;
   }
 }

@@ -17,7 +17,7 @@ describe('LanguageLinkItem', () => {
     const { container } = render(
       <LanguageLinkItem code={code} text={text} url={url} />
     )
-    const a = container.querySelector(`div[data-testid="${code}"] > a.h5.mt-2`)
+    const a = container.querySelector(`div[data-testid="LanguageItem-${code}"] > a.h5.mt-2`)
     expect(a).toHaveAttribute('target', '_blank')
     expect(a).toHaveAttribute('rel', 'noopener noreferrer')
     expect(a).toHaveAttribute('href', url)

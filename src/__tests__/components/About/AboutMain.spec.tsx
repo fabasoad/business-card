@@ -6,26 +6,24 @@ import AboutMain, {
 } from '../../../components/About/AboutMain'
 import { render } from '@testing-library/react'
 import StringUtils from '../../../scripts/utils/StringUtils'
-import { testSectionTitle } from '../Controls/TestUtils'
 
+jest.mock('../../../components/Controls/Section')
 jest.mock('../../../components/Controls/SectionTitle')
 
 describe('AboutMain', () => {
   test('should render AboutMain correctly', () => {
     const { container } = render(<AboutMain />)
-    const div = container.querySelector<HTMLDivElement>('div#about-me.container')
-    testSectionTitle(div, 'about-me.title')
-    const divRow = div.querySelector(
-      'div.row.d-flex.justify-content-center'
+    const div = container.querySelector<HTMLDivElement>(
+      'div[data-testid=Section-about-me] > div.row.d-flex.justify-content-center'
     )
-    expect(divRow).toBeInTheDocument()
+    expect(div).toBeInTheDocument()
     expect(
-      divRow.querySelector(
+      div.querySelector(
         'div.about-photo.col-md.d-flex.justify-content-center > img.about-photo--portrait.img-circle.img-thumbnail[src="[object Object]"][alt="About me"][loading="lazy"]'
       )
     ).toBeInTheDocument()
     expect(
-      divRow.querySelector('div.col-md-8.offset-md-2')
+      div.querySelector('div.col-md-8.offset-md-2')
     ).toHaveTextContent('about-me.list')
   })
 

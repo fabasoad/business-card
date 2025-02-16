@@ -1,13 +1,18 @@
 @use "../../base/settings" as *;
-@use "../general" as *;
 @use "./contacts" as *;
 @use "./info" as *;
 @use "./social" as *;
 
 .footer {
-  @extend .dark-component;
   color: $white;
+  background-color: $blue;
   padding-bottom: 1.5rem;
+
+  .section-title {
+    h2 {
+      color: $white;
+    }
+  }
 
   .icon-list {
     padding-left: 0;

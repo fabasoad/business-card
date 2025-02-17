@@ -5,7 +5,6 @@ import '@testing-library/jest-dom'
 import Skills from '../../components/Skills'
 
 jest.mock('../../components/Controls/Section')
-jest.mock('../../components/Controls/SectionTitle')
 
 describe('Skills', () => {
   const expectedSkillsMap = new Map<string, string>([

@@ -5,7 +5,6 @@ import { render } from '@testing-library/react'
 import experienceStorage from '../../../scripts/experience/ExperienceStorage'
 
 jest.mock('../../../components/Controls/Section')
-jest.mock('../../../components/Controls/SectionTitle')
 jest.mock('../../../components/Experience/ExperienceItem')
 
 describe('ExperienceMain', () => {

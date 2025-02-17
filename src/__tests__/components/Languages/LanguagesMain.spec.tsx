@@ -5,7 +5,6 @@ import { render } from '@testing-library/react'
 import LanguagesMain from '../../../components/Languages/LanguagesMain'
 
 jest.mock('../../../components/Controls/Section')
-jest.mock('../../../components/Controls/SectionTitle')
 jest.mock('../../../components/Languages/LanguageLinkItem')
 jest.mock('../../../components/Languages/LanguageTextItem')
 

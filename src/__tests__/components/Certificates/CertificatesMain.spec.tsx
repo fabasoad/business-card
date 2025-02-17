@@ -6,7 +6,6 @@ import certificatesStorage
 import { render } from '@testing-library/react'
 
 jest.mock('../../../components/Controls/Section')
-jest.mock('../../../components/Controls/SectionTitle')
 jest.mock('../../../components/Certificates/CertificateItem')
 
 describe('CertificatesMain', () => {

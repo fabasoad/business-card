@@ -8,7 +8,6 @@ import { render } from '@testing-library/react'
 import StringUtils from '../../../scripts/utils/StringUtils'
 
 jest.mock('../../../components/Controls/Section')
-jest.mock('../../../components/Controls/SectionTitle')
 
 describe('AboutMain', () => {
   test('should render AboutMain correctly', () => {

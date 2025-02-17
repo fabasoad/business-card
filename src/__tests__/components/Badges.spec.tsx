@@ -5,7 +5,6 @@ import '@testing-library/jest-dom'
 import Badges from '../../components/Badges'
 
 jest.mock('../../components/Controls/Section')
-jest.mock('../../components/Controls/SectionTitle')
 
 describe('Badges', () => {
   test('should render Badges correctly', () => {

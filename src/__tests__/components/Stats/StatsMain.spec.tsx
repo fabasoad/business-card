@@ -5,7 +5,6 @@ import { render } from '@testing-library/react'
 import StatsMain from '../../../components/Stats/StatsMain'
 
 jest.mock('../../../components/Controls/Section')
-jest.mock('../../../components/Controls/SectionTitle')
 jest.mock('../../../components/Stats/StatsGitHub')
 jest.mock('../../../components/Stats/StatsLeetcode')
 jest.mock('../../../components/Stats/StatsStackOverflow')

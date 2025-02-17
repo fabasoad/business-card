@@ -1,5 +1,6 @@
 /* global NodeJS */
 import * as React from 'react'
+import { Col, Container, Row } from 'react-bootstrap'
 import BaseConstants from '../scripts/BaseConstants'
 import { useTranslation } from 'react-i18next'
 
@@ -28,26 +29,24 @@ export default function App404({ redirectUrl = BaseConstants.BASE_URL }: App404P
     }, 1000)
   })
 
-  const isRedirectingStyle = (flag: boolean) => ({ display: `${isRedirecting === flag ? 'inline' : 'none'}` })
-
   const { i18n, t } = useTranslation()
 
   return (
-    <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
-      <p>{t('404.text.1')}</p>
-      <p>
-        <>
+    <Container className={`d-flex font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
+      <Row>
+        <Col>{t('404.text.1')}</Col>
+        <Col>
           <span className="blinker-prefix"></span>
           {/* JP: 画面をクリックして続ける */}
-          &nbsp;{t('404.text.2')}<span style={isRedirectingStyle(true)}>.</span>
-          <span style={isRedirectingStyle(false)} className="blinker">_</span>
-        </>
-      </p>
-      <p style={isRedirectingStyle(true)}>
-        {t('404.text.3')}
-        <span>{counter}</span>
-        <span className="blinker">_</span>
-      </p>
-    </div>
+          &nbsp;{t('404.text.2')}<span data-redirecting={isRedirecting}>.</span>
+          <span data-redirecting={!isRedirecting} className="blinker">_</span>
+        </Col>
+        <Col data-redirecting={isRedirecting}>
+          {t('404.text.3')}
+          <span>{counter}</span>
+          <span className="blinker">_</span>
+        </Col>
+      </Row>
+    </Container>
   )
 }

@@ -1,24 +1,4 @@
-@use "../base/settings" as *;
-
-.light-component {
-  background: $white;
-
-  .section-title {
-    h2 {
-      color: $grey;
-    }
-  }
-}
-
-.dark-component {
-  background: $blue;
-
-  .section-title {
-    h2 {
-      color: $white;
-    }
-  }
-}
+@use "../../base/settings" as *;
 
 .section-title {
   padding: 4rem 0 0 0;
@@ -26,6 +6,7 @@
   h2 {
     font-weight: 700;
     margin-bottom: 30px;
+    color: $grey;
   }
 
   hr {

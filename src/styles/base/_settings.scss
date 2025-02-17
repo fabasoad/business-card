@@ -25,3 +25,23 @@ $md-breakpoint: 768px;
 $lg-breakpoint: 992px;
 $xl-breakpoint: 1200px;
 $xxl-breakpoint: 1400px;
+
+:root {
+  --margin-lane-background-color: #2c3e50;
+  --margin-lane-title-color: $white;
+  --margin-lane-foreground-primary-color: #f4f5f6;
+  --margin-lane-foreground-secondary-color: #d3ddec;
+  --margin-lane-foreground-active-color: #d3ddec;
+  --margin-lane-foreground-focus-color: #e87e04;
+  --margin-lane-foreground-hover-color: #e87e04;
+
+  --header-background-color: $light-blue;
+  --header-foreground-primary-color: $dark-blue;
+  --header-foreground-secondary-color: $white;
+  --header-foreground-hover-color: $blue;
+
+  --section-title-color: $grey;
+  --section-foreground-primary-color: $dark-grey;
+  --section-foreground-secondary-color: $dark-orange;
+  --section-foreground-hover-color: $orange;
+}

@@ -13,11 +13,11 @@
 
 .navbar-custom {
   margin-bottom: 0;
-  background-color: $blue;
+  background-color: var(--margin-lane-background-color);
   border-radius: 0;
 
   .navbar-brand {
-    color: $dark-white !important;
+    color: var(--margin-lane-foreground-secondary-color);
     font-weight: 700;
     font-size: 1.2rem;
 
@@ -58,17 +58,16 @@
 
   .navbar-nav {
     .dropdown {
-      color: $white;
       font-size: 0.9rem;
       line-break: anywhere;
 
       .dropdown-menu {
-        background: $blue;
+        background-color: var(--margin-lane-background-color);
         border-width: 0;
         min-width: 4.5rem;
 
         .dropdown-item {
-          color: $white;
+          //color: $white;
         }
       }
     }
@@ -84,7 +83,7 @@
     .nav-link {
       -webkit-transition: background .3s ease-in-out;
       -moz-transition: background .3s ease-in-out;
-      color: $white;
+      color: var(--margin-lane-foreground-primary-color);
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: background .3s ease-in-out;
@@ -109,28 +108,28 @@
         font-size: 1rem;
       }
 
+      &.active {
+        color: var(--margin-lane-foreground-active-color);
+        outline: 0;
+      }
+
       &:hover {
         outline: 0;
-        color: $orange;
+        color: var(--margin-lane-foreground-hover-color);
         background-color: transparent;
       }
 
       &:focus {
         outline: 0;
         background-color: transparent;
-        color: $orange;
+        color: var(--margin-lane-foreground-focus-color);
       }
 
       &:active {
         outline: 0;
         background-color: transparent;
-        color: $orange;
+        color: var(--margin-lane-foreground-active-color);
       }
-    }
-
-    .nav-link.active {
-      color: $dark-white;
-      outline: 0;
     }
   }
 }

@@ -17,7 +17,7 @@ describe('LanguageTextItem', () => {
       <LanguageTextItem code={code} text={text} />
     )
     expect(
-      container.querySelector(`div[data-testid="${code}"] > span.h5.mt-2`)
+      container.querySelector(`div[data-testid="LanguageItem-${code}"] > span.h5.mt-2`)
     ).toHaveTextContent(text)
   })
 })

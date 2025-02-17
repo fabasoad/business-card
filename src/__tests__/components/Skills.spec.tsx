@@ -3,9 +3,8 @@ import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 import Skills from '../../components/Skills'
-import { testSectionTitle } from './Controls/TestUtils'
 
-jest.mock('../../components/Controls/SectionTitle')
+jest.mock('../../components/Controls/Section')
 
 describe('Skills', () => {
   const expectedSkillsMap = new Map<string, string>([
@@ -35,12 +34,10 @@ describe('Skills', () => {
 
   test('should render Skills correctly', () => {
     const { container } = render(<Skills />)
-    const div = container.querySelector<HTMLDivElement>('div#skills.light-component')
-    testSectionTitle(div, 'skills.title')
-    const selector = 'div.container > div.row > div.skills-list.col.text-center > img'
-    expect(div.querySelectorAll(selector)).toHaveLength(expectedSkillsMap.size)
+    const selector = 'div[data-testid="Section-skills"] > div.row > div.skills-list.col.text-center > img'
+    expect(container.querySelectorAll(selector)).toHaveLength(expectedSkillsMap.size)
     for (const [name, title] of expectedSkillsMap) {
-      const img = div.querySelector(`${selector}.m-4[alt="${name}"]`)
+      const img = container.querySelector(`${selector}.m-4[alt="${name}"]`)
       expect(img).toHaveAttribute('src', '[object Object]')
       expect(img).toHaveAttribute('title', title)
     }

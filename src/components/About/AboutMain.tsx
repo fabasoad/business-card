@@ -2,10 +2,10 @@
 import { ReactElement } from 'react'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
-import * as imgPortraitSm from '../../assets/images/portrait-sm-light-blue.png'
+import * as imgPortraitSm from '../../assets/images/portrait-sm.png'
 import TotalExperience from '../../scripts/TotalExperience'
-import SectionTitle from '../Controls/SectionTitle'
-import { Col, Container, Row } from 'react-bootstrap'
+import Section from '../Controls/Section'
+import { Col, Row } from 'react-bootstrap'
 
 export type AboutMeItem = {
   title: string,
@@ -36,8 +36,7 @@ export default function AboutMain() {
   })
 
   return (
-    <Container id="about-me">
-      <SectionTitle>{t('about-me.title')}</SectionTitle>
+    <Section id="about-me">
       <Row className="d-flex justify-content-center">
         <Col md className="about-photo d-flex justify-content-center">
           <img
@@ -51,6 +50,6 @@ export default function AboutMain() {
           {renderList(list as AboutMeItem[])}
         </Col>
       </Row>
-    </Container>
+    </Section>
   )
 }

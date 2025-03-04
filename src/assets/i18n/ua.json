@@ -126,6 +126,10 @@
   "stats": {
     "title": "Статистика"
   },
+  "themes": {
+    "light": "Світла",
+    "dark": "Темна"
+  },
   "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "Версія {{version}}",
   "year": "рік"

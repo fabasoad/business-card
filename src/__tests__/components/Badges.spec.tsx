@@ -15,7 +15,7 @@ describe('Badges', () => {
       div.querySelector('div.col-sm.col-md.col-lg.text-center > a[href="https://standforukraine.com"][rel="noopener noreferrer"][target="_blank"] > img.mb-4.mx-4[src="[object Object]"][alt="Support Ukraine"][title="Stand With Ukraine"]')
     ).toBeInTheDocument()
     expect(
-      div.querySelector('div.col-sm.col-md.col-lg.text-center > a[href="https://tree-nation.com/profile/digitalocean"][rel="noopener noreferrer"][target="_blank"] > img.img-circle.mb-4.mx-4[src="[object Object]"][alt="Digital Ocean Forest Badge"][title="DigitalOcean Forest 2021"]')
+      div.querySelector('div.col-sm.col-md.col-lg.text-center > a[href="https://tree-nation.com/profile/digitalocean"][rel="noopener noreferrer"][target="_blank"] > img.rounded-circle.mb-4.mx-4[src="[object Object]"][alt="Digital Ocean Forest Badge"][title="DigitalOcean Forest 2021"]')
     ).toBeInTheDocument()
   })
 })

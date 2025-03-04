@@ -27,7 +27,7 @@ export default function Badges() {
             rel="noopener noreferrer"
             target="_blank">
             <img
-              className="img-circle mb-4 mx-4"
+              className="rounded-circle mb-4 mx-4"
               src={imgDigitalOceanBadge}
               alt="Digital Ocean Forest Badge"
               title="DigitalOcean Forest 2021"

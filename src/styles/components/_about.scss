@@ -10,11 +10,11 @@
 
     .about-photo--portrait {
       position: absolute;
-      width: 200px;
-      height: 200px;
+      width: 12.5rem;
+      height: 12.5rem;
       display: inline-block;
       text-align: center;
-      background-color: $light-blue;
+      background-color: var(--section-about-me-photo-background-color);
     }
   }
 }

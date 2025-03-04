@@ -1,5 +1,4 @@
 @use "../../base/settings" as *;
-@use "./locale-dropdown" as *;
 
 #nav {
   z-index: 9999;
@@ -41,7 +40,7 @@
   .navbar-toggler {
     border-color: transparent;
     font-size: 1rem;
-    padding: 4px 6px;
+    padding: 0.25rem 0.37rem;
 
     &:focus {
       outline: 0;
@@ -65,10 +64,6 @@
         background-color: var(--margin-lane-background-color);
         border-width: 0;
         min-width: 4.5rem;
-
-        .dropdown-item {
-          //color: $white;
-        }
       }
     }
 
@@ -83,19 +78,27 @@
     .nav-link {
       -webkit-transition: background .3s ease-in-out;
       -moz-transition: background .3s ease-in-out;
+      background-color: transparent;
       color: var(--margin-lane-foreground-primary-color);
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: background .3s ease-in-out;
+      outline: 0;
+
+      i {
+        margin: 0 0.3rem 0 0.5rem;
+      }
 
       @media (min-width: $small-desktop-breakpoint) {
         font-size: 0.68rem;
       }
 
+      // Has to be this exact value
       @media (min-width: 790px) {
         font-size: 0.7rem;
       }
 
+      // Has to be this exact value
       @media (min-width: 848px) {
         font-size: 0.8rem;
       }
@@ -110,25 +113,14 @@
 
       &.active {
         color: var(--margin-lane-foreground-active-color);
-        outline: 0;
       }
 
       &:hover {
-        outline: 0;
         color: var(--margin-lane-foreground-hover-color);
-        background-color: transparent;
       }
 
       &:focus {
-        outline: 0;
-        background-color: transparent;
         color: var(--margin-lane-foreground-focus-color);
-      }
-
-      &:active {
-        outline: 0;
-        background-color: transparent;
-        color: var(--margin-lane-foreground-active-color);
       }
     }
   }

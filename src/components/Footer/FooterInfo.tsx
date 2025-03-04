@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 export default function FooterInfo() {
   const { t } = useTranslation()
   return (
-    <div className="footer-info">
+    <div className="d-flex justify-content-center">
       <ul className="icon-list">
         <li>
           <img src="https://img.shields.io/static/v1?label=made%20by&amp;message=fabasoad&amp;color=2c3e50&amp;style=for-the-badge&amp;logo=github" alt="Made by fabasoad" />

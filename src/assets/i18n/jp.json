@@ -126,6 +126,10 @@
   "stats": {
     "title": "データ"
   },
+  "themes": {
+    "light": "光",
+    "dark": "闇"
+  },
   "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "バージョン{{version}}",
   "year": "年"

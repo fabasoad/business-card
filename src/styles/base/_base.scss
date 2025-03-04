@@ -86,13 +86,9 @@ html, body {
 }
 
 a {
-  color: $grey;
+  color: var(--global-foreground-secondary-color);
 }
 
 a:hover {
-  color: $dark-grey;
-}
-
-.img-circle {
-  border-radius: 50%;
+  color: var(--global-foreground-hover-color);
 }

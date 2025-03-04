@@ -37,9 +37,9 @@
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.2.0",
     "@types/jest": "29.5.14",
-    "@types/node": "22.13.4",
-    "@types/react": "19.0.9",
-    "@types/react-dom": "19.0.3",
+    "@types/node": "22.13.8",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
     "babel-jest": "29.7.0",
     "babel-loader": "9.2.1",
     "bootstrap": "5.3.3",
@@ -56,17 +56,17 @@
     "raf": "3.4.1",
     "react": "19.0.0",
     "react-dom": "19.0.0",
-    "react-i18next": "15.4.0",
+    "react-i18next": "15.4.1",
     "react-iframe": "1.8.5",
     "react-modal": "3.16.3",
     "react-test-renderer": "19.0.0",
-    "sass": "1.85.0",
+    "sass": "1.85.1",
     "sass-loader": "16.0.5",
     "style-loader": "4.0.0",
-    "ts-jest": "29.2.5",
+    "ts-jest": "29.2.6",
     "ts-loader": "9.5.2",
     "ts-node": "10.9.2",
-    "typescript": "5.7.3",
+    "typescript": "5.8.2",
     "webpack": "5.98.0",
     "webpack-cli": "6.0.1",
     "webpack-dev-server": "5.2.0",
@@ -75,8 +75,9 @@
   "dependencies": {
     "@octokit/rest": "21.1.1",
     "cross-fetch": "4.1.0",
-    "posthog-js": "1.218.2",
-    "react-bootstrap": "2.10.9"
+    "posthog-js": "1.225.0",
+    "react-bootstrap": "2.10.9",
+    "use-local-storage": "3.0.0"
   },
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.7.0"
 }

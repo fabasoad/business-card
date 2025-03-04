@@ -126,6 +126,10 @@
   "stats": {
     "title": "Статистика"
   },
+  "themes": {
+    "light": "Светлая",
+    "dark": "Тёмная"
+  },
   "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "Версия {{version}}",
   "year": "год"

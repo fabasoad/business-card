@@ -126,6 +126,10 @@
   "stats": {
     "title": "Stats"
   },
+  "themes": {
+    "light": "Light",
+    "dark": "Dark"
+  },
   "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "Version {{version}}",
   "year": "year"

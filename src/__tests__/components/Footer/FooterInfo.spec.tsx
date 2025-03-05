@@ -7,7 +7,7 @@ import FooterInfo from '../../../components/Footer/FooterInfo'
 describe('FooterInfo', () => {
   test('should render FooterInfo correctly', () => {
     const { container } = render(<FooterInfo />)
-    const div = container.querySelector('div.footer-info > ul.icon-list')
+    const div = container.querySelector('div.d-flex.justify-content-center > ul.icon-list')
     expect(div.children).toHaveLength(3)
     expect(
       div.querySelector(

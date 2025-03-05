@@ -3,11 +3,13 @@ import * as React from 'react'
 import LocaleDropDown from '../../../components/Menu/LocaleDropDown'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 import { render } from '@testing-library/react'
-import { testLocaleDropDown } from './TestUtils'
 
 describe('LocaleDropDown', () => {
   test('should render LocaleDropDown correctly', () => {
     const { container } = render(<LocaleDropDown />)
-    testLocaleDropDown(container.querySelector('div.dropdown'), SupportedLocales.default)
+    const div = container.querySelector('div.dropdown')
+    const toggle = div.querySelector('button.btn.nav-link.dropdown-toggle')
+    expect(toggle).toHaveTextContent(`languages.codes.${SupportedLocales.default.code}`)
+    expect(toggle.querySelector('i.fa.fa-globe')).toBeInTheDocument()
   })
 })

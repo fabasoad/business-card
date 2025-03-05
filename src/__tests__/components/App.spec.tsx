@@ -4,7 +4,6 @@ import App from '../../components/App'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 import { Locale } from '../../scripts/i18n/types'
 import { render } from '@testing-library/react'
-import { testMenuMain } from './Menu/TestUtils'
 
 jest.mock('../../components/About/AboutMain')
 jest.mock('../../components/BackToTopButton')
@@ -15,6 +14,7 @@ jest.mock('../../components/Education/EducationMain')
 jest.mock('../../components/Footer/FooterMain')
 jest.mock('../../components/Header')
 jest.mock('../../components/Languages/LanguagesMain')
+jest.mock('../../components/Menu/MenuMain')
 jest.mock('../../components/Resume')
 jest.mock('../../components/Skills')
 jest.mock('../../components/Stats/StatsMain')
@@ -32,7 +32,7 @@ describe('App', () => {
     expect(div).toHaveClass(`font-${locale.code === 'jp' ? '' : 'non-'}jp`)
     testBlock(div, 'BackToTopButton')
     testBlock(div, 'Header')
-    testMenuMain(div.querySelector('div#nav'))
+    testBlock(div, 'MenuMain')
     testBlock(div, 'AboutMain')
     testBlock(div, 'StatsMain')
     testBlock(div, 'Resume')

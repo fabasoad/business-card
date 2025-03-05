@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Dropdown, Nav, Navbar } from 'react-bootstrap'
+import { Nav, Navbar } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import LocaleDropDown from './LocaleDropDown'
 import MenuItem from './MenuItem'

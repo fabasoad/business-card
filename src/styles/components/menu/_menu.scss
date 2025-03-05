@@ -24,11 +24,13 @@
       font-size: 0.9rem;
     }
 
-    @media (min-width: $lg-breakpoint) {
+    // Has to be this exact value
+    @media (min-width: 1008px) {
       font-size: 1.1rem;
     }
 
-    @media (min-width: $desktop-breakpoint) {
+    // Has to be this exact value
+    @media (min-width: 1088px) {
       font-size: 1.2rem;
     }
 
@@ -90,24 +92,51 @@
       }
 
       @media (min-width: $small-desktop-breakpoint) {
-        font-size: 0.68rem;
+        font-size: 0.55rem;
       }
 
       // Has to be this exact value
       @media (min-width: 790px) {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
+      }
+
+      // Has to be this exact value
+      @media (min-width: 818px) {
+        font-size: 0.65rem;
+      }
+
+      // Has to be this exact value
+      @media (min-width: 836px) {
+        font-size: 0.68rem;
       }
 
       // Has to be this exact value
       @media (min-width: 848px) {
+        font-size: 0.7rem;
+      }
+
+      // Has to be this exact value
+      @media (min-width: 880px) {
+        font-size: 0.75rem;
+      }
+
+      // Has to be this exact value
+      @media (min-width: 910px) {
         font-size: 0.8rem;
       }
 
-      @media (min-width: $lg-breakpoint) {
+      // Has to be this exact value
+      @media (min-width: 1008px) {
         font-size: 0.9rem;
       }
 
-      @media (min-width: $desktop-breakpoint) {
+      // Has to be this exact value
+      //@media (min-width: 1088px) {
+      //  font-size: 1rem;
+      //}
+
+      // Has to be this exact value
+      @media (min-width: 1088px) {
         font-size: 1rem;
       }
 

@@ -27,7 +27,6 @@ describe('MenuMain', () => {
       'experience',
       'education',
       'resume',
-      'badges',
       'contacts'
     ]
     for (const name of expected) {

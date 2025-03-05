@@ -28,8 +28,7 @@
           { "title": "GitHub Actionsを35以上開発・リリースし、マーケットプレイスで公開。" },
           { "title": "StackOverflowやLeetCodeディスカッションへの積極的参加。" }
         ]
-      },
-      { "title": "ビジネスレベルの英語力。" }
+      }
     ]
   },
   "author": {
@@ -102,6 +101,7 @@
   },
   "languages": {
     "title": "言語",
+    "fluent": "流暢",
     "native": "母国語",
     "codes": {
       "gb": "英語",

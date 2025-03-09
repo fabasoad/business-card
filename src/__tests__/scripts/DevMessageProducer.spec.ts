@@ -10,12 +10,11 @@ describe('DevMessageProducer', () => {
 
   test('should build default messages correctly', () => {
     const messages: string[] = producer._messages
-    expect(messages.length).toBe(8)
+    expect(messages).toHaveLength(8)
     new Array<string>(
-      'Open Collective',
+      'PayPal',
       'Ko-fi',
       'Liberapay',
-      'IssueHunt',
       'BTC'
     ).forEach((m: string) => expect(messages[messages.length - 1]).toContain<string>(m))
   })

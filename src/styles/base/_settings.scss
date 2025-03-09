@@ -66,3 +66,13 @@ $xxl-breakpoint: 1400px;
   --section-languages-color: #9f5501;
   --section-languages-hover-color: #e87e04;
 }
+
+[data-theme="dark"] {
+  --margin-lane-background-color: #282828;
+  --margin-lane-title-color: #61bc94;
+  --margin-lane-foreground-primary-color: #a7d9c1;
+  --margin-lane-foreground-secondary-color: #61bc94;
+  --margin-lane-foreground-active-color: #61bc94;
+  --margin-lane-foreground-focus-color: #61bc94;
+  --margin-lane-foreground-hover-color: #19a877;
+}

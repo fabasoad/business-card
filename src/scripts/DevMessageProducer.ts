@@ -12,10 +12,9 @@ class DevMessageProducer {
 
   static _defaultMessagesFactory(): string[] {
     const donates: string =
-      '* Open Collective: https://opencollective.com/fabasoad\n' +
+      '* PayPal: https://paypal.me/fabasoad\n' +
       '* Ko-fi: https://ko-fi.com/fabasoad\n' +
       '* Liberapay: https://liberapay.com/fabasoad\n' +
-      '* IssueHunt: https://issuehunt.io/r/fabasoad\n' +
       '* BTC: https://www.bitcoinqrcodemaker.com/?style=bitcoin&address=145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH&prefix=on'
     return [
       'Hello my curious friend!',

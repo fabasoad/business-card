@@ -37,11 +37,11 @@
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "16.2.0",
     "@types/jest": "29.5.14",
-    "@types/node": "22.13.9",
+    "@types/node": "22.13.10",
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "babel-jest": "29.7.0",
-    "babel-loader": "9.2.1",
+    "babel-loader": "10.0.0",
     "bootstrap": "5.3.3",
     "css-loader": "7.1.2",
     "dotenv-webpack": "8.1.0",
@@ -75,7 +75,7 @@
   "dependencies": {
     "@octokit/rest": "21.1.1",
     "cross-fetch": "4.1.0",
-    "posthog-js": "1.227.0",
+    "posthog-js": "1.229.5",
     "react-bootstrap": "2.10.9",
     "use-local-storage": "3.0.0"
   },

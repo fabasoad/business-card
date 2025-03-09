@@ -23,7 +23,7 @@ describe('ThemeDropDown', () => {
 
   test.each(
     ['dark', 'light']
-  )('should render ThemeDropDown correctly when them is %s', (theme: string) => {
+  )('should render ThemeDropDown correctly when theme is %s', (theme: string) => {
     windowSpy.mockImplementation(() => ({
       matchMedia: (q: string) => ({ matches: q === `(prefers-color-scheme: ${theme})` })
     }))

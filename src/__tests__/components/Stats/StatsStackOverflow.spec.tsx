@@ -5,6 +5,7 @@ import { act, render } from '@testing-library/react'
 import { testStatsCommon } from './TestUtils'
 import { randomNumber } from '../../TestUtils'
 
+jest.mock('../../../components/Controls/ThemeImage')
 jest.mock('../../../scripts/services/StackExchangeService')
 
 test('should render StatsStackOverflow correctly', async () => {

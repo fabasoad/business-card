@@ -5,17 +5,20 @@ import { act, render } from '@testing-library/react'
 import { testStatsCommon } from './TestUtils'
 import { randomNumber } from '../../TestUtils'
 
+jest.mock('../../../components/Controls/ThemeImage')
 jest.mock('../../../scripts/services/StackExchangeService')
 
-test('should render StatsSuperUser correctly', async () => {
-  const expectedReputation: number = randomNumber(1, 100)
-  const { container } = await act(async () => render(
-    <StatsSuperUser reputation={expectedReputation} />
-  ))
-  testStatsCommon(
-    container.querySelector('div.row.justify-content-center'),
-    'https://superuser.com/users/1123723/fabasoad',
-    `➕ ${expectedReputation}`,
-    'superuser'
-  )
+describe('StatsSuperUser', () => {
+  test('should render StatsSuperUser correctly', async () => {
+    const expectedReputation: number = randomNumber(1, 100)
+    const { container } = await act(async () => render(
+      <StatsSuperUser reputation={expectedReputation} />
+    ))
+    testStatsCommon(
+      container.querySelector('div.row.justify-content-center'),
+      'https://superuser.com/users/1123723/fabasoad',
+      `➕ ${expectedReputation}`,
+      'superuser'
+    )
+  })
 })

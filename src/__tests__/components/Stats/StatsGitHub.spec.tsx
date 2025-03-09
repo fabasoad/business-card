@@ -6,6 +6,7 @@ import StatsGitHub from '../../../components/Stats/StatsGitHub'
 import { randomNumber } from '../../TestUtils'
 import { testStatsCommon } from './TestUtils'
 
+jest.mock('../../../components/Controls/ThemeImage')
 jest.mock('../../../scripts/services/GitHubService')
 
 test('should render StatsGitHub correctly', () => {

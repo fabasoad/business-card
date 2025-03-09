@@ -6,10 +6,12 @@ import StatsCommon from '../../../components/Stats/StatsCommon'
 import StringUtils from '../../../scripts/utils/StringUtils'
 import { testStatsCommon } from './TestUtils'
 
+jest.mock('../../../components/Controls/ThemeImage')
+
 describe('StatsCommon', () => {
   test('should render StatsCommon correctly', () => {
     const url = StringUtils.random(10)
-    const techName = 'maven'
+    const techName = 'gitHub'
     const content = StringUtils.random(10)
     const { container } = render(
       <StatsCommon techName={techName} url={url}>{content}</StatsCommon>

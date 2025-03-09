@@ -68,6 +68,9 @@ $xxl-breakpoint: 1400px;
 }
 
 [data-theme="dark"] {
+  --global-foreground-secondary-color: #a7d9c1;
+  --global-foreground-hover-color: #19a877;
+
   --margin-lane-background-color: #282828;
   --margin-lane-title-color: #61bc94;
   --margin-lane-foreground-primary-color: #a7d9c1;
@@ -75,4 +78,32 @@ $xxl-breakpoint: 1400px;
   --margin-lane-foreground-active-color: #61bc94;
   --margin-lane-foreground-focus-color: #61bc94;
   --margin-lane-foreground-hover-color: #19a877;
+
+  --error-background-color: #121212;
+  --error-foreground-primary-color: #a7d9c1;
+  --error-foreground-secondary-color: #61bc94;
+  --error-foreground-hover-color: #19a877;
+
+  --header-background-color: #a7d9c1;
+  --header-foreground-primary-color: #282828;
+  --header-foreground-secondary-color: #3f3f3f;
+  --header-foreground-active-background-color: #121212;
+  --header-foreground-active-color: #a7d9c1;
+  --header-foreground-focus-background-color: #121212;
+  --header-foreground-focus-color: #a7d9c1;
+  --header-foreground-hover-background-color: #121212;
+  --header-foreground-hover-color: #a7d9c1;
+
+  --section-background-color: #121212;
+  --section-title-color: #61bc94;
+  --section-foreground-primary-color: #a7d9c1;
+  --section-foreground-secondary-color: #61bc94;
+  --section-foreground-active-color: #61bc94;
+  --section-foreground-focus-color: #61bc94;
+  --section-foreground-hover-color: #19a877;
+
+  --section-about-me-photo-background-color: #a7d9c1;
+
+  --section-languages-color: #7ac6a2;
+  --section-languages-hover-color: #19a877;
 }

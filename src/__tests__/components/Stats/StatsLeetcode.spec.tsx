@@ -5,6 +5,7 @@ import { act, render } from '@testing-library/react'
 import { testStatsCommon } from './TestUtils'
 import { randomNumber } from '../../TestUtils'
 
+jest.mock('../../../components/Controls/ThemeImage')
 jest.mock('../../../scripts/services/LeetcodeService')
 
 test('should render StatsLeetcode correctly', async () => {

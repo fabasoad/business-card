@@ -50,7 +50,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
   return (
     <>
       <p className={`timeline__title ${clazz}`}>
-        <img src={img} alt={title} />
+        <img src={img} alt={title} loading="lazy" />
         {title} ({t(`locations.${locationI18nKey}`)})
       </p>
       <p className="timeline__subtitle">

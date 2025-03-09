@@ -34,13 +34,13 @@ describe('FooterInfo', () => {
     const madeByColor = theme === 'dark' ? 'a7d9c1' : '2c3e50'
     expect(
       div.querySelector(
-        `li > img[alt="Made by fabasoad"][src="https://img.shields.io/static/v1?label=made%20by&message=fabasoad&color=${madeByColor}&style=for-the-badge&logo=github"]`
+        `li > img[alt="Made by fabasoad"][src="https://img.shields.io/static/v1?label=made%20by&message=fabasoad&color=${madeByColor}&style=for-the-badge&logo=github"][loading="lazy"]`
       )
     ).toBeInTheDocument()
     const bitcoinColor = theme === 'dark' ? 'a7d9c1' : 'f7931a'
     expect(
       div.querySelector(
-        `li > a[target="_blank"][rel="noopener noreferrer"][href="https://www.bitcoinqrcodemaker.com/?style=bitcoin&address=145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH&prefix=on"] > img[src="https://img.shields.io/static/v1?label=bitcoin&message=donate&color=${bitcoinColor}&style=for-the-badge&logo=bitcoin"][alt="Donate with Bitcoin"]`
+        `li > a[target="_blank"][rel="noopener noreferrer"][href="https://www.bitcoinqrcodemaker.com/?style=bitcoin&address=145HwyQAcv4vrzUumJhu7nWGAVBysX9jJH&prefix=on"] > img[src="https://img.shields.io/static/v1?label=bitcoin&message=donate&color=${bitcoinColor}&style=for-the-badge&logo=bitcoin"][alt="Donate with Bitcoin"][loading="lazy"]`
       )
     ).toBeInTheDocument()
     expect(

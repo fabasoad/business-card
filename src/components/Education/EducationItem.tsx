@@ -31,7 +31,7 @@ export default function EducationItem({
   return (
     <>
       <p className={`timeline__title ${clazz}`}>
-        <img src={img} alt={universityName} />
+        <img src={img} alt={universityName} loading="lazy" />
         {t(`education.university.${universityKey}.title`)} ({t(`locations.${location}`)})
       </p>
       <p className="timeline__subtitle">

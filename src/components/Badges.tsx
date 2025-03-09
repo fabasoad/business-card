@@ -18,6 +18,7 @@ export default function Badges() {
               src={imgSupportUkraine}
               alt="Support Ukraine"
               title="Stand With Ukraine"
+              loading="lazy"
             />
           </a>
         </Col>
@@ -31,6 +32,7 @@ export default function Badges() {
               src={imgDigitalOceanBadge}
               alt="Digital Ocean Forest Badge"
               title="DigitalOcean Forest 2021"
+              loading="lazy"
             />
           </a>
         </Col>

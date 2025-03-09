@@ -25,6 +25,7 @@ export default function ThemeImage({ className, imgLight, imgDark, alt, title }:
       src={chosenTheme === 'dark' ? (imgDark ?? imgLight) : imgLight}
       alt={alt}
       title={title}
+      loading="lazy"
     />
   )
 }

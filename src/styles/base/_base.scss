@@ -60,26 +60,6 @@
   }
 }
 
-.font-medium {
-  &.font-jp {
-    font-family: 'HackGen-Medium', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
-  }
-
-  &.font-non-jp {
-    font-family: 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
-  }
-}
-
-.font-regular {
-  &.font-jp {
-    font-family: 'HackGen-Regular', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
-  }
-
-  &.font-non-jp {
-    font-family: 'JetBrainsMono-Regular', Helvetica, Arial, sans-serif;
-  }
-}
-
 html, body {
   overflow-x: hidden;
   width: 100%;
@@ -91,4 +71,38 @@ a {
 
 a:hover {
   color: var(--global-foreground-hover-color);
+}
+
+.font-regular {
+  font-family: 'JetBrainsMono-Regular', Helvetica, Arial, sans-serif;
+}
+
+.font-medium {
+  font-family: 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+}
+
+.font-bold {
+  font-family: 'JetBrainsMono-Bold', Helvetica, Arial, sans-serif;
+}
+
+.font-extra-bold {
+  font-family: 'JetBrainsMono-ExtraBold', Helvetica, Arial, sans-serif;
+}
+
+[data-lang="jp"] {
+  .font-regular {
+    font-family: 'HackGen-Regular', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+  }
+
+  .font-medium {
+    font-family: 'HackGen-Medium', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+  }
+
+  .font-bold {
+    font-family: 'HackGen-Bold', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+  }
+
+  .font-extra-bold {
+    font-family: 'HackGen-ExtraBold', 'JetBrainsMono-Medium', Helvetica, Arial, sans-serif;
+  }
 }

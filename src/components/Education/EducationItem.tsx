@@ -1,7 +1,4 @@
 import * as React from 'react'
-import i18nService, {
-  I18nServiceCallbackTypes
-} from '../../scripts/i18n/I18nService'
 import { toDateLocale, humanize } from '../../scripts/utils/DateUtils'
 import { useTranslation} from 'react-i18next'
 
@@ -17,20 +14,11 @@ export type EducationItemProps = {
 export default function EducationItem({
   universityKey, universityName, location, img, fromYear, toYear
 }: EducationItemProps) {
-  const getClazzName = (code: string) =>
-    `font-${code === 'jp' ? '' : 'non-'}jp`
-
   const { t, i18n } = useTranslation()
-  const [clazz, setClazz] = React.useState<string>(getClazzName(i18n.language))
-
-  i18nService.registerCallback(
-    I18nServiceCallbackTypes.ON_CHANGED,
-    (code: string) => setClazz(getClazzName(code))
-  )
 
   return (
     <>
-      <p className={`timeline__title ${clazz}`}>
+      <p className={`timeline__title`}>
         <img src={img} alt={universityName} loading="lazy" />
         {t(`education.university.${universityKey}.title`)} ({t(`locations.${location}`)})
       </p>

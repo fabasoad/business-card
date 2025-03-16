@@ -10,14 +10,14 @@ const options = {
   api_host: process.env.REACT_APP_PUBLIC_POSTHOG_HOST,
 }
 
-const theme = window.localStorage.getItem('theme') || 'light'
-document.querySelector('html').setAttribute(
-  'data-theme',
-  theme.substring(
-    theme.startsWith('"') ? 1 : 0,
-    theme.length - (theme.endsWith('"') ? 1 : 0)
-  )
-)
+// const theme = window.localStorage.getItem('theme') || 'light'
+// document.querySelector('html').setAttribute(
+//   'data-theme',
+//   theme.substring(
+//     theme.startsWith('"') ? 1 : 0,
+//     theme.length - (theme.endsWith('"') ? 1 : 0)
+//   )
+// )
 
 createRoot(document.getElementById('app')!).render(
   <React.Suspense fallback={<LoadingSpinner />}>

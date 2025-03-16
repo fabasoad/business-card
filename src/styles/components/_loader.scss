@@ -2,7 +2,7 @@
 
 .loader {
   align-items: center;
-  background-color: $blue;
+  background-color: var(--loader-background-color);
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -10,15 +10,14 @@
 }
 
 .lds-spinner {
-  color: official;
   display: inline-block;
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
 }
 
 .lds-spinner div {
-  transform-origin: 40px 40px;
+  transform-origin: 2.5rem 2.5rem;
   animation: lds-spinner 1.2s linear infinite;
 }
 

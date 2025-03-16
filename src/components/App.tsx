@@ -17,10 +17,8 @@ import MenuMain from './Menu/MenuMain'
 import Resume from './Resume'
 import Skills from './Skills'
 import StatsMain from './Stats/StatsMain'
-import { useTranslation } from 'react-i18next'
 
 export default function App() {
-  const { i18n } = useTranslation()
   const [theme, setTheme] = React.useState(initTheme())
 
   const switchTheme = (v: string) => {
@@ -31,14 +29,14 @@ export default function App() {
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme: switchTheme }}>
-      <div className={`font-regular font-${i18n.language === 'jp' ? '' : 'non-'}jp`}>
+      <div className="font-regular">
         <BackToTopButton />
-        <Header />
+        {/*<Header />*/}
         <MenuMain />
-        <AboutMain />
+        {/*<AboutMain />*/}
         <StatsMain />
         <Resume />
-        <Skills />
+        {/*<Skills />*/}
         <ExperienceMain />
         <EducationMain />
         <CertificatesMain />

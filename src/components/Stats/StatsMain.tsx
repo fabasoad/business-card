@@ -1,7 +1,7 @@
 import * as React from 'react'
 import Section from '../Controls/Section'
 import StatsGitHub from './StatsGitHub'
-import StatsLeetcode from './StatsLeetcode'
+import StatsLeetcode from './Leetcode/StatsLeetcode'
 import StatsStackOverflow from './StatsStackOverflow'
 import { Col, Row } from 'react-bootstrap'
 import StatsSuperUser from './StatsSuperUser'
@@ -14,13 +14,13 @@ export default function StatsMain() {
           <StatsLeetcode />
         </Col>
         <Col className="text-center">
-          <StatsGitHub />
+          {/*<StatsGitHub />*/}
         </Col>
         <Col className="text-center">
-          <StatsStackOverflow />
+          {/*<StatsStackOverflow />*/}
         </Col>
         <Col className="text-center">
-          <StatsSuperUser />
+          {/*<StatsSuperUser />*/}
         </Col>
       </Row>
     </Section>

@@ -6,8 +6,7 @@ import StatsStackExchange from './StatsStackExchange'
 export default function StatsSuperUser({ reputation = 101, answerCount = 0 }: StackExchangeData) {
   return (
     <StatsStackExchange
-      data={{ reputation, answerCount }}
-      service={new SuperUserService({ reputation, answerCount })}
+      factory={() => new SuperUserService({ reputation, answerCount })}
       techName="superuser"
       url="https://superuser.com/users/1123723/fabasoad"
       icon="➕"

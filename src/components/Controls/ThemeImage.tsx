@@ -1,5 +1,5 @@
 import * as React from 'react'
-import ThemeContext from '../Contexts/ThemeContext'
+import { useThemeContext } from '../Contexts/ThemeContext'
 
 export type ThemeImageProps = {
   className?: string,
@@ -10,7 +10,7 @@ export type ThemeImageProps = {
 }
 
 export default async function ThemeImage({ className, imgLight, imgDark, alt, title }: ThemeImageProps) {
-  const { theme } = React.useContext(ThemeContext)
+  const { theme } = useThemeContext()
 
   return (
     <img

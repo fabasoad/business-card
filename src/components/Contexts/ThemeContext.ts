@@ -1,4 +1,4 @@
-import { Context, createContext } from 'react'
+import { Context, createContext, useContext } from 'react'
 
 type ThemeContextType = {
   theme: string,
@@ -51,3 +51,5 @@ const ThemeContext: Context<ThemeContextType> = createContext({
   setTheme: () => {}
 })
 export default ThemeContext
+
+export const useThemeContext = () => useContext(ThemeContext)

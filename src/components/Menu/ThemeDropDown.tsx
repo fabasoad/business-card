@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { Dropdown } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import ThemeContext, { SUPPORTED_THEMES } from '../Contexts/ThemeContext'
+import { SUPPORTED_THEMES, useThemeContext } from '../Contexts/ThemeContext'
 
 export default function ThemeDropDown() {
   const { t } = useTranslation()
-  const { theme, setTheme } = React.useContext(ThemeContext)
+  const { theme, setTheme } = useThemeContext()
 
   return (
     <Dropdown>

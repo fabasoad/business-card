@@ -6,8 +6,7 @@ import StatsStackExchange from './StatsStackExchange'
 export default function StatsStackOverflow({ reputation = 1863, answerCount = 0 }: StackExchangeData) {
   return (
     <StatsStackExchange
-      data={{ reputation, answerCount }}
-      service={new StackOverflowService({ reputation, answerCount })}
+      factory={() => new StackOverflowService({ reputation, answerCount })}
       techName="stackoverflow"
       url="https://stackoverflow.com/users/470214/fabasoad"
       icon="🏆"

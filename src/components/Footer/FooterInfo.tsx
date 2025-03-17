@@ -2,11 +2,11 @@ import * as React from 'react'
 import { Badge } from 'react-bootstrap'
 import { version } from '../../../package.json'
 import { useTranslation } from 'react-i18next'
-import ThemeContext from '../Contexts/ThemeContext'
+import { useThemeContext } from '../Contexts/ThemeContext'
 
 export default function FooterInfo() {
   const { t } = useTranslation()
-  const { theme } = React.useContext(ThemeContext)
+  const { theme } = useThemeContext()
 
   return (
     <div className="d-flex justify-content-center">

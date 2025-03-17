@@ -1,3 +1,4 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import * as React from 'react'
 import ThemeContext, {
   initTheme,
@@ -28,22 +29,24 @@ export default function App() {
   }
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme: switchTheme }}>
-      <div className="font-regular">
-        <BackToTopButton />
-        {/*<Header />*/}
-        <MenuMain />
-        {/*<AboutMain />*/}
-        <StatsMain />
-        <Resume />
-        {/*<Skills />*/}
-        <ExperienceMain />
-        <EducationMain />
-        <CertificatesMain />
-        <LanguagesMain />
-        <Badges />
-        <FooterMain />
-      </div>
-    </ThemeContext.Provider>
+    <QueryClientProvider client={new QueryClient()}>
+      <ThemeContext.Provider value={{ theme, setTheme: switchTheme }}>
+        <div className="font-regular">
+          <BackToTopButton />
+          <Header />
+          <MenuMain />
+          <AboutMain />
+          <StatsMain />
+          <Resume />
+          <Skills />
+          <ExperienceMain />
+          <EducationMain />
+          <CertificatesMain />
+          <LanguagesMain />
+          <Badges />
+          <FooterMain />
+        </div>
+      </ThemeContext.Provider>
+    </QueryClientProvider>
   )
 }

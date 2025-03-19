@@ -2,31 +2,23 @@ import '@testing-library/jest-dom'
 import * as React from 'react'
 import ThemeDropDown from '../../../components/Menu/ThemeDropDown'
 import { render } from '@testing-library/react'
-import * as hooks from 'use-local-storage'
+import * as ThemeContext from '../../../components/Contexts/ThemeContext'
 
 describe('ThemeDropDown', () => {
-  let windowSpy: jest.SpyInstance
-
-  beforeAll(() => {
-    jest.spyOn(hooks, 'default').mockImplementation(
-      (k: string, v: string) => [v, jest.fn()]
-    )
-  })
+  let useThemeContextSpy: jest.SpyInstance
 
   beforeEach(() => {
-    windowSpy = jest.spyOn(window, "window", "get")
+    useThemeContextSpy = jest.spyOn(ThemeContext, 'useThemeContext')
   })
 
   afterEach(() => {
-    windowSpy.mockRestore()
+    useThemeContextSpy.mockRestore()
   })
 
   test.each(
     ['dark', 'light']
   )('should render ThemeDropDown correctly when theme is %s', (theme: string) => {
-    windowSpy.mockImplementation(() => ({
-      matchMedia: (q: string) => ({ matches: q === `(prefers-color-scheme: ${theme})` })
-    }))
+    useThemeContextSpy.mockImplementation(() => ({ theme }))
     const { container } = render(<ThemeDropDown />)
     const div = container.querySelector('div.dropdown')
     const toggle = div.querySelector('button.btn.nav-link.dropdown-toggle')

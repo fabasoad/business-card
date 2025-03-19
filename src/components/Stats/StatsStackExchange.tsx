@@ -9,7 +9,7 @@ import LoadingSpinner from '../LoadingSpinner'
 import { useFetchStats } from './hooks'
 import StatsCommon from './StatsCommon'
 
-type StatsStackExchangeProps<T extends RemoteService<StackExchangeData>> = {
+export type StatsStackExchangeProps<T extends RemoteService<StackExchangeData>> = {
   factory: () => T,
   techName: string,
   url: string,

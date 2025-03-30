@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Nav } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 
-interface MenuItemProps {
+export type MenuItemProps = {
   name: string
   setActiveNavLink: React.Dispatch<React.SetStateAction<string>>
 }

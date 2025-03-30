@@ -28,8 +28,7 @@
           { "title": "Developed and released 35+ GitHub Actions to the marketplace" },
           { "title": "Actively participating in StackOverflow and LeetCode discussions" }
         ]
-      },
-      { "title": "Business level English." }
+      }
     ]
   },
   "author": {
@@ -102,6 +101,7 @@
   },
   "languages": {
     "title": "Languages",
+    "fluent": "Fluent",
     "native": "Native",
     "codes": {
       "gb": "English",
@@ -125,6 +125,10 @@
   },
   "stats": {
     "title": "Stats"
+  },
+  "themes": {
+    "light": "Light",
+    "dark": "Dark"
   },
   "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "Version {{version}}",

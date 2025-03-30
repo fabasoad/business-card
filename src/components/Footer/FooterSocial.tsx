@@ -3,7 +3,7 @@ import SocialIcon from '../Controls/SocialIcon'
 
 export default function FooterSocial() {
   return (
-    <div className="footer-social">
+    <div className="d-flex justify-content-center">
       <ul className="icon-list">
         <li><SocialIcon url="https://twitter.com/fabasoad" icon="fa-x-twitter" /></li>
         <li><SocialIcon url="https://github.com/fabasoad" icon="fa-github" /></li>

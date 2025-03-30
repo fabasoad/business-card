@@ -3,6 +3,7 @@ import { Nav, Navbar } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
 import LocaleDropDown from './LocaleDropDown'
 import MenuItem from './MenuItem'
+import ThemeDropDown from './ThemeDropDown'
 
 export default function MenuMain() {
   const { t } = useTranslation()
@@ -35,7 +36,7 @@ export default function MenuMain() {
   return (
     <div className="affix-top" id="nav">
       <Navbar expanded={expanded} onToggle={setExpanded} collapseOnSelect={true} expand="md" className="navbar-custom">
-        <Navbar.Brand href="#header" className="ms-2">{t('author.full-name')}</Navbar.Brand>
+        <Navbar.Brand href="#header" className="ms-3">{t('author.full-name')}</Navbar.Brand>
         <Navbar.Toggle className="navbar-dark" aria-controls="basic-navbar-nav" />
         <Navbar.Collapse role={undefined} id="basic-navbar-nav">
           <Nav activeKey={activeNavLink}>
@@ -44,10 +45,10 @@ export default function MenuMain() {
             <MenuItem setActiveNavLink={setActiveNavLink} name={'experience'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'education'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'resume'} />
-            <MenuItem setActiveNavLink={setActiveNavLink} name={'badges'} />
             <MenuItem setActiveNavLink={setActiveNavLink} name={'contacts'} />
           </Nav>
           <Nav className="me-2">
+            <ThemeDropDown />
             <LocaleDropDown />
           </Nav>
         </Navbar.Collapse>

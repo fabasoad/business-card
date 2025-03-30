@@ -20,11 +20,9 @@ describe('LanguagesMain', () => {
     expect(divJP.querySelector('div[data-testid="url"]')).toHaveTextContent(
       'https://drive.google.com/file/d/1QHRRPXiYuOKMmNPeqRf6GQQtyGdBkhQ5/view?usp=sharing'
     )
-    const divGB = div.querySelector('div[data-testid="gb"]')
-    expect(divGB.querySelector('div[data-testid="text"]')).toHaveTextContent('TOEIC 825')
-    expect(divGB.querySelector('div[data-testid="url"]')).toHaveTextContent(
-      'https://drive.google.com/file/d/1nzM9WQqR7PQpHKDiWvkRYtcNbnRW8-OB/view?usp=sharing'
-    )
+    expect(
+      div.querySelector('div[data-testid="gb"]')
+    ).toHaveTextContent('languages.fluent')
     expect(
       div.querySelector('div[data-testid="ua"]')
     ).toHaveTextContent('languages.native')

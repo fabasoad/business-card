@@ -18,10 +18,10 @@
 
   .card {
     @extend .text-muted;
-    background: $white;
+    background: var(--certificate-background-color);
     text-align: center;
     width: 9.4rem;
-    border-color: var(--bs-gray-300);
+    border-color: var(--certificate-border-color);
   }
 
   @mixin truncate-single-line($max-width) {
@@ -43,13 +43,14 @@
     padding-top: 1rem;
     font-size: 0.7rem;
     text-transform: capitalize;
+    color: var(--certificate-foreground-secondary-color)
   }
 
   .card-footer {
     padding-top: 0.45rem;
     padding-bottom: 0.45rem;
     font-size: 0.6rem;
-    border-top-color: var(--bs-gray-300);
-    color: var(--bs-gray-500);
+    border-top-color: var(--certificate-border-color);
+    color: var(--certificate-foreground-primary-color);
   }
 }

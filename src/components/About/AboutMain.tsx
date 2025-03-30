@@ -40,7 +40,7 @@ export default function AboutMain() {
       <Row className="d-flex justify-content-center">
         <Col md className="about-photo d-flex justify-content-center">
           <img
-            className="about-photo--portrait img-thumbnail img-circle"
+            className="about-photo--portrait img-thumbnail rounded-circle"
             src={imgPortraitSm}
             alt="About me"
             loading="lazy"

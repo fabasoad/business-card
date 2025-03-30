@@ -1,5 +1,4 @@
 @use "../../base/settings" as *;
-@use "./locale-dropdown" as *;
 
 #nav {
   z-index: 9999;
@@ -25,11 +24,13 @@
       font-size: 0.9rem;
     }
 
-    @media (min-width: $lg-breakpoint) {
+    // Has to be this exact value
+    @media (min-width: 1008px) {
       font-size: 1.1rem;
     }
 
-    @media (min-width: $desktop-breakpoint) {
+    // Has to be this exact value
+    @media (min-width: 1088px) {
       font-size: 1.2rem;
     }
 
@@ -41,7 +42,7 @@
   .navbar-toggler {
     border-color: transparent;
     font-size: 1rem;
-    padding: 4px 6px;
+    padding: 0.25rem 0.37rem;
 
     &:focus {
       outline: 0;
@@ -65,10 +66,6 @@
         background-color: var(--margin-lane-background-color);
         border-width: 0;
         min-width: 4.5rem;
-
-        .dropdown-item {
-          //color: $white;
-        }
       }
     }
 
@@ -83,52 +80,76 @@
     .nav-link {
       -webkit-transition: background .3s ease-in-out;
       -moz-transition: background .3s ease-in-out;
+      background-color: transparent;
       color: var(--margin-lane-foreground-primary-color);
       letter-spacing: 1px;
       text-transform: uppercase;
       transition: background .3s ease-in-out;
+      outline: 0;
+
+      i {
+        margin: 0 0.3rem 0 0.5rem;
+      }
 
       @media (min-width: $small-desktop-breakpoint) {
+        font-size: 0.55rem;
+      }
+
+      // Has to be this exact value
+      @media (min-width: 790px) {
+        font-size: 0.6rem;
+      }
+
+      // Has to be this exact value
+      @media (min-width: 818px) {
+        font-size: 0.65rem;
+      }
+
+      // Has to be this exact value
+      @media (min-width: 836px) {
         font-size: 0.68rem;
       }
 
-      @media (min-width: 790px) {
+      // Has to be this exact value
+      @media (min-width: 848px) {
         font-size: 0.7rem;
       }
 
-      @media (min-width: 848px) {
+      // Has to be this exact value
+      @media (min-width: 880px) {
+        font-size: 0.75rem;
+      }
+
+      // Has to be this exact value
+      @media (min-width: 910px) {
         font-size: 0.8rem;
       }
 
-      @media (min-width: $lg-breakpoint) {
+      // Has to be this exact value
+      @media (min-width: 1008px) {
         font-size: 0.9rem;
       }
 
-      @media (min-width: $desktop-breakpoint) {
+      // Has to be this exact value
+      //@media (min-width: 1088px) {
+      //  font-size: 1rem;
+      //}
+
+      // Has to be this exact value
+      @media (min-width: 1088px) {
         font-size: 1rem;
       }
 
       &.active {
         color: var(--margin-lane-foreground-active-color);
-        outline: 0;
       }
 
       &:hover {
-        outline: 0;
         color: var(--margin-lane-foreground-hover-color);
-        background-color: transparent;
       }
 
       &:focus {
-        outline: 0;
-        background-color: transparent;
         color: var(--margin-lane-foreground-focus-color);
-      }
-
-      &:active {
-        outline: 0;
-        background-color: transparent;
-        color: var(--margin-lane-foreground-active-color);
       }
     }
   }

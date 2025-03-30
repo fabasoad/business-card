@@ -1,5 +1,22 @@
 @use "../../base/settings" as *;
 
 .section {
-  background: $white;
+  background-color: var(--section-background-color);
+  color: var(--section-foreground-primary-color);
+
+  a {
+    color: var(--section-foreground-primary-color);
+
+    &:active {
+      color: var(--section-foreground-active-color);
+    }
+
+    &:focus {
+      color: var(--section-foreground-focus-color);
+    }
+
+    &:hover {
+      color: var(--section-foreground-hover-color);
+    }
+  }
 }

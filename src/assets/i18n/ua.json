@@ -28,8 +28,7 @@
           { "title": "Розроблено та випущено в marketplace більш ніж 35 GitHub Actions." },
           { "title": "Активна участь у StackOverflow та LeetCode дискусіях." }
         ]
-      },
-      { "title": "Професійний рівень володіння англійською мовою." }
+      }
     ]
   },
   "author": {
@@ -102,6 +101,7 @@
   },
   "languages": {
     "title": "Мови",
+    "fluent": "Вільне володіння",
     "native": "Рідна",
     "codes": {
       "gb": "Англійська",
@@ -125,6 +125,10 @@
   },
   "stats": {
     "title": "Статистика"
+  },
+  "themes": {
+    "light": "Світла",
+    "dark": "Темна"
   },
   "title": "{{authorFullName}} :: {{authorJobTitle}}",
   "version": "Версія {{version}}",

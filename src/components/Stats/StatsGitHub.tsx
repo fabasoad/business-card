@@ -1,5 +1,7 @@
 import * as React from 'react'
 import { GitHubService } from '../../scripts/services/GitHubService'
+import LoadingSpinner from '../LoadingSpinner'
+import { useFetchStats } from './hooks'
 import StatsCommon from './StatsCommon'
 
 export type StatsGitHubProps = {
@@ -7,17 +9,15 @@ export type StatsGitHubProps = {
 }
 
 export default function StatsGitHub({ starsAmount = 286 }: StatsGitHubProps) {
-  const [stars, setStars] = React.useState<number>(starsAmount)
-  React.useEffect(() => {
-    const service = new GitHubService(stars);
-    (async () => {
-      const starsAmount = await service.request()
-      setStars(starsAmount)
-    })()
-  }, [])
+  const { data, isLoading } = useFetchStats<GitHubService, number>(
+    () => new GitHubService(starsAmount)
+  )
+  if (isLoading) {
+    return <LoadingSpinner />
+  }
   return (
     <StatsCommon techName="gitHub" url="https://github.com/fabasoad">
-      ⭐️ {stars}
+      ⭐️ {data}
     </StatsCommon>
   )
 }

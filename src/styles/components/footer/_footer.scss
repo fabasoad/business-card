@@ -1,16 +1,14 @@
 @use "../../base/settings" as *;
 @use "./contacts" as *;
-@use "./info" as *;
-@use "./social" as *;
 
 .footer {
-  color: $white;
-  background-color: $blue;
+  color: var(--margin-lane-foreground-primary-color);
+  background-color: var(--margin-lane-background-color);
   padding-bottom: 1.5rem;
 
   .section-title {
     h2 {
-      color: $white;
+      color: var(--margin-lane-title-color);
     }
   }
 
@@ -19,20 +17,20 @@
 
     li {
       display: inline-block;
-      margin: 0 20px;
+      margin: 0 1.25rem;
 
       .btn {
-        padding: 10px 20px;
-        color: $white;
+        padding: 0.62rem 1.25rem;
+        color: var(--margin-lane-foreground-primary-color);
 
         &:hover {
-          color: $orange;
+          color: var(--margin-lane-foreground-hover-color);
         }
 
         &:focus {
-          color: $orange;
+          color: var(--margin-lane-foreground-focus-color);
           outline: none;
-          outline-offset: none;
+          outline-offset: unset;
         }
       }
     }

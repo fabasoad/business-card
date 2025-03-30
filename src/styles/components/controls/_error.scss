@@ -1,4 +1,3 @@
-@use "~bootstrap/scss/bootstrap";
 @use "../../base/settings" as *;
 @use "../../base/base" as *;
 
@@ -7,30 +6,21 @@
   @extend .font-non-jp;
 
   align-items: center;
-  background-color: $blue;
-  color: $dark-blue;
+  background-color: var(--error-background-color);
+  color: var(--error-foreground-primary-color);
   display: flex;
   height: 100vh;
   justify-content: center;
   width: 100vw;
 
   a {
-    color: $orange;
+    color: var(--error-foreground-secondary-color);
     text-decoration: none;
 
     &:hover {
       outline: 0;
-      color: $dark-orange;
+      color: var(--error-foreground-hover-color);
       background-color: transparent;
     }
-  }
-
-  .container {
-    @extend .text-center;
-  }
-
-  div.row {
-    @extend .d-flex;
-    @extend .justify-content-center;
   }
 }

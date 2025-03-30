@@ -9,8 +9,8 @@ export default function LocaleDropDown() {
   const { i18n, t } = useTranslation()
   return (
     <Dropdown>
-      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null} id="btnLocale">
-        <i className="fa fa-globe locale-icon"></i>
+      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null}>
+        <i className="fa fa-globe"></i>
         {t(`languages.codes.${SupportedLocales.getOrDefault(i18n.language).code}`)}
       </Dropdown.Toggle>
       <Dropdown.Menu>
@@ -20,7 +20,7 @@ export default function LocaleDropDown() {
               onClick={() => i18nService.set(l)}
               bsPrefix="nav-link"
               eventKey={l.code}
-              key={`dropdown-item-${l.code}`}
+              key={`dropdown-item-locale-${l.code}`}
             >
               {t(`languages.codes.${l.code}`, { lng: l.code })}
             </Dropdown.Item>

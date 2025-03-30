@@ -1,7 +1,8 @@
 @use "../base/settings" as *;
 
 .header {
-  background-color: $light-blue;
+  background-color: var(--header-background-color);
+  color: var(--header-foreground-primary-color);
   text-align: center;
   padding-top: 5rem;
   padding-bottom: 2rem;
@@ -16,33 +17,29 @@
     }
   }
 
-  a {
-    background: rgba(255, 255, 255, 0);
-  }
-
   .btn-primary {
-    color: $dark-grey;
-    border-color: $dark-grey;
+    color: var(--header-foreground-secondary-color);
+    border-color: var(--header-foreground-secondary-color);
     background-color: transparent;
-    margin: 0 10px;
-    font-size: 16px;
+    margin: 0 0.62rem;
+    font-size: 1rem;
 
     &:hover {
-      color: #eee;
-      background-color: $blue;
-      border-color: $blue;
+      color: var(--header-foreground-hover-color);
+      background-color: var(--header-foreground-hover-background-color);
+      border-color: var(--header-foreground-hover-background-color);
     }
 
     &:focus {
-      color: #eee;
-      background-color: $blue;
-      border-color: $blue;
+      color: var(--header-foreground-focus-color);
+      background-color: var(--header-foreground-focus-background-color);
+      border-color: var(--header-foreground-focus-background-color);
     }
 
     &:active {
-      color: #eee;
-      background-color: $blue;
-      border-color: $blue;
+      color: var(--header-foreground-active-color);
+      background-color: var(--header-foreground-active-background-color);
+      border-color: var(--header-foreground-active-background-color);
     }
   }
 }

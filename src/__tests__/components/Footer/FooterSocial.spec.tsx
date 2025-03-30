@@ -17,7 +17,7 @@ describe('FooterSocial', () => {
 
   test('should render FooterSocial correctly', () => {
     const { container } = render(<FooterSocial />)
-    const ul = container.querySelector('div.footer-social > ul.icon-list')
+    const ul = container.querySelector('div.d-flex.justify-content-center > ul.icon-list')
     expect(ul.children).toHaveLength(fixture.size)
     for (const [url, icon] of fixture) {
       expect(

@@ -1,7 +1,4 @@
 import * as React from 'react'
-import i18nService, {
-  I18nServiceCallbackTypes
-} from '../../scripts/i18n/I18nService'
 import { humanize, toDateLocaleFromDate } from '../../scripts/utils/DateUtils'
 import { useTranslation } from 'react-i18next'
 import { Experience } from '../../scripts/experience/types'
@@ -14,23 +11,14 @@ export type ExperienceItemProps = {
 
 export default function ExperienceItem({ experience }: ExperienceItemProps) {
   const { id, title, locationI18nKey, techStack, img, from, to } = experience
-  const getClazzName = (code: string) =>
-    `font-${code === 'jp' ? '' : 'non-'}jp`
-
   const { t, i18n } = useTranslation()
-  const [clazz, setClazz] = React.useState<string>(getClazzName(i18n.language))
-
-  i18nService.registerCallback(
-    I18nServiceCallbackTypes.ON_CHANGED,
-    (code: string) => setClazz(getClazzName(code))
-  )
 
   const renderExperienceBody =
     (k: string, body: ExperienceBodyItem) => {
       // For tests
       return typeof body === 'string' ? body : (
         <>
-          <div className={`timeline__body__achievements ${clazz}`}>
+          <div className={`timeline__body__achievements`}>
             {t('experience.achievements')}
           </div>
           <ul>
@@ -49,8 +37,8 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
     : toDateLocaleFromDate(to)
   return (
     <>
-      <p className={`timeline__title ${clazz}`}>
-        <img src={img} alt={title} />
+      <p className={`timeline__title`}>
+        <img src={img} alt={title} loading="lazy" />
         {title} ({t(`locations.${locationI18nKey}`)})
       </p>
       <p className="timeline__subtitle">
@@ -60,7 +48,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
         {renderExperienceBody(id, t(`experience.body.${id}`, { returnObjects: true }) as ExperienceBodyItem)}
       </div>
       <div className="timeline__tech-stack">
-        <div className={`timeline__tech-stack__title ${clazz}`}>{t('experience.tech-stack')}</div>
+        <div className={`timeline__tech-stack__title`}>{t('experience.tech-stack')}</div>
         <div>{techStack.join(t('comma'))}</div>
       </div>
     </>

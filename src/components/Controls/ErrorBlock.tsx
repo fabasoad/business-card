@@ -5,12 +5,14 @@ type ErrorProps = {
   title: string
 }
 
-export default function ErrorBlock({ children, title }: React.PropsWithChildren<ErrorProps>) {
+export default function ErrorBlock({
+  children, title
+}: React.PropsWithChildren<ErrorProps>) {
   return (
     <div className="error">
-      <Container>
-        <Row>{title}</Row>
-        <Row>{children}</Row>
+      <Container className="text-center">
+        <Row className="d-flex justify-content-center">{title}</Row>
+        <Row className="d-flex justify-content-center">{children}</Row>
       </Container>
     </div>
   )

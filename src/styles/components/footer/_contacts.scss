@@ -1,19 +1,17 @@
-@use "~bootstrap/scss/bootstrap";
 @use "../../base/settings" as *;
 
 .footer-contacts {
-  @extend .row;
-
   p {
     font-size: 0.8rem;
-    margin-top: 10px;
+    margin-top: 0.62rem;
 
     a {
-      color: $white;
+      color: var(--margin-lane-foreground-primary-color);
       text-decoration: none;
+
       &:hover {
         outline: 0;
-        color: $orange;
+        color: var(--margin-lane-foreground-hover-color);
         background-color: transparent;
       }
     }

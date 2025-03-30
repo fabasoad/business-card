@@ -6,7 +6,7 @@
 
     .h5 {
       text-transform: uppercase;
-      color: $dark-orange;
+      color: var(--section-languages-color);
     }
 
     a {
@@ -14,7 +14,7 @@
 
       &:hover {
         outline: 0;
-        color: $orange;
+        color: var(--section-languages-hover-color);
         background-color: transparent;
       }
     }

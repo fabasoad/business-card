@@ -1,66 +1,42 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
-import * as hooks from 'use-local-storage'
+import * as ThemeContext from '../../../components/Contexts/ThemeContext'
 import ThemeImage from '../../../components/Controls/ThemeImage'
 import StringUtils from '../../../scripts/utils/StringUtils'
 import { render } from '@testing-library/react'
 
-class ThemeImageFixture {
-  private readonly theme: string
-
-  constructor(theme: string) {
-    this.theme = theme
-  }
-
-  toString() {
-    return this.theme
-  }
-}
-
 describe('ThemeImage', () => {
-  let windowSpy: jest.SpyInstance
+  let useThemeContextSpy: jest.SpyInstance
 
   beforeAll(() => {
-    jest.spyOn(hooks, 'default').mockImplementation(
-      (k: string, v: string) => [v, jest.fn()]
-    )
-  })
-
-  beforeEach(() => {
-    windowSpy = jest.spyOn(window, "window", "get")
+    useThemeContextSpy = jest.spyOn(ThemeContext, 'useThemeContext')
   })
 
   afterEach(() => {
-    windowSpy.mockRestore()
+    useThemeContextSpy.mockRestore()
   })
 
   test.each([
-    ['dark', true],
-    ['dark', false],
-    ['light', true],
-    ['light', false],
-  ])('should render ThemeImage correctly when theme is %s and dark defined: %s', (
-    theme: string, isDarkUndefined: boolean
+    ['dark', 'testImgDark', 'testImgLight', 'testImgDark'],
+    ['dark', null, 'testImgLight', 'testImgLight'],
+    ['light', 'testImgDark', 'testImgLight', 'testImgLight'],
+    ['light', null, 'testImgLight', 'testImgLight'],
+  ])('should render ThemeImage correctly when theme is %s and imgDark is %s', (
+    theme: string, imgDark: string | undefined, imgLight: string, expectedSrc: string
   ) => {
-    windowSpy.mockImplementation(() => ({
-      matchMedia: (q: string) => ({ matches: q === `(prefers-color-scheme: ${theme})` })
-    }))
+    useThemeContextSpy.mockImplementation(() => ({ theme }))
     const expectedClassName = `a${StringUtils.random(9)}`
-    const expectedImgLight = new ThemeImageFixture('light')
-    const expectedImgDark = isDarkUndefined
-      ? undefined
-      : new ThemeImageFixture('dark')
     const expectedAlt = `b${StringUtils.random(9)}`
     const expectedTitle = `c${StringUtils.random(9)}`
     const { container } = render(<ThemeImage
       className={expectedClassName}
       alt={expectedAlt}
       title={expectedTitle}
-      imgLight={expectedImgLight}
-      imgDark={expectedImgDark}
+      imgLight={imgLight}
+      imgDark={imgDark}
     />)
     expect(
-      container.querySelector(`img.${expectedClassName}[src=${theme === 'dark' && !isDarkUndefined ? expectedImgDark : expectedImgLight}][alt=${expectedAlt}][title=${expectedTitle}]`)
+      container.querySelector(`img.${expectedClassName}[src=${expectedSrc}][alt=${expectedAlt}][title=${expectedTitle}]`)
     ).toBeInTheDocument()
   })
 })

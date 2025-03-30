@@ -1,33 +1,23 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import { render } from '@testing-library/react'
-import * as hooks from 'use-local-storage'
+import * as ThemeContext from '../../../components/Contexts/ThemeContext'
 
 import FooterInfo from '../../../components/Footer/FooterInfo'
 
 describe('FooterInfo', () => {
-  let windowSpy: jest.SpyInstance
+  let useThemeContextSpy: jest.SpyInstance
 
   beforeAll(() => {
-    jest.spyOn(hooks, 'default').mockImplementation(
-      (k: string, v: string) => [v, jest.fn()]
-    )
+    useThemeContextSpy = jest.spyOn(ThemeContext, 'useThemeContext')
   })
 
-  beforeEach(() => {
-    windowSpy = jest.spyOn(window, "window", "get")
-  })
-
-  afterEach(() => {
-    windowSpy.mockRestore()
-  })
+  afterEach(() => useThemeContextSpy.mockRestore())
 
   test.each(
     ['dark', 'light']
   )('should render FooterInfo correctly when theme is %s', (theme: string) => {
-    windowSpy.mockImplementation(() => ({
-      matchMedia: (q: string) => ({ matches: q === `(prefers-color-scheme: ${theme})` })
-    }))
+    useThemeContextSpy.mockImplementation(() => ({ theme }))
     const { container } = render(<FooterInfo />)
     const div = container.querySelector('div.d-flex.justify-content-center > ul.icon-list')
     expect(div.children).toHaveLength(3)

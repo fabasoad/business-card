@@ -1,10 +1,6 @@
 import * as React from 'react'
-import { GitHubService } from '../../scripts/services/GitHubService'
 import RemoteService from '../../scripts/services/RemoteService'
-import {
-  StackExchangeData,
-  StackExchangeService
-} from '../../scripts/services/StackExchangeService'
+import { StackExchangeData } from '../../scripts/services/StackExchangeService'
 import LoadingSpinner from '../LoadingSpinner'
 import { useFetchStats } from './hooks'
 import StatsCommon from './StatsCommon'

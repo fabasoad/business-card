@@ -9,7 +9,7 @@ export type ThemeImageProps = {
   title: string
 }
 
-export default async function ThemeImage({ className, imgLight, imgDark, alt, title }: ThemeImageProps) {
+export default function ThemeImage({ className, imgLight, imgDark, alt, title }: ThemeImageProps) {
   const { theme } = useThemeContext()
 
   return (

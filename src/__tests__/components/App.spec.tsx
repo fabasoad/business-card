@@ -1,9 +1,8 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import App from '../../components/App'
-import SupportedLocales from '../../scripts/i18n/SupportedLocales'
-import { Locale } from '../../scripts/i18n/types'
 import { render } from '@testing-library/react'
+import * as ThemeContext from '../../components/Contexts/ThemeContext'
 
 jest.mock('../../components/About/AboutMain')
 jest.mock('../../components/BackToTopButton')
@@ -21,15 +20,25 @@ jest.mock('../../components/Stats/StatsMain')
 jest.mock('../../scripts/services/LeetcodeService')
 
 describe('App', () => {
+  let initThemeSpy: jest.SpyInstance
+
+  beforeAll(() => {
+    initThemeSpy = jest.spyOn(ThemeContext, 'initTheme')
+  })
+
+  afterEach(() => initThemeSpy.mockRestore())
+
   const testBlock = (div: Element, testId: string) => {
     expect(div.querySelector(`div[data-testid="${testId}"]`)).toBeInTheDocument()
   }
 
   test('should render App correctly', async () => {
+    const theme = 'dark'
+    initThemeSpy.mockImplementation(() => theme)
+
     const { container } = render(<App />)
-    const locale: Locale = SupportedLocales.default
+
     const div = container.querySelector('div.font-regular')
-    expect(div).toHaveClass(`font-${locale.code === 'jp' ? '' : 'non-'}jp`)
     testBlock(div, 'BackToTopButton')
     testBlock(div, 'Header')
     testBlock(div, 'MenuMain')

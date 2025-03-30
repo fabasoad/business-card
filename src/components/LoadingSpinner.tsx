@@ -4,7 +4,7 @@ import { useThemeContext } from './Contexts/ThemeContext'
 export type LoadingSpinnerBackground = 'dark' | 'light'
 export type LoadingSpinnerColor = 'dark' | 'light' | 'success'
 
-type LoadingSpinnerProps = {
+export type LoadingSpinnerProps = {
   background?: LoadingSpinnerBackground
   color?: LoadingSpinnerColor
 }

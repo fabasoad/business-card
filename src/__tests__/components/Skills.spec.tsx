@@ -3,9 +3,15 @@ import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 import Skills from '../../components/Skills'
+import { Technology } from '../../scripts/technologies/types'
 
+jest.mock('../../components/LoadingSpinner')
 jest.mock('../../components/Controls/Section')
 jest.mock('../../components/Controls/ThemeImage')
+const useQueryMock = jest.fn()
+jest.mock('@tanstack/react-query', () => ({
+  useQuery: (...args: any[]) => useQueryMock(args)
+}))
 
 describe('Skills', () => {
   const expectedSkillsMap = new Map<string, string>([
@@ -33,15 +39,52 @@ describe('Skills', () => {
     ['typeScript', 'TypeScript']
   ])
 
-  test('should render Skills correctly', () => {
+  afterEach(() => {
+    useQueryMock.mockRestore()
+  })
+
+  const testUseQuery = () => {
+    expect(useQueryMock).toHaveBeenCalledWith(
+      expect.arrayContaining([
+        expect.objectContaining({
+          queryKey: expect.arrayContaining(['TechnologyStorage']),
+          queryFn: expect.any(Function)
+        })
+      ])
+    )
+    const actual: Technology[] = useQueryMock.mock.calls[0][0][0]['queryFn']()
+    expect(
+      actual.map(({ name, title }) => `${name}-${title}`).sort()
+    ).toEqual(
+      Array.from(expectedSkillsMap).map(
+        ([name, title]: [string, string]) => `${name}-${title}`
+      ).sort()
+    )
+  }
+
+  test('should render Skills correctly while loading', () => {
+    useQueryMock.mockImplementation(() => ({ data: null, isLoading: true }))
     const { container } = render(<Skills />)
+    testUseQuery()
+    expect(
+      container.querySelector('div[data-testid="LoadingSpinner-undefined-undefined"]')
+    ).toBeInTheDocument()
+  })
+
+  test('should render Skills correctly while loading', () => {
+    const data: Technology[] = [{
+      name: 'testName',
+      title: 'testTitle',
+      imgLight: 'testImgLight',
+      imgDark: 'testImgDark',
+    }]
+    useQueryMock.mockImplementation(() => ({ data, isLoading: false }))
+    const { container } = render(<Skills />)
+    testUseQuery()
     const selector = 'div[data-testid="Section-skills"] > div.row > div.skills-list.col.text-center > div'
-    expect(container.querySelectorAll(selector)).toHaveLength(expectedSkillsMap.size)
-    for (const [name, title] of expectedSkillsMap) {
-      const imgDark = ['aws', 'gitHub'].includes(name) ? '[object Object]' : 'undefined'
-      expect(
-        container.querySelector(`${selector}[data-testid="ThemeImage-${name}"]`)
-      ).toHaveTextContent(`m-4-${imgDark}-[object Object]-${title}`)
-    }
+    expect(container.querySelectorAll(selector)).toHaveLength(data.length)
+    expect(
+      container.querySelector(`${selector}[data-testid="ThemeImage-${data[0].name}"]`)
+    ).toHaveTextContent(`m-4-${data[0].imgDark}-${data[0].imgLight}-${data[0].title}`)
   })
 })

@@ -1,13 +1,13 @@
 import RemoteService from '../RemoteService'
 
 export class GitHubService implements RemoteService<number> {
-  private readonly defaultVal: number
+  public actual: number
 
-  public constructor(defaultVal: number) {
-    this.defaultVal = defaultVal
+  public constructor(v: number) {
+    this.actual = v
   }
 
-  public async request(): Promise<number> {
-    return Promise.resolve(this.defaultVal)
+  public request(): Promise<number> {
+    return Promise.resolve(this.actual)
   }
 }

@@ -4,7 +4,7 @@ import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
 import { Technology } from '../../scripts/technologies/types'
 import ThemeImage from '../Controls/ThemeImage'
 
-export interface StatsCommonProps {
+export type StatsCommonProps = {
   techName: string,
   url: string
 }

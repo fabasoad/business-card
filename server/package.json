@@ -22,8 +22,8 @@
   },
   "license": "ISC",
   "dependencies": {
-    "express": "4.21.2",
+    "express": "5.1.0",
     "express-rate-limit": "7.5.0"
   },
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.8.1"
 }

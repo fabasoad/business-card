@@ -64,4 +64,10 @@
   "issuer": "github",
   "technology": "github",
   "url": "https://www.credly.com/badges/55ddd8bd-950d-45bb-ad25-d08269bc9ca1"
+}, {
+  "id": "517b6607-def7-46e1-b007-493a15b5eeb2",
+  "date": "2025-04",
+  "issuer": "hashicorp",
+  "technology": "terraform",
+  "url": "https://www.credly.com/badges/517b6607-def7-46e1-b007-493a15b5eeb2"
 }]

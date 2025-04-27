@@ -12,7 +12,7 @@ export type StatsLeetcodeProps = {
 }
 
 export default function StatsLeetcode({
-  totalSolved = 238, easySolved = 129, mediumSolved = 106, hardSolved = 3
+  totalSolved = 283, easySolved = 136, mediumSolved = 128, hardSolved = 19
 }: StatsLeetcodeProps) {
   const { data, isLoading } = useFetchStats<LeetcodeService, LeetcodeStats>(
     () => new LeetcodeService({ totalSolved, easySolved, mediumSolved, hardSolved })

@@ -11,6 +11,7 @@ import * as imgGitHubFoundations from '../../assets/images/certificates/github-f
 import * as imgGitHubAdmin from '../../assets/images/certificates/github-admin.png'
 import * as imgPracticalDevSecOps from '../../assets/images/certificates/practical-devsecops-cdp.png'
 import * as imgGitHubCopilot from '../../assets/images/certificates/github-copilot.png'
+import * as imgHashicorpTerraform003 from '../../assets/images/certificates/hashicorp-terraform-003.png'
 
 type CertificateJSON = CertificateBase & {
   date: string,
@@ -28,7 +29,8 @@ const map = new Map<string, any>([
   ['6f36f952-612a-4aa1-8a3d-adb29396c967', imgGitHubFoundations],
   ['a1c1ec77-29db-4139-8fcb-ac95408653e8', imgGitHubAdmin],
   ['9f12275d-a5b5-4d4d-9127-c975c555f0ab', imgPracticalDevSecOps],
-  ['55ddd8bd-950d-45bb-ad25-d08269bc9ca1', imgGitHubCopilot]
+  ['55ddd8bd-950d-45bb-ad25-d08269bc9ca1', imgGitHubCopilot],
+  ['517b6607-def7-46e1-b007-493a15b5eeb2', imgHashicorpTerraform003]
 ])
 
 class CertificatesStorage {

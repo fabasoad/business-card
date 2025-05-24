@@ -36,7 +36,7 @@ jobs:
         run: yarn install
 
       - name: Build
-        uses: pyTooling/Actions/with-post-step@v4.2.2
+        uses: pyTooling/Actions/with-post-step@v4.3.0
         with:
           key: "build-business-card"
           main: |

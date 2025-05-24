@@ -41,7 +41,7 @@ repos:
         # Excluding Hacker Rank certificate id located in items.json file
         args: ['--exclude-lines', '^(.+F75CDD8ED9F0.+)$']
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.25.1
+    rev: v8.26.0
     hooks:
       - id: gitleaks
   - repo: https://github.com/fabasoad/pre-commit-snyk
@@ -70,7 +70,7 @@ repos:
         stages: ["pre-push"]
   # Markdown
   - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.44.0
+    rev: v0.45.0
     hooks:
       - id: markdownlint-fix
         stages: ["pre-commit"]
@@ -83,7 +83,7 @@ repos:
         stages: ["pre-commit"]
   # Yaml
   - repo: https://github.com/adrienverge/yamllint
-    rev: v1.37.0
+    rev: v1.37.1
     hooks:
       - id: yamllint
         stages: ["pre-push"]

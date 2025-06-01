@@ -41,7 +41,7 @@ repos:
         # Excluding Hacker Rank certificate id located in items.json file
         args: ['--exclude-lines', '^(.+F75CDD8ED9F0.+)$']
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.26.0
+    rev: v8.27.0
     hooks:
       - id: gitleaks
   - repo: https://github.com/fabasoad/pre-commit-snyk

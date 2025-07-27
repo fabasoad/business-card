@@ -7,15 +7,6 @@
     max-width: 6rem;
   }
 
-  a {
-    text-decoration: none;
-    &:hover {
-      outline: 0;
-      color: $orange;
-      background-color: transparent;
-    }
-  }
-
   .card {
     @extend .text-muted;
     background: var(--certificate-background-color);
@@ -33,9 +24,10 @@
 
   .card-title {
     @include truncate-single-line(7rem);
-    margin-top: 2rem;
+    margin-top: 1rem;
     margin-bottom: 0;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    color: var(--certificate-foreground-primary-color)
   }
 
   .card-subtitle {

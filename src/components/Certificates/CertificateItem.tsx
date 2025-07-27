@@ -16,14 +16,16 @@ export default function CertificateItem({ certificate }: CertificateItemProps) {
     <Card>
       <Card.Body className="d-flex flex-column">
         <div className="justify-content-center mt-2">
-          <Card.Img src={img} />
-        </div>
-        <Card.Title>
           <Card.Link target="_blank" rel="noopener noreferrer" href={url}>
-            {t(`certificates.list.${id}`)}
+            <Card.Img src={img} />
           </Card.Link>
+        </div>
+        <Card.Title title={t(`certificates.list.${id}`)}>
+          {t(`certificates.list.${id}`)}
         </Card.Title>
-        <Card.Subtitle>{t('by-issuer', { issuer })}</Card.Subtitle>
+        <Card.Subtitle title={t('by-issuer', { issuer })}>
+          {t('by-issuer', { issuer })}
+        </Card.Subtitle>
       </Card.Body>
       <Card.Footer>
         {toDateLocale(date.getFullYear(), date.getMonth())}

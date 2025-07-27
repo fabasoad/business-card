@@ -13,26 +13,30 @@ describe('CertificateItem', () => {
       <CertificateItem certificate={certificate}/>
     )
     const div = container.querySelector('div.card')
-    let elements = div.getElementsByClassName('card-img')
-    expect(elements).toHaveLength(1)
-    expect(elements[0]).toHaveAttribute('src', '[object Object]')
 
-    elements = div.getElementsByClassName('card-title')
-    expect(elements).toHaveLength(1)
+    const cardBody = div.querySelector('.card-body.d-flex.flex-column')
+    expect(cardBody).toBeInTheDocument()
+    const a = cardBody.querySelector('.justify-content-center.mt-2 > a.card-link')
+    expect(a).toBeInTheDocument()
+    expect(a).toHaveAttribute('target', '_blank')
+    expect(a).toHaveAttribute('rel', 'noopener noreferrer')
+    expect(a).toHaveAttribute('href', certificate.url)
+    const img = a.querySelector('.card-img')
+    expect(img).toHaveAttribute('src', '[object Object]')
 
-    elements = elements[0].getElementsByClassName('card-link')
-    expect(elements).toHaveLength(1)
-    const cardLink = expect(elements[0])
-    cardLink.toHaveAttribute('href', certificate.url)
-    cardLink.toHaveTextContent(`certificates.list.${certificate.id}`)
+    const cardTitle = div.querySelector('.card-title.h5')
+    expect(cardTitle).toBeInTheDocument()
+    expect(cardTitle).toHaveAttribute('title', `certificates.list.${certificate.id}`)
+    expect(cardTitle).toHaveTextContent(`certificates.list.${certificate.id}`)
 
-    elements = div.getElementsByClassName('card-subtitle')
-    expect(elements).toHaveLength(1)
-    expect(elements[0]).toHaveTextContent('by-issuer')
+    const cardSubTitle = div.querySelector('.card-subtitle.h6')
+    expect(cardSubTitle).toBeInTheDocument()
+    expect(cardSubTitle).toHaveAttribute('title', 'by-issuer')
+    expect(cardSubTitle).toHaveTextContent('by-issuer')
 
-    elements = div.getElementsByClassName('card-footer')
-    expect(elements).toHaveLength(1)
-    expect(elements[0]).toHaveTextContent(
+    const footer = div.querySelector('.card-footer')
+    expect(footer).toBeInTheDocument()
+    expect(footer).toHaveTextContent(
       SupportedLocales.default.code === 'jp'
         ? new RegExp(`.+yearmonth.${certificate.date.getMonth()}`)
         : `month.${certificate.date.getMonth()} ${certificate.date.getFullYear()}`

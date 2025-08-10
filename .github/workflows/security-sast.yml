@@ -19,3 +19,4 @@ jobs:
     with:
       code-scanning: true
       sca: true
+      sca-vendor: osv-scanner

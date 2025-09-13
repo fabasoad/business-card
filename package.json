@@ -60,7 +60,7 @@
     "react-iframe": "1.8.5",
     "react-modal": "3.16.3",
     "react-test-renderer": "19.1.1",
-    "sass": "1.92.1",
+    "sass": "1.90.0",
     "sass-loader": "16.0.5",
     "style-loader": "4.0.0",
     "ts-jest": "29.4.1",

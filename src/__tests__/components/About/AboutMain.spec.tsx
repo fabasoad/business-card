@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import AboutMain, {
-  AboutMeItem,
+  type AboutMeItem,
   renderList
 } from '../../../components/About/AboutMain'
 import { render } from '@testing-library/react'
-import StringUtils from '../../../scripts/utils/StringUtils'
+import { randomString } from '../../../scripts/utils/StringUtils'
 
 jest.mock('../../../components/Controls/Section')
 
@@ -27,18 +27,18 @@ describe('AboutMain', () => {
   })
 
   test('renderList should return string when children is string', () => {
-    const children = StringUtils.random(10)
+    const children = randomString(10)
     const { container } = render(renderList(children))
     expect(container).toHaveTextContent(children)
   })
 
   test('renderList should return ul when children is list', () => {
     const children: AboutMeItem[] = [{
-      title: StringUtils.random(10),
+      title: randomString(10),
       list: [{
-        title: StringUtils.random(10)
+        title: randomString(10)
       }, {
-        title: StringUtils.random(10)
+        title: randomString(10)
       }]
     }]
     const { container } = render(renderList(children))

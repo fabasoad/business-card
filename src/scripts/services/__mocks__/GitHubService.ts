@@ -1,4 +1,4 @@
-import RemoteService from '../RemoteService'
+import type RemoteService from '../RemoteService'
 
 export class GitHubService implements RemoteService<number> {
   public actual: number

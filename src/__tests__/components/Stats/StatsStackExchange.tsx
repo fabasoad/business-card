@@ -1,15 +1,15 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import { render } from '@testing-library/react'
-import { ServiceFactory } from '../../../components/Stats/hooks'
+import type { ServiceFactory } from '../../../components/Stats/hooks'
 import * as StatsHooks from '../../../components/Stats/hooks'
 
 import StatsStackExchange from '../../../components/Stats/StatsStackExchange'
-import RemoteService from '../../../scripts/services/RemoteService'
-import {
+import type RemoteService from '../../../scripts/services/RemoteService'
+import type {
   StackExchangeData
 } from '../../../scripts/services/StackExchangeService'
-import StringUtils from '../../../scripts/utils/StringUtils'
+import { randomString } from '../../../scripts/utils/StringUtils'
 import { randomNumber } from '../../TestUtils'
 
 jest.mock('../../../components/LoadingSpinner')
@@ -50,9 +50,9 @@ describe('StatsStackExchange', () => {
 
   test('should render StatsStackExchange correctly when loaded', () => {
     const expectedReputation: number = randomNumber(1, 100)
-    const expectedTechName: string = StringUtils.random(10)
-    const expectedUrl: string = StringUtils.random(10)
-    const expectedIcon: string = StringUtils.random(10)
+    const expectedTechName: string = randomString(10)
+    const expectedUrl: string = randomString(10)
+    const expectedIcon: string = randomString(10)
     useFetchStatsSpy.mockImplementation(
       (factory: ServiceFactory<TestService, StackExchangeData>) => (
         { data: factory()['stats'], isLoading: false }

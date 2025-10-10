@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { CertificateItemProps } from '../CertificateItem'
+import type { CertificateItemProps } from '../CertificateItem'
 
 export default function CertificateItem({ certificate }: CertificateItemProps) {
   return (

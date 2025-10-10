@@ -3,11 +3,11 @@ import * as React from 'react'
 import { render } from '@testing-library/react'
 
 import FooterEmail from '../../../components/Footer/FooterEmail'
-import StringUtils from '../../../scripts/utils/StringUtils'
+import { randomString } from '../../../scripts/utils/StringUtils'
 
 describe('FooterEmail', () => {
   test('should render FooterEmail correctly', () => {
-    const email = StringUtils.random(10)
+    const email = randomString(10)
     const { container } = render(<FooterEmail email={email} />)
     const div = container.querySelector('div.col')
     expect(div.children).toHaveLength(2)

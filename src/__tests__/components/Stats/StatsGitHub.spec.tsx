@@ -1,11 +1,11 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import { render } from '@testing-library/react'
-import { ServiceFactory } from '../../../components/Stats/hooks'
+import type { ServiceFactory } from '../../../components/Stats/hooks'
 import * as StatsHooks from '../../../components/Stats/hooks'
 
 import StatsGitHub from '../../../components/Stats/StatsGitHub'
-import { GitHubService } from '../../../scripts/services/GitHubService'
+import type { GitHubService } from '../../../scripts/services/GitHubService'
 import { randomNumber } from '../../TestUtils'
 
 jest.mock('../../../components/LoadingSpinner')

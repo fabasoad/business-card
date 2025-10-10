@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StatsGitHubProps } from '../StatsGitHub'
+import type { StatsGitHubProps } from '../StatsGitHub'
 
 export default function StatsGitHub({ starsAmount = 1 }: StatsGitHubProps) {
   return (

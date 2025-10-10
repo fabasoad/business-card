@@ -3,7 +3,7 @@ import DigitConverter from '../DigitConverter'
 import { getI18n } from 'react-i18next'
 import i18nLanguageCodeTranslator, {
   I18nLanguageCodeFormat,
-  I18nLanguageCodeTranslatorFunc
+  type I18nLanguageCodeTranslatorFunc
 } from '../i18n/I18nLanguageCodeTranslator'
 
 const translate: I18nLanguageCodeTranslatorFunc =
@@ -21,8 +21,8 @@ export function toDateLocale(year: number, monthIndex?: number): string {
   const converter = new DigitConverter()
 
   return language === 'jp'
-    ? converter.toDoubleByte(year.toString()) + t('year') + (monthIndex != undefined ? t(`month.${monthIndex}`) : '')
-    : (monthIndex != undefined ? t(`month.${monthIndex}`) + ' ' : '') + year
+    ? converter.toDoubleByte(year.toString()) + t('year') + (monthIndex !== undefined ? t(`month.${monthIndex}`) : '')
+    : (monthIndex !== undefined ? t(`month.${monthIndex}`) + ' ' : '') + year
 }
 
 export function humanize(from: Date, to: Date, code: string = 'gb'): string {

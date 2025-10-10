@@ -2,7 +2,7 @@ import '@testing-library/jest-dom'
 import * as React from 'react'
 import * as ThemeContext from '../../../components/Contexts/ThemeContext'
 import ThemeImage from '../../../components/Controls/ThemeImage'
-import StringUtils from '../../../scripts/utils/StringUtils'
+import { randomString } from '../../../scripts/utils/StringUtils'
 import { render } from '@testing-library/react'
 
 describe('ThemeImage', () => {
@@ -25,9 +25,9 @@ describe('ThemeImage', () => {
     theme: string, imgDark: string | undefined, imgLight: string, expectedSrc: string
   ) => {
     useThemeContextSpy.mockImplementation(() => ({ theme }))
-    const expectedClassName = `a${StringUtils.random(9)}`
-    const expectedAlt = `b${StringUtils.random(9)}`
-    const expectedTitle = `c${StringUtils.random(9)}`
+    const expectedClassName = `a${randomString(9)}`
+    const expectedAlt = `b${randomString(9)}`
+    const expectedTitle = `c${randomString(9)}`
     const { container } = render(<ThemeImage
       className={expectedClassName}
       alt={expectedAlt}

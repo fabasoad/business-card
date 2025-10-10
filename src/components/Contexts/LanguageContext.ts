@@ -1,4 +1,4 @@
-import { Context, createContext } from 'react'
+import { type Context, createContext } from 'react'
 import * as i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 import * as gb from '../../assets/i18n/gb.json'
@@ -6,7 +6,7 @@ import * as jp from '../../assets/i18n/jp.json'
 import * as ua from '../../assets/i18n/ua.json'
 import i18nLanguageCodeTranslator, {
   I18nLanguageCodeFormat,
-  I18nLanguageCodeTranslatorFunc
+  type I18nLanguageCodeTranslatorFunc
 } from '../../scripts/i18n/I18nLanguageCodeTranslator'
 import I18nLanguageDetector from '../../scripts/i18n/I18nLanguageDetector'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'

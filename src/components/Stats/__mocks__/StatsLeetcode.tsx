@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { StatsLeetcodeProps } from '../StatsLeetcode'
+import type { StatsLeetcodeProps } from '../StatsLeetcode'
 
 export default function StatsLeetcode({
   totalSolved = 6, easySolved = 3, mediumSolved = 2, hardSolved = 1

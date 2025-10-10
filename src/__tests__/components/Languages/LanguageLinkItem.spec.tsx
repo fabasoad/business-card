@@ -4,7 +4,7 @@ import { render } from '@testing-library/react'
 
 import LanguageLinkItem from '../../../components/Languages/LanguageLinkItem'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
-import { Locale } from '../../../scripts/i18n/types'
+import type { Locale } from '../../../scripts/i18n/types'
 
 jest.mock('../../../components/Languages/LanguageItem')
 

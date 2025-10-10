@@ -1,9 +1,9 @@
 import * as React from 'react'
-import RemoteService from '../../../scripts/services/RemoteService'
+import type RemoteService from '../../../scripts/services/RemoteService'
 import type {
   StackExchangeData
 } from '../../../scripts/services/StackExchangeService'
-import { StatsStackExchangeProps } from '../StatsStackExchange'
+import type { StatsStackExchangeProps } from '../StatsStackExchange'
 
 export default function StatsStackExchange<T extends RemoteService<StackExchangeData>>({
   factory, techName, url, icon

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Card } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import { Certificate } from '../../scripts/certificates/types'
+import type { Certificate } from '../../scripts/certificates/types'
 import { toDateLocale } from '../../scripts/utils/DateUtils'
 
 export type CertificateItemProps = {

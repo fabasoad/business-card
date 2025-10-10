@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 
 import LanguageTextItem from '../../../components/Languages/LanguageTextItem'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
-import { Locale } from '../../../scripts/i18n/types'
+import type { Locale } from '../../../scripts/i18n/types'
 
 jest.mock('../../../components/Languages/LanguageItem')
 

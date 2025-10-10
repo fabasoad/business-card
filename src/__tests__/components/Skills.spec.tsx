@@ -3,7 +3,7 @@ import { render } from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 import Skills from '../../components/Skills'
-import { Technology } from '../../scripts/technologies/types'
+import type { Technology } from '../../scripts/technologies/types'
 
 jest.mock('../../components/LoadingSpinner')
 jest.mock('../../components/Controls/Section')

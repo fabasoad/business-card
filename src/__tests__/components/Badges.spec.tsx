@@ -9,7 +9,7 @@ jest.mock('../../components/Controls/Section')
 describe('Badges', () => {
   test('should render Badges correctly', () => {
     const { container } = render(<Badges />)
-    const div = container.querySelector('div[data-testid="Section-badges"] > div.row')
+    const div = container.querySelector('div[data-testid^="Section-"] > div.row')
     expect(div.children).toHaveLength(2)
     expect(
       div.querySelector('div.col-sm.col-md.col-lg.text-center > a[href="https://standforukraine.com"][rel="noopener noreferrer"][target="_blank"] > img.mb-4.mx-4[src="[object Object]"][alt="Support Ukraine"][title="Stand With Ukraine"][loading="lazy"]')

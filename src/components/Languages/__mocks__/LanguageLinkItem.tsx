@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { LanguageLinkItemProps } from '../LanguageLinkItem'
+import type { LanguageLinkItemProps } from '../LanguageLinkItem'
 
 export default function LanguageLinkItem({ code, text, url }: LanguageLinkItemProps) {
   return (

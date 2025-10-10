@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ThemeImageProps } from '../ThemeImage'
+import type { ThemeImageProps } from '../ThemeImage'
 
 export default function ThemeImage({
   className, imgDark, imgLight, alt, title

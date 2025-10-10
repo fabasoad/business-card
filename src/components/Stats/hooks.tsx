@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import RemoteService from '../../scripts/services/RemoteService'
+import type RemoteService from '../../scripts/services/RemoteService'
 
 export type ServiceFactory<T extends RemoteService<S>, S> = () => T
 

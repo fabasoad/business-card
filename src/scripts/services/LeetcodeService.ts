@@ -1,5 +1,5 @@
 import State from '../../components/Stats/State'
-import RemoteService from './RemoteService'
+import type RemoteService from './RemoteService'
 import fetch from 'cross-fetch'
 
 export interface LeetcodeStats {

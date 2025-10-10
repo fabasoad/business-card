@@ -1,8 +1,8 @@
 import SupportedLocales from './SupportedLocales'
-import { LanguageDetectorModule } from 'i18next'
+import type { LanguageDetectorModule } from 'i18next'
 import i18nLanguageCodeTranslator, {
   I18nLanguageCodeFormat,
-  I18nLanguageCodeTranslatorFunc
+  type I18nLanguageCodeTranslatorFunc
 } from './I18nLanguageCodeTranslator'
 
 const I18nLanguageDetector: LanguageDetectorModule = {

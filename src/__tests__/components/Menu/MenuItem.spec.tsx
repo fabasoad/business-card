@@ -3,11 +3,11 @@ import * as React from 'react'
 import { fireEvent, render } from '@testing-library/react'
 
 import MenuItem from '../../../components/Menu/MenuItem'
-import StringUtils from '../../../scripts/utils/StringUtils'
+import { randomString } from '../../../scripts/utils/StringUtils'
 
 describe('MenuItem', () => {
   test('should render MenuItem correctly', () => {
-    const name = StringUtils.random(10)
+    const name: string = randomString(10)
     const { container } = render(<MenuItem
       name={name}
       setActiveNavLink={() => {/* no action needed */}}
@@ -18,7 +18,7 @@ describe('MenuItem', () => {
   })
 
   test('should set active MenuItem correctly', () => {
-    const name = StringUtils.random(10)
+    const name: string = randomString(10)
     const setActiveNavLinkMock = jest.fn((actual: string): void => {
       expect(actual).toEqual(`#${name}`)
     })

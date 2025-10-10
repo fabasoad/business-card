@@ -1,7 +1,7 @@
 /// <reference path='./Skills.d.ts' />
 import * as React from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { Technology } from '../scripts/technologies/types'
+import type { Technology } from '../scripts/technologies/types'
 import Section from './Controls/Section'
 import TechnologyStorage from '../scripts/technologies/TechnologyStorage'
 import { Col, Row } from 'react-bootstrap'

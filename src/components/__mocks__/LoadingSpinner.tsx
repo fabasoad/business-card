@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { LoadingSpinnerProps } from '../LoadingSpinner'
+import type { LoadingSpinnerProps } from '../LoadingSpinner'
 
 export default function LoadingSpinner({ background, color }: LoadingSpinnerProps) {
   return (

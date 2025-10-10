@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { SectionProps } from '../Section'
+import type { SectionProps } from '../Section'
 
 export default function Section({ id, children }: React.PropsWithChildren<SectionProps>) {
   return (

@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { humanize, toDateLocaleFromDate } from '../../scripts/utils/DateUtils'
 import { useTranslation } from 'react-i18next'
-import { Experience } from '../../scripts/experience/types'
+import type { Experience } from '../../scripts/experience/types'
 
 type ExperienceBodyItem = string | string[]
 

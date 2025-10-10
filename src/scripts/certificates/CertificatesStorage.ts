@@ -1,6 +1,6 @@
 import TechnologyStorage from '../technologies/TechnologyStorage'
 import * as items from './items.json'
-import { Certificate, CertificateBase } from './types'
+import type { Certificate, CertificateBase } from './types'
 import * as imgCoursera from '../../assets/images/certificates/coursera.png'
 import * as imgUdemy from '../../assets/images/certificates/udemy.png'
 import * as imgOracle from '../../assets/images/certificates/oracle-java-8.png'

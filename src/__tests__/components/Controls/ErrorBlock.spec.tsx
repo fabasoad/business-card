@@ -1,13 +1,13 @@
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import ErrorBlock from '../../../components/Controls/ErrorBlock'
-import StringUtils from '../../../scripts/utils/StringUtils'
+import { randomString } from '../../../scripts/utils/StringUtils'
 import { render } from '@testing-library/react'
 
 describe('ErrorBlock', () => {
   test('should render ErrorBlock correctly', () => {
-    const title = StringUtils.random(10)
-    const body = StringUtils.random(10)
+    const title = randomString(10)
+    const body = randomString(10)
     const { container } = render(<ErrorBlock title={title}>{body}</ErrorBlock>)
     const div = container.querySelector('div.error > div.container')
     const divRows = div.querySelectorAll('div.row')

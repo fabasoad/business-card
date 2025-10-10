@@ -1,5 +1,5 @@
 import * as React from 'react'
-import LanguageItem, { LanguageItemProps } from './LanguageItem'
+import LanguageItem, { type LanguageItemProps } from './LanguageItem'
 
 export type LanguageTextItemProps = LanguageItemProps & {
   text: string

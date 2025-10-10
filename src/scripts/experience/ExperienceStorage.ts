@@ -1,5 +1,5 @@
 import * as items from './items.json'
-import { Experience, ExperienceBase } from './types'
+import type { Experience, ExperienceBase } from './types'
 import * as imgArka from '../../assets/images/companies/arka-fss.png'
 import * as imgLohika from '../../assets/images/companies/lohika.png'
 import * as imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'

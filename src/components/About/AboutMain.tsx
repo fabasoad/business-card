@@ -1,5 +1,4 @@
 /// <reference path='./AboutMain.d.ts' />
-import { ReactElement } from 'react'
 import * as React from 'react'
 import { useTranslation } from 'react-i18next'
 import * as imgPortraitSm from '../../assets/images/portrait-sm.png'
@@ -12,7 +11,7 @@ export type AboutMeItem = {
   list?: AboutMeItem[]
 }
 
-export function renderList(children: AboutMeItem[] | string, level: number = 0): ReactElement<'ul'> | string {
+export function renderList(children: AboutMeItem[] | string, level: number = 0): React.ReactElement<'ul'> | string {
   // For tests
   return typeof children === 'string' ? children : (
     <ul>

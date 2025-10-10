@@ -1,7 +1,7 @@
 import * as React from 'react'
 import certificatesStorage
   from '../../scripts/certificates/CertificatesStorage'
-import { Certificate } from '../../scripts/certificates/types'
+import type { Certificate } from '../../scripts/certificates/types'
 import Section from '../Controls/Section'
 import CertificateItem from './CertificateItem'
 import { Col, Row } from 'react-bootstrap'

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { MenuItemProps } from '../MenuItem'
+import type { MenuItemProps } from '../MenuItem'
 
 export default function MenuItem({ name, setActiveNavLink }: MenuItemProps) {
   return (

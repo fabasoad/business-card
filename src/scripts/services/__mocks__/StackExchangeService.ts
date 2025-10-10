@@ -1,4 +1,4 @@
-import RemoteService from '../RemoteService'
+import type RemoteService from '../RemoteService'
 import type { StackExchangeData } from '../StackExchangeService'
 
 export class StackExchangeService implements RemoteService<StackExchangeData> {

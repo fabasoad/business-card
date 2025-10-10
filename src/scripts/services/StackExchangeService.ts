@@ -1,4 +1,4 @@
-import RemoteService from './RemoteService'
+import type RemoteService from './RemoteService'
 import fetch from 'cross-fetch'
 
 type StackOverflowResponse = {

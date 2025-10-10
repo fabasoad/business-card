@@ -1,6 +1,6 @@
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 import { humanize } from '../../../scripts/utils/DateUtils'
-import { Locale } from '../../../scripts/i18n/types'
+import type { Locale } from '../../../scripts/i18n/types'
 
 describe('DateUtils', () => {
   type FixtureInitial = { codes: string[], expected: string }

@@ -5,10 +5,10 @@ import * as ua from '../../assets/i18n/ua.json'
 import I18nLanguageDetector from './I18nLanguageDetector'
 import i18nLanguageCodeTranslator, {
   I18nLanguageCodeFormat,
-  I18nLanguageCodeTranslatorFunc
+  type I18nLanguageCodeTranslatorFunc
 } from './I18nLanguageCodeTranslator'
 import SupportedLocales from './SupportedLocales'
-import { Locale } from './types'
+import type { Locale } from './types'
 import { initReactI18next } from 'react-i18next'
 
 type I18nServiceCallback = (code: string, t: i18n.TFunction) => void

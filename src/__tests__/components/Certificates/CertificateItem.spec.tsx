@@ -2,7 +2,7 @@ import '@testing-library/jest-dom'
 import * as React from 'react'
 import certificatesStorage from '../../../scripts/certificates/CertificatesStorage'
 import CertificateItem from '../../../components/Certificates/CertificateItem'
-import { Certificate } from '../../../scripts/certificates/types'
+import type { Certificate } from '../../../scripts/certificates/types'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 import { render } from '@testing-library/react'
 

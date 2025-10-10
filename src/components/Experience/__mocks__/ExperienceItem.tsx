@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ExperienceItemProps } from '../ExperienceItem'
+import type { ExperienceItemProps } from '../ExperienceItem'
 
 export default function ExperienceItem({ experience }: ExperienceItemProps) {
   const { id, title, locationI18nKey, techStack, img, from, to } = experience

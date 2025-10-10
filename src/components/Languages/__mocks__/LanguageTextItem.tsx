@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { LanguageTextItemProps } from '../LanguageTextItem'
+import type { LanguageTextItemProps } from '../LanguageTextItem'
 
 export default function LanguageTextItem({ code, text }: LanguageTextItemProps) {
   return (

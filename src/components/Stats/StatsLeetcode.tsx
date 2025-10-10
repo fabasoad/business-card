@@ -2,7 +2,7 @@ import * as React from 'react'
 import LoadingSpinner from '../LoadingSpinner'
 import { useFetchStats } from './hooks'
 import StatsCommon from './StatsCommon'
-import { LeetcodeService, LeetcodeStats } from '../../scripts/services/LeetcodeService'
+import { LeetcodeService, type LeetcodeStats } from '../../scripts/services/LeetcodeService'
 
 export type StatsLeetcodeProps = {
   totalSolved?: number,

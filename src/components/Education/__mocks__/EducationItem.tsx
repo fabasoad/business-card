@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { EducationItemProps } from '../EducationItem'
+import type { EducationItemProps } from '../EducationItem'
 
 export default function EducationItem({
   universityKey, universityName, location, img, fromYear, toYear

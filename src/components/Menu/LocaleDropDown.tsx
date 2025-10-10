@@ -2,7 +2,7 @@ import * as React from 'react'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
 import { Dropdown } from 'react-bootstrap'
 import { useTranslation } from 'react-i18next'
-import { Locale } from '../../scripts/i18n/types'
+import type { Locale } from '../../scripts/i18n/types'
 import i18nService from '../../scripts/i18n/I18nService'
 
 export default function LocaleDropDown() {

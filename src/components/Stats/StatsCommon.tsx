@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Row } from 'react-bootstrap'
 import TechnologyStorage from '../../scripts/technologies/TechnologyStorage'
-import { Technology } from '../../scripts/technologies/types'
+import type { Technology } from '../../scripts/technologies/types'
 import ThemeImage from '../Controls/ThemeImage'
 
 export type StatsCommonProps = {

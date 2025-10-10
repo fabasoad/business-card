@@ -1,4 +1,4 @@
-import RemoteService from '../RemoteService'
+import type RemoteService from '../RemoteService'
 import type { LeetcodeStats } from '../LeetcodeService'
 
 export class LeetcodeService implements RemoteService<LeetcodeStats> {

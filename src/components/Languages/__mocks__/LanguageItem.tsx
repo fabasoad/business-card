@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { LanguageItemProps } from '../LanguageItem'
+import type { LanguageItemProps } from '../LanguageItem'
 
 export default function LanguageItem({
   children, code

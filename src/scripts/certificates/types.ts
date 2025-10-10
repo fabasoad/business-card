@@ -1,4 +1,4 @@
-import { Technology } from '../technologies/types'
+import type { Technology } from '../technologies/types'
 
 export type CertificateBase = {
   id: string,

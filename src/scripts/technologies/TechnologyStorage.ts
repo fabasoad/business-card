@@ -1,4 +1,4 @@
-import { Technology, TechnologyProvider } from './types'
+import type { Technology, TechnologyProvider } from './types'
 import TechnologyProviderDefault from './TechnologyProviderDefault'
 
 export default class TechnologyStorage {
@@ -9,7 +9,7 @@ export default class TechnologyStorage {
   }
 
   findBySkill(isSkill: boolean): Array<Technology> {
-    const result = new Array<Technology>()
+    const result: Technology[] = []
     for (const technology of this.provider.items.values()) {
       if (technology.isSkill === isSkill) {
         result.push(technology)

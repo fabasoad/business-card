@@ -4,8 +4,8 @@ import '@testing-library/jest-dom'
 import * as ThemeContext from '../../components/Contexts/ThemeContext'
 
 import LoadingSpinner, {
-  LoadingSpinnerBackground,
-  LoadingSpinnerColor
+  type LoadingSpinnerBackground,
+  type LoadingSpinnerColor
 } from '../../components/LoadingSpinner'
 
 describe('LoadingSpinner', () => {

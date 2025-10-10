@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { SocialIconProps } from '../SocialIcon'
+import type { SocialIconProps } from '../SocialIcon'
 
 export default function SocialIcon({ url, icon }: SocialIconProps) {
   return (

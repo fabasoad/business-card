@@ -3937,13 +3937,13 @@ __metadata:
     dotenv-webpack: "npm:8.1.1"
     express: "npm:5.1.0"
     express-rate-limit: "npm:8.1.0"
-    humanize-duration: "npm:3.33.0"
+    humanize-duration: "npm:3.33.1"
     i18next: "npm:25.5.2"
     jest: "npm:30.2.0"
     jest-environment-jsdom: "npm:30.2.0"
     nodemon: "npm:3.1.10"
     normalize.css: "npm:8.0.1"
-    posthog-js: "npm:1.274.3"
+    posthog-js: "npm:1.275.1"
     raf: "npm:3.4.1"
     react: "npm:19.1.1"
     react-bootstrap: "npm:2.10.10"
@@ -5566,10 +5566,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"humanize-duration@npm:3.33.0":
-  version: 3.33.0
-  resolution: "humanize-duration@npm:3.33.0"
-  checksum: 10c0/516c966e848177df526444f83f27d92fdfb7b96f8cd3d42e5b1bdbda950c8b56db0ac8ea25bc130445b577d19c382c35fe3d458643c10f0fe071ab1b8fe8ad80
+"humanize-duration@npm:3.33.1":
+  version: 3.33.1
+  resolution: "humanize-duration@npm:3.33.1"
+  checksum: 10c0/d62ea8806c0efdc10fa28f274c21d90c5c2e218a84805b1a223836dbcbddf0a45bee9b2321252bec0d017924f31af220bd3aaff90449671d7891f822ccdff50f
   languageName: node
   linkType: hard
 
@@ -7532,9 +7532,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"posthog-js@npm:1.274.3":
-  version: 1.274.3
-  resolution: "posthog-js@npm:1.274.3"
+"posthog-js@npm:1.275.1":
+  version: 1.275.1
+  resolution: "posthog-js@npm:1.275.1"
   dependencies:
     "@posthog/core": "npm:1.2.4"
     core-js: "npm:^3.38.1"
@@ -7549,7 +7549,7 @@ __metadata:
       optional: true
     rrweb-snapshot:
       optional: true
-  checksum: 10c0/9f40a710d619b1486040a031122ef7f37d359638b1ad53908dc2c91f74584659f236d6e08d209457c90844f84fe4891fe0f65e7c27136ff215265bd14e1912f7
+  checksum: 10c0/97aa0d0f9adb64ac77a870d42fb1ae8a855410d3af095410023a1972785d32b38e7fbd2962f012b62c487282c11b341a4e5b3dcc704819f7acb88fcf955f3257
   languageName: node
   linkType: hard
 

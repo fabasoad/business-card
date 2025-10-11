@@ -3895,7 +3895,7 @@ __metadata:
     express: "npm:5.1.0"
     express-rate-limit: "npm:8.1.0"
     humanize-duration: "npm:3.33.1"
-    i18next: "npm:25.5.2"
+    i18next: "npm:25.6.0"
     jest: "npm:30.2.0"
     jest-environment-jsdom: "npm:30.2.0"
     nodemon: "npm:3.1.10"
@@ -3905,7 +3905,7 @@ __metadata:
     react: "npm:19.1.1"
     react-bootstrap: "npm:2.10.10"
     react-dom: "npm:19.1.1"
-    react-i18next: "npm:15.7.3"
+    react-i18next: "npm:15.7.4"
     react-iframe: "npm:1.8.5"
     react-modal: "npm:3.16.3"
     react-test-renderer: "npm:19.1.1"
@@ -5519,9 +5519,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:25.5.2":
-  version: 25.5.2
-  resolution: "i18next@npm:25.5.2"
+"i18next@npm:25.6.0":
+  version: 25.6.0
+  resolution: "i18next@npm:25.6.0"
   dependencies:
     "@babel/runtime": "npm:^7.27.6"
   peerDependencies:
@@ -5529,7 +5529,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/25db34d17e8f11f0cd52d9ddc9c2e5942800aaaa20d0f40563aa1c50e958abd553d82ab3acf2b50ed46530c8d5cf0d5d5ccaf4d75df660c96083f78c83553438
+  checksum: 10c0/35f7e4b8fa45fe2d6fd9fe267fde9101d7b502672f4fdf8439a7f0483a12c8a22a966e8f2b616480599057c804f553e594b9eb3c9ccb33fd4dfb57e5dee80636
   languageName: node
   linkType: hard
 
@@ -7621,14 +7621,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:15.7.3":
-  version: 15.7.3
-  resolution: "react-i18next@npm:15.7.3"
+"react-i18next@npm:15.7.4":
+  version: 15.7.4
+  resolution: "react-i18next@npm:15.7.4"
   dependencies:
     "@babel/runtime": "npm:^7.27.6"
     html-parse-stringify: "npm:^3.0.1"
   peerDependencies:
-    i18next: ">= 25.4.1"
+    i18next: ">= 23.4.0"
     react: ">= 16.8.0"
     typescript: ^5
   peerDependenciesMeta:
@@ -7638,7 +7638,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/dc3ca1da9accb47f63b2049c94ff7a94ba92d76bad586aca7c2aa3b7a01c2d4e69d4363ff0cfa898cef22b109f2dd49864d6ac94cd9afbac485d44e70ed5a4d6
+  checksum: 10c0/643c5d3ced4b44084c871a55e876159561c14f378f90bf53286c1291082703e293573da18ad692b43b357b60d2f7251bc417feb0b522de8cec5c414e5ebdf6c1
   languageName: node
   linkType: hard
 

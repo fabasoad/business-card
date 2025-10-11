@@ -56,34 +56,51 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+
   github:
     name: GitHub
     needs: [deploy]
     uses: fabasoad/reusable-workflows/.github/workflows/wf-github-release.yml@main
     with:
       bump-tags: false
+
   trigger-security-dast:
     name: Trigger Security DAST
     needs: [deploy]
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout ${{ github.repository }}
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 1
+
       - name: Get GitHub token
         uses: actions/create-github-app-token@v2
         id: github-app
         with:
           app-id: ${{ vars.GH_APP_WORKFLOW_CRUD_APP_ID }}
           private-key: ${{ secrets.GH_APP_WORKFLOW_CRUD_PRIVATE_KEY }}
+
+      - name: Wait for deployment
+        env:
+          INPUT_DEPLOY_TIME: "${{ needs.deploy.outputs.deploy-time }}"
+          RENDER_SERVICE_ID: "${{ secrets.RENDER_SERVICE_ID }}"
+          RENDER_API_KEY: "${{ secrets.RENDER_API_KEY }}"
+        run: ./wait-deploy-completed.sh "${INPUT_DEPLOY_TIME}"
+        working-directory: "${{ github.workspace }}/scripts"
+
       - name: Dispatch workflow
         uses: actions/github-script@v8
         with:
           github-token: "${{ steps.github-app.outputs.token }}"
           script: |
+            const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
             github.rest.actions.createWorkflowDispatch({
-              owner: "fabasoad",
-              repo: "business-card",
+              owner,
+              repo,
               workflow_id: "security-dast.yml",
-              ref: "main",
+              ref: process.env.GITHUB_REF_NAME,
               inputs: {
-                "deploy-time": "${{ needs.deploy.outputs.deploy-time }}"
+                "target-url": "https://fabasoad.com"
               }
             });

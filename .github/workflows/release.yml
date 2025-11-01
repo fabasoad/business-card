@@ -94,10 +94,9 @@ jobs:
         with:
           github-token: "${{ steps.github-app.outputs.token }}"
           script: |
-            const [owner, repo] = process.env.GITHUB_REPOSITORY.split("/");
             github.rest.actions.createWorkflowDispatch({
-              owner,
-              repo,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
               workflow_id: "security-dast.yml",
               ref: process.env.GITHUB_REF_NAME,
               inputs: {

@@ -3705,11 +3705,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.8.19":
-  version: 2.8.22
-  resolution: "baseline-browser-mapping@npm:2.8.22"
+  version: 2.8.23
+  resolution: "baseline-browser-mapping@npm:2.8.23"
   bin:
     baseline-browser-mapping: dist/cli.js
-  checksum: 10c0/13e1d799fece362febf000292c2132c75b966dd74f3807f581035c90775bb36700d23a09d947a1e44c26ac2721436bd5a38aaa4f8f85d742065e4b84dad13784
+  checksum: 10c0/5a63c1c241d288e5c79aa32a1cbea335b5af899172161aa9f9701a67c5b9b55ea3b3945a70a842385374627dde1de27504641bc95257d8c2e81f0c593c719121
   languageName: node
   linkType: hard
 
@@ -3906,7 +3906,7 @@ __metadata:
     react: "npm:19.2.0"
     react-bootstrap: "npm:2.10.10"
     react-dom: "npm:19.2.0"
-    react-i18next: "npm:15.7.4"
+    react-i18next: "npm:16.2.3"
     react-iframe: "npm:1.8.5"
     react-modal: "npm:3.16.3"
     react-test-renderer: "npm:19.2.0"
@@ -7614,14 +7614,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:15.7.4":
-  version: 15.7.4
-  resolution: "react-i18next@npm:15.7.4"
+"react-i18next@npm:16.2.3":
+  version: 16.2.3
+  resolution: "react-i18next@npm:16.2.3"
   dependencies:
     "@babel/runtime": "npm:^7.27.6"
     html-parse-stringify: "npm:^3.0.1"
+    use-sync-external-store: "npm:^1.6.0"
   peerDependencies:
-    i18next: ">= 23.4.0"
+    i18next: ">= 25.5.2"
     react: ">= 16.8.0"
     typescript: ^5
   peerDependenciesMeta:
@@ -7631,7 +7632,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/643c5d3ced4b44084c871a55e876159561c14f378f90bf53286c1291082703e293573da18ad692b43b357b60d2f7251bc417feb0b522de8cec5c414e5ebdf6c1
+  checksum: 10c0/510766f924fb93f348d0acdfe980d9bf2088f44161abc4756647204257285ff0fa0e1fab32438ff271c6d0d84f45ba47cfe684e1dcfe53bf8937d89a1fa99fa0
   languageName: node
   linkType: hard
 
@@ -9144,6 +9145,15 @@ __metadata:
   peerDependencies:
     react: ">=16.8.1"
   checksum: 10c0/57b4a29600edb428aed6b84f40f6abe5675b4828acc46cd19c734e90684eea110a3a2ba3cf75cb23beca13ddfacee7b972fbc1c3262eb3581d3c21c7246dce68
+  languageName: node
+  linkType: hard
+
+"use-sync-external-store@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "use-sync-external-store@npm:1.6.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
+  checksum: 10c0/35e1179f872a53227bdf8a827f7911da4c37c0f4091c29b76b1e32473d1670ebe7bcd880b808b7549ba9a5605c233350f800ffab963ee4a4ee346ee983b6019b
   languageName: node
   linkType: hard
 

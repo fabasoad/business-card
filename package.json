@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "3.1.7",
+  "version": "3.1.8",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -80,5 +80,5 @@
     "react-bootstrap": "~2.10.10",
     "use-local-storage": "~3.0.0"
   },
-  "packageManager": "yarn@4.10.3"
+  "packageManager": "yarn@4.11.0"
 }

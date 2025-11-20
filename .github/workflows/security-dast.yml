@@ -16,9 +16,9 @@ defaults:
 jobs:
   security:
     name: Security
+    uses: fabasoad/reusable-workflows/.github/workflows/wf-security-dast.yml@main
     permissions:
       contents: read
       security-events: write
-    uses: fabasoad/reusable-workflows/.github/workflows/wf-security-dast.yml@main
     with:
       target-url: "${{ github.event.inputs.target-url }}"

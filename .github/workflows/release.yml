@@ -61,6 +61,8 @@ jobs:
     name: GitHub
     needs: [deploy]
     uses: fabasoad/reusable-workflows/.github/workflows/wf-github-release.yml@main
+    permissions:
+      contents: write
     with:
       bump-tags: false
 

@@ -76,9 +76,9 @@
     "@octokit/rest": "~22.0.1",
     "@tanstack/react-query": "~5.90.11",
     "cross-fetch": "~4.1.0",
-    "posthog-js": "~1.297.4",
+    "posthog-js": "~1.298.1",
     "react-bootstrap": "~2.10.10",
     "use-local-storage": "~3.0.0"
   },
-  "packageManager": "yarn@4.11.0"
+  "packageManager": "yarn@4.12.0"
 }

@@ -3914,7 +3914,7 @@ __metadata:
     express: "npm:~5.1.0"
     express-rate-limit: "npm:~8.2.1"
     humanize-duration: "npm:~3.33.1"
-    i18next: "npm:~25.6.3"
+    i18next: "npm:~25.7.0"
     jest: "npm:~30.2.0"
     jest-environment-jsdom: "npm:~30.2.0"
     nodemon: "npm:~3.1.11"
@@ -5559,9 +5559,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:~25.6.3":
-  version: 25.6.3
-  resolution: "i18next@npm:25.6.3"
+"i18next@npm:~25.7.0":
+  version: 25.7.0
+  resolution: "i18next@npm:25.7.0"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
   peerDependencies:
@@ -5569,7 +5569,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/cbeaff5641247ef724dbf1b609df2bc24306b610cfefc6afab1f574e3c6e4171731a1959915c82c606bdb9a535da374ac14d43c7849e680482e9b0d8a93c19fb
+  checksum: 10c0/f985200473b3fb602c7aa4373249b0f4c83c51ddbb04dc5df59cb4e99e4178e2d76135ca5bdc6a123e3f7217c7cd012882bd33084bb5f103b69032dc98cb36bf
   languageName: node
   linkType: hard
 
@@ -6585,9 +6585,9 @@ __metadata:
   linkType: hard
 
 "lru-cache@npm:^11.0.0, lru-cache@npm:^11.1.0, lru-cache@npm:^11.2.1":
-  version: 11.2.2
-  resolution: "lru-cache@npm:11.2.2"
-  checksum: 10c0/72d7831bbebc85e2bdefe01047ee5584db69d641c48d7a509e86f66f6ee111b30af7ec3bd68a967d47b69a4b1fa8bbf3872630bd06a63b6735e6f0a5f1c8e83d
+  version: 11.2.4
+  resolution: "lru-cache@npm:11.2.4"
+  checksum: 10c0/4a24f9b17537619f9144d7b8e42cd5a225efdfd7076ebe7b5e7dc02b860a818455201e67fbf000765233fe7e339d3c8229fc815e9b58ee6ede511e07608c19b2
   languageName: node
   linkType: hard
 
@@ -6685,8 +6685,8 @@ __metadata:
   linkType: hard
 
 "memfs@npm:^4.43.1":
-  version: 4.51.0
-  resolution: "memfs@npm:4.51.0"
+  version: 4.51.1
+  resolution: "memfs@npm:4.51.1"
   dependencies:
     "@jsonjoy.com/json-pack": "npm:^1.11.0"
     "@jsonjoy.com/util": "npm:^1.9.0"
@@ -6694,7 +6694,7 @@ __metadata:
     thingies: "npm:^2.5.0"
     tree-dump: "npm:^1.0.3"
     tslib: "npm:^2.0.0"
-  checksum: 10c0/a5f098c3543ddc6dda952fdfeb4178244b2080e4f2244bf84a8946646fae8ba2c7354d44ac5ec9b6bc812ca77258f88da37833a6458d6972e94bf633680ff5cb
+  checksum: 10c0/b039121dd2c6a93b2b3835042a1780d70347d25d3f983998a91e38a07e9ea1838ace3a5b0b7b8437efef6c64eea668f62efb25aeeed72a595055f6c449ada402
   languageName: node
   linkType: hard
 

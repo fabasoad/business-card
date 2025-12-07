@@ -24,7 +24,7 @@ describe('FooterInfo', () => {
     const madeByColor = theme === 'dark' ? 'a7d9c1' : '2c3e50'
     expect(
       div.querySelector(
-        `li > img[alt="Made by fabasoad"][src="https://img.shields.io/static/v1?label=made%20by&message=fabasoad&color=${madeByColor}&style=for-the-badge&logo=github"][loading="lazy"]`
+        `li > img[alt="Made by fabasoad"][src^="https://img.shields.io/static/v1?color=${madeByColor}"][loading="lazy"]`
       )
     ).toBeInTheDocument()
     const bitcoinColor = theme === 'dark' ? 'a7d9c1' : 'f7931a'

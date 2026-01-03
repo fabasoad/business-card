@@ -10,10 +10,11 @@ on: # yamllint disable-line rule:truthy
 jobs:
   paths-filter:
     name: Paths filter
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     outputs:
-      trigger-js-lint: "${{ github.event_name == 'push' || steps.filter.outputs.trigger-js-lint }}"
+      trigger-js-lint: "${{ steps.filter.outputs.trigger-js-lint }}"
     steps:
       - name: Filter changed files
         id: filter
@@ -29,7 +30,7 @@ jobs:
   js-lint:
     name: JS Lint
     needs: [paths-filter]
-    if: ${{ needs.paths-filter.outputs.trigger-js-lint == 'true' }}
+    if: github.event_name == 'push' || needs.paths-filter.outputs.trigger-js-lint == 'true'
     uses: fabasoad/reusable-workflows/.github/workflows/wf-js-lint.yml@main
     permissions:
       contents: read

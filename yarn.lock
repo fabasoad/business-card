@@ -2913,10 +2913,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@posthog/types@npm:1.334.0":
-  version: 1.334.0
-  resolution: "@posthog/types@npm:1.334.0"
-  checksum: 10c0/dcfebb4e85bf77a32657a75347b6825463e30ee3f7d9fafdc7176349d34de00c0375a2fde4467c20a8d1ab0d05e570e18305292ff778961b6d8bae1353f9cc32
+"@posthog/types@npm:1.334.1":
+  version: 1.334.1
+  resolution: "@posthog/types@npm:1.334.1"
+  checksum: 10c0/efd25ff86258f7bd3b2f5ba29e8e7d5c94d63d2acef783f2d298adeb43c7e5eb35f1b6525fc947ceecd7ba74db5fbe104e1a0ccbe7a8a5bd4b80a42a7e56b0e8
   languageName: node
   linkType: hard
 
@@ -4491,7 +4491,7 @@ __metadata:
     jest-environment-jsdom: "npm:~30.2.0"
     nodemon: "npm:~3.1.11"
     normalize.css: "npm:~8.0.1"
-    posthog-js: "npm:~1.334.0"
+    posthog-js: "npm:~1.334.1"
     raf: "npm:~3.4.1"
     react: "npm:~19.2.3"
     react-bootstrap: "npm:~2.10.10"
@@ -8047,9 +8047,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"posthog-js@npm:~1.334.0":
-  version: 1.334.0
-  resolution: "posthog-js@npm:1.334.0"
+"posthog-js@npm:~1.334.1":
+  version: 1.334.1
+  resolution: "posthog-js@npm:1.334.1"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/api-logs": "npm:^0.208.0"
@@ -8057,14 +8057,14 @@ __metadata:
     "@opentelemetry/resources": "npm:^2.2.0"
     "@opentelemetry/sdk-logs": "npm:^0.208.0"
     "@posthog/core": "npm:1.13.0"
-    "@posthog/types": "npm:1.334.0"
+    "@posthog/types": "npm:1.334.1"
     core-js: "npm:^3.38.1"
     dompurify: "npm:^3.3.1"
     fflate: "npm:^0.4.8"
     preact: "npm:^10.28.0"
     query-selector-shadow-dom: "npm:^1.0.1"
     web-vitals: "npm:^5.1.0"
-  checksum: 10c0/182695cecf25b7d877393d7a8c736b28781950845d7989a1f3ea6691700c10600404469beea6be8876afb067cc8bbdcfe463665b2335fcfeb4f7d4aaa7f70908
+  checksum: 10c0/2a3c03fc589866c5970e003bf526318add7dcbd82cb59e163c1fe17e45aef14925fbcd5085c5a60448cb0e316457aa1993d883ca34059279a43f9961c59f76f5
   languageName: node
   linkType: hard
 

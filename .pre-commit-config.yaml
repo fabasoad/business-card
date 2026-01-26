@@ -45,9 +45,9 @@ repos:
     hooks:
       - id: gitleaks
   - repo: https://github.com/fabasoad/pre-commit-bearer
-    rev: v1.0.0
+    rev: v1.1.0
     hooks:
-      - id: scan-secrets
+      - id: bearer-secrets
         args:
           - --bearer-args=--log-level info --skip-path **/node_modules
           - --hook-args=--log-level debug

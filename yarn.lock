@@ -1435,18 +1435,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:~2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/biome@npm:2.3.12"
+"@biomejs/biome@npm:~2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/biome@npm:2.3.13"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.3.12"
-    "@biomejs/cli-darwin-x64": "npm:2.3.12"
-    "@biomejs/cli-linux-arm64": "npm:2.3.12"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.3.12"
-    "@biomejs/cli-linux-x64": "npm:2.3.12"
-    "@biomejs/cli-linux-x64-musl": "npm:2.3.12"
-    "@biomejs/cli-win32-arm64": "npm:2.3.12"
-    "@biomejs/cli-win32-x64": "npm:2.3.12"
+    "@biomejs/cli-darwin-arm64": "npm:2.3.13"
+    "@biomejs/cli-darwin-x64": "npm:2.3.13"
+    "@biomejs/cli-linux-arm64": "npm:2.3.13"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.3.13"
+    "@biomejs/cli-linux-x64": "npm:2.3.13"
+    "@biomejs/cli-linux-x64-musl": "npm:2.3.13"
+    "@biomejs/cli-win32-arm64": "npm:2.3.13"
+    "@biomejs/cli-win32-x64": "npm:2.3.13"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -1466,62 +1466,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/8def8c21ec08cf3739b2f07b0ad2e8234f1673fd0af5abe6d2663944487ac8a8af427c1386cbeff97b2206e237e413c36f1c8003a4f2add83eba10c78a6986d8
+  checksum: 10c0/920c44c755ab8efa2114b441baf74b8f5fae8e6ad98a301ce02228f546d20ef6ab7c33b990b0a4acd1ffc8f5985ae839cf1fec59a6f169732a0f86c14308728b
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.12"
+"@biomejs/cli-darwin-arm64@npm:2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.3.13"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/cli-darwin-x64@npm:2.3.12"
+"@biomejs/cli-darwin-x64@npm:2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/cli-darwin-x64@npm:2.3.13"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.12"
+"@biomejs/cli-linux-arm64-musl@npm:2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.3.13"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/cli-linux-arm64@npm:2.3.12"
+"@biomejs/cli-linux-arm64@npm:2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/cli-linux-arm64@npm:2.3.13"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.12"
+"@biomejs/cli-linux-x64-musl@npm:2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.3.13"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/cli-linux-x64@npm:2.3.12"
+"@biomejs/cli-linux-x64@npm:2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/cli-linux-x64@npm:2.3.13"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/cli-win32-arm64@npm:2.3.12"
+"@biomejs/cli-win32-arm64@npm:2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/cli-win32-arm64@npm:2.3.13"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.3.12":
-  version: 2.3.12
-  resolution: "@biomejs/cli-win32-x64@npm:2.3.12"
+"@biomejs/cli-win32-x64@npm:2.3.13":
+  version: 2.3.13
+  resolution: "@biomejs/cli-win32-x64@npm:2.3.13"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -2905,19 +2905,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@posthog/core@npm:1.14.0":
-  version: 1.14.0
-  resolution: "@posthog/core@npm:1.14.0"
+"@posthog/core@npm:1.14.1":
+  version: 1.14.1
+  resolution: "@posthog/core@npm:1.14.1"
   dependencies:
     cross-spawn: "npm:^7.0.6"
-  checksum: 10c0/a06bd6ff7f81e949123acc8fd4931a572bdf126cd830194af6aae8155ad6c828de74af819a6c74ffc0a4078c5a851bf3ef91afd1f16fedb81f5993d744a807ed
+  checksum: 10c0/893987cbab290fa1524d90c73ebba6c6e8622ee1e5912be61eedf1b84e71f23062afb8d81e98ee5ec1225f7ec13ee3eee92e4f55e9e46430cab2bc383f2c7f80
   languageName: node
   linkType: hard
 
-"@posthog/types@npm:1.335.2":
-  version: 1.335.2
-  resolution: "@posthog/types@npm:1.335.2"
-  checksum: 10c0/a1b8267c82b86d2340ae01d9d5511ab53fa3d27974eaafc20aa67e2ccd3c8dc246cde4387385e33871d5c0fb26511c3decb420c2bf088572141363ad804837ea
+"@posthog/types@npm:1.335.5":
+  version: 1.335.5
+  resolution: "@posthog/types@npm:1.335.5"
+  checksum: 10c0/6dc826bdcefe88d5ab93661cc8deef68216be985dcb7e6dc23be6dfef786525f173ba67d48c9f1997dcc5df29a5b5a3a72480226c55a9470080d3d19a3dc5900
   languageName: node
   linkType: hard
 
@@ -3470,12 +3470,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:>=16.9.11, @types/react@npm:~19.2.9":
+"@types/react@npm:>=16.9.11":
   version: 19.2.9
   resolution: "@types/react@npm:19.2.9"
   dependencies:
     csstype: "npm:^3.2.2"
   checksum: 10c0/91c6839edd10ebdab4cd686d2a744e6ae078ed5831a36d48284ae92df0463c89bda1084ffdd2e6445f0716236c2c6ae0828b82f70720727632331695f4581d2a
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:~19.2.10":
+  version: 19.2.10
+  resolution: "@types/react@npm:19.2.10"
+  dependencies:
+    csstype: "npm:^3.2.2"
+  checksum: 10c0/17b96203a79ad3fa3cee8f1f1f324b93f005bc125755e29ac149402807275feaf3f00a4e65b8405f633923ac993da5737fd9800d27ee49911f3ed51dc27478f9
   languageName: node
   linkType: hard
 
@@ -4467,7 +4476,7 @@ __metadata:
     "@babel/preset-env": "npm:~7.28.6"
     "@babel/preset-react": "npm:~7.28.5"
     "@babel/preset-typescript": "npm:~7.28.5"
-    "@biomejs/biome": "npm:~2.3.12"
+    "@biomejs/biome": "npm:~2.3.13"
     "@octokit/rest": "npm:~22.0.1"
     "@popperjs/core": "npm:~2.11.8"
     "@tanstack/react-query": "npm:~5.90.20"
@@ -4476,13 +4485,13 @@ __metadata:
     "@testing-library/react": "npm:~16.3.2"
     "@types/jest": "npm:~30.0.0"
     "@types/node": "npm:~25.0.10"
-    "@types/react": "npm:~19.2.9"
+    "@types/react": "npm:~19.2.10"
     "@types/react-dom": "npm:~19.2.3"
     babel-jest: "npm:~30.2.0"
     babel-loader: "npm:~10.0.0"
     bootstrap: "npm:~5.3.8"
     cross-fetch: "npm:~4.1.0"
-    css-loader: "npm:~7.1.2"
+    css-loader: "npm:~7.1.3"
     dotenv-webpack: "npm:~8.1.1"
     express: "npm:~5.2.1"
     express-rate-limit: "npm:~8.2.1"
@@ -4492,15 +4501,15 @@ __metadata:
     jest-environment-jsdom: "npm:~30.2.0"
     nodemon: "npm:~3.1.11"
     normalize.css: "npm:~8.0.1"
-    posthog-js: "npm:~1.335.2"
+    posthog-js: "npm:~1.335.5"
     raf: "npm:~3.4.1"
-    react: "npm:~19.2.3"
+    react: "npm:~19.2.4"
     react-bootstrap: "npm:~2.10.10"
-    react-dom: "npm:~19.2.3"
-    react-i18next: "npm:~16.5.3"
+    react-dom: "npm:~19.2.4"
+    react-i18next: "npm:~16.5.4"
     react-iframe: "npm:~1.8.5"
     react-modal: "npm:~3.16.3"
-    react-test-renderer: "npm:~19.2.3"
+    react-test-renderer: "npm:~19.2.4"
     sass: "npm:~1.90.0"
     sass-loader: "npm:~16.0.6"
     style-loader: "npm:~4.0.0"
@@ -4896,18 +4905,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"css-loader@npm:~7.1.2":
-  version: 7.1.2
-  resolution: "css-loader@npm:7.1.2"
+"css-loader@npm:~7.1.3":
+  version: 7.1.3
+  resolution: "css-loader@npm:7.1.3"
   dependencies:
     icss-utils: "npm:^5.1.0"
-    postcss: "npm:^8.4.33"
+    postcss: "npm:^8.4.40"
     postcss-modules-extract-imports: "npm:^3.1.0"
     postcss-modules-local-by-default: "npm:^4.0.5"
     postcss-modules-scope: "npm:^3.2.0"
     postcss-modules-values: "npm:^4.0.0"
     postcss-value-parser: "npm:^4.2.0"
-    semver: "npm:^7.5.4"
+    semver: "npm:^7.6.3"
   peerDependencies:
     "@rspack/core": 0.x || 1.x
     webpack: ^5.27.0
@@ -4916,7 +4925,7 @@ __metadata:
       optional: true
     webpack:
       optional: true
-  checksum: 10c0/edec9ed71e3c416c9c6ad41c138834c94baf7629de3b97a3337ae8cec4a45e05c57bdb7c4b4d267229fc04b8970d0d1c0734ded8dcd0ac8c7c286b36facdbbf0
+  checksum: 10c0/8743a8f1a0beff371d0fbeae7dbae7b079e546c734e3c936f0c5dc4603a716a576200e9261c934565584cf0e090cca444efb613efa4282ee3fcab81db4c73c7e
   languageName: node
   linkType: hard
 
@@ -8031,7 +8040,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.33":
+"postcss@npm:^8.4.40":
   version: 8.5.6
   resolution: "postcss@npm:8.5.6"
   dependencies:
@@ -8042,28 +8051,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"posthog-js@npm:~1.335.2":
-  version: 1.335.2
-  resolution: "posthog-js@npm:1.335.2"
+"posthog-js@npm:~1.335.5":
+  version: 1.335.5
+  resolution: "posthog-js@npm:1.335.5"
   dependencies:
     "@opentelemetry/api": "npm:^1.9.0"
     "@opentelemetry/api-logs": "npm:^0.208.0"
     "@opentelemetry/exporter-logs-otlp-http": "npm:^0.208.0"
     "@opentelemetry/resources": "npm:^2.2.0"
     "@opentelemetry/sdk-logs": "npm:^0.208.0"
-    "@posthog/core": "npm:1.14.0"
-    "@posthog/types": "npm:1.335.2"
+    "@posthog/core": "npm:1.14.1"
+    "@posthog/types": "npm:1.335.5"
     core-js: "npm:^3.38.1"
     dompurify: "npm:^3.3.1"
     fflate: "npm:^0.4.8"
-    preact: "npm:^10.28.0"
+    preact: "npm:^10.28.2"
     query-selector-shadow-dom: "npm:^1.0.1"
     web-vitals: "npm:^5.1.0"
-  checksum: 10c0/1bc5e027994ec8d37a301b54c234ca1e99cd6a2a3d5318873836de09768aeda7699e6c4b24656be45a02173f90dbeb4917a197957a08460fd9082f5a03dd4c8c
+  checksum: 10c0/fc86ec1d6580bd36617567187bf8fc6aa8b09937973851fba1306fddbd68c62773006b22e4d703608124d83b5219efa01a52a8103b8f0e187e4201a743841087
   languageName: node
   linkType: hard
 
-"preact@npm:^10.28.0":
+"preact@npm:^10.28.2":
   version: 10.28.2
   resolution: "preact@npm:10.28.2"
   checksum: 10c0/eb60bf526eb6971701e6ac9c25236aca451f17f99e9c24704419196989b15bb576ed3101e084b151cd0fb30546b3e5e1ba73b774e8be2f2ed8187db42ec65faf
@@ -8299,20 +8308,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:~19.2.3":
-  version: 19.2.3
-  resolution: "react-dom@npm:19.2.3"
+"react-dom@npm:~19.2.4":
+  version: 19.2.4
+  resolution: "react-dom@npm:19.2.4"
   dependencies:
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.3
-  checksum: 10c0/dc43f7ede06f46f3acc16ee83107c925530de9b91d1d0b3824583814746ff4c498ea64fd65cd83aba363205268adff52e2827c582634ae7b15069deaeabc4892
+    react: ^19.2.4
+  checksum: 10c0/f0c63f1794dedb154136d4d0f59af00b41907f4859571c155940296808f4b94bf9c0c20633db75b5b2112ec13d8d7dd4f9bf57362ed48782f317b11d05a44f35
   languageName: node
   linkType: hard
 
-"react-i18next@npm:~16.5.3":
-  version: 16.5.3
-  resolution: "react-i18next@npm:16.5.3"
+"react-i18next@npm:~16.5.4":
+  version: 16.5.4
+  resolution: "react-i18next@npm:16.5.4"
   dependencies:
     "@babel/runtime": "npm:^7.28.4"
     html-parse-stringify: "npm:^3.0.1"
@@ -8328,7 +8337,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/8c54fa935b892f01022beca6f402580890429f95ebf1df4d8003e328403eb1ba8855682edc0fc730d34f134e6b93feee580773fae22c8d287caa2dce3e13b427
+  checksum: 10c0/41d0b76873addfa3abe0c6b8a10a796e01f205f3636bc2d090d0078b42222f2949c4303f18d7a80cc26cf1298918cb6220d96e39ae2b8644abfdbec3bb504b37
   languageName: node
   linkType: hard
 
@@ -8364,10 +8373,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:^19.2.3":
-  version: 19.2.3
-  resolution: "react-is@npm:19.2.3"
-  checksum: 10c0/2b54c422c21b8dbd68a435a1cce21ecd5b6f06f48659531f7d53dd7368365da5a67e946f352fb2010d11ca40658aa67bec90995f0f1ec5556c0f71dbffe54994
+"react-is@npm:^19.2.4":
+  version: 19.2.4
+  resolution: "react-is@npm:19.2.4"
+  checksum: 10c0/477a7cfc900f24194606e315fa353856a3a13487ea8eca841678817cad4daef64339ea0d1e84e58459fc75dbe0d9ba00bb0cc626db3d07e0cf31edc64cb4fa37
   languageName: node
   linkType: hard
 
@@ -8393,15 +8402,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-test-renderer@npm:~19.2.3":
-  version: 19.2.3
-  resolution: "react-test-renderer@npm:19.2.3"
+"react-test-renderer@npm:~19.2.4":
+  version: 19.2.4
+  resolution: "react-test-renderer@npm:19.2.4"
   dependencies:
-    react-is: "npm:^19.2.3"
+    react-is: "npm:^19.2.4"
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.3
-  checksum: 10c0/842b82239dbddbc536083a6260c3e1b0507c02a3400bd05879fc19160468fd0f8ab79fec5dceffa6113b131835cc7621212f8415b46ea5156ab66bbfd7e24297
+    react: ^19.2.4
+  checksum: 10c0/76f0a419a8ca7776ac6fae7c25056b9326a92a3d79971817e8ffd262d9121d1e87fde058b4fd6d33c365b1001cd6236d9053816dabed20afa62fbfe2a1a59f1a
   languageName: node
   linkType: hard
 
@@ -8420,10 +8429,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:~19.2.3":
-  version: 19.2.3
-  resolution: "react@npm:19.2.3"
-  checksum: 10c0/094220b3ba3a76c1b668f972ace1dd15509b157aead1b40391d1c8e657e720c201d9719537375eff08f5e0514748c0319063392a6f000e31303aafc4471f1436
+"react@npm:~19.2.4":
+  version: 19.2.4
+  resolution: "react@npm:19.2.4"
+  checksum: 10c0/cd2c9ff67a720799cc3b38a516009986f7fc4cb8d3e15716c6211cf098d1357ee3e348ab05ad0600042bbb0fd888530ba92e329198c92eafa0994f5213396596
   languageName: node
   linkType: hard
 
@@ -8774,7 +8783,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.7.2, semver@npm:^7.7.3":
+"semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.5.3, semver@npm:^7.5.4, semver@npm:^7.6.3, semver@npm:^7.7.2, semver@npm:^7.7.3":
   version: 7.7.3
   resolution: "semver@npm:7.7.3"
   bin:

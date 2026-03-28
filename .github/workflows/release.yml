@@ -36,7 +36,7 @@ jobs:
         run: yarn install
 
       - name: Build
-        uses: pyTooling/Actions/with-post-step@v7.4.2
+        uses: pyTooling/Actions/with-post-step@v7.7.0
         with:
           key: "build-business-card"
           main: |
@@ -77,7 +77,7 @@ jobs:
           fetch-depth: 1
 
       - name: Get GitHub token
-        uses: actions/create-github-app-token@v2
+        uses: actions/create-github-app-token@v3
         id: github-app
         with:
           app-id: ${{ vars.GH_APP_WORKFLOW_CRUD_APP_ID }}

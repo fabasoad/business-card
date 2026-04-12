@@ -6,16 +6,16 @@ import { LeetcodeService, type LeetcodeStats } from '../../scripts/services/Leet
 
 export type StatsLeetcodeProps = {
   totalSolved?: number,
-  easySolved?: number,
-  mediumSolved?: number,
-  hardSolved?: number
+  totalEasy?: number,
+  totalMedium?: number,
+  totalHard?: number
 }
 
 export default function StatsLeetcode({
-  totalSolved = 283, easySolved = 136, mediumSolved = 128, hardSolved = 19
+  totalSolved = 283, totalEasy = 136, totalMedium = 128, totalHard = 19
 }: StatsLeetcodeProps) {
   const { data, isLoading } = useFetchStats<LeetcodeService, LeetcodeStats>(
-    () => new LeetcodeService({ totalSolved, easySolved, mediumSolved, hardSolved })
+    () => new LeetcodeService({ totalSolved, totalEasy, totalMedium, totalHard })
   )
   if (isLoading) {
     return <LoadingSpinner />

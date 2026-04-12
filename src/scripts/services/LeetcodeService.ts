@@ -4,16 +4,16 @@ import fetch from 'cross-fetch'
 
 export interface LeetcodeStats {
   totalSolved: number
-  easySolved: number
-  mediumSolved: number
-  hardSolved: number
+  totalEasy: number
+  totalMedium: number
+  totalHard: number
 }
 
 export class LeetcodeService implements RemoteService<LeetcodeStats> {
   private state: State = State.NOT_STARTED
   private stats: LeetcodeStats
 
-  private static LEETCODE_URL = 'https://leetcode-stats-api.herokuapp.com/fabasoad'
+  private static LEETCODE_URL = 'https://leetcode-stats.tashif.codes/fabasoad'
 
   public constructor(defaultVal: LeetcodeStats) {
     this.stats = defaultVal
@@ -24,9 +24,9 @@ export class LeetcodeService implements RemoteService<LeetcodeStats> {
       this.state = State.STARTED
       try {
         const resp: Response = await fetch(LeetcodeService.LEETCODE_URL)
-        const { totalSolved, easySolved, mediumSolved, hardSolved } = await resp.json()
+        const { totalSolved, totalEasy, totalMedium, totalHard } = await resp.json()
         this.state = State.FINISHED
-        this.stats = { totalSolved, easySolved, mediumSolved, hardSolved }
+        this.stats = { totalSolved, totalEasy, totalMedium, totalHard }
       } catch (err) {
         this.state = State.FAILED
       }

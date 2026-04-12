@@ -2,14 +2,14 @@ import * as React from 'react'
 import type { StatsLeetcodeProps } from '../StatsLeetcode'
 
 export default function StatsLeetcode({
-  totalSolved = 6, easySolved = 3, mediumSolved = 2, hardSolved = 1
+  totalSolved = 6, totalEasy = 3, totalMedium = 2, totalHard = 1
 }: StatsLeetcodeProps) {
   return (
     <div data-testid="StatsLeetcode">
       <div data-testid="totalSolved">{totalSolved}</div>
-      <div data-testid="easySolved">{easySolved}</div>
-      <div data-testid="mediumSolved">{mediumSolved}</div>
-      <div data-testid="hardSolved">{hardSolved}</div>
+      <div data-testid="totalEasy">{totalEasy}</div>
+      <div data-testid="totalMedium">{totalMedium}</div>
+      <div data-testid="totalHard">{totalHard}</div>
     </div>
   )
 }

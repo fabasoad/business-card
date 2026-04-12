@@ -26,13 +26,13 @@ describe('StatsMain', () => {
       el.querySelector('div[data-testid="totalSolved"]')
     ).toHaveTextContent('6')
     expect(
-      el.querySelector('div[data-testid="easySolved"]')
+      el.querySelector('div[data-testid="totalEasy"]')
     ).toHaveTextContent('3')
     expect(
-      el.querySelector('div[data-testid="mediumSolved"]')
+      el.querySelector('div[data-testid="totalMedium"]')
     ).toHaveTextContent('2')
     expect(
-      el.querySelector('div[data-testid="hardSolved"]')
+      el.querySelector('div[data-testid="totalHard"]')
     ).toHaveTextContent('1')
     el = container.querySelector(selector('StatsStackOverflow'))
     expect(el).toBeInTheDocument()

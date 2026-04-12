@@ -1385,7 +1385,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.24.7, @babel/runtime@npm:^7.26.0, @babel/runtime@npm:^7.28.4, @babel/runtime@npm:^7.28.6, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.3, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.24.7, @babel/runtime@npm:^7.26.0, @babel/runtime@npm:^7.29.2, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.3, @babel/runtime@npm:^7.8.7":
   version: 7.29.2
   resolution: "@babel/runtime@npm:7.29.2"
   checksum: 10c0/30b80a0140d16467792e1bbeb06f655b0dab70407da38dfac7fedae9c859f9ae9d846ef14ad77bd3814c064295fe9b1bc551f1541ea14646ae9f22b71a8bc17a
@@ -4471,7 +4471,7 @@ __metadata:
     express: "npm:~5.2.1"
     express-rate-limit: "npm:~8.3.2"
     humanize-duration: "npm:~3.33.2"
-    i18next: "npm:~25.8.20"
+    i18next: "npm:~26.0.4"
     jest: "npm:~30.3.0"
     jest-environment-jsdom: "npm:~30.3.0"
     nodemon: "npm:~3.1.14"
@@ -4481,7 +4481,7 @@ __metadata:
     react: "npm:~19.2.5"
     react-bootstrap: "npm:~2.10.10"
     react-dom: "npm:~19.2.5"
-    react-i18next: "npm:~16.5.8"
+    react-i18next: "npm:~17.0.2"
     react-iframe: "npm:~1.8.5"
     react-modal: "npm:~3.16.3"
     react-test-renderer: "npm:~19.2.5"
@@ -6091,17 +6091,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:~25.8.20":
-  version: 25.8.20
-  resolution: "i18next@npm:25.8.20"
+"i18next@npm:~26.0.4":
+  version: 26.0.4
+  resolution: "i18next@npm:26.0.4"
   dependencies:
-    "@babel/runtime": "npm:^7.28.6"
+    "@babel/runtime": "npm:^7.29.2"
   peerDependencies:
-    typescript: ^5
+    typescript: ^5 || ^6
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/b22fb1fe0dd10b307cc376b07e7d0a04793b1feabca5e9a4c90547db08e6c7e83e28aa33771ffb4d1ac13173bebdcbc8ed96cbe137bffcca76c56f8f5900521f
+  checksum: 10c0/987046f1eb5670824a25f665ca963633434005e0d93b1da9f7b4cf310771c43d08359a6faa1971c4ee8eff1cdfd36cc833a0d5376f04f75c50d31fc49fbaad91
   languageName: node
   linkType: hard
 
@@ -8265,17 +8265,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:~16.5.8":
-  version: 16.5.8
-  resolution: "react-i18next@npm:16.5.8"
+"react-i18next@npm:~17.0.2":
+  version: 17.0.2
+  resolution: "react-i18next@npm:17.0.2"
   dependencies:
-    "@babel/runtime": "npm:^7.28.4"
+    "@babel/runtime": "npm:^7.29.2"
     html-parse-stringify: "npm:^3.0.1"
     use-sync-external-store: "npm:^1.6.0"
   peerDependencies:
-    i18next: ">= 25.6.2"
+    i18next: ">= 26.0.1"
     react: ">= 16.8.0"
-    typescript: ^5
+    typescript: ^5 || ^6
   peerDependenciesMeta:
     react-dom:
       optional: true
@@ -8283,7 +8283,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/a234ed701e53c47ce4c67f2bc74b5718a4fea2865d6eaae06f850cca35a1ead038e6fd25b2a4b629c96947f3e6bb997f6d81d07cc4584997a0373c62c6aba3eb
+  checksum: 10c0/6bbaeccb919726a7f4fda1e547fa58936f1004e122b99234ac1a65d35077563864af7062c51ab9b8b0190be4cb384cd2ed7aeaa895d2785c1783c39cdae64ecd
   languageName: node
   linkType: hard
 

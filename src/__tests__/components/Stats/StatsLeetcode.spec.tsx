@@ -31,9 +31,9 @@ describe('StatsLeetcode', () => {
     const { container } = render(
       <StatsLeetcode
         totalSolved={randomNumber(1, 100)}
-        easySolved={randomNumber(1, 100)}
-        mediumSolved={randomNumber(1, 100)}
-        hardSolved={randomNumber(1, 100)}
+        totalEasy={randomNumber(1, 100)}
+        totalMedium={randomNumber(1, 100)}
+        totalHard={randomNumber(1, 100)}
       />
     )
     expect(
@@ -51,9 +51,9 @@ describe('StatsLeetcode', () => {
     const { container } = render(
       <StatsLeetcode
         totalSolved={expectedTotalSolved}
-        easySolved={randomNumber(1, 100)}
-        mediumSolved={randomNumber(1, 100)}
-        hardSolved={randomNumber(1, 100)}
+        totalEasy={randomNumber(1, 100)}
+        totalMedium={randomNumber(1, 100)}
+        totalHard={randomNumber(1, 100)}
       />
     )
     expect(

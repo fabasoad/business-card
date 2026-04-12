@@ -14,6 +14,9 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
     outputs:
       deploy-time: "${{ steps.metadata.outputs.deploy-time }}"
     steps:
@@ -70,6 +73,8 @@ jobs:
     name: Trigger Security DAST
     needs: [deploy]
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v6
@@ -92,7 +97,7 @@ jobs:
         working-directory: "${{ github.workspace }}/scripts"
 
       - name: Dispatch workflow
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           github-token: "${{ steps.github-app.outputs.token }}"
           script: |

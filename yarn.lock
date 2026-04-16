@@ -1435,18 +1435,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@biomejs/biome@npm:~2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/biome@npm:2.4.11"
+"@biomejs/biome@npm:~2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/biome@npm:2.4.12"
   dependencies:
-    "@biomejs/cli-darwin-arm64": "npm:2.4.11"
-    "@biomejs/cli-darwin-x64": "npm:2.4.11"
-    "@biomejs/cli-linux-arm64": "npm:2.4.11"
-    "@biomejs/cli-linux-arm64-musl": "npm:2.4.11"
-    "@biomejs/cli-linux-x64": "npm:2.4.11"
-    "@biomejs/cli-linux-x64-musl": "npm:2.4.11"
-    "@biomejs/cli-win32-arm64": "npm:2.4.11"
-    "@biomejs/cli-win32-x64": "npm:2.4.11"
+    "@biomejs/cli-darwin-arm64": "npm:2.4.12"
+    "@biomejs/cli-darwin-x64": "npm:2.4.12"
+    "@biomejs/cli-linux-arm64": "npm:2.4.12"
+    "@biomejs/cli-linux-arm64-musl": "npm:2.4.12"
+    "@biomejs/cli-linux-x64": "npm:2.4.12"
+    "@biomejs/cli-linux-x64-musl": "npm:2.4.12"
+    "@biomejs/cli-win32-arm64": "npm:2.4.12"
+    "@biomejs/cli-win32-x64": "npm:2.4.12"
   dependenciesMeta:
     "@biomejs/cli-darwin-arm64":
       optional: true
@@ -1466,62 +1466,62 @@ __metadata:
       optional: true
   bin:
     biome: bin/biome
-  checksum: 10c0/5e9edd2bd54f87786a6acc681843128e95eea663d0cd61dfe2e7789683a4d1008e4855f405055c1dc4095d723b1b6a290320d240707f199d1814c955d18c6eab
+  checksum: 10c0/8f03b07f33d7e1efee615945cdc907b7fdc9160d70b204a74ce1b65bdf0ca47c7bfe5e2fafd5b832927f0d4bee4ae3182d93e603e3e5ecf5d91734cff888133b
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-arm64@npm:2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/cli-darwin-arm64@npm:2.4.11"
+"@biomejs/cli-darwin-arm64@npm:2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/cli-darwin-arm64@npm:2.4.12"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-darwin-x64@npm:2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/cli-darwin-x64@npm:2.4.11"
+"@biomejs/cli-darwin-x64@npm:2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/cli-darwin-x64@npm:2.4.12"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64-musl@npm:2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.4.11"
+"@biomejs/cli-linux-arm64-musl@npm:2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/cli-linux-arm64-musl@npm:2.4.12"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-arm64@npm:2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/cli-linux-arm64@npm:2.4.11"
+"@biomejs/cli-linux-arm64@npm:2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/cli-linux-arm64@npm:2.4.12"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64-musl@npm:2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/cli-linux-x64-musl@npm:2.4.11"
+"@biomejs/cli-linux-x64-musl@npm:2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/cli-linux-x64-musl@npm:2.4.12"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@biomejs/cli-linux-x64@npm:2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/cli-linux-x64@npm:2.4.11"
+"@biomejs/cli-linux-x64@npm:2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/cli-linux-x64@npm:2.4.12"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-arm64@npm:2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/cli-win32-arm64@npm:2.4.11"
+"@biomejs/cli-win32-arm64@npm:2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/cli-win32-arm64@npm:2.4.12"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@biomejs/cli-win32-x64@npm:2.4.11":
-  version: 2.4.11
-  resolution: "@biomejs/cli-win32-x64@npm:2.4.11"
+"@biomejs/cli-win32-x64@npm:2.4.12":
+  version: 2.4.12
+  resolution: "@biomejs/cli-win32-x64@npm:2.4.12"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -4451,7 +4451,7 @@ __metadata:
     "@babel/preset-env": "npm:~7.29.2"
     "@babel/preset-react": "npm:~7.28.5"
     "@babel/preset-typescript": "npm:~7.28.5"
-    "@biomejs/biome": "npm:~2.4.11"
+    "@biomejs/biome": "npm:~2.4.12"
     "@octokit/rest": "npm:~22.0.1"
     "@popperjs/core": "npm:~2.11.8"
     "@tanstack/react-query": "npm:~5.99.0"
@@ -4471,7 +4471,7 @@ __metadata:
     express: "npm:~5.2.1"
     express-rate-limit: "npm:~8.3.2"
     humanize-duration: "npm:~3.33.2"
-    i18next: "npm:~26.0.4"
+    i18next: "npm:~26.0.5"
     jest: "npm:~30.3.0"
     jest-environment-jsdom: "npm:~30.3.0"
     nodemon: "npm:~3.1.14"
@@ -4481,7 +4481,7 @@ __metadata:
     react: "npm:~19.2.5"
     react-bootstrap: "npm:~2.10.10"
     react-dom: "npm:~19.2.5"
-    react-i18next: "npm:~17.0.2"
+    react-i18next: "npm:~17.0.3"
     react-iframe: "npm:~1.8.5"
     react-modal: "npm:~3.16.3"
     react-test-renderer: "npm:~19.2.5"
@@ -4493,7 +4493,7 @@ __metadata:
     ts-node: "npm:~10.9.2"
     typescript: "npm:~5.9.3"
     use-local-storage: "npm:~3.0.0"
-    webpack: "npm:~5.106.1"
+    webpack: "npm:~5.106.2"
     webpack-cli: "npm:~7.0.2"
     webpack-dev-server: "npm:~5.2.3"
     webpack-merge: "npm:~6.0.1"
@@ -6091,9 +6091,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:~26.0.4":
-  version: 26.0.4
-  resolution: "i18next@npm:26.0.4"
+"i18next@npm:~26.0.5":
+  version: 26.0.5
+  resolution: "i18next@npm:26.0.5"
   dependencies:
     "@babel/runtime": "npm:^7.29.2"
   peerDependencies:
@@ -6101,7 +6101,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/987046f1eb5670824a25f665ca963633434005e0d93b1da9f7b4cf310771c43d08359a6faa1971c4ee8eff1cdfd36cc833a0d5376f04f75c50d31fc49fbaad91
+  checksum: 10c0/4e4f7801c4caff597a2c454c3405f3e151a64bcd22424d5671041eaebeaaa8c964804aa5ea36eb512c616f6334d6e671b02174c7abefebbe31487b0fc3d07244
   languageName: node
   linkType: hard
 
@@ -6988,7 +6988,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"json-parse-even-better-errors@npm:^2.3.0, json-parse-even-better-errors@npm:^2.3.1":
+"json-parse-even-better-errors@npm:^2.3.0":
   version: 2.3.1
   resolution: "json-parse-even-better-errors@npm:2.3.1"
   checksum: 10c0/140932564c8f0b88455432e0f33c4cb4086b8868e37524e07e723f4eaedb9425bdc2bafd71bd1d9765bd15fd1e2d126972bc83990f55c467168c228c24d665f3
@@ -7290,21 +7290,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mime-types@npm:^2.1.27, mime-types@npm:~2.1.24, mime-types@npm:~2.1.34, mime-types@npm:~2.1.35":
-  version: 2.1.35
-  resolution: "mime-types@npm:2.1.35"
-  dependencies:
-    mime-db: "npm:1.52.0"
-  checksum: 10c0/82fb07ec56d8ff1fc999a84f2f217aa46cb6ed1033fefaabd5785b9a974ed225c90dc72fff460259e66b95b73648596dbcc50d51ed69cdf464af2d237d3149b2
-  languageName: node
-  linkType: hard
-
 "mime-types@npm:^3.0.0, mime-types@npm:^3.0.1, mime-types@npm:^3.0.2":
   version: 3.0.2
   resolution: "mime-types@npm:3.0.2"
   dependencies:
     mime-db: "npm:^1.54.0"
   checksum: 10c0/35a0dd1035d14d185664f346efcdb72e93ef7a9b6e9ae808bd1f6358227010267fab52657b37562c80fc888ff76becb2b2938deb5e730818b7983bf8bd359767
+  languageName: node
+  linkType: hard
+
+"mime-types@npm:~2.1.24, mime-types@npm:~2.1.34, mime-types@npm:~2.1.35":
+  version: 2.1.35
+  resolution: "mime-types@npm:2.1.35"
+  dependencies:
+    mime-db: "npm:1.52.0"
+  checksum: 10c0/82fb07ec56d8ff1fc999a84f2f217aa46cb6ed1033fefaabd5785b9a974ed225c90dc72fff460259e66b95b73648596dbcc50d51ed69cdf464af2d237d3149b2
   languageName: node
   linkType: hard
 
@@ -8265,9 +8265,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:~17.0.2":
-  version: 17.0.2
-  resolution: "react-i18next@npm:17.0.2"
+"react-i18next@npm:~17.0.3":
+  version: 17.0.3
+  resolution: "react-i18next@npm:17.0.3"
   dependencies:
     "@babel/runtime": "npm:^7.29.2"
     html-parse-stringify: "npm:^3.0.1"
@@ -8283,7 +8283,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 10c0/6bbaeccb919726a7f4fda1e547fa58936f1004e122b99234ac1a65d35077563864af7062c51ab9b8b0190be4cb384cd2ed7aeaa895d2785c1783c39cdae64ecd
+  checksum: 10c0/e625f4d89148e2e345d0348d1b910c7e056da45676ca226a829029cf9867258fc4c0a77b1111305308db041d996f1bca031b744991857124865f3b903fb2e254
   languageName: node
   linkType: hard
 
@@ -10016,9 +10016,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:~5.106.1":
-  version: 5.106.1
-  resolution: "webpack@npm:5.106.1"
+"webpack@npm:~5.106.2":
+  version: 5.106.2
+  resolution: "webpack@npm:5.106.2"
   dependencies:
     "@types/eslint-scope": "npm:^3.7.7"
     "@types/estree": "npm:^1.0.8"
@@ -10036,9 +10036,8 @@ __metadata:
     events: "npm:^3.2.0"
     glob-to-regexp: "npm:^0.4.1"
     graceful-fs: "npm:^4.2.11"
-    json-parse-even-better-errors: "npm:^2.3.1"
     loader-runner: "npm:^4.3.1"
-    mime-types: "npm:^2.1.27"
+    mime-db: "npm:^1.54.0"
     neo-async: "npm:^2.6.2"
     schema-utils: "npm:^4.3.3"
     tapable: "npm:^2.3.0"
@@ -10050,7 +10049,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 10c0/eb56ba99564e185c83fb8d898253c0e6b91fcfcab54e3716bc6bc4df2636511686edb79073313ad9394b757c912b9489e28c7a5bd33d4d386d3103ba9608ca47
+  checksum: 10c0/933293ae94b7f3405147aebd824d978696693a7fbd85cfbf4d05b517329c93f69e634400ad70a27f4ba4148e14e2fd502e335cd8d30d75282091ab3c72a1ac01
   languageName: node
   linkType: hard
 

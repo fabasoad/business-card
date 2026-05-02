@@ -23,23 +23,11 @@ jobs:
       - name: Checkout ${{ github.repository }}
         uses: actions/checkout@v6
 
-      - name: Cache yarn dependencies
-        id: yarn-cache
-        uses: actions/cache@v5
-        with:
-          path: |
-            .yarn/cache
-            node_modules
-          key: "${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/.yarnrc.yml') }}"
-          restore-keys: |
-            ${{ runner.os }}-yarn-
-
       - name: Compile
-        if: ${{ steps.yarn-cache.outputs.cache-hit != 'true' }}
-        run: yarn install
+        run: make install
 
       - name: Build
-        uses: pyTooling/Actions/with-post-step@v7.7.0
+        uses: pyTooling/Actions/with-post-step@v7.10.1
         with:
           key: "build-business-card"
           main: |
@@ -47,7 +35,7 @@ jobs:
               echo "REACT_APP_PUBLIC_POSTHOG_KEY=${{ secrets.REACT_APP_PUBLIC_POSTHOG_KEY }}"
               echo "REACT_APP_PUBLIC_POSTHOG_HOST=${{ secrets.REACT_APP_PUBLIC_POSTHOG_HOST }}"
             } > .env
-            yarn run build:prod
+            make build
           post: rm -f .env
 
       - name: Prepare metadata

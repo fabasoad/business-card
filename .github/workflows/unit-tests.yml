@@ -16,8 +16,8 @@ on: # yamllint disable-line rule:truthy
   workflow_dispatch: {}
 
 jobs:
-  jest:
-    name: Jest
+  vitest:
+    name: Vitest
     uses: fabasoad/reusable-workflows/.github/workflows/wf-js-unit-tests.yml@main
     permissions:
       contents: read

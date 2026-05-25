@@ -1,7 +1,7 @@
-import * as gb from '../../assets/i18n/gb.json'
+import gb from '../../assets/i18n/gb.json'
 import * as i18n from 'i18next'
-import * as jp from '../../assets/i18n/jp.json'
-import * as ua from '../../assets/i18n/ua.json'
+import jp from '../../assets/i18n/jp.json'
+import ua from '../../assets/i18n/ua.json'
 import I18nLanguageDetector from './I18nLanguageDetector'
 import i18nLanguageCodeTranslator, {
   I18nLanguageCodeFormat,

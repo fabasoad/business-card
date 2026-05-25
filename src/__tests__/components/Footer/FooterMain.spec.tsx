@@ -14,7 +14,7 @@ describe('FooterMain', () => {
     const { container } = render(<FooterMain />)
     const div = container.querySelector<HTMLDivElement>(
       'div#contacts.footer.text-center'
-    )
+    )!
     expect(div.children).toHaveLength(4)
     expect(
       div.querySelector('div[data-testid="SectionTitle"]')

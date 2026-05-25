@@ -1,3 +1,4 @@
+import type { MockInstance } from 'vitest'
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import * as ThemeContext from '../../../components/Contexts/ThemeContext'
@@ -6,7 +7,7 @@ import { randomString } from '../../../scripts/utils/StringUtils'
 import { render } from '@testing-library/react'
 
 describe('ThemeImage', () => {
-  let useThemeContextSpy: vi.SpyInstance
+  let useThemeContextSpy: MockInstance
 
   beforeAll(() => {
     useThemeContextSpy = vi.spyOn(ThemeContext, 'useThemeContext')
@@ -18,9 +19,9 @@ describe('ThemeImage', () => {
 
   test.each([
     ['dark', 'testImgDark', 'testImgLight', 'testImgDark'],
-    ['dark', null, 'testImgLight', 'testImgLight'],
+    ['dark', undefined, 'testImgLight', 'testImgLight'],
     ['light', 'testImgDark', 'testImgLight', 'testImgLight'],
-    ['light', null, 'testImgLight', 'testImgLight'],
+    ['light', undefined, 'testImgLight', 'testImgLight'],
   ])('should render ThemeImage correctly when theme is %s and imgDark is %s', (
     theme: string, imgDark: string | undefined, imgLight: string, expectedSrc: string
   ) => {

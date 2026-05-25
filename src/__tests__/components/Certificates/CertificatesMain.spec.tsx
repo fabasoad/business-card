@@ -13,7 +13,7 @@ describe('CertificatesMain', () => {
     const { container } = render(<CertificatesMain />)
     const div = container.querySelector(
       'div[data-testid^="Section-"] > div.row.row-cols-2.row-cols-sm-3.row-cols-md-4.row-cols-lg-6'
-    )
+    )!
     expect(div).toBeInTheDocument()
     for (const { id } of certificatesStorage.certificates) {
       expect(

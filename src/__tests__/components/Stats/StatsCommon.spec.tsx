@@ -17,7 +17,7 @@ describe('StatsCommon', () => {
       <StatsCommon techName={techName} url={url}>{content}</StatsCommon>
     )
     testStatsCommon(
-      container.querySelector('div.row.justify-content-center'), url, content, techName
+      container.querySelector('div.row.justify-content-center')!, url, content, techName
     )
   })
 })

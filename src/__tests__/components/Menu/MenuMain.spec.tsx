@@ -10,15 +10,15 @@ vi.mock('../../../components/Menu/ThemeDropDown')
 describe('MenuMain', () => {
   test('should render MenuMain correctly', () => {
     const { container } = render(<MenuMain />)
-    const div = container.querySelector('div#nav.affix-top')
-    const nav = div.querySelector('nav.navbar.navbar-custom')
+    const div = container.querySelector('div#nav.affix-top')!
+    const nav = div.querySelector('nav.navbar.navbar-custom')!
     expect(
       nav.querySelector('a.navbar-brand[href="#header"]')
     ).toHaveTextContent('author.full-name')
     expect(
       nav.querySelector('button.navbar-dark.collapsed[aria-controls="basic-navbar-nav"]')
     ).toBeInTheDocument()
-    const navbarCollapse = nav.querySelector('div#basic-navbar-nav.navbar-collapse')
+    const navbarCollapse = nav.querySelector('div#basic-navbar-nav.navbar-collapse')!
     expect(navbarCollapse).toBeInTheDocument()
 
     const expected = [

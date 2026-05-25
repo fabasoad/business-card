@@ -1,3 +1,4 @@
+import type { MockInstance } from 'vitest'
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import { render } from '@testing-library/react'
@@ -6,7 +7,7 @@ import * as ThemeContext from '../../../components/Contexts/ThemeContext'
 import FooterInfo from '../../../components/Footer/FooterInfo'
 
 describe('FooterInfo', () => {
-  let useThemeContextSpy: vi.SpyInstance
+  let useThemeContextSpy: MockInstance
 
   beforeAll(() => {
     useThemeContextSpy = vi.spyOn(ThemeContext, 'useThemeContext')
@@ -19,7 +20,7 @@ describe('FooterInfo', () => {
   )('should render FooterInfo correctly when theme is %s', (theme: string) => {
     useThemeContextSpy.mockImplementation(() => ({ theme }))
     const { container } = render(<FooterInfo />)
-    const div = container.querySelector('div.d-flex.justify-content-center > ul.icon-list')
+    const div = container.querySelector('div.d-flex.justify-content-center > ul.icon-list')!
     expect(div.children).toHaveLength(3)
     const madeByColor = theme === 'dark' ? 'a7d9c1' : '2c3e50'
     expect(

@@ -27,7 +27,7 @@ describe('BackToTopButton', () => {
     )
 
     fireEvent(
-      container.querySelector('a'),
+      container.querySelector('a')!,
       new MouseEvent('click', {
         bubbles: true,
         cancelable: true

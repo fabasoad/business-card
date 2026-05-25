@@ -1,3 +1,4 @@
+import type { MockInstance } from 'vitest'
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import App from '../../components/App'
@@ -20,7 +21,7 @@ vi.mock('../../components/Stats/StatsMain')
 vi.mock('../../scripts/services/LeetcodeService')
 
 describe('App', () => {
-  let initThemeSpy: vi.SpyInstance
+  let initThemeSpy: MockInstance
 
   beforeAll(() => {
     initThemeSpy = vi.spyOn(ThemeContext, 'initTheme')
@@ -38,7 +39,7 @@ describe('App', () => {
 
     const { container } = render(<App />)
 
-    const div = container.querySelector('div.font-regular')
+    const div = container.querySelector('div.font-regular')!
     testBlock(div, 'BackToTopButton')
     testBlock(div, 'Header')
     testBlock(div, 'MenuMain')

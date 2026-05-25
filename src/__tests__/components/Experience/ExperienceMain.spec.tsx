@@ -12,12 +12,12 @@ describe('ExperienceMain', () => {
     const { container } = render(<ExperienceMain />)
     const ul = container.querySelector(
       'div[data-testid="Section-experience"] > div.row > ul.timeline'
-    )
+    )!
     expect(ul.children.length).toBe(4)
     for (const { id, title, locationI18nKey, techStack, from, to } of experienceStorage.items) {
       const div = ul.querySelector<HTMLElement>(
         `li > div[data-testid="ExperienceItem-${id}-${locationI18nKey}-${from.toDateString()}-${to === undefined ? 'Present' : to.toDateString()}-test-file-stub"]`
-      )
+      )!
       expect(div).toBeInTheDocument()
       expect(
         div.querySelector<HTMLElement>('div[data-testid="title"]')

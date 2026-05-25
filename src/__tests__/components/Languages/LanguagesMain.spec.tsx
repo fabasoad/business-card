@@ -13,9 +13,9 @@ describe('LanguagesMain', () => {
     const { container } = render(<LanguagesMain />)
     const div = container.querySelector<HTMLDivElement>(
       'div[data-testid="Section-languages"] > div.row > div.language-list.col.text-center'
-    )
+    )!
     expect(div.children).toHaveLength(3)
-    const divJP = div.querySelector('div[data-testid="jp"]')
+    const divJP = div.querySelector('div[data-testid="jp"]')!
     expect(divJP.querySelector('div[data-testid="text"]')).toHaveTextContent('JLPT N4')
     expect(divJP.querySelector('div[data-testid="url"]')).toHaveTextContent(
       'https://drive.google.com/file/d/1QHRRPXiYuOKMmNPeqRf6GQQtyGdBkhQ5/view?usp=sharing'

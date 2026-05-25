@@ -1,7 +1,8 @@
+import type { MockInstance } from 'vitest'
 import producer from '../../scripts/DevMessageProducer'
 
 describe('DevMessageProducer', () => {
-  let consoleLogSpy: vi.SpyInstance
+  let consoleLogSpy: MockInstance
 
   beforeAll(() => {
     vi.useFakeTimers()

@@ -1,3 +1,4 @@
+import type { MockInstance } from 'vitest'
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import { render } from '@testing-library/react'
@@ -28,7 +29,7 @@ class TestService implements RemoteService<StackExchangeData> {
 }
 
 describe('StatsStackExchange', () => {
-  let useFetchStatsSpy: vi.SpyInstance
+  let useFetchStatsSpy: MockInstance
 
   beforeEach(() => {
     useFetchStatsSpy = vi.spyOn(StatsHooks, 'useFetchStats')

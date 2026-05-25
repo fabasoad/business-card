@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as imgOSAR from '../../assets/images/education/osar.png'
+import imgOSAR from '../../assets/images/education/osar.png'
 import Section from '../Controls/Section'
 import EducationItem from './EducationItem'
 import { Row } from 'react-bootstrap'

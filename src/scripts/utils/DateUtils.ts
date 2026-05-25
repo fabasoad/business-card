@@ -1,4 +1,4 @@
-import * as humanizeDuration from 'humanize-duration'
+import humanizeDuration from 'humanize-duration'
 import DigitConverter from '../DigitConverter'
 import { getI18n } from 'react-i18next'
 import i18nLanguageCodeTranslator, {

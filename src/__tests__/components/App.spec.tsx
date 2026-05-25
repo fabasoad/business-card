@@ -4,26 +4,26 @@ import App from '../../components/App'
 import { render } from '@testing-library/react'
 import * as ThemeContext from '../../components/Contexts/ThemeContext'
 
-jest.mock('../../components/About/AboutMain')
-jest.mock('../../components/BackToTopButton')
-jest.mock('../../components/Badges')
-jest.mock('../../components/Certificates/CertificatesMain')
-jest.mock('../../components/Experience/ExperienceMain')
-jest.mock('../../components/Education/EducationMain')
-jest.mock('../../components/Footer/FooterMain')
-jest.mock('../../components/Header')
-jest.mock('../../components/Languages/LanguagesMain')
-jest.mock('../../components/Menu/MenuMain')
-jest.mock('../../components/Resume')
-jest.mock('../../components/Skills')
-jest.mock('../../components/Stats/StatsMain')
-jest.mock('../../scripts/services/LeetcodeService')
+vi.mock('../../components/About/AboutMain')
+vi.mock('../../components/BackToTopButton')
+vi.mock('../../components/Badges')
+vi.mock('../../components/Certificates/CertificatesMain')
+vi.mock('../../components/Experience/ExperienceMain')
+vi.mock('../../components/Education/EducationMain')
+vi.mock('../../components/Footer/FooterMain')
+vi.mock('../../components/Header')
+vi.mock('../../components/Languages/LanguagesMain')
+vi.mock('../../components/Menu/MenuMain')
+vi.mock('../../components/Resume')
+vi.mock('../../components/Skills')
+vi.mock('../../components/Stats/StatsMain')
+vi.mock('../../scripts/services/LeetcodeService')
 
 describe('App', () => {
-  let initThemeSpy: jest.SpyInstance
+  let initThemeSpy: vi.SpyInstance
 
   beforeAll(() => {
-    initThemeSpy = jest.spyOn(ThemeContext, 'initTheme')
+    initThemeSpy = vi.spyOn(ThemeContext, 'initTheme')
   })
 
   afterEach(() => initThemeSpy.mockRestore())

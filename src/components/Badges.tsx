@@ -1,6 +1,6 @@
 import * as React from 'react'
-import * as imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
-import * as imgSupportUkraine from '../assets/images/badges/support-ukraine.png'
+import imgDigitalOceanBadge from '../assets/images/badges/digital-ocean-forest-2021.png'
+import imgSupportUkraine from '../assets/images/badges/support-ukraine.png'
 import Section from './Controls/Section'
 import { Col, Row } from 'react-bootstrap'
 

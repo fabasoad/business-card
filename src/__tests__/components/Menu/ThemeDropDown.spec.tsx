@@ -5,10 +5,10 @@ import { render } from '@testing-library/react'
 import * as ThemeContext from '../../../components/Contexts/ThemeContext'
 
 describe('ThemeDropDown', () => {
-  let useThemeContextSpy: jest.SpyInstance
+  let useThemeContextSpy: vi.SpyInstance
 
   beforeEach(() => {
-    useThemeContextSpy = jest.spyOn(ThemeContext, 'useThemeContext')
+    useThemeContextSpy = vi.spyOn(ThemeContext, 'useThemeContext')
   })
 
   afterEach(() => {

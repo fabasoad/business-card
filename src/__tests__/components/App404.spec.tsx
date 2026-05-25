@@ -7,7 +7,7 @@ import type { Locale } from '../../scripts/i18n/types'
 import { render } from '@testing-library/react'
 
 describe('App404', () => {
-  beforeEach(() => jest.useFakeTimers())
+  beforeEach(() => vi.useFakeTimers())
 
   test.each(
     SupportedLocales._items
@@ -43,5 +43,5 @@ describe('App404', () => {
     // TODO: Implement this test
   })
 
-  afterEach(() => jest.clearAllTimers())
+  afterEach(() => vi.clearAllTimers())
 })

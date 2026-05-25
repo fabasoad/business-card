@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 
 import Resume from '../../components/Resume'
 
-jest.mock('../../components/Controls/Section')
+vi.mock('../../components/Controls/Section')
 
 describe('Resume', () => {
   test('should render Resume correctly', () => {

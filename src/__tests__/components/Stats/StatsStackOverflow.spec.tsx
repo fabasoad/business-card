@@ -4,7 +4,7 @@ import StatsStackOverflow from '../../../components/Stats/StatsStackOverflow'
 import { render } from '@testing-library/react'
 import { randomNumber } from '../../TestUtils'
 
-jest.mock('../../../components/Stats/StatsStackExchange')
+vi.mock('../../../components/Stats/StatsStackExchange')
 
 describe('StatsStackOverflow', () => {
   test('should render StatsStackOverflow correctly', async () => {

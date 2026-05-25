@@ -4,7 +4,7 @@ import Section from '../../../components/Controls/Section'
 import { randomString } from '../../../scripts/utils/StringUtils'
 import { render } from '@testing-library/react'
 
-jest.mock('../../../components/Controls/SectionTitle')
+vi.mock('../../../components/Controls/SectionTitle')
 
 describe('Section', () => {
   test('should render Section correctly', () => {

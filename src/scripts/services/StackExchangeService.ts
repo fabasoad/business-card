@@ -1,5 +1,4 @@
 import type RemoteService from './RemoteService'
-import fetch from 'cross-fetch'
 
 type StackOverflowResponse = {
   items: { answer_count: number, reputation: number, site_name: string }[]

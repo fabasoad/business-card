@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 
 import Badges from '../../components/Badges'
 
-jest.mock('../../components/Controls/Section')
+vi.mock('../../components/Controls/Section')
 
 describe('Badges', () => {
   test('should render Badges correctly', () => {
@@ -12,10 +12,10 @@ describe('Badges', () => {
     const div = container.querySelector('div[data-testid^="Section-"] > div.row')
     expect(div.children).toHaveLength(2)
     expect(
-      div.querySelector('div.col-sm.col-md.col-lg.text-center > a[href="https://standforukraine.com"][rel="noopener noreferrer"][target="_blank"] > img.mb-4.mx-4[src="[object Object]"][alt="Support Ukraine"][title="Stand With Ukraine"][loading="lazy"]')
+      div.querySelector('div.col-sm.col-md.col-lg.text-center > a[href="https://standforukraine.com"][rel="noopener noreferrer"][target="_blank"] > img.mb-4.mx-4[src="test-file-stub"][alt="Support Ukraine"][title="Stand With Ukraine"][loading="lazy"]')
     ).toBeInTheDocument()
     expect(
-      div.querySelector('div.col-sm.col-md.col-lg.text-center > a[href="https://tree-nation.com/profile/digitalocean"][rel="noopener noreferrer"][target="_blank"] > img.rounded-circle.mb-4.mx-4[src="[object Object]"][alt="Digital Ocean Forest Badge"][title="DigitalOcean Forest 2021"]')
+      div.querySelector('div.col-sm.col-md.col-lg.text-center > a[href="https://tree-nation.com/profile/digitalocean"][rel="noopener noreferrer"][target="_blank"] > img.rounded-circle.mb-4.mx-4[src="test-file-stub"][alt="Digital Ocean Forest Badge"][title="DigitalOcean Forest 2021"]')
     ).toBeInTheDocument()
   })
 })

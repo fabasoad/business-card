@@ -6,7 +6,7 @@ on: # yamllint disable-line rule:truthy
     paths:
       - .github/workflows/unit-tests.yml
       - .tool-versions
-      - jest.config.json
+      - vitest.config.ts
       - package.json
       - src/**
       - tsconfig.json

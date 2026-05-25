@@ -7,7 +7,7 @@ import AboutMain, {
 import { render } from '@testing-library/react'
 import { randomString } from '../../../scripts/utils/StringUtils'
 
-jest.mock('../../../components/Controls/Section')
+vi.mock('../../../components/Controls/Section')
 
 describe('AboutMain', () => {
   test('should render AboutMain correctly', () => {
@@ -18,7 +18,7 @@ describe('AboutMain', () => {
     expect(div).toBeInTheDocument()
     expect(
       div.querySelector(
-        'div.about-photo.col-md.d-flex.justify-content-center > img.about-photo--portrait.rounded-circle.img-thumbnail[src="[object Object]"][alt="About me"][loading="lazy"]'
+        'div.about-photo.col-md.d-flex.justify-content-center > img.about-photo--portrait.rounded-circle.img-thumbnail[src="test-file-stub"][alt="About me"][loading="lazy"]'
       )
     ).toBeInTheDocument()
     expect(

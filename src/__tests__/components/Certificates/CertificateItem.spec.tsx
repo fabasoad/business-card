@@ -22,7 +22,7 @@ describe('CertificateItem', () => {
     expect(a).toHaveAttribute('rel', 'noopener noreferrer')
     expect(a).toHaveAttribute('href', certificate.url)
     const img = a.querySelector('.card-img')
-    expect(img).toHaveAttribute('src', '[object Object]')
+    expect(img).toHaveAttribute('src', 'test-file-stub')
 
     const cardTitle = div.querySelector('.card-title.h5')
     expect(cardTitle).toBeInTheDocument()

@@ -4,8 +4,8 @@ import { render } from '@testing-library/react'
 
 import FooterContacts from '../../../components/Footer/FooterContacts'
 
-jest.mock('../../../components/Footer/FooterEmail')
-jest.mock('../../../components/Footer/FooterLocation')
+vi.mock('../../../components/Footer/FooterEmail')
+vi.mock('../../../components/Footer/FooterLocation')
 
 describe('FooterContacts', () => {
   test('should render FooterContacts correctly', () => {

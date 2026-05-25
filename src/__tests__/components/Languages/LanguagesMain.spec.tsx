@@ -4,9 +4,9 @@ import { render } from '@testing-library/react'
 
 import LanguagesMain from '../../../components/Languages/LanguagesMain'
 
-jest.mock('../../../components/Controls/Section')
-jest.mock('../../../components/Languages/LanguageLinkItem')
-jest.mock('../../../components/Languages/LanguageTextItem')
+vi.mock('../../../components/Controls/Section')
+vi.mock('../../../components/Languages/LanguageLinkItem')
+vi.mock('../../../components/Languages/LanguageTextItem')
 
 describe('LanguagesMain', () => {
   test('should render LanguageMain correctly', () => {

@@ -6,10 +6,10 @@ import { randomString } from '../../../scripts/utils/StringUtils'
 import { render } from '@testing-library/react'
 
 describe('ThemeImage', () => {
-  let useThemeContextSpy: jest.SpyInstance
+  let useThemeContextSpy: vi.SpyInstance
 
   beforeAll(() => {
-    useThemeContextSpy = jest.spyOn(ThemeContext, 'useThemeContext')
+    useThemeContextSpy = vi.spyOn(ThemeContext, 'useThemeContext')
   })
 
   afterEach(() => {

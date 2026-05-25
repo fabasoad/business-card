@@ -6,7 +6,7 @@ import StatsCommon from '../../../components/Stats/StatsCommon'
 import { randomString } from '../../../scripts/utils/StringUtils'
 import { testStatsCommon } from './TestUtils'
 
-jest.mock('../../../components/Controls/ThemeImage')
+vi.mock('../../../components/Controls/ThemeImage')
 
 describe('StatsCommon', () => {
   test('should render StatsCommon correctly', () => {

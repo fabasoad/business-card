@@ -8,15 +8,15 @@ import StatsGitHub from '../../../components/Stats/StatsGitHub'
 import type { GitHubService } from '../../../scripts/services/GitHubService'
 import { randomNumber } from '../../TestUtils'
 
-jest.mock('../../../components/LoadingSpinner')
-jest.mock('../../../components/Stats/StatsCommon')
-jest.mock('../../../scripts/services/GitHubService')
+vi.mock('../../../components/LoadingSpinner')
+vi.mock('../../../components/Stats/StatsCommon')
+vi.mock('../../../scripts/services/GitHubService')
 
 describe('StatsGitHub', () => {
-  let useFetchStatsSpy: jest.SpyInstance
+  let useFetchStatsSpy: vi.SpyInstance
 
   beforeEach(() => {
-    useFetchStatsSpy = jest.spyOn(StatsHooks, 'useFetchStats')
+    useFetchStatsSpy = vi.spyOn(StatsHooks, 'useFetchStats')
   })
 
   afterEach(() => {

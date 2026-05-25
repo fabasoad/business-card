@@ -4,7 +4,7 @@ import { render } from '@testing-library/react'
 
 import FooterSocial from '../../../components/Footer/FooterSocial'
 
-jest.mock('../../../components/Controls/SocialIcon')
+vi.mock('../../../components/Controls/SocialIcon')
 
 describe('FooterSocial', () => {
   const fixture = new Map<string, string>([

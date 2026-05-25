@@ -4,11 +4,11 @@ import { render } from '@testing-library/react'
 
 import StatsMain from '../../../components/Stats/StatsMain'
 
-jest.mock('../../../components/Controls/Section')
-jest.mock('../../../components/Stats/StatsGitHub')
-jest.mock('../../../components/Stats/StatsLeetcode')
-jest.mock('../../../components/Stats/StatsStackOverflow')
-jest.mock('../../../components/Stats/StatsSuperUser')
+vi.mock('../../../components/Controls/Section')
+vi.mock('../../../components/Stats/StatsGitHub')
+vi.mock('../../../components/Stats/StatsLeetcode')
+vi.mock('../../../components/Stats/StatsStackOverflow')
+vi.mock('../../../components/Stats/StatsSuperUser')
 
 describe('StatsMain', () => {
   test('should render StatsMain correctly', () => {

@@ -5,8 +5,8 @@ import certificatesStorage
   from '../../../scripts/certificates/CertificatesStorage'
 import { render } from '@testing-library/react'
 
-jest.mock('../../../components/Controls/Section')
-jest.mock('../../../components/Certificates/CertificateItem')
+vi.mock('../../../components/Controls/Section')
+vi.mock('../../../components/Certificates/CertificateItem')
 
 describe('CertificatesMain', () => {
   test('should render CertificatesMain correctly', () => {

@@ -1,6 +1,5 @@
 import State from '../../components/Stats/State'
 import type RemoteService from './RemoteService'
-import fetch from 'cross-fetch'
 
 export interface LeetcodeStats {
   totalSolved: number

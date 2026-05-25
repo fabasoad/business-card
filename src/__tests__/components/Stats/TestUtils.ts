@@ -6,5 +6,5 @@ export function testStatsCommon(
   expect(div).toHaveTextContent(content)
   expect(
     div.querySelector(`a[href="${url}"][target="_blank"][rel="noreferrer"] > div[data-testid="ThemeImage-${name}"]`)
-  ).toHaveTextContent(`undefined-${['aws', 'gitHub', 'leetcode'].includes(name) ? '[object Object]' : 'undefined'}-[object Object]-${title}`)
+  ).toHaveTextContent(`undefined-${['aws', 'gitHub', 'leetcode'].includes(name) ? 'test-file-stub' : 'undefined'}-test-file-stub-${title}`)
 }

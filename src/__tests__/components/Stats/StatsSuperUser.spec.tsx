@@ -4,7 +4,7 @@ import StatsSuperUser from '../../../components/Stats/StatsSuperUser'
 import { render } from '@testing-library/react'
 import { randomNumber } from '../../TestUtils'
 
-jest.mock('../../../components/Stats/StatsStackExchange')
+vi.mock('../../../components/Stats/StatsStackExchange')
 
 describe('StatsSuperUser', () => {
   test('should render StatsSuperUser correctly', async () => {

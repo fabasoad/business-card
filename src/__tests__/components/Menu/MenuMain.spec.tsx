@@ -3,9 +3,9 @@ import * as React from 'react'
 import MenuMain from '../../../components/Menu/MenuMain'
 import { render } from '@testing-library/react'
 
-jest.mock('../../../components/Menu/MenuItem')
-jest.mock('../../../components/Menu/LocaleDropDown')
-jest.mock('../../../components/Menu/ThemeDropDown')
+vi.mock('../../../components/Menu/MenuItem')
+vi.mock('../../../components/Menu/LocaleDropDown')
+vi.mock('../../../components/Menu/ThemeDropDown')
 
 describe('MenuMain', () => {
   test('should render MenuMain correctly', () => {

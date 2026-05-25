@@ -6,10 +6,10 @@ import * as ThemeContext from '../../../components/Contexts/ThemeContext'
 import FooterInfo from '../../../components/Footer/FooterInfo'
 
 describe('FooterInfo', () => {
-  let useThemeContextSpy: jest.SpyInstance
+  let useThemeContextSpy: vi.SpyInstance
 
   beforeAll(() => {
-    useThemeContextSpy = jest.spyOn(ThemeContext, 'useThemeContext')
+    useThemeContextSpy = vi.spyOn(ThemeContext, 'useThemeContext')
   })
 
   afterEach(() => useThemeContextSpy.mockRestore())

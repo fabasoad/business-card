@@ -19,7 +19,7 @@ describe('MenuItem', () => {
 
   test('should set active MenuItem correctly', () => {
     const name: string = randomString(10)
-    const setActiveNavLinkMock = jest.fn((actual: string): void => {
+    const setActiveNavLinkMock = vi.fn((actual: string): void => {
       expect(actual).toEqual(`#${name}`)
     })
     const { container } = render(

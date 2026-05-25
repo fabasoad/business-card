@@ -1,11 +1,11 @@
 import producer from '../../scripts/DevMessageProducer'
 
 describe('DevMessageProducer', () => {
-  let consoleLogSpy: jest.SpyInstance
+  let consoleLogSpy: vi.SpyInstance
 
   beforeAll(() => {
-    jest.useFakeTimers()
-    consoleLogSpy = jest.spyOn(global.console, 'log').mockImplementation()
+    vi.useFakeTimers()
+    consoleLogSpy = vi.spyOn(global.console, 'log').mockImplementation()
   })
 
   test('should build default messages correctly', () => {

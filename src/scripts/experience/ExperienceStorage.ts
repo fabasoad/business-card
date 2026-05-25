@@ -1,9 +1,9 @@
-import * as items from './items.json'
+import items from './items.json'
 import type { Experience, ExperienceBase } from './types'
-import * as imgArka from '../../assets/images/companies/arka-fss.png'
-import * as imgLohika from '../../assets/images/companies/lohika.png'
-import * as imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'
-import * as imgWbyT from '../../assets/images/companies/wbyt.png'
+import imgArka from '../../assets/images/companies/arka-fss.png'
+import imgLohika from '../../assets/images/companies/lohika.png'
+import imgBitcoinCom from '../../assets/images/companies/bitcoin-com.png'
+import imgWbyT from '../../assets/images/companies/wbyt.png'
 
 type ExperienceJSON = ExperienceBase & {
   fromYear: number,

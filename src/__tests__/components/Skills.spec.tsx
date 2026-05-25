@@ -5,11 +5,11 @@ import '@testing-library/jest-dom'
 import Skills from '../../components/Skills'
 import type { Technology } from '../../scripts/technologies/types'
 
-jest.mock('../../components/LoadingSpinner')
-jest.mock('../../components/Controls/Section')
-jest.mock('../../components/Controls/ThemeImage')
-const useQueryMock = jest.fn()
-jest.mock('@tanstack/react-query', () => ({
+vi.mock('../../components/LoadingSpinner')
+vi.mock('../../components/Controls/Section')
+vi.mock('../../components/Controls/ThemeImage')
+const useQueryMock = vi.fn()
+vi.mock('@tanstack/react-query', () => ({
   useQuery: (...args: any[]) => useQueryMock(args)
 }))
 

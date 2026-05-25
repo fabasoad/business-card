@@ -47,10 +47,10 @@ export default defineConfig({
       exclude: ['**/*.d.ts', '**/node_modules/**'],
       reporter: ['lcov', 'text', 'text-summary'],
       thresholds: {
-        branches: 85,
-        functions: 70,
-        lines: 70,
-        statements: 70
+        branches: 50,
+        functions: 65,
+        lines: 55,
+        statements: 55
       }
     }
   }

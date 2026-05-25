@@ -15,10 +15,11 @@
 coverage
 dist/
 
-# Static assets kept in public/ (favicon, meta image)
+# Static assets kept in public/ (favicon, meta image, fonts)
 public/*
 !public/favicon.png
 !public/meta.png
+!public/fonts
 
 node_modules
 .pnp.*

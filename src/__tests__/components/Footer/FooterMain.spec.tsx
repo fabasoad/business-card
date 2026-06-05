@@ -4,17 +4,17 @@ import { render } from '@testing-library/react'
 
 import FooterMain from '../../../components/Footer/FooterMain'
 
-jest.mock('../../../components/Controls/SectionTitle')
-jest.mock('../../../components/Footer/FooterContacts')
-jest.mock('../../../components/Footer/FooterSocial')
-jest.mock('../../../components/Footer/FooterInfo')
+vi.mock('../../../components/Controls/SectionTitle')
+vi.mock('../../../components/Footer/FooterContacts')
+vi.mock('../../../components/Footer/FooterSocial')
+vi.mock('../../../components/Footer/FooterInfo')
 
 describe('FooterMain', () => {
   test('should render FooterMain correctly', () => {
     const { container } = render(<FooterMain />)
     const div = container.querySelector<HTMLDivElement>(
       'div#contacts.footer.text-center'
-    )
+    )!
     expect(div.children).toHaveLength(4)
     expect(
       div.querySelector('div[data-testid="SectionTitle"]')

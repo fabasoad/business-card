@@ -1,3 +1,4 @@
+import type { MockInstance } from 'vitest'
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import { render } from '@testing-library/react'
@@ -8,15 +9,15 @@ import StatsGitHub from '../../../components/Stats/StatsGitHub'
 import type { GitHubService } from '../../../scripts/services/GitHubService'
 import { randomNumber } from '../../TestUtils'
 
-jest.mock('../../../components/LoadingSpinner')
-jest.mock('../../../components/Stats/StatsCommon')
-jest.mock('../../../scripts/services/GitHubService')
+vi.mock('../../../components/LoadingSpinner')
+vi.mock('../../../components/Stats/StatsCommon')
+vi.mock('../../../scripts/services/GitHubService')
 
 describe('StatsGitHub', () => {
-  let useFetchStatsSpy: jest.SpyInstance
+  let useFetchStatsSpy: MockInstance
 
   beforeEach(() => {
-    useFetchStatsSpy = jest.spyOn(StatsHooks, 'useFetchStats')
+    useFetchStatsSpy = vi.spyOn(StatsHooks, 'useFetchStats')
   })
 
   afterEach(() => {
@@ -36,8 +37,8 @@ describe('StatsGitHub', () => {
   test('should render StatsGitHub correctly when loaded', () => {
     const expectedStarsAmount: number = randomNumber(1, 100)
     useFetchStatsSpy.mockImplementation(
-      (factory: ServiceFactory<GitHubService, number>) => (
-        { data: factory()['actual'], isLoading: false }
+      (_factory: ServiceFactory<GitHubService, number>) => (
+        { data: expectedStarsAmount, isLoading: false }
       )
     )
     const { container } = render(

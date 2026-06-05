@@ -9,7 +9,7 @@ describe('ErrorBlock', () => {
     const title = randomString(10)
     const body = randomString(10)
     const { container } = render(<ErrorBlock title={title}>{body}</ErrorBlock>)
-    const div = container.querySelector('div.error > div.container')
+    const div = container.querySelector('div.error > div.container')!
     const divRows = div.querySelectorAll('div.row')
     expect(divRows).toHaveLength(2)
     expect(divRows.item(0)).toHaveTextContent(title)

@@ -13,11 +13,17 @@
 
 # Project
 coverage
+dist/
+
+# Static assets kept in public/ (favicon, meta image, fonts)
 public/*
-!public/404.html
 !public/favicon.png
-!public/index.html
 !public/meta.png
+!public/fonts
 
 node_modules
 .pnp.*
+
+# Test reports
+vitest-report.json
+jest-report.json

@@ -19,14 +19,14 @@ describe('MenuItem', () => {
 
   test('should set active MenuItem correctly', () => {
     const name: string = randomString(10)
-    const setActiveNavLinkMock = jest.fn((actual: string): void => {
+    const setActiveNavLinkMock = vi.fn((actual: string): void => {
       expect(actual).toEqual(`#${name}`)
     })
     const { container } = render(
-      <MenuItem name={name} setActiveNavLink={setActiveNavLinkMock} />
+      <MenuItem name={name} setActiveNavLink={setActiveNavLinkMock as any} />
     )
     fireEvent(
-      container.querySelector('.nav-link'),
+      container.querySelector('.nav-link')!,
       new MouseEvent('click', {
         bubbles: true,
         cancelable: true

@@ -1,6 +1,5 @@
 import State from '../../components/Stats/State'
 import type RemoteService from './RemoteService'
-import fetch from 'cross-fetch'
 
 export interface LeetcodeStats {
   totalSolved: number
@@ -10,6 +9,7 @@ export interface LeetcodeStats {
 }
 
 export class LeetcodeService implements RemoteService<LeetcodeStats> {
+  readonly queryKey = 'LeetcodeService'
   private state: State = State.NOT_STARTED
   private stats: LeetcodeStats
 

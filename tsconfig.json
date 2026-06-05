@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
     "target": "es2024",
-    "jsx": "react",
-    "module": "commonjs",
-    "resolveJsonModule": true
+    "jsx": "react-jsx",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "types": ["vitest/globals"]
   },
   "exclude": [
     "node_modules"

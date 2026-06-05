@@ -1,5 +1,7 @@
+import { vi } from 'vitest'
+
 const mock = {
-  t: jest.fn((key) => key)
+  t: vi.fn((key) => key)
 }
 
 export default mock

@@ -1,9 +1,9 @@
 import { Octokit } from '@octokit/rest'
 import State from '../../components/Stats/State'
 import type RemoteService from './RemoteService'
-import fetch from 'cross-fetch'
 
 export class GitHubService implements RemoteService<number> {
+  readonly queryKey = 'GitHubService'
   private state: State = State.NOT_STARTED
   private starsAmount: number
 
@@ -16,7 +16,7 @@ export class GitHubService implements RemoteService<number> {
   public async request(): Promise<number> {
     if (this.state == State.NOT_STARTED) {
       this.state = State.STARTED
-      const octokit: Octokit = new Octokit({ request: { fetch } })
+      const octokit: Octokit = new Octokit()
       try {
         let sum: number = 0
         let page: number = 1

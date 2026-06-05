@@ -11,10 +11,10 @@ describe('BackToTopButton', () => {
   })
 
   test('should scroll to top', () => {
-    const windowScrollToMock = jest.fn()
+    const windowScrollToMock = vi.fn()
     global.scrollTo = windowScrollToMock
 
-    const windowAddEventListenerMock = jest.fn()
+    const windowAddEventListenerMock = vi.fn()
     global.addEventListener = windowAddEventListenerMock
 
     const { container } = render(<BackToTopButton />)
@@ -27,7 +27,7 @@ describe('BackToTopButton', () => {
     )
 
     fireEvent(
-      container.querySelector('a'),
+      container.querySelector('a')!,
       new MouseEvent('click', {
         bubbles: true,
         cancelable: true

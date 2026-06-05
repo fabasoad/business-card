@@ -12,17 +12,17 @@ describe('CertificateItem', () => {
     const { container } = render(
       <CertificateItem certificate={certificate}/>
     )
-    const div = container.querySelector('div.card')
+    const div = container.querySelector('div.card')!
 
-    const cardBody = div.querySelector('.card-body.d-flex.flex-column')
+    const cardBody = div.querySelector('.card-body.d-flex.flex-column')!
     expect(cardBody).toBeInTheDocument()
-    const a = cardBody.querySelector('.justify-content-center.mt-2 > a.card-link')
+    const a = cardBody.querySelector('.justify-content-center.mt-2 > a.card-link')!
     expect(a).toBeInTheDocument()
     expect(a).toHaveAttribute('target', '_blank')
     expect(a).toHaveAttribute('rel', 'noopener noreferrer')
     expect(a).toHaveAttribute('href', certificate.url)
     const img = a.querySelector('.card-img')
-    expect(img).toHaveAttribute('src', '[object Object]')
+    expect(img).toHaveAttribute('src', 'test-file-stub')
 
     const cardTitle = div.querySelector('.card-title.h5')
     expect(cardTitle).toBeInTheDocument()

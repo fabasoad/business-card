@@ -5,7 +5,7 @@
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
     "start": "node app.js",
-    "start:dev": "PUBLIC_PATH='../public' node app.js"
+    "start:dev": "PUBLIC_PATH='../dist' node app.js"
   },
   "bugs": {
     "url": "https://github.com/fabasoad/business-card/issues",
@@ -23,6 +23,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "~5.2.1",
-    "express-rate-limit": "~8.2.2"
+    "express-rate-limit": "~8.5.2"
   }
 }

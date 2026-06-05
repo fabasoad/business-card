@@ -1,5 +1,4 @@
 import type RemoteService from './RemoteService'
-import fetch from 'cross-fetch'
 
 type StackOverflowResponse = {
   items: { answer_count: number, reputation: number, site_name: string }[]
@@ -11,6 +10,7 @@ export type StackExchangeData = {
 }
 
 export abstract class StackExchangeService implements RemoteService<StackExchangeData> {
+  abstract readonly queryKey: string
   private stats: StackExchangeData
   private readonly siteName: string
 

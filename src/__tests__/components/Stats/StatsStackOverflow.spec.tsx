@@ -4,7 +4,7 @@ import StatsStackOverflow from '../../../components/Stats/StatsStackOverflow'
 import { render } from '@testing-library/react'
 import { randomNumber } from '../../TestUtils'
 
-jest.mock('../../../components/Stats/StatsStackExchange')
+vi.mock('../../../components/Stats/StatsStackExchange')
 
 describe('StatsStackOverflow', () => {
   test('should render StatsStackOverflow correctly', async () => {
@@ -16,7 +16,7 @@ describe('StatsStackOverflow', () => {
         answerCount={expectedAnswerCount}
       />
     )
-    const div = container.querySelector('div[data-testid="StatsStackExchange"]')
+    const div = container.querySelector('div[data-testid="StatsStackExchange"]')!
     expect(div).toBeInTheDocument()
     expect(
       div.querySelector('div[data-testid="factory"]')

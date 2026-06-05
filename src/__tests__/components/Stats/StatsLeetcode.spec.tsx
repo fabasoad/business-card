@@ -1,3 +1,4 @@
+import type { MockInstance } from 'vitest'
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import { render } from '@testing-library/react'
@@ -11,15 +12,15 @@ import type {
 } from '../../../scripts/services/LeetcodeService'
 import { randomNumber } from '../../TestUtils'
 
-jest.mock('../../../components/LoadingSpinner')
-jest.mock('../../../components/Stats/StatsCommon')
-jest.mock('../../../scripts/services/LeetcodeService')
+vi.mock('../../../components/LoadingSpinner')
+vi.mock('../../../components/Stats/StatsCommon')
+vi.mock('../../../scripts/services/LeetcodeService')
 
 describe('StatsLeetcode', () => {
-  let useFetchStatsSpy: jest.SpyInstance
+  let useFetchStatsSpy: MockInstance
 
   beforeEach(() => {
-    useFetchStatsSpy = jest.spyOn(StatsHooks, 'useFetchStats')
+    useFetchStatsSpy = vi.spyOn(StatsHooks, 'useFetchStats')
   })
 
   afterEach(() => {
@@ -45,7 +46,7 @@ describe('StatsLeetcode', () => {
     const expectedTotalSolved: number = randomNumber(1, 100)
     useFetchStatsSpy.mockImplementation(
       (factory: ServiceFactory<LeetcodeService, LeetcodeStats>) => (
-        { data: factory()['stats'], isLoading: false }
+        { data: (factory() as any)['stats'], isLoading: false }
       )
     )
     const { container } = render(

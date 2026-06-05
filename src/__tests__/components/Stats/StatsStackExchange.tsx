@@ -1,3 +1,4 @@
+import type { MockInstance } from 'vitest'
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import { render } from '@testing-library/react'
@@ -12,8 +13,8 @@ import type {
 import { randomString } from '../../../scripts/utils/StringUtils'
 import { randomNumber } from '../../TestUtils'
 
-jest.mock('../../../components/LoadingSpinner')
-jest.mock('../../../components/Stats/StatsCommon')
+vi.mock('../../../components/LoadingSpinner')
+vi.mock('../../../components/Stats/StatsCommon')
 
 class TestService implements RemoteService<StackExchangeData> {
   public stats: StackExchangeData
@@ -28,10 +29,10 @@ class TestService implements RemoteService<StackExchangeData> {
 }
 
 describe('StatsStackExchange', () => {
-  let useFetchStatsSpy: jest.SpyInstance
+  let useFetchStatsSpy: MockInstance
 
   beforeEach(() => {
-    useFetchStatsSpy = jest.spyOn(StatsHooks, 'useFetchStats')
+    useFetchStatsSpy = vi.spyOn(StatsHooks, 'useFetchStats')
   })
 
   afterEach(() => {

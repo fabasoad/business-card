@@ -1,3 +1,4 @@
+import type { MockInstance } from 'vitest'
 import '@testing-library/jest-dom'
 import * as React from 'react'
 import ThemeDropDown from '../../../components/Menu/ThemeDropDown'
@@ -5,10 +6,10 @@ import { render } from '@testing-library/react'
 import * as ThemeContext from '../../../components/Contexts/ThemeContext'
 
 describe('ThemeDropDown', () => {
-  let useThemeContextSpy: jest.SpyInstance
+  let useThemeContextSpy: MockInstance
 
   beforeEach(() => {
-    useThemeContextSpy = jest.spyOn(ThemeContext, 'useThemeContext')
+    useThemeContextSpy = vi.spyOn(ThemeContext, 'useThemeContext')
   })
 
   afterEach(() => {
@@ -20,8 +21,8 @@ describe('ThemeDropDown', () => {
   )('should render ThemeDropDown correctly when theme is %s', (theme: string) => {
     useThemeContextSpy.mockImplementation(() => ({ theme }))
     const { container } = render(<ThemeDropDown />)
-    const div = container.querySelector('div.dropdown')
-    const toggle = div.querySelector('button.btn.nav-link.dropdown-toggle')
+    const div = container.querySelector('div.dropdown')!
+    const toggle = div.querySelector('button.btn.nav-link.dropdown-toggle')!
     expect(toggle).toHaveTextContent(`themes.${theme}`)
     expect(
       toggle.querySelector('i.fa.fa-solid.fa-circle-half-stroke')

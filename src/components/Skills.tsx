@@ -11,7 +11,7 @@ import LoadingSpinner from './LoadingSpinner'
 export default function Skills() {
   const technologyStorage = new TechnologyStorage()
   const { data, isLoading } = useQuery({
-    queryKey: [technologyStorage.constructor.name],
+    queryKey: ['TechnologyStorage'],
     queryFn: () => technologyStorage.findBySkill(true)
   })
   if (isLoading) {

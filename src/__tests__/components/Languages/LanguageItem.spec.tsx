@@ -14,7 +14,7 @@ describe('LanguageItem', () => {
     const { container } = render(
       <LanguageItem code={code}>{text}</LanguageItem>
     )
-    const div = container.querySelector('div.mb-4.mx-4')
+    const div = container.querySelector('div.mb-4.mx-4')!
     expect(div).toHaveTextContent(text)
     expect(
       div.querySelector('div.h4')

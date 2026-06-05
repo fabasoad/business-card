@@ -95,9 +95,9 @@ describe('TechnologyProviderDefault', () => {
       } else {
         expect(tech.isSkill).toBeFalsy()
       }
-      expect(tech.imgLight).toEqual({ default: 'test-file-stub' })
+      expect(tech.imgLight).toEqual('test-file-stub')
       if (['aws', 'gitHub', 'leetcode'].includes(tech.name)) {
-        expect(tech.imgDark).toEqual({ default: 'test-file-stub' })
+        expect(tech.imgDark).toEqual('test-file-stub')
       } else {
         expect(tech.imgDark).toBeUndefined()
       }

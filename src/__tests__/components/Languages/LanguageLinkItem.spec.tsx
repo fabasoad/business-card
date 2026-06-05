@@ -6,7 +6,7 @@ import LanguageLinkItem from '../../../components/Languages/LanguageLinkItem'
 import SupportedLocales from '../../../scripts/i18n/SupportedLocales'
 import type { Locale } from '../../../scripts/i18n/types'
 
-jest.mock('../../../components/Languages/LanguageItem')
+vi.mock('../../../components/Languages/LanguageItem')
 
 describe('LanguageLinkItem', () => {
   test.each(

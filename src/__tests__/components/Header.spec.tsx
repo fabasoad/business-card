@@ -14,15 +14,15 @@ describe('Header', () => {
   test('should render Header correctly', () => {
     const { container } = render(<Header />)
     const divSelector = 'div#header.header.row.d-flex.flex-md-row-reverse.flex-lg-row-reverse.align-items-center'
-    expect(container.querySelector(divSelector).children).toHaveLength(2)
+    expect(container.querySelector(divSelector)!.children).toHaveLength(2)
     expect(
       container.querySelector<HTMLImageElement>(
-        `${divSelector} > div.header__img-container.col-md-5.col-lg-5 > img.mx-lg-auto.img-fluid[src="[object Object]"][alt="Portrait"][loading="lazy"]`
+        `${divSelector} > div.header__img-container.col-md-5.col-lg-5 > img.mx-lg-auto.img-fluid[src="test-file-stub"][alt="Portrait"][loading="lazy"]`
       )
     ).toBeInTheDocument()
     const divText = container.querySelector<HTMLDivElement>(
       `${divSelector} > div.col-md-7.col-lg-7.pt-1`
-    )
+    )!
     expect(divText.querySelector('h1')).toBeInTheDocument()
     expect(divText.querySelector('h5')).toHaveTextContent('header.occupation')
     testButton(divText, 'about-me')

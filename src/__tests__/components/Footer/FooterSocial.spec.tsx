@@ -4,7 +4,7 @@ import { render } from '@testing-library/react'
 
 import FooterSocial from '../../../components/Footer/FooterSocial'
 
-jest.mock('../../../components/Controls/SocialIcon')
+vi.mock('../../../components/Controls/SocialIcon')
 
 describe('FooterSocial', () => {
   const fixture = new Map<string, string>([
@@ -17,7 +17,7 @@ describe('FooterSocial', () => {
 
   test('should render FooterSocial correctly', () => {
     const { container } = render(<FooterSocial />)
-    const ul = container.querySelector('div.d-flex.justify-content-center > ul.icon-list')
+    const ul = container.querySelector('div.d-flex.justify-content-center > ul.icon-list')!
     expect(ul.children).toHaveLength(fixture.size)
     for (const [url, icon] of fixture) {
       expect(

@@ -1,10 +1,9 @@
 import * as React from 'react'
 import * as gb from '../../assets/i18n/gb.json'
 import SupportedLocales from '../../scripts/i18n/SupportedLocales'
+import { vi } from 'vitest'
 
-const reactI18Next: any = jest.createMockFromModule('react-i18next')
-
-const tMock = jest.fn((key) => key)
+const tMock = vi.fn((key) => key)
 
 const i18nMock = {
   language: SupportedLocales.default.code,
@@ -14,15 +13,16 @@ const i18nMock = {
     key === 'testing-prefix-1' || key === 'testing-prefix-1-1'
 }
 
-reactI18Next.Trans = function Trans({ i18nKey }) {
+const Trans = function Trans({ i18nKey }: { i18nKey: string }) {
   return (<>{i18nKey}</>)
 }
 
-reactI18Next.getI18n = () => i18nMock
+const getI18n = () => i18nMock
 
-reactI18Next.useTranslation = () => ({
+const useTranslation = () => ({
   t: tMock,
   i18n: i18nMock
 })
 
-module.exports = reactI18Next
+export { Trans, getI18n, useTranslation }
+export default { Trans, getI18n, useTranslation }

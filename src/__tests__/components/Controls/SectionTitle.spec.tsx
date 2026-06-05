@@ -8,7 +8,7 @@ describe('SectionTitle', () => {
   test('should render SectionTitle correctly', () => {
     const title: string = randomString(10)
     const { container } = render(<SectionTitle>{title}</SectionTitle>)
-    const div = container.querySelector('div.section-title.text-center.center')
+    const div = container.querySelector('div.section-title.text-center.center')!
     expect(div.querySelector('h2')).toHaveTextContent(title)
     expect(div.querySelector('hr')).toBeInTheDocument()
   })

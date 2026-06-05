@@ -32,8 +32,8 @@ jobs:
           key: "build-business-card"
           main: |
             {
-              echo "VITE_POSTHOG_KEY=${{ secrets.VITE_POSTHOG_KEY }}"
-              echo "VITE_POSTHOG_HOST=${{ secrets.VITE_POSTHOG_HOST }}"
+              echo "REACT_APP_PUBLIC_POSTHOG_KEY=${{ secrets.REACT_APP_PUBLIC_POSTHOG_KEY }}"
+              echo "REACT_APP_PUBLIC_POSTHOG_HOST=${{ secrets.REACT_APP_PUBLIC_POSTHOG_HOST }}"
             } > .env
             make build
           post: rm -f .env

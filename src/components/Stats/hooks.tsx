@@ -13,7 +13,7 @@ export function useFetchStats<T extends RemoteService<S>, S>(
 ): FetchedStats<S> {
   const service: T = factory()
   const { data, isLoading } = useQuery({
-    queryKey: [service.constructor.name],
+    queryKey: [service.queryKey],
     queryFn: () => service.request()
   })
 

@@ -24,5 +24,6 @@ public/*
 node_modules
 .pnp.*
 
-# Vitest
+# Test reports
 vitest-report.json
+jest-report.json

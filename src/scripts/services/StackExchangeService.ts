@@ -10,6 +10,7 @@ export type StackExchangeData = {
 }
 
 export abstract class StackExchangeService implements RemoteService<StackExchangeData> {
+  abstract readonly queryKey: string
   private stats: StackExchangeData
   private readonly siteName: string
 

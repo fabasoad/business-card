@@ -1,7 +1,7 @@
 import path from 'path'
 import type { Plugin } from 'vite'
 import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react-swc'
+import react from '@vitejs/plugin-react'
 
 function assetStub(): Plugin {
   const ASSET_RE = /\.(png|jpe?g|gif|svg|webp|ttf|woff2?|eot|otf|pdf|mp4|webm|wav|mp3|m4a|aac|oga)(\?.*)?$/
@@ -30,7 +30,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        silenceDeprecations: ['mixed-decls', 'color-functions', 'global-builtin', 'import']
+        silenceDeprecations: ['color-functions', 'global-builtin', 'import', 'if-function']
       }
     }
   },

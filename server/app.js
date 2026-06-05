@@ -16,7 +16,7 @@ app.use(limiter({
 
 app.use(express.static(PUBLIC_DIR));
 
-app.get('*', (req, res) => {
+app.get('/{*splat}', (req, res) => {
   res.sendFile(path.join(PUBLIC_DIR, 'index.html'));
 });
 

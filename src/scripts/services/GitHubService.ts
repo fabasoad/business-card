@@ -3,6 +3,7 @@ import State from '../../components/Stats/State'
 import type RemoteService from './RemoteService'
 
 export class GitHubService implements RemoteService<number> {
+  readonly queryKey = 'GitHubService'
   private state: State = State.NOT_STARTED
   private starsAmount: number
 

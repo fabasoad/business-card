@@ -9,6 +9,7 @@ export interface LeetcodeStats {
 }
 
 export class LeetcodeService implements RemoteService<LeetcodeStats> {
+  readonly queryKey = 'LeetcodeService'
   private state: State = State.NOT_STARTED
   private stats: LeetcodeStats
 

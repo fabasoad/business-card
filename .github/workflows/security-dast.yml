@@ -20,5 +20,7 @@ jobs:
     permissions:
       contents: read
       security-events: write
+    secrets:
+      github-token: "${{ secrets.GITHUB_TOKEN }}"
     with:
       target-url: "${{ github.event.inputs.target-url }}"

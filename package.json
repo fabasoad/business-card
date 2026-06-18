@@ -1,6 +1,6 @@
 {
   "name": "business-card",
-  "version": "3.2.0",
+  "version": "3.2.1",
   "description": "Yevhen Fabizhevskyi's personal website.",
   "homepage": "https://fabasoad.github.io/business-card/",
   "scripts": {
@@ -28,7 +28,7 @@
   },
   "license": "ISC",
   "devDependencies": {
-    "@biomejs/biome": "~2.4.16",
+    "@biomejs/biome": "~2.5.0",
     "@testing-library/dom": "~10.4.1",
     "@testing-library/jest-dom": "~6.9.1",
     "@testing-library/react": "~16.3.2",
@@ -36,7 +36,7 @@
     "@types/react": "~19.2.17",
     "@types/react-dom": "~19.2.3",
     "@vitejs/plugin-react": "^6.0.2",
-    "@vitest/coverage-v8": "~4.1.8",
+    "@vitest/coverage-v8": "~4.1.9",
     "bootstrap": "~5.3.8",
     "express": "~5.2.1",
     "express-rate-limit": "~8.5.2",
@@ -47,15 +47,15 @@
     "react": "~19.2.7",
     "react-dom": "~19.2.7",
     "react-i18next": "~17.0.8",
-    "sass": "~1.100.0",
+    "sass": "~1.101.0",
     "typescript": "~6.0.3",
     "vite": "~8.0.16",
-    "vitest": "~4.1.8"
+    "vitest": "~4.1.9"
   },
   "dependencies": {
     "@octokit/rest": "~22.0.1",
     "@tanstack/react-query": "~5.101.0",
-    "posthog-js": "~1.380.1",
+    "posthog-js": "~1.390.2",
     "react-bootstrap": "~2.10.10"
   }
 }

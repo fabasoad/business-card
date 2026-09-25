@@ -42,20 +42,20 @@
     "express-rate-limit": "~8.7.0",
     "humanize-duration": "~3.35.0",
     "i18next": "~26.4.2",
-    "jsdom": "~30.1.0",
+    "jsdom": "~30.1.1",
     "nodemon": "~3.1.14",
     "react": "~19.3.0",
     "react-dom": "~19.3.0",
-    "react-i18next": "~17.0.14",
+    "react-i18next": "~17.0.15",
     "sass": "~1.104.1",
     "typescript": "~7.0.2",
-    "vite": "~8.3.0",
+    "vite": "~8.3.1",
     "vitest": "~5.0.1"
   },
   "dependencies": {
     "@octokit/rest": "~22.0.1",
-    "@tanstack/react-query": "~5.103.1",
-    "posthog-js": "~1.434.2",
+    "@tanstack/react-query": "~5.103.2",
+    "posthog-js": "~1.434.13",
     "react-bootstrap": "~2.10.10"
   },
   "allowScripts": {

@@ -21,7 +21,7 @@ jobs:
       deploy-time: "${{ steps.metadata.outputs.deploy-time }}"
     steps:
       - name: Checkout ${{ github.repository }}
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: "false"
 
@@ -67,13 +67,13 @@ jobs:
       contents: read
     steps:
       - name: Checkout ${{ github.repository }}
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           fetch-depth: 1
           persist-credentials: "false"
 
       - name: Get GitHub token
-        uses: actions/create-github-app-token@v3
+        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
         id: github-app
         with:
           app-id: ${{ vars.GH_APP_WORKFLOW_CRUD_APP_ID }}
@@ -88,7 +88,7 @@ jobs:
         working-directory: "${{ github.workspace }}/scripts"
 
       - name: Dispatch workflow
-        uses: actions/github-script@v9
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           github-token: "${{ steps.github-app.outputs.token }}"
           script: |

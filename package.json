@@ -11,7 +11,7 @@
     "start:web": "PUBLIC_PATH=../dist nodemon --watch ./server server/app.js",
     "test": "vitest run --coverage --reporter=json --outputFile=vitest-report.json",
     "clean": "rm -rf coverage && rm -rf temp",
-    "clean:unsafe": "rm -f package-lock.json && rm -rf node_modules"
+    "clean:unsafe": "rm -f pnpm-lock.yaml && rm -rf node_modules"
   },
   "bugs": {
     "url": "https://github.com/fabasoad/business-card/issues",
@@ -58,9 +58,5 @@
     "posthog-js": "~1.438.21",
     "react-bootstrap": "~2.10.10"
   },
-  "allowScripts": {
-    "@parcel/watcher@2.5.6": true,
-    "core-js@3.49.0": true,
-    "fsevents@2.3.3": true
-  }
+  "packageManager": "pnpm@12.15.0"
 }

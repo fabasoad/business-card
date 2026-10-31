@@ -29,7 +29,7 @@ jobs:
         run: make install
 
       - name: Build
-        uses: pyTooling/Actions/with-post-step@dc43ed4bbde6994f14137f59096d4b84cc05a9fa # v9.3.0
+        uses: pyTooling/Actions/with-post-step@6d15804199dbbbc94f8c839f85eb6eeee82f3b7b # v9.3.1
         with:
           key: "build-business-card"
           main: |

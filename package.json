@@ -10,6 +10,7 @@
     "start:dev": "vite",
     "start:web": "PUBLIC_PATH=../dist nodemon --watch ./server server/app.js",
     "test": "vitest run --coverage --reporter=json --outputFile=vitest-report.json",
+    "typecheck": "tsc --noEmit",
     "clean": "rm -rf coverage && rm -rf temp",
     "clean:unsafe": "rm -f pnpm-lock.yaml && rm -rf node_modules"
   },

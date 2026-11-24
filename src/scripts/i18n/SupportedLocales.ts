@@ -7,7 +7,7 @@ export default class SupportedLocales {
     new Locale('ua')
   ]
 
-  static default: Locale = SupportedLocales._items[0]
+  static default: Locale = SupportedLocales._items[0]!
 
   static find(code: string): Locale | undefined {
     return SupportedLocales._items.find((l: Locale) => l.code === code)

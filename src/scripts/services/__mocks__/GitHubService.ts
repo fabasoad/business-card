@@ -1,6 +1,7 @@
 import type RemoteService from '../RemoteService'
 
 export class GitHubService implements RemoteService<number> {
+  readonly queryKey = 'GitHubService'
   public actual: number
 
   public constructor(v: number) {

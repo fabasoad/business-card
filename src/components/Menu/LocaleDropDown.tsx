@@ -9,7 +9,7 @@ export default function LocaleDropDown() {
   const { i18n, t } = useTranslation()
   return (
     <Dropdown>
-      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null}>
+      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant="">
         <i className="fa fa-globe"></i>
         {t(`languages.codes.${SupportedLocales.getOrDefault(i18n.language).code}`)}
       </Dropdown.Toggle>

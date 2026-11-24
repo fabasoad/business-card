@@ -22,7 +22,7 @@ export default function StatsLeetcode({
   }
   return (
     <StatsCommon techName="leetcode" url="https://leetcode.com/fabasoad">
-      ✔️ {data.totalSolved}
+      ✔️ {data!.totalSolved}
     </StatsCommon>
   )
 }

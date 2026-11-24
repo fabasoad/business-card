@@ -15,11 +15,11 @@ class I18nLanguageCodeTranslator {
     ])
   public getTranslateFunc(from: I18nLanguageCodeFormat, to: I18nLanguageCodeFormat):
     I18nLanguageCodeTranslatorFunc {
-    const fromCodes: string[] = this.formatsMap.get(from)
-    const toCodes: string[] = this.formatsMap.get(to)
+    const fromCodes: string[] = this.formatsMap.get(from)!
+    const toCodes: string[] = this.formatsMap.get(to)!
     const translationMap = new Map<string, string>()
     for (let i = 0; i < fromCodes.length; i++) {
-      translationMap.set(fromCodes[i], toCodes[i])
+      translationMap.set(fromCodes[i]!, toCodes[i]!)
     }
     return (code: string): string => {
       return translationMap.get(code) ?? code

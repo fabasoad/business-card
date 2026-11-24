@@ -8,7 +8,7 @@ type ThemeContextType = {
 export const SUPPORTED_THEMES = ['dark', 'light']
 
 export function updateThemeInHtml(v: string) {
-  document.querySelector('html').setAttribute('data-theme', v)
+  document.querySelector('html')!.setAttribute('data-theme', v)
 }
 
 export function updateThemeInLocalStorage(v: string) {
@@ -24,29 +24,30 @@ export function initTheme(): string {
     )
   }
 
-  if (!SUPPORTED_THEMES.includes(theme)) {
-    theme = document.querySelector('html').getAttribute('data-theme')
+  if (!SUPPORTED_THEMES.includes(theme as string)) {
+    theme = document.querySelector('html')!.getAttribute('data-theme')
   }
 
-  if (!SUPPORTED_THEMES.includes(theme)) {
+  if (!SUPPORTED_THEMES.includes(theme as string)) {
     theme = window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? SUPPORTED_THEMES[0] : SUPPORTED_THEMES[1]
+      ? SUPPORTED_THEMES[0]! : SUPPORTED_THEMES[1]!
   }
 
   if (!window.localStorage.getItem('theme')
-    || !SUPPORTED_THEMES.includes(window.localStorage.getItem('theme'))) {
-    updateThemeInLocalStorage(theme)
+    || !SUPPORTED_THEMES.includes(window.localStorage.getItem('theme') as string)) {
+    updateThemeInLocalStorage(theme!)
   }
 
-  if (!document.querySelector('html').getAttribute('data-theme')
-    || !SUPPORTED_THEMES.includes(document.querySelector('html').getAttribute('data-theme'))) {
-    updateThemeInHtml(theme)
+  if (!document.querySelector('html')!.getAttribute('data-theme')
+    || !SUPPORTED_THEMES.includes(
+      document.querySelector('html')!.getAttribute('data-theme') as string)) {
+    updateThemeInHtml(theme!)
   }
-  return theme
+  return theme!
 }
 
-const ThemeContext: Context<ThemeContextType> = createContext({
-  theme: SUPPORTED_THEMES[1],
+const ThemeContext: Context<ThemeContextType> = createContext<ThemeContextType>({
+  theme: SUPPORTED_THEMES[1]!,
   // biome-ignore lint/suspicious/noEmptyBlockStatements: Default value
   setTheme: () => {}
 })

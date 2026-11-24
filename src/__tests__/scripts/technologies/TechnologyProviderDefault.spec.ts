@@ -87,10 +87,10 @@ describe('TechnologyProviderDefault', () => {
     expect(TechnologyProviderDefault.items.size).toEqual(expected.length)
     let ind = 0
     for (const [name, tech] of TechnologyProviderDefault.items) {
-      expect(name).toEqual(expected[ind][0])
-      expect(tech.name).toEqual(expected[ind][0])
-      expect(tech.title).toEqual(expected[ind][1])
-      if (expected[ind][2]) {
+      expect(name).toEqual(expected[ind]![0])
+      expect(tech.name).toEqual(expected[ind]![0])
+      expect(tech.title).toEqual(expected[ind]![1])
+      if (expected[ind]![2]) {
         expect(tech.isSkill).toBeTruthy()
       } else {
         expect(tech.isSkill).toBeFalsy()

@@ -23,8 +23,7 @@ export default function Skills() {
         <React.Suspense fallback={<LoadingSpinner />}>
           <Col className="skills-list text-center">
             {
-              data
-              .map((t: Technology) => <ThemeImage
+              data!.map((t: Technology) => <ThemeImage
                 key={`skill-${t.name}`}
                 className="m-4"
                 imgLight={t.imgLight}

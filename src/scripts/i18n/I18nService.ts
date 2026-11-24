@@ -74,12 +74,12 @@ class I18nService {
     if (!this.callbacks.has(type)) {
       this.callbacks.set(type, [])
     }
-    this.callbacks.get(type).push(callback)
+    this.callbacks.get(type)!.push(callback)
   }
 
   private fireCallbacks(
     type: I18nServiceCallbackTypes, code: string, t: i18n.TFunction): void {
-    this.callbacks.get(type).forEach((c: I18nServiceCallback) => c(code, t))
+    this.callbacks.get(type)!.forEach((c: I18nServiceCallback) => c(code, t))
   }
 }
 

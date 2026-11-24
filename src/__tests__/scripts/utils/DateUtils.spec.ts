@@ -15,8 +15,8 @@ describe('DateUtils', () => {
 
   const items: FixtureTransformed[] =
     SupportedLocales._items.flatMap((l: Locale) =>
-      expectedMap.get(l.code).codes.map((c: string) =>
-        ({ code: c, expected: expectedMap.get(l.code).expected })))
+      expectedMap.get(l.code)!.codes.map((c: string) =>
+        ({ code: c, expected: expectedMap.get(l.code)!.expected })))
 
   test.each(items)('[$code] should return humanized date', ({ code, expected }: FixtureTransformed) => {
     const actual: string = humanize(

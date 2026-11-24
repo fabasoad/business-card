@@ -31,9 +31,9 @@ describe('TechnologyStorage', () => {
   test('findBySkill should works correctly if items are present', () => {
     const actual: Technology[] = technologyStorage.findBySkill(false)
     expect(actual.length).toBe(1)
-    expect(actual[0].name).toBe('tech-2')
-    expect(actual[0].title).toBe('Tech 2')
-    expect(actual[0].isSkill).toBe(false)
+    expect(actual[0]!.name).toBe('tech-2')
+    expect(actual[0]!.title).toBe('Tech 2')
+    expect(actual[0]!.isSkill).toBe(false)
   })
 
   test('findBySkill should works correctly if items are not present', () => {

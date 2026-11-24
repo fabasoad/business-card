@@ -49,9 +49,9 @@ export async function initLanguage(): Promise<string> {
       })
       document.documentElement.setAttribute(
         'lang',
-        translate(window.localStorage.getItem('i18nextLng'))
+        translate(window.localStorage.getItem('i18nextLng')!)
       )
-      return window.localStorage.getItem('i18nextLng')
+      return window.localStorage.getItem('i18nextLng')!
     })
 }
 
@@ -59,7 +59,7 @@ export async function updateLanguage(v: string): Promise<string> {
   return i18n.changeLanguage(v).then(() => v)
 }
 
-const LanguageContext: Context<LanguageContextType> = createContext({
+const LanguageContext: Context<LanguageContextType> = createContext<LanguageContextType>({
   language: SupportedLocales.default.code,
   // biome-ignore lint/suspicious/noEmptyBlockStatements: Default value
   setLanguage: () => {}

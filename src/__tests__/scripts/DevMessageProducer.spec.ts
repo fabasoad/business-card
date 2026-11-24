@@ -6,7 +6,7 @@ describe('DevMessageProducer', () => {
 
   beforeAll(() => {
     vi.useFakeTimers()
-    consoleLogSpy = vi.spyOn(global.console, 'log').mockImplementation()
+    consoleLogSpy = vi.spyOn(global.console, 'log').mockImplementation(() => undefined)
   })
 
   test('should build default messages correctly', () => {

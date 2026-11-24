@@ -9,7 +9,7 @@ export default function ThemeDropDown() {
 
   return (
     <Dropdown>
-      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant={null}>
+      <Dropdown.Toggle bsPrefix="nav-link dropdown-toggle" variant="">
         <i className="fa fa-solid fa-circle-half-stroke"></i>
         {t(`themes.${theme}`)}
       </Dropdown.Toggle>

@@ -2,7 +2,7 @@
 class DevMessageProducer {
   _messages: string[]
   _counter: number = 0
-  _timer: NodeJS.Timeout
+  _timer: NodeJS.Timeout | null = null
 
   constructor(
     messagesFactory: () => string[] = DevMessageProducer._defaultMessagesFactory
@@ -32,7 +32,7 @@ class DevMessageProducer {
     if (this._timer == null) {
       this._timer = setInterval(() => {
         if (this._counter >= this._messages.length) {
-          clearInterval(this._timer)
+          clearInterval(this._timer!)
           this._timer = null
           this._counter = 0
         } else {

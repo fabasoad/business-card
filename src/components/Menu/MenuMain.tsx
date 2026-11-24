@@ -13,8 +13,10 @@ export default function MenuMain() {
 
   document.querySelectorAll('*').forEach((el) => {
     el.addEventListener('click', (e) => {
-      const findParent = (el1: HTMLElement, el2: HTMLElement): HTMLElement => {
-        if (el1 === el2) {
+      const findParent = (
+        el1: HTMLElement | null, el2: HTMLElement | null
+      ): HTMLElement | null => {
+        if (el1 == null || el1 === el2) {
           return el1
         }
         if (el1.parentElement == null) {

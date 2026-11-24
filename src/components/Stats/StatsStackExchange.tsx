@@ -21,7 +21,7 @@ export default function StatsStackExchange<T extends RemoteService<StackExchange
   }
   return (
     <StatsCommon techName={techName} url={url}>
-      {icon} {data.reputation}
+      {icon} {data!.reputation}
     </StatsCommon>
   )
 }

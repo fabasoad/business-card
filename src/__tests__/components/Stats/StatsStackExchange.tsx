@@ -17,6 +17,7 @@ vi.mock('../../../components/LoadingSpinner')
 vi.mock('../../../components/Stats/StatsCommon')
 
 class TestService implements RemoteService<StackExchangeData> {
+  readonly queryKey = 'TestService'
   public stats: StackExchangeData
 
   constructor(reputation: number, answerCount: number) {

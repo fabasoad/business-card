@@ -29,6 +29,10 @@ lint:
 test:
 	@pnpm run test
 
+.PHONY: typecheck
+typecheck:
+	@pnpm run typecheck
+
 .PHONY: run
 run:
 	@pnpm run start:dev

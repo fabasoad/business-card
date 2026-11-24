@@ -52,7 +52,7 @@ describe('Skills', () => {
         })
       ])
     )
-    const actual: Technology[] = useQueryMock.mock.calls[0][0][0]['queryFn']()
+    const actual: Technology[] = useQueryMock.mock.calls[0]![0]![0]['queryFn']()
     expect(
       actual.map(({ name, title }) => `${name}-${title}`).sort()
     ).toEqual(
@@ -84,7 +84,7 @@ describe('Skills', () => {
     const selector = 'div[data-testid="Section-skills"] > div.row > div.skills-list.col.text-center > div'
     expect(container.querySelectorAll(selector)).toHaveLength(data.length)
     expect(
-      container.querySelector(`${selector}[data-testid="ThemeImage-${data[0].name}"]`)
-    ).toHaveTextContent(`m-4-${data[0].imgDark}-${data[0].imgLight}-${data[0].title}`)
+      container.querySelector(`${selector}[data-testid="ThemeImage-${data[0]!.name}"]`)
+    ).toHaveTextContent(`m-4-${data[0]!.imgDark}-${data[0]!.imgLight}-${data[0]!.title}`)
   })
 })

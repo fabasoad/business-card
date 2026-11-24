@@ -45,11 +45,11 @@ describe('AboutMain', () => {
     const ul1 = container.querySelector('ul')!
     expect(ul1.children).toHaveLength(1)
     const li1 = ul1.querySelector('li')!
-    expect(li1).toHaveTextContent(children[0].title)
+    expect(li1).toHaveTextContent(children[0]!.title)
     const ul2 = li1.querySelector('ul')!
     expect(ul2.children).toHaveLength(2)
     const liElements = ul2.querySelectorAll('li')
-    expect(liElements.item(0)).toHaveTextContent(children[0].list![0].title)
-    expect(liElements.item(1)).toHaveTextContent(children[0].list![1].title)
+    expect(liElements.item(0)).toHaveTextContent(children[0]!.list![0]!.title)
+    expect(liElements.item(1)).toHaveTextContent(children[0]!.list![1]!.title)
   })
 })

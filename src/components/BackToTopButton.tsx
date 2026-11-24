@@ -9,7 +9,7 @@ export default function BackToTopButton() {
     { passive: true }
   )
 
-  const handleClick = (e) => {
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     window.scrollTo({
       top: 0,

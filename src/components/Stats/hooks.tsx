@@ -4,7 +4,7 @@ import type RemoteService from '../../scripts/services/RemoteService'
 export type ServiceFactory<T extends RemoteService<S>, S> = () => T
 
 export type FetchedStats<S> = {
-  data: S,
+  data: S | undefined,
   isLoading: boolean
 }
 

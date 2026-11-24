@@ -2,6 +2,7 @@ import type RemoteService from '../RemoteService'
 import type { StackExchangeData } from '../StackExchangeService'
 
 export class StackExchangeService implements RemoteService<StackExchangeData> {
+  readonly queryKey = 'StackExchangeService'
   private readonly defaultVal: StackExchangeData
 
   public constructor(defaultVal: StackExchangeData, siteName: string) {

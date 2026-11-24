@@ -8,7 +8,7 @@ import { render } from '@testing-library/react'
 
 describe('CertificateItem', () => {
   test('should render CertificateItem correctly', () => {
-    const certificate: Certificate = certificatesStorage.certificates[0]
+    const certificate: Certificate = certificatesStorage.certificates[0]!
     const { container } = render(
       <CertificateItem certificate={certificate}/>
     )

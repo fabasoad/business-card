@@ -30,7 +30,7 @@ export class GitHubService implements RemoteService<number> {
           })
           length = data.length
           for (let i = 0; i < data.length; i++) {
-            sum += data[i]['stargazers_count']
+            sum += (data[i] as { stargazers_count: number })['stargazers_count']
           }
           page++
         }

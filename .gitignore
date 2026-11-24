@@ -27,3 +27,5 @@ node_modules
 # Test reports
 vitest-report.json
 jest-report.json
+test-results/
+playwright-report/

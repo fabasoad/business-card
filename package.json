@@ -10,6 +10,7 @@
     "start:dev": "vite",
     "start:web": "PUBLIC_PATH=../dist nodemon --watch ./server server/app.js",
     "test": "vitest run --coverage --reporter=json --outputFile=vitest-report.json",
+    "test:a11y": "playwright test",
     "clean": "rm -rf coverage && rm -rf temp",
     "clean:unsafe": "rm -f pnpm-lock.yaml && rm -rf node_modules"
   },
@@ -28,7 +29,9 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@axe-core/playwright": "~4.14.0",
     "@biomejs/biome": "~2.6.8",
+    "@playwright/test": "~1.65.1",
     "@testing-library/dom": "~10.4.2",
     "@testing-library/jest-dom": "~8.0.0",
     "@testing-library/react": "~16.3.3",

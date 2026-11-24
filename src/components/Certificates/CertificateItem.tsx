@@ -17,7 +17,7 @@ export default function CertificateItem({ certificate }: CertificateItemProps) {
       <Card.Body className="d-flex flex-column">
         <div className="justify-content-center mt-2">
           <Card.Link target="_blank" rel="noopener noreferrer" href={url}>
-            <Card.Img src={img} />
+            <Card.Img src={img} alt={t(`certificates.list.${id}`)} />
           </Card.Link>
         </div>
         <Card.Title title={t(`certificates.list.${id}`)}>
